@@ -57,12 +57,12 @@ export default class DBManager {
                     statsPoints: character.statsPoints,
                     spellPoints: character.spellPoints,
                     stats: {
-                        strength: character.getStatById(10).base,
-                        vitality: character.getStatById(11).base,
-                        wisdom: character.getStatById(12).base,
-                        chance: character.getStatById(13).base,
-                        agility: character.getStatById(14).base,
-                        intelligence: character.getStatById(15).base,
+                        strength: character.statsManager.getStatById(10).base,
+                        vitality: character.statsManager.getStatById(11).base,
+                        wisdom: character.statsManager.getStatById(12).base,
+                        chance: character.statsManager.getStatById(13).base,
+                        agility: character.statsManager.getStatById(14).base,
+                        intelligence: character.statsManager.getStatById(15).base,
                     }
                 }, function(){
                     character._id = autoIndex;
@@ -98,10 +98,35 @@ export default class DBManager {
         });
     }
 
+    static getFriend(query, callback){
+        var collection = DBManager.db.collection('accounts_friends');
+        collection.findOne(query, function(err, friend){
+            if(friend == null){
+                callback(null);
+                return;
+            }
+            callback(new AccountFriend(friend));
+        });
+    }
+
     static deleteCharacter(query, callback) {
         var success = false;
         try{
             var collection = DBManager.db.collection('characters');
+            collection.remove(query);
+            success = true;
+        }
+        catch (error){
+            Logger.error(error);
+            success = false;
+        }
+        callback(success);
+    }
+
+    static removeFriend(query, callback) {
+        var success = false;
+        try{
+            var collection = DBManager.db.collection('accounts_friends');
             collection.remove(query);
             success = true;
         }
@@ -140,6 +165,17 @@ export default class DBManager {
             var result = new Array();
             for(var i in characters) {
                 result.push(new Character(characters[i]));
+            }
+            callback(result);
+        });
+    }
+
+    static getAccounts(query, callback){
+        var collection = DBManager.db.collection('accounts');
+        collection.find(query).toArray(function(err, accounts){
+            var result = new Array();
+            for(var i in accounts) {
+                result.push(new Account(account[i]));
             }
             callback(result);
         });
@@ -213,6 +249,13 @@ export default class DBManager {
         var collection = DBManager.db.collection('map_scroll_actions');
         collection.find({}).toArray(function(err, scrolls){
             callback(scrolls);
+        });
+    }
+
+    static getExperiences(callback) {
+        var collection = DBManager.db.collection('experiences');
+        collection.find({}).toArray(function(err, experiences){
+            callback(experiences);
         });
     }
 }

@@ -82,6 +82,17 @@ export default class WorldServer {
         }
     }
 
+    static getOnlineCharacterByAccountId(accountId)
+    {
+        for (var client in WorldServer.clients)
+        {
+            if (WorldServer.clients[client].character != null
+             && WorldServer.clients[client].account.uid == accountId)
+                return WorldServer.clients[client].character;
+        }
+        return null;
+    }
+
     static getAllClients()
     {
         return WorldServer.clients;

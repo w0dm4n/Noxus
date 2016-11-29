@@ -23,7 +23,8 @@ export default class CommandManager {
         { name:"kick", role:AccountRole.ANIMATOR, description: "Permet d'expulser un joueur du serveur"},
         { name:"ban", role:AccountRole.MODERATOR, description: "Permet de bannir un joueur du serveur"},
         { name:"unban", role:AccountRole.MODERATOR, description: "Permet de débannir un joueur du serveur"},
-        ];
+        { name:"exp", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points d'experience"},
+    ];
     
     static manageCommand(command, client)
     {
@@ -207,4 +208,20 @@ export default class CommandManager {
         }
     }
 
+    static handle_exp(data, client) {
+        if(data[1] && data[2]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if(target) {
+                client.character.experience += parseInt(data[2]);
+                client.character.statsManager.checkLevelUp();
+                client.character.statsManager.sendStats();
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+        {
+             client.character.replyError("Erreur de syntaxe (.exp name nb)");
+        }
+    }
 }

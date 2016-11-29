@@ -10,6 +10,7 @@ import AuthServer from "../network/auth"
 import PlayableBreedEnum from "../enums/playable_breed_enum"
 import Character from "../database/models/character"
 import Loader from "../managers/loader_manager"
+import CharacterManager from "../managers/character_manager.js"
 
 export default class ApproachHandler {
 
@@ -124,7 +125,7 @@ export default class ApproachHandler {
                     colors: packet.colors,
                     cosmeticId: packet.cosmeticId,
                     level: ConfigManager.configData.characters_start.level,
-                    experience: 0,
+                    experience: CharacterManager.getExperienceFloorByLevel(ConfigManager.configData.characters_start.level).xp,
                     kamas: ConfigManager.configData.characters_start.kamas,
                     mapid: ConfigManager.configData.characters_start.startMap,
                     cellid: ConfigManager.configData.characters_start.startCell,
@@ -155,7 +156,6 @@ export default class ApproachHandler {
         if(selectedCharacter != null) {
             client.character = selectedCharacter;
             client.character.client = client;
-
             client.send(new Messages.CharacterSelectedSuccessMessage(client.character.getCharacterBaseInformations(), false));
             client.send(new Messages.CharacterCapabilitiesMessage(6339));
             client.send(new Messages.CharacterLoadingCompleteMessage());

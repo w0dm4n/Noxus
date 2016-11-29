@@ -1,0 +1,1400 @@
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404737d"), 
+    "level" : NumberInt(1), 
+    "xp" : NumberInt(0), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404737e"), 
+    "level" : NumberInt(2), 
+    "xp" : NumberInt(110), 
+    "honor" : NumberInt(500), 
+    "guild" : NumberInt(1100)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404737f"), 
+    "level" : NumberInt(3), 
+    "xp" : NumberInt(650), 
+    "honor" : NumberInt(1500), 
+    "guild" : NumberInt(6500)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047380"), 
+    "level" : NumberInt(4), 
+    "xp" : NumberInt(1500), 
+    "honor" : NumberInt(3000), 
+    "guild" : NumberInt(15000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047381"), 
+    "level" : NumberInt(5), 
+    "xp" : NumberInt(2800), 
+    "honor" : NumberInt(5000), 
+    "guild" : NumberInt(28000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047382"), 
+    "level" : NumberInt(6), 
+    "xp" : NumberInt(4800), 
+    "honor" : NumberInt(7500), 
+    "guild" : NumberInt(48000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047383"), 
+    "level" : NumberInt(7), 
+    "xp" : NumberInt(7300), 
+    "honor" : NumberInt(10000), 
+    "guild" : NumberInt(73000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047384"), 
+    "level" : NumberInt(8), 
+    "xp" : NumberInt(10500), 
+    "honor" : NumberInt(12500), 
+    "guild" : NumberInt(105000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047385"), 
+    "level" : NumberInt(9), 
+    "xp" : NumberInt(14500), 
+    "honor" : NumberInt(15000), 
+    "guild" : NumberInt(145000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047386"), 
+    "level" : NumberInt(10), 
+    "xp" : NumberInt(19200), 
+    "honor" : NumberInt(17500), 
+    "guild" : NumberInt(192000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047387"), 
+    "level" : NumberInt(11), 
+    "xp" : NumberInt(25200), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(252000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047388"), 
+    "level" : NumberInt(12), 
+    "xp" : NumberInt(32600), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(326000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047389"), 
+    "level" : NumberInt(13), 
+    "xp" : NumberInt(41000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(410000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404738a"), 
+    "level" : NumberInt(14), 
+    "xp" : NumberInt(50500), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(505000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404738b"), 
+    "level" : NumberInt(15), 
+    "xp" : NumberInt(61000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(610000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404738c"), 
+    "level" : NumberInt(16), 
+    "xp" : NumberInt(75000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(750000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404738d"), 
+    "level" : NumberInt(17), 
+    "xp" : NumberInt(91000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(910000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404738e"), 
+    "level" : NumberInt(18), 
+    "xp" : NumberInt(115000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1150000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404738f"), 
+    "level" : NumberInt(19), 
+    "xp" : NumberInt(142000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1420000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047390"), 
+    "level" : NumberInt(20), 
+    "xp" : NumberInt(171000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1710000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047391"), 
+    "level" : NumberInt(21), 
+    "xp" : NumberInt(202000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(2020000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047392"), 
+    "level" : NumberInt(22), 
+    "xp" : NumberInt(235000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(2350000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047393"), 
+    "level" : NumberInt(23), 
+    "xp" : NumberInt(270000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(2700000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047394"), 
+    "level" : NumberInt(24), 
+    "xp" : NumberInt(310000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(3100000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047395"), 
+    "level" : NumberInt(25), 
+    "xp" : NumberInt(353000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(3530000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047396"), 
+    "level" : NumberInt(26), 
+    "xp" : NumberInt(398500), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(3985000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047397"), 
+    "level" : NumberInt(27), 
+    "xp" : NumberInt(448000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(4480000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047398"), 
+    "level" : NumberInt(28), 
+    "xp" : NumberInt(503000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(5030000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047399"), 
+    "level" : NumberInt(29), 
+    "xp" : NumberInt(561000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(5610000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404739a"), 
+    "level" : NumberInt(30), 
+    "xp" : NumberInt(621600), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(6216000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404739b"), 
+    "level" : NumberInt(31), 
+    "xp" : NumberInt(687000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(6870000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404739c"), 
+    "level" : NumberInt(32), 
+    "xp" : NumberInt(755000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(7550000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404739d"), 
+    "level" : NumberInt(33), 
+    "xp" : NumberInt(829000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(8290000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404739e"), 
+    "level" : NumberInt(34), 
+    "xp" : NumberInt(910000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(9100000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404739f"), 
+    "level" : NumberInt(35), 
+    "xp" : NumberInt(1000000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(10000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a0"), 
+    "level" : NumberInt(36), 
+    "xp" : NumberInt(1100000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(11000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a1"), 
+    "level" : NumberInt(37), 
+    "xp" : NumberInt(1240000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(12400000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a2"), 
+    "level" : NumberInt(38), 
+    "xp" : NumberInt(1400000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(14000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a3"), 
+    "level" : NumberInt(39), 
+    "xp" : NumberInt(1580000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(15800000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a4"), 
+    "level" : NumberInt(40), 
+    "xp" : NumberInt(1780000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(17800000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a5"), 
+    "level" : NumberInt(41), 
+    "xp" : NumberInt(2000000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(20000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a6"), 
+    "level" : NumberInt(42), 
+    "xp" : NumberInt(2250000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(22500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a7"), 
+    "level" : NumberInt(43), 
+    "xp" : NumberInt(2530000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(25300000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a8"), 
+    "level" : NumberInt(44), 
+    "xp" : NumberInt(2850000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(28500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473a9"), 
+    "level" : NumberInt(45), 
+    "xp" : NumberInt(3200000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(32000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473aa"), 
+    "level" : NumberInt(46), 
+    "xp" : NumberInt(3570000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(35700000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ab"), 
+    "level" : NumberInt(47), 
+    "xp" : NumberInt(3960000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(39600000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ac"), 
+    "level" : NumberInt(48), 
+    "xp" : NumberInt(4400000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(44000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ad"), 
+    "level" : NumberInt(49), 
+    "xp" : NumberInt(4860000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(48600000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ae"), 
+    "level" : NumberInt(50), 
+    "xp" : NumberInt(5350000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(53500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473af"), 
+    "level" : NumberInt(51), 
+    "xp" : NumberInt(5860000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(58600000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b0"), 
+    "level" : NumberInt(52), 
+    "xp" : NumberInt(6390000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(63900000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b1"), 
+    "level" : NumberInt(53), 
+    "xp" : NumberInt(6950000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(69500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b2"), 
+    "level" : NumberInt(54), 
+    "xp" : NumberInt(7530000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(75300000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b3"), 
+    "level" : NumberInt(55), 
+    "xp" : NumberInt(8130000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(81300000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b4"), 
+    "level" : NumberInt(56), 
+    "xp" : NumberInt(8765100), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(87651000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b5"), 
+    "level" : NumberInt(57), 
+    "xp" : NumberInt(9420000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(94200000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b6"), 
+    "level" : NumberInt(58), 
+    "xp" : NumberInt(10150000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(101500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b7"), 
+    "level" : NumberInt(59), 
+    "xp" : NumberInt(10894000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(108940000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b8"), 
+    "level" : NumberInt(60), 
+    "xp" : NumberInt(11650000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(116500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473b9"), 
+    "level" : NumberInt(61), 
+    "xp" : NumberInt(12450000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(124500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ba"), 
+    "level" : NumberInt(62), 
+    "xp" : NumberInt(13280000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(132800000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473bb"), 
+    "level" : NumberInt(63), 
+    "xp" : NumberInt(14130000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(141300000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473bc"), 
+    "level" : NumberInt(64), 
+    "xp" : NumberInt(15170000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(151700000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473bd"), 
+    "level" : NumberInt(65), 
+    "xp" : NumberInt(16251000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(162510000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473be"), 
+    "level" : NumberInt(66), 
+    "xp" : NumberInt(17377000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(173770000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473bf"), 
+    "level" : NumberInt(67), 
+    "xp" : NumberInt(18553000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(185530000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c0"), 
+    "level" : NumberInt(68), 
+    "xp" : NumberInt(19778000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(197780000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c1"), 
+    "level" : NumberInt(69), 
+    "xp" : NumberInt(21055000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(210550000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c2"), 
+    "level" : NumberInt(70), 
+    "xp" : NumberInt(22385000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(223850000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c3"), 
+    "level" : NumberInt(71), 
+    "xp" : NumberInt(23529000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(235290000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c4"), 
+    "level" : NumberInt(72), 
+    "xp" : NumberInt(25209000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(252090000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c5"), 
+    "level" : NumberInt(73), 
+    "xp" : NumberInt(26707000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(267070000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c6"), 
+    "level" : NumberInt(74), 
+    "xp" : NumberInt(28264000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(282640000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c7"), 
+    "level" : NumberInt(75), 
+    "xp" : NumberInt(29882000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(298820000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c8"), 
+    "level" : NumberInt(76), 
+    "xp" : NumberInt(31563000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(315630000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473c9"), 
+    "level" : NumberInt(77), 
+    "xp" : NumberInt(33307000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(333070000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ca"), 
+    "level" : NumberInt(78), 
+    "xp" : NumberInt(35118000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(351180000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473cb"), 
+    "level" : NumberInt(79), 
+    "xp" : NumberInt(36997000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(369970000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473cc"), 
+    "level" : NumberInt(80), 
+    "xp" : NumberInt(38945000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(389450000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473cd"), 
+    "level" : NumberInt(81), 
+    "xp" : NumberInt(40965000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(409650000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ce"), 
+    "level" : NumberInt(82), 
+    "xp" : NumberInt(43059000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(430590000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473cf"), 
+    "level" : NumberInt(83), 
+    "xp" : NumberInt(45229000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(452290000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d0"), 
+    "level" : NumberInt(84), 
+    "xp" : NumberInt(47476000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(474760000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d1"), 
+    "level" : NumberInt(85), 
+    "xp" : NumberInt(49803000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(498030000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d2"), 
+    "level" : NumberInt(86), 
+    "xp" : NumberInt(52211000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(522110000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d3"), 
+    "level" : NumberInt(87), 
+    "xp" : NumberInt(54704000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(547040000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d4"), 
+    "level" : NumberInt(88), 
+    "xp" : NumberInt(57284000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(572840000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d5"), 
+    "level" : NumberInt(89), 
+    "xp" : NumberInt(59952000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(599520000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d6"), 
+    "level" : NumberInt(90), 
+    "xp" : NumberInt(62712000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(627120000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d7"), 
+    "level" : NumberInt(91), 
+    "xp" : NumberInt(65565000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(655650000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d8"), 
+    "level" : NumberInt(92), 
+    "xp" : NumberInt(68514000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(685140000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473d9"), 
+    "level" : NumberInt(93), 
+    "xp" : NumberInt(71561000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(715610000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473da"), 
+    "level" : NumberInt(94), 
+    "xp" : NumberInt(74710000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(747100000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473db"), 
+    "level" : NumberInt(95), 
+    "xp" : NumberInt(77963000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(779630000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473dc"), 
+    "level" : NumberInt(96), 
+    "xp" : NumberInt(81323000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(813230000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473dd"), 
+    "level" : NumberInt(97), 
+    "xp" : NumberInt(84792000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(847920000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473de"), 
+    "level" : NumberInt(98), 
+    "xp" : NumberInt(88374000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(883740000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473df"), 
+    "level" : NumberInt(99), 
+    "xp" : NumberInt(92071000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(920710000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e0"), 
+    "level" : NumberInt(100), 
+    "xp" : NumberInt(95886000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(958860000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e1"), 
+    "level" : NumberInt(101), 
+    "xp" : NumberInt(99823000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(998230000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e2"), 
+    "level" : NumberInt(102), 
+    "xp" : NumberInt(103885000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1038850000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e3"), 
+    "level" : NumberInt(103), 
+    "xp" : NumberInt(108075000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1080750000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e4"), 
+    "level" : NumberInt(104), 
+    "xp" : NumberInt(112396000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1123960000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e5"), 
+    "level" : NumberInt(105), 
+    "xp" : NumberInt(116853000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1168530000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e6"), 
+    "level" : NumberInt(106), 
+    "xp" : NumberInt(121447000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1214470000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e7"), 
+    "level" : NumberInt(107), 
+    "xp" : NumberInt(126184000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1261840000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e8"), 
+    "level" : NumberInt(108), 
+    "xp" : NumberInt(131066000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1310660000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473e9"), 
+    "level" : NumberInt(109), 
+    "xp" : NumberInt(136098000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1360980000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ea"), 
+    "level" : NumberInt(110), 
+    "xp" : NumberInt(141283000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1412830000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473eb"), 
+    "level" : NumberInt(111), 
+    "xp" : NumberInt(146626000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1466260000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ec"), 
+    "level" : NumberInt(112), 
+    "xp" : NumberInt(152130000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1521300000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ed"), 
+    "level" : NumberInt(113), 
+    "xp" : NumberInt(157800000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1578000000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ee"), 
+    "level" : NumberInt(114), 
+    "xp" : NumberInt(163640000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1636400000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ef"), 
+    "level" : NumberInt(115), 
+    "xp" : NumberInt(169655000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1696550000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f0"), 
+    "level" : NumberInt(116), 
+    "xp" : NumberInt(175848000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1758480000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f1"), 
+    "level" : NumberInt(117), 
+    "xp" : NumberInt(182225000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1822250000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f2"), 
+    "level" : NumberInt(118), 
+    "xp" : NumberInt(188791000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1887910000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f3"), 
+    "level" : NumberInt(119), 
+    "xp" : NumberInt(195550000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(1955500000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f4"), 
+    "level" : NumberInt(120), 
+    "xp" : NumberInt(202507000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(2025070000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f5"), 
+    "level" : NumberInt(121), 
+    "xp" : NumberInt(209667000), 
+    "honor" : NumberInt(0), 
+    "guild" : NumberInt(2096670000)
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f6"), 
+    "level" : NumberInt(122), 
+    "xp" : NumberInt(217037000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.170037E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f7"), 
+    "level" : NumberInt(123), 
+    "xp" : NumberInt(224620000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.2462E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f8"), 
+    "level" : NumberInt(124), 
+    "xp" : NumberInt(232424000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.32424E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473f9"), 
+    "level" : NumberInt(125), 
+    "xp" : NumberInt(240452000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.40452E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473fa"), 
+    "level" : NumberInt(126), 
+    "xp" : NumberInt(248712000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.48712E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473fb"), 
+    "level" : NumberInt(127), 
+    "xp" : NumberInt(257209000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.57209E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473fc"), 
+    "level" : NumberInt(128), 
+    "xp" : NumberInt(265949000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.65949E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473fd"), 
+    "level" : NumberInt(129), 
+    "xp" : NumberInt(274939000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.74939E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473fe"), 
+    "level" : NumberInt(130), 
+    "xp" : NumberInt(284186000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.84186E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e640473ff"), 
+    "level" : NumberInt(131), 
+    "xp" : NumberInt(293694000), 
+    "honor" : NumberInt(0), 
+    "guild" : 2.93694E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047400"), 
+    "level" : NumberInt(132), 
+    "xp" : NumberInt(303473000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.03473E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047401"), 
+    "level" : NumberInt(133), 
+    "xp" : NumberInt(313527000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.13527E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047402"), 
+    "level" : NumberInt(134), 
+    "xp" : NumberInt(323866000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.23666E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047403"), 
+    "level" : NumberInt(135), 
+    "xp" : NumberInt(334495000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.34495E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047404"), 
+    "level" : NumberInt(136), 
+    "xp" : NumberInt(345423000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.45423E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047405"), 
+    "level" : NumberInt(137), 
+    "xp" : NumberInt(356657000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.56657E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047406"), 
+    "level" : NumberInt(138), 
+    "xp" : NumberInt(368206000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.68206E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047407"), 
+    "level" : NumberInt(139), 
+    "xp" : NumberInt(380076000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.80076E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047408"), 
+    "level" : NumberInt(140), 
+    "xp" : NumberInt(392278000), 
+    "honor" : NumberInt(0), 
+    "guild" : 3.92278E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047409"), 
+    "level" : NumberInt(141), 
+    "xp" : NumberInt(404818000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.04818E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404740a"), 
+    "level" : NumberInt(142), 
+    "xp" : NumberInt(417706000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.17706E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404740b"), 
+    "level" : NumberInt(143), 
+    "xp" : NumberInt(430952000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.30952E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404740c"), 
+    "level" : NumberInt(144), 
+    "xp" : NumberInt(444564000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.44564E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404740d"), 
+    "level" : NumberInt(145), 
+    "xp" : NumberInt(458551000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.58551E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404740e"), 
+    "level" : NumberInt(146), 
+    "xp" : NumberInt(472924000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.72924E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404740f"), 
+    "level" : NumberInt(147), 
+    "xp" : NumberInt(487693000), 
+    "honor" : NumberInt(0), 
+    "guild" : 4.87693E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047410"), 
+    "level" : NumberInt(148), 
+    "xp" : NumberInt(502867000), 
+    "honor" : NumberInt(0), 
+    "guild" : 5.02867E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047411"), 
+    "level" : NumberInt(149), 
+    "xp" : NumberInt(518458000), 
+    "honor" : NumberInt(0), 
+    "guild" : 5.18458E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047412"), 
+    "level" : NumberInt(150), 
+    "xp" : NumberInt(534476000), 
+    "honor" : NumberInt(0), 
+    "guild" : 5.34476E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047413"), 
+    "level" : NumberInt(151), 
+    "xp" : NumberInt(502867000), 
+    "honor" : NumberInt(0), 
+    "guild" : 5.51E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047414"), 
+    "level" : NumberInt(152), 
+    "xp" : NumberInt(567839000), 
+    "honor" : NumberInt(0), 
+    "guild" : 5.67839E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047415"), 
+    "level" : NumberInt(153), 
+    "xp" : NumberInt(585206000), 
+    "honor" : NumberInt(0), 
+    "guild" : 5.85206E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047416"), 
+    "level" : NumberInt(154), 
+    "xp" : NumberInt(603047000), 
+    "honor" : NumberInt(0), 
+    "guild" : 6.03047E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047417"), 
+    "level" : NumberInt(155), 
+    "xp" : NumberInt(621374000), 
+    "honor" : NumberInt(0), 
+    "guild" : 6.21374E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047418"), 
+    "level" : NumberInt(156), 
+    "xp" : NumberInt(640199000), 
+    "honor" : NumberInt(0), 
+    "guild" : 6.40199E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047419"), 
+    "level" : NumberInt(157), 
+    "xp" : NumberInt(659536000), 
+    "honor" : NumberInt(0), 
+    "guild" : 6.59536E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404741a"), 
+    "level" : NumberInt(158), 
+    "xp" : NumberInt(679398000), 
+    "honor" : NumberInt(0), 
+    "guild" : 6.79398E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404741b"), 
+    "level" : NumberInt(159), 
+    "xp" : NumberInt(699798000), 
+    "honor" : NumberInt(0), 
+    "guild" : 6.99798E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404741c"), 
+    "level" : NumberInt(160), 
+    "xp" : NumberInt(720751000), 
+    "honor" : NumberInt(0), 
+    "guild" : 7.20751E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404741d"), 
+    "level" : NumberInt(161), 
+    "xp" : NumberInt(742772000), 
+    "honor" : NumberInt(0), 
+    "guild" : 7.42272E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404741e"), 
+    "level" : NumberInt(162), 
+    "xp" : NumberInt(764374000), 
+    "honor" : NumberInt(0), 
+    "guild" : 7.64374E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404741f"), 
+    "level" : NumberInt(163), 
+    "xp" : NumberInt(787074000), 
+    "honor" : NumberInt(0), 
+    "guild" : 7.87074E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047420"), 
+    "level" : NumberInt(164), 
+    "xp" : NumberInt(810387000), 
+    "honor" : NumberInt(0), 
+    "guild" : 8.10387E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047421"), 
+    "level" : NumberInt(165), 
+    "xp" : NumberInt(834329000), 
+    "honor" : NumberInt(0), 
+    "guild" : 8.34329E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047422"), 
+    "level" : NumberInt(166), 
+    "xp" : NumberInt(858917000), 
+    "honor" : NumberInt(0), 
+    "guild" : 8.58917E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047423"), 
+    "level" : NumberInt(167), 
+    "xp" : NumberInt(884167000), 
+    "honor" : NumberInt(0), 
+    "guild" : 8.84167E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047424"), 
+    "level" : NumberInt(168), 
+    "xp" : NumberInt(910098000), 
+    "honor" : NumberInt(0), 
+    "guild" : 9.10098E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047425"), 
+    "level" : NumberInt(169), 
+    "xp" : NumberInt(936727000), 
+    "honor" : NumberInt(0), 
+    "guild" : 9.36727E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047426"), 
+    "level" : NumberInt(170), 
+    "xp" : NumberInt(964073000), 
+    "honor" : NumberInt(0), 
+    "guild" : 9.64073E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047427"), 
+    "level" : NumberInt(171), 
+    "xp" : NumberInt(992154000), 
+    "honor" : NumberInt(0), 
+    "guild" : 9.92154E9
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047428"), 
+    "level" : NumberInt(172), 
+    "xp" : NumberInt(1020991000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.020991E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047429"), 
+    "level" : NumberInt(173), 
+    "xp" : NumberInt(1050603000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.050603E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404742a"), 
+    "level" : NumberInt(174), 
+    "xp" : NumberInt(1081010000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.08101E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404742b"), 
+    "level" : NumberInt(175), 
+    "xp" : NumberInt(1112235000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.112235E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404742c"), 
+    "level" : NumberInt(176), 
+    "xp" : NumberInt(1144298000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.144298E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404742d"), 
+    "level" : NumberInt(177), 
+    "xp" : NumberInt(1177222000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.177222E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404742e"), 
+    "level" : NumberInt(178), 
+    "xp" : NumberInt(1211030000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.21103E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404742f"), 
+    "level" : NumberInt(179), 
+    "xp" : NumberInt(1245745000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.245745E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047430"), 
+    "level" : NumberInt(180), 
+    "xp" : NumberInt(1281393000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.281393E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047431"), 
+    "level" : NumberInt(181), 
+    "xp" : NumberInt(1317997000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.317997E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047432"), 
+    "level" : NumberInt(182), 
+    "xp" : NumberInt(1355584000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.355584E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047433"), 
+    "level" : NumberInt(183), 
+    "xp" : NumberInt(1404179000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.404179E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047434"), 
+    "level" : NumberInt(184), 
+    "xp" : NumberInt(1463811000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.433811E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047435"), 
+    "level" : NumberInt(185), 
+    "xp" : NumberInt(1534506000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.474506E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047436"), 
+    "level" : NumberInt(186), 
+    "xp" : NumberInt(1616294000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.516294E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047437"), 
+    "level" : NumberInt(187), 
+    "xp" : NumberInt(1709205000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.559205E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047438"), 
+    "level" : NumberInt(188), 
+    "xp" : NumberInt(1813267000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.603267E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047439"), 
+    "level" : NumberInt(189), 
+    "xp" : NumberInt(1928513000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.648513E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404743a"), 
+    "level" : NumberInt(190), 
+    "xp" : NumberInt(2054975000), 
+    "honor" : NumberInt(0), 
+    "guild" : 1.694975E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404743b"), 
+    "level" : NumberInt(191), 
+    "xp" : 2.192686E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 1.742686E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404743c"), 
+    "level" : NumberInt(192), 
+    "xp" : 2.341679E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 1.791646E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404743d"), 
+    "level" : NumberInt(193), 
+    "xp" : 2.50199E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 1.84199E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404743e"), 
+    "level" : NumberInt(194), 
+    "xp" : 2.673655E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 1.893655E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e6404743f"), 
+    "level" : NumberInt(195), 
+    "xp" : 2.85671E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 1.94671E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047440"), 
+    "level" : NumberInt(196), 
+    "xp" : 3.051194E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 2.001194E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047441"), 
+    "level" : NumberInt(197), 
+    "xp" : 3.257146E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 2.057146E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047442"), 
+    "level" : NumberInt(198), 
+    "xp" : 3.474606E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 2.114606E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047443"), 
+    "level" : NumberInt(199), 
+    "xp" : 3.703616E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 2.173616E10
+}
+{ 
+    "_id" : ObjectId("583dd48f6d39e23e64047444"), 
+    "level" : NumberInt(200), 
+    "xp" : 7.407232E9, 
+    "honor" : NumberInt(0), 
+    "guild" : 2.235623E10
+}

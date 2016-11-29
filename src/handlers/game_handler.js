@@ -23,7 +23,7 @@ export default class GameHandler {
     static handleGameContextCreateRequestMessage(client, packet) {
         client.send(new Messages.GameContextDestroyMessage());
         client.send(new Messages.GameContextCreateMessage(1));
-		client.character.sendStats();
+		client.character.statsManager.sendStats();
 
         if(client.character.firstContext) {
             WorldManager.teleportClient(client, client.character.mapid, client.character.cellid, function(result){
@@ -150,7 +150,7 @@ export default class GameHandler {
 		while(bp > 0) {
 			var floorCost = CharacterManager.getFloorForStats(client.character, packet.statId);
 			if(client.character.statsPoints >= floorCost) {
-				client.character.getStatById(packet.statId).base++;
+				client.character.statsManager.getStatById(packet.statId).base++;
 				client.character.statsPoints -= floorCost;
 				bp -= floorCost;
 
@@ -162,7 +162,7 @@ export default class GameHandler {
 				break;
 			}
 		}
-		client.character.sendStats();
+		client.character.statsManager.sendStats();
 		client.character.save();
 	}
 }

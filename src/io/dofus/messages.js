@@ -990,3 +990,51 @@ export class StatsUpgradeRequestMessage extends ProtocolMessage {
         }
     }
 }
+
+export class FriendsGetListMessage extends ProtocolMessage {
+    constructor() {
+        super(4001);
+    }
+    serialize() {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class FriendDeleteRequestMessage extends ProtocolMessage {
+    constructor(accountId) {
+        super(5603);
+        this.accountId = accountId;
+    }
+    serialize() {
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element accountId.");
+        }
+        this.buffer.writeInt(this.accountId);
+    }
+    deserialize(buffer) {
+        this.accountId = buffer.readInt();
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element of FriendDeleteRequestMessage.accountId.");
+        }
+    }
+}
+
+export class CharacterLevelUpMessage extends ProtocolMessage {
+    constructor(newLevel) {
+        super(5670);
+        this.newLevel = newLevel;
+    }
+    serialize() {
+        if (this.newLevel < 2 || this.newLevel > 200) {
+            Logger.error("Forbidden value (" + this.newLevel + ") on element newLevel.");
+        }
+        this.buffer.writeByte(this.newLevel);
+    }
+    deserialize(buffer) {
+        this.newLevel = buffer.readUnsignedByte();
+        if (this.newLevel < 2 || this.newLevel > 200) {
+            Logger.error("Forbidden value (" + this.newLevel + ") on element of CharacterLevelUpMessage.newLevel.");
+        }
+    }
+}

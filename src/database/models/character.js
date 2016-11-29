@@ -7,6 +7,7 @@ import WorldServer from "../../network/world"
 import Logger from "../../io/logger"
 import ConfigManager from "../../utils/configmanager.js"
 import DBManager from "../../database/dbmanager"
+import StatsManager from "../../game/stats/stats_manager"
 
 export default class Character {
 
@@ -34,30 +35,18 @@ export default class Character {
         this.statsPoints = raw.statsPoints;
         this.spellPoints = raw.spellPoints;
 
-        if(!raw.stats) {
-            this.stats = [];
-            this.stats[10] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0);
-            this.stats[11] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0);
-            this.stats[12] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0);
-            this.stats[13] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0);
-            this.stats[14] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0);
-            this.stats[15] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0);
-        }
-        else {
-            this.stats = [];
-            this.stats[10] = new Types.CharacterBaseCharacteristic(raw.stats.strength, 0, 0, 0, 0);
-            this.stats[11] = new Types.CharacterBaseCharacteristic(raw.stats.vitality, 0, 0, 0, 0);
-            this.stats[12] = new Types.CharacterBaseCharacteristic(raw.stats.wisdom, 0, 0, 0, 0);
-            this.stats[13] = new Types.CharacterBaseCharacteristic(raw.stats.chance, 0, 0, 0, 0);
-            this.stats[14] = new Types.CharacterBaseCharacteristic(raw.stats.agility, 0, 0, 0, 0);
-            this.stats[15] = new Types.CharacterBaseCharacteristic(raw.stats.intelligence, 0, 0, 0, 0);
-        }
-        
-        this.life = raw.life ? raw.life : this.getMaxLife();
-    }
+        this.stats = [];
+        this.stats[1] = new Types.CharacterBaseCharacteristic(6, 0, 0, 0, 0); // PA
+        this.stats[2] = new Types.CharacterBaseCharacteristic(3, 0, 0, 0, 0); // PM
+        this.stats[10] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.strength : 0, 0, 0, 0, 0);
+        this.stats[11] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.vitality : 0, 0, 0, 0, 0);
+        this.stats[12] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.wisdom : 0, 0, 0, 0, 0);
+        this.stats[13] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.chance : 0, 0, 0, 0, 0);
+        this.stats[14] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.agility : 0, 0, 0, 0, 0);
+        this.stats[15] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.intelligence : 0, 0, 0, 0, 0);
+        this.statsManager = new StatsManager(this);
 
-    getStatById(id) {
-        return this.stats[id];
+        this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
     }
 
     getBaseSkin() {
@@ -194,109 +183,17 @@ export default class Character {
             spellPoints: this.spellPoints,
             life: this.life,
             stats: {
-                strength: this.getStatById(10).base,
-                vitality: this.getStatById(11).base,
-                wisdom: this.getStatById(12).base,
-                chance: this.getStatById(13).base,
-                agility: this.getStatById(14).base,
-                intelligence: this.getStatById(15).base,
+                strength: this.statsManager.getStatById(10).base,
+                vitality: this.statsManager.getStatById(11).base,
+                wisdom: this.statsManager.getStatById(12).base,
+                chance: this.statsManager.getStatById(13).base,
+                agility: this.statsManager.getStatById(14).base,
+                intelligence: this.statsManager.getStatById(15).base,
             }
         };
         DBManager.updateCharacter(this._id, toUpdate, function () {
             Logger.infos("Character '" + self.name + "(" + self._id + ")' saved");
             if (callback) callback();
         });
-    }
-
-    ///////////////////
-    // Stats methods
-    ///////////////////
-
-    getBaseLife() {
-        return 42; //TODO: Per class
-    }
-
-    getMaxLife() {
-        return this.getBaseLife() + this.getStatById(11).base;
-    }
-
-    getActorExtendedAlignmentInformations() {
-        return new Types.ActorExtendedAlignmentInformations(0, 0, 0, 0, 0, 0, 0, 0);
-    }
-
-    getCharacterCharacteristicsInformations() {
-        return new Types.CharacterCharacteristicsInformations(
-            this.experience, 0, 0, 
-            this.kamas, 
-            this.statsPoints, 0, 
-            this.spellPoints, 
-            this.getActorExtendedAlignmentInformations(),
-            this.life, this.getMaxLife(), 10000, 10000, 6, 6,
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            this.getStatById(10),
-            this.getStatById(11),
-            this.getStatById(12),
-            this.getStatById(13),
-            this.getStatById(14),
-            this.getStatById(15),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            0,
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            [], 0
-        );
-    }
-
-    sendStats() {
-        this.client.send(new Messages.CharacterStatsListMessage(this.getCharacterCharacteristicsInformations()));
     }
 }

@@ -3,18 +3,18 @@ import Datacenter from "../database/datacenter"
 export default class CharacterManager {
 
     static getBreed(breedId) {
-        for(var i in Datacenter.breeds) {
+        for (var i in Datacenter.breeds) {
             var b = Datacenter.breeds[i];
-            if(b.id == breedId) {
+            if (b.id == breedId) {
                 return b;
             }
         }
     }
 
     static getHead(cosmeticId) {
-        for(var i in Datacenter.heads) {
+        for (var i in Datacenter.heads) {
             var b = Datacenter.heads[i];
-            if(b.id == cosmeticId) {
+            if (b.id == cosmeticId) {
                 return b;
             }
         }
@@ -33,38 +33,52 @@ export default class CharacterManager {
     static getFloorForStats(character, type) {
         var breed = character.getBreed();
         var value = 1;
-        var current = character.getStatById(type).base;
+        var current = character.statsManager.getStatById(type).base;
         var floor = null;
-        switch(type) {
+        switch (type) {
             case 10:
-            floor = breed.statsPointsForStrength;
-            break;
+                floor = breed.statsPointsForStrength;
+                break;
             case 11:
-            floor = breed.statsPointsForVitality;
-            break;
+                floor = breed.statsPointsForVitality;
+                break;
             case 12:
-            floor = breed.statsPointsForWisdom;
-            break;
+                floor = breed.statsPointsForWisdom;
+                break;
             case 13:
-            floor = breed.statsPointsForChance;
-            break;
+                floor = breed.statsPointsForChance;
+                break;
             case 14:
-            floor = breed.statsPointsForAgility;
-            break;
+                floor = breed.statsPointsForAgility;
+                break;
             case 15:
-            floor = breed.statsPointsForIntelligence;
-            break;
+                floor = breed.statsPointsForIntelligence;
+                break;
         }
-        if(floor != null) {
+        if (floor != null) {
             var validFloor = null;
-            for(var i in floor) {
+            for (var i in floor) {
                 var floorData = floor[i];
-                if(current >= floorData[0]) {
+                if (current >= floorData[0]) {
                     validFloor = floorData[1];
                 }
             }
             return validFloor;
         }
         return value;
+    }
+
+    static getExperienceFloorByLevel(exp) {
+        return Datacenter.experiences.filter(function (x) {
+            if (x.level == exp) return x;
+        })[0];
+    }
+
+    static getExperienceFloorByExperience(exp) {
+        var floor = null;
+        for (var i in Datacenter.experiences) {
+            if (Datacenter.experiences[i].xp <= exp) floor = Datacenter.experiences[i];
+        }
+        return floor;
     }
 }

@@ -6,23 +6,56 @@ export default class Datacenter {
     static breeds;
     static heads;
     static mapScrollsActions;
+    static experiences;
 
     static load(callback) {
-        Logger.infos("Loading breed(s) ..");
+        var loaders = [
+            Datacenter.loadBreeds,
+            Datacenter.loadHeads,
+            Datacenter.loadMapScrollsActions,
+            Datacenter.loadExperiences,
+        ];
+        var loaded = 0;
+
+        for(var i in loaders) {
+            loaders[i](function(){
+                loaded++;
+                if(loaded == loaders.length) {
+                    callback();
+                }
+            });
+        }
+    }
+
+    static loadBreeds(callback) {
         DBManager.getBreeds(function(breeds){
             Datacenter.breeds = breeds;
             Logger.infos("Loaded '" + breeds.length + "' breed(s)");
+            callback();
+        });
+    }
 
-            DBManager.getHeads(function(heads){
-                Datacenter.heads = heads;
-                Logger.infos("Loaded '" + heads.length + "' heads(s)");
+    static loadHeads(callback) {
+        DBManager.getHeads(function(heads){
+            Datacenter.heads = heads;
+            Logger.infos("Loaded '" + heads.length + "' heads(s)");
+            callback();
+        });
+    }
 
-                DBManager.getMapScrollActions(function(scrolls){
-                    Datacenter.mapScrollsActions = scrolls;
-                    Logger.infos("Loaded '" + scrolls.length + "' map scroll actions(s)");
-                    callback();
-                });
-            });
+    static loadMapScrollsActions(callback) {
+        DBManager.getMapScrollActions(function(scrolls){
+            Datacenter.mapScrollsActions = scrolls;
+            Logger.infos("Loaded '" + scrolls.length + "' map scroll actions(s)");
+            callback();
+        });
+    }
+
+    static loadExperiences(callback) {
+        DBManager.getExperiences(function(experiences){
+            Datacenter.experiences = experiences;
+            Logger.infos("Loaded '" + experiences.length + "' experience floor(s)");
+            callback();
         });
     }
 
