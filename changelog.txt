@@ -1,0 +1,10 @@
+========= Noxus Changelog =========
+Author: Yukï and Arkalius
+
+[27/11/2016]
+Yukï ->
+	- Ajout d'un pathfinding basique pour la gestion et vérification des chemins pris par le joueur
+	- Gestion des instances de cartes
+	- Compression des cells en base64 et gzippe pour optimisé la bdd
+	- Ajout des fonctions de téléportation de personnage
+	- Gestion de la deconnexion du personnage

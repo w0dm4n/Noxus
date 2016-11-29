@@ -1,0 +1,20 @@
+{ 
+    "_id" : ObjectId("5831b5e503b10fc48c1568d8"), 
+    "uid" : NumberLong(1), 
+    "username" : "test", 
+    "password" : "test", 
+    "scope" : NumberInt(4), 
+    "locked" : NumberInt(0), 
+    "nickname" : "test", 
+    "secret_question" : "Supprimer le personnage ?"
+}
+{ 
+    "_id" : ObjectId("5831b5e503b10fc48c1568d9"), 
+    "uid" : NumberLong(2), 
+    "username" : "testt", 
+    "password" : "testt", 
+    "scope" : NumberInt(1), 
+    "locked" : NumberInt(0), 
+    "nickname" : "testt", 
+    "secret_question" : "Supprimer le personnage ?"
+}

@@ -1,0 +1,32 @@
+{ 
+    "_id" : NumberInt(27), 
+    "accountId" : NumberInt(1), 
+    "name" : "Bizelzapobany", 
+    "breed" : NumberInt(1), 
+    "sex" : false, 
+    "colors" : [
+        NumberInt(16765564), 
+        NumberInt(7098157), 
+        NumberInt(15972912), 
+        NumberInt(5468254), 
+        NumberInt(7098157)
+    ], 
+    "cosmeticId" : NumberInt(6), 
+    "level" : NumberInt(150), 
+    "experience" : NumberInt(0), 
+    "kamas" : NumberInt(150000), 
+    "mapid" : NumberInt(173277699), 
+    "cellid" : NumberInt(328), 
+    "dirId" : NumberInt(1), 
+    "life" : NumberInt(42), 
+    "statsPoints" : NumberInt(200), 
+    "spellPoints" : NumberInt(0), 
+    "stats" : {
+        "strength" : NumberInt(0), 
+        "vitality" : NumberInt(0), 
+        "wisdom" : NumberInt(0), 
+        "chance" : NumberInt(0), 
+        "agility" : NumberInt(0), 
+        "intelligence" : NumberInt(0)
+    }
+}

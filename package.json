@@ -1,0 +1,27 @@
+{
+  "name": "noxus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "arraybuffer-to-buffer": "0.0.4",
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "base64-js": "^1.2.0",
+    "colors": "^1.1.2",
+    "mongodb": "^2.2.11",
+    "mongodb-autoincrement": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://nightwolfdev.visualstudio.com/Noxus/_git/Noxus-Babel"
+  },
+  "author": "",
+  "license": "ISC"
+}

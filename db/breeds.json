@@ -1,0 +1,3300 @@
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a36"), 
+    "id" : NumberInt(1), 
+    "shortNameId" : NumberInt(685), 
+    "longNameId" : NumberInt(116103), 
+    "descriptionId" : NumberInt(305968), 
+    "gameplayDescriptionId" : NumberInt(598583), 
+    "maleLook" : "{1|10||135}", 
+    "femaleLook" : "{1|11||125}", 
+    "creatureBonesId" : NumberInt(15), 
+    "maleArtwork" : NumberInt(198), 
+    "femaleArtwork" : NumberInt(199), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(3), 
+        NumberInt(6), 
+        NumberInt(2), 
+        NumberInt(1), 
+        NumberInt(19), 
+        NumberInt(4), 
+        NumberInt(17), 
+        NumberInt(18), 
+        NumberInt(9), 
+        NumberInt(20), 
+        NumberInt(8), 
+        NumberInt(11), 
+        NumberInt(13), 
+        NumberInt(5), 
+        NumberInt(12), 
+        NumberInt(14), 
+        NumberInt(15), 
+        NumberInt(16), 
+        NumberInt(10), 
+        NumberInt(7), 
+        NumberInt(1901)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598584), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(599995), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(598587), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506469), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(506473), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506517), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506472), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(1), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506468), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16765564), 
+        NumberInt(7098157), 
+        NumberInt(15972912), 
+        NumberInt(5468254), 
+        NumberInt(7098157)
+    ], 
+    "femaleColors" : [
+        NumberInt(16103775), 
+        NumberInt(6833184), 
+        NumberInt(13661190), 
+        NumberInt(13661190), 
+        NumberInt(6963462)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(10)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a37"), 
+    "id" : NumberInt(2), 
+    "shortNameId" : NumberInt(697), 
+    "longNameId" : NumberInt(116101), 
+    "descriptionId" : NumberInt(305966), 
+    "gameplayDescriptionId" : NumberInt(598597), 
+    "maleLook" : "{1|20||130}", 
+    "femaleLook" : "{1|21||125}", 
+    "creatureBonesId" : NumberInt(16), 
+    "maleArtwork" : NumberInt(200), 
+    "femaleArtwork" : NumberInt(202), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(22), 
+        NumberInt(21), 
+        NumberInt(34), 
+        NumberInt(26), 
+        NumberInt(28), 
+        NumberInt(35), 
+        NumberInt(37), 
+        NumberInt(38), 
+        NumberInt(30), 
+        NumberInt(33), 
+        NumberInt(40), 
+        NumberInt(39), 
+        NumberInt(24), 
+        NumberInt(23), 
+        NumberInt(36), 
+        NumberInt(32), 
+        NumberInt(25), 
+        NumberInt(31), 
+        NumberInt(27), 
+        NumberInt(29), 
+        NumberInt(1902)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506481), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506478), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506479), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(598599), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(506482), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506483), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(662502), 
+            "value" : NumberInt(10), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(2), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(598600), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(3)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(15973470), 
+        NumberInt(16777166), 
+        NumberInt(4836573), 
+        NumberInt(2827027), 
+        NumberInt(16761904)
+    ], 
+    "femaleColors" : [
+        NumberInt(16759376), 
+        NumberInt(16777164), 
+        NumberInt(2726594), 
+        NumberInt(2827027), 
+        NumberInt(2726594)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(1), 
+    "sortIndex" : NumberInt(5)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a38"), 
+    "id" : NumberInt(3), 
+    "shortNameId" : NumberInt(681), 
+    "longNameId" : NumberInt(116105), 
+    "descriptionId" : NumberInt(305969), 
+    "gameplayDescriptionId" : NumberInt(598579), 
+    "maleLook" : "{1|30||120}", 
+    "femaleLook" : "{1|31||95}", 
+    "creatureBonesId" : NumberInt(17), 
+    "maleArtwork" : NumberInt(203), 
+    "femaleArtwork" : NumberInt(204), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(51), 
+        NumberInt(41), 
+        NumberInt(43), 
+        NumberInt(49), 
+        NumberInt(55), 
+        NumberInt(47), 
+        NumberInt(48), 
+        NumberInt(45), 
+        NumberInt(53), 
+        NumberInt(57), 
+        NumberInt(52), 
+        NumberInt(44), 
+        NumberInt(50), 
+        NumberInt(54), 
+        NumberInt(42), 
+        NumberInt(56), 
+        NumberInt(58), 
+        NumberInt(59), 
+        NumberInt(46), 
+        NumberInt(60), 
+        NumberInt(1903)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598580), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506524), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506515), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506516), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(506522), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506521), 
+            "value" : NumberInt(1), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(598581), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(3), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(599992), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(3)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(15973470), 
+        NumberInt(16777166), 
+        NumberInt(4404257), 
+        NumberInt(16767286), 
+        NumberInt(10904329)
+    ], 
+    "femaleColors" : [
+        NumberInt(15384674), 
+        NumberInt(15982756), 
+        NumberInt(4404257), 
+        NumberInt(16777164), 
+        NumberInt(11373881)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(7)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a39"), 
+    "id" : NumberInt(4), 
+    "shortNameId" : NumberInt(701), 
+    "longNameId" : NumberInt(116106), 
+    "descriptionId" : NumberInt(305965), 
+    "gameplayDescriptionId" : NumberInt(598617), 
+    "maleLook" : "{1|40||140}", 
+    "femaleLook" : "{1|41||155}", 
+    "creatureBonesId" : NumberInt(18), 
+    "maleArtwork" : NumberInt(205), 
+    "femaleArtwork" : NumberInt(206), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(61), 
+        NumberInt(65), 
+        NumberInt(72), 
+        NumberInt(66), 
+        NumberInt(68), 
+        NumberInt(63), 
+        NumberInt(74), 
+        NumberInt(75), 
+        NumberInt(79), 
+        NumberInt(78), 
+        NumberInt(71), 
+        NumberInt(62), 
+        NumberInt(69), 
+        NumberInt(77), 
+        NumberInt(73), 
+        NumberInt(67), 
+        NumberInt(70), 
+        NumberInt(64), 
+        NumberInt(76), 
+        NumberInt(80), 
+        NumberInt(1904)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598621), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506413), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506416), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506415), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598619), 
+            "value" : NumberInt(10), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598618), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506414), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(4), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506409), 
+            "value" : NumberInt(1), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(15919294), 
+        NumberInt(3101814), 
+        NumberInt(3101814), 
+        NumberInt(3101814), 
+        NumberInt(8748628)
+    ], 
+    "femaleColors" : [
+        NumberInt(15384674), 
+        NumberInt(16777198), 
+        NumberInt(4157854), 
+        NumberInt(4157854), 
+        NumberInt(14872505)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(1), 
+    "sortIndex" : NumberInt(6)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a3a"), 
+    "id" : NumberInt(5), 
+    "shortNameId" : NumberInt(705), 
+    "longNameId" : NumberInt(706), 
+    "descriptionId" : NumberInt(305960), 
+    "gameplayDescriptionId" : NumberInt(598627), 
+    "maleLook" : "{1|50||110}", 
+    "femaleLook" : "{1|51||110}", 
+    "creatureBonesId" : NumberInt(22), 
+    "maleArtwork" : NumberInt(207), 
+    "femaleArtwork" : NumberInt(208), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(83), 
+        NumberInt(81), 
+        NumberInt(88), 
+        NumberInt(93), 
+        NumberInt(82), 
+        NumberInt(92), 
+        NumberInt(97), 
+        NumberInt(84), 
+        NumberInt(100), 
+        NumberInt(98), 
+        NumberInt(85), 
+        NumberInt(96), 
+        NumberInt(90), 
+        NumberInt(87), 
+        NumberInt(89), 
+        NumberInt(86), 
+        NumberInt(94), 
+        NumberInt(95), 
+        NumberInt(91), 
+        NumberInt(99), 
+        NumberInt(1905)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598630), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506463), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506437), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506429), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598629), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598628), 
+            "value" : NumberInt(9), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506462), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(5), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506436), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(7957320), 
+        NumberInt(6178082), 
+        NumberInt(2775654), 
+        NumberInt(14523954), 
+        NumberInt(4336658)
+    ], 
+    "femaleColors" : [
+        NumberInt(7957320), 
+        NumberInt(16777166), 
+        NumberInt(2512998), 
+        NumberInt(13945509), 
+        NumberInt(2512998)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(3), 
+    "sortIndex" : NumberInt(17)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a3b"), 
+    "id" : NumberInt(6), 
+    "shortNameId" : NumberInt(677), 
+    "longNameId" : NumberInt(116109), 
+    "descriptionId" : NumberInt(305963), 
+    "gameplayDescriptionId" : NumberInt(598087), 
+    "maleLook" : "{1|60||150}", 
+    "femaleLook" : "{1|61||150}", 
+    "creatureBonesId" : NumberInt(34), 
+    "maleArtwork" : NumberInt(209), 
+    "femaleArtwork" : NumberInt(210), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(109), 
+        NumberInt(103), 
+        NumberInt(105), 
+        NumberInt(102), 
+        NumberInt(113), 
+        NumberInt(111), 
+        NumberInt(117), 
+        NumberInt(119), 
+        NumberInt(101), 
+        NumberInt(107), 
+        NumberInt(116), 
+        NumberInt(106), 
+        NumberInt(108), 
+        NumberInt(104), 
+        NumberInt(115), 
+        NumberInt(118), 
+        NumberInt(110), 
+        NumberInt(112), 
+        NumberInt(114), 
+        NumberInt(120), 
+        NumberInt(1906)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506420), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506500), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506499), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(598081), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598080), 
+            "value" : NumberInt(9), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506502), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506501), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(6), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(598085), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16380634), 
+        NumberInt(13726012), 
+        NumberInt(16735778), 
+        NumberInt(2786186), 
+        NumberInt(16761904)
+    ], 
+    "femaleColors" : [
+        NumberInt(16380634), 
+        NumberInt(14378769), 
+        NumberInt(14568735), 
+        NumberInt(13201181), 
+        NumberInt(2057046)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(8)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a3c"), 
+    "id" : NumberInt(7), 
+    "shortNameId" : NumberInt(673), 
+    "longNameId" : NumberInt(582016), 
+    "descriptionId" : NumberInt(305962), 
+    "gameplayDescriptionId" : NumberInt(598094), 
+    "maleLook" : "{1|70||110}", 
+    "femaleLook" : "{1|71||115}", 
+    "creatureBonesId" : NumberInt(36), 
+    "maleArtwork" : NumberInt(211), 
+    "femaleArtwork" : NumberInt(212), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(124), 
+        NumberInt(122), 
+        NumberInt(129), 
+        NumberInt(125), 
+        NumberInt(128), 
+        NumberInt(126), 
+        NumberInt(123), 
+        NumberInt(133), 
+        NumberInt(130), 
+        NumberInt(134), 
+        NumberInt(127), 
+        NumberInt(131), 
+        NumberInt(136), 
+        NumberInt(135), 
+        NumberInt(132), 
+        NumberInt(121), 
+        NumberInt(138), 
+        NumberInt(137), 
+        NumberInt(139), 
+        NumberInt(140), 
+        NumberInt(1907)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598097), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506497), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506519), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(598578), 
+            "value" : NumberInt(10), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(506503), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506506), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506496), 
+            "value" : NumberInt(1), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(7), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(598096), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(2)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16765564), 
+        NumberInt(7360545), 
+        NumberInt(14453532), 
+        NumberInt(6048816), 
+        NumberInt(4734007)
+    ], 
+    "femaleColors" : [
+        NumberInt(14785337), 
+        NumberInt(16707772), 
+        NumberInt(16707772), 
+        NumberInt(11941144), 
+        NumberInt(15388778)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(1), 
+    "sortIndex" : NumberInt(4)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a3d"), 
+    "id" : NumberInt(8), 
+    "shortNameId" : NumberInt(693), 
+    "longNameId" : NumberInt(694), 
+    "descriptionId" : NumberInt(305967), 
+    "gameplayDescriptionId" : NumberInt(598592), 
+    "maleLook" : "{1|80||140}", 
+    "femaleLook" : "{1|81||140}", 
+    "creatureBonesId" : NumberInt(38), 
+    "maleArtwork" : NumberInt(213), 
+    "femaleArtwork" : NumberInt(214), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(141), 
+        NumberInt(143), 
+        NumberInt(142), 
+        NumberInt(155), 
+        NumberInt(145), 
+        NumberInt(154), 
+        NumberInt(147), 
+        NumberInt(151), 
+        NumberInt(158), 
+        NumberInt(150), 
+        NumberInt(148), 
+        NumberInt(144), 
+        NumberInt(152), 
+        NumberInt(153), 
+        NumberInt(149), 
+        NumberInt(156), 
+        NumberInt(157), 
+        NumberInt(160), 
+        NumberInt(146), 
+        NumberInt(159), 
+        NumberInt(1908)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506465), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506464), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506486), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506485), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598594), 
+            "value" : NumberInt(12), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598593), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506484), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(8), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(598595), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(2)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16765564), 
+        NumberInt(16355883), 
+        NumberInt(16777185), 
+        NumberInt(2910064), 
+        NumberInt(14561799)
+    ], 
+    "femaleColors" : [
+        NumberInt(16103775), 
+        NumberInt(15430419), 
+        NumberInt(16777185), 
+        NumberInt(14432786), 
+        NumberInt(14432786)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(1), 
+    "sortIndex" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a3e"), 
+    "id" : NumberInt(9), 
+    "shortNameId" : NumberInt(689), 
+    "longNameId" : NumberInt(116108), 
+    "descriptionId" : NumberInt(305970), 
+    "gameplayDescriptionId" : NumberInt(598088), 
+    "maleLook" : "{1|90||140}", 
+    "femaleLook" : "{1|91||135}", 
+    "creatureBonesId" : NumberInt(40), 
+    "maleArtwork" : NumberInt(215), 
+    "femaleArtwork" : NumberInt(216), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(161), 
+        NumberInt(164), 
+        NumberInt(169), 
+        NumberInt(163), 
+        NumberInt(165), 
+        NumberInt(172), 
+        NumberInt(167), 
+        NumberInt(168), 
+        NumberInt(162), 
+        NumberInt(170), 
+        NumberInt(171), 
+        NumberInt(166), 
+        NumberInt(173), 
+        NumberInt(174), 
+        NumberInt(176), 
+        NumberInt(175), 
+        NumberInt(178), 
+        NumberInt(177), 
+        NumberInt(179), 
+        NumberInt(180), 
+        NumberInt(1909)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598074), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506514), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506509), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506508), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598076), 
+            "value" : NumberInt(9), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506511), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506507), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(9), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(598075), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(3)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16762983), 
+        NumberInt(14774542), 
+        NumberInt(5792768), 
+        NumberInt(5845776), 
+        NumberInt(16422159)
+    ], 
+    "femaleColors" : [
+        NumberInt(16761703), 
+        NumberInt(14775312), 
+        NumberInt(8091904), 
+        NumberInt(14053895), 
+        NumberInt(6963462)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(1), 
+    "sortIndex" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a3f"), 
+    "id" : NumberInt(10), 
+    "shortNameId" : NumberInt(661), 
+    "longNameId" : NumberInt(662), 
+    "descriptionId" : NumberInt(305961), 
+    "gameplayDescriptionId" : NumberInt(598613), 
+    "maleLook" : "{1|100||150}", 
+    "femaleLook" : "{1|101||145}", 
+    "creatureBonesId" : NumberInt(12), 
+    "maleArtwork" : NumberInt(217), 
+    "femaleArtwork" : NumberInt(218), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(183), 
+        NumberInt(186), 
+        NumberInt(193), 
+        NumberInt(200), 
+        NumberInt(195), 
+        NumberInt(182), 
+        NumberInt(192), 
+        NumberInt(197), 
+        NumberInt(189), 
+        NumberInt(181), 
+        NumberInt(199), 
+        NumberInt(191), 
+        NumberInt(198), 
+        NumberInt(196), 
+        NumberInt(190), 
+        NumberInt(194), 
+        NumberInt(185), 
+        NumberInt(184), 
+        NumberInt(188), 
+        NumberInt(187), 
+        NumberInt(1910)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598615), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506403), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506398), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(598614), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(511514), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506404), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(598616), 
+            "value" : NumberInt(9), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(10), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506399), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(8537887), 
+        NumberInt(8164099), 
+        NumberInt(14402669), 
+        NumberInt(14402669), 
+        NumberInt(11960892)
+    ], 
+    "femaleColors" : [
+        NumberInt(8537887), 
+        NumberInt(8557826), 
+        NumberInt(16114596), 
+        NumberInt(16114596), 
+        NumberInt(15128478)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(3), 
+    "sortIndex" : NumberInt(15)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a40"), 
+    "id" : NumberInt(11), 
+    "shortNameId" : NumberInt(665), 
+    "longNameId" : NumberInt(666), 
+    "descriptionId" : NumberInt(305964), 
+    "gameplayDescriptionId" : NumberInt(598609), 
+    "maleLook" : "{1|110||145}", 
+    "femaleLook" : "{1|111||140}", 
+    "creatureBonesId" : NumberInt(13), 
+    "maleArtwork" : NumberInt(219), 
+    "femaleArtwork" : NumberInt(220), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(4)
+        ], 
+        [
+            NumberInt(150), 
+            NumberInt(5)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(4)
+        ], 
+        [
+            NumberInt(150), 
+            NumberInt(5)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(4)
+        ], 
+        [
+            NumberInt(150), 
+            NumberInt(5)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(4)
+        ], 
+        [
+            NumberInt(150), 
+            NumberInt(5)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1), 
+            NumberInt(2)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(432), 
+        NumberInt(431), 
+        NumberInt(434), 
+        NumberInt(444), 
+        NumberInt(449), 
+        NumberInt(436), 
+        NumberInt(437), 
+        NumberInt(439), 
+        NumberInt(433), 
+        NumberInt(443), 
+        NumberInt(440), 
+        NumberInt(442), 
+        NumberInt(441), 
+        NumberInt(445), 
+        NumberInt(438), 
+        NumberInt(446), 
+        NumberInt(447), 
+        NumberInt(448), 
+        NumberInt(435), 
+        NumberInt(450), 
+        NumberInt(1911)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506448), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(600003), 
+            "value" : NumberInt(10), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506407), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506408), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598610), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598612), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506450), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(11), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506406), 
+            "value" : NumberInt(1), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16765564), 
+        NumberInt(16753434), 
+        NumberInt(9809704), 
+        NumberInt(5664802), 
+        NumberInt(16771138)
+    ], 
+    "femaleColors" : [
+        NumberInt(16565105), 
+        NumberInt(16753434), 
+        NumberInt(5992482), 
+        NumberInt(6003530), 
+        NumberInt(16769340)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(1), 
+    "sortIndex" : NumberInt(3)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a41"), 
+    "id" : NumberInt(12), 
+    "shortNameId" : NumberInt(669), 
+    "longNameId" : NumberInt(576693), 
+    "descriptionId" : NumberInt(305959), 
+    "gameplayDescriptionId" : NumberInt(598601), 
+    "maleLook" : "{1|120||160}", 
+    "femaleLook" : "{1|121||145}", 
+    "creatureBonesId" : NumberInt(14), 
+    "maleArtwork" : NumberInt(221), 
+    "femaleArtwork" : NumberInt(222), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(686), 
+        NumberInt(692), 
+        NumberInt(687), 
+        NumberInt(689), 
+        NumberInt(690), 
+        NumberInt(699), 
+        NumberInt(688), 
+        NumberInt(693), 
+        NumberInt(694), 
+        NumberInt(695), 
+        NumberInt(696), 
+        NumberInt(697), 
+        NumberInt(698), 
+        NumberInt(691), 
+        NumberInt(700), 
+        NumberInt(701), 
+        NumberInt(702), 
+        NumberInt(703), 
+        NumberInt(704), 
+        NumberInt(705), 
+        NumberInt(1912)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506438), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(598604), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506427), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506423), 
+            "value" : NumberInt(1), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598603), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598602), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506422), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(12), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506428), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(15457984), 
+        NumberInt(5197108), 
+        NumberInt(7673110), 
+        NumberInt(15457984), 
+        NumberInt(4015915)
+    ], 
+    "femaleColors" : [
+        NumberInt(16380634), 
+        NumberInt(4538925), 
+        NumberInt(9711889), 
+        NumberInt(15457984), 
+        NumberInt(9711889)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(13)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a42"), 
+    "id" : NumberInt(13), 
+    "shortNameId" : NumberInt(653), 
+    "longNameId" : NumberInt(654), 
+    "descriptionId" : NumberInt(652), 
+    "gameplayDescriptionId" : NumberInt(598605), 
+    "maleLook" : "{1|1405||160}", 
+    "femaleLook" : "{1|1407||155}", 
+    "creatureBonesId" : NumberInt(1537), 
+    "maleArtwork" : NumberInt(1527), 
+    "femaleArtwork" : NumberInt(1528), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(2794), 
+        NumberInt(2808), 
+        NumberInt(2778), 
+        NumberInt(2795), 
+        NumberInt(2763), 
+        NumberInt(2796), 
+        NumberInt(2801), 
+        NumberInt(2802), 
+        NumberInt(2803), 
+        NumberInt(2807), 
+        NumberInt(2797), 
+        NumberInt(2806), 
+        NumberInt(2805), 
+        NumberInt(2809), 
+        NumberInt(2804), 
+        NumberInt(2810), 
+        NumberInt(2811), 
+        NumberInt(2812), 
+        NumberInt(2813), 
+        NumberInt(2815), 
+        NumberInt(2817)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(598608), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506459), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506444), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506443), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598607), 
+            "value" : NumberInt(10), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598606), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506461), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(13), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506445), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(14785337), 
+        NumberInt(2567713), 
+        NumberInt(2567713), 
+        NumberInt(3419419), 
+        NumberInt(16777164)
+    ], 
+    "femaleColors" : [
+        NumberInt(14785337), 
+        NumberInt(677462), 
+        NumberInt(2567713), 
+        NumberInt(3419419), 
+        NumberInt(3419419)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(3), 
+    "sortIndex" : NumberInt(16)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a43"), 
+    "id" : NumberInt(14), 
+    "shortNameId" : NumberInt(657), 
+    "longNameId" : NumberInt(658), 
+    "descriptionId" : NumberInt(656), 
+    "gameplayDescriptionId" : NumberInt(598631), 
+    "maleLook" : "{1|1437||150}", 
+    "femaleLook" : "{1|1438||145}", 
+    "creatureBonesId" : NumberInt(1538), 
+    "maleArtwork" : NumberInt(1573), 
+    "femaleArtwork" : NumberInt(1574), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(2881), 
+        NumberInt(2879), 
+        NumberInt(2899), 
+        NumberInt(2872), 
+        NumberInt(2896), 
+        NumberInt(2891), 
+        NumberInt(2893), 
+        NumberInt(2882), 
+        NumberInt(2880), 
+        NumberInt(2887), 
+        NumberInt(2885), 
+        NumberInt(2890), 
+        NumberInt(2895), 
+        NumberInt(2894), 
+        NumberInt(2888), 
+        NumberInt(2883), 
+        NumberInt(2892), 
+        NumberInt(2886), 
+        NumberInt(2889), 
+        NumberInt(2897), 
+        NumberInt(2898)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506433), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(598633), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(598634), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(506430), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598632), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(506435), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506431), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(14), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506476), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16761703), 
+        NumberInt(14428465), 
+        NumberInt(4863523), 
+        NumberInt(1855824), 
+        NumberInt(15262931)
+    ], 
+    "femaleColors" : [
+        NumberInt(16761703), 
+        NumberInt(14428465), 
+        NumberInt(4863523), 
+        NumberInt(1855824), 
+        NumberInt(15262931)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(12)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a44"), 
+    "id" : NumberInt(15), 
+    "shortNameId" : NumberInt(92496), 
+    "longNameId" : NumberInt(577202), 
+    "descriptionId" : NumberInt(112815), 
+    "gameplayDescriptionId" : NumberInt(601393), 
+    "maleLook" : "{1|1663||160}", 
+    "femaleLook" : "{1|1664||160}", 
+    "creatureBonesId" : NumberInt(1886), 
+    "maleArtwork" : NumberInt(1932), 
+    "femaleArtwork" : NumberInt(1933), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(3210), 
+        NumberInt(3206), 
+        NumberInt(3212), 
+        NumberInt(3215), 
+        NumberInt(3205), 
+        NumberInt(3217), 
+        NumberInt(3202), 
+        NumberInt(3213), 
+        NumberInt(3204), 
+        NumberInt(3203), 
+        NumberInt(3209), 
+        NumberInt(3221), 
+        NumberInt(3214), 
+        NumberInt(3220), 
+        NumberInt(3219), 
+        NumberInt(3207), 
+        NumberInt(3218), 
+        NumberInt(3208), 
+        NumberInt(3211), 
+        NumberInt(3216), 
+        NumberInt(3278)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506412), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506456), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506457), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(598624), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598623), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598625), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506455), 
+            "value" : NumberInt(6), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(15), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506452), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16699794), 
+        NumberInt(16511423), 
+        NumberInt(3417882), 
+        NumberInt(16377759), 
+        NumberInt(11242064)
+    ], 
+    "femaleColors" : [
+        NumberInt(16699794), 
+        NumberInt(16511423), 
+        NumberInt(3417882), 
+        NumberInt(16377759), 
+        NumberInt(11242064)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(9)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a45"), 
+    "id" : NumberInt(16), 
+    "shortNameId" : NumberInt(504829), 
+    "longNameId" : NumberInt(507144), 
+    "descriptionId" : NumberInt(504832), 
+    "gameplayDescriptionId" : NumberInt(598089), 
+    "maleLook" : "{1|3179||145}", 
+    "femaleLook" : "{1|3180||140}", 
+    "creatureBonesId" : NumberInt(3087), 
+    "maleArtwork" : NumberInt(3089), 
+    "femaleArtwork" : NumberInt(3090), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(5383), 
+        NumberInt(5359), 
+        NumberInt(5361), 
+        NumberInt(5382), 
+        NumberInt(5370), 
+        NumberInt(5381), 
+        NumberInt(5389), 
+        NumberInt(5371), 
+        NumberInt(5372), 
+        NumberInt(5368), 
+        NumberInt(5386), 
+        NumberInt(5397), 
+        NumberInt(5388), 
+        NumberInt(5367), 
+        NumberInt(5390), 
+        NumberInt(5391), 
+        NumberInt(5400), 
+        NumberInt(5401), 
+        NumberInt(5402), 
+        NumberInt(5403), 
+        NumberInt(5485)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(506489), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(506490), 
+            "value" : NumberInt(3), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(506493), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(598093), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(3)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598091), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598092), 
+            "value" : NumberInt(8), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(506491), 
+            "value" : NumberInt(0), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(16), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(506494), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(15066084), 
+        NumberInt(8036512), 
+        NumberInt(10641706), 
+        NumberInt(2722985), 
+        NumberInt(14207124)
+    ], 
+    "femaleColors" : [
+        NumberInt(15066084), 
+        NumberInt(8036512), 
+        NumberInt(10641706), 
+        NumberInt(2722985), 
+        NumberInt(14207124)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(3), 
+    "sortIndex" : NumberInt(14)
+}
+{ 
+    "_id" : ObjectId("5837070be0b81653f8760a46"), 
+    "id" : NumberInt(17), 
+    "shortNameId" : NumberInt(577229), 
+    "longNameId" : NumberInt(577238), 
+    "descriptionId" : NumberInt(583059), 
+    "gameplayDescriptionId" : NumberInt(598588), 
+    "maleLook" : "{1|3285||140}", 
+    "femaleLook" : "{1|3286||135}", 
+    "creatureBonesId" : NumberInt(3372), 
+    "maleArtwork" : NumberInt(3374), 
+    "femaleArtwork" : NumberInt(3375), 
+    "statsPointsForStrength" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForIntelligence" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForChance" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForAgility" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ], 
+        [
+            NumberInt(100), 
+            NumberInt(2)
+        ], 
+        [
+            NumberInt(200), 
+            NumberInt(3)
+        ], 
+        [
+            NumberInt(300), 
+            NumberInt(4)
+        ]
+    ], 
+    "statsPointsForVitality" : [
+        [
+            NumberInt(0), 
+            NumberInt(1)
+        ]
+    ], 
+    "statsPointsForWisdom" : [
+        [
+            NumberInt(0), 
+            NumberInt(3)
+        ]
+    ], 
+    "breedSpellsId" : [
+        NumberInt(5833), 
+        NumberInt(5831), 
+        NumberInt(5832), 
+        NumberInt(5829), 
+        NumberInt(5830), 
+        NumberInt(5836), 
+        NumberInt(5838), 
+        NumberInt(5843), 
+        NumberInt(6227), 
+        NumberInt(5844), 
+        NumberInt(5840), 
+        NumberInt(6226), 
+        NumberInt(5846), 
+        NumberInt(5845), 
+        NumberInt(6413), 
+        NumberInt(5841), 
+        NumberInt(5850), 
+        NumberInt(5842), 
+        NumberInt(5839), 
+        NumberInt(6228), 
+        NumberInt(6440)
+    ], 
+    "breedRoles" : [
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(1), 
+            "descriptionId" : NumberInt(588552), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(2), 
+            "descriptionId" : NumberInt(588554), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(3), 
+            "descriptionId" : NumberInt(588555), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(4), 
+            "descriptionId" : NumberInt(588556), 
+            "value" : NumberInt(2), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(5), 
+            "descriptionId" : NumberInt(598591), 
+            "value" : NumberInt(7), 
+            "order" : NumberInt(1)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(6), 
+            "descriptionId" : NumberInt(598589), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(2)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(7), 
+            "descriptionId" : NumberInt(588551), 
+            "value" : NumberInt(4), 
+            "order" : NumberInt(-1)
+        }, 
+        {
+            "breedId" : NumberInt(17), 
+            "roleId" : NumberInt(8), 
+            "descriptionId" : NumberInt(598590), 
+            "value" : NumberInt(5), 
+            "order" : NumberInt(3)
+        }
+    ], 
+    "maleColors" : [
+        NumberInt(16378832), 
+        NumberInt(16775898), 
+        NumberInt(2709077), 
+        NumberInt(4492945), 
+        NumberInt(15791081)
+    ], 
+    "femaleColors" : [
+        NumberInt(16378832), 
+        NumberInt(16775898), 
+        NumberInt(2709077), 
+        NumberInt(4492945), 
+        NumberInt(15791081)
+    ], 
+    "spawnMap" : NumberInt(153092354), 
+    "complexity" : NumberInt(2), 
+    "sortIndex" : NumberInt(11)
+}
