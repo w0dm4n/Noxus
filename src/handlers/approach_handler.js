@@ -59,6 +59,7 @@ export default class ApproachHandler {
     static sendCharactersList(client) {
         DBManager.getCharacters({accountId: client.account.uid}, function(characters){
             client.characters = characters;
+            client.characters.reverse();
             var baseCharactersInformations = new Array();
             for(var i in client.characters) {
                 baseCharactersInformations.push(client.characters[i].getCharacterBaseInformations());
@@ -131,7 +132,7 @@ export default class ApproachHandler {
                     cellid: ConfigManager.configData.characters_start.startCell,
                     dirId: ConfigManager.configData.characters_start.startDir,
                     statsPoints: (ConfigManager.configData.characters_start.level * 5) - 5,
-                    spellPoints: 0,
+                    spellPoints: 0 + (ConfigManager.configData.characters_start.level) - 1,
                 });
                 DBManager.createCharacter(character, function(){
                     client.send(new Messages.CharacterCreationResultMessage(0));

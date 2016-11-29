@@ -1,0 +1,43 @@
+[
+	{
+		"memberName": "Ornament",
+		"packageName": "com.ankamagames.dofus.datacenter.appearance",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "visible",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "assetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "iconId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "rarity",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "order",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

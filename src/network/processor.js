@@ -35,7 +35,7 @@ export default class Processor {
         945: { message: Messages.GameMapChangeOrientationRequestMessage, handler:GameHandler.handleGameMapChangeOrientationRequestMessage },
         5610: { message: Messages.StatsUpgradeRequestMessage, handler:GameHandler.handleStatsUpgradeRequestMessage },
         4001: { message: Messages.FriendsGetListMessage, handler:FriendHandler.handleFriendsGetListMessage },
-        5603: { message: Messages.FriendDeleteRequestMessage, handler:FriendHandler.hanldeFriendDeleteRequestMessage },
+        5603: { message: Messages.FriendDeleteRequestMessage, handler:FriendHandler.handleFriendDeleteRequestMessage },
     } 
 
     static handle(client, messageId, buffer) {
@@ -43,14 +43,14 @@ export default class Processor {
         if(handler != null) {
             var packet = new handler.message();
             Logger.debug("Process message '" + packet.constructor.name + "'");
-            try {
+            //try {
                 packet.deserialize(buffer);
                 handler.handler(client, packet);
-            }
+            /*}
             catch(ex) {
                 Logger.error("Error when process message ..");
                 Logger.error(ex);
-            }
+            }*/
         }
         else {
             Logger.error("Handler not found for messageId: " + messageId);

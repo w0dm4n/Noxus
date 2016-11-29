@@ -1,0 +1,740 @@
+[
+	{
+		"_id": 13,
+		"nameId": 292132,
+		"visible": true,
+		"assetId": 1,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 1
+	},
+	{
+		"_id": 14,
+		"nameId": 292128,
+		"visible": true,
+		"assetId": 2,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 2
+	},
+	{
+		"_id": 15,
+		"nameId": 292138,
+		"visible": true,
+		"assetId": 3,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 3
+	},
+	{
+		"_id": 16,
+		"nameId": 292135,
+		"visible": true,
+		"assetId": 4,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 4
+	},
+	{
+		"_id": 17,
+		"nameId": 292104,
+		"visible": true,
+		"assetId": 5,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 5
+	},
+	{
+		"_id": 18,
+		"nameId": 292105,
+		"visible": true,
+		"assetId": 6,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 6
+	},
+	{
+		"_id": 19,
+		"nameId": 292103,
+		"visible": true,
+		"assetId": 7,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 7
+	},
+	{
+		"_id": 22,
+		"nameId": 292109,
+		"visible": true,
+		"assetId": 10,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 10
+	},
+	{
+		"_id": 23,
+		"nameId": 292107,
+		"visible": true,
+		"assetId": 11,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 11
+	},
+	{
+		"_id": 24,
+		"nameId": 292119,
+		"visible": true,
+		"assetId": 12,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 12
+	},
+	{
+		"_id": 25,
+		"nameId": 292117,
+		"visible": true,
+		"assetId": 13,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 13
+	},
+	{
+		"_id": 26,
+		"nameId": 292115,
+		"visible": true,
+		"assetId": 14,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 14
+	},
+	{
+		"_id": 27,
+		"nameId": 292113,
+		"visible": true,
+		"assetId": 15,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 15
+	},
+	{
+		"_id": 28,
+		"nameId": 292122,
+		"visible": true,
+		"assetId": 16,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 16
+	},
+	{
+		"_id": 29,
+		"nameId": 292123,
+		"visible": true,
+		"assetId": 17,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 17
+	},
+	{
+		"_id": 30,
+		"nameId": 292140,
+		"visible": true,
+		"assetId": 18,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 18
+	},
+	{
+		"_id": 31,
+		"nameId": 292133,
+		"visible": true,
+		"assetId": 21,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 19
+	},
+	{
+		"_id": 32,
+		"nameId": 292130,
+		"visible": true,
+		"assetId": 19,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 20
+	},
+	{
+		"_id": 33,
+		"nameId": 292139,
+		"visible": true,
+		"assetId": 20,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 21
+	},
+	{
+		"_id": 34,
+		"nameId": 292136,
+		"visible": true,
+		"assetId": 22,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 22
+	},
+	{
+		"_id": 35,
+		"nameId": 292125,
+		"visible": true,
+		"assetId": 23,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 23
+	},
+	{
+		"_id": 36,
+		"nameId": 292124,
+		"visible": true,
+		"assetId": 24,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 24
+	},
+	{
+		"_id": 37,
+		"nameId": 292127,
+		"visible": true,
+		"assetId": 25,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 25
+	},
+	{
+		"_id": 38,
+		"nameId": 292126,
+		"visible": true,
+		"assetId": 26,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 26
+	},
+	{
+		"_id": 39,
+		"nameId": 292686,
+		"visible": true,
+		"assetId": 28,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 27
+	},
+	{
+		"_id": 40,
+		"nameId": 292121,
+		"visible": true,
+		"assetId": 29,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 28
+	},
+	{
+		"_id": 41,
+		"nameId": 292120,
+		"visible": true,
+		"assetId": 30,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 29
+	},
+	{
+		"_id": 42,
+		"nameId": 292118,
+		"visible": true,
+		"assetId": 31,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 30
+	},
+	{
+		"_id": 43,
+		"nameId": 292116,
+		"visible": true,
+		"assetId": 32,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 31
+	},
+	{
+		"_id": 44,
+		"nameId": 292114,
+		"visible": true,
+		"assetId": 33,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 32
+	},
+	{
+		"_id": 45,
+		"nameId": 292112,
+		"visible": true,
+		"assetId": 34,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 33
+	},
+	{
+		"_id": 46,
+		"nameId": 292111,
+		"visible": true,
+		"assetId": 35,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 34
+	},
+	{
+		"_id": 47,
+		"nameId": 292110,
+		"visible": true,
+		"assetId": 36,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 35
+	},
+	{
+		"_id": 48,
+		"nameId": 292108,
+		"visible": true,
+		"assetId": 37,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 36
+	},
+	{
+		"_id": 49,
+		"nameId": 292106,
+		"visible": true,
+		"assetId": 38,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 1
+	},
+	{
+		"_id": 50,
+		"nameId": 292131,
+		"visible": true,
+		"assetId": 39,
+		"iconId": 3,
+		"rarity": 0,
+		"order": 1
+	},
+	{
+		"_id": 51,
+		"nameId": 292134,
+		"visible": true,
+		"assetId": 40,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 1
+	},
+	{
+		"_id": 52,
+		"nameId": 292137,
+		"visible": true,
+		"assetId": 42,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 37
+	},
+	{
+		"_id": 53,
+		"nameId": 641433,
+		"visible": true,
+		"assetId": 43,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 38
+	},
+	{
+		"_id": 55,
+		"nameId": 292683,
+		"visible": true,
+		"assetId": 45,
+		"iconId": 4,
+		"rarity": 0,
+		"order": 40
+	},
+	{
+		"_id": 56,
+		"nameId": 337713,
+		"visible": true,
+		"assetId": 46,
+		"iconId": 5,
+		"rarity": 0,
+		"order": 41
+	},
+	{
+		"_id": 57,
+		"nameId": 339013,
+		"visible": true,
+		"assetId": 47,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 42
+	},
+	{
+		"_id": 58,
+		"nameId": 431117,
+		"visible": true,
+		"assetId": 49,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 43
+	},
+	{
+		"_id": 59,
+		"nameId": 431116,
+		"visible": true,
+		"assetId": 50,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 44
+	},
+	{
+		"_id": 60,
+		"nameId": 431115,
+		"visible": true,
+		"assetId": 48,
+		"iconId": 3,
+		"rarity": 0,
+		"order": 45
+	},
+	{
+		"_id": 61,
+		"nameId": 470125,
+		"visible": true,
+		"assetId": 51,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 46
+	},
+	{
+		"_id": 62,
+		"nameId": 554452,
+		"visible": true,
+		"assetId": 59,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 47
+	},
+	{
+		"_id": 63,
+		"nameId": 554450,
+		"visible": true,
+		"assetId": 62,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 48
+	},
+	{
+		"_id": 64,
+		"nameId": 565513,
+		"visible": true,
+		"assetId": 65,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 49
+	},
+	{
+		"_id": 65,
+		"nameId": 589535,
+		"visible": true,
+		"assetId": 78,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 50
+	},
+	{
+		"_id": 67,
+		"nameId": 554455,
+		"visible": true,
+		"assetId": 61,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 52
+	},
+	{
+		"_id": 68,
+		"nameId": 554453,
+		"visible": true,
+		"assetId": 64,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 53
+	},
+	{
+		"_id": 69,
+		"nameId": 565511,
+		"visible": true,
+		"assetId": 67,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 54
+	},
+	{
+		"_id": 70,
+		"nameId": 589536,
+		"visible": true,
+		"assetId": 80,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 55
+	},
+	{
+		"_id": 72,
+		"nameId": 554451,
+		"visible": true,
+		"assetId": 60,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 57
+	},
+	{
+		"_id": 73,
+		"nameId": 554449,
+		"visible": true,
+		"assetId": 63,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 58
+	},
+	{
+		"_id": 74,
+		"nameId": 565514,
+		"visible": true,
+		"assetId": 66,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 59
+	},
+	{
+		"_id": 75,
+		"nameId": 589539,
+		"visible": true,
+		"assetId": 79,
+		"iconId": 7,
+		"rarity": 0,
+		"order": 60
+	},
+	{
+		"_id": 77,
+		"nameId": 554454,
+		"visible": true,
+		"assetId": 68,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 62
+	},
+	{
+		"_id": 78,
+		"nameId": 554456,
+		"visible": true,
+		"assetId": 71,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 63
+	},
+	{
+		"_id": 79,
+		"nameId": 565508,
+		"visible": true,
+		"assetId": 74,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 64
+	},
+	{
+		"_id": 80,
+		"nameId": 589537,
+		"visible": true,
+		"assetId": 81,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 65
+	},
+	{
+		"_id": 82,
+		"nameId": 556494,
+		"visible": true,
+		"assetId": 70,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 67
+	},
+	{
+		"_id": 83,
+		"nameId": 556495,
+		"visible": true,
+		"assetId": 73,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 68
+	},
+	{
+		"_id": 84,
+		"nameId": 565515,
+		"visible": true,
+		"assetId": 76,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 69
+	},
+	{
+		"_id": 85,
+		"nameId": 589540,
+		"visible": true,
+		"assetId": 83,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 70
+	},
+	{
+		"_id": 87,
+		"nameId": 554457,
+		"visible": true,
+		"assetId": 69,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 72
+	},
+	{
+		"_id": 88,
+		"nameId": 554458,
+		"visible": true,
+		"assetId": 72,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 73
+	},
+	{
+		"_id": 89,
+		"nameId": 565509,
+		"visible": true,
+		"assetId": 75,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 74
+	},
+	{
+		"_id": 90,
+		"nameId": 589538,
+		"visible": true,
+		"assetId": 82,
+		"iconId": 6,
+		"rarity": 0,
+		"order": 75
+	},
+	{
+		"_id": 92,
+		"nameId": 554460,
+		"visible": true,
+		"assetId": 57,
+		"iconId": 3,
+		"rarity": 0,
+		"order": 77
+	},
+	{
+		"_id": 93,
+		"nameId": 565512,
+		"visible": true,
+		"assetId": 58,
+		"iconId": 3,
+		"rarity": 0,
+		"order": 78
+	},
+	{
+		"_id": 94,
+		"nameId": 554463,
+		"visible": true,
+		"assetId": 52,
+		"iconId": 0,
+		"rarity": 0,
+		"order": 79
+	},
+	{
+		"_id": 95,
+		"nameId": 554464,
+		"visible": true,
+		"assetId": 53,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 80
+	},
+	{
+		"_id": 96,
+		"nameId": 554461,
+		"visible": true,
+		"assetId": 54,
+		"iconId": 1,
+		"rarity": 0,
+		"order": 81
+	},
+	{
+		"_id": 97,
+		"nameId": 554462,
+		"visible": true,
+		"assetId": 55,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 82
+	},
+	{
+		"_id": 98,
+		"nameId": 554459,
+		"visible": true,
+		"assetId": 56,
+		"iconId": 3,
+		"rarity": 0,
+		"order": 83
+	},
+	{
+		"_id": 99,
+		"nameId": 565510,
+		"visible": true,
+		"assetId": 77,
+		"iconId": 4,
+		"rarity": 0,
+		"order": 84
+	},
+	{
+		"_id": 100,
+		"nameId": 611058,
+		"visible": true,
+		"assetId": 84,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 85
+	},
+	{
+		"_id": 101,
+		"nameId": 649469,
+		"visible": true,
+		"assetId": 85,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 86
+	},
+	{
+		"_id": 102,
+		"nameId": 657628,
+		"visible": true,
+		"assetId": 86,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 87
+	},
+	{
+		"_id": 103,
+		"nameId": 678188,
+		"visible": true,
+		"assetId": 87,
+		"iconId": 2,
+		"rarity": 0,
+		"order": 88
+	}
+]

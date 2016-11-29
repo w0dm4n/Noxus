@@ -1,0 +1,2296 @@
+{ 
+    "_id" : NumberInt(1), 
+    "order" : NumberInt(1000), 
+    "gfxId" : "smiley_1", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "(:", 
+        ":)", 
+        ":-)", 
+        "(-:"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(2), 
+    "order" : NumberInt(15001), 
+    "gfxId" : "smiley_2", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(3), 
+    "order" : NumberInt(15002), 
+    "gfxId" : "smiley_3", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ":D", 
+        ":-D"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(4), 
+    "order" : NumberInt(4000), 
+    "gfxId" : "smiley_4", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "lol"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(5), 
+    "order" : NumberInt(5000), 
+    "gfxId" : "smiley_5", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "xD", 
+        "x-D"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(6), 
+    "order" : NumberInt(6000), 
+    "gfxId" : "smiley_6", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(7), 
+    "order" : NumberInt(7000), 
+    "gfxId" : "smiley_7", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "8)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(8), 
+    "order" : NumberInt(8000), 
+    "gfxId" : "smiley_8", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(9), 
+    "order" : NumberInt(9000), 
+    "gfxId" : "smiley_9", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ":-P", 
+        ":-p", 
+        ":p", 
+        ":P"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(10), 
+    "order" : NumberInt(10000), 
+    "gfxId" : "smiley_10", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "*_*", 
+        "(*_*)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(11), 
+    "order" : NumberInt(11000), 
+    "gfxId" : "smiley_11", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(12), 
+    "order" : NumberInt(12000), 
+    "gfxId" : "smiley_12", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(13), 
+    "order" : NumberInt(13000), 
+    "gfxId" : "smiley_13", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(14), 
+    "order" : NumberInt(14000), 
+    "gfxId" : "smiley_14", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(15), 
+    "order" : NumberInt(15000), 
+    "gfxId" : "smiley_15", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "K_K", 
+        "€_€", 
+        "$_$"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(16), 
+    "order" : NumberInt(16000), 
+    "gfxId" : "smiley_16", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ";-D", 
+        "O_<", 
+        ";D"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(17), 
+    "order" : NumberInt(17000), 
+    "gfxId" : "smiley_17", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(18), 
+    "order" : NumberInt(18000), 
+    "gfxId" : "smiley_18", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(19), 
+    "order" : NumberInt(19000), 
+    "gfxId" : "smiley_19", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "@)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(20), 
+    "order" : NumberInt(20000), 
+    "gfxId" : "smiley_20", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(21), 
+    "order" : NumberInt(21000), 
+    "gfxId" : "smiley_21", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(22), 
+    "order" : NumberInt(22000), 
+    "gfxId" : "smiley_22", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "^^'"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(23), 
+    "order" : NumberInt(23000), 
+    "gfxId" : "smiley_23", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(24), 
+    "order" : NumberInt(24000), 
+    "gfxId" : "smiley_24", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "O.O"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(25), 
+    "order" : NumberInt(25000), 
+    "gfxId" : "smiley_25", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(26), 
+    "order" : NumberInt(26000), 
+    "gfxId" : "smiley_26", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(27), 
+    "order" : NumberInt(27000), 
+    "gfxId" : "smiley_27", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "~_~", 
+        "(~_~)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(28), 
+    "order" : NumberInt(28000), 
+    "gfxId" : "smiley_28", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ";_;"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(29), 
+    "order" : NumberInt(29000), 
+    "gfxId" : "smiley_29", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "T_T"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(30), 
+    "order" : NumberInt(30000), 
+    "gfxId" : "smiley_30", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ":-/", 
+        ":/", 
+        ":-\\", 
+        ":\\"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(31), 
+    "order" : NumberInt(31000), 
+    "gfxId" : "smiley_31", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(32), 
+    "order" : NumberInt(32000), 
+    "gfxId" : "smiley_32", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(33), 
+    "order" : NumberInt(33000), 
+    "gfxId" : "smiley_33", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ">:/", 
+        ">:\\", 
+        ">:-\\", 
+        ">:-/"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(34), 
+    "order" : NumberInt(34000), 
+    "gfxId" : "smiley_34", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(35), 
+    "order" : NumberInt(35000), 
+    "gfxId" : "smiley_35", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(36), 
+    "order" : NumberInt(36000), 
+    "gfxId" : "smiley_36", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(37), 
+    "order" : NumberInt(37000), 
+    "gfxId" : "smiley_37", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(38), 
+    "order" : NumberInt(38000), 
+    "gfxId" : "smiley_38", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(39), 
+    "order" : NumberInt(39000), 
+    "gfxId" : "smiley_39", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(40), 
+    "order" : NumberInt(1002), 
+    "gfxId" : "smiley_40", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ":-(", 
+        ":("
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(41), 
+    "order" : NumberInt(1001), 
+    "gfxId" : "smiley_41", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(42), 
+    "order" : NumberInt(42000), 
+    "gfxId" : "smiley_42", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(43), 
+    "order" : NumberInt(43000), 
+    "gfxId" : "smiley_43", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(44), 
+    "order" : NumberInt(44000), 
+    "gfxId" : "smiley_44", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : null
+}
+{ 
+    "_id" : NumberInt(45), 
+    "order" : NumberInt(45000), 
+    "gfxId" : "smiley_45", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(46), 
+    "order" : NumberInt(46000), 
+    "gfxId" : "smiley_46", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(47), 
+    "order" : NumberInt(47000), 
+    "gfxId" : "smiley_47", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(48), 
+    "order" : NumberInt(48000), 
+    "gfxId" : "smiley_48", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(49), 
+    "order" : NumberInt(49000), 
+    "gfxId" : "smiley_49", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "'(-_-)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(50), 
+    "order" : NumberInt(50000), 
+    "gfxId" : "smiley_50", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(51), 
+    "order" : NumberInt(51000), 
+    "gfxId" : "smiley_51", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(52), 
+    "order" : NumberInt(52000), 
+    "gfxId" : "smiley_52", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(53), 
+    "order" : NumberInt(53000), 
+    "gfxId" : "smiley_53", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "X_X", 
+        "x_x"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(54), 
+    "order" : NumberInt(54000), 
+    "gfxId" : "smiley_54", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "OxO"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(55), 
+    "order" : NumberInt(55000), 
+    "gfxId" : "smiley_55", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(56), 
+    "order" : NumberInt(56000), 
+    "gfxId" : "smiley_56", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(57), 
+    "order" : NumberInt(57000), 
+    "gfxId" : "smiley_57", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(58), 
+    "order" : NumberInt(58000), 
+    "gfxId" : "smiley_58", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(59), 
+    "order" : NumberInt(59000), 
+    "gfxId" : "smiley_59", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(60), 
+    "order" : NumberInt(60000), 
+    "gfxId" : "smiley_60", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "O:-)", 
+        "O:)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(61), 
+    "order" : NumberInt(61000), 
+    "gfxId" : "smiley_61", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(62), 
+    "order" : NumberInt(62000), 
+    "gfxId" : "smiley_62", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(63), 
+    "order" : NumberInt(63000), 
+    "gfxId" : "smiley_63", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(64), 
+    "order" : NumberInt(64000), 
+    "gfxId" : "smiley_64", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(65), 
+    "order" : NumberInt(65000), 
+    "gfxId" : "smiley_65", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(66), 
+    "order" : NumberInt(66000), 
+    "gfxId" : "smiley_66", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(67), 
+    "order" : NumberInt(67000), 
+    "gfxId" : "smiley_67", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(68), 
+    "order" : NumberInt(68000), 
+    "gfxId" : "smiley_68", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(69), 
+    "order" : NumberInt(69000), 
+    "gfxId" : "smiley_69", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(70), 
+    "order" : NumberInt(70000), 
+    "gfxId" : "smiley_70", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(71), 
+    "order" : NumberInt(71000), 
+    "gfxId" : "smiley_71", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "ô_O", 
+        "oO", 
+        "o_O"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(72), 
+    "order" : NumberInt(72000), 
+    "gfxId" : "smiley_72", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "(>_<)", 
+        ">_<"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(73), 
+    "order" : NumberInt(101000), 
+    "gfxId" : "smiley_101", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(74), 
+    "order" : NumberInt(102000), 
+    "gfxId" : "smiley_102", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(75), 
+    "order" : NumberInt(72002), 
+    "gfxId" : "smiley_103", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(76), 
+    "order" : NumberInt(104000), 
+    "gfxId" : "smiley_104", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(77), 
+    "order" : NumberInt(105000), 
+    "gfxId" : "smiley_105", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "zZz"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(78), 
+    "order" : NumberInt(106000), 
+    "gfxId" : "smiley_106", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(79), 
+    "order" : NumberInt(116000), 
+    "gfxId" : "smiley_107", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "♫"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(80), 
+    "order" : NumberInt(108000), 
+    "gfxId" : "smiley_108", 
+    "forPlayers" : true, 
+    "triggers" : [
+        "eureka"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(81), 
+    "order" : NumberInt(109000), 
+    "gfxId" : "smiley_109", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(82), 
+    "order" : NumberInt(110000), 
+    "gfxId" : "smiley_110", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(83), 
+    "order" : NumberInt(111000), 
+    "gfxId" : "smiley_111", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(84), 
+    "order" : NumberInt(112000), 
+    "gfxId" : "smiley_112", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(85), 
+    "order" : NumberInt(113000), 
+    "gfxId" : "smiley_113", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(86), 
+    "order" : NumberInt(114000), 
+    "gfxId" : "smiley_114", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(87), 
+    "order" : NumberInt(115000), 
+    "gfxId" : "smiley_115", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(88), 
+    "order" : NumberInt(117000), 
+    "gfxId" : "smiley_116", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(89), 
+    "order" : NumberInt(118000), 
+    "gfxId" : "smiley_117", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(90), 
+    "order" : NumberInt(62002), 
+    "gfxId" : "smiley_118", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(91), 
+    "order" : NumberInt(62003), 
+    "gfxId" : "smiley_119", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(92), 
+    "order" : NumberInt(72003), 
+    "gfxId" : "smiley_120", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(93), 
+    "order" : NumberInt(111003), 
+    "gfxId" : "smiley_121", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(94), 
+    "order" : NumberInt(111002), 
+    "gfxId" : "smiley_122", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(95), 
+    "order" : NumberInt(111001), 
+    "gfxId" : "smiley_123", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(96), 
+    "order" : NumberInt(72001), 
+    "gfxId" : "smiley_124", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(97), 
+    "order" : NumberInt(62001), 
+    "gfxId" : "smiley_125", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(98), 
+    "order" : NumberInt(107000), 
+    "gfxId" : "smiley_126", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(99), 
+    "order" : NumberInt(119000), 
+    "gfxId" : "smiley_127", 
+    "forPlayers" : true, 
+    "triggers" : [
+        ";-)", 
+        ";)"
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(117), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_serenity", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(118), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_aggressivity", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(119), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_tired", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(120), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_maturity", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(121), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_energy", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(122), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_stamina", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(123), 
+    "order" : NumberInt(0), 
+    "gfxId" : "mount_smiley_love", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(0), 
+    "categoryId" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(128), 
+    "order" : NumberInt(128000), 
+    "gfxId" : "smiley_128", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(1), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(129), 
+    "order" : NumberInt(129000), 
+    "gfxId" : "smiley_129", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(3), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(130), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_130", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(5), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(131), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_131", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(7), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(132), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_132", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(8), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(133), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_133", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(9), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(134), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_134", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(13), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(135), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_135", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(16), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(136), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_136", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(19), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(137), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_137", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(22), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(138), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_138", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(24), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(139), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_139", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(29), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(140), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_140", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(30), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(141), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_141", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(31), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(142), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_142", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(33), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(143), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_143", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(36), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(144), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_144", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(40), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(145), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_145", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(47), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(146), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_146", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(54), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(147), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_147", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(63), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(148), 
+    "order" : NumberInt(148000), 
+    "gfxId" : "smiley_148", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(1), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(149), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_149", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(3), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(150), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_150", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(5), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(151), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_151", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(7), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(152), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_152", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(8), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(153), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_153", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(9), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(154), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_154", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(13), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(155), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_155", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(16), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(156), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_156", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(19), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(157), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_157", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(22), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(158), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_158", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(24), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(159), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_159", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(29), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(160), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_160", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(30), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(161), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_161", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(31), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(162), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_162", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(33), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(163), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_163", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(36), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(164), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_164", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(40), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(165), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_165", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(47), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(166), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_166", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(54), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(167), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_167", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(63), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(168), 
+    "order" : NumberInt(168000), 
+    "gfxId" : "smiley_168", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(1), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(169), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_169", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(3), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(170), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_170", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(5), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(171), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_171", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(7), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(172), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_172", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(8), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(173), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_173", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(9), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(174), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_174", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(13), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(175), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_175", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(16), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(176), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_176", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(19), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(177), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_177", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(22), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(178), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_178", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(24), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(179), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_179", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(29), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(180), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_180", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(30), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(181), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_181", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(31), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(182), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_182", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(33), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(183), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_183", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(36), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(184), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_184", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(40), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(185), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_185", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(47), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(186), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_186", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(54), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(187), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_187", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(63), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(188), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_188", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(1), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(189), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_189", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(3), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(190), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_190", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(5), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(191), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_191", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(7), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(192), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_192", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(8), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(193), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_193", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(9), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(194), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_194", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(13), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(195), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_195", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(16), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(196), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_196", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(19), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(197), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_197", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(22), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(198), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_198", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(24), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(199), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_199", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(29), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(200), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_200", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(30), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(201), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_201", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(31), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(202), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_202", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(33), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(203), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_203", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(36), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(204), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_204", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(40), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(205), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_205", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(47), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(206), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_206", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(54), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(207), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_207", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(63), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(208), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_208", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(1), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(209), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_209", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(3), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(210), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_210", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(5), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(211), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_211", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(7), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(212), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_212", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(8), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(213), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_213", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(9), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(214), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_214", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(13), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(215), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_215", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(16), 
+    "categoryId" : NumberInt(2)
+}
+{ 
+    "_id" : NumberInt(216), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_216", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(19), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(217), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_217", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(22), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(218), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_218", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(24), 
+    "categoryId" : NumberInt(1)
+}
+{ 
+    "_id" : NumberInt(219), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_219", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(29), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(220), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_220", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(30), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(221), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_221", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(31), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(222), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_222", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(33), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(223), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_223", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(36), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(224), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_224", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(40), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(225), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_225", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(47), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(226), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_226", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(54), 
+    "categoryId" : NumberInt(3)
+}
+{ 
+    "_id" : NumberInt(227), 
+    "order" : NumberInt(0), 
+    "gfxId" : "smiley_227", 
+    "forPlayers" : true, 
+    "triggers" : [
+
+    ], 
+    "referenceId" : NumberInt(63), 
+    "categoryId" : NumberInt(3)
+}

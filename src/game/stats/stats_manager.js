@@ -17,7 +17,16 @@ export default class StatsManager {
     }
 
     getBaseLife() {
-        return 42; //TODO: Per class
+        return 42 + ((this.character.level * 5) - 5); //TODO: Per class
+    }
+
+    getTotalStats(statsId) {
+        var stat = this.getStatById(statsId);
+        return stat.base + stat.additionnal + stat.objectsAndMountBonus + stat.alignGiftBonus + stat.contextModif;
+    }
+
+    getMaxPA() {
+        return this.getTotalStats(1) + (this.character.level >= 100 ? 1 : 0);
     }
 
     getMaxLife() {
@@ -37,8 +46,8 @@ export default class StatsManager {
             this.character.spellPoints, 
             this.getActorExtendedAlignmentInformations(),
             this.character.life, this.getMaxLife(), 10000, 10000, 
-            this.getStatById(1).base, 
-            this.getStatById(2).base,
+            this.getMaxPA(), 
+            this.getTotalStats(2),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
@@ -122,7 +131,9 @@ export default class StatsManager {
             this.character.level = floor.level;
             this.character.statsPoints += diffLevel * 5;
             this.character.spellPoints += diffLevel;
+            this.character.life = this.getMaxLife();
             this.character.client.send(new Messages.CharacterLevelUpMessage(this.character.level));
+            this.character.save();
         }
     }
 }

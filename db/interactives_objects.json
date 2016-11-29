@@ -1,0 +1,6770 @@
+{ 
+    "_id" : NumberInt(932), 
+    "mapId" : NumberInt(12845062), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455294), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "171", 
+    "optionalValue2" : "65"
+}
+{ 
+    "_id" : NumberInt(933), 
+    "mapId" : NumberInt(12845062), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455296), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "171", 
+    "optionalValue2" : "65"
+}
+{ 
+    "_id" : NumberInt(934), 
+    "mapId" : NumberInt(12320774), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(488711), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "134", 
+    "optionalValue2" : "41"
+}
+{ 
+    "_id" : NumberInt(935), 
+    "mapId" : NumberInt(12320774), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455285), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "134", 
+    "optionalValue2" : "41"
+}
+{ 
+    "_id" : NumberInt(936), 
+    "mapId" : NumberInt(13893638), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455316), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "13", 
+    "optionalValue2" : "15"
+}
+{ 
+    "_id" : NumberInt(937), 
+    "mapId" : NumberInt(13893638), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455315), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "13", 
+    "optionalValue2" : "15"
+}
+{ 
+    "_id" : NumberInt(940), 
+    "mapId" : NumberInt(8913419), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455264), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "135", 
+    "optionalValue2" : "36"
+}
+{ 
+    "_id" : NumberInt(941), 
+    "mapId" : NumberInt(8913419), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455266), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "135", 
+    "optionalValue2" : "36"
+}
+{ 
+    "_id" : NumberInt(942), 
+    "mapId" : NumberInt(13107206), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455297), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "15", 
+    "optionalValue2" : "13"
+}
+{ 
+    "_id" : NumberInt(943), 
+    "mapId" : NumberInt(13107206), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455299), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "15", 
+    "optionalValue2" : "13"
+}
+{ 
+    "_id" : NumberInt(944), 
+    "mapId" : NumberInt(8912915), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455272), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "23", 
+    "optionalValue2" : "26"
+}
+{ 
+    "_id" : NumberInt(945), 
+    "mapId" : NumberInt(8912915), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455273), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "23", 
+    "optionalValue2" : "26"
+}
+{ 
+    "_id" : NumberInt(946), 
+    "mapId" : NumberInt(144931), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415349), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "8914959", 
+    "optionalValue2" : "424"
+}
+{ 
+    "_id" : NumberInt(947), 
+    "mapId" : NumberInt(144931), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415351), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "8914959", 
+    "optionalValue2" : "424"
+}
+{ 
+    "_id" : NumberInt(948), 
+    "mapId" : NumberInt(99091983), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475429), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Duty", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(949), 
+    "mapId" : NumberInt(145444), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415155), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "8912909", 
+    "optionalValue2" : "437"
+}
+{ 
+    "_id" : NumberInt(950), 
+    "mapId" : NumberInt(8912909), 
+    "skillId" : NumberInt(166), 
+    "elementId" : NumberInt(455276), 
+    "elementTypeId" : NumberInt(117), 
+    "actionType" : "Smithmagic", 
+    "optionalValue1" : "166", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(951), 
+    "mapId" : NumberInt(84675075), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489342), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(952), 
+    "mapId" : NumberInt(84676097), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489323), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(953), 
+    "mapId" : NumberInt(84675590), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489344), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(954), 
+    "mapId" : NumberInt(84675586), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489336), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(955), 
+    "mapId" : NumberInt(84673538), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489379), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(956), 
+    "mapId" : NumberInt(84673025), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(465372), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(957), 
+    "mapId" : NumberInt(84672515), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489348), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(958), 
+    "mapId" : NumberInt(84804101), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489373), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(959), 
+    "mapId" : NumberInt(84804104), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489377), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(960), 
+    "mapId" : NumberInt(84676103), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489346), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(961), 
+    "mapId" : NumberInt(84676101), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489343), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(962), 
+    "mapId" : NumberInt(84674048), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489322), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(963), 
+    "mapId" : NumberInt(84673536), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465416), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(964), 
+    "mapId" : NumberInt(84674051), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(489372), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "154010883", 
+    "optionalValue2" : "383"
+}
+{ 
+    "_id" : NumberInt(805), 
+    "mapId" : NumberInt(149812), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417367), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(806), 
+    "mapId" : NumberInt(149813), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450853), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(807), 
+    "mapId" : NumberInt(149814), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450772), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(808), 
+    "mapId" : NumberInt(149815), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417159), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(809), 
+    "mapId" : NumberInt(149816), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416732), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(810), 
+    "mapId" : NumberInt(149817), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417376), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(811), 
+    "mapId" : NumberInt(150320), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392431), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(812), 
+    "mapId" : NumberInt(150321), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392501), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(813), 
+    "mapId" : NumberInt(150323), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416652), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(814), 
+    "mapId" : NumberInt(150325), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450909), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(815), 
+    "mapId" : NumberInt(150326), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417069), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(816), 
+    "mapId" : NumberInt(150327), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416896), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(817), 
+    "mapId" : NumberInt(150328), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416494), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(818), 
+    "mapId" : NumberInt(150329), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417345), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(819), 
+    "mapId" : NumberInt(150330), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416746), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(820), 
+    "mapId" : NumberInt(150837), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417572), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(821), 
+    "mapId" : NumberInt(150839), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417084), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(822), 
+    "mapId" : NumberInt(150840), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416940), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(823), 
+    "mapId" : NumberInt(150841), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(75553), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(824), 
+    "mapId" : NumberInt(3333), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459991), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(825), 
+    "mapId" : NumberInt(3845), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416666), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(826), 
+    "mapId" : NumberInt(68419585), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459505), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(827), 
+    "mapId" : NumberInt(68422152), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459487), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(828), 
+    "mapId" : NumberInt(68551168), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459916), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(829), 
+    "mapId" : NumberInt(68551169), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459928), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(830), 
+    "mapId" : NumberInt(68551425), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459926), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(831), 
+    "mapId" : NumberInt(68551680), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459917), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(832), 
+    "mapId" : NumberInt(68551682), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459866), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(833), 
+    "mapId" : NumberInt(68551683), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459868), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(834), 
+    "mapId" : NumberInt(68551937), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459921), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(835), 
+    "mapId" : NumberInt(68552192), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459918), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(836), 
+    "mapId" : NumberInt(68552194), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459904), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(837), 
+    "mapId" : NumberInt(68552195), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459924), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(838), 
+    "mapId" : NumberInt(68552449), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459912), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(839), 
+    "mapId" : NumberInt(68552704), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459885), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(840), 
+    "mapId" : NumberInt(68552705), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459953), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(841), 
+    "mapId" : NumberInt(68552707), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459927), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(842), 
+    "mapId" : NumberInt(68553216), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459978), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(843), 
+    "mapId" : NumberInt(68553217), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459910), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(844), 
+    "mapId" : NumberInt(68553218), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459938), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(845), 
+    "mapId" : NumberInt(68553219), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459911), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(846), 
+    "mapId" : NumberInt(78905346), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462695), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(847), 
+    "mapId" : NumberInt(78905348), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462701), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(848), 
+    "mapId" : NumberInt(78905350), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462704), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(849), 
+    "mapId" : NumberInt(78905352), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462685), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(850), 
+    "mapId" : NumberInt(78906370), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462683), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(851), 
+    "mapId" : NumberInt(78906372), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462686), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(852), 
+    "mapId" : NumberInt(78906374), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462689), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(853), 
+    "mapId" : NumberInt(78906376), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462693), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(854), 
+    "mapId" : NumberInt(78907394), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462687), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(855), 
+    "mapId" : NumberInt(78907396), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462702), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(856), 
+    "mapId" : NumberInt(78907398), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462700), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(857), 
+    "mapId" : NumberInt(78907400), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462705), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(858), 
+    "mapId" : NumberInt(78908418), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462698), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(859), 
+    "mapId" : NumberInt(78908420), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462692), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(860), 
+    "mapId" : NumberInt(78908422), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462682), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(861), 
+    "mapId" : NumberInt(78908424), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462697), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(862), 
+    "mapId" : NumberInt(78909442), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462703), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(863), 
+    "mapId" : NumberInt(78909444), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462699), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(864), 
+    "mapId" : NumberInt(78909446), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462690), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(865), 
+    "mapId" : NumberInt(78909448), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462694), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(866), 
+    "mapId" : NumberInt(78910466), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462696), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(867), 
+    "mapId" : NumberInt(78910468), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462688), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(868), 
+    "mapId" : NumberInt(78910470), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462684), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(869), 
+    "mapId" : NumberInt(78910472), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462691), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(870), 
+    "mapId" : NumberInt(78911490), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462719), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(871), 
+    "mapId" : NumberInt(78911492), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462718), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(872), 
+    "mapId" : NumberInt(78911494), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462720), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(873), 
+    "mapId" : NumberInt(78911496), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462721), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(874), 
+    "mapId" : NumberInt(84676619), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478920), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(875), 
+    "mapId" : NumberInt(84677125), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478919), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(876), 
+    "mapId" : NumberInt(84677128), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478909), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(877), 
+    "mapId" : NumberInt(84677131), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478918), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(878), 
+    "mapId" : NumberInt(84677634), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478907), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(879), 
+    "mapId" : NumberInt(84677637), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478910), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(880), 
+    "mapId" : NumberInt(84677640), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478905), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(881), 
+    "mapId" : NumberInt(84678146), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(478908), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(882), 
+    "mapId" : NumberInt(84805120), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475778), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(883), 
+    "mapId" : NumberInt(84805121), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475776), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(884), 
+    "mapId" : NumberInt(84805377), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475777), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(885), 
+    "mapId" : NumberInt(84805632), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475774), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(886), 
+    "mapId" : NumberInt(84805889), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475775), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(887), 
+    "mapId" : NumberInt(88080658), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(471741), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(888), 
+    "mapId" : NumberInt(88081172), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(471479), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(889), 
+    "mapId" : NumberInt(88082200), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472241), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(890), 
+    "mapId" : NumberInt(88212762), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(471491), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(891), 
+    "mapId" : NumberInt(84672516), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465107), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(892), 
+    "mapId" : NumberInt(84673026), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465104), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(893), 
+    "mapId" : NumberInt(84674052), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465360), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(894), 
+    "mapId" : NumberInt(84674053), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465396), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(895), 
+    "mapId" : NumberInt(84674566), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465109), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(896), 
+    "mapId" : NumberInt(84674566), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465108), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(897), 
+    "mapId" : NumberInt(84675589), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465105), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(898), 
+    "mapId" : NumberInt(84675589), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465106), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(899), 
+    "mapId" : NumberInt(88080662), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473903), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(900), 
+    "mapId" : NumberInt(88080663), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473902), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(901), 
+    "mapId" : NumberInt(88081177), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473904), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(902), 
+    "mapId" : NumberInt(136996), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458401), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(903), 
+    "mapId" : NumberInt(136996), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458402), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(904), 
+    "mapId" : NumberInt(14125), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458097), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(905), 
+    "mapId" : NumberInt(147254), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(456117), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(906), 
+    "mapId" : NumberInt(147766), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(456116), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(907), 
+    "mapId" : NumberInt(147767), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(456115), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(908), 
+    "mapId" : NumberInt(68422663), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459765), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(909), 
+    "mapId" : NumberInt(68552706), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(460033), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(910), 
+    "mapId" : NumberInt(76283913), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(461955), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(911), 
+    "mapId" : NumberInt(76285958), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462029), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(912), 
+    "mapId" : NumberInt(76286987), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(461954), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(913), 
+    "mapId" : NumberInt(76288008), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(462070), 
+    "elementTypeId" : NumberInt(105), 
+    "actionType" : "Trash", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(914), 
+    "mapId" : NumberInt(143396), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415726), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "13893639", 
+    "optionalValue2" : "396"
+}
+{ 
+    "_id" : NumberInt(915), 
+    "mapId" : NumberInt(13893639), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455310), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "63", 
+    "optionalValue2" : "27"
+}
+{ 
+    "_id" : NumberInt(916), 
+    "mapId" : NumberInt(13893639), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455311), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "63", 
+    "optionalValue2" : "27"
+}
+{ 
+    "_id" : NumberInt(917), 
+    "mapId" : NumberInt(145447), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415674), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "12058630", 
+    "optionalValue2" : "424"
+}
+{ 
+    "_id" : NumberInt(918), 
+    "mapId" : NumberInt(12058630), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455284), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "12", 
+    "optionalValue2" : "16"
+}
+{ 
+    "_id" : NumberInt(919), 
+    "mapId" : NumberInt(12058630), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455283), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "12", 
+    "optionalValue2" : "16"
+}
+{ 
+    "_id" : NumberInt(920), 
+    "mapId" : NumberInt(12058630), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455281), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "12", 
+    "optionalValue2" : "16"
+}
+{ 
+    "_id" : NumberInt(921), 
+    "mapId" : NumberInt(142888), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(433921), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "8912915", 
+    "optionalValue2" : "410"
+}
+{ 
+    "_id" : NumberInt(922), 
+    "mapId" : NumberInt(146467), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415696), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "12845062", 
+    "optionalValue2" : "410"
+}
+{ 
+    "_id" : NumberInt(923), 
+    "mapId" : NumberInt(145952), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(453099), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "12320774", 
+    "optionalValue2" : "409"
+}
+{ 
+    "_id" : NumberInt(924), 
+    "mapId" : NumberInt(142884), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415724), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "13893638", 
+    "optionalValue2" : "410"
+}
+{ 
+    "_id" : NumberInt(925), 
+    "mapId" : NumberInt(141858), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415713), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "13369350", 
+    "optionalValue2" : "367"
+}
+{ 
+    "_id" : NumberInt(926), 
+    "mapId" : NumberInt(141346), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415715), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "13369863", 
+    "optionalValue2" : "401"
+}
+{ 
+    "_id" : NumberInt(927), 
+    "mapId" : NumberInt(142880), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415688), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "12582918", 
+    "optionalValue2" : "382"
+}
+{ 
+    "_id" : NumberInt(928), 
+    "mapId" : NumberInt(141351), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(433930), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "8913419", 
+    "optionalValue2" : "396"
+}
+{ 
+    "_id" : NumberInt(929), 
+    "mapId" : NumberInt(141864), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415703), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "13107206", 
+    "optionalValue2" : "374"
+}
+{ 
+    "_id" : NumberInt(930), 
+    "mapId" : NumberInt(12582918), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489598), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "47", 
+    "optionalValue2" : "28"
+}
+{ 
+    "_id" : NumberInt(931), 
+    "mapId" : NumberInt(12582918), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489599), 
+    "elementTypeId" : NumberInt(12), 
+    "actionType" : "Craft", 
+    "optionalValue1" : "27", 
+    "optionalValue2" : "28"
+}
+{ 
+    "_id" : NumberInt(14), 
+    "mapId" : NumberInt(64489222), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458575), 
+    "elementTypeId" : NumberInt(93), 
+    "actionType" : "Phoenix", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(18), 
+    "mapId" : NumberInt(99090947), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(474839), 
+    "elementTypeId" : NumberInt(70), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "84674563", 
+    "optionalValue2" : "268"
+}
+{ 
+    "_id" : NumberInt(20), 
+    "mapId" : NumberInt(54172969), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(456126), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(21), 
+    "mapId" : NumberInt(84674566), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465440), 
+    "elementTypeId" : NumberInt(168), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "83887104", 
+    "optionalValue2" : "396"
+}
+{ 
+    "_id" : NumberInt(24), 
+    "mapId" : NumberInt(84674051), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(465380), 
+    "elementTypeId" : NumberInt(128), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "80216068", 
+    "optionalValue2" : "283"
+}
+{ 
+    "_id" : NumberInt(25), 
+    "mapId" : NumberInt(144931), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415350), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "8914959", 
+    "optionalValue2" : "424"
+}
+{ 
+    "_id" : NumberInt(28), 
+    "mapId" : NumberInt(143372), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437117), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(31), 
+    "mapId" : NumberInt(7864839), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382), 
+    "elementTypeId" : NumberInt(70), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "7864327", 
+    "optionalValue2" : "352"
+}
+{ 
+    "_id" : NumberInt(33), 
+    "mapId" : NumberInt(146232), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416390), 
+    "elementTypeId" : NumberInt(70), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "7864327", 
+    "optionalValue2" : "396"
+}
+{ 
+    "_id" : NumberInt(34), 
+    "mapId" : NumberInt(7864327), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455692), 
+    "elementTypeId" : NumberInt(70), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "7864839", 
+    "optionalValue2" : "326"
+}
+{ 
+    "_id" : NumberInt(39), 
+    "mapId" : NumberInt(95424512), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473034), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Sufokia", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(40), 
+    "mapId" : NumberInt(95424516), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473037), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Sufokia", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(41), 
+    "mapId" : NumberInt(95422468), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472511), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(42), 
+    "mapId" : NumberInt(95422468), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473035), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Sufokia", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(44), 
+    "mapId" : NumberInt(54165323), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458485), 
+    "elementTypeId" : NumberInt(70), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "62129670", 
+    "optionalValue2" : "284"
+}
+{ 
+    "_id" : NumberInt(45), 
+    "mapId" : NumberInt(54172457), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(457166), 
+    "elementTypeId" : NumberInt(168), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "54534165", 
+    "optionalValue2" : "424"
+}
+{ 
+    "_id" : NumberInt(46), 
+    "mapId" : NumberInt(120062979), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(483905), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(47), 
+    "mapId" : NumberInt(126094107), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484497), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(48), 
+    "mapId" : NumberInt(142616), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484930), 
+    "elementTypeId" : NumberInt(70), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(49), 
+    "mapId" : NumberInt(131596288), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484987), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(50), 
+    "mapId" : NumberInt(126091545), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484861), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "125830657", 
+    "optionalValue2" : "311"
+}
+{ 
+    "_id" : NumberInt(51), 
+    "mapId" : NumberInt(145188), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(485090), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(52), 
+    "mapId" : NumberInt(54172489), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458520), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(300), 
+    "mapId" : NumberInt(141588), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(485091), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(301), 
+    "mapId" : NumberInt(138012), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(463609), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(302), 
+    "mapId" : NumberInt(17932), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(458282), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(303), 
+    "mapId" : NumberInt(133896), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443366), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(304), 
+    "mapId" : NumberInt(88082704), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472656), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(305), 
+    "mapId" : NumberInt(88212746), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472655), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(306), 
+    "mapId" : NumberInt(88212481), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472735), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(307), 
+    "mapId" : NumberInt(88085249), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472658), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(308), 
+    "mapId" : NumberInt(115083777), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(481520), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(309), 
+    "mapId" : NumberInt(115081731), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(481521), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Document", 
+    "optionalValue1" : "344", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(310), 
+    "mapId" : NumberInt(115083777), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(481519), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "115081731", 
+    "optionalValue2" : "514"
+}
+{ 
+    "_id" : NumberInt(311), 
+    "mapId" : NumberInt(20973313), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437121), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(312), 
+    "mapId" : NumberInt(115737095), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(482600), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(313), 
+    "mapId" : NumberInt(13605), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(1261), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(331), 
+    "mapId" : NumberInt(80740865), 
+    "skillId" : NumberInt(183), 
+    "elementId" : NumberInt(463651), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "80741889", 
+    "optionalValue2" : "459"
+}
+{ 
+    "_id" : NumberInt(332), 
+    "mapId" : NumberInt(88085773), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(473019), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "17932", 
+    "optionalValue2" : "186"
+}
+{ 
+    "_id" : NumberInt(333), 
+    "mapId" : NumberInt(144145), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443352), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "18874368", 
+    "optionalValue2" : "462"
+}
+{ 
+    "_id" : NumberInt(334), 
+    "mapId" : NumberInt(98568705), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472856), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(335), 
+    "mapId" : NumberInt(154010371), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489384), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Incarnam", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(336), 
+    "mapId" : NumberInt(153879813), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489382), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Incarnam", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(337), 
+    "mapId" : NumberInt(153880064), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489383), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Incarnam", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(338), 
+    "mapId" : NumberInt(15654), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(60101), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(339), 
+    "mapId" : NumberInt(28050436), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435664), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(340), 
+    "mapId" : NumberInt(138543), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(485136), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(341), 
+    "mapId" : NumberInt(73400320), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(461166), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(342), 
+    "mapId" : NumberInt(8991), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(1246), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(343), 
+    "mapId" : NumberInt(12054), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(149940), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(344), 
+    "mapId" : NumberInt(15153), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(159227), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(345), 
+    "mapId" : NumberInt(154642), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443686), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(346), 
+    "mapId" : NumberInt(14419207), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(52836), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(347), 
+    "mapId" : NumberInt(84806401), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475744), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(348), 
+    "mapId" : NumberInt(100270593), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(475642), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(349), 
+    "mapId" : NumberInt(99615238), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(476438), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(350), 
+    "mapId" : NumberInt(108789760), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(480540), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(351), 
+    "mapId" : NumberInt(13631488), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455422), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(352), 
+    "mapId" : NumberInt(140839), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450687), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(353), 
+    "mapId" : NumberInt(141346), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450701), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(354), 
+    "mapId" : NumberInt(141347), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450709), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(355), 
+    "mapId" : NumberInt(141351), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450699), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(356), 
+    "mapId" : NumberInt(141858), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450678), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(357), 
+    "mapId" : NumberInt(141859), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450683), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(358), 
+    "mapId" : NumberInt(141863), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450705), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(359), 
+    "mapId" : NumberInt(141864), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450688), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(360), 
+    "mapId" : NumberInt(142367), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450697), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(361), 
+    "mapId" : NumberInt(142368), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450696), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(362), 
+    "mapId" : NumberInt(142375), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450680), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(363), 
+    "mapId" : NumberInt(142376), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450691), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(364), 
+    "mapId" : NumberInt(142880), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450702), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(365), 
+    "mapId" : NumberInt(142884), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450686), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(366), 
+    "mapId" : NumberInt(142885), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450706), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(367), 
+    "mapId" : NumberInt(142888), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450707), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(368), 
+    "mapId" : NumberInt(143392), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450679), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(369), 
+    "mapId" : NumberInt(143395), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450682), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(370), 
+    "mapId" : NumberInt(143396), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450689), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(371), 
+    "mapId" : NumberInt(143397), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450690), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(372), 
+    "mapId" : NumberInt(143400), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450694), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(373), 
+    "mapId" : NumberInt(143906), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450708), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(374), 
+    "mapId" : NumberInt(144418), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450685), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(375), 
+    "mapId" : NumberInt(144419), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(275826), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(376), 
+    "mapId" : NumberInt(144425), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450704), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(377), 
+    "mapId" : NumberInt(144928), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450684), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(378), 
+    "mapId" : NumberInt(144930), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450677), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(379), 
+    "mapId" : NumberInt(144931), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(414391), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(380), 
+    "mapId" : NumberInt(144932), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450703), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(381), 
+    "mapId" : NumberInt(144934), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(414385), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(382), 
+    "mapId" : NumberInt(144935), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450675), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(383), 
+    "mapId" : NumberInt(145444), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450698), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(384), 
+    "mapId" : NumberInt(145445), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450695), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(385), 
+    "mapId" : NumberInt(145447), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450700), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(386), 
+    "mapId" : NumberInt(145952), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(414388), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(387), 
+    "mapId" : NumberInt(145954), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450681), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(388), 
+    "mapId" : NumberInt(146467), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450692), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(389), 
+    "mapId" : NumberInt(147493), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450693), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Brâkmar", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(390), 
+    "mapId" : NumberInt(144695), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448801), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(391), 
+    "mapId" : NumberInt(144698), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450064), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(392), 
+    "mapId" : NumberInt(144700), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448638), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(393), 
+    "mapId" : NumberInt(145203), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448162), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(394), 
+    "mapId" : NumberInt(145208), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450000), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(395), 
+    "mapId" : NumberInt(145209), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448799), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(396), 
+    "mapId" : NumberInt(145714), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450379), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(397), 
+    "mapId" : NumberInt(145716), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449514), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(398), 
+    "mapId" : NumberInt(145719), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450022), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(399), 
+    "mapId" : NumberInt(145725), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448233), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(400), 
+    "mapId" : NumberInt(146226), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449137), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(401), 
+    "mapId" : NumberInt(146229), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448842), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(402), 
+    "mapId" : NumberInt(146232), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450451), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(403), 
+    "mapId" : NumberInt(146233), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449776), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(404), 
+    "mapId" : NumberInt(146234), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448800), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(405), 
+    "mapId" : NumberInt(146235), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450331), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(406), 
+    "mapId" : NumberInt(146237), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449910), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(407), 
+    "mapId" : NumberInt(146741), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448119), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(408), 
+    "mapId" : NumberInt(146744), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448232), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(409), 
+    "mapId" : NumberInt(146746), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448797), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(410), 
+    "mapId" : NumberInt(146748), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448457), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(411), 
+    "mapId" : NumberInt(147254), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449090), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(412), 
+    "mapId" : NumberInt(147763), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448971), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(413), 
+    "mapId" : NumberInt(147764), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(451183), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(414), 
+    "mapId" : NumberInt(147766), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448435), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(415), 
+    "mapId" : NumberInt(147767), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448783), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(416), 
+    "mapId" : NumberInt(147768), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450236), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(417), 
+    "mapId" : NumberInt(147769), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448639), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(418), 
+    "mapId" : NumberInt(148278), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450065), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(419), 
+    "mapId" : NumberInt(148279), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448161), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(420), 
+    "mapId" : NumberInt(148282), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448150), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(421), 
+    "mapId" : NumberInt(148283), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450021), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(422), 
+    "mapId" : NumberInt(148786), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449515), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(423), 
+    "mapId" : NumberInt(148793), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449063), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(424), 
+    "mapId" : NumberInt(148796), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450763), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(425), 
+    "mapId" : NumberInt(148797), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448038), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(426), 
+    "mapId" : NumberInt(149812), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(448984), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(427), 
+    "mapId" : NumberInt(149813), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449157), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(428), 
+    "mapId" : NumberInt(149816), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(449062), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(429), 
+    "mapId" : NumberInt(5506048), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(455666), 
+    "elementTypeId" : NumberInt(106), 
+    "actionType" : "Zaapi", 
+    "optionalValue1" : "Bonta", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(430), 
+    "mapId" : NumberInt(121111043), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(483674), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(431), 
+    "mapId" : NumberInt(121111045), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(483675), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(432), 
+    "mapId" : NumberInt(121111047), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(483813), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(433), 
+    "mapId" : NumberInt(121111049), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(483814), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(434), 
+    "mapId" : NumberInt(125567491), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484338), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(435), 
+    "mapId" : NumberInt(125567493), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484342), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(436), 
+    "mapId" : NumberInt(125567495), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484341), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(437), 
+    "mapId" : NumberInt(125567497), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484337), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(438), 
+    "mapId" : NumberInt(126092034), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484490), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(439), 
+    "mapId" : NumberInt(126092035), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484430), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(440), 
+    "mapId" : NumberInt(126092058), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484473), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(441), 
+    "mapId" : NumberInt(126092059), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484429), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(442), 
+    "mapId" : NumberInt(126092546), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484470), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(443), 
+    "mapId" : NumberInt(126092547), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484489), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(444), 
+    "mapId" : NumberInt(126092570), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484436), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(445), 
+    "mapId" : NumberInt(126092571), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484428), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(446), 
+    "mapId" : NumberInt(126093067), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484486), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(447), 
+    "mapId" : NumberInt(126093068), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484423), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(448), 
+    "mapId" : NumberInt(126093575), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484491), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(449), 
+    "mapId" : NumberInt(126093579), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484424), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(450), 
+    "mapId" : NumberInt(126093580), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484487), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(451), 
+    "mapId" : NumberInt(126093589), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484472), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(452), 
+    "mapId" : NumberInt(126093590), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484435), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(453), 
+    "mapId" : NumberInt(126094087), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484471), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(454), 
+    "mapId" : NumberInt(126094091), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484488), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(455), 
+    "mapId" : NumberInt(126094092), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484422), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(456), 
+    "mapId" : NumberInt(126094101), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484469), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(457), 
+    "mapId" : NumberInt(126094102), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484427), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(458), 
+    "mapId" : NumberInt(126224150), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484426), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(459), 
+    "mapId" : NumberInt(126224151), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(484425), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(460), 
+    "mapId" : NumberInt(134437), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437551), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(461), 
+    "mapId" : NumberInt(134438), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435785), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(462), 
+    "mapId" : NumberInt(134743040), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(485295), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(463), 
+    "mapId" : NumberInt(134955), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435786), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(464), 
+    "mapId" : NumberInt(135467), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435787), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(465), 
+    "mapId" : NumberInt(135987), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417419), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(466), 
+    "mapId" : NumberInt(135988), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435778), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(467), 
+    "mapId" : NumberInt(137007), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450669), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(468), 
+    "mapId" : NumberInt(137239), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417260), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(469), 
+    "mapId" : NumberInt(137240), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417493), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(470), 
+    "mapId" : NumberInt(137519), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417481), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(471), 
+    "mapId" : NumberInt(137751), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417311), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(472), 
+    "mapId" : NumberInt(137752), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416852), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(473), 
+    "mapId" : NumberInt(138008), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435796), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(474), 
+    "mapId" : NumberInt(138520), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435795), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(475), 
+    "mapId" : NumberInt(138550), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417573), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(476), 
+    "mapId" : NumberInt(138551), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417530), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(477), 
+    "mapId" : NumberInt(139540), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437031), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(478), 
+    "mapId" : NumberInt(140052), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437083), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(479), 
+    "mapId" : NumberInt(140075), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(158737), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(480), 
+    "mapId" : NumberInt(140081), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(342006), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(481), 
+    "mapId" : NumberInt(140082), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(341918), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(482), 
+    "mapId" : NumberInt(140587), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417272), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(483), 
+    "mapId" : NumberInt(140593), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417325), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(484), 
+    "mapId" : NumberInt(140594), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417313), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(485), 
+    "mapId" : NumberInt(140840), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416807), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(486), 
+    "mapId" : NumberInt(140841), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417304), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(487), 
+    "mapId" : NumberInt(141328), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417144), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(488), 
+    "mapId" : NumberInt(141329), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417273), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(489), 
+    "mapId" : NumberInt(141345), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417476), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(490), 
+    "mapId" : NumberInt(141346), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417466), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(491), 
+    "mapId" : NumberInt(141347), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417217), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(492), 
+    "mapId" : NumberInt(141349), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417421), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(493), 
+    "mapId" : NumberInt(141350), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416678), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(494), 
+    "mapId" : NumberInt(141351), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416889), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(495), 
+    "mapId" : NumberInt(141353), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417250), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(496), 
+    "mapId" : NumberInt(141581), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437085), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(497), 
+    "mapId" : NumberInt(141582), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(437084), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(498), 
+    "mapId" : NumberInt(141840), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417327), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(499), 
+    "mapId" : NumberInt(141841), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416738), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(500), 
+    "mapId" : NumberInt(141851), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417347), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(501), 
+    "mapId" : NumberInt(141855), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417401), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(502), 
+    "mapId" : NumberInt(141856), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417406), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(503), 
+    "mapId" : NumberInt(141857), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416990), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(504), 
+    "mapId" : NumberInt(141858), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416462), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(505), 
+    "mapId" : NumberInt(141859), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417291), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(506), 
+    "mapId" : NumberInt(141860), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416561), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(507), 
+    "mapId" : NumberInt(141861), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417168), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(508), 
+    "mapId" : NumberInt(141863), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417494), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(509), 
+    "mapId" : NumberInt(141865), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416543), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(510), 
+    "mapId" : NumberInt(142363), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417319), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(511), 
+    "mapId" : NumberInt(142367), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416835), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(512), 
+    "mapId" : NumberInt(142368), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416812), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(513), 
+    "mapId" : NumberInt(142369), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443644), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(514), 
+    "mapId" : NumberInt(142370), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417330), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(515), 
+    "mapId" : NumberInt(142371), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417038), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(516), 
+    "mapId" : NumberInt(142372), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417247), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(517), 
+    "mapId" : NumberInt(142373), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416671), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(518), 
+    "mapId" : NumberInt(142374), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417446), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(519), 
+    "mapId" : NumberInt(142375), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417267), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(520), 
+    "mapId" : NumberInt(142376), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417379), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(521), 
+    "mapId" : NumberInt(142377), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443688), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(522), 
+    "mapId" : NumberInt(142596), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450784), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(523), 
+    "mapId" : NumberInt(142597), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450780), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(524), 
+    "mapId" : NumberInt(142629), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435775), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(525), 
+    "mapId" : NumberInt(142630), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417440), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(526), 
+    "mapId" : NumberInt(142870), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416901), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(527), 
+    "mapId" : NumberInt(142879), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417324), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(528), 
+    "mapId" : NumberInt(142880), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416947), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(529), 
+    "mapId" : NumberInt(142881), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417101), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(530), 
+    "mapId" : NumberInt(142882), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417377), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(531), 
+    "mapId" : NumberInt(142883), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417307), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(532), 
+    "mapId" : NumberInt(142885), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417496), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(533), 
+    "mapId" : NumberInt(142886), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417286), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(534), 
+    "mapId" : NumberInt(142888), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417147), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(535), 
+    "mapId" : NumberInt(142889), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443678), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(536), 
+    "mapId" : NumberInt(142890), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417425), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(537), 
+    "mapId" : NumberInt(143108), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450770), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(538), 
+    "mapId" : NumberInt(143109), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450764), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(539), 
+    "mapId" : NumberInt(143141), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435776), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(540), 
+    "mapId" : NumberInt(143142), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417400), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(541), 
+    "mapId" : NumberInt(143167), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450782), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(542), 
+    "mapId" : NumberInt(143382), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417418), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(543), 
+    "mapId" : NumberInt(143391), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417352), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(544), 
+    "mapId" : NumberInt(143392), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417261), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(545), 
+    "mapId" : NumberInt(143393), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(357638), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(546), 
+    "mapId" : NumberInt(143394), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417231), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(547), 
+    "mapId" : NumberInt(143395), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417277), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(548), 
+    "mapId" : NumberInt(143396), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417361), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(549), 
+    "mapId" : NumberInt(143397), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443671), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(550), 
+    "mapId" : NumberInt(143398), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417534), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(551), 
+    "mapId" : NumberInt(143399), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417556), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(552), 
+    "mapId" : NumberInt(143400), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416785), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(553), 
+    "mapId" : NumberInt(143402), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416814), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(554), 
+    "mapId" : NumberInt(143403), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417328), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(555), 
+    "mapId" : NumberInt(143661), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417519), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(556), 
+    "mapId" : NumberInt(143662), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392744), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(557), 
+    "mapId" : NumberInt(143680), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383717), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(558), 
+    "mapId" : NumberInt(143681), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383642), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(559), 
+    "mapId" : NumberInt(143903), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417266), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(560), 
+    "mapId" : NumberInt(143904), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416765), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(561), 
+    "mapId" : NumberInt(143905), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417048), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(562), 
+    "mapId" : NumberInt(143907), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(275834), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(563), 
+    "mapId" : NumberInt(143909), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416900), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(564), 
+    "mapId" : NumberInt(143911), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416638), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(565), 
+    "mapId" : NumberInt(143912), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417447), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(566), 
+    "mapId" : NumberInt(143913), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417151), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(567), 
+    "mapId" : NumberInt(143914), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417508), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(568), 
+    "mapId" : NumberInt(143915), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417176), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(569), 
+    "mapId" : NumberInt(143916), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416476), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(570), 
+    "mapId" : NumberInt(143917), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416714), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(571), 
+    "mapId" : NumberInt(144140), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417240), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(572), 
+    "mapId" : NumberInt(144141), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416985), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(573), 
+    "mapId" : NumberInt(144173), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417268), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(574), 
+    "mapId" : NumberInt(144174), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(391079), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(575), 
+    "mapId" : NumberInt(144191), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(384021), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(576), 
+    "mapId" : NumberInt(144385), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450781), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(577), 
+    "mapId" : NumberInt(144416), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417029), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(578), 
+    "mapId" : NumberInt(144417), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417385), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(579), 
+    "mapId" : NumberInt(144421), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417560), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(580), 
+    "mapId" : NumberInt(144423), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417532), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(581), 
+    "mapId" : NumberInt(144424), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417583), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(582), 
+    "mapId" : NumberInt(144426), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417416), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(583), 
+    "mapId" : NumberInt(144427), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415757), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(584), 
+    "mapId" : NumberInt(144428), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417243), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(585), 
+    "mapId" : NumberInt(144429), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415712), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(586), 
+    "mapId" : NumberInt(144652), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417310), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(587), 
+    "mapId" : NumberInt(144653), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416859), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(588), 
+    "mapId" : NumberInt(144691), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416840), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(589), 
+    "mapId" : NumberInt(144692), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(453521), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(590), 
+    "mapId" : NumberInt(144693), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417456), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(591), 
+    "mapId" : NumberInt(144694), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450856), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(592), 
+    "mapId" : NumberInt(144696), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417223), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(593), 
+    "mapId" : NumberInt(144697), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450769), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(594), 
+    "mapId" : NumberInt(144698), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417514), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(595), 
+    "mapId" : NumberInt(144699), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416996), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(596), 
+    "mapId" : NumberInt(144702), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383477), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(597), 
+    "mapId" : NumberInt(144703), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383891), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(598), 
+    "mapId" : NumberInt(144704), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383775), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(599), 
+    "mapId" : NumberInt(144705), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450665), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(600), 
+    "mapId" : NumberInt(144897), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450765), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(601), 
+    "mapId" : NumberInt(144927), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417558), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(602), 
+    "mapId" : NumberInt(144928), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416567), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(603), 
+    "mapId" : NumberInt(144929), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417305), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(604), 
+    "mapId" : NumberInt(144930), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443642), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(605), 
+    "mapId" : NumberInt(144933), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416884), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(606), 
+    "mapId" : NumberInt(144935), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417571), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(607), 
+    "mapId" : NumberInt(144936), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417396), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(608), 
+    "mapId" : NumberInt(144937), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417506), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(609), 
+    "mapId" : NumberInt(144938), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415779), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(610), 
+    "mapId" : NumberInt(144939), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416071), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(611), 
+    "mapId" : NumberInt(144940), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417219), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(612), 
+    "mapId" : NumberInt(144941), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417566), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(613), 
+    "mapId" : NumberInt(145201), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416623), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(614), 
+    "mapId" : NumberInt(145202), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450912), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(615), 
+    "mapId" : NumberInt(145203), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450911), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(616), 
+    "mapId" : NumberInt(145204), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417541), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(617), 
+    "mapId" : NumberInt(145207), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417487), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(618), 
+    "mapId" : NumberInt(145209), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416604), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(619), 
+    "mapId" : NumberInt(145210), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416424), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(620), 
+    "mapId" : NumberInt(145211), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450855), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(621), 
+    "mapId" : NumberInt(145212), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417299), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(622), 
+    "mapId" : NumberInt(145213), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450768), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(623), 
+    "mapId" : NumberInt(145214), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383412), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(624), 
+    "mapId" : NumberInt(145215), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383241), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(625), 
+    "mapId" : NumberInt(145216), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383531), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(626), 
+    "mapId" : NumberInt(145217), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383589), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(627), 
+    "mapId" : NumberInt(145439), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443648), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(628), 
+    "mapId" : NumberInt(145441), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417535), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(629), 
+    "mapId" : NumberInt(145443), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417526), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(630), 
+    "mapId" : NumberInt(145444), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417436), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(631), 
+    "mapId" : NumberInt(145445), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416790), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(632), 
+    "mapId" : NumberInt(145446), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416498), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(633), 
+    "mapId" : NumberInt(145448), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417281), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(634), 
+    "mapId" : NumberInt(145449), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416517), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(635), 
+    "mapId" : NumberInt(145450), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417482), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(636), 
+    "mapId" : NumberInt(145451), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(415746), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(637), 
+    "mapId" : NumberInt(145452), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416333), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(638), 
+    "mapId" : NumberInt(145453), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417443), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(639), 
+    "mapId" : NumberInt(145671), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450783), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(640), 
+    "mapId" : NumberInt(145672), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450776), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(641), 
+    "mapId" : NumberInt(145714), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417201), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(642), 
+    "mapId" : NumberInt(145715), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417163), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(643), 
+    "mapId" : NumberInt(145716), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417437), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(644), 
+    "mapId" : NumberInt(145717), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417509), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(645), 
+    "mapId" : NumberInt(145718), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416993), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(646), 
+    "mapId" : NumberInt(145720), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417112), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(647), 
+    "mapId" : NumberInt(145721), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417089), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(648), 
+    "mapId" : NumberInt(145723), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450655), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(649), 
+    "mapId" : NumberInt(145724), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416800), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(650), 
+    "mapId" : NumberInt(145725), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450658), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(651), 
+    "mapId" : NumberInt(145726), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383316), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(652), 
+    "mapId" : NumberInt(145727), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383184), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(653), 
+    "mapId" : NumberInt(145728), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382623), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(654), 
+    "mapId" : NumberInt(145939), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417546), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(655), 
+    "mapId" : NumberInt(145940), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416495), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(656), 
+    "mapId" : NumberInt(145951), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416722), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(657), 
+    "mapId" : NumberInt(145953), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416920), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(658), 
+    "mapId" : NumberInt(145954), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416513), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(659), 
+    "mapId" : NumberInt(145955), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417442), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(660), 
+    "mapId" : NumberInt(145957), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417577), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(661), 
+    "mapId" : NumberInt(145958), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416573), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(662), 
+    "mapId" : NumberInt(145959), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417503), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(663), 
+    "mapId" : NumberInt(145960), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417537), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(664), 
+    "mapId" : NumberInt(145961), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416823), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(665), 
+    "mapId" : NumberInt(145962), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417513), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(666), 
+    "mapId" : NumberInt(145963), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417228), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(667), 
+    "mapId" : NumberInt(145964), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416334), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(668), 
+    "mapId" : NumberInt(145965), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417374), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(669), 
+    "mapId" : NumberInt(146183), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450789), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(670), 
+    "mapId" : NumberInt(146184), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450773), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(671), 
+    "mapId" : NumberInt(146196), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435771), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(672), 
+    "mapId" : NumberInt(146211), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450779), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(673), 
+    "mapId" : NumberInt(146225), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417258), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(674), 
+    "mapId" : NumberInt(146226), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450775), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(675), 
+    "mapId" : NumberInt(146227), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(75783), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(676), 
+    "mapId" : NumberInt(146228), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417237), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(677), 
+    "mapId" : NumberInt(146229), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443659), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(678), 
+    "mapId" : NumberInt(146230), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417450), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(679), 
+    "mapId" : NumberInt(146231), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450778), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(680), 
+    "mapId" : NumberInt(146232), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417212), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(681), 
+    "mapId" : NumberInt(146234), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417318), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(682), 
+    "mapId" : NumberInt(146236), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450651), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(683), 
+    "mapId" : NumberInt(146237), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450650), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(684), 
+    "mapId" : NumberInt(146239), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382689), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(685), 
+    "mapId" : NumberInt(146240), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382657), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(686), 
+    "mapId" : NumberInt(146241), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382593), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(687), 
+    "mapId" : NumberInt(146451), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417441), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(688), 
+    "mapId" : NumberInt(146452), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416422), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(689), 
+    "mapId" : NumberInt(146463), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416795), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(690), 
+    "mapId" : NumberInt(146465), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417477), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(691), 
+    "mapId" : NumberInt(146467), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417381), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(692), 
+    "mapId" : NumberInt(146468), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417488), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(693), 
+    "mapId" : NumberInt(146469), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417512), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(694), 
+    "mapId" : NumberInt(146470), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417389), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(695), 
+    "mapId" : NumberInt(146471), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417336), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(696), 
+    "mapId" : NumberInt(146472), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417337), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(697), 
+    "mapId" : NumberInt(146473), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417410), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(698), 
+    "mapId" : NumberInt(146474), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416959), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(699), 
+    "mapId" : NumberInt(146475), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416550), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(700), 
+    "mapId" : NumberInt(146476), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417113), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(701), 
+    "mapId" : NumberInt(146477), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417039), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(702), 
+    "mapId" : NumberInt(146708), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435770), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(703), 
+    "mapId" : NumberInt(146714), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435772), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(704), 
+    "mapId" : NumberInt(146715), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(435773), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(705), 
+    "mapId" : NumberInt(146723), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450785), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(706), 
+    "mapId" : NumberInt(146738), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450777), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(707), 
+    "mapId" : NumberInt(146739), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417358), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(708), 
+    "mapId" : NumberInt(146740), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450771), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(709), 
+    "mapId" : NumberInt(146742), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416493), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(710), 
+    "mapId" : NumberInt(146743), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417545), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(711), 
+    "mapId" : NumberInt(146744), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416337), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(712), 
+    "mapId" : NumberInt(146745), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416335), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(713), 
+    "mapId" : NumberInt(146749), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450666), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(714), 
+    "mapId" : NumberInt(146751), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383101), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(715), 
+    "mapId" : NumberInt(146752), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383148), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(716), 
+    "mapId" : NumberInt(146753), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382570), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(717), 
+    "mapId" : NumberInt(146980), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417589), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(718), 
+    "mapId" : NumberInt(146981), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(79206), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(719), 
+    "mapId" : NumberInt(146982), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(78803), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(720), 
+    "mapId" : NumberInt(146983), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417346), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(721), 
+    "mapId" : NumberInt(146984), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417553), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(722), 
+    "mapId" : NumberInt(146985), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(78720), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(723), 
+    "mapId" : NumberInt(146986), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417391), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(724), 
+    "mapId" : NumberInt(146987), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417229), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(725), 
+    "mapId" : NumberInt(146988), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417489), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(726), 
+    "mapId" : NumberInt(147250), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450787), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(727), 
+    "mapId" : NumberInt(147251), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417575), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(728), 
+    "mapId" : NumberInt(147252), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417181), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(729), 
+    "mapId" : NumberInt(147253), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417127), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(730), 
+    "mapId" : NumberInt(147255), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450774), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(731), 
+    "mapId" : NumberInt(147256), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417480), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(732), 
+    "mapId" : NumberInt(147258), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416487), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(733), 
+    "mapId" : NumberInt(147259), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450767), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(734), 
+    "mapId" : NumberInt(147260), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450662), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(735), 
+    "mapId" : NumberInt(147261), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450648), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(736), 
+    "mapId" : NumberInt(147262), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(383008), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(737), 
+    "mapId" : NumberInt(147263), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(443690), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(738), 
+    "mapId" : NumberInt(147265), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382545), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(739), 
+    "mapId" : NumberInt(147485), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417279), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(740), 
+    "mapId" : NumberInt(147486), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417269), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(741), 
+    "mapId" : NumberInt(147487), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417551), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(742), 
+    "mapId" : NumberInt(147488), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417295), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(743), 
+    "mapId" : NumberInt(147489), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417579), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(744), 
+    "mapId" : NumberInt(147490), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417372), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(745), 
+    "mapId" : NumberInt(147493), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(438860), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(746), 
+    "mapId" : NumberInt(147494), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417580), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(747), 
+    "mapId" : NumberInt(147495), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416824), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(748), 
+    "mapId" : NumberInt(147496), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417246), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(749), 
+    "mapId" : NumberInt(147762), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417104), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(750), 
+    "mapId" : NumberInt(147763), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417360), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(751), 
+    "mapId" : NumberInt(147764), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417245), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(752), 
+    "mapId" : NumberInt(147765), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417134), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(753), 
+    "mapId" : NumberInt(147769), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417296), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(754), 
+    "mapId" : NumberInt(147771), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450660), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(755), 
+    "mapId" : NumberInt(147772), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450659), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(756), 
+    "mapId" : NumberInt(147773), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382950), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(757), 
+    "mapId" : NumberInt(147774), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382841), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(758), 
+    "mapId" : NumberInt(147775), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382709), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(759), 
+    "mapId" : NumberInt(147776), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382514), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(760), 
+    "mapId" : NumberInt(148003), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417329), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(761), 
+    "mapId" : NumberInt(148270), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392020), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(762), 
+    "mapId" : NumberInt(148271), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392555), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(763), 
+    "mapId" : NumberInt(148272), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392357), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(764), 
+    "mapId" : NumberInt(148274), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417294), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(765), 
+    "mapId" : NumberInt(148275), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416610), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(766), 
+    "mapId" : NumberInt(148276), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417118), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(767), 
+    "mapId" : NumberInt(148277), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417402), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(768), 
+    "mapId" : NumberInt(148278), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417033), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(769), 
+    "mapId" : NumberInt(148279), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416427), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(770), 
+    "mapId" : NumberInt(148281), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450670), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(771), 
+    "mapId" : NumberInt(148282), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417235), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(772), 
+    "mapId" : NumberInt(148284), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450910), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(773), 
+    "mapId" : NumberInt(148285), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382885), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(774), 
+    "mapId" : NumberInt(148286), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382785), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(775), 
+    "mapId" : NumberInt(148288), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(382487), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(776), 
+    "mapId" : NumberInt(148289), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(390480), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(777), 
+    "mapId" : NumberInt(148783), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392831), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(778), 
+    "mapId" : NumberInt(148784), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392925), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(779), 
+    "mapId" : NumberInt(148785), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(453426), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(780), 
+    "mapId" : NumberInt(148787), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450790), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(781), 
+    "mapId" : NumberInt(148788), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416924), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(782), 
+    "mapId" : NumberInt(148789), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417289), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(783), 
+    "mapId" : NumberInt(148790), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416475), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(784), 
+    "mapId" : NumberInt(148791), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417340), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(785), 
+    "mapId" : NumberInt(148792), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417567), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(786), 
+    "mapId" : NumberInt(148794), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416798), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(787), 
+    "mapId" : NumberInt(148795), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417040), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(788), 
+    "mapId" : NumberInt(148796), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450766), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(789), 
+    "mapId" : NumberInt(148797), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450664), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(790), 
+    "mapId" : NumberInt(149295), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392219), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(791), 
+    "mapId" : NumberInt(149296), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(391029), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(792), 
+    "mapId" : NumberInt(149297), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(393082), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(793), 
+    "mapId" : NumberInt(149300), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450786), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(794), 
+    "mapId" : NumberInt(149301), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450854), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(795), 
+    "mapId" : NumberInt(149302), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417355), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(796), 
+    "mapId" : NumberInt(149303), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450788), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(797), 
+    "mapId" : NumberInt(149304), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(416826), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(798), 
+    "mapId" : NumberInt(149305), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(75486), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(799), 
+    "mapId" : NumberInt(149306), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417073), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(800), 
+    "mapId" : NumberInt(149307), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450667), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(801), 
+    "mapId" : NumberInt(149308), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(450661), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(802), 
+    "mapId" : NumberInt(149808), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417415), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(803), 
+    "mapId" : NumberInt(149809), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(392289), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(804), 
+    "mapId" : NumberInt(149811), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(417186), 
+    "elementTypeId" : NumberInt(120), 
+    "actionType" : "Paddock", 
+    "optionalValue1" : "0", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(2), 
+    "mapId" : NumberInt(147768), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(260872), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(3), 
+    "mapId" : NumberInt(84674563), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(489386), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(5), 
+    "mapId" : NumberInt(68552706), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459977), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(7), 
+    "mapId" : NumberInt(88213271), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472654), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(8), 
+    "mapId" : NumberInt(144419), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(58211), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(11), 
+    "mapId" : NumberInt(68419587), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459764), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(12), 
+    "mapId" : NumberInt(68419587), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(459763), 
+    "elementTypeId" : NumberInt(127), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "101715481", 
+    "optionalValue2" : "219"
+}
+{ 
+    "_id" : NumberInt(13), 
+    "mapId" : NumberInt(88212247), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(472901), 
+    "elementTypeId" : NumberInt(0), 
+    "actionType" : "Teleport", 
+    "optionalValue1" : "99090957", 
+    "optionalValue2" : "458"
+}

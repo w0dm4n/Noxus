@@ -1,0 +1,28 @@
+[
+	{
+		"memberName": "Interactive",
+		"packageName": "com.ankamagames.dofus.datacenter.interactives",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "actionId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "displayTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			}
+		]
+	}
+]

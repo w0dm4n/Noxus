@@ -1,0 +1,5 @@
+{ 
+    "_id" : NumberInt(14), 
+    "accountId" : NumberInt(2), 
+    "friendAccountId" : NumberInt(1)
+}

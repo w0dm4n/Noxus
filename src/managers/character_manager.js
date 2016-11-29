@@ -1,4 +1,5 @@
 import Datacenter from "../database/datacenter"
+import FriendHandler from "../handlers/friend_handler"
 
 export default class CharacterManager {
 
@@ -80,5 +81,11 @@ export default class CharacterManager {
             if (Datacenter.experiences[i].xp <= exp) floor = Datacenter.experiences[i];
         }
         return floor;
+    }
+
+    static onDisconnect(character)
+    {
+        FriendHandler.sendFriendDisconnect(character.client);
+        character.save();
     }
 }

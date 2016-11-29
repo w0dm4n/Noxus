@@ -1,0 +1,228 @@
+[
+	{
+		"memberName": "BreedRoleByBreed",
+		"packageName": "com.ankamagames.dofus.datacenter.breeds",
+		"fields": [
+			{
+				"name": "breedId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "roleId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "descriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "value",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "order",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "Breed",
+		"packageName": "com.ankamagames.dofus.datacenter.breeds",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "shortNameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "longNameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "descriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "gameplayDescriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "maleLook",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "femaleLook",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "creatureBonesId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "maleArtwork",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "femaleArtwork",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "statsPointsForStrength",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<uint>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "statsPointsForIntelligence",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<uint>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "statsPointsForChance",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<uint>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "statsPointsForAgility",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<uint>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "statsPointsForVitality",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<uint>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "statsPointsForWisdom",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<uint>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "breedSpellsId",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "breedRoles",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.breeds::BreedRoleByBreed>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "maleColors",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "femaleColors",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "spawnMap",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "complexity",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "sortIndex",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

@@ -1,0 +1,43 @@
+[
+	{
+		"memberName": "Head",
+		"packageName": "com.ankamagames.dofus.datacenter.breeds",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "skins",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "assetId",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "breed",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "gender",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "label",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "order",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

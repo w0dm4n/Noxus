@@ -12,6 +12,7 @@ import Character from "../database/models/character"
 import AccountRole from "../enums/account_role_enum"
 import Common from "../Common"
 import WorldManager from "../managers/world_manager"
+import FriendHandler from "../handlers/friend_handler"
 
 export default class LoaderManager {
 
@@ -35,9 +36,34 @@ export default class LoaderManager {
         }
     }
 
+    static getFriendsOnline(client, callback)
+    {
+        var friendOnline = 0;
+        if (client.account.friends)
+        {
+            for (var i in client.account.friends)
+            {
+                var character = WorldServer.getOnlineCharacterByAccountId(client.account.friends[i].friendAccountId);
+                if (character)
+                {
+                    FriendHandler.sendFriendsList(character.client);
+                    friendOnline++;
+                }
+            }
+            callback(friendOnline);
+            return;
+
+        }
+        callback(0);
+        return;
+    }
+
     static LoadCharacterData(client, callback)
     {
-        callback();
+        LoaderManager.getFriendsOnline(client, function(online){
+            client.character.friendsOnline = online;
+            callback();
+        });
     }
 
 }

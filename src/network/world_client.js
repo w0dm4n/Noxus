@@ -7,6 +7,7 @@ import Common from "../common"
 import Formatter from "../utils/formatter"
 import Processor from "./processor"
 import World from "./world"
+import FriendHandler from "../handlers/friend_handler"
 
 var arrayBufferToBuffer = require('arraybuffer-to-buffer');
 var base64 = require('base64-js');
@@ -38,11 +39,11 @@ export default class WorldClient {
                 if(self.character.getMap() != null) {
                     self.character.getMap().removeClient(self);
                 }
-
-                self.character.save();
             }
             World.removeClient(self);
             Logger.infos("Client disconnected");
+            if (self && self.character)
+                self.character.onDisconnect();
         });
     }
 

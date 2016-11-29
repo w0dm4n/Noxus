@@ -1,0 +1,48 @@
+[
+	{
+		"memberName": "Smiley",
+		"packageName": "com.ankamagames.dofus.datacenter.communication",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "order",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "gfxId",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "forPlayers",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<String>",
+						"type": "String"
+					}
+				]
+			},
+			{
+				"name": "referenceId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "categoryId",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

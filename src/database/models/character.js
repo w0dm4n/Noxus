@@ -49,6 +49,11 @@ export default class Character {
         this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
     }
 
+    onDisconnect()
+    {
+        CharacterManager.onDisconnect(this);
+    }
+
     getBaseSkin() {
         return CharacterManager.getDefaultLook(this.breed, this.sex);
     }

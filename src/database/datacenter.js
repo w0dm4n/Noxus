@@ -7,6 +7,7 @@ export default class Datacenter {
     static heads;
     static mapScrollsActions;
     static experiences;
+    static smileys;
 
     static load(callback) {
         var loaders = [
@@ -14,6 +15,7 @@ export default class Datacenter {
             Datacenter.loadHeads,
             Datacenter.loadMapScrollsActions,
             Datacenter.loadExperiences,
+            Datacenter.loadSmileys,
         ];
         var loaded = 0;
 
@@ -55,6 +57,14 @@ export default class Datacenter {
         DBManager.getExperiences(function(experiences){
             Datacenter.experiences = experiences;
             Logger.infos("Loaded '" + experiences.length + "' experience floor(s)");
+            callback();
+        });
+    }
+
+    static loadSmileys(callback) {
+        DBManager.getSmileys(function(smileys){
+            Datacenter.smileys = smileys;
+            Logger.infos("Loaded '" + smileys.length + "' smiley(s)");
             callback();
         });
     }

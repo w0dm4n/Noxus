@@ -1,0 +1,53 @@
+[
+	{
+		"memberName": "MapScrollAction",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "rightExists",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "bottomExists",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "leftExists",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "topExists",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "rightMapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "bottomMapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "leftMapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "topMapId",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

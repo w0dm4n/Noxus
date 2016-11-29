@@ -12,6 +12,8 @@ import PlayableBreedEnum from "../enums/playable_breed_enum"
 import Character from "../database/models/character"
 import WorldManager from "../managers/world_manager"
 import CharacterManager from "../managers/character_manager.js"
+import Loader from "../managers/loader_manager"
+import FriendHandler from "../handlers/friend_handler"
 
 // Import pathfinding
 import MapPoint from "../game/pathfinding/map_point"
@@ -26,19 +28,24 @@ export default class GameHandler {
 		client.character.statsManager.sendStats();
 
         if(client.character.firstContext) {
-            WorldManager.teleportClient(client, client.character.mapid, client.character.cellid, function(result){
-                if (result)
-				{
-					client.character.firstContext = false;
-                	GameHandler.sendWelcomeMessage(client);
-				}
-				else
-				{
-					Logger.error("An error occured while trying to load a map for the character " + client.character.name);
-					client.character.disconnect();
-				}
+			Loader.LoadCharacterData(client, function()
+			{
+				WorldManager.teleportClient(client, client.character.mapid, client.character.cellid, function(result){
+					if (result)
+					{
+						client.character.firstContext = false;
+						GameHandler.sendWelcomeMessage(client);
+						FriendHandler.sendFriendsOnlineMessage(client);
+					}
+					else
+					{
+						Logger.error("An error occured while trying to load a map for the character " + client.character.name);
+						client.character.disconnect();
+					}
+				});
 			});
         }
+		
     }
 
     static handleMapInformationsRequestMessage(client, packet) {
