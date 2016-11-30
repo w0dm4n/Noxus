@@ -20,11 +20,21 @@ export default class LoaderManager {
     {
         try
         {
-            client.account.friends = new Array();
+            client.account.friends = [];
 
             DBManager.getFriends({accountId: client.account.uid}, function(friends){
-                for (var i in friends)
-                    client.account.friends.push(friends[i++]);
+                for (var i in friends) {
+                    var friend = friends[i];
+
+                    (function(tmp){
+                        DBManager.getAccount({uid: tmp.friendAccountId}, function (account) {
+                            if (account) {
+                                    tmp.account = account;
+                                    client.account.friends.push(tmp);
+                            }
+                        });
+                    })(friend);
+                }
                 Logger.infos("Account data successfully loaded for account " + client.account.username + " (" + client.account.uid + ")");
                 callback();
             });
@@ -60,6 +70,8 @@ export default class LoaderManager {
 
     static LoadCharacterData(client, callback)
     {
+
+        // load character emotes list
         LoaderManager.getFriendsOnline(client, function(online){
             client.character.friendsOnline = online;
             callback();

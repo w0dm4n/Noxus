@@ -951,3 +951,388 @@ export class GuildInformations extends BasicGuildInformations {
         this.guildEmblem.deserialize(buffer);
     }
 }
+
+export class Item {
+    constructor() {
+        this.protocolId = 7;
+    }
+    serialize(buffer) {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class ObjectItem extends Item {
+    constructor(position, objectGID, effects, objectUID, quantity) {
+        super();
+        this.position = position;
+        this.objectGID = objectGID;
+        this.effects = effects;
+        this.objectUID = objectUID;
+        this.quantity = quantity;
+        this.protocolId = 37;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeByte(this.position);
+        if (this.objectGID < 0) {
+            Logger.error("Forbidden value (" + this.objectGID + ") on element objectGID.");
+        }
+        buffer.writeVarShort(this.objectGID);
+        buffer.writeShort(this.effects.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.effects.length) {
+            buffer.writeShort(this.effects[_loc2_].protocolId);
+            this.effects[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element objectUID.");
+        }
+        buffer.writeVarInt(this.objectUID);
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element quantity.");
+        }
+        buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc5_ = null;
+        super.deserialize(buffer);
+        this.position = buffer.readUnsignedByte();
+        if (this.position < 0 || this.position > 255) {
+            Logger.error("Forbidden value (" + this.position + ") on element of ObjectItem.position.");
+        }
+        this.objectGID = buffer.readVarUhShort();
+        if (this.objectGID < 0) {
+            Logger.error("Forbidden value (" + this.objectGID + ") on element of ObjectItem.objectGID.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readUnsignedShort();
+            _loc5_ = ProtocolTypeManager.getInstance(ObjectEffect, _loc4_);
+            _loc5_.deserialize(buffer);
+            this.effects.push(_loc5_);
+            _loc3_++;
+        }
+        this.objectUID = buffer.readVarUhInt();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element of ObjectItem.objectUID.");
+        }
+        this.quantity = buffer.readVarUhInt();
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element of ObjectItem.quantity.");
+        }
+    }
+}
+
+export class ObjectEffect {
+    constructor(actionId) {
+        this.actionId = actionId;
+        this.protocolId = 76;
+    }
+    serialize(buffer) {
+        if (this.actionId < 0) {
+            Logger.error("Forbidden value (" + this.actionId + ") on element actionId.");
+        }
+        buffer.writeVarShort(this.actionId);
+    }
+    deserialize(buffer) {
+        this.actionId = buffer.readVarUhShort();
+        if (this.actionId < 0) {
+            Logger.error("Forbidden value (" + this.actionId + ") on element of ObjectEffect.actionId.");
+        }
+    }
+}
+
+export class ObjectEffectCreature extends ObjectEffect {
+    constructor(param1, monsterFamilyId) {
+        super(param1);
+        this.monsterFamilyId = monsterFamilyId;
+        this.protocolId = 71;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.monsterFamilyId < 0) {
+            Logger.error("Forbidden value (" + this.monsterFamilyId + ") on element monsterFamilyId.");
+        }
+        buffer.writeVarShort(this.monsterFamilyId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.monsterFamilyId = buffer.readVarUhShort();
+        if (this.monsterFamilyId < 0) {
+            Logger.error("Forbidden value (" + this.monsterFamilyId + ") on element of ObjectEffectCreature.monsterFamilyId.");
+        }
+    }
+}
+
+export class ObjectEffectDate extends ObjectEffect {
+    constructor(param1, year, month, day, hour, minute) {
+        super(param1);
+        this.year = year;
+        this.month = month;
+        this.day = day;
+        this.hour = hour;
+        this.minute = minute;
+        this.protocolId = 72;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.year < 0) {
+            Logger.error("Forbidden value (" + this.year + ") on element year.");
+        }
+        buffer.writeVarShort(this.year);
+        if (this.month < 0) {
+            Logger.error("Forbidden value (" + this.month + ") on element month.");
+        }
+        buffer.writeByte(this.month);
+        if (this.day < 0) {
+            Logger.error("Forbidden value (" + this.day + ") on element day.");
+        }
+        buffer.writeByte(this.day);
+        if (this.hour < 0) {
+            Logger.error("Forbidden value (" + this.hour + ") on element hour.");
+        }
+        buffer.writeByte(this.hour);
+        if (this.minute < 0) {
+            Logger.error("Forbidden value (" + this.minute + ") on element minute.");
+        }
+        buffer.writeByte(this.minute);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.year = buffer.readVarUhShort();
+        if (this.year < 0) {
+            Logger.error("Forbidden value (" + this.year + ") on element of ObjectEffectDate.year.");
+        }
+        this.month = buffer.readByte();
+        if (this.month < 0) {
+            Logger.error("Forbidden value (" + this.month + ") on element of ObjectEffectDate.month.");
+        }
+        this.day = buffer.readByte();
+        if (this.day < 0) {
+            Logger.error("Forbidden value (" + this.day + ") on element of ObjectEffectDate.day.");
+        }
+        this.hour = buffer.readByte();
+        if (this.hour < 0) {
+            Logger.error("Forbidden value (" + this.hour + ") on element of ObjectEffectDate.hour.");
+        }
+        this.minute = buffer.readByte();
+        if (this.minute < 0) {
+            Logger.error("Forbidden value (" + this.minute + ") on element of ObjectEffectDate.minute.");
+        }
+    }
+}
+
+export class ObjectEffectDice extends ObjectEffect {
+    constructor(param1, diceNum, diceSide, diceConst) {
+        super(param1);
+        this.diceNum = diceNum;
+        this.diceSide = diceSide;
+        this.diceConst = diceConst;
+        this.protocolId = 73;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.diceNum < 0) {
+            Logger.error("Forbidden value (" + this.diceNum + ") on element diceNum.");
+        }
+        buffer.writeVarShort(this.diceNum);
+        if (this.diceSide < 0) {
+            Logger.error("Forbidden value (" + this.diceSide + ") on element diceSide.");
+        }
+        buffer.writeVarShort(this.diceSide);
+        if (this.diceConst < 0) {
+            Logger.error("Forbidden value (" + this.diceConst + ") on element diceConst.");
+        }
+        buffer.writeVarShort(this.diceConst);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.diceNum = buffer.readVarUhShort();
+        if (this.diceNum < 0) {
+            Logger.error("Forbidden value (" + this.diceNum + ") on element of ObjectEffectDice.diceNum.");
+        }
+        this.diceSide = buffer.readVarUhShort();
+        if (this.diceSide < 0) {
+            Logger.error("Forbidden value (" + this.diceSide + ") on element of ObjectEffectDice.diceSide.");
+        }
+        this.diceConst = buffer.readVarUhShort();
+        if (this.diceConst < 0) {
+            Logger.error("Forbidden value (" + this.diceConst + ") on element of ObjectEffectDice.diceConst.");
+        }
+    }
+}
+
+export class ObjectEffectDuration extends ObjectEffect {
+    constructor(param1, days, hours, minutes) {
+        super(param1);
+        this.days = days;
+        this.hours = hours;
+        this.minutes = minutes;
+        this.protocolId = 75;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.days < 0) {
+            Logger.error("Forbidden value (" + this.days + ") on element days.");
+        }
+        buffer.writeVarShort(this.days);
+        if (this.hours < 0) {
+            Logger.error("Forbidden value (" + this.hours + ") on element hours.");
+        }
+        buffer.writeByte(this.hours);
+        if (this.minutes < 0) {
+            Logger.error("Forbidden value (" + this.minutes + ") on element minutes.");
+        }
+        buffer.writeByte(this.minutes);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.days = buffer.readVarUhShort();
+        if (this.days < 0) {
+            Logger.error("Forbidden value (" + this.days + ") on element of ObjectEffectDuration.days.");
+        }
+        this.hours = buffer.readByte();
+        if (this.hours < 0) {
+            Logger.error("Forbidden value (" + this.hours + ") on element of ObjectEffectDuration.hours.");
+        }
+        this.minutes = buffer.readByte();
+        if (this.minutes < 0) {
+            Logger.error("Forbidden value (" + this.minutes + ") on element of ObjectEffectDuration.minutes.");
+        }
+    }
+}
+
+export class ObjectEffectInteger extends ObjectEffect {
+    constructor(param1, value) {
+        super(param1);
+        this.value = value;
+        this.protocolId = 70;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.value < 0) {
+            Logger.error("Forbidden value (" + this.value + ") on element value.");
+        }
+        buffer.writeVarShort(this.value);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.value = buffer.readVarUhShort();
+        if (this.value < 0) {
+            Logger.error("Forbidden value (" + this.value + ") on element of ObjectEffectInteger.value.");
+        }
+    }
+}
+
+export class ObjectEffectLadder extends ObjectEffectCreature {
+    constructor(param1, param2, monsterCount) {
+        super(param1, param2);
+        this.monsterCount = monsterCount;
+        this.protocolId = 81;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.monsterCount < 0) {
+            Logger.error("Forbidden value (" + this.monsterCount + ") on element monsterCount.");
+        }
+        buffer.writeVarInt(this.monsterCount);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.monsterCount = buffer.readVarUhInt();
+        if (this.monsterCount < 0) {
+            Logger.error("Forbidden value (" + this.monsterCount + ") on element of ObjectEffectLadder.monsterCount.");
+        }
+    }
+}
+
+export class ObjectEffectMinMax extends ObjectEffect {
+    constructor(param1, min, max) {
+        super(param1);
+        this.min = min;
+        this.max = max;
+        this.protocolId = 82;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.min < 0) {
+            Logger.error("Forbidden value (" + this.min + ") on element min.");
+        }
+        buffer.writeVarInt(this.min);
+        if (this.max < 0) {
+            Logger.error("Forbidden value (" + this.max + ") on element max.");
+        }
+        buffer.writeVarInt(this.max);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.min = buffer.readVarUhInt();
+        if (this.min < 0) {
+            Logger.error("Forbidden value (" + this.min + ") on element of ObjectEffectMinMax.min.");
+        }
+        this.max = buffer.readVarUhInt();
+        if (this.max < 0) {
+            Logger.error("Forbidden value (" + this.max + ") on element of ObjectEffectMinMax.max.");
+        }
+    }
+}
+
+export class ObjectEffectMount extends ObjectEffect {
+    constructor(param1, mountId, date, modelId) {
+        super(param1);
+        this.mountId = mountId;
+        this.date = date;
+        this.modelId = modelId;
+        this.protocolId = 179;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.mountId < 0) {
+            Logger.error("Forbidden value (" + this.mountId + ") on element mountId.");
+        }
+        buffer.writeInt(this.mountId);
+        if (this.date < -9007199254740990 || this.date > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.date + ") on element date.");
+        }
+        buffer.writeDouble(this.date);
+        if (this.modelId < 0) {
+            Logger.error("Forbidden value (" + this.modelId + ") on element modelId.");
+        }
+        buffer.writeVarShort(this.modelId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.mountId = buffer.readInt();
+        if (this.mountId < 0) {
+            Logger.error("Forbidden value (" + this.mountId + ") on element of ObjectEffectMount.mountId.");
+        }
+        this.date = buffer.readDouble();
+        if (this.date < -9007199254740990 || this.date > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.date + ") on element of ObjectEffectMount.date.");
+        }
+        this.modelId = buffer.readVarUhShort();
+        if (this.modelId < 0) {
+            Logger.error("Forbidden value (" + this.modelId + ") on element of ObjectEffectMount.modelId.");
+        }
+    }
+}
+
+export class ObjectEffectString extends ObjectEffect {
+    constructor(param1, value) {
+        super(param1);
+        this.value = value;
+        this.protocolId = 74;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeUTF(this.value);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.value = buffer.readUTF();
+    }
+}

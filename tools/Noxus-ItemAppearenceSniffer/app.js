@@ -41,3 +41,21 @@ class MA2File {
 var ma2File = new MA2File("./data/Items.ma3");
 ma2File.read();
 fs.writeFileSync("./data/items.json", JSON.stringify(ma2File.items)); 
+
+var MongoClient = require('mongodb').MongoClient
+    , assert = require('assert');
+  var url = 'mongodb://localhost:27017/Noxus';
+  MongoClient.connect(url, function(err, db) {
+    var collection = db.collection('items');
+	for(var i in ma2File.items) {
+		var item = ma2File.items[i];
+		console.log("Update item id: " + item.id + ", appearenceId: " + item.skin);
+		var fn = function(itemCopy) {
+			collection.update(
+			   { _id: itemCopy.id },
+			   { $set: { "appearanceId": itemCopy.skin, "name": itemCopy.name } }
+			);
+		};
+		fn(item);
+	}
+  });

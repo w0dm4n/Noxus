@@ -1,5 +1,7 @@
 import Datacenter from "../database/datacenter"
 import FriendHandler from "../handlers/friend_handler"
+import * as Messages from "../io/dofus/messages"
+import GameHandler from "../handlers/game_handler"
 
 export default class CharacterManager {
 
@@ -87,5 +89,19 @@ export default class CharacterManager {
     {
         FriendHandler.sendFriendDisconnect(character.client);
         character.save();
+    }
+
+    static onConnected(character)
+    {
+        GameHandler.sendWelcomeMessage(character.client);
+        FriendHandler.sendFriendsOnlineMessage(character.client);
+        FriendHandler.warnFriends(character.client);
+        character.sendWarnOnStateMessages(character.client.account.warnOnConnection);
+        character.sendInventoryBag();
+    }
+
+    static sendEmotesList(character)
+    {
+        character.client.send(new Messages.EmoteListMessage([1,22,114,79,80,107,106,105,78,87,103,84,92,88,48,90,75,74,73,72,71,69,68,67,66,39,33,38,121,122,42,120,117,30,32,3,14,10,2,35,7,34,5,6,56,11,12,13,26,25,24,58,19,9,4,51,36,119,129,57,15,8,130,132,135,134,82,27,81,44,43,49,41,77]));
     }
 }

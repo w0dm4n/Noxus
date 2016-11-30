@@ -26,28 +26,10 @@ export default class FriendHandler {
             }
             return false;
         }
- 
-        static sendNewFriend(client, target)
-        {
-            var friendsList = new Array();
-             
-            var state = PlayerStateEnum.UNKNOWN_STATE;
-            if (target.account.friends)
-                if (FriendHandler.isAlreadyFriend(target, client.account))
-                    state = PlayerStateEnum.GAME_TYPE_ROLEPLAY;
-            var friendInformations = new Types.FriendOnlineInformations(target.account.uid,
-             target.account.nickname, state, 0, 0, target.character._id, 
-                target.character.name, target.character.level, 0, target.character.breed, target.character.sex, new Types.GuildInformations(0, "", 0, new Types.GuildEmblem(0, 0, 0, 0)), 0,
-             new Types.PlayerStatus(state));
- 
-            friendsList.push(friendInformations);
- 
-            client.send(new Messages.FriendsListMessage(friendsList));
-        }
- 
+
         static handleFriendAddRequestMessage(client, packet)
         {
-            if (packet.name)
+            if (packet.name && packet.name.length > 0)
             {
                 var target = WorldServer.getOnlineClientByCharacterName(packet.name);
                 if (target == null)
@@ -60,7 +42,7 @@ export default class FriendHandler {
                         var friend = new AccountFriend({_id: 0, accountId: client.account.uid, friendAccountId: target.account.uid});
                         DBManager.createFriend(friend, function(friend){
                             client.account.friends.push(friend);
-                            FriendHandler.sendNewFriend(client, target);
+                            FriendHandler.sendFriendsList(client);
                         });
                     }
                     else
@@ -73,7 +55,7 @@ export default class FriendHandler {
  
         static sendFriendsList(client)
         {
-            var friendsList = new Array();
+            var friendsList = [];
             if (client.account.friends)
             {
                 for (var i in client.account.friends)
@@ -98,7 +80,13 @@ export default class FriendHandler {
                         friendsList.push(new Types.FriendOnlineInformations(friendCharacter.client.account.uid,
                         friendCharacter.client.account.nickname, state, 0, 0, friendCharacter._id, 
                         friendCharacter.name, level, 0, friendCharacter.breed, friendCharacter.sex, new Types.GuildInformations(0, "", 0, new Types.GuildEmblem(0, 0, 0, 0))
-                        , 0, new Types.PlayerStatus(typeState)));
+                        , (friendCharacter.client.account.moodSmileyId) ? friendCharacter.client.account.moodSmileyId : 0, new Types.PlayerStatus(typeState)));
+                    }
+                    else {
+                        if (client.account.friends[i].account){
+                            friendsList.push(new Types.FriendInformations(client.account.friends[i].account.uid, client.account.friends[i].account.nickname,
+                            PlayerStateEnum.NOT_CONNECTED, 0, 0));
+                        }
                     }
                 }
  
@@ -167,6 +155,40 @@ export default class FriendHandler {
                         FriendHandler.sendFriendsList(character.client);
                     }
                 }
+            }
+        }
+
+        static handleFriendSetWarnOnConnectionMessage(client, packet) {
+            client.account.warnOnConnection = packet.enable;
+            DBManager.updateAccount(client.account.uid, {warnOnConnection: client.account.warnOnConnection}, function () {
+                client.character.sendWarnOnStateMessages();
+            });
+        }
+
+        static warnFriends(client)
+        {
+            if (client.account.friends) {
+                for (var i in client.account.friends) {
+                    var friendCharacter = WorldServer.getOnlineCharacterByAccountId(client.account.friends[i].friendAccountId);
+                    if (friendCharacter) {
+                        if (friendCharacter.client.account.warnOnConnection == true)
+                            friendCharacter.client.send(new Messages.TextInformationMessage(0, 143, [client.account.nickname, client.character.name, client.character._id]));
+                    }
+                }
+            }
+        }
+
+        static handleMoodSmileyRequestMessage(client, packet) {
+            if (packet.smileyId > 0)
+            {
+                DBManager.getSmiley({_id: packet.smileyId}, function(smiley) {
+                    if (smiley) {
+                        DBManager.updateAccount(client.account.uid, {moodSmileyId: smiley._id}, function () {
+                            client.account.moodSmileyId = smiley._id;
+                            client.character.replyText("Votre humeur a été mis à jour !");
+                        });
+                    }
+                });
             }
         }
 }

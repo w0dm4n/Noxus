@@ -1,4 +1,5 @@
 import Logger from "../../io/logger"
+import Datacenter from "../../database/datacenter"
 import * as Messages from "../../io/dofus/messages"
 import * as Types from "../../io/dofus/types"
 import DataMapProvider from "../../game/pathfinding/data_map_provider"
@@ -27,9 +28,10 @@ export default class Map {
     }
 
     addClient(client) {
-        Logger.debug("Add new player in the mapId: " + this._id);
+        Logger.debug("Add new player in the mapId: " + this._id);    
         this.send(new Messages.GameRolePlayShowActorMessage(client.character.getGameRolePlayCharacterInformations(client.account)));
         this.clients.push(client);
+
         client.send(new Messages.CurrentMapMessage(this._id, Map.MAP_DECRYPT_KEY));
     }
 
@@ -50,7 +52,16 @@ export default class Map {
     }
 
     sendComplementaryInformations(client) {
-        client.send(new Messages.MapComplementaryInformationsDataMessage(this.subareaId, this._id, [], this.getMapActors(), [], [], [], [], false));
+            var Interactives = Datacenter.getInteractivesMap(this._id);
+            var result = new Array();
+            if(Interactives != null)
+            {
+                for(var i  in Interactives)
+                {
+                    result.push(new Types.InteractiveElement(Interactives[i].elementId,Interactives[i].elementTypeId,[new Types.InteractiveElementSkill(Interactives[i].skillId,1)],[],true));
+                }
+            }
+        client.send(new Messages.MapComplementaryInformationsDataMessage(this.subareaId, this._id, [], this.getMapActors(),result, [], [], [], false));
     }
 
     send(packet) {

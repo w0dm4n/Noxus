@@ -105,7 +105,7 @@ export default class ApproachHandler {
             client.send(new Messages.CharacterCreationResultMessage(4));
             return;
         }
-        if (!ApproachHandler.CheckNameCondition(packet.name))
+        if (!ApproachHandler.CheckNameCondition(packet.name) || packet.name.length < 3)
         {
             client.send(new Messages.CharacterCreationResultMessage(2));
             return;
@@ -133,6 +133,8 @@ export default class ApproachHandler {
                     dirId: ConfigManager.configData.characters_start.startDir,
                     statsPoints: (ConfigManager.configData.characters_start.level * 5) - 5,
                     spellPoints: 0 + (ConfigManager.configData.characters_start.level) - 1,
+                    ZaapSave : "",
+                    ZaapExist : 0,
                 });
                 DBManager.createCharacter(character, function(){
                     client.send(new Messages.CharacterCreationResultMessage(0));

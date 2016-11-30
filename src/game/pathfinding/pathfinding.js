@@ -10,33 +10,31 @@ export default class Pathfinding {
         this.openList = new Array();
         this.closedList = new Array();
 
-        for(var i in this.map.cells) {
+        for (var i in this.map.cells) {
             var cell = new CellInfo(this.map.cells[i], MapPoint.fromCellId(this.map.cells[i].id));
             this.cells.push(cell);
         }
     }
 
     getCell(id) {
-        for(var i in this.cells) {
-            if(this.cells[i].id == id) {
+        for (var i in this.cells) {
+            if (this.cells[i].id == id) {
                 return this.cells[i];
             }
         }
         return null;
     }
 
-    addToCloseList(cell)
-    {
+    addToCloseList(cell) {
         this.closedList.push(cell);
-        if(this.openList.indexOf(cell) != -1) {
+        if (this.openList.indexOf(cell) != -1) {
             this.openList.splice(this.openList.indexOf(cell));
         }
     }
 
-    addToOpenList(cell)
-    {
+    addToOpenList(cell) {
         this.openList.push(cell);
-        if(this.closedList.indexOf(cell) != -1) {
+        if (this.closedList.indexOf(cell) != -1) {
             this.closedList.splice(this.closedList.indexOf(cell));
         }
     }
@@ -46,11 +44,9 @@ export default class Pathfinding {
         var maximum = this.openList.length;
         var minF = 1000000;
         var curNode = null;
-        for (var i = 0; i < maximum; i++)
-        {
+        for (var i = 0; i < maximum; i++) {
             var node = this.openList[i];
-            if (node.f < minF)
-            {
+            if (node.f < minF) {
                 minF = node.f;
                 curNode = node;
             }
@@ -58,13 +54,12 @@ export default class Pathfinding {
         return curNode;
     }
 
-    getNeighbours(cell, dyn)
-    {
+    getNeighbours(cell, dyn) {
         var neigh = cell.mapPoint.getNearestCells();
         var cells = [];
-        for(var i in neigh) {
+        for (var i in neigh) {
             var n = neigh[i];
-            if(n != null) {
+            if (n != null) {
                 cells.push(this.getCell(n._nCellId));
             }
         }
@@ -73,8 +68,49 @@ export default class Pathfinding {
 
     isAvailableCell(cellId) {
         var cell = this.getCell(cellId);
-        if(cell == null) return false;
+        if (cell == null) return false;
         return cell.available;
+    }
+
+    static findClosestWalkableCell(client) {
+        var pathFinding = new Pathfinding(client.character.getMap().dataMapProvider);
+        var index = 0;
+        var newCell = 0;
+        var testedCell = [];
+        var cells_near = pathFinding.getNeighbours(pathFinding.cells[client.character.cellid]);
+        while (newCell == 0 && index < 600)
+        {
+            if (cells_near.length)
+            {
+                for (var i in cells_near) {
+                    if (cells_near[i].cell._mov == true) {
+                        newCell = cells_near[i].cell.id;
+                        break;
+                    }
+                    else {
+                        var cell = pathFinding.cells[cells_near[i].id];
+                        cell.tested = false;
+                        testedCell.push(cell);
+                    }
+                }
+
+                if (newCell == 0)
+                {
+                    for (var i in testedCell) {
+                        if (testedCell[i].tested == false) {
+                            cells_near = null;
+                            cells_near = pathFinding.getNeighbours(testedCell[i]);
+                            testedCell[i].tested = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+                break;
+            index++;
+        }
+        return newCell;
     }
 
     findShortestPath(startCell, endCell, dynObstacles)

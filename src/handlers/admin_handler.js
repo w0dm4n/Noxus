@@ -11,6 +11,7 @@ import PlayableBreedEnum from "../enums/playable_breed_enum"
 import Character from "../database/models/character"
 import WorldManager from "../managers/world_manager"
 import AccountRole from "../enums/account_role_enum"
+import Pathfinding from "../game/pathfinding/pathfinding"
 
 export default class AdminHandler {
 
@@ -23,8 +24,20 @@ export default class AdminHandler {
         {
             case "moveto":
                 WorldManager.teleportClient(client, data[1], client.character.cellid, function(result) {
-                if (!result)
-                    client.character.replyError("Impossible de vous téléporter sur cette carte !");
+                    if (!result) {
+                        client.character.replyError("Impossible de vous téléporter sur cette carte !");
+                        return;
+                    }
+                    var cells = client.character.getMap().cells;
+
+                    if (!cells[client.character.cellid]._mov) {
+                        var newCell = Pathfinding.findClosestWalkableCell(client);
+
+                        if (newCell != 0 && cells[newCell]._mov) {
+                            WorldManager.teleportClient(client, client.character.getMap()._id, newCell, function(){
+                            });
+                        }
+                    }
             });
             break;
         }

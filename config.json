@@ -1,0 +1,30 @@
+{
+  "host": "127.0.0.1",
+  "auth_port": "443",
+  "world_port": "5556",
+  "server_name": "Noxus",
+  "server_id": "1",
+  "welcome_message": "Bienvenue sur la beta v1.0 de Noxus",
+  "max_characters": "5",
+  "mongodb": {
+    "host": "localhost",
+    "port": "27017",
+	"database": "Noxus"
+  },
+  "breeds_allowed": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+  "characters_start": {
+	"level": "150",
+	"kamas": "150000",
+	"startMap": "173277699",
+	"startCell": "328",
+	"startDir": "1"
+  },
+  "time_channel" :
+  {
+	"sales": "60",
+	"seek": "30",
+	"global_time_per_message": "0.5",
+	"global_time_on_exceeded": "10"
+  }
+}
+

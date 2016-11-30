@@ -23,8 +23,8 @@ import Pathfinding from "../game/pathfinding/pathfinding"
 export default class GameHandler {
 
     static handleGameContextCreateRequestMessage(client, packet) {
-		client.send(new Messages.EmoteListMessage([1,22,114,79,80,107,106,105,78,87,103,84,92,88,48,90,75,74,73,72,71,69,68,67,66,39,33,38,121,122,42,120,117,30,32,3,14,10,2,35,7,34,5,6,56,11,12,13,26,25,24,58,19,9,4,51,36,119,129,57,15,8,130,132,135,134,82,27,81,44,43,49,41,77]));
-        client.send(new Messages.GameContextDestroyMessage());
+        client.character.sendEmotesList();
+		client.send(new Messages.GameContextDestroyMessage());
         client.send(new Messages.GameContextCreateMessage(1));
 		client.character.statsManager.sendStats();
 
@@ -35,8 +35,7 @@ export default class GameHandler {
 					if (result)
 					{
 						client.character.firstContext = false;
-						GameHandler.sendWelcomeMessage(client);
-						FriendHandler.sendFriendsOnlineMessage(client);
+						client.character.onConnected();
 					}
 					else
 					{
@@ -69,8 +68,8 @@ export default class GameHandler {
         var distance = cells[0].point.distanceTo(cells[cells.length - 1].point);
 		
 		// Calcul du chemin
-        var pathinding = new Pathfinding(client.character.getMap().dataMapProvider);
-        var path = pathinding.findShortestPath(cells[0].id, cells[cells.length - 1].id, []);
+        var pathfinding = new Pathfinding(client.character.getMap().dataMapProvider);
+        var path = pathfinding.findShortestPath(cells[0].id, cells[cells.length - 1].id, []);
         var keyMovements = [];
         keyMovements.push(client.character.cellid & 4095);
         for(var i in path) {
@@ -111,6 +110,9 @@ export default class GameHandler {
 			toCellId = client.character.cellid + 13;
 		}
 
+		if (toCellId < 0)
+			toCellId = 1;
+
 		if(mapDirection == -1) {
 			Logger.error("Client trying to change map on a non neighbour map, maybe cheat ?");
 			return;
@@ -137,10 +139,24 @@ export default class GameHandler {
 			}
 			Logger.debug('Override move map by scroll action : ' + toMap);
 		}
-		
 		client.character.cellid = toCellId;
-		WorldManager.teleportClient(client, toMap, client.character.cellid, function(){
-			client.character.save();
+		WorldManager.teleportClient(client, toMap, client.character.cellid, function() {
+            var cells = client.character.getMap().cells;
+
+			if (!cells[client.character.cellid]._mov) {
+				var newCell = Pathfinding.findClosestWalkableCell(client);
+                if (newCell != 0 && cells[newCell]._mov) {
+                    WorldManager.teleportClient(client, client.character.getMap()._id, newCell, function(){
+                    });
+				}
+				else
+				{
+                    WorldManager.teleportClient(client, ConfigManager.configData.characters_start.startMap, ConfigManager.configData.characters_start.startCell, function(){
+                    	client.character.replyError("Une erreur de cellule vous a obligé à revenir sur la map de départ !");
+                    });
+				}
+            }
+            client.character.save();
 		});
 	}
 
@@ -172,5 +188,19 @@ export default class GameHandler {
 		}
 		client.character.statsManager.sendStats();
 		client.character.save();
+	}
+
+	static handleChatSmileyRequestMessage(client, packet) {
+    	if (packet.smileyId > 0)
+		{
+			DBManager.getSmiley({_id: packet.smileyId}, function(smiley) {
+				if (smiley) {
+					var map = client.character.getMap();
+					if (map) {
+						map.send(new Messages.ChatSmileyMessage(client.character._id, smiley._id, client.account.uid));
+					}
+				}
+            });
+		}
 	}
 }

@@ -8,6 +8,7 @@ import Logger from "../../io/logger"
 import ConfigManager from "../../utils/configmanager.js"
 import DBManager from "../../database/dbmanager"
 import StatsManager from "../../game/stats/stats_manager"
+import ItemBag from "./item_bag"
 
 export default class Character {
 
@@ -45,13 +46,21 @@ export default class Character {
         this.stats[14] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.agility : 0, 0, 0, 0, 0);
         this.stats[15] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.intelligence : 0, 0, 0, 0, 0);
         this.statsManager = new StatsManager(this);
-
+        this.ZaapSave = raw.ZaapSave;
+        this.ZaapExist = raw.ZaapExist;
         this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
+
+        this.bindBag(new ItemBag());
     }
 
     onDisconnect()
     {
         CharacterManager.onDisconnect(this);
+    }
+
+    onConnected()
+    {
+        CharacterManager.onConnected(this);
     }
 
     getBaseSkin() {
@@ -200,5 +209,32 @@ export default class Character {
             Logger.infos("Character '" + self.name + "(" + self._id + ")' saved");
             if (callback) callback();
         });
+    }
+    
+    sendEmotesList()
+    {
+        CharacterManager.sendEmotesList(this);
+    }
+
+    sendWarnOnStateMessages()
+    {
+        this.client.send(new Messages.FriendWarnOnConnectionStateMessage(this.client.account.warnOnConnection));
+    }
+
+    bindBag(bag) {
+        var self = this;
+        if(this.itemBag != null) {
+            this.itemBag.unbind();
+        }
+        this.itemBag = bag;
+        this.itemBag.onItemAdded = function(item) {
+            Logger.debug("Item added to character bag");
+            self.sendInventoryBag();
+        };
+    }
+
+    sendInventoryBag() {
+        this.client.send(new Messages.InventoryWeightMessage(0, 1000));
+        this.client.send(new Messages.InventoryContentMessage(this.itemBag.getObjectItemArray(), this.kamas));
     }
 }

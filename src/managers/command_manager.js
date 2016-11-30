@@ -12,6 +12,7 @@ import Character from "../database/models/character"
 import AccountRole from "../enums/account_role_enum"
 import Common from "../Common"
 import WorldManager from "../managers/world_manager"
+import ItemManager from "../game/item/item_manager"
 
 export default class CommandManager {
 
@@ -24,6 +25,7 @@ export default class CommandManager {
         { name:"ban", role:AccountRole.MODERATOR, description: "Permet de bannir un joueur du serveur"},
         { name:"unban", role:AccountRole.MODERATOR, description: "Permet de débannir un joueur du serveur"},
         { name:"exp", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points d'experience"},
+        { name:"item", role:AccountRole.MODERATOR, description: "Créer un objet pour le personnage"},
     ];
     
     static manageCommand(command, client)
@@ -212,9 +214,9 @@ export default class CommandManager {
         if(data[1] && data[2]) {
             var target = WorldServer.getOnlineClientByCharacterName(data[1]);
             if(target) {
-                client.character.experience += parseInt(data[2]);
-                client.character.statsManager.checkLevelUp();
-                client.character.statsManager.sendStats();
+                target.character.experience += parseInt(data[2]);
+                target.character.statsManager.checkLevelUp();
+                target.character.statsManager.sendStats();
             }
             else
                 client.character.replyError("Impossible de trouver ce personnage !");
@@ -222,6 +224,17 @@ export default class CommandManager {
         else
         {
              client.character.replyError("Erreur de syntaxe (.exp name nb)");
+        }
+    }
+
+    static handle_item(data, client) {
+        if(data[1]) {
+            var item = ItemManager.generateItem(parseInt(data[1]));
+            client.character.itemBag.add(item);
+        }
+        else
+        {
+            client.character.replyError("Erreur de syntaxe (.item id name)");
         }
     }
 }

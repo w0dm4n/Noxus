@@ -1073,3 +1073,125 @@ deserialize(buffer){
          }
 }
 }
+
+export class FriendSetWarnOnConnectionMessage extends ProtocolMessage {
+constructor() {
+    super(5602);
+}
+    deserialize(buffer){
+        this.enable = buffer.readBoolean();
+    }
+}
+
+export class FriendWarnOnConnectionStateMessage extends ProtocolMessage {
+    constructor(enable)
+    {
+        super(5630);
+        this.enable = enable;
+    }
+    serialize()
+    {
+        this.buffer.writeBoolean(this.enable);
+    }
+}
+
+export class ChatSmileyRequestMessage extends ProtocolMessage {
+    constructor()
+    {
+        super(800);
+    }
+
+    deserialize(buffer)
+    {
+        this.smileyId = buffer.readVarUhShort();
+    }
+}
+
+export class ChatSmileyMessage extends ProtocolMessage {
+    constructor(entityId, smileyId, accountId) {
+        super(801);
+        this.entityId = entityId;
+        this.smileyId = smileyId;
+        this.accountId = accountId;
+    }
+
+    serialize() {
+        this.buffer.writeDouble(this.entityId);
+        this.buffer.writeVarShort(this.smileyId);
+        this.buffer.writeInt(this.accountId);
+    }
+}
+
+export class MoodSmileyRequestMessage extends ProtocolMessage {
+    constructor()
+    {
+        super(6192);
+    }
+
+    deserialize(buffer) {
+        this.smileyId = buffer.readVarUhShort();
+    }
+}
+
+export class InventoryWeightMessage extends ProtocolMessage {
+    constructor(weight, weightMax) {
+        super(3009);
+        this.weight = weight;
+        this.weightMax = weightMax;
+    }
+    serialize() {
+        if (this.weight < 0) {
+            Logger.error("Forbidden value (" + this.weight + ") on element weight.");
+        }
+        this.buffer.writeVarInt(this.weight);
+        if (this.weightMax < 0) {
+            Logger.error("Forbidden value (" + this.weightMax + ") on element weightMax.");
+        }
+        this.buffer.writeVarInt(this.weightMax);
+    }
+    deserialize(buffer) {
+        this.weight = buffer.readVarUhInt();
+        if (this.weight < 0) {
+            Logger.error("Forbidden value (" + this.weight + ") on element of InventoryWeightMessage.weight.");
+        }
+        this.weightMax = buffer.readVarUhInt();
+        if (this.weightMax < 0) {
+            Logger.error("Forbidden value (" + this.weightMax + ") on element of InventoryWeightMessage.weightMax.");
+        }
+    }
+}
+
+export class InventoryContentMessage extends ProtocolMessage {
+    constructor(objects, kamas) {
+        super(3016);
+        this.objects = objects;
+        this.kamas = kamas;
+    }
+    serialize() {
+        this.buffer.writeShort(this.objects.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.objects.length) {
+            this.objects[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+        if (this.kamas < 0) {
+            Logger.error("Forbidden value (" + this.kamas + ") on element kamas.");
+        }
+        this.buffer.writeVarInt(this.kamas);
+    }
+    deserialize(buffer) {
+        var _loc4_ = null;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = new ObjectItem();
+            _loc4_.deserialize(buffer);
+            this.objects.push(_loc4_);
+            _loc3_++;
+        }
+        this.kamas = buffer.readVarUhInt();
+        if (this.kamas < 0) {
+            Logger.error("Forbidden value (" + this.kamas + ") on element of InventoryContentMessage.kamas.");
+        }
+    }
+}

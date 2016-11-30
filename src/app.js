@@ -21,8 +21,7 @@ class App {
                         AuthServer.start(ConfigManager.configData.host, ConfigManager.configData.auth_port);
                         WorldServer.start(ConfigManager.configData.host, ConfigManager.configData.world_port);
                     }
-                    finally
-                    {
+                    finally {
                         Logger.infos("Server started successfully !");
                     }
                 });

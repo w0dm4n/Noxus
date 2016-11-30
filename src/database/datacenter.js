@@ -10,6 +10,7 @@ export default class Datacenter {
     static smileys;
     static interactivesObjects;
     static emotes;
+    static items;
 
     static load(callback) {
         var loaders = [
@@ -20,6 +21,7 @@ export default class Datacenter {
             Datacenter.loadSmileys,
             Datacenter.loadInteractivesObjects,
             Datacenter.loadEmotes,
+            Datacenter.loadItems,
         ];
         var loaded = 0;
 
@@ -89,11 +91,33 @@ export default class Datacenter {
         });
     }
 
+    static loadItems(callback) {
+        DBManager.getItems(function(items){
+            Datacenter.items = items;
+            Logger.infos("Loaded '" + items.length + "' item(s)");
+            callback();
+        });
+    }
+
     static getMapScrollActionById(id) {
         for(var i in Datacenter.mapScrollsActions) {
-            if(Datacenter.mapScrollsActions[i].id == id) return Datacenter.mapScrollsActions[i];
+            if(Datacenter.mapScrollsActions[i].id == id) 
+            return Datacenter.mapScrollsActions[i];
         }
         return null;
+    }
+
+    static getInteractivesMap(id) {
+        var result = new Array();
+        for(var i in Datacenter.interactivesObjects) {
+            
+            if(Datacenter.interactivesObjects[i].mapId == id)
+                result.push(Datacenter.interactivesObjects[i]);
+        }
+        if(result.length > 0 )
+            return result;
+        else
+            return [];
     }
 
 }

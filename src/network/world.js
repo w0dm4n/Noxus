@@ -65,7 +65,7 @@ export default class WorldServer {
         for (var client in WorldServer.clients)
         {
             if (WorldServer.clients[client].character != null
-             && WorldServer.clients[client].character.nickname.toLowerCase() == name.toLowerCase())
+             && WorldServer.clients[client].account.nickname.toLowerCase() == name.toLowerCase())
                 return WorldServer.clients[client];
         }
         return null;

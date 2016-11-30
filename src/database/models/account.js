@@ -10,5 +10,7 @@ export default class Account {
         this.nickname = raw.nickname;
         this.secret_question = raw.secret_question;
         this.secret_answer = raw.secret_answer;
+        this.warnOnConnection = raw.warnOnConnection;
+        this.moodSmileyId = raw.moodSmileyId;
     }
 }

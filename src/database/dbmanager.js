@@ -55,7 +55,9 @@ export default class DBManager {
                     dirId: parseInt(character.dirId),
                     life: character.life,
                     statsPoints: character.statsPoints,
-                    spellPoints: character.spellPoints,
+                    spellPoints: character.spellPoints,                    
+                    ZaapExist:character.ZaapExist,
+                    ZaapSave:character.ZaapSave,                   
                     stats: {
                         strength: character.statsManager.getStatById(10).base,
                         vitality: character.statsManager.getStatById(11).base,
@@ -63,7 +65,9 @@ export default class DBManager {
                         chance: character.statsManager.getStatById(13).base,
                         agility: character.statsManager.getStatById(14).base,
                         intelligence: character.statsManager.getStatById(15).base,
-                    }
+                    },
+                   
+                    
                 }, function(){
                     character._id = autoIndex;
                     callback(character);
@@ -156,6 +160,18 @@ export default class DBManager {
                 return;
             }
             callback(new Account(account));
+        });
+    }
+
+
+    static getSmiley(query, callback){
+        var collection = DBManager.db.collection('smileys');
+        collection.findOne(query, function(err, smiley){
+            if(smiley == null){
+                callback(null);
+                return;
+            }
+            callback(smiley);
         });
     }
 
@@ -264,8 +280,6 @@ export default class DBManager {
         collection.find({}).toArray(function(err, smileys){
             callback(smileys);
         });
-        
-        
     }
 
     static getInteractivesObjects(callback) {
@@ -278,7 +292,14 @@ export default class DBManager {
     static getEmotes(callback) {
         var collection = DBManager.db.collection('emoticons');
         collection.find({}).toArray(function(err, emoticons){
-            callback(interactivesObjects);
+            callback(emoticons);
         });              
+    }
+
+    static getItems(callback) {
+        var collection = DBManager.db.collection('items');
+        collection.find({}).toArray(function(err, items){
+            callback(items);
+        });
     }
 }

@@ -36,6 +36,9 @@ export default class Processor {
         5610: { message: Messages.StatsUpgradeRequestMessage, handler:GameHandler.handleStatsUpgradeRequestMessage },
         4001: { message: Messages.FriendsGetListMessage, handler:FriendHandler.handleFriendsGetListMessage },
         5603: { message: Messages.FriendDeleteRequestMessage, handler:FriendHandler.handleFriendDeleteRequestMessage },
+        5602: { message: Messages.FriendSetWarnOnConnectionMessage, handler:FriendHandler.handleFriendSetWarnOnConnectionMessage },
+        800:  { message: Messages.ChatSmileyRequestMessage, handler: GameHandler.handleChatSmileyRequestMessage },
+        6192: {message: Messages.MoodSmileyRequestMessage, handler: FriendHandler.handleMoodSmileyRequestMessage },
     } 
 
     static handle(client, messageId, buffer) {
