@@ -1,0 +1,758 @@
+[
+	{
+		"memberName": "EffectInstance",
+		"packageName": "com.ankamagames.dofus.datacenter.effects",
+		"fields": [
+			{
+				"name": "effectUid",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetMask",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "random",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "group",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInBuffUi",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInFightLog",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "rawZone",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "delay",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectElement",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "EffectInstanceInteger",
+		"packageName": "com.ankamagames.dofus.datacenter.effects.instances",
+		"fields": [
+			{
+				"name": "visibleInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "random",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "rawZone",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetMask",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInFightLog",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectUid",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectElement",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "value",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInBuffUi",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "delay",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "group",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "EffectInstanceDice",
+		"packageName": "com.ankamagames.dofus.datacenter.effects.instances",
+		"fields": [
+			{
+				"name": "visibleInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "random",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "rawZone",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetMask",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "diceNum",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInFightLog",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectUid",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "diceSide",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInBuffUi",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "value",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectElement",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "delay",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "group",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "Item",
+		"packageName": "com.ankamagames.dofus.datacenter.items",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "typeId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "descriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "iconId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "level",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "realWeight",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "cursed",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "useAnimationId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "usable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "exchangeable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "price",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "twoHanded",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "etheral",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "itemSetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "criteria",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "criteriaTarget",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "hideEffects",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "enhanceable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "nonUsableOnAnother",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "appearanceId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "secretRecipe",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "recipeSlots",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "recipeIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "dropMonsterIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "bonusIsSecret",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "possibleEffects",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.effects::EffectInstance>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "favoriteSubAreas",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "favoriteSubAreasBonus",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "craftXpRatio",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "needUseConfirm",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "isDestructible",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "nuggetsBySubarea",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<Number>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<Number>",
+						"type": "Double"
+					}
+				]
+			},
+			{
+				"name": "containerIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "resourcesBySubarea",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			}
+		]
+	},
+	{
+		"memberName": "Weapon",
+		"packageName": "com.ankamagames.dofus.datacenter.items",
+		"fields": [
+			{
+				"name": "resourcesBySubarea",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "favoriteSubAreasBonus",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "craftXpRatio",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "range",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "bonusIsSecret",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "criticalHitBonus",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "criteriaTarget",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "minRange",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "containerIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "maxCastPerTurn",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "descriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "recipeIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "secretRecipe",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "etheral",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "appearanceId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "dropMonsterIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "cursed",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "exchangeable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "level",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "realWeight",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "castTestLos",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "favoriteSubAreas",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "criticalFailureProbability",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "hideEffects",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "criteria",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "criticalHitProbability",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "twoHanded",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "nonUsableOnAnother",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "itemSetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "castInDiagonal",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "price",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "enhanceable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "needUseConfirm",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "apCost",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "usable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "castInLine",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "possibleEffects",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.effects::EffectInstance>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "useAnimationId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "iconId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nuggetsBySubarea",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<Number>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<Number>",
+						"type": "Double"
+					}
+				]
+			},
+			{
+				"name": "isDestructible",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "typeId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "recipeSlots",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

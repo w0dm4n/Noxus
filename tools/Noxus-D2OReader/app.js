@@ -8,7 +8,7 @@ d = function(it){
 return console.log(format(it));
 };
 
-file = "./Ornaments"
+file = "./Emoticons"
 console.log("Processing " + file);
 BigEndianReader = (function(){
 BigEndianReader.displayName = 'BigEndianReader';

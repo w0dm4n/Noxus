@@ -8,6 +8,8 @@ export default class Datacenter {
     static mapScrollsActions;
     static experiences;
     static smileys;
+    static interactivesObjects;
+    static emotes;
 
     static load(callback) {
         var loaders = [
@@ -16,6 +18,8 @@ export default class Datacenter {
             Datacenter.loadMapScrollsActions,
             Datacenter.loadExperiences,
             Datacenter.loadSmileys,
+            Datacenter.loadInteractivesObjects,
+            Datacenter.loadEmotes,
         ];
         var loaded = 0;
 
@@ -65,6 +69,22 @@ export default class Datacenter {
         DBManager.getSmileys(function(smileys){
             Datacenter.smileys = smileys;
             Logger.infos("Loaded '" + smileys.length + "' smiley(s)");
+            callback();
+        });
+    }
+
+     static loadInteractivesObjects(callback) {
+        DBManager.getInteractivesObjects(function(interactivesObjects){
+            Datacenter.interactivesObjects = interactivesObjects;
+            Logger.infos("Loaded '" + interactivesObjects.length + "' interactives object(s)");
+            callback();
+        });
+    }
+
+    static loadEmotes(callback) {
+        DBManager.getEmotes(function(emotes){
+            Datacenter.emotes = emotes;
+            Logger.infos("Loaded '" + emotes.length + "' emote(s)");
             callback();
         });
     }

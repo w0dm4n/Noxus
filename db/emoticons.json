@@ -1,0 +1,2216 @@
+{ 
+    "_id" : NumberInt(1), 
+    "nameId" : NumberInt(2075), 
+    "shortcutId" : NumberInt(2076), 
+    "order" : NumberInt(10000), 
+    "defaultAnim" : "sit", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+        "1;30;Sit_30", 
+        "1;31;Sit_31"
+    ], 
+    "cooldown" : NumberInt(1200), 
+    "duration" : NumberInt(1200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(2), 
+    "nameId" : NumberInt(2087), 
+    "shortcutId" : NumberInt(2088), 
+    "order" : NumberInt(20100), 
+    "defaultAnim" : "bye", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2400), 
+    "duration" : NumberInt(2400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(3), 
+    "nameId" : NumberInt(2085), 
+    "shortcutId" : NumberInt(2086), 
+    "order" : NumberInt(25750), 
+    "defaultAnim" : "appl", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1300), 
+    "duration" : NumberInt(1300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(4), 
+    "nameId" : NumberInt(2166), 
+    "shortcutId" : NumberInt(2167), 
+    "order" : NumberInt(25500), 
+    "defaultAnim" : "mad", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+        "1;10,20,30,40,50,60,70,80,90,100,110,120,1405,1437,1663;Mad_0", 
+        "1;11,21,31,41,51,61,71,81,91,101,111,121,1407,1438,1664;Mad_1", 
+        "2;10,20,30,40,50,60,70,80,90,100,110,120,1405,1437,1663;Mad_1"
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(5), 
+    "nameId" : NumberInt(2164), 
+    "shortcutId" : NumberInt(2165), 
+    "order" : NumberInt(25600), 
+    "defaultAnim" : "fear", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(700), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(6), 
+    "nameId" : NumberInt(252619), 
+    "shortcutId" : NumberInt(2171), 
+    "order" : NumberInt(25400), 
+    "defaultAnim" : "weap", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1400), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(7), 
+    "nameId" : NumberInt(2168), 
+    "shortcutId" : NumberInt(2169), 
+    "order" : NumberInt(40000), 
+    "defaultAnim" : "pipo", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(8), 
+    "nameId" : NumberInt(141650), 
+    "shortcutId" : NumberInt(2147), 
+    "order" : NumberInt(33000), 
+    "defaultAnim" : "oups", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(9), 
+    "nameId" : NumberInt(2148), 
+    "shortcutId" : NumberInt(2149), 
+    "order" : NumberInt(20000), 
+    "defaultAnim" : "hi", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1700), 
+    "duration" : NumberInt(1700), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(10), 
+    "nameId" : NumberInt(2073), 
+    "shortcutId" : NumberInt(2074), 
+    "order" : NumberInt(20200), 
+    "defaultAnim" : "kiss", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+        "1;40;Kiss_40", 
+        "2;40;Kiss_40"
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(11), 
+    "nameId" : NumberInt(2124), 
+    "shortcutId" : NumberInt(2125), 
+    "order" : NumberInt(500100), 
+    "defaultAnim" : "pfc1", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2100), 
+    "duration" : NumberInt(2100), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(12), 
+    "nameId" : NumberInt(2079), 
+    "shortcutId" : NumberInt(2080), 
+    "order" : NumberInt(500200), 
+    "defaultAnim" : "pfc2", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2100), 
+    "duration" : NumberInt(2100), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(13), 
+    "nameId" : NumberInt(2142), 
+    "shortcutId" : NumberInt(2143), 
+    "order" : NumberInt(500300), 
+    "defaultAnim" : "pfc3", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2100), 
+    "duration" : NumberInt(2100), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(14), 
+    "nameId" : NumberInt(2098), 
+    "shortcutId" : NumberInt(2099), 
+    "order" : NumberInt(10200), 
+    "defaultAnim" : "cross", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1200), 
+    "duration" : NumberInt(1200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(15), 
+    "nameId" : NumberInt(2094), 
+    "shortcutId" : NumberInt(2095), 
+    "order" : NumberInt(15000), 
+    "defaultAnim" : "point", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1400), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(16), 
+    "nameId" : NumberInt(2116), 
+    "shortcutId" : NumberInt(109855), 
+    "order" : NumberInt(26300), 
+    "defaultAnim" : "crow", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(17), 
+    "nameId" : NumberInt(2114), 
+    "shortcutId" : NumberInt(2115), 
+    "order" : NumberInt(100200), 
+    "defaultAnim" : "eat", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(2000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(18), 
+    "nameId" : NumberInt(2120), 
+    "shortcutId" : NumberInt(2121), 
+    "order" : NumberInt(100100), 
+    "defaultAnim" : "beer", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(19), 
+    "nameId" : NumberInt(2102), 
+    "shortcutId" : NumberInt(2103), 
+    "order" : NumberInt(10100), 
+    "defaultAnim" : "rest", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+        "1;30;Rest_30"
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(21), 
+    "nameId" : NumberInt(2081), 
+    "shortcutId" : NumberInt(2082), 
+    "order" : NumberInt(50000), 
+    "defaultAnim" : "champ", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(60000), 
+    "duration" : NumberInt(1200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(22), 
+    "nameId" : NumberInt(2160), 
+    "shortcutId" : NumberInt(2161), 
+    "order" : NumberInt(60000), 
+    "defaultAnim" : "aura", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(0), 
+    "weight" : NumberInt(100)
+}
+{ 
+    "_id" : NumberInt(23), 
+    "nameId" : NumberInt(2162), 
+    "shortcutId" : NumberInt(2163), 
+    "order" : NumberInt(60100), 
+    "defaultAnim" : "bat", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(0), 
+    "weight" : NumberInt(1000)
+}
+{ 
+    "_id" : NumberInt(24), 
+    "nameId" : NumberInt(2152), 
+    "shortcutId" : NumberInt(2153), 
+    "order" : NumberInt(25800), 
+    "defaultAnim" : "laugh", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(4200), 
+    "duration" : NumberInt(4200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(25), 
+    "nameId" : NumberInt(2158), 
+    "shortcutId" : NumberInt(2159), 
+    "order" : NumberInt(26000), 
+    "defaultAnim" : "no", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2200), 
+    "duration" : NumberInt(2200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(26), 
+    "nameId" : NumberInt(2155), 
+    "shortcutId" : NumberInt(463123), 
+    "order" : NumberInt(25900), 
+    "defaultAnim" : "cry", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2500), 
+    "duration" : NumberInt(2500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(27), 
+    "nameId" : NumberInt(463124), 
+    "shortcutId" : NumberInt(463126), 
+    "order" : NumberInt(40500), 
+    "defaultAnim" : "dance", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(28), 
+    "nameId" : NumberInt(494387), 
+    "shortcutId" : NumberInt(454257), 
+    "order" : NumberInt(40100), 
+    "defaultAnim" : "guitar", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(29), 
+    "nameId" : NumberInt(454253), 
+    "shortcutId" : NumberInt(454254), 
+    "order" : NumberInt(32000), 
+    "defaultAnim" : "juggle", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(2000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(30), 
+    "nameId" : NumberInt(454244), 
+    "shortcutId" : NumberInt(454245), 
+    "order" : NumberInt(45000), 
+    "defaultAnim" : "read", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(33), 
+    "nameId" : NumberInt(2109), 
+    "shortcutId" : NumberInt(2110), 
+    "order" : NumberInt(34000), 
+    "defaultAnim" : "shit", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2200), 
+    "duration" : NumberInt(2200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(32), 
+    "nameId" : NumberInt(454246), 
+    "shortcutId" : NumberInt(463137), 
+    "order" : NumberInt(26400), 
+    "defaultAnim" : "victory", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+        "1;10,20,30,40,50,60,70,80,90,100,110,120,1405,1437,1663,3179;Win_0", 
+        "1;11,21,31,41,51,61,71,81,91,101,111,121,1407,1438,1664,3180;Win_1"
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(34), 
+    "nameId" : NumberInt(2111), 
+    "shortcutId" : NumberInt(122956), 
+    "order" : NumberInt(10300), 
+    "defaultAnim" : "hips", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(35), 
+    "nameId" : NumberInt(2096), 
+    "shortcutId" : NumberInt(2097), 
+    "order" : NumberInt(26500), 
+    "defaultAnim" : "flower", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(36), 
+    "nameId" : NumberInt(2118), 
+    "shortcutId" : NumberInt(2119), 
+    "order" : NumberInt(30800), 
+    "defaultAnim" : "freeze", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(37), 
+    "nameId" : NumberInt(2122), 
+    "shortcutId" : NumberInt(118316), 
+    "order" : NumberInt(30900), 
+    "defaultAnim" : "sneeze", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(2000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(38), 
+    "nameId" : NumberInt(2077), 
+    "shortcutId" : NumberInt(2078), 
+    "order" : NumberInt(26600), 
+    "defaultAnim" : "flower2", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(39), 
+    "nameId" : NumberInt(2139), 
+    "shortcutId" : NumberInt(117633), 
+    "order" : NumberInt(31000), 
+    "defaultAnim" : "cold", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1600), 
+    "duration" : NumberInt(1600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(40), 
+    "nameId" : NumberInt(2150), 
+    "shortcutId" : NumberInt(2151), 
+    "order" : NumberInt(60200), 
+    "defaultAnim" : "platypus", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(0), 
+    "weight" : NumberInt(1001)
+}
+{ 
+    "_id" : NumberInt(41), 
+    "nameId" : NumberInt(454240), 
+    "shortcutId" : NumberInt(454241), 
+    "order" : NumberInt(30600), 
+    "defaultAnim" : "yawn", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(42), 
+    "nameId" : NumberInt(454238), 
+    "shortcutId" : NumberInt(454239), 
+    "order" : NumberInt(30700), 
+    "defaultAnim" : "hop", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(43), 
+    "nameId" : NumberInt(2083), 
+    "shortcutId" : NumberInt(454243), 
+    "order" : NumberInt(30000), 
+    "defaultAnim" : "thumbsup", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(44), 
+    "nameId" : NumberInt(2084), 
+    "shortcutId" : NumberInt(454242), 
+    "order" : NumberInt(30100), 
+    "defaultAnim" : "thumbsdown", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1200), 
+    "duration" : NumberInt(1200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(46), 
+    "nameId" : NumberInt(454230), 
+    "shortcutId" : NumberInt(454231), 
+    "order" : NumberInt(30400), 
+    "defaultAnim" : "famished", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1400), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(48), 
+    "nameId" : NumberInt(454234), 
+    "shortcutId" : NumberInt(454235), 
+    "order" : NumberInt(30300), 
+    "defaultAnim" : "piwi", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(49), 
+    "nameId" : NumberInt(454228), 
+    "shortcutId" : NumberInt(454229), 
+    "order" : NumberInt(20300), 
+    "defaultAnim" : "hello", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+        "1;10,20,30,40,50,60,70,80,90,100,110,120,1405,1437,1663;Hello_0", 
+        "1;11,21,31,41,51,61,71,81,91,101,111,121,1407,1438,1664;Hello_1", 
+        "2;10,20,30,40,50,60,70,80,90,100,110,120,1405,1437,1663;Hello_0", 
+        "2;11,21,31,41,51,61,71,81,91,101,111,121,1407,1438,1664;Hello_1"
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(50), 
+    "nameId" : NumberInt(454226), 
+    "shortcutId" : NumberInt(454227), 
+    "order" : NumberInt(26800), 
+    "defaultAnim" : "card", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3600), 
+    "duration" : NumberInt(3600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(51), 
+    "nameId" : NumberInt(102855), 
+    "shortcutId" : NumberInt(454225), 
+    "order" : NumberInt(30200), 
+    "defaultAnim" : "superhero", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1600), 
+    "duration" : NumberInt(1600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(52), 
+    "nameId" : NumberInt(454223), 
+    "shortcutId" : NumberInt(454224), 
+    "order" : NumberInt(26200), 
+    "defaultAnim" : "implore", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(55), 
+    "nameId" : NumberInt(2144), 
+    "shortcutId" : NumberInt(2145), 
+    "order" : NumberInt(60300), 
+    "defaultAnim" : "nelween", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(0), 
+    "weight" : NumberInt(1002)
+}
+{ 
+    "_id" : NumberInt(56), 
+    "nameId" : NumberInt(2104), 
+    "shortcutId" : NumberInt(2105), 
+    "order" : NumberInt(26700), 
+    "defaultAnim" : "gift", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(57), 
+    "nameId" : NumberInt(428644), 
+    "shortcutId" : NumberInt(454218), 
+    "order" : NumberInt(50100), 
+    "defaultAnim" : "iop", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(4500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(58), 
+    "nameId" : NumberInt(2100), 
+    "shortcutId" : NumberInt(2101), 
+    "order" : NumberInt(10400), 
+    "defaultAnim" : "seiza", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(61), 
+    "nameId" : NumberInt(2106), 
+    "shortcutId" : NumberInt(2107), 
+    "order" : NumberInt(100000), 
+    "defaultAnim" : "drink", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(63), 
+    "nameId" : NumberInt(454210), 
+    "shortcutId" : NumberInt(454211), 
+    "order" : NumberInt(500400), 
+    "defaultAnim" : "pfc4", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2100), 
+    "duration" : NumberInt(2100), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(64), 
+    "nameId" : NumberInt(454208), 
+    "shortcutId" : NumberInt(454209), 
+    "order" : NumberInt(500500), 
+    "defaultAnim" : "pfc5", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2100), 
+    "duration" : NumberInt(2100), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(65), 
+    "nameId" : NumberInt(454214), 
+    "shortcutId" : NumberInt(454215), 
+    "order" : NumberInt(20400), 
+    "defaultAnim" : "vulcain", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(66), 
+    "nameId" : NumberInt(454212), 
+    "shortcutId" : NumberInt(454213), 
+    "order" : NumberInt(10600), 
+    "defaultAnim" : "kowtow", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(67), 
+    "nameId" : NumberInt(454202), 
+    "shortcutId" : NumberInt(454203), 
+    "order" : NumberInt(31100), 
+    "defaultAnim" : "pulco", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(68), 
+    "nameId" : NumberInt(483639), 
+    "shortcutId" : NumberInt(454201), 
+    "order" : NumberInt(25300), 
+    "defaultAnim" : "biceps", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(69), 
+    "nameId" : NumberInt(454204), 
+    "shortcutId" : NumberInt(454205), 
+    "order" : NumberInt(45100), 
+    "defaultAnim" : "map", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(4000), 
+    "duration" : NumberInt(3200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(70), 
+    "nameId" : NumberInt(454190), 
+    "shortcutId" : NumberInt(454191), 
+    "order" : NumberInt(300050), 
+    "defaultAnim" : "ogrine", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(71), 
+    "nameId" : NumberInt(454188), 
+    "shortcutId" : NumberInt(454189), 
+    "order" : NumberInt(25510), 
+    "defaultAnim" : "raised", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(72), 
+    "nameId" : NumberInt(454186), 
+    "shortcutId" : NumberInt(454187), 
+    "order" : NumberInt(30150), 
+    "defaultAnim" : "snook", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(73), 
+    "nameId" : NumberInt(454184), 
+    "shortcutId" : NumberInt(454185), 
+    "order" : NumberInt(20310), 
+    "defaultAnim" : "attention", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1900), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(74), 
+    "nameId" : NumberInt(454198), 
+    "shortcutId" : NumberInt(454199), 
+    "order" : NumberInt(31500), 
+    "defaultAnim" : "silence", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(75), 
+    "nameId" : NumberInt(454196), 
+    "shortcutId" : NumberInt(454197), 
+    "order" : NumberInt(30750), 
+    "defaultAnim" : "handrub", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(76), 
+    "nameId" : NumberInt(454194), 
+    "shortcutId" : NumberInt(454195), 
+    "order" : NumberInt(25650), 
+    "defaultAnim" : "facepalm", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(2000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(77), 
+    "nameId" : NumberInt(454192), 
+    "shortcutId" : NumberInt(531404), 
+    "order" : NumberInt(23305), 
+    "defaultAnim" : "salute", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(78), 
+    "nameId" : NumberInt(454182), 
+    "shortcutId" : NumberInt(454183), 
+    "order" : NumberInt(25770), 
+    "defaultAnim" : "wave", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(79), 
+    "nameId" : NumberInt(454180), 
+    "shortcutId" : NumberInt(454181), 
+    "order" : NumberInt(25660), 
+    "defaultAnim" : "forehead", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(80), 
+    "nameId" : NumberInt(454178), 
+    "shortcutId" : NumberInt(454179), 
+    "order" : NumberInt(10305), 
+    "defaultAnim" : "behind", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(81), 
+    "nameId" : NumberInt(454286), 
+    "shortcutId" : NumberInt(454287), 
+    "order" : NumberInt(40550), 
+    "defaultAnim" : "macarena", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(4000), 
+    "duration" : NumberInt(3800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(82), 
+    "nameId" : NumberInt(454288), 
+    "shortcutId" : NumberInt(454289), 
+    "order" : NumberInt(40450), 
+    "defaultAnim" : "whistling", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(84), 
+    "nameId" : NumberInt(454292), 
+    "shortcutId" : NumberInt(454293), 
+    "order" : NumberInt(45200), 
+    "defaultAnim" : "spyglass", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(4500), 
+    "duration" : NumberInt(4300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(85), 
+    "nameId" : NumberInt(454278), 
+    "shortcutId" : NumberInt(454279), 
+    "order" : NumberInt(45300), 
+    "defaultAnim" : "lens", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2500), 
+    "duration" : NumberInt(2500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(87), 
+    "nameId" : NumberInt(454282), 
+    "shortcutId" : NumberInt(454283), 
+    "order" : NumberInt(25780), 
+    "defaultAnim" : "boo", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(88), 
+    "nameId" : NumberInt(454284), 
+    "shortcutId" : NumberInt(454285), 
+    "order" : NumberInt(25760), 
+    "defaultAnim" : "cheer", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2500), 
+    "duration" : NumberInt(2500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(89), 
+    "nameId" : NumberInt(454294), 
+    "shortcutId" : NumberInt(454295), 
+    "order" : NumberInt(400015), 
+    "defaultAnim" : "deaf", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1700), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(90), 
+    "nameId" : NumberInt(454276), 
+    "shortcutId" : NumberInt(454277), 
+    "order" : NumberInt(26350), 
+    "defaultAnim" : "halloween", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(91), 
+    "nameId" : NumberInt(454274), 
+    "shortcutId" : NumberInt(454275), 
+    "order" : NumberInt(100400), 
+    "defaultAnim" : "chichala", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(4400), 
+    "duration" : NumberInt(4400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(92), 
+    "nameId" : NumberInt(454270), 
+    "shortcutId" : NumberInt(454271), 
+    "order" : NumberInt(44000), 
+    "defaultAnim" : "write", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(93), 
+    "nameId" : NumberInt(454272), 
+    "shortcutId" : NumberInt(454273), 
+    "order" : NumberInt(25450), 
+    "defaultAnim" : "unsheathe", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(94), 
+    "nameId" : NumberInt(454266), 
+    "shortcutId" : NumberInt(454267), 
+    "order" : NumberInt(300100), 
+    "defaultAnim" : "tongue", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(95), 
+    "nameId" : NumberInt(454268), 
+    "shortcutId" : NumberInt(454269), 
+    "order" : NumberInt(300200), 
+    "defaultAnim" : "opacity", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(96), 
+    "nameId" : NumberInt(454262), 
+    "shortcutId" : NumberInt(454263), 
+    "order" : NumberInt(25385), 
+    "defaultAnim" : "shield", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1200), 
+    "duration" : NumberInt(600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(97), 
+    "nameId" : NumberInt(454264), 
+    "shortcutId" : NumberInt(454265), 
+    "order" : NumberInt(25350), 
+    "defaultAnim" : "guild", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(98), 
+    "nameId" : NumberInt(454258), 
+    "shortcutId" : NumberInt(454259), 
+    "order" : NumberInt(25375), 
+    "defaultAnim" : "alliance", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(99), 
+    "nameId" : NumberInt(454260), 
+    "shortcutId" : NumberInt(454261), 
+    "order" : NumberInt(45400), 
+    "defaultAnim" : "time", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(100), 
+    "nameId" : NumberInt(454248), 
+    "shortcutId" : NumberInt(454249), 
+    "order" : NumberInt(100500), 
+    "defaultAnim" : "fountain", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2800), 
+    "duration" : NumberInt(2800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(101), 
+    "nameId" : NumberInt(454250), 
+    "shortcutId" : NumberInt(292667), 
+    "order" : NumberInt(30450), 
+    "defaultAnim" : "cawwot", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2500), 
+    "duration" : NumberInt(2400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(102), 
+    "nameId" : NumberInt(319452), 
+    "shortcutId" : NumberInt(331146), 
+    "order" : NumberInt(25625), 
+    "defaultAnim" : "frighten", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(103), 
+    "nameId" : NumberInt(319828), 
+    "shortcutId" : NumberInt(319837), 
+    "order" : NumberInt(26750), 
+    "defaultAnim" : "cake", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(104), 
+    "nameId" : NumberInt(322821), 
+    "shortcutId" : NumberInt(322830), 
+    "order" : NumberInt(26775), 
+    "defaultAnim" : "robot", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3500), 
+    "duration" : NumberInt(3300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(105), 
+    "nameId" : NumberInt(323192), 
+    "shortcutId" : NumberInt(323201), 
+    "order" : NumberInt(23325), 
+    "defaultAnim" : "boxing", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(106), 
+    "nameId" : NumberInt(323210), 
+    "shortcutId" : NumberInt(323219), 
+    "order" : NumberInt(25380), 
+    "defaultAnim" : "whiteflag", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(107), 
+    "nameId" : NumberInt(323257), 
+    "shortcutId" : NumberInt(492336), 
+    "order" : NumberInt(32500), 
+    "defaultAnim" : "fire", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1600), 
+    "duration" : NumberInt(1600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(108), 
+    "nameId" : NumberInt(331024), 
+    "shortcutId" : NumberInt(331033), 
+    "order" : NumberInt(300300), 
+    "defaultAnim" : "fly", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(109), 
+    "nameId" : NumberInt(331042), 
+    "shortcutId" : NumberInt(331051), 
+    "order" : NumberInt(300400), 
+    "defaultAnim" : "worm", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3500), 
+    "duration" : NumberInt(3480), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(110), 
+    "nameId" : NumberInt(396336), 
+    "shortcutId" : NumberInt(396345), 
+    "order" : NumberInt(300600), 
+    "defaultAnim" : "Drill", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(111), 
+    "nameId" : NumberInt(404642), 
+    "shortcutId" : NumberInt(396363), 
+    "order" : NumberInt(300700), 
+    "defaultAnim" : "Sniff", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(112), 
+    "nameId" : NumberInt(396875), 
+    "shortcutId" : NumberInt(396884), 
+    "order" : NumberInt(45150), 
+    "defaultAnim" : "treasuremap", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(113), 
+    "nameId" : NumberInt(396893), 
+    "shortcutId" : NumberInt(396902), 
+    "order" : NumberInt(45500), 
+    "defaultAnim" : "compass", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(600), 
+    "duration" : NumberInt(600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(114), 
+    "nameId" : NumberInt(408744), 
+    "shortcutId" : NumberInt(396921), 
+    "order" : NumberInt(45600), 
+    "defaultAnim" : "portal", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(2000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(115), 
+    "nameId" : NumberInt(397106), 
+    "shortcutId" : NumberInt(397090), 
+    "order" : NumberInt(100600), 
+    "defaultAnim" : "priest", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2600), 
+    "duration" : NumberInt(2600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(116), 
+    "nameId" : NumberInt(397227), 
+    "shortcutId" : NumberInt(397236), 
+    "order" : NumberInt(100700), 
+    "defaultAnim" : "gravedigger", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2500), 
+    "duration" : NumberInt(2500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(117), 
+    "nameId" : NumberInt(428641), 
+    "shortcutId" : NumberInt(430939), 
+    "order" : NumberInt(50200), 
+    "defaultAnim" : "enu", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(4500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(118), 
+    "nameId" : NumberInt(401722), 
+    "shortcutId" : NumberInt(401731), 
+    "order" : NumberInt(300800), 
+    "defaultAnim" : "roar", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2000), 
+    "duration" : NumberInt(1200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(119), 
+    "nameId" : NumberInt(428638), 
+    "shortcutId" : NumberInt(428645), 
+    "order" : NumberInt(50300), 
+    "defaultAnim" : "sram", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(5600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(120), 
+    "nameId" : NumberInt(428701), 
+    "shortcutId" : NumberInt(428663), 
+    "order" : NumberInt(50400), 
+    "defaultAnim" : "rogue", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(3800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(121), 
+    "nameId" : NumberInt(458143), 
+    "shortcutId" : NumberInt(458152), 
+    "order" : NumberInt(50500), 
+    "defaultAnim" : "xelor", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(5700), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(122), 
+    "nameId" : NumberInt(494187), 
+    "shortcutId" : NumberInt(556168), 
+    "order" : NumberInt(50600), 
+    "defaultAnim" : "eliotrope", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(3400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(123), 
+    "nameId" : NumberInt(493139), 
+    "shortcutId" : NumberInt(493086), 
+    "order" : NumberInt(300900), 
+    "defaultAnim" : "haunt", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(124), 
+    "nameId" : NumberInt(492515), 
+    "shortcutId" : NumberInt(493088), 
+    "order" : NumberInt(301000), 
+    "defaultAnim" : "waddle", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(2700), 
+    "duration" : NumberInt(2700), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(125), 
+    "nameId" : NumberInt(492533), 
+    "shortcutId" : NumberInt(492542), 
+    "order" : NumberInt(301100), 
+    "defaultAnim" : "stomp", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3300), 
+    "duration" : NumberInt(3300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(126), 
+    "nameId" : NumberInt(506732), 
+    "shortcutId" : NumberInt(493089), 
+    "order" : NumberInt(301200), 
+    "defaultAnim" : "inflame", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1000), 
+    "duration" : NumberInt(1000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(127), 
+    "nameId" : NumberInt(493084), 
+    "shortcutId" : NumberInt(493085), 
+    "order" : NumberInt(25383), 
+    "defaultAnim" : "authenticator", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(60000), 
+    "duration" : NumberInt(12300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(128), 
+    "nameId" : NumberInt(509224), 
+    "shortcutId" : NumberInt(509233), 
+    "order" : NumberInt(44500), 
+    "defaultAnim" : "paint", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3000), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(129), 
+    "nameId" : NumberInt(509683), 
+    "shortcutId" : NumberInt(511068), 
+    "order" : NumberInt(50700), 
+    "defaultAnim" : "sadida", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(7200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(130), 
+    "nameId" : NumberInt(515549), 
+    "shortcutId" : NumberInt(515550), 
+    "order" : NumberInt(55000), 
+    "defaultAnim" : "dragon", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(4500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(131), 
+    "nameId" : NumberInt(510252), 
+    "shortcutId" : NumberInt(510261), 
+    "order" : NumberInt(100800), 
+    "defaultAnim" : "color", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1800), 
+    "duration" : NumberInt(1800), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(132), 
+    "nameId" : NumberInt(556085), 
+    "shortcutId" : NumberInt(511070), 
+    "order" : NumberInt(50800), 
+    "defaultAnim" : "steamer", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(5700), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(133), 
+    "nameId" : NumberInt(658377), 
+    "shortcutId" : NumberInt(533230), 
+    "order" : NumberInt(31200), 
+    "defaultAnim" : "umbrella", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(1500), 
+    "duration" : NumberInt(1300), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(134), 
+    "nameId" : NumberInt(556061), 
+    "shortcutId" : NumberInt(556070), 
+    "order" : NumberInt(57000), 
+    "defaultAnim" : "fishing", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3600), 
+    "duration" : NumberInt(3600), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(135), 
+    "nameId" : NumberInt(556268), 
+    "shortcutId" : NumberInt(556118), 
+    "order" : NumberInt(50900), 
+    "defaultAnim" : "cra", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(6000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(136), 
+    "nameId" : NumberInt(576317), 
+    "shortcutId" : NumberInt(565450), 
+    "order" : NumberInt(51000), 
+    "defaultAnim" : "pandawa", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(4900), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(137), 
+    "nameId" : NumberInt(594696), 
+    "shortcutId" : NumberInt(594697), 
+    "order" : NumberInt(51100), 
+    "defaultAnim" : "huppermage", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(4200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(138), 
+    "nameId" : NumberInt(594698), 
+    "shortcutId" : NumberInt(594699), 
+    "order" : NumberInt(59000), 
+    "defaultAnim" : "krosmaga", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(3200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(139), 
+    "nameId" : NumberInt(594694), 
+    "shortcutId" : NumberInt(594695), 
+    "order" : NumberInt(23306), 
+    "defaultAnim" : "bonta", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(20000), 
+    "duration" : NumberInt(4400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(140), 
+    "nameId" : NumberInt(594692), 
+    "shortcutId" : NumberInt(594693), 
+    "order" : NumberInt(23307), 
+    "defaultAnim" : "brakmar", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(20000), 
+    "duration" : NumberInt(4400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(141), 
+    "nameId" : NumberInt(615724), 
+    "shortcutId" : NumberInt(615723), 
+    "order" : NumberInt(46000), 
+    "defaultAnim" : "headsortails", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(3100), 
+    "duration" : NumberInt(3100), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(142), 
+    "nameId" : NumberInt(615721), 
+    "shortcutId" : NumberInt(615722), 
+    "order" : NumberInt(51200), 
+    "defaultAnim" : "ecaflip", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(3200), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(143), 
+    "nameId" : NumberInt(662429), 
+    "shortcutId" : NumberInt(658055), 
+    "order" : NumberInt(51300), 
+    "defaultAnim" : "sacrieur", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(6000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(144), 
+    "nameId" : NumberInt(632762), 
+    "shortcutId" : NumberInt(632763), 
+    "order" : NumberInt(51400), 
+    "defaultAnim" : "eni", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(3000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(146), 
+    "nameId" : NumberInt(636611), 
+    "shortcutId" : NumberInt(636610), 
+    "order" : NumberInt(51500), 
+    "defaultAnim" : "zobal", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(3400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(147), 
+    "nameId" : NumberInt(671323), 
+    "shortcutId" : NumberInt(671324), 
+    "order" : NumberInt(51600), 
+    "defaultAnim" : "osa", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(14500), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(148), 
+    "nameId" : NumberInt(668011), 
+    "shortcutId" : NumberInt(668012), 
+    "order" : NumberInt(51700), 
+    "defaultAnim" : "feca", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(30000), 
+    "duration" : NumberInt(6000), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(149), 
+    "nameId" : NumberInt(678694), 
+    "shortcutId" : NumberInt(678695), 
+    "order" : NumberInt(59100), 
+    "defaultAnim" : "Balloon", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(10000), 
+    "duration" : NumberInt(4400), 
+    "weight" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(150), 
+    "nameId" : NumberInt(678696), 
+    "shortcutId" : NumberInt(678697), 
+    "order" : NumberInt(59200), 
+    "defaultAnim" : "Vials", 
+    "persistancy" : true, 
+    "eight_directions" : true, 
+    "aura" : true, 
+    "anims" : [
+
+    ], 
+    "cooldown" : NumberInt(10000), 
+    "duration" : NumberInt(4100), 
+    "weight" : NumberInt(0)
+}

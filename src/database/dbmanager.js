@@ -258,4 +258,27 @@ export default class DBManager {
             callback(experiences);
         });
     }
+
+     static getSmileys(callback) {
+        var collection = DBManager.db.collection('smileys');
+        collection.find({}).toArray(function(err, smileys){
+            callback(smileys);
+        });
+        
+        
+    }
+
+    static getInteractivesObjects(callback) {
+        var collection = DBManager.db.collection('interactives_objects');
+        collection.find({}).toArray(function(err, interactivesObjects){
+            callback(interactivesObjects);
+        });              
+    }
+
+    static getEmotes(callback) {
+        var collection = DBManager.db.collection('emoticons');
+        collection.find({}).toArray(function(err, emoticons){
+            callback(interactivesObjects);
+        });              
+    }
 }

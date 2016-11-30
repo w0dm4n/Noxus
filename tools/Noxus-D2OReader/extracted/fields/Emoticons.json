@@ -1,0 +1,73 @@
+[
+	{
+		"memberName": "Emoticon",
+		"packageName": "com.ankamagames.dofus.datacenter.communication",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "shortcutId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "order",
+				"type": "UInt",
+				"vectorTypes": false
+			},
+			{
+				"name": "defaultAnim",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "persistancy",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "eight_directions",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "aura",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "anims",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<String>",
+						"type": "String"
+					}
+				]
+			},
+			{
+				"name": "cooldown",
+				"type": "UInt",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "UInt",
+				"vectorTypes": false
+			},
+			{
+				"name": "weight",
+				"type": "UInt",
+				"vectorTypes": false
+			}
+		]
+	}
+]
