@@ -24,45 +24,33 @@
       <file leaf-file-name="game_handler.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handlers/game_handler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
                 <element signature="e#801#853#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_handler.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/admin_handler.js">
+      <file leaf-file-name="character.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/models/character.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/models/map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="4573">
+              <caret line="279" column="118" lean-forward="true" selection-start-line="279" selection-start-column="118" selection-end-line="279" selection-end-column="118" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loader_manager.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/managers/loader_manager.js">
+      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/io/dofus/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="240">
+              <caret line="1390" column="26" lean-forward="true" selection-start-line="1390" selection-start-column="26" selection-end-line="1390" selection-end-column="26" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1480549633207" expanded="true" signature="32193:38214" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -71,36 +59,10 @@
       <file leaf-file-name="command_manager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/managers/command_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="92" column="44" lean-forward="false" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="approach_handler.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/approach_handler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="458">
+              <caret line="267" column="62" lean-forward="true" selection-start-line="267" selection-start-column="62" selection-end-line="267" selection-end-column="62" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
-                <marker date="1480535408000" expanded="true" signature="3829:6033" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="4492:6025" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="4528:5905" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="4576:5659" ph="{&quot;name&quot;: packet.name...}" />
-                <marker date="1480535408000" expanded="true" signature="5725:5889" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="5923:6015" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="6095:6156" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="6217:6887" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="6297:6408" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="6447:6828" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="6842:6881" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="6942:7134" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="7001:7106" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="7197:7280" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="7435:7748" ph="{...}" />
-                <marker date="1480535408000" expanded="true" signature="7532:7736" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -109,8 +71,8 @@
       <file leaf-file-name="pathfinding.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/pathfinding/pathfinding.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+            <state relative-caret-position="1343">
+              <caret line="79" column="50" lean-forward="false" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -118,36 +80,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map_point.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/pathfinding/map_point.js">
+      <file leaf-file-name="interactive_handler.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/handlers/interactive_handler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="190" column="9" lean-forward="true" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+            <state relative-caret-position="578">
+              <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friend_handler.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/friend_handler.js">
+      <file leaf-file-name="item_bag.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/models/item_bag.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="119">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emote_handler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/emote_handler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/item/item_manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
+                <marker date="1480550246000" expanded="true" signature="291:1371" ph="{...}" />
+                <marker date="1480550246000" expanded="true" signature="478:855" ph="{...}" />
+                <marker date="1480550246000" expanded="true" signature="897:1369" ph="{...}" />
+                <marker date="1480550246000" expanded="true" signature="1034:1363" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/io/dofus/messages.js">
+      <file leaf-file-name="processor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/processor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="1101" column="5" lean-forward="false" selection-start-line="1101" selection-start-column="5" selection-end-line="1101" selection-end-column="5" />
+            <state relative-caret-position="663">
+              <caret line="39" column="119" lean-forward="true" selection-start-line="39" selection-start-column="119" selection-end-line="39" selection-end-column="119" />
               <folding>
-                <marker date="1480539671000" expanded="true" signature="31100:31151" ph="{...}" />
-                <marker date="1480539671000" expanded="true" signature="32067:34324" ph="{...}" />
+                <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,6 +149,7 @@
       <find>FriendInformations</find>
       <find>MapInformationsRequestMessage</find>
       <find>ChangeMapMessage</find>
+      <find>EmotePlayRequestMessage</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -171,19 +157,22 @@
       <list>
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/network/world.js" />
-        <option value="$PROJECT_DIR$/database/models/character.js" />
-        <option value="$PROJECT_DIR$/managers/character_manager.js" />
-        <option value="$PROJECT_DIR$/database/dbmanager.js" />
-        <option value="$PROJECT_DIR$/network/processor.js" />
-        <option value="$PROJECT_DIR$/io/dofus/messages.js" />
         <option value="$PROJECT_DIR$/database/models/account.js" />
         <option value="$PROJECT_DIR$/managers/loader_manager.js" />
-        <option value="$PROJECT_DIR$/managers/command_manager.js" />
         <option value="$PROJECT_DIR$/handlers/approach_handler.js" />
-        <option value="$PROJECT_DIR$/game/pathfinding/pathfinding.js" />
-        <option value="$PROJECT_DIR$/handlers/game_handler.js" />
         <option value="$PROJECT_DIR$/handlers/admin_handler.js" />
         <option value="$PROJECT_DIR$/handlers/friend_handler.js" />
+        <option value="$PROJECT_DIR$/game/pathfinding/pathfinding.js" />
+        <option value="$PROJECT_DIR$/database/models/character.js" />
+        <option value="$PROJECT_DIR$/managers/character_manager.js" />
+        <option value="$PROJECT_DIR$/handlers/game_handler.js" />
+        <option value="$PROJECT_DIR$/database/dbmanager.js" />
+        <option value="$PROJECT_DIR$/managers/command_manager.js" />
+        <option value="$PROJECT_DIR$/game/item/item_manager.js" />
+        <option value="$PROJECT_DIR$/handlers/emote_handler.js" />
+        <option value="$PROJECT_DIR$/io/dofus/messages.js" />
+        <option value="$PROJECT_DIR$/network/processor.js" />
+        <option value="$PROJECT_DIR$/handlers/interactive_handler.js" />
       </list>
     </option>
   </component>
@@ -200,10 +189,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="105" />
+    <option name="y" value="23" />
+    <option name="width" value="1932" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -489,24 +478,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pathfinding" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -632,12 +603,12 @@
       <workItem from="1480510352737" duration="3849000" />
       <workItem from="1480514548092" duration="140000" />
       <workItem from="1480514698414" duration="26000" />
-      <workItem from="1480514735568" duration="19611000" />
+      <workItem from="1480514735568" duration="29104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23626000" />
+    <option name="totallyTimeSpent" value="33119000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,13 +620,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="105" y="23" width="1932" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18058455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11814346" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11814346" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14545454" sideWeight="0.5020877" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14545454" sideWeight="0.49791232" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31012657" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -677,7 +648,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -732,8 +705,8 @@
         <state relative-caret-position="16252">
           <caret line="957" column="64" lean-forward="false" selection-start-line="957" selection-start-column="53" selection-end-line="957" selection-end-column="64" />
           <folding>
-            <marker date="1480539671000" expanded="true" signature="31100:31151" ph="{...}" />
-            <marker date="1480539671000" expanded="true" signature="32067:34324" ph="{...}" />
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1480549633207" expanded="true" signature="32193:38214" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -743,7 +716,7 @@
         <state relative-caret-position="13311">
           <caret line="784" column="38" lean-forward="false" selection-start-line="784" selection-start-column="27" selection-end-line="784" selection-end-column="38" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,8 +772,8 @@
         <state relative-caret-position="14340">
           <caret line="957" column="64" lean-forward="false" selection-start-line="957" selection-start-column="53" selection-end-line="957" selection-end-column="64" />
           <folding>
-            <marker date="1480539671000" expanded="true" signature="31100:31151" ph="{...}" />
-            <marker date="1480539671000" expanded="true" signature="32067:34324" ph="{...}" />
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1480549633207" expanded="true" signature="32193:38214" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -810,7 +783,7 @@
         <state relative-caret-position="11745">
           <caret line="784" column="38" lean-forward="false" selection-start-line="784" selection-start-column="27" selection-end-line="784" selection-end-column="38" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -866,8 +839,8 @@
         <state relative-caret-position="16252">
           <caret line="957" column="64" lean-forward="false" selection-start-line="957" selection-start-column="53" selection-end-line="957" selection-end-column="64" />
           <folding>
-            <marker date="1480539671000" expanded="true" signature="31100:31151" ph="{...}" />
-            <marker date="1480539671000" expanded="true" signature="32067:34324" ph="{...}" />
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1480549633207" expanded="true" signature="32193:38214" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -877,7 +850,7 @@
         <state relative-caret-position="13311">
           <caret line="784" column="38" lean-forward="false" selection-start-line="784" selection-start-column="27" selection-end-line="784" selection-end-column="38" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -906,56 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/dbmanager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/processor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="75" lean-forward="false" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/managers/character_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#47#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/models/character.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="124" column="14" lean-forward="false" selection-start-line="124" selection-start-column="14" selection-end-line="124" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/chat_handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/models/account.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -971,19 +894,8 @@
         <state relative-caret-position="297">
           <caret line="779" column="31" lean-forward="false" selection-start-line="779" selection-start-column="13" selection-end-line="779" selection-end-column="31" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <marker date="1480540511000" expanded="true" signature="41238:55213" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/io/dofus/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="1101" column="5" lean-forward="false" selection-start-line="1101" selection-start-column="5" selection-end-line="1101" selection-end-column="5" />
-          <folding>
-            <marker date="1480539671000" expanded="true" signature="31100:31151" ph="{...}" />
-            <marker date="1480539671000" expanded="true" signature="32067:34324" ph="{...}" />
+            <element signature="e#0#39#0" expanded="false" />
+            <marker date="1480541597000" expanded="true" signature="41238:57028" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1004,55 +916,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/friend_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/handlers/approach_handler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
+            <element signature="e#0#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/managers/loader_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
             <element signature="e#0#33#0" expanded="true" />
-            <marker date="1480535408000" expanded="true" signature="3829:6033" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="4492:6025" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="4528:5905" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="4576:5659" ph="{&quot;name&quot;: packet.name...}" />
-            <marker date="1480535408000" expanded="true" signature="5725:5889" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="5923:6015" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="6095:6156" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="6217:6887" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="6297:6408" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="6447:6828" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="6842:6881" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="6942:7134" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="7001:7106" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="7197:7280" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="7435:7748" ph="{...}" />
-            <marker date="1480535408000" expanded="true" signature="7532:7736" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/models/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="180">
           <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/managers/command_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="92" column="44" lean-forward="false" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/pathfinding/pathfinding.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,34 +964,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/game_handler.js">
+    <entry file="file://$PROJECT_DIR$/managers/character_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+        <state relative-caret-position="350">
+          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/dbmanager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/chat_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/dofus/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="1390" column="26" lean-forward="true" selection-start-line="1390" selection-start-column="26" selection-end-line="1390" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1480549633207" expanded="true" signature="32193:38214" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/processor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="119" lean-forward="true" selection-start-line="39" selection-start-column="119" selection-end-line="39" selection-end-column="119" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/item/item_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <marker date="1480550246000" expanded="true" signature="291:1371" ph="{...}" />
+            <marker date="1480550246000" expanded="true" signature="478:855" ph="{...}" />
+            <marker date="1480550246000" expanded="true" signature="897:1369" ph="{...}" />
+            <marker date="1480550246000" expanded="true" signature="1034:1363" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/item_bag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/models/character.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4573">
+          <caret line="279" column="118" lean-forward="true" selection-start-line="279" selection-start-column="118" selection-end-line="279" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/game_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
             <element signature="e#801#853#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/friend_handler.js">
+    <entry file="file://$PROJECT_DIR$/managers/command_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="458">
+          <caret line="267" column="62" lean-forward="true" selection-start-line="267" selection-start-column="62" selection-end-line="267" selection-end-column="62" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/managers/loader_manager.js">
+    <entry file="file://$PROJECT_DIR$/handlers/emote_handler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="238">
+          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/pathfinding/pathfinding.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="50" lean-forward="false" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/interactive_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

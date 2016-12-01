@@ -41,7 +41,7 @@ export default class StatsManager {
         return new Types.CharacterCharacteristicsInformations(
             this.character.experience, this.getExperienceFloor().xp,
             this.getNextExperienceFloor() ? this.getNextExperienceFloor().xp : this.getExperienceFloor().xp, 
-            this.character.kamas, 
+            this.character.itemBag.money,
             this.character.statsPoints, 0, 
             this.character.spellPoints, 
             this.getActorExtendedAlignmentInformations(),

@@ -1,6 +1,10 @@
 import * as Types from "../../io/dofus/types"
 import * as Messages from "../../io/dofus/messages"
 import ItemManager from "../../game/item/item_manager"
+import ItemDiceEffect from "../../game/item/item_dice_effect"
+import ItemEffectInteger from "../../game/item/item_effect_integer"
+import DBManager from "../../database/dbmanager"
+var autoIncrement = require("mongodb-autoincrement");
 
 export default class CharacterItem {
 
@@ -15,6 +19,16 @@ export default class CharacterItem {
         this.quantity = raw.quantity;
     }
 
+    rebuildEffects() {
+        var copyEffects = this.effects;
+        this.effects = [];
+        for(var e of copyEffects) {
+            if(e.effectType == "ObjectEffectInteger") {
+                this.effects.push(new ItemEffectInteger(e.value, e.effectId, "ObjectEffectInteger"));
+            }
+        }
+    }
+
     getTemplate() {
         return ItemManager.getItemTemplateById(this.templateId);
     }
@@ -25,5 +39,18 @@ export default class CharacterItem {
             effects.push(effect.getObjectEffect());
         }
         return new Types.ObjectItem(this.position, this.templateId, effects, this._id, this.quantity);
+    }
+
+    create(callback) {
+        var self = this;
+        if(this._id == -1) {
+            autoIncrement.getNextSequence(DBManager.db, "items_players_bags", function (err, autoIndex) {
+                self._id = autoIndex;
+                callback();
+            });
+        }
+        else{
+            callback();
+        }
     }
 }

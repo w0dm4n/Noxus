@@ -13,6 +13,8 @@ import AccountRole from "../enums/account_role_enum"
 import Common from "../Common"
 import WorldManager from "../managers/world_manager"
 import ItemManager from "../game/item/item_manager"
+import Datacenter from "../database/datacenter"
+import EmoteHandler from "../handlers/emote_handler"
 
 export default class CommandManager {
 
@@ -26,6 +28,7 @@ export default class CommandManager {
         { name:"unban", role:AccountRole.MODERATOR, description: "Permet de débannir un joueur du serveur"},
         { name:"exp", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points d'experience"},
         { name:"item", role:AccountRole.MODERATOR, description: "Créer un objet pour le personnage"},
+        { name:"emote", role:AccountRole.ANIMATOR, description: "Ajoute une ou plusieurs émote a un personnage"},
     ];
     
     static manageCommand(command, client)
@@ -223,18 +226,59 @@ export default class CommandManager {
         }
         else
         {
-             client.character.replyError("Erreur de syntaxe (.exp name nb)");
+             client.character.replyError("Erreur de syntaxe (.exp characterName nb)");
         }
     }
 
     static handle_item(data, client) {
         if(data[1]) {
             var item = ItemManager.generateItem(parseInt(data[1]));
-            client.character.itemBag.add(item);
+            client.character.itemBag.add(item, function(){
+                client.character.replyText("Objet créé avec succès");
+            });
         }
         else
         {
             client.character.replyError("Erreur de syntaxe (.item id name)");
         }
+    }
+
+    static handle_emote(data, client)
+    {
+        if(data[1] && data[2]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target) {
+                if (data[2] == "all")
+                {
+                    client.character.emotes = EmoteHandler.getAllEmotes();
+                    DBManager.updateCharacter(client.character._id, {emotes: client.character.emotes}, function () {
+
+                    });
+                    for (var i in client.character.emotes){
+                        client.send(new Messages.EmoteAddMessage(client.character.emotes[i]));
+                    }
+                }
+                else
+                {
+                    var emote = EmoteHandler.getEmoteById(data[2]);
+                    if (emote) {
+                        if (!EmoteHandler.haveEmote(client, emote._id)) {
+                            client.character.emotes.push(emote._id);
+                            DBManager.updateCharacter(client.character._id, {emotes: client.character.emotes}, function () {
+                                client.send(new Messages.EmoteAddMessage(emote._id));
+                            });
+                        }
+                        else
+                            client.character.replyError("Emote déjà connu pour ce personnage");
+                    }
+                    else
+                        client.character.replyError("Emote introuvable !");
+                }
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.emote characterName id/all)");
     }
 }

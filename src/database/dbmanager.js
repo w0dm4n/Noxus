@@ -3,8 +3,10 @@ import Account from "./models/account";
 import AccountFriend from "./models/account_friend";
 import Character from "./models/character";
 import ConfigManager from "../utils/configmanager.js"
+import Datacenter from "../database/datacenter"
 var MongoClient = require('mongodb').MongoClient
 var autoIncrement = require("mongodb-autoincrement");
+import EmoteHandler from "../handlers/emote_handler"
 
 export default class DBManager {
 
@@ -49,11 +51,11 @@ export default class DBManager {
                     cosmeticId: parseInt(character.cosmeticId),
                     level: parseInt(character.level),
                     experience: parseInt(character.experience),
-                    kamas: parseInt(character.kamas),
                     mapid: parseInt(character.mapid),
                     cellid: parseInt(character.cellid),
                     dirId: parseInt(character.dirId),
                     life: character.life,
+                    bagId: character.bagId,
                     statsPoints: character.statsPoints,
                     spellPoints: character.spellPoints,                    
                     ZaapExist:character.ZaapExist,
@@ -66,6 +68,7 @@ export default class DBManager {
                         agility: character.statsManager.getStatById(14).base,
                         intelligence: character.statsManager.getStatById(15).base,
                     },
+                    emotes: EmoteHandler.getAllEmotes(),
                    
                     
                 }, function(){
@@ -300,6 +303,35 @@ export default class DBManager {
         var collection = DBManager.db.collection('items');
         collection.find({}).toArray(function(err, items){
             callback(items);
+        });
+    }
+
+    static createItembag(bag, callback) {
+        autoIncrement.getNextSequence(DBManager.db, "items_bags", function (err, autoIndex) {
+            DBManager.db.collection("items_bags", function(error, collection) {
+                collection.insertOne({
+                    _id: autoIndex,
+                    items: bag.items,
+                    money: bag.money,
+                }, function() {
+                    bag._id = autoIndex;
+                    callback(bag);
+                });
+            });
+        });
+    }
+
+    static getBag(_id, callback) {
+        var collection = DBManager.db.collection('items_bags');
+        collection.find({_id: _id}).toArray(function(err, bags){
+            (bags.length > 0 ? callback(bags[0]) : callback(null));
+        });
+    }
+
+    static saveItembag(bag, query, callback) {
+        var collection = DBManager.db.collection('items_bags');
+        collection.update({ _id: bag._id }, { $set: query }, function() {
+            callback();
         });
     }
 }

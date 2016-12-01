@@ -2,34 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c11e94-d1c8-4e4a-b3f3-2b6ed34ac437" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/database/models/character_item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/database/models/item_bag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/item/item_dice_effect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/item/item_manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export/Messages.js" afterPath="$PROJECT_DIR$/export/Messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export/Types.js" afterPath="$PROJECT_DIR$/export/Types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/datacenter.js" afterPath="$PROJECT_DIR$/src/database/datacenter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/item/item_effect_integer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/export/Messages (Copie en conflit de Yamisaaf Yamidevs 2016-11-30).js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/items.json" afterPath="$PROJECT_DIR$/db/items.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/dbmanager.js" afterPath="$PROJECT_DIR$/src/database/dbmanager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/models/account.js" afterPath="$PROJECT_DIR$/src/database/models/account.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/models/character.js" afterPath="$PROJECT_DIR$/src/database/models/character.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/models/map.js" afterPath="$PROJECT_DIR$/src/database/models/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/pathfinding/pathfinding.js" afterPath="$PROJECT_DIR$/src/game/pathfinding/pathfinding.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/handlers/admin_handler.js" afterPath="$PROJECT_DIR$/src/handlers/admin_handler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/models/character_item.js" afterPath="$PROJECT_DIR$/src/database/models/character_item.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/models/item_bag.js" afterPath="$PROJECT_DIR$/src/database/models/item_bag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/item/item_dice_effect.js" afterPath="$PROJECT_DIR$/src/game/item/item_dice_effect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/item/item_manager.js" afterPath="$PROJECT_DIR$/src/game/item/item_manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/stats/stats_manager.js" afterPath="$PROJECT_DIR$/src/game/stats/stats_manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/handlers/approach_handler.js" afterPath="$PROJECT_DIR$/src/handlers/approach_handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/handlers/friend_handler.js" afterPath="$PROJECT_DIR$/src/handlers/friend_handler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/handlers/game_handler.js" afterPath="$PROJECT_DIR$/src/handlers/game_handler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/dofus/messages.js" afterPath="$PROJECT_DIR$/src/io/dofus/messages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/dofus/types.js" afterPath="$PROJECT_DIR$/src/io/dofus/types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/managers/character_manager.js" afterPath="$PROJECT_DIR$/src/managers/character_manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/managers/command_manager.js" afterPath="$PROJECT_DIR$/src/managers/command_manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/managers/loader_manager.js" afterPath="$PROJECT_DIR$/src/managers/loader_manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/network/processor.js" afterPath="$PROJECT_DIR$/src/network/processor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/network/world.js" afterPath="$PROJECT_DIR$/src/network/world.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/Noxus-ItemAppearenceSniffer/app.js" afterPath="$PROJECT_DIR$/tools/Noxus-ItemAppearenceSniffer/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,13 +41,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="types.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/io/dofus/types.js">
+      <file leaf-file-name="item_bag.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/models/item_bag.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="1315" column="9" lean-forward="true" selection-start-line="1315" selection-start-column="9" selection-end-line="1315" selection-end-column="9" />
+            <state relative-caret-position="493">
+              <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbmanager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/dbmanager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="308" column="41" lean-forward="false" selection-start-line="308" selection-start-column="41" selection-end-line="308" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/item/item_manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="command_manager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/managers/command_manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="character_item.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/models/character_item.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="70" lean-forward="false" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_effect_integer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/item/item_effect_integer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="approach_handler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handlers/approach_handler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="155" column="41" lean-forward="false" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stats_manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/stats/stats_manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,20 +144,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/app.js" />
-        <option value="$PROJECT_DIR$/src/database/dbmanager.js" />
         <option value="$PROJECT_DIR$/src/database/datacenter.js" />
         <option value="$PROJECT_DIR$/src/utils/basic.js" />
         <option value="$PROJECT_DIR$/src/game/item/item_bag.js" />
-        <option value="$PROJECT_DIR$/src/managers/command_manager.js" />
         <option value="$PROJECT_DIR$/src/handlers/game_handler.js" />
-        <option value="$PROJECT_DIR$/src/managers/character_manager.js" />
         <option value="$PROJECT_DIR$/src/io/dofus/messages.js" />
         <option value="$PROJECT_DIR$/src/io/dofus/types.js" />
-        <option value="$PROJECT_DIR$/src/database/models/item_bag.js" />
+        <option value="$PROJECT_DIR$/src/handlers/zaap_handler.js" />
+        <option value="$PROJECT_DIR$/src/managers/character_manager.js" />
+        <option value="$PROJECT_DIR$/src/game/stats/stats_manager.js" />
+        <option value="$PROJECT_DIR$/src/handlers/approach_handler.js" />
         <option value="$PROJECT_DIR$/src/database/models/character.js" />
-        <option value="$PROJECT_DIR$/src/game/item/item_manager.js" />
+        <option value="$PROJECT_DIR$/src/managers/command_manager.js" />
+        <option value="$PROJECT_DIR$/src/database/dbmanager.js" />
         <option value="$PROJECT_DIR$/src/game/item/item_dice_effect.js" />
+        <option value="$PROJECT_DIR$/src/database/models/item_bag.js" />
+        <option value="$PROJECT_DIR$/src/game/item/item_effect_integer.js" />
         <option value="$PROJECT_DIR$/src/database/models/character_item.js" />
+        <option value="$PROJECT_DIR$/src/game/item/item_manager.js" />
       </list>
     </option>
   </component>
@@ -206,6 +283,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="handlers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Noxus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stats" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,12 +453,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480528980855</updated>
-      <workItem from="1480528983253" duration="11697000" />
+      <workItem from="1480528983253" duration="19517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11697000" />
+    <option name="totallyTimeSpent" value="19517000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,27 +516,7 @@
         <state relative-caret-position="0">
           <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/dbmanager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="278" column="5" lean-forward="true" selection-start-line="278" selection-start-column="5" selection-end-line="278" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/stats/stats_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -451,7 +526,7 @@
         <state relative-caret-position="272">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -469,20 +544,20 @@
         <state relative-caret-position="357">
           <caret line="37" column="50" lean-forward="false" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
           <folding>
-            <marker date="1480540561000" expanded="true" signature="3535:5837" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="5791:5832" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="5908:6145" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6004:6142" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6204:6820" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6352:6745" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6490:6715" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6658:6710" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6724:6741" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6877:7192" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6911:7189" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6977:7183" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="6995:7169" ph="{...}" />
-            <marker date="1480540561000" expanded="true" signature="7053:7163" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="3535:5837" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="5791:5832" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="5908:6145" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6004:6142" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6204:6820" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6352:6745" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6490:6715" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6658:6710" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6724:6741" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6877:7192" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6911:7189" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6977:7183" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="6995:7169" ph="{...}" />
+            <marker date="1480548314000" expanded="true" signature="7053:7163" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -492,81 +567,7 @@
         <state relative-caret-position="241">
           <caret line="1163" column="36" lean-forward="false" selection-start-line="1163" selection-start-column="13" selection-end-line="1163" selection-end-column="36" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/command_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="231" column="44" lean-forward="false" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/models/item_bag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/character_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="63" column="41" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/models/character.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="237" column="27" lean-forward="false" selection-start-line="237" selection-start-column="27" selection-end-line="237" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1480541417000" expanded="true" signature="2452:2504" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="2528:2579" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="2599:2676" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="2698:2779" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="2796:2857" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="2876:2901" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="2919:3116" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="3003:3083" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="3138:3285" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="3322:3458" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="3491:3713" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="3765:4104" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="4119:4183" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="4207:4348" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="4373:4555" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="4582:4764" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="4800:4940" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="4973:5123" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5151:5239" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5270:5383" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5410:5496" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5526:5638" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5661:5743" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5769:5916" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="5941:6084" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="6100:6136" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="6162:6489" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="6273:6481" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="6510:7522" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="6560:7314" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="6894:7304" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="7382:7514" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="7553:7607" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="7643:7763" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="7842:7888" ph="{...}" />
-            <marker date="1480541417000" expanded="true" signature="7967:8072" ph="{...}" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -587,43 +588,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/item/item_manager.js">
+    <entry file="file://$PROJECT_DIR$/src/io/dofus/types.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="751">
+          <caret line="1392" column="12" lean-forward="false" selection-start-line="1392" selection-start-column="12" selection-end-line="1392" selection-end-column="12" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handlers/zaap_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handlers/chat_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="5" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/character_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/stats/stats_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handlers/approach_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="155" column="41" lean-forward="false" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/models/character.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/item/item_dice_effect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/models/item_bag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/item/item_effect_integer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/models/character_item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="782">
+          <caret line="46" column="70" lean-forward="false" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/dofus/types.js">
+    <entry file="file://$PROJECT_DIR$/src/game/item/item_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="1315" column="9" lean-forward="true" selection-start-line="1315" selection-start-column="9" selection-end-line="1315" selection-end-column="9" />
+        <state relative-caret-position="357">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/dbmanager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="308" column="41" lean-forward="false" selection-start-line="308" selection-start-column="41" selection-end-line="308" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/command_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

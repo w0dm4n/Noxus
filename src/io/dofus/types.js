@@ -1336,3 +1336,61 @@ export class ObjectEffectString extends ObjectEffect {
         this.value = buffer.readUTF();
     }
 }
+export class InteractiveElement{
+constructor(elementId,elementTypeId,enabledSkills,disabledSkills,onCurrentMap) {
+this.elementId = elementId;
+this.elementTypeId = elementTypeId;
+this.enabledSkills = enabledSkills;
+this.disabledSkills = disabledSkills;
+this.onCurrentMap = onCurrentMap;
+this.protocolId  = 80;
+}
+serialize(buffer){
+         if(this.elementId < 0)
+         {
+            Logger.error("Forbidden value (" + this.elementId + ") on element elementId.");
+         }
+  
+         buffer.writeInt(this.elementId);
+         buffer.writeInt(this.elementTypeId);
+         buffer.writeShort(this.enabledSkills.length);
+         var _loc2_ =  0;
+         while(_loc2_ < this.enabledSkills.length)
+         {
+            buffer.writeShort(this.enabledSkills[_loc2_].protocolId);
+            this.enabledSkills[_loc2_].serialize(buffer);
+
+            _loc2_++;
+         }
+         buffer.writeShort(this.disabledSkills.length);
+         var _loc3_ =  0;
+         while(_loc3_ < this.disabledSkills.length)
+         {
+            buffer.writeShort(this.disabledSkills[_loc2_].protocolId);
+
+this.disabledSkills[_loc3_].serialize(buffer);
+            _loc3_++;
+         }
+         buffer.writeBoolean(this.onCurrentMap);
+}
+}
+export class InteractiveElementSkill{
+constructor(skillId,skillInstanceUid) {
+this.skillId = skillId;
+this.skillInstanceUid = skillInstanceUid;
+this.protocolId  = 219;
+}
+serialize(buffer){
+         if(this.skillId < 0)
+         {
+            Logger.error("Forbidden value (" + this.skillId + ") on element skillId.");
+         }
+         buffer.writeVarInt(this.skillId);
+         if(this.skillInstanceUid < 0)
+         {
+            Logger.error("Forbidden value (" + this.skillInstanceUid + ") on element skillInstanceUid.");
+         }
+         buffer.writeInt(this.skillInstanceUid);
+}
+
+}

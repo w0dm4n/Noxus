@@ -19,7 +19,8 @@ export default class Character {
     firstContext = true;
     client = null;
 
-    constructor(raw) {
+    constructor(raw, creation) {
+        var self = this;
         this._id = raw._id;
         this.accountId = raw.accountId;
         this.name = raw.name;
@@ -29,12 +30,13 @@ export default class Character {
         this.cosmeticId = raw.cosmeticId;
         this.level = raw.level;
         this.experience = raw.experience;
-        this.kamas = raw.kamas;
         this.mapid = raw.mapid;
         this.cellid = raw.cellid;
         this.dirId = raw.dirId;
         this.statsPoints = raw.statsPoints;
         this.spellPoints = raw.spellPoints;
+        this.emotes = raw.emotes;
+        this.bagId = raw.bagId ? raw.bagId: -1;
 
         this.stats = [];
         this.stats[1] = new Types.CharacterBaseCharacteristic(6, 0, 0, 0, 0); // PA
@@ -50,7 +52,31 @@ export default class Character {
         this.ZaapExist = raw.ZaapExist;
         this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
 
-        this.bindBag(new ItemBag());
+        // Bag creation
+        if(this.bagId == -1) {
+            if(!creation) {
+                var bag = new ItemBag();
+                this.bindBag(bag);
+                this.updateBag();
+            }
+        }
+        else {
+            //Get bag by id
+            DBManager.getBag(this.bagId, function(bag) {
+                if(bag) {
+                    var itemBag = new ItemBag();
+                    itemBag.fromRaw(bag);
+                    self.itemBag = itemBag;
+                    self.bindBag(itemBag);
+                }
+                else {
+                    var itemBag = new ItemBag();
+                    itemBag.fromRaw(bag);
+                    self.bindBag(itemBag);
+                    self.updateBag();
+                }
+            });
+        }
     }
 
     onDisconnect()
@@ -192,10 +218,10 @@ export default class Character {
             dirId: this.dirId,
             level: this.level,
             experience: this.experience,
-            kamas: this.kamas,
             statsPoints: this.statsPoints,
             spellPoints: this.spellPoints,
             life: this.life,
+            bagId: this.bagId,
             stats: {
                 strength: this.statsManager.getStatById(10).base,
                 vitality: this.statsManager.getStatById(11).base,
@@ -221,11 +247,26 @@ export default class Character {
         this.client.send(new Messages.FriendWarnOnConnectionStateMessage(this.client.account.warnOnConnection));
     }
 
+    updateBag() {
+        var self = this;
+        if(this.bagId == -1) {
+            if(this.itemBag != null) {
+                this.itemBag.money = ConfigManager.configData.characters_start.kamas;
+                this.itemBag.create(function(){
+                    self.bindBag(self.itemBag);
+                    self.bagId = self.itemBag._id;
+                    self.save();
+                });
+            }
+        }
+    }
+
     bindBag(bag) {
         var self = this;
         if(this.itemBag != null) {
             this.itemBag.unbind();
         }
+        if(bag == null) return;
         this.itemBag = bag;
         this.itemBag.onItemAdded = function(item) {
             Logger.debug("Item added to character bag");
@@ -234,7 +275,8 @@ export default class Character {
     }
 
     sendInventoryBag() {
+        if(this.itemBag == null) return;
         this.client.send(new Messages.InventoryWeightMessage(0, 1000));
-        this.client.send(new Messages.InventoryContentMessage(this.itemBag.getObjectItemArray(), this.kamas));
+        this.client.send(new Messages.InventoryContentMessage(this.itemBag.getObjectItemArray(), this.itemBag.money));
     }
 }

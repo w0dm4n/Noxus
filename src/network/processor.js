@@ -9,6 +9,8 @@ import GameHandler from "../handlers/game_handler"
 import ChatHandler from "../handlers/chat_handler"
 import AdminHandler from "../handlers/admin_handler"
 import FriendHandler from "../handlers/friend_handler"
+import InteractiveHandler from "../handlers/interactive_handler"
+import EmoteHandler from "../handlers/emote_handler"
 
 export default class Processor {
 
@@ -39,6 +41,8 @@ export default class Processor {
         5602: { message: Messages.FriendSetWarnOnConnectionMessage, handler:FriendHandler.handleFriendSetWarnOnConnectionMessage },
         800:  { message: Messages.ChatSmileyRequestMessage, handler: GameHandler.handleChatSmileyRequestMessage },
         6192: {message: Messages.MoodSmileyRequestMessage, handler: FriendHandler.handleMoodSmileyRequestMessage },
+        5001: {message: Messages.InteractiveUseRequestMessage , handler : InteractiveHandler.parseInteractive},
+        5685: {message: Messages.EmotePlayRequestMessage, handler: EmoteHandler.handleEmotePlayRequestMessage},
     } 
 
     static handle(client, messageId, buffer) {

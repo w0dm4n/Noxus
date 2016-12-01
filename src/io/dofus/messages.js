@@ -1,5 +1,6 @@
 import IO from "../custom_data_wrapper"
 import * as Types from "../dofus/types"
+import Logger from "../../io/logger"
 
 export class ProtocolMessage {
     constructor(messageId) {
@@ -585,8 +586,9 @@ export class MapComplementaryInformationsDataMessage extends ProtocolMessage {
             this.actors[actor].serialize(this.buffer);
         }
         this.buffer.writeShort(this.interactiveElements.length);
-        for (interactive in this.interactiveElements) {
-            this.buffer.writeShort(this.interactiveElements[interactive]);
+        for (var interactive in this.interactiveElements) {
+            this.buffer.writeShort(this.interactiveElements[interactive].protocolId);
+            this.interactiveElements[interactive].serialize(this.buffer);
         }
         this.buffer.writeShort(this.statedElements.length);
         for (element in this.statedElements) {
@@ -1192,6 +1194,246 @@ export class InventoryContentMessage extends ProtocolMessage {
         this.kamas = buffer.readVarUhInt();
         if (this.kamas < 0) {
             Logger.error("Forbidden value (" + this.kamas + ") on element of InventoryContentMessage.kamas.");
+        }
+    }
+}
+export class TeleportDestinationsListMessage extends ProtocolMessage {
+    constructor(teleporterType, mapIds, subAreaIds, costs, destTeleporterType) {
+        super(5960);
+        this.teleporterType = teleporterType;
+        this.mapIds = mapIds;
+        this.subAreaIds = subAreaIds;
+        this.costs = costs;
+        this.destTeleporterType = destTeleporterType;
+    }
+    serialize() {
+        this.buffer.writeByte(this.teleporterType);
+        this.buffer.writeShort(this.mapIds.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.mapIds.length) {
+            if (this.mapIds[_loc2_] < 0) {
+                Logger.error("Forbidden value (" + this.mapIds[_loc2_] + ") on element 2 (starting at 1) of mapIds.");
+            }
+            this.buffer.writeInt(this.mapIds[_loc2_]);
+            _loc2_++;
+        }
+        this.buffer.writeShort(this.subAreaIds.length);
+        var _loc3_ = 0;
+        while (_loc3_ < this.subAreaIds.length) {
+            if (this.subAreaIds[_loc3_] < 0) {
+                Logger.error("Forbidden value (" + this.subAreaIds[_loc3_] + ") on element 3 (starting at 1) of subAreaIds.");
+            }
+            this.buffer.writeVarShort(this.subAreaIds[_loc3_]);
+            _loc3_++;
+        }
+        this.buffer.writeShort(this.costs.length);
+        var _loc4_ = 0;
+        while (_loc4_ < this.costs.length) {
+            if (this.costs[_loc4_] < 0) {
+                Logger.error("Forbidden value (" + this.costs[_loc4_] + ") on element 4 (starting at 1) of costs.");
+            }
+            this.buffer.writeVarShort(this.costs[_loc4_]);
+            _loc4_++;
+        }
+        this.buffer.writeShort(this.destTeleporterType.length);
+        var _loc5_ = 0;
+        while (_loc5_ < this.destTeleporterType.length) {
+            this.buffer.writeByte(this.destTeleporterType[_loc5_]);
+            _loc5_++;
+        }
+    }
+}
+export class ZaapListMessage extends TeleportDestinationsListMessage {
+    constructor(param1, param2, param3, param4, param5, param6) {
+        super(param1, param2, param3, param4, param5);
+        this.spawnMapId = param6;
+        this.messageId = 1604;
+    }
+    serialize() {
+        super.serialize();
+        if (this.spawnMapId < 0) {
+            Logger.error("Forbidden value (" + this.spawnMapId + ") on element spawnMapId.");
+        }
+        this.buffer.writeInt(this.spawnMapId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.spawnMapId = buffer.readInt();
+        if (this.spawnMapId < 0) {
+            Logger.error("Forbidden value (" + this.spawnMapId + ") on element of ZaapListMessage.spawnMapId.");
+        }
+    }
+}
+export class InteractiveUseRequestMessage extends ProtocolMessage {
+    constructor(elemId, skillInstanceUid) {
+        super(5001);
+        this.elemId = elemId;
+        this.skillInstanceUid = skillInstanceUid;
+    }
+    serialize() {
+        if (this.elemId < 0) {
+            Logger.error("Forbidden value (" + this.elemId + ") on element elemId.");
+        }
+        this.buffer.writeVarInt(this.elemId);
+        if (this.skillInstanceUid < 0) {
+            Logger.error("Forbidden value (" + this.skillInstanceUid + ") on element skillInstanceUid.");
+        }
+        this.buffer.writeVarInt(this.skillInstanceUid);
+    }
+    deserialize(buffer) {
+        this.elemId = buffer.readVarUhInt();
+        if (this.elemId < 0) {
+            Logger.error("Forbidden value (" + this.elemId + ") on element of InteractiveUseRequestMessage.elemId.");
+        }
+        this.skillInstanceUid = buffer.readVarUhInt();
+        if (this.skillInstanceUid < 0) {
+            Logger.error("Forbidden value (" + this.skillInstanceUid + ") on element of InteractiveUseRequestMessage.skillInstanceUid.");
+        }
+    }
+}
+export class InteractiveUsedMessage extends ProtocolMessage {
+    constructor(entityId, elemId, skillId, duration, canMove) {
+        super(5745);
+        this.entityId = entityId;
+        this.elemId = elemId;
+        this.skillId = skillId;
+        this.duration = duration;
+        this.canMove = canMove;
+    }
+    serialize() {
+        if (this.entityId < 0 || this.entityId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.entityId + ") on element entityId.");
+        }
+        this.buffer.writeVarLong(this.entityId);
+        if (this.elemId < 0) {
+            Logger.error("Forbidden value (" + this.elemId + ") on element elemId.");
+        }
+        this.buffer.writeVarInt(this.elemId);
+        if (this.skillId < 0) {
+            Logger.error("Forbidden value (" + this.skillId + ") on element skillId.");
+        }
+        this.buffer.writeVarShort(this.skillId);
+        if (this.duration < 0) {
+            Logger.error("Forbidden value (" + this.duration + ") on element duration.");
+        }
+        this.buffer.writeVarShort(this.duration);
+        this.buffer.writeBoolean(this.canMove);
+    }
+}
+export class InteractiveUseEndedMessage extends ProtocolMessage {
+    constructor(elemId, skillId) {
+        super(6112);
+        this.elemId = elemId;
+        this.skillId = skillId;
+    }
+    serialize() {
+        if (this.elemId < 0) {
+            Logger.error("Forbidden value (" + this.elemId + ") on element elemId.");
+        }
+        this.buffer.writeVarInt(this.elemId);
+        if (this.skillId < 0) {
+            Logger.error("Forbidden value (" + this.skillId + ") on element skillId.");
+        }
+        this.buffer.writeVarShort(this.skillId);
+    }
+}
+
+export class EmoteAddMessage extends ProtocolMessage {
+    constructor(emoteId) {
+        super(5644);
+        this.emoteId = emoteId;
+    }
+    serialize() {
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element emoteId.");
+        }
+        this.buffer.writeByte(this.emoteId);
+    }
+    deserialize(buffer) {
+        this.emoteId = buffer.readUnsignedByte();
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element of EmoteAddMessage.emoteId.");
+        }
+    }
+}
+
+
+// Generated by Noxus messages
+export class EmotePlayAbstractMessage extends ProtocolMessage {
+    constructor(emoteId, emoteStartTime) {
+        super(5690);
+        this.emoteId = emoteId;
+        this.emoteStartTime = emoteStartTime;
+    }
+    serialize() {
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element emoteId.");
+        }
+        this.buffer.writeByte(this.emoteId);
+        if (this.emoteStartTime < -9007199254740990 || this.emoteStartTime > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.emoteStartTime + ") on element emoteStartTime.");
+        }
+        this.buffer.writeDouble(this.emoteStartTime);
+    }
+    deserialize(buffer) {
+        this.emoteId = buffer.readUnsignedByte();
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element of EmotePlayAbstractMessage.emoteId.");
+        }
+        this.emoteStartTime = buffer.readDouble();
+        if (this.emoteStartTime < -9007199254740990 || this.emoteStartTime > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.emoteStartTime + ") on element of EmotePlayAbstractMessage.emoteStartTime.");
+        }
+    }
+}
+
+export class EmotePlayRequestMessage extends ProtocolMessage {
+    constructor(emoteId) {
+        super(5685);
+        this.emoteId = emoteId;
+    }
+    serialize() {
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element emoteId.");
+        }
+        this.buffer.writeByte(this.emoteId);
+    }
+    deserialize(buffer) {
+        this.emoteId = buffer.readUnsignedByte();
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element of EmotePlayRequestMessage.emoteId.");
+        }
+    }
+}
+
+// Generated by Noxus messages
+export class EmotePlayMessage extends EmotePlayAbstractMessage{
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.actorId = param3;
+        this.accountId = param4;
+        this.messageId = 5683;
+    }
+    serialize() {
+        super.serialize();
+        if (this.actorId < -9007199254740990 || this.actorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.actorId + ") on element actorId.");
+        }
+        this.buffer.writeDouble(this.actorId);
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element accountId.");
+        }
+        this.buffer.writeInt(this.accountId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.actorId = buffer.readDouble();
+        if (this.actorId < -9007199254740990 || this.actorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.actorId + ") on element of EmotePlayMessage.actorId.");
+        }
+        this.accountId = buffer.readInt();
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element of EmotePlayMessage.accountId.");
         }
     }
 }

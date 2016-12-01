@@ -1,5 +1,6 @@
 import Datacenter from "../../database/datacenter"
 import ItemDiceEffect from "./item_dice_effect"
+import ItemEffectInteger from "./item_effect_integer"
 import Basic from "../../utils/basic"
 import CharacterItem from "../../database/models/character_item";
 
@@ -18,7 +19,7 @@ export default class ItemManager {
             effectsGenerated.push(ItemManager.generateRandomEffect(effect));
         }
 
-        var item = new CharacterItem({characterId: -1, templateId: itemId, effects: effectsGenerated, quantity: 1});
+        var item = new CharacterItem({templateId: itemId, effects: effectsGenerated, quantity: 1});
         return item;
     }
 
@@ -29,7 +30,7 @@ export default class ItemManager {
             let lowValue = effect.diceNum;
             let highValue = effect.diceSide;
             let randomValue = Basic.getRandomInt(lowValue, highValue);
-            let diceEffect = new ItemDiceEffect(randomValue, effect.effectId, "ObjectEffectInteger");
+            let diceEffect = new ItemEffectInteger(randomValue, effect.effectId, "ObjectEffectInteger");
             return diceEffect;
         }
     }
