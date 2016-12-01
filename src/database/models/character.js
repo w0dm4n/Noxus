@@ -9,15 +9,19 @@ import ConfigManager from "../../utils/configmanager.js"
 import DBManager from "../../database/dbmanager"
 import StatsManager from "../../game/stats/stats_manager"
 import ItemBag from "./item_bag"
+import Basic from "../../utils/basic"
 
 export default class Character {
 
+    
     lastSalesMessage = 0;
     lastSeekMessage = 0;
     lastMessage = 0;
     isTemporaryMuted = false;
     firstContext = true;
     client = null;
+    ignoredsList = [];
+    ignoredForSession = [];
 
     constructor(raw, creation) {
         var self = this;
@@ -37,6 +41,7 @@ export default class Character {
         this.spellPoints = raw.spellPoints;
         this.emotes = raw.emotes;
         this.bagId = raw.bagId ? raw.bagId: -1;
+        this.skins = [];
 
         this.stats = [];
         this.stats[1] = new Types.CharacterBaseCharacteristic(6, 0, 0, 0, 0); // PA
@@ -113,9 +118,40 @@ export default class Character {
         return nextColors;
     }
 
+    refreshEntityLook() {
+        var appearenceToShow = [];
+        appearenceToShow.push(parseInt(this.getBaseSkin()));
+        appearenceToShow.push(parseInt(this.getHeadSkinId()));
+        if(this.itemBag) {
+            if(this.itemBag.getItemAtPosition(6)) appearenceToShow.push(this.itemBag.getItemAtPosition(6).getTemplate().appearanceId); // Head
+            if(this.itemBag.getItemAtPosition(7)) appearenceToShow.push(this.itemBag.getItemAtPosition(7).getTemplate().appearanceId); // Cape
+        }
+        this.skins = appearenceToShow;
+    }
+
+    refreshLookOnMap() {
+        if(this.getMap()) {
+            this.getMap().send(new Messages.GameContextRefreshEntityLookMessage(this._id, this.getEntityLook()));
+        }
+    }
+
+    getSubentities() {
+        var subentities = [];
+        if(this.itemBag) {
+            if (this.itemBag.getItemAtPosition(8)) {
+                let look = Basic.parseLook(this.itemBag.getItemAtPosition(8).getTemplate().look);
+                var entity = new Types.SubEntity(1, 0, new Types.EntityLook
+                    (parseInt(look[0]), [], [0, 0, 0, 0, 0], [look[3] ? parseInt(look[3]) : 100], []));
+                subentities.push(entity);
+            }
+        }
+        return subentities;
+    }
+
     getEntityLook() {
-        return new Types.EntityLook(this.getBonesId(), [this.getBaseSkin(), this.getHeadSkinId()],
-            this.getColors(), [120], [])
+        this.refreshEntityLook();
+        return new Types.EntityLook(this.getBonesId(), this.skins,
+            this.getColors(), [120], this.getSubentities());
     }
 
     getCharacterBaseInformations() {
@@ -272,11 +308,22 @@ export default class Character {
             Logger.debug("Item added to character bag");
             self.sendInventoryBag();
         };
+
+        this.itemBag.onItemDeleted = function(item) {
+            Logger.debug("Item removed to character bag");
+            self.client.send(new Messages.ObjectDeletedMessage(item._id));
+            self.sendInventoryBag();
+        };
     }
 
     sendInventoryBag() {
         if(this.itemBag == null) return;
         this.client.send(new Messages.InventoryWeightMessage(0, 1000));
         this.client.send(new Messages.InventoryContentMessage(this.itemBag.getObjectItemArray(), this.itemBag.money));
+    }
+    
+    isBusy()
+    {
+        return true;
     }
 }

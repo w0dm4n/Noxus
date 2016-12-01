@@ -60,6 +60,17 @@ export default class WorldServer {
         return null;
     }
 
+    static getOnlineClientByCharacterId(id)
+    {
+        for (var client in WorldServer.clients)
+        {
+            if (WorldServer.clients[client].character != null
+                && WorldServer.clients[client].character._id == id)
+                return WorldServer.clients[client];
+        }
+        return null;
+    }
+
     static getOnlineClientByNickName(name)
     {
         for (var client in WorldServer.clients)

@@ -88,7 +88,7 @@ export default class GameHandler {
 	static handleGameMapMovementConfirmMessage(client, packet) {
 		client.character.cellid = client.character.nextCellId;
 		client.character.nextCellId = -1;
-		//TODO: Check trigger etc ..
+		client.send(new Messages.BasicNoOperationMessage());
 	}
 	
 	static handleChangeMapMessage(client, packet) {

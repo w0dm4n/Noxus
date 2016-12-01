@@ -1,0 +1,74 @@
+[
+	{
+		"memberName": "Rectangle",
+		"packageName": "flash.geom",
+		"fields": [
+			{
+				"name": "x",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "y",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "width",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "height",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "Area",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "superAreaId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "containHouses",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "containPaddocks",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "bounds",
+				"type": 1,
+				"vectorTypes": false
+			},
+			{
+				"name": "worldmapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "hasWorldMap",
+				"type": "Bool",
+				"vectorTypes": false
+			}
+		]
+	}
+]

@@ -1,0 +1,798 @@
+{ 
+    "_id" : NumberInt(0), 
+    "nameId" : "Amakna", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-47), 
+        "y" : NumberInt(-70), 
+        "width" : NumberInt(63), 
+        "height" : NumberInt(104)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(1), 
+    "nameId" : "Île des Wabbits", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-17), 
+        "width" : NumberInt(31), 
+        "height" : NumberInt(18)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(2), 
+    "nameId" : "Île de Moon", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(39), 
+        "height" : NumberInt(14)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(3), 
+    "nameId" : "Prison", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(4), 
+    "nameId" : "Tainéla", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-2), 
+        "y" : NumberInt(-34), 
+        "width" : NumberInt(7), 
+        "height" : NumberInt(35)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(5), 
+    "nameId" : "Baie de Sufokia", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(27), 
+        "height" : NumberInt(36)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(6), 
+    "nameId" : "Forêt des Abraknydes", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-17), 
+        "y" : NumberInt(-18), 
+        "width" : NumberInt(18), 
+        "height" : NumberInt(19)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(7), 
+    "nameId" : "Bonta", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-38), 
+        "y" : NumberInt(-65), 
+        "width" : NumberInt(39), 
+        "height" : NumberInt(66)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(8), 
+    "nameId" : "Plaines de Cania", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-39), 
+        "y" : NumberInt(-62), 
+        "width" : NumberInt(43), 
+        "height" : NumberInt(63)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(11), 
+    "nameId" : "Brâkmar", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-33), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(34), 
+        "height" : NumberInt(45)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(12), 
+    "nameId" : "Landes de Sidimote", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-31), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(32), 
+        "height" : NumberInt(41)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(13), 
+    "nameId" : "Territoire des Dopeuls", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-35), 
+        "y" : NumberInt(-12), 
+        "width" : NumberInt(36), 
+        "height" : NumberInt(13)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(14), 
+    "nameId" : "Village des Brigandins", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-19), 
+        "y" : NumberInt(-26), 
+        "width" : NumberInt(20), 
+        "height" : NumberInt(27)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(15), 
+    "nameId" : "Foire du Trool", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-13), 
+        "y" : NumberInt(-41), 
+        "width" : NumberInt(14), 
+        "height" : NumberInt(42)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(18), 
+    "nameId" : "Astrub", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-3), 
+        "y" : NumberInt(-30), 
+        "width" : NumberInt(16), 
+        "height" : NumberInt(31)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(19), 
+    "nameId" : "Pandala Neutre", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-54), 
+        "width" : NumberInt(35), 
+        "height" : NumberInt(55)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(20), 
+    "nameId" : "Pandala Eau", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-29), 
+        "width" : NumberInt(26), 
+        "height" : NumberInt(30)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(21), 
+    "nameId" : "Pandala Terre", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-41), 
+        "width" : NumberInt(32), 
+        "height" : NumberInt(42)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(22), 
+    "nameId" : "Pandala Feu", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-52), 
+        "width" : NumberInt(29), 
+        "height" : NumberInt(53)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(23), 
+    "nameId" : "Pandala Air", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-40), 
+        "width" : NumberInt(20), 
+        "height" : NumberInt(41)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(24), 
+    "nameId" : "Pandala Donjon", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(26), 
+    "nameId" : "Labyrinthe du Dragon Cochon", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(28), 
+    "nameId" : "Montagne des Koalaks", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-23), 
+        "y" : NumberInt(-13), 
+        "width" : NumberInt(24), 
+        "height" : NumberInt(34)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(29), 
+    "nameId" : "Donjon des Tofus", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(30), 
+    "nameId" : "Île du Minotoror", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-43), 
+        "y" : NumberInt(-19), 
+        "width" : NumberInt(44), 
+        "height" : NumberInt(20)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(31), 
+    "nameId" : "Centre du labyrinthe du Minotoror", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(33), 
+    "nameId" : "Donjon des Canidés", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(34), 
+    "nameId" : "Caverne du Koulosse", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-17), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(18), 
+        "height" : NumberInt(8)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(36), 
+    "nameId" : "Sanctuaire des Familiers", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(37), 
+    "nameId" : "Pitons Rocheux des Craqueleurs", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(39), 
+    "nameId" : "Donjon des Bworks", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : ObjectId("58408edba4aee13be41a3a50")
+}
+{ 
+    "_id" : NumberInt(40), 
+    "nameId" : "Donjon des Scarafeuilles", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(41), 
+    "nameId" : "Donjon des Champs", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(42), 
+    "nameId" : "Île de Nowel", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-40), 
+        "y" : NumberInt(-93), 
+        "width" : NumberInt(41), 
+        "height" : NumberInt(94)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(43), 
+    "nameId" : "Donjon du Dragon Cochon", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(44), 
+    "nameId" : "Donjon des Dragoeufs", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(45), 
+    "nameId" : "Incarnam", 
+    "superAreaId" : NumberInt(3), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-4), 
+        "y" : NumberInt(-6), 
+        "width" : NumberInt(9), 
+        "height" : NumberInt(7)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(46), 
+    "nameId" : "Île d'Otomaï", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-62), 
+        "y" : NumberInt(-10), 
+        "width" : NumberInt(81), 
+        "height" : NumberInt(52)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(47), 
+    "nameId" : "Village des Zoths", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-56), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(57), 
+        "height" : NumberInt(19)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(48), 
+    "nameId" : "Île de Frigost", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-88), 
+        "y" : NumberInt(-88), 
+        "width" : NumberInt(89), 
+        "height" : NumberInt(89)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(49), 
+    "nameId" : "Île de Sakaï", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-55), 
+        "y" : NumberInt(-45), 
+        "width" : NumberInt(56), 
+        "height" : NumberInt(46)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(50), 
+    "nameId" : "Archipel de Vulkania", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-56), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(57), 
+        "height" : NumberInt(45)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(51), 
+    "nameId" : "Îlots de la mer d'Asse", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-3), 
+        "width" : NumberInt(37), 
+        "height" : NumberInt(17)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(52), 
+    "nameId" : "Convention", 
+    "superAreaId" : NumberInt(4), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(53), 
+    "nameId" : "Enutrosor", 
+    "superAreaId" : NumberInt(5), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-10), 
+        "y" : NumberInt(-10), 
+        "width" : NumberInt(13), 
+        "height" : NumberInt(11)
+    }, 
+    "worldmapId" : NumberInt(13), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(54), 
+    "nameId" : "Srambad", 
+    "superAreaId" : NumberInt(5), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-2), 
+        "y" : NumberInt(-4), 
+        "width" : NumberInt(12), 
+        "height" : NumberInt(13)
+    }, 
+    "worldmapId" : NumberInt(14), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(55), 
+    "nameId" : "Xélorium", 
+    "superAreaId" : NumberInt(5), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-7), 
+        "width" : NumberInt(7), 
+        "height" : NumberInt(15)
+    }, 
+    "worldmapId" : NumberInt(15), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(56), 
+    "nameId" : "Zone privée", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(57), 
+    "nameId" : "Île de Rok", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-21), 
+        "width" : NumberInt(39), 
+        "height" : NumberInt(22)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(58), 
+    "nameId" : "Havres-Sacs", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(59), 
+    "nameId" : "Ecaflipus", 
+    "superAreaId" : NumberInt(5), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(-13), 
+        "y" : NumberInt(-22), 
+        "width" : NumberInt(19), 
+        "height" : NumberInt(25)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(60), 
+    "nameId" : "Domaine des fils d'Ecaflip", 
+    "superAreaId" : NumberInt(3), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(0), 
+        "width" : NumberInt(1), 
+        "height" : NumberInt(1)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}
+{ 
+    "_id" : NumberInt(61), 
+    "nameId" : "Saharach", 
+    "superAreaId" : NumberInt(0), 
+    "containHouses" : true, 
+    "containPaddocks" : true, 
+    "bounds" : {
+        "x" : NumberInt(0), 
+        "y" : NumberInt(-65), 
+        "width" : NumberInt(20), 
+        "height" : NumberInt(66)
+    }, 
+    "worldmapId" : NumberInt(0), 
+    "hasWorldMap" : true
+}

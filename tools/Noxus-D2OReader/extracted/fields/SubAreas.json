@@ -1,0 +1,262 @@
+[
+	{
+		"memberName": "AmbientSound",
+		"packageName": "com.ankamagames.dofus.datacenter.ambientSounds",
+		"fields": [
+			{
+				"name": "id",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "volume",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "criterionId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "silenceMin",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "silenceMax",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "channel",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "type_id",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "Rectangle",
+		"packageName": "flash.geom",
+		"fields": [
+			{
+				"name": "x",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "y",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "width",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "height",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "SubArea",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "areaId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "ambientSounds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.ambientSounds::AmbientSound>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "playlists",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "mapIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "bounds",
+				"type": 2,
+				"vectorTypes": false
+			},
+			{
+				"name": "shape",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "customWorldMap",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "packId",
+				"type": "UInt",
+				"vectorTypes": false
+			},
+			{
+				"name": "level",
+				"type": "UInt",
+				"vectorTypes": false
+			},
+			{
+				"name": "isConquestVillage",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "basicAccountAllowed",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "displayOnWorldMap",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "monsters",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "entranceMapIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "exitMapIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "capturable",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "achievements",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "quests",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "npcs",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "exploreAchievementId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "harvestables",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			}
+		]
+	}
+]

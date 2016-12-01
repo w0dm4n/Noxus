@@ -1,0 +1,128 @@
+[
+	{
+		"memberName": "AmbientSound",
+		"packageName": "com.ankamagames.dofus.datacenter.ambientSounds",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "volume",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "criterionId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "silenceMin",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "silenceMax",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "channel",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "type_id",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "MapPosition",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "posX",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "posY",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "outdoor",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "capabilities",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "showNameOnFingerpost",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "sounds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.ambientSounds::AmbientSound>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "playlists",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "subAreaId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "worldMap",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "hasPriorityOnWorldmap",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "isUnderWater",
+				"type": "Bool",
+				"vectorTypes": false
+			}
+		]
+	}
+]

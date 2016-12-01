@@ -124,7 +124,7 @@ export default class FriendHandler {
                                     var index = client.account.friends.indexOf(friend);
                                     if (index != -1)
                                          client.account.friends.splice(index, 1);
- 
+
                                     DBManager.removeFriend({friendAccountId: friendAccount.uid}, function(result)
                                     {
                                         if (result)

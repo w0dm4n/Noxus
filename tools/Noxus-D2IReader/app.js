@@ -77,3 +77,26 @@ for(var i in file.m_textIndexes) {
     langs.push({id: i, text: file.m_textIndexes[i]});
 }
 fs.writeFileSync("./data/i18n_fr.json", JSON.stringify(langs)); 
+console.log("D2I Readed");
+var MongoClient = require('mongodb').MongoClient
+    , assert = require('assert');
+  var url = 'mongodb://localhost:27017/Noxus';
+  MongoClient.connect(url, function(err, db) {
+    var collection = db.collection('areas');
+    collection.find({}).toArray(function(err, items){
+		console.log("Subareas loaded");
+		for(var i of items) {
+			if(!i.nameId) continue;
+		
+			var updateItem = {
+				nameId: file.m_indexes[i.nameId],
+			};
+			
+			console.log(updateItem);
+			
+			collection.update({ _id: i._id }, { $set: updateItem }, function() {
+				
+			});
+		}
+	});   
+  });

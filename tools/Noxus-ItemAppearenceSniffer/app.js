@@ -50,12 +50,14 @@ var MongoClient = require('mongodb').MongoClient
 	for(var i in ma2File.items) {
 		var item = ma2File.items[i];
 		console.log("Update item id: " + item.id + ", appearenceId: " + item.skin);
-		var fn = function(itemCopy) {
-			collection.update(
-			   { _id: itemCopy.id },
-			   { $set: { "appearanceId": itemCopy.skin, "name": itemCopy.name } }
-			);
-		};
-		fn(item);
+		if(item.typeId == 18) {
+			var fn = function(itemCopy) {
+				collection.update(
+				   { _id: itemCopy.id },
+				   { $set: { "look": itemCopy.look } }
+				);
+			};
+			fn(item);
+		}
 	}
   });

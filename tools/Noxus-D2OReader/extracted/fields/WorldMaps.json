@@ -1,0 +1,98 @@
+[
+	{
+		"memberName": "WorldMap",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "origineX",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "origineY",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "mapWidth",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "mapHeight",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "horizontalChunck",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "verticalChunck",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "viewableEverywhere",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "minScale",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "maxScale",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "startScale",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "centerX",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "centerY",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "totalWidth",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "totalHeight",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "zoom",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<String>",
+						"type": "String"
+					}
+				]
+			}
+		]
+	}
+]

@@ -10,6 +10,7 @@ import AuthServer from "../network/auth"
 import ChatChannel from "../enums/chat_activable_channels_enum"
 import Character from "../database/models/character"
 import CommandManager from "../managers/command_manager"
+import IgnoredHandler from "../handlers/ignored_handler"
 
 export default class ChatHandler {
     
@@ -25,11 +26,16 @@ export default class ChatHandler {
         var clientTarget = WorldServer.getOnlineClientByCharacterName(packet.receiver);
         if (clientTarget)
         {
-            if (client.character.canSendMessage())
-            {
-                client.send(new Messages.ChatServerCopyMessage(ChatChannel.PSEUDO_CHANNEL_PRIVATE, packet.content, time(), clientTarget.character.name, clientTarget.character._id, clientTarget.character.name));
-                clientTarget.send(new Messages.ChatServerMessage(ChatChannel.PSEUDO_CHANNEL_PRIVATE, packet.content, time(), clientTarget.character.name, client.character._id, client.character.name, client.account.uid));
-                client.character.updateLastMessage();
+            if (client.character.canSendMessage()) {
+                if (!IgnoredHandler.isIgnoringForSession(clientTarget, client.character)) {
+                    client.send(new Messages.ChatServerCopyMessage(ChatChannel.PSEUDO_CHANNEL_PRIVATE, packet.content, time(), clientTarget.character.name, clientTarget.character._id, clientTarget.character.name));
+                    clientTarget.send(new Messages.ChatServerMessage(ChatChannel.PSEUDO_CHANNEL_PRIVATE, packet.content, time(), clientTarget.character.name, client.character._id, client.character.name, client.account.uid));
+                    client.character.updateLastMessage();
+                }
+                else
+                {
+                    client.character.replyLangsMessage(370, [clientTarget.character.name]);
+                }
             }
         }
         else

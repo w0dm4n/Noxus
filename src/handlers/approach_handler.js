@@ -58,13 +58,31 @@ export default class ApproachHandler {
     
     static sendCharactersList(client) {
         DBManager.getCharacters({accountId: client.account.uid}, function(characters){
-            client.characters = characters;
-            client.characters.reverse();
-            var baseCharactersInformations = new Array();
-            for(var i in client.characters) {
-                baseCharactersInformations.push(client.characters[i].getCharacterBaseInformations());
-            }
-            client.send(new Messages.CharactersListMessage(baseCharactersInformations));
+            var fnNext = function() {
+                client.characters = characters;
+                client.characters.reverse();
+                var baseCharactersInformations = new Array();
+                for(var i in client.characters) {
+                    baseCharactersInformations.push(client.characters[i].getCharacterBaseInformations());
+                }
+                client.send(new Messages.CharactersListMessage(baseCharactersInformations));
+            };
+
+            var fnCheck = function() {
+                var loaded = true;
+                for(var i in client.characters) {
+                    if(client.characters[i].itemBag == null) loaded = false;
+                }
+
+                if(loaded) {
+                    setTimeout(fnNext, 50);
+                }
+                else {
+                    setTimeout(fnCheck, 200);
+                }
+            };
+
+            fnCheck();
         })
     }
 

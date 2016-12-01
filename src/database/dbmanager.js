@@ -151,7 +151,7 @@ export default class DBManager {
                 callback(null);
                 return;
             }
-            callback(new Character(character));
+            callback(new Character(character, false));
         });
     }
 
@@ -183,7 +183,7 @@ export default class DBManager {
         collection.find(query).toArray(function(err, characters){
             var result = new Array();
             for(var i in characters) {
-                result.push(new Character(characters[i]));
+                result.push(new Character(characters[i], false));
             }
             callback(result);
         });

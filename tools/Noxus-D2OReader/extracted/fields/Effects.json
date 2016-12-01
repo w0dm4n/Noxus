@@ -1,0 +1,103 @@
+[
+	{
+		"memberName": "Effect",
+		"packageName": "com.ankamagames.dofus.datacenter.effects",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "descriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "iconId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "characteristic",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "category",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "operator",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "showInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "useDice",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "forceMinMax",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "boost",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "active",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "oppositeId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "theoreticalDescriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "theoreticalPattern",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "showInSet",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "bonusType",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "useInFight",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectPriority",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "elementId",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

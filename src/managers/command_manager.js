@@ -233,8 +233,8 @@ export default class CommandManager {
     static handle_item(data, client) {
         if(data[1]) {
             var item = ItemManager.generateItem(parseInt(data[1]));
-            client.character.itemBag.add(item, function(){
-                client.character.replyText("Objet créé avec succès");
+            client.character.itemBag.add(item, true, function(){
+                client.character.replyText("Objet <b>[" + item.getTemplate().nameId + "]</b> créé avec succès");
             });
         }
         else

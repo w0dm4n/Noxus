@@ -11,6 +11,8 @@ import AdminHandler from "../handlers/admin_handler"
 import FriendHandler from "../handlers/friend_handler"
 import InteractiveHandler from "../handlers/interactive_handler"
 import EmoteHandler from "../handlers/emote_handler"
+import ItemHandler from "../handlers/item_handler"
+import IgnoredHandler from "../handlers/ignored_handler"
 
 export default class Processor {
 
@@ -43,6 +45,12 @@ export default class Processor {
         6192: {message: Messages.MoodSmileyRequestMessage, handler: FriendHandler.handleMoodSmileyRequestMessage },
         5001: {message: Messages.InteractiveUseRequestMessage , handler : InteractiveHandler.parseInteractive},
         5685: {message: Messages.EmotePlayRequestMessage, handler: EmoteHandler.handleEmotePlayRequestMessage},
+        5673: { message: Messages.IgnoredAddRequestMessage, handler:IgnoredHandler.handleIgnoredAddRequestMessage },
+        5676: { message: Messages.IgnoredGetListMessage, handler:IgnoredHandler.handleIgnoredGetListMessage },
+        5680: { message: Messages.IgnoredDeleteRequestMessage, handler:IgnoredHandler.handleIgnoredDeleteRequestMessage },
+
+        //Item handler
+        3021: {message: Messages.ObjectSetPositionMessage, handler: ItemHandler.handleObjectSetPositionMessage},
     } 
 
     static handle(client, messageId, buffer) {

@@ -1437,3 +1437,231 @@ export class EmotePlayMessage extends EmotePlayAbstractMessage{
         }
     }
 }
+
+export class ObjectSetPositionMessage extends ProtocolMessage {
+    constructor(objectUID, position, quantity) {
+        super(3021);
+        this.objectUID = objectUID;
+        this.position = position;
+        this.quantity = quantity;
+    }
+    serialize() {
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element objectUID.");
+        }
+        this.buffer.writeVarInt(this.objectUID);
+        this.buffer.writeByte(this.position);
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element quantity.");
+        }
+        this.buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        this.objectUID = buffer.readVarUhInt();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element of ObjectSetPositionMessage.objectUID.");
+        }
+        this.position = buffer.readUnsignedByte();
+        if (this.position < 0 || this.position > 255) {
+            Logger.error("Forbidden value (" + this.position + ") on element of ObjectSetPositionMessage.position.");
+        }
+        this.quantity = buffer.readVarUhInt();
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element of ObjectSetPositionMessage.quantity.");
+        }
+    }
+}
+
+export class ObjectMovementMessage extends ProtocolMessage {
+    constructor(objectUID, position) {
+        super(3010);
+        this.objectUID = objectUID;
+        this.position = position;
+    }
+    serialize() {
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element objectUID.");
+        }
+        this.buffer.writeVarInt(this.objectUID);
+        this.buffer.writeByte(this.position);
+    }
+    deserialize(buffer) {
+        this.objectUID = buffer.readVarUhInt();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element of ObjectMovementMessage.objectUID.");
+        }
+        this.position = buffer.readUnsignedByte();
+        if (this.position < 0 || this.position > 255) {
+            Logger.error("Forbidden value (" + this.position + ") on element of ObjectMovementMessage.position.");
+        }
+    }
+}
+
+export class IgnoredAddedMessage extends ProtocolMessage {
+    constructor(ignoreAdded, session) {
+        super(5678);
+        this.ignoreAdded = ignoreAdded;
+        this.session = session;
+    }
+    serialize() {
+        this.buffer.writeShort(this.ignoreAdded.protocolId);
+        this.ignoreAdded.serialize(this.buffer);
+        this.buffer.writeBoolean(this.session);
+    }
+    deserialize(buffer) {
+        var _loc2_ = buffer.readUnsignedShort();
+        this.ignoreAdded = ProtocolTypeManager.getInstance(IgnoredInformations, _loc2_);
+        this.ignoreAdded.deserialize(buffer);
+        this.session = buffer.readBoolean();
+    }
+}
+
+export class IgnoredAddRequestMessage extends ProtocolMessage {
+    constructor(name, session) {
+        super(5673);
+        this.name = name;
+        this.session = session;
+    }
+    serialize() {
+        this.buffer.writeUTF(this.name);
+        this.buffer.writeBoolean(this.session);
+    }
+    deserialize(buffer) {
+        this.name = buffer.readUTF();
+        this.session = buffer.readBoolean();
+    }
+}
+
+export class IgnoredListMessage extends ProtocolMessage {
+    constructor(ignoredList) {
+        super(5674);
+        this.ignoredList = ignoredList;
+    }
+    serialize() {
+        this.buffer.writeShort(this.ignoredList.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.ignoredList.length) {
+            this.buffer.writeShort((this.ignoredList[_loc2_]).protocolId);
+            this.ignoredList[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc5_ = null;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readUnsignedShort();
+            _loc5_ = ProtocolTypeManager.getInstance(IgnoredInformations, _loc4_);
+            _loc5_.deserialize(buffer);
+            this.ignoredList.push(_loc5_);
+            _loc3_++;
+        }
+    }
+}
+
+export class IgnoredGetListMessage extends ProtocolMessage {
+constructor() {
+    super(5676);
+}
+serialize()
+{
+}
+deserialize(buffer){
+}
+}
+
+export class ObjectDeletedMessage extends ProtocolMessage {
+    constructor(objectUID) {
+        super(3024);
+        this.objectUID = objectUID;
+    }
+    serialize() {
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element objectUID.");
+        }
+        this.buffer.writeVarInt(this.objectUID);
+    }
+    deserialize(buffer) {
+        this.objectUID = buffer.readVarUhInt();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element of ObjectDeletedMessage.objectUID.");
+        }
+    }
+}
+
+export class IgnoredDeleteRequestMessage extends ProtocolMessage {
+    constructor(accountId, session) {
+        super(5680);
+        this.accountId = accountId;
+        this.session = session;
+    }
+    serialize() {
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element accountId.");
+        }
+        this.buffer.writeInt(this.accountId);
+        this.buffer.writeBoolean(this.session);
+    }
+    deserialize(buffer) {
+        this.accountId = buffer.readInt();
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element of IgnoredDeleteRequestMessage.accountId.");
+        }
+        this.session = buffer.readBoolean();
+    }
+}
+
+export class IgnoredDeleteResultMessage extends ProtocolMessage {
+    constructor(success, name, session) {
+        super(5677);
+        this.success = success;
+        this.name = name;
+        this.session = session;
+    }
+    serialize() {
+        var _loc2_ = 0;
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 0, this.success);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 1, this.session);
+        this.buffer.writeByte(_loc2_);
+        this.buffer.writeUTF(this.name);
+    }
+    deserialize(buffer) {
+        var _loc2_ = buffer.readByte();
+        this.success = IO.BooleanByteWrapper.getFlag(_loc2_, 0);
+        this.session = IO.BooleanByteWrapper.getFlag(_loc2_, 1);
+        this.name = buffer.readUTF();
+    }
+}
+
+export class GameContextRefreshEntityLookMessage extends ProtocolMessage {
+    constructor(id, look) {
+        super(5637);
+        this.id = id;
+        this.look = look;
+    }
+    serialize() {
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        this.buffer.writeDouble(this.id);
+        this.look.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of GameContextRefreshEntityLookMessage.id.");
+        }
+        this.look = new EntityLook();
+        this.look.deserialize(buffer);
+    }
+}
+
+export class BasicNoOperationMessage extends ProtocolMessage {
+    constructor() {
+        super(176);
+    }
+    serialize(){
+    }
+}

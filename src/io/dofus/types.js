@@ -69,7 +69,7 @@ export class EntityLook {
         }
         buffer.writeShort(this.subentities.length);
         for (var i in this.subentities) {
-            this.subentities[i].serialize();
+            this.subentities[i].serialize(buffer);
         }
     }
 }
@@ -1393,4 +1393,77 @@ serialize(buffer){
          buffer.writeInt(this.skillInstanceUid);
 }
 
+}
+
+export class IgnoredInformations extends AbstractContactInformations {
+    constructor(param1, param2) {
+        super(param1, param2);
+        this.protocolId = 106;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+    }
+}
+
+export class IgnoredOnlineInformations extends IgnoredInformations {
+    constructor(param1, param2, playerId, playerName, breed, sex) {
+        super(param1, param2);
+        this.playerId = playerId;
+        this.playerName = playerName;
+        this.breed = breed;
+        this.sex = sex;
+        this.protocolId = 105;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.playerId < 0 || this.playerId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.playerId + ") on element playerId.");
+        }
+        buffer.writeVarLong(this.playerId);
+        buffer.writeUTF(this.playerName);
+        buffer.writeByte(this.breed);
+        buffer.writeBoolean(this.sex);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.playerId = buffer.readVarUhLong();
+        if (this.playerId < 0 || this.playerId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.playerId + ") on element of IgnoredOnlineInformations.playerId.");
+        }
+        this.playerName = buffer.readUTF();
+        this.breed = buffer.readByte();
+        if (this.breed < PlayableBreedEnum.Feca || this.breed > PlayableBreedEnum.Huppermage) {
+            Logger.error("Forbidden value (" + this.breed + ") on element of IgnoredOnlineInformations.breed.");
+        }
+        this.sex = buffer.readBoolean();
+    }
+}
+
+export class SubEntity {
+    constructor(bindingPointCategory, bindingPointIndex, subEntityLook) {
+        this.bindingPointCategory = bindingPointCategory;
+        this.bindingPointIndex = bindingPointIndex;
+        this.subEntityLook = subEntityLook;
+        this.protocolId = 54;
+    }
+    serialize(buffer) {
+        buffer.writeByte(this.bindingPointCategory);
+        buffer.writeByte(this.bindingPointIndex);
+        this.subEntityLook.serialize(buffer);
+    }
+    deserialize(buffer) {
+        this.bindingPointCategory = buffer.readByte();
+        if (this.bindingPointCategory < 0) {
+            Logger.error("Forbidden value (" + this.bindingPointCategory + ") on element of SubEntity.bindingPointCategory.");
+        }
+        this.bindingPointIndex = buffer.readByte();
+        if (this.bindingPointIndex < 0) {
+            Logger.error("Forbidden value (" + this.bindingPointIndex + ") on element of SubEntity.bindingPointIndex.");
+        }
+        this.subEntityLook = new Types.EntityLook();
+        this.subEntityLook.deserialize(buffer);
+    }
 }
