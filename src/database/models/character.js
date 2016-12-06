@@ -82,6 +82,7 @@ export default class Character {
         this.statsManager.recalculateStats(raw);
 
         this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
+        this.requestedFighterId = null;
     }
 
     onDisconnect() {
@@ -422,6 +423,8 @@ export default class Character {
         if (this.dialog != null)
             return true;
         if(this.requestedFighterId)
+            return true;
+        if(this.isInFight())
             return true;
         return false;
     }

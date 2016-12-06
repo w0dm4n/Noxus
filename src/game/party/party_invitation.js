@@ -16,7 +16,7 @@ export default class PartyInvitation {
     showInvitation()
     {
         this.party.addMember(this.invited, true);
-        this.invited.client.send(new Messages.PartyInvitationMessage(this.party.id, this.party.partyType, "", this.party.members.length,
+        this.invited.client.send(new Messages.PartyInvitationMessage(this.party.id, this.party.partyType, "", this.party.max_members,
             this.leader._id, this.leader.name, this.invited._id));
     }
 
@@ -37,7 +37,7 @@ export default class PartyInvitation {
     acceptInvitation() {
         if (this.party) {
             if (this.invited.party != null) {
-                // remove character from current party
+                this.invited.party.removeMember(this.invited, false);
             }
             this.dispose();
             this.invited.party = this.party;

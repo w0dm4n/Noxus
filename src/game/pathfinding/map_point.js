@@ -178,16 +178,24 @@ export default class MapPoint {
         return _loc3_;
     }
 
-    getNearestCells()
+    getNearestCells(fight)
     {
         var _loc3_ = null;
         var _loc4_ = 0;
         var result = [];
-        while(_loc4_ < 8)
-        {
-        _loc3_ = this.getNearestCellInDirection(_loc4_);
-        result.push(_loc3_);
-        _loc4_++;
+        if(fight) {
+            result.push(this.getNearestCellInDirection(1));
+            result.push(this.getNearestCellInDirection(3));
+            result.push(this.getNearestCellInDirection(5));
+            result.push(this.getNearestCellInDirection(7));
+        }
+        else {
+            while(_loc4_ < 8)
+            {
+                _loc3_ = this.getNearestCellInDirection(_loc4_);
+                result.push(_loc3_);
+                _loc4_++;
+            }
         }
         return result;
     }

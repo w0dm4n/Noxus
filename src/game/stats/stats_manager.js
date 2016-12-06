@@ -52,6 +52,7 @@ export default class StatsManager {
         this.stats[13] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.chance : 0, this.getItemTotalStat(123), 0, 0, 0);
         this.stats[14] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.agility : 0, this.getItemTotalStat(119), 0, 0, 0);
         this.stats[15] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.intelligence : 0, this.getItemTotalStat(126), 0, 0, 0);
+        this.stats[16] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(174), 0, 0, 0); // Initiative
     }
 
     getItemTotalStat(effectId) {
@@ -81,7 +82,7 @@ export default class StatsManager {
             this.character.life, this.getMaxLife(), 10000, 10000,
             this.getTotalStats(1),
             this.getTotalStats(2),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
+            this.getStatById(16),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             this.getStatById(1),
             this.getStatById(2),

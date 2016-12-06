@@ -9,6 +9,7 @@ export default class Pathfinding {
         this.cells = new Array();
         this.openList = new Array();
         this.closedList = new Array();
+        this.fightMode = false;
 
         for (var i in this.map.cells) {
             var cell = new CellInfo(this.map.cells[i], MapPoint.fromCellId(this.map.cells[i].id));
@@ -55,12 +56,14 @@ export default class Pathfinding {
     }
 
     getNeighbours(cell, dyn) {
-        var neigh = cell.mapPoint.getNearestCells();
+        var neigh = cell.mapPoint.getNearestCells(this.fightMode);
         var cells = [];
         for (var i in neigh) {
             var n = neigh[i];
             if (n != null) {
-                cells.push(this.getCell(n._nCellId));
+                if(dyn.indexOf(n._nCellId) == -1) {
+                    cells.push(this.getCell(n._nCellId));
+                }
             }
         }
         return cells;

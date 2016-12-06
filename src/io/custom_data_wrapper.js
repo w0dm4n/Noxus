@@ -227,7 +227,7 @@ var Binary64 = (function () {
             return this.readInt64(this._data).toNumber();
         };
         CustomDataWrapper.prototype.readVarUhLong = function () {
-            return this.readUInt64(this._data).toNumber();
+            return this.readInt64(this._data).toNumber();
         };
         CustomDataWrapper.prototype.readBytes = function (param1, param2, param3) {
             if (param2 === void 0) { param2 = 0; }

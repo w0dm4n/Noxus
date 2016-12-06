@@ -2595,3 +2595,596 @@ export class GameEntitiesDispositionMessage extends ProtocolMessage {
         }
     }
 }
+
+export class GameFightReadyMessage extends ProtocolMessage {
+    constructor(isReady) {
+        super(708);
+        this.isReady = isReady;
+    }
+    serialize() {
+        this.buffer.writeBoolean(this.isReady);
+    }
+    deserialize(buffer) {
+        this.isReady = buffer.readBoolean();
+    }
+}
+
+export class GameFightHumanReadyStateMessage extends ProtocolMessage {
+    constructor(characterId, isReady) {
+        super(740);
+        this.characterId = characterId;
+        this.isReady = isReady;
+    }
+    serialize() {
+        if (this.characterId < 0 || this.characterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.characterId + ") on element characterId.");
+        }
+        this.buffer.writeVarLong(this.characterId);
+        this.buffer.writeBoolean(this.isReady);
+    }
+    deserialize(buffer) {
+        this.characterId = buffer.readVarUhLong();
+        if (this.characterId < 0 || this.characterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.characterId + ") on element of GameFightHumanReadyStateMessage.characterId.");
+        }
+        this.isReady = buffer.readBoolean();
+    }
+}
+
+export class GameFightStartMessage extends ProtocolMessage {
+    constructor(idols) {
+        super(712);
+        this.idols = idols;
+    }
+    serialize() {
+        this.buffer.writeShort(this.idols.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.idols.length) {
+            this.idols[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = null;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = new Idol();
+            _loc4_.deserialize(buffer);
+            this.idols.push(_loc4_);
+            _loc3_++;
+        }
+    }
+}
+
+export class GameRolePlayShowChallengeMessage extends ProtocolMessage {
+    constructor(commonsInfos) {
+        super(301);
+        this.commonsInfos = commonsInfos;
+    }
+    serialize() {
+        this.commonsInfos.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        this.commonsInfos = new FightCommonInformations();
+        this.commonsInfos.deserialize(buffer);
+    }
+}
+
+export class GameFightJoinRequestMessage extends ProtocolMessage {
+    constructor(fighterId, fightId) {
+        super(701);
+        this.fighterId = fighterId;
+        this.fightId = fightId;
+    }
+    serialize() {
+        if (this.fighterId < -9007199254740990 || this.fighterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.fighterId + ") on element fighterId.");
+        }
+        this.buffer.writeDouble(this.fighterId);
+        this.buffer.writeInt(this.fightId);
+    }
+    deserialize(buffer) {
+        this.fighterId = buffer.readDouble();
+        if (this.fighterId < -9007199254740990 || this.fighterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.fighterId + ") on element of GameFightJoinRequestMessage.fighterId.");
+        }
+        this.fightId = buffer.readInt();
+    }
+}
+
+export class GameRolePlayRemoveChallengeMessage extends ProtocolMessage {
+    constructor(fightId) {
+        super(300);
+        this.fightId = fightId;
+    }
+    serialize() {
+        this.buffer.writeInt(this.fightId);
+    }
+    deserialize(buffer) {
+        this.fightId = buffer.readInt();
+    }
+}
+
+export class GameContextQuitMessage extends ProtocolMessage {
+    constructor() {
+    super(255);
+    }
+    serialize(){
+    }
+    deserialize(buffer){
+    }
+}
+
+export class GameFightLeaveMessage extends ProtocolMessage {
+    constructor(charId) {
+        super(721);
+        this.charId = charId;
+    }
+    serialize() {
+        if (this.charId < -9007199254740990 || this.charId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.charId + ") on element charId.");
+        }
+        this.buffer.writeDouble(this.charId);
+    }
+    deserialize(buffer) {
+        this.charId = buffer.readDouble();
+        if (this.charId < -9007199254740990 || this.charId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.charId + ") on element of GameFightLeaveMessage.charId.");
+        }
+    }
+}
+
+export class GameFightEndMessage extends ProtocolMessage {
+    constructor(duration, ageBonus, lootShareLimitMalus, results, namedPartyTeamsOutcomes) {
+        super(720);
+        this.duration = duration;
+        this.ageBonus = ageBonus;
+        this.lootShareLimitMalus = lootShareLimitMalus;
+        this.results = results;
+        this.namedPartyTeamsOutcomes = namedPartyTeamsOutcomes;
+    }
+    serialize() {
+        if (this.duration < 0) {
+            Logger.error("Forbidden value (" + this.duration + ") on element duration.");
+        }
+        this.buffer.writeInt(this.duration);
+        this.buffer.writeShort(this.ageBonus);
+        this.buffer.writeShort(this.lootShareLimitMalus);
+        this.buffer.writeShort(this.results.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.results.length) {
+            this.buffer.writeShort((this.results[_loc2_]).protocolId);
+            this.results[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+        this.buffer.writeShort(this.namedPartyTeamsOutcomes.length);
+        var _loc3_ = 0;
+        while (_loc3_ < this.namedPartyTeamsOutcomes.length) {
+            this.namedPartyTeamsOutcomes[_loc3_].serialize(this.buffer);
+            _loc3_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc6_ = 0;
+        var _loc7_ = null;
+        var _loc8_ = null;
+        this.duration = buffer.readInt();
+        if (this.duration < 0) {
+            Logger.error("Forbidden value (" + this.duration + ") on element of GameFightEndMessage.duration.");
+        }
+        this.ageBonus = buffer.readShort();
+        this.lootShareLimitMalus = buffer.readShort();
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc6_ = buffer.readUnsignedShort();
+            _loc7_ = ProtocolTypeManager.getInstance(FightResultListEntry, _loc6_);
+            _loc7_.deserialize(buffer);
+            this.results.push(_loc7_);
+            _loc3_++;
+        }
+        var _loc4_ = buffer.readUnsignedShort();
+        var _loc5_ = 0;
+        while (_loc5_ < _loc4_) {
+            _loc8_ = new NamedPartyTeamWithOutcome();
+            _loc8_.deserialize(buffer);
+            this.namedPartyTeamsOutcomes.push(_loc8_);
+            _loc5_++;
+        }
+    }
+}
+
+export class GameFightSynchronizeMessage extends ProtocolMessage {
+    constructor(fighters) {
+        super(5921);
+        this.fighters = fighters;
+    }
+    serialize() {
+        this.buffer.writeShort(this.fighters.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.fighters.length) {
+            this.buffer.writeShort((this.fighters[_loc2_]).protocolId);
+            this.fighters[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc5_ = null;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readUnsignedShort();
+            _loc5_ = ProtocolTypeManager.getInstance(GameFightFighterInformations, _loc4_);
+            _loc5_.deserialize(buffer);
+            this.fighters.push(_loc5_);
+            _loc3_++;
+        }
+    }
+}
+
+export class GameFightRemoveTeamMemberMessage extends ProtocolMessage {
+    constructor(fightId, teamId, charId) {
+        super(711);
+        this.fightId = fightId;
+        this.teamId = teamId;
+        this.charId = charId;
+    }
+    serialize() {
+        if (this.fightId < 0) {
+            Logger.error("Forbidden value (" + this.fightId + ") on element fightId.");
+        }
+        this.buffer.writeShort(this.fightId);
+        this.buffer.writeByte(this.teamId);
+        if (this.charId < -9007199254740990 || this.charId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.charId + ") on element charId.");
+        }
+        this.buffer.writeDouble(this.charId);
+    }
+    deserialize(buffer) {
+        this.fightId = buffer.readShort();
+        if (this.fightId < 0) {
+            Logger.error("Forbidden value (" + this.fightId + ") on element of GameFightRemoveTeamMemberMessage.fightId.");
+        }
+        this.teamId = buffer.readByte();
+        if (this.teamId < 0) {
+            Logger.error("Forbidden value (" + this.teamId + ") on element of GameFightRemoveTeamMemberMessage.teamId.");
+        }
+        this.charId = buffer.readDouble();
+        if (this.charId < -9007199254740990 || this.charId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.charId + ") on element of GameFightRemoveTeamMemberMessage.charId.");
+        }
+    }
+}
+
+export class GameFightTurnListMessage extends ProtocolMessage {
+    constructor(ids, deadsIds) {
+        super(713);
+        this.ids = ids;
+        this.deadsIds = deadsIds;
+    }
+    serialize() {
+        this.buffer.writeShort(this.ids.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.ids.length) {
+            if (this.ids[_loc2_] < -9007199254740990 || this.ids[_loc2_] > 9007199254740990) {
+                Logger.error("Forbidden value (" + this.ids[_loc2_] + ") on element 1 (starting at 1) of ids.");
+            }
+            this.buffer.writeDouble(this.ids[_loc2_]);
+            _loc2_++;
+        }
+        this.buffer.writeShort(this.deadsIds.length);
+        var _loc3_ = 0;
+        while (_loc3_ < this.deadsIds.length) {
+            if (this.deadsIds[_loc3_] < -9007199254740990 || this.deadsIds[_loc3_] > 9007199254740990) {
+                Logger.error("Forbidden value (" + this.deadsIds[_loc3_] + ") on element 2 (starting at 1) of deadsIds.");
+            }
+            this.buffer.writeDouble(this.deadsIds[_loc3_]);
+            _loc3_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc6_ = null;
+        var _loc7_ = null;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc6_ = buffer.readDouble();
+            if (_loc6_ < -9007199254740990 || _loc6_ > 9007199254740990) {
+                Logger.error("Forbidden value (" + _loc6_ + ") on elements of ids.");
+            }
+            this.ids.push(_loc6_);
+            _loc3_++;
+        }
+        var _loc4_ = buffer.readUnsignedShort();
+        var _loc5_ = 0;
+        while (_loc5_ < _loc4_) {
+            _loc7_ = buffer.readDouble();
+            if (_loc7_ < -9007199254740990 || _loc7_ > 9007199254740990) {
+                Logger.error("Forbidden value (" + _loc7_ + ") on elements of deadsIds.");
+            }
+            this.deadsIds.push(_loc7_);
+            _loc5_++;
+        }
+    }
+}
+
+export class GameFightTurnStartMessage extends ProtocolMessage {
+    constructor(id, waitTime) {
+        super(714);
+        this.id = id;
+        this.waitTime = waitTime;
+    }
+    serialize() {
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        this.buffer.writeDouble(this.id);
+        if (this.waitTime < 0) {
+            Logger.error("Forbidden value (" + this.waitTime + ") on element waitTime.");
+        }
+        this.buffer.writeVarInt(this.waitTime);
+    }
+    deserialize(buffer) {
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of GameFightTurnStartMessage.id.");
+        }
+        this.waitTime = buffer.readVarUhInt();
+        if (this.waitTime < 0) {
+            Logger.error("Forbidden value (" + this.waitTime + ") on element of GameFightTurnStartMessage.waitTime.");
+        }
+    }
+}
+
+export class GameFightTurnEndMessage extends ProtocolMessage {
+    constructor(id) {
+        super(719);
+        this.id = id;
+    }
+    serialize() {
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        this.buffer.writeDouble(this.id);
+    }
+    deserialize(buffer) {
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of GameFightTurnEndMessage.id.");
+        }
+    }
+}
+
+export class GameFightTurnFinishMessage extends ProtocolMessage {
+    constructor(isAfk) {
+        super(718);
+        this.isAfk = isAfk;
+    }
+    serialize() {
+        this.buffer.writeBoolean(this.isAfk);
+    }
+    deserialize(buffer) {
+        this.isAfk = buffer.readBoolean();
+    }
+}
+
+
+export class AbstractGameActionMessage extends ProtocolMessage {
+    constructor(actionId, sourceId) {
+        super(1000);
+        this.actionId = actionId;
+        this.sourceId = sourceId;
+    }
+    serialize() {
+        if (this.actionId < 0) {
+            Logger.error("Forbidden value (" + this.actionId + ") on element actionId.");
+        }
+        this.buffer.writeVarShort(this.actionId);
+        if (this.sourceId < -9007199254740990 || this.sourceId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.sourceId + ") on element sourceId.");
+        }
+        this.buffer.writeDouble(this.sourceId);
+    }
+    deserialize(buffer) {
+        this.actionId = buffer.readVarUhShort();
+        if (this.actionId < 0) {
+            Logger.error("Forbidden value (" + this.actionId + ") on element of AbstractGameActionMessage.actionId.");
+        }
+        this.sourceId = buffer.readDouble();
+        if (this.sourceId < -9007199254740990 || this.sourceId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.sourceId + ") on element of AbstractGameActionMessage.sourceId.");
+        }
+    }
+}
+
+export class GameActionFightPointsVariationMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.delta = param4;
+        this.messageId = 1030;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        this.buffer.writeShort(this.delta);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightPointsVariationMessage.targetId.");
+        }
+        this.delta = buffer.readShort();
+    }
+}
+
+export class SequenceStartMessage extends ProtocolMessage {
+    constructor(sequenceType, authorId) {
+        super(955);
+        this.sequenceType = sequenceType;
+        this.authorId = authorId;
+    }
+    serialize() {
+        this.buffer.writeByte(this.sequenceType);
+        if (this.authorId < -9007199254740990 || this.authorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.authorId + ") on element authorId.");
+        }
+        this.buffer.writeDouble(this.authorId);
+    }
+    deserialize(buffer) {
+        this.sequenceType = buffer.readByte();
+        this.authorId = buffer.readDouble();
+        if (this.authorId < -9007199254740990 || this.authorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.authorId + ") on element of SequenceStartMessage.authorId.");
+        }
+    }
+}
+
+export class SequenceEndMessage extends ProtocolMessage {
+    constructor(actionId, authorId, sequenceType) {
+        super(956);
+        this.actionId = actionId;
+        this.authorId = authorId;
+        this.sequenceType = sequenceType;
+    }
+    serialize() {
+        if (this.actionId < 0) {
+            Logger.error("Forbidden value (" + this.actionId + ") on element actionId.");
+        }
+        this.buffer.writeVarShort(this.actionId);
+        if (this.authorId < -9007199254740990 || this.authorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.authorId + ") on element authorId.");
+        }
+        this.buffer.writeDouble(this.authorId);
+        this.buffer.writeByte(this.sequenceType);
+    }
+    deserialize(buffer) {
+        this.actionId = buffer.readVarUhShort();
+        if (this.actionId < 0) {
+            Logger.error("Forbidden value (" + this.actionId + ") on element of SequenceEndMessage.actionId.");
+        }
+        this.authorId = buffer.readDouble();
+        if (this.authorId < -9007199254740990 || this.authorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.authorId + ") on element of SequenceEndMessage.authorId.");
+        }
+        this.sequenceType = buffer.readByte();
+    }
+}
+
+export class GameFightTurnReadyMessage extends ProtocolMessage {
+    constructor(isReady) {
+        super(716);
+        this.isReady = isReady;
+    }
+    serialize() {
+        this.buffer.writeBoolean(this.isReady);
+    }
+    deserialize(buffer) {
+        this.isReady = buffer.readBoolean();
+    }
+}
+
+export class GameFightTurnReadyRequestMessage extends ProtocolMessage {
+    constructor(id) {
+        super(715);
+        this.id = id;
+    }
+    serialize() {
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        this.buffer.writeDouble(this.id);
+    }
+    deserialize(buffer) {
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of GameFightTurnReadyRequestMessage.id.");
+        }
+    }
+}
+
+export class GameFightTurnStartPlayingMessage extends ProtocolMessage {
+    constructor() {
+        super(6465);
+    }
+    serialize() {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class NotificationListMessage extends ProtocolMessage {
+    constructor(flags) {
+        super(6087);
+        this.flags = flags;
+    }
+    serialize() {
+        this.buffer.writeShort(this.flags.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.flags.length) {
+            this.buffer.writeVarInt(this.flags[_loc2_]);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readVarInt();
+            this.flags.push(_loc4_);
+            _loc3_++;
+        }
+    }
+}
+
+export class PartyKickRequestMessage extends AbstractPartyMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.playerId = param2;
+        this.messageId = 5592;
+    }
+    serialize() {
+        super.serialize();
+        if (this.playerId < 0 || this.playerId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.playerId + ") on element playerId.");
+        }
+        this.buffer.writeVarLong(this.playerId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.playerId = buffer.readVarLong();
+        if (this.playerId < 0 || this.playerId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.playerId + ") on element of PartyKickRequestMessage.playerId.");
+        }
+    }
+}
+
+export class PartyLeaderUpdateMessage extends AbstractPartyEventMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.partyLeaderId = param2;
+        this.messageId = 5578;
+    }
+
+    serialize() {
+        super.serialize();
+        if (this.partyLeaderId < 0 || this.partyLeaderId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.partyLeaderId + ") on element partyLeaderId.");
+        }
+        this.buffer.writeVarLong(this.partyLeaderId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.partyLeaderId = buffer.readVarUhLong();
+        if (this.partyLeaderId < 0 || this.partyLeaderId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.partyLeaderId + ") on element of PartyLeaderUpdateMessage.partyLeaderId.");
+        }
+    }
+}

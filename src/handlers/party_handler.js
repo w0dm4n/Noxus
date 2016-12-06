@@ -28,7 +28,6 @@ export default class PartyHandler {
             if (target)
             {
                 if (!IgnoredHandler.isIgnoringForSession(target, client.character) && !IgnoredHandler.isIgnoring(target, client.account)) {
-                    if (!target.character.isBusy()) {
                         try {
                             if (client.character.party == null)
                                 client.character.party = new PartyFriend(client.character);
@@ -38,9 +37,6 @@ export default class PartyHandler {
                         catch (error) {
                             Logger.error(error);
                         }
-                    }
-                    else
-                        client.character.replyLangsMessage(1, 209, []);
                 }
                 else
                     client.character.replyLangsMessage(1, 370, [target.character.name]);
@@ -92,5 +88,30 @@ export default class PartyHandler {
             else
                 client.character.replyImportant("Impossible de trouver ce groupe.");
         }
+    }
+
+    static handlePartyKickRequestMessage(client, packet)
+    {
+        if (client.character.party && WorldServer.getPartyById(client.character.party.id)
+        && client.character.party.isInParty(client.character))
+        {
+            if (packet.partyId == client.character.party.id)
+            {
+                if (client.character.party.isLeader(client.character))
+                {
+                    var target = WorldServer.getOnlineClientByCharacterId(packet.playerId);
+                    if (target) {
+                        client.character.party.removeMember(target.character, false);
+                        target.character.replyImportant("Vous avez été exclu du groupe.");
+                    }
+                }
+                else
+                    client.character.replyImportant("Impossible car vous n'êtes pas le chef du groupe.")
+            }
+            else
+                client.character.replyError("Une erreur est survenu, le groupe est invalide.");
+        }
+        else
+            client.character.replyImportant("Impossible car vous n'êtes pas dans un groupe.");
     }
 }

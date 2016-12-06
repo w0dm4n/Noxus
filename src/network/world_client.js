@@ -8,6 +8,7 @@ import Formatter from "../utils/formatter"
 import Processor from "./processor"
 import World from "./world"
 import FriendHandler from "../handlers/friend_handler"
+import Fight from "../game/fight/fight"
 
 var arrayBufferToBuffer = require('arraybuffer-to-buffer');
 var base64 = require('base64-js');
@@ -17,12 +18,18 @@ export default class WorldClient {
     constructor(socket) {
         this.socket = socket;
         this.receive();
+        this.socketState = true;
         this.send(new Messages.ProtocolRequiredMessage(Common.DOFUS_PROTOCOL_ID, Common.DOFUS_PROTOCOL_ID));
         this.send(new Messages.HelloGameMessage());
     }
 
     close() {
-        this.socket.end();
+        try {
+            if(this.socketState) this.socket.end();
+        }
+        catch (e) {
+            Logger.error("Can't disconnect player: " + e);
+        }
     }
 
     receive() {
@@ -35,9 +42,14 @@ export default class WorldClient {
         });
 
         this.socket.on('end', function(data){
+            this.socketState = false;
             if(self.character != null) {
                 if(self.character.getMap() != null) {
                     self.character.getMap().removeClient(self);
+                }
+
+                if(self.character.isInFight()) {
+                    self.character.fight.leaveFight(self.character.fighter, Fight.FIGHT_LEAVE_TYPE.DISCONNECTED);
                 }
             }
             World.removeClient(self);
@@ -62,17 +74,26 @@ export default class WorldClient {
     }
 
     send(packet) {
-        packet.serialize();
-        var messageBuffer = new IO.CustomDataWrapper(new ByteArray());
-        var offset = NetworkMessage.writePacket(messageBuffer, packet.messageId, packet.buffer._data);
-        var b = arrayBufferToBuffer(messageBuffer.data.buffer);
-        if(offset == undefined) {
-            offset = 2;
-        }
-        var finalBuffer = b.slice(0, packet.buffer._data.write_position + offset);
-        packet.buffer = new IO.CustomDataWrapper();
-        this.socket.write(finalBuffer); 
+        try {
+            if(!this.socketState) {
+                Logger.error("Can't send packet to client because the socket state is closed");
+                return;
+            }
+            packet.serialize();
+            var messageBuffer = new IO.CustomDataWrapper(new ByteArray());
+            var offset = NetworkMessage.writePacket(messageBuffer, packet.messageId, packet.buffer._data);
+            var b = arrayBufferToBuffer(messageBuffer.data.buffer);
+            if(offset == undefined) {
+                offset = 2;
+            }
+            var finalBuffer = b.slice(0, packet.buffer._data.write_position + offset);
+            packet.buffer = new IO.CustomDataWrapper();
+            this.socket.write(finalBuffer);
 
-        Logger.debug("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")"); 
+            Logger.debug("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")");
+        }
+        catch (e) {
+            Logger.error("Can't send packet to client because: " + e);
+        }
     }
 }

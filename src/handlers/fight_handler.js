@@ -50,6 +50,7 @@ export default class FightHandler {
 
                     // Create fight properly
                     var fight = new ChallengeFight(client, target);
+                    fight.map.fights.push(fight);
                     client.character.fight = fight;
                     target.character.fight = fight;
                     fight.initialize();
@@ -74,6 +75,40 @@ export default class FightHandler {
         if(client.character.isInFight()) {
             Logger.debug("Request fight placement to cellId: " + packet.cellId);
             client.character.fighter.team.fight.requestFightPlacement(client.character.fighter, packet.cellId);
+        }
+    }
+
+    static handleGameFightReadyMessage(client, packet) {
+        if(client.character.isInFight()) {
+            Logger.debug("Request fight ready state: " + packet.isReady);
+            client.character.fighter.setReadyState(packet.isReady);
+        }
+    }
+
+    static handleGameFightJoinRequestMessage(client, packet) {
+        var fight = client.character.getMap().getFightById(packet.fightId);
+        if(fight) {
+            if(fight.fightState == Fight.FIGHT_STATES.STARTING) {
+                fight.joinTeam(client, packet.fighterId);
+            }
+            else {
+                Logger.debug("Fight is started, can't join");
+            }
+        }
+        else {
+            Logger.debug("Fight not found on the map, maybe started ?");
+        }
+    }
+
+    static handleGameContextQuitMessage(client, packet) {
+        if(client.character.isInFight()) {
+            client.character.fight.leaveFight(client.character.fighter, Fight.FIGHT_LEAVE_TYPE.ABANDONED);
+        }
+    }
+
+    static handleGameFightTurnFinishMessage(client, packet) {
+        if(client.character.isInFight()) {
+            client.character.fighter.passTurn();
         }
     }
 }

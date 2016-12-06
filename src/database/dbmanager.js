@@ -388,6 +388,27 @@ export default class DBManager {
         });
     }
 
+    static getNpcs(callback) {
+        var collection = DBManager.db.collection('npcs');
+        collection.find({}).toArray(function(err, npcs){
+            callback(npcs);
+        });
+    }
+
+    static getNpcActions(callback) {
+        var collection = DBManager.db.collection('npc_actions');
+        collection.find({}).toArray(function(err, npcActions){
+            callback(npcActions);
+        });
+    }
+
+    static getNpcMessages(callback) {
+        var collection = DBManager.db.collection('npc_messages');
+        collection.find({}).toArray(function(err, npcMessages){
+            callback(npcMessages);
+        });
+    }
+
     static getSpellsLevels(callback) {
         var collection = DBManager.db.collection('spells_levels');
         collection.find({}).toArray(function(err, spellsLevels){

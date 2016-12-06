@@ -58,6 +58,7 @@ export default class Processor {
         5582: { message: Messages.PartyRefuseInvitationMessage, handler:PartyHandler.handlePartyRefuseInvitationMessage },
         5580: { message: Messages.PartyAcceptInvitationMessage, handler:PartyHandler.handlePartyAcceptInvitationMessage },
         5593: { message: Messages.PartyLeaveRequestMessage, handler:PartyHandler.handlePartyLeaveRequestMessage },
+        5592: { message: Messages.PartyKickRequestMessage, handler:PartyHandler.handlePartyKickRequestMessage },
 
         //Item handler
         3021: {message: Messages.ObjectSetPositionMessage, handler: ItemHandler.handleObjectSetPositionMessage},
@@ -69,7 +70,11 @@ export default class Processor {
         // Fight handler
         5731: {message: Messages.GameRolePlayPlayerFightRequestMessage, handler: FightHandler.handleGameRolePlayPlayerFightRequestMessage},
         5732: {message: Messages.GameRolePlayPlayerFightFriendlyAnswerMessage, handler: FightHandler.handleGameRolePlayPlayerFightFriendlyAnswerMessage},
-        704: {message: Messages.GameFightPlacementPositionRequestMessage, handler: FightHandler.handleGameFightPlacementPositionRequestMessage}
+        704: {message: Messages.GameFightPlacementPositionRequestMessage, handler: FightHandler.handleGameFightPlacementPositionRequestMessage},
+        708: {message: Messages.GameFightReadyMessage, handler: FightHandler.handleGameFightReadyMessage},
+        701: {message: Messages.GameFightJoinRequestMessage, handler: FightHandler.handleGameFightJoinRequestMessage},
+        255: {message: Messages.GameContextQuitMessage, handler: FightHandler.handleGameContextQuitMessage},
+        718: {message: Messages.GameFightTurnFinishMessage, handler: FightHandler.handleGameFightTurnFinishMessage},
     } 
 
     static handle(client, messageId, buffer) {

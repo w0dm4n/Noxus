@@ -26,33 +26,6 @@ export default class Party {
         WorldServer.partys.push(this);
     }
 
-    /*
-    checkIndex(index)
-    {
-        var partys = WorldServer.party;
-        for (var i in partys)
-        {
-            if (partys[i].id == index)
-                return false;
-        }
-        return true;
-    }
-
-    generatePartyId() {
-        var index = 0;
-        for (var i in WorldServer.party)
-            index++;
-        if (this.checkIndex(index))
-            return index;
-        else
-        {
-            for (var i in WorldServer.party)
-                index++;
-            return index;
-        }
-    }
-    */
-
     dispose()
     {
         for (var i in this.members) {
@@ -71,15 +44,16 @@ export default class Party {
     sendToParty(message){
         for (var i in this.members) {
             if (this.members[i] != null && this.members[i].client != null) {
-                this.members[i].client.send(message);
+                try { this.members[i].client.send(message); } catch (error) { Logger.error(error); }
             }
         }
     }
 
     sendToPartyExcept(message, character) {
         for (var i in this.members) {
-            if ((this.members[i] != null && this.members[i].client != null) && this.members[i]._id != character._id)
-                this.members[i].client.send(message);
+            if ((this.members[i] != null && this.members[i].client != null) && this.members[i]._id != character._id) {
+                try { this.members[i].client.send(message); } catch (error) { Logger.error(error); }
+            }
         }
     }
 
@@ -90,7 +64,13 @@ export default class Party {
             if (this.members[i]._id == character._id)
             {
                 if ((this.members[i] != null && this.members[i].client != null) && !isOnDisconnect) {
-                    this.members[i].client.send(new Messages.PartyLeaveMessage(this.id));
+                    try {
+                        this.members[i].client.send(new Messages.PartyLeaveMessage(this.id));
+                    }
+                    catch (error)
+                    {
+                        Logger.error(error);
+                    }
                     this.members[i].party = null;
                     this.members[i].invitation = null;
                 }
@@ -138,10 +118,13 @@ export default class Party {
     {
         if (this.members.length > 2) {
             this.removeFromMembers(character, isOnDisconnect);
+            if (this.isLeader(character)) {
+                this.assignNewLeader();
+            }
             if (!isOnDisconnect)
-                this.sendToParty(new Messages.PartyMemberRemoveMessage(this.id));
+                this.sendToParty(new Messages.PartyMemberRemoveMessage(this.id, character._id));
             else {
-                this.sendToPartyExcept(new Messages.PartyMemberRemoveMessage(this.id), character);
+                this.sendToPartyExcept(new Messages.PartyMemberRemoveMessage(this.id, character._id), character);
             }
         }
         else
@@ -162,5 +145,21 @@ export default class Party {
         }
         return false;
     }
+
+     isLeader(character){
+        return (this.leader._id == character._id) ? true : false;
+    }
+
+    assignNewLeader() {
+        var oldLeader = this.leader;
+        for (var i in this.members)
+        {
+            this.leader = this.members[i];
+            break;
+        }
+        this.sendToPartyExcept(new Messages.PartyLeaderUpdateMessage(this.id, this.leader._id), oldLeader);
+    }
 }
+
+
 

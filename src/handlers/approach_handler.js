@@ -178,6 +178,7 @@ export default class ApproachHandler {
         if(selectedCharacter != null) {
             client.character = selectedCharacter;
             client.character.client = client;
+            client.send(new Messages.NotificationListMessage([]));
             client.send(new Messages.CharacterSelectedSuccessMessage(client.character.getCharacterBaseInformations(), false));
             client.send(new Messages.CharacterCapabilitiesMessage(6339));
             client.send(new Messages.CharacterLoadingCompleteMessage());
@@ -202,14 +203,29 @@ export default class ApproachHandler {
         client.send(new Messages.CharacterDeletionErrorMessage(errorType));
     }
 
+    static removeCharacter(characterId, client) {
+        for (var character in client.characters)
+        {
+            if (client.characters[character]._id == characterId) {
+                var index = client.characters.indexOf(client.characters[character]);
+                if (index != -1)
+                    client.characters.splice(index, 1);
+                return;
+            }
+        }
+        return false;
+    }
+
     static handleCharacterDeletionRequestMessage(client, packet)
     {
         if (ApproachHandler.checkCharacterId(packet.characterId, client))
         {
             DBManager.deleteCharacter({_id: packet.characterId}, function(success)
             {
-                if (success)
-                    ApproachHandler.sendCharactersList(client);
+                if (success) {
+                    ApproachHandler.removeCharacter(packet.characterId, client);
+                    setTimeout(function() {ApproachHandler.sendCharactersList(client)}, 200);
+                }
                 else
                     ApproachHandler.sendCharacterDeletionError(1, client);
             });

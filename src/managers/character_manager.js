@@ -4,6 +4,7 @@ import * as Messages from "../io/dofus/messages"
 import GameHandler from "../handlers/game_handler"
 import Logger from "../io/logger"
 import SpellManager from "../game/spell/spell_manager"
+import WorldServer from "../network/world"
 
 export default class CharacterManager {
 
@@ -96,6 +97,15 @@ export default class CharacterManager {
     {
         if (character.party != null)
             character.party.removeMember(character, true);
+        else if (character.invitation != null)
+        {
+            var party = WorldServer.getPartyById(character.invitation.party.id);
+            if (party)
+            {
+                if (party.isInParty(character))
+                    party.removeMember(character, true);
+            }
+        }
         try { FriendHandler.sendFriendDisconnect(character.client); } catch (error) { Logger.error(error); }
         try { character.save(); } catch (error) { Logger.error(error); }
     }

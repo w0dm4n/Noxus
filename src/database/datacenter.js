@@ -1,5 +1,6 @@
 import DBManager from "./dbmanager.js"
 import Logger from "../io/logger"
+import Look from "../managers/look_managers.js"
 
 export default class Datacenter {
 
@@ -15,6 +16,9 @@ export default class Datacenter {
     static spells;
     static spellsLevels;
     static elements;
+    static npcs;
+    static npcMessages;
+    static npcActions;
 
     static load(callback) {
         var loaders = [
@@ -30,6 +34,9 @@ export default class Datacenter {
             Datacenter.loadSpells,
             Datacenter.loadSpellsLevels,
             Datacenter.loadElements,
+            Datacenter.loadNpcs,
+            Datacenter.loadNpcMessages,
+            Datacenter.loadNpcActions,
 
         ];
         var loaded = 0;
@@ -84,6 +91,32 @@ export default class Datacenter {
         });
     }
 
+    static loadNpcs(callback) {
+        DBManager.getNpcs(function(npcs){
+            Datacenter.npcs = npcs;
+            Logger.infos("Loaded '" + npcs.length + "' npcs");
+            console.log("id : "+npcs[13]._id);
+            Look.parseLook(npcs[13].look);
+            callback();
+
+        });
+    }
+
+    static loadNpcMessages(callback) {
+        DBManager.getNpcMessages(function(npcMessages){
+            Datacenter.npcMessages = npcMessages;
+            Logger.infos("Loaded '" + npcMessages.length + "' npc_messages");
+            callback();
+        });
+    }
+
+    static loadNpcActions(callback) {
+        DBManager.getNpcActions(function(npcAction){
+            Datacenter.npcAction = npcAction;
+            Logger.infos("Loaded '" + npcAction.length + "' npc_actions");
+            callback();
+        });
+    }
      static loadInteractivesObjects(callback) {
         DBManager.getInteractivesObjects(function(interactivesObjects){
             Datacenter.interactivesObjects = interactivesObjects;
@@ -156,8 +189,6 @@ export default class Datacenter {
         return null;
     }
 
-    
-
     static getInteractivesMap(id) {
         var result = new Array();
         for(var i in Datacenter.interactivesObjects) {
@@ -170,5 +201,4 @@ export default class Datacenter {
         else
             return [];
     }
-
 }

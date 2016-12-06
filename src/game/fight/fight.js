@@ -1,11 +1,21 @@
 import Logger from "../../io/logger"
 import FightTeam from "./fight_team"
 import Fighter from "./fighter"
+import FightTimeline from "./fight_timeline"
 import * as Messages from "../../io/dofus/messages"
 import * as Types from "../../io/dofus/types"
 import Basic from "../../utils/basic"
+import MapPoint from "../../game/pathfinding/map_point"
+import Pathfinding from "../../game/pathfinding/pathfinding"
+
 
 export default class Fight {
+
+    static FIGHT_LEAVE_TYPE = {
+        ABANDONED: 1,
+        FORCED: 2,
+        DISCONNECTED: 3,
+    }
 
     static FIGHT_TYPE = {
         FIGHT_TYPE_CHALLENGE: 0,
@@ -14,11 +24,12 @@ export default class Fight {
     };
 
     static FIGHT_STATES = {
-      "STARTING": 1
+        "STARTING": 1,
+        "FIGHTING": 2
     };
 
     constructor(fighterOne) {
-        this.id = new Date().valueOf();
+        this.id = Math.floor(new Date().valueOf() / 10000);
         this.fightState = Fight.FIGHT_STATES.STARTING;
         this.fightType = Fight.FIGHT_TYPE.FIGHT_TYPE_CHALLENGE;
         this.teams = {};
@@ -26,6 +37,9 @@ export default class Fight {
         this.map = fighterOne.character.getMap();
         this.placementCells = { red: this.generateProceduralyCells(), blue: this.generateProceduralyCells() }; // TODO: Fix place cells or with pattern
         this.teams.red.placementCells = this.placementCells.red;
+        this.winner = null;
+        this.looser = null;
+        this.timeline = new FightTimeline(this);
     }
 
     send(packet) {
@@ -46,12 +60,26 @@ export default class Fight {
         for(var fighter of this.allFighters()) {
             this.map.removeClient(fighter.character.client);
             fighter.createContext();
-            fighter.send(new Messages.GameFightStartingMessage(this.fightType, this.teams.blue.leader.character._id, this.teams.red.leader.character._id));
+            fighter.send(new Messages.GameFightStartingMessage(this.fightType, this.teams.blue.leader.id, this.teams.red.leader.id));
             this.sendStartupPhase(fighter)
         }
         for(var fighter of this.allFighters()) {
             this.showFighters(fighter);
         }
+        this.displayMapBlades();
+    }
+
+    getFightCommonInformations() {
+        return new Types.FightCommonInformations(this.id, this.fightType, [this.teams.red.getFightTeamInformations(), this.teams.blue.getFightTeamInformations()],
+            [this.teams.red.bladeCellId, this.teams.blue.bladeCellId], [this.teams.red.getFightOptionsInformations(), this.teams.blue.getFightOptionsInformations()])
+    }
+
+    displayMapBlades() {
+        this.map.send(new Messages.GameRolePlayShowChallengeMessage(this.getFightCommonInformations()));
+    }
+
+    removeMapBlades() {
+        this.map.send(new Messages.GameRolePlayRemoveChallengeMessage(this.id));
     }
 
     generateProceduralyCells() {
@@ -64,8 +92,27 @@ export default class Fight {
     }
 
     sendStartupPhase(fighter) {
+        if(this.fightState != Fight.FIGHT_STATES.STARTING) return;
         fighter.send(new Messages.GameFightPlacementPossiblePositionsMessage(this.placementCells.red, this.placementCells.blue, fighter.team.id));
         fighter.team.placeFighterOnAvailableCell(fighter);
+    }
+
+    joinTeam(client, fighterId) {
+        var fighter = new Fighter(client.character, this);
+        var team = null;
+        if(this.teams.red.isInThisTeam(fighterId)) {
+            team = this.teams.red;
+        } else if (this.teams.blue.isInThisTeam(fighterId))  {
+            team = this.teams.blue;
+        }
+        team.addMember(fighter);
+
+        this.map.removeClient(fighter.character.client);
+        fighter.createContext();
+        fighter.send(new Messages.GameFightStartingMessage(this.fightType, this.teams.blue.leader.id, this.teams.red.leader.id));
+        this.sendStartupPhase(fighter)
+        this.showFighters(fighter);
+        this.send(new Messages.GameFightShowFighterMessage(fighter.getGameFightFighterInformations()));
     }
 
     getFighterOnCell(cellId) {
@@ -75,6 +122,11 @@ export default class Fight {
         return null;
     }
 
+    getOppositeTeam(team) {
+        if(this.teams.red.leader.id == team.leader.id) return this.teams.blue;
+        return this.teams.red;
+    }
+
     showFighters(fighter) {
         for(var other of this.allFighters()) {
             fighter.send(new Messages.GameFightShowFighterMessage(other.getGameFightFighterInformations()));
@@ -82,6 +134,7 @@ export default class Fight {
     }
 
     requestFightPlacement(fighter, cellId) {
+        if(this.fightState != Fight.FIGHT_STATES.STARTING) return;
         if(this.getFighterOnCell(cellId)){
             return;
         }
@@ -91,10 +144,168 @@ export default class Fight {
     }
 
     refreshPlacementPositions() {
+        if(this.fightState != Fight.FIGHT_STATES.STARTING) return;
         var dispositions = [];
         for(var f of this.allFighters()) {
-            dispositions.push(new Types.IdentifiedEntityDispositionInformations(f.cellId, f.dirId, f.character._id));
+            dispositions.push(new Types.IdentifiedEntityDispositionInformations(f.cellId, f.dirId, f.id));
         }
         this.send(new Messages.GameEntitiesDispositionMessage(dispositions));
+    }
+
+    checkStartupPhaseReady() {
+        if(this.fightState != Fight.FIGHT_STATES.STARTING) return;
+        var ready = true;
+        for(var f of this.allFighters()) {
+            if(!f.ready) ready = false;
+        }
+        if(ready) {
+            Logger.debug("Starting fight id: " + this.id);
+            this.startFight();
+        }
+    }
+
+    leaveFight(fighter, leaveType) {
+        var team = fighter.team;
+        if(this.fightState == Fight.FIGHT_STATES.STARTING) {
+
+
+        }
+        else if(this.fightState == Fight.FIGHT_STATES.FIGHTING){
+            //TODO
+        }
+
+        if(leaveType != Fight.FIGHT_LEAVE_TYPE.FORCED) {
+            var ended = false;
+            if(team.leader.id == fighter.id) {
+                this.setWinner(this.getOppositeTeam(team));
+                this.endFight();
+                ended = true;
+            }
+
+            if(team.members.length <= 0) {
+                this.setWinner(this.getOppositeTeam(team));
+                this.endFight();
+                ended = true;
+            }
+            if(ended) {
+                if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) this.showFightEnd(fighter, this.winner, this.looser);
+            }
+            else {
+                if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) this.showFightEnd(fighter, this.getOppositeTeam(team), team);
+            }
+
+            if(this.fightState == Fight.FIGHT_STATES.FIGHTING && leaveType != Fight.FIGHT_LEAVE_TYPE.FORCED){
+                if(this.timeline.currentFighter().id == fighter.id) {
+                    this.timeline.next();
+                    this.timeline.remixTimeline();
+                }
+            }
+        }
+        else {
+            if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) this.showFightEnd(fighter, this.winner, this.looser);
+        }
+
+        fighter.alive = false;
+        fighter.character.fight = null;
+        fighter.character.fighter = null;
+        if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) {
+            fighter.restoreRoleplayContext();
+            this.send(new Messages.GameFightRemoveTeamMemberMessage(this.id, team.id, fighter.id));
+            this.send(new Messages.GameFightLeaveMessage(fighter.id));
+            this.send(new Messages.GameContextRemoveElementMessage(fighter.id));
+        }
+    }
+
+    synchronizeFight() {
+        var gameFightFighterInformations = [];
+        for(var f of this.allFighters()) {
+            gameFightFighterInformations.push(f.getGameFightFighterInformations());
+        }
+        this.send(new Messages.GameFightSynchronizeMessage(gameFightFighterInformations));
+    }
+
+    setWinner(team) {
+        this.winner = team;
+        this.looser = this.getOppositeTeam(team);
+    }
+
+    endFight() {
+        if(this.fightState == Fight.FIGHT_STATES.STARTING) {
+            this.removeMapBlades();
+        }
+        for(var f of this.allFighters()) {
+            this.leaveFight(f, Fight.FIGHT_LEAVE_TYPE.FORCED);
+        }
+    }
+
+    showFightEnd(fighter, winners, loosers) {
+        if(this.fightState == Fight.FIGHT_STATES.STARTING) {
+            var winnerResult = [];
+            var looserResult = [];
+
+            for(var f of winners.members) {
+                winnerResult.push(new Types.FightResultMutantListEntry(2, 0, new Types.FightLoot([], 0), f.id, f.alive, f.level));
+            }
+
+            for(var f of loosers.members) {
+                looserResult.push(new Types.FightResultMutantListEntry(0, 0, new Types.FightLoot([], 0), f.id, f.alive, f.level));
+            }
+
+            var result = [];
+            result = result.concat(winnerResult);
+            result = result.concat(looserResult);
+
+            fighter.send(new Messages.GameFightEndMessage(0, -1, -1, result, []));
+        }
+        else if(this.fightState == Fight.FIGHT_STATES.FIGHTING){
+            //TODO
+        }
+    }
+
+    startFight() {
+        this.fightState = Fight.FIGHT_STATES.FIGHTING;
+        this.removeMapBlades();
+        this.send(new Messages.GameFightStartMessage([])); //TODO: Idols
+        this.timeline.refreshTimeline();
+        this.timeline.next();
+    }
+
+    getFightObstacles() {
+        var obs = [];
+        for(var f of this.allFighters()) {
+            obs.push(f.cellId);
+        }
+        return obs;
+    }
+
+    requestMove(fighter, keyMovements, pathfinding) {
+        Logger.debug("Fighter id: " + fighter.id + ", request move (keys len: " + keyMovements.length + ")");
+        var cells = [];
+        for(var i in keyMovements) {
+            cells.push({id: keyMovements[i] & 4095, dir: keyMovements[i] >> 12, point: MapPoint.fromCellId(keyMovements[i] & 4095)});
+        }
+        pathfinding.fightMode = true;
+        var lastPath = cells[0].id;
+        var pathTotal = [];
+        if(cells.length > 0) {
+            for(var i = 1; i < cells.length; i++) {
+                var pathfinding = new Pathfinding(this.map.dataMapProvider);
+                var path = pathfinding.findShortestPath(lastPath, cells[i].id, this.getFightObstacles());
+                lastPath = cells[i].id;
+                pathTotal = pathTotal.concat(path);
+            }
+        }
+
+        var distance = pathTotal.length;
+        Logger.debug("Fighter want to move to a distance equals to: " + distance);
+
+        if(fighter.current.MP - distance >= 0) {
+            this.send(new Messages.SequenceStartMessage(5, fighter.id));
+            this.send(new Messages.GameMapMovementMessage(keyMovements, fighter.id));
+            this.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
+            this.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
+            fighter.cellId = cells[cells.length - 1].id;
+            fighter.current.MP -= distance;
+        }
     }
 }

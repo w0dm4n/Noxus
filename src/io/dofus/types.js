@@ -478,6 +478,10 @@ export class CharacterCharacteristicsInformations {
         if (this.kamas < 0) {
             Logger.error("Forbidden value (" + this.kamas + ") on element kamas.");
         }
+        buffer.writeVarLong(this.experienceNextLevelFloor);
+        if (this.kamas < 0) {
+            Logger.error("Forbidden value (" + this.kamas + ") on element kamas.");
+        }
         buffer.writeInt(this.kamas);
         if (this.statsPoints < 0) {
             Logger.error("Forbidden value (" + this.statsPoints + ") on element statsPoints.");
@@ -1522,12 +1526,12 @@ export class SpellItem extends Item {
         if (this.spellLevel < 1 || this.spellLevel > 6) {
             Logger.error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
         }
-        buffer.writeByte(this.spellLevel);
+        buffer.writeShort(this.spellLevel);
     }
     deserialize(buffer) {
         super.deserialize(buffer);
         this.spellId = buffer.readInt();
-        this.spellLevel = buffer.readByte();
+        this.spellLevel = buffer.readShort();
         if (this.spellLevel < 1 || this.spellLevel > 6) {
             Logger.error("Forbidden value (" + this.spellLevel + ") on element of SpellItem.spellLevel.");
         }
@@ -2119,6 +2123,380 @@ export class IdentifiedEntityDispositionInformations extends EntityDispositionIn
         this.id = buffer.readDouble();
         if (this.id < -9007199254740990 || this.id > 9007199254740990) {
             Logger.error("Forbidden value (" + this.id + ") on element of IdentifiedEntityDispositionInformations.id.");
+        }
+    }
+}
+
+export class FightCommonInformations {
+    constructor(fightId, fightType, fightTeams, fightTeamsPositions, fightTeamsOptions) {
+        this.fightId = fightId;
+        this.fightType = fightType;
+        this.fightTeams = fightTeams;
+        this.fightTeamsPositions = fightTeamsPositions;
+        this.fightTeamsOptions = fightTeamsOptions;
+        this.protocolId = 43;
+    }
+    serialize(buffer) {
+        buffer.writeInt(this.fightId);
+        buffer.writeByte(this.fightType);
+        buffer.writeShort(this.fightTeams.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.fightTeams.length) {
+            buffer.writeShort(this.fightTeams[_loc2_].protocolId);
+            this.fightTeams[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+        buffer.writeShort(this.fightTeamsPositions.length);
+        var _loc3_ = 0;
+        while (_loc3_ < this.fightTeamsPositions.length) {
+            if (this.fightTeamsPositions[_loc3_] < 0 || this.fightTeamsPositions[_loc3_] > 559) {
+                Logger.error("Forbidden value (" + this.fightTeamsPositions[_loc3_] + ") on element 4 (starting at 1) of fightTeamsPositions.");
+            }
+            buffer.writeVarShort(this.fightTeamsPositions[_loc3_]);
+            _loc3_++;
+        }
+        buffer.writeShort(this.fightTeamsOptions.length);
+        var _loc4_ = 0;
+        while (_loc4_ < this.fightTeamsOptions.length) {
+            this.fightTeamsOptions[_loc4_].serialize(buffer);
+            _loc4_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc8_ = 0;
+        var _loc9_ = null;
+        var _loc10_ = 0;
+        var _loc11_ = null;
+        this.fightId = buffer.readInt();
+        this.fightType = buffer.readByte();
+        if (this.fightType < 0) {
+            Logger.error("Forbidden value (" + this.fightType + ") on element of FightCommonInformations.fightType.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc8_ = buffer.readUnsignedShort();
+            _loc9_ = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.fight.FightTeamInformations, _loc8_);
+            _loc9_.deserialize(buffer);
+            this.fightTeams.push(_loc9_);
+            _loc3_++;
+        }
+        var _loc4_ = buffer.readUnsignedShort();
+        var _loc5_ = 0;
+        while (_loc5_ < _loc4_) {
+            _loc10_ = buffer.readVarUhShort();
+            if (_loc10_ < 0 || _loc10_ > 559) {
+                Logger.error("Forbidden value (" + _loc10_ + ") on elements of fightTeamsPositions.");
+            }
+            this.fightTeamsPositions.push(_loc10_);
+            _loc5_++;
+        }
+        var _loc6_ = buffer.readUnsignedShort();
+        var _loc7_ = 0;
+        while (_loc7_ < _loc6_) {
+            _loc11_ = new Types.FightOptionsInformations();
+            _loc11_.deserialize(buffer);
+            this.fightTeamsOptions.push(_loc11_);
+            _loc7_++;
+        }
+    }
+}
+
+export class AbstractFightTeamInformations {
+    constructor(teamId, leaderId, teamSide, teamTypeId, nbWaves) {
+        this.teamId = teamId;
+        this.leaderId = leaderId;
+        this.teamSide = teamSide;
+        this.teamTypeId = teamTypeId;
+        this.nbWaves = nbWaves;
+        this.protocolId = 116;
+    }
+    serialize(buffer) {
+        buffer.writeByte(this.teamId);
+        if (this.leaderId < -9007199254740990 || this.leaderId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.leaderId + ") on element leaderId.");
+        }
+        buffer.writeDouble(this.leaderId);
+        buffer.writeByte(this.teamSide);
+        buffer.writeByte(this.teamTypeId);
+        if (this.nbWaves < 0) {
+            Logger.error("Forbidden value (" + this.nbWaves + ") on element nbWaves.");
+        }
+        buffer.writeByte(this.nbWaves);
+    }
+    deserialize(buffer) {
+        this.teamId = buffer.readByte();
+        if (this.teamId < 0) {
+            Logger.error("Forbidden value (" + this.teamId + ") on element of AbstractFightTeamInformations.teamId.");
+        }
+        this.leaderId = buffer.readDouble();
+        if (this.leaderId < -9007199254740990 || this.leaderId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.leaderId + ") on element of AbstractFightTeamInformations.leaderId.");
+        }
+        this.teamSide = buffer.readByte();
+        this.teamTypeId = buffer.readByte();
+        if (this.teamTypeId < 0) {
+            Logger.error("Forbidden value (" + this.teamTypeId + ") on element of AbstractFightTeamInformations.teamTypeId.");
+        }
+        this.nbWaves = buffer.readByte();
+        if (this.nbWaves < 0) {
+            Logger.error("Forbidden value (" + this.nbWaves + ") on element of AbstractFightTeamInformations.nbWaves.");
+        }
+    }
+}
+
+export class FightTeamInformations extends AbstractFightTeamInformations {
+    constructor(param1, param2, param3, param4, param5, teamMembers) {
+        super(param1, param2, param3, param4, param5);
+        this.teamMembers = teamMembers;
+        this.protocolId = 33;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeShort(this.teamMembers.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.teamMembers.length) {
+            buffer.writeShort(this.teamMembers[_loc2_].protocolId);
+            this.teamMembers[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc5_ = null;
+        super.deserialize(buffer);
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readUnsignedShort();
+            _loc5_ = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.fight.FightTeamMemberInformations, _loc4_);
+            _loc5_.deserialize(buffer);
+            this.teamMembers.push(_loc5_);
+            _loc3_++;
+        }
+    }
+}
+
+export class FightOptionsInformations {
+    constructor(isSecret, isRestrictedToPartyOnly, isClosed, isAskingForHelp) {
+        this.isSecret = isSecret;
+        this.isRestrictedToPartyOnly = isRestrictedToPartyOnly;
+        this.isClosed = isClosed;
+        this.isAskingForHelp = isAskingForHelp;
+        this.protocolId = 20;
+    }
+    serialize(buffer) {
+        var _loc2_ = 0;
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 0, this.isSecret);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 1, this.isRestrictedToPartyOnly);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 2, this.isClosed);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 3, this.isAskingForHelp);
+        buffer.writeByte(_loc2_);
+    }
+    deserialize(buffer) {
+        var _loc2_ = buffer.readByte();
+        this.isSecret = IO.BooleanByteWrapper.getFlag(_loc2_, 0);
+        this.isRestrictedToPartyOnly = IO.BooleanByteWrapper.getFlag(_loc2_, 1);
+        this.isClosed = IO.BooleanByteWrapper.getFlag(_loc2_, 2);
+        this.isAskingForHelp = IO.BooleanByteWrapper.getFlag(_loc2_, 3);
+    }
+}
+
+export class FightTeamMemberInformations {
+    constructor(id) {
+        this.id = id;
+        this.protocolId = 44;
+    }
+    serialize(buffer) {
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        buffer.writeDouble(this.id);
+    }
+    deserialize(buffer) {
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of FightTeamMemberInformations.id.");
+        }
+    }
+}
+
+export class FightTeamMemberCharacterInformations extends FightTeamMemberInformations {
+    constructor(param1, name, level) {
+        super(param1);
+        this.name = name;
+        this.level = level;
+        this.protocolId = 13;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeUTF(this.name);
+        if (this.level < 0 || this.level > 255) {
+            Logger.error("Forbidden value (" + this.level + ") on element level.");
+        }
+        buffer.writeByte(this.level);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.name = buffer.readUTF();
+        this.level = buffer.readUnsignedByte();
+        if (this.level < 0 || this.level > 255) {
+            Logger.error("Forbidden value (" + this.level + ") on element of FightTeamMemberCharacterInformations.level.");
+        }
+    }
+}
+
+export class NamedPartyTeamWithOutcome {
+    constructor(team, outcome) {
+        this.team = team;
+        this.outcome = outcome;
+        this.protocolId = 470;
+    }
+    serialize(buffer) {
+        this.team.serialize(buffer);
+        buffer.writeVarShort(this.outcome);
+    }
+    deserialize(buffer) {
+        this.team = new Types.NamedPartyTeam();
+        this.team.deserialize(buffer);
+        this.outcome = buffer.readVarUhShort();
+        if (this.outcome < 0) {
+            Logger.error("Forbidden value (" + this.outcome + ") on element of NamedPartyTeamWithOutcome.outcome.");
+        }
+    }
+}
+
+export class NamedPartyTeam {
+    constructor(teamId, partyName) {
+        this.teamId = teamId;
+        this.partyName = partyName;
+        this.protocolId = 469;
+    }
+    serialize(buffer) {
+        buffer.writeByte(this.teamId);
+        buffer.writeUTF(this.partyName);
+    }
+    deserialize(buffer) {
+        this.teamId = buffer.readByte();
+        if (this.teamId < 0) {
+            Logger.error("Forbidden value (" + this.teamId + ") on element of NamedPartyTeam.teamId.");
+        }
+        this.partyName = buffer.readUTF();
+    }
+}
+
+export class FightResultListEntry {
+    constructor(outcome, wave, rewards) {
+        this.outcome = outcome;
+        this.wave = wave;
+        this.rewards = rewards;
+        this.protocolId = 16;
+    }
+    serialize(buffer) {
+        buffer.writeVarShort(this.outcome);
+        if (this.wave < 0) {
+            Logger.error("Forbidden value (" + this.wave + ") on element wave.");
+        }
+        buffer.writeByte(this.wave);
+        this.rewards.serialize(buffer);
+    }
+    deserialize(buffer) {
+        this.outcome = buffer.readVarUhShort();
+        if (this.outcome < 0) {
+            Logger.error("Forbidden value (" + this.outcome + ") on element of FightResultListEntry.outcome.");
+        }
+        this.wave = buffer.readByte();
+        if (this.wave < 0) {
+            Logger.error("Forbidden value (" + this.wave + ") on element of FightResultListEntry.wave.");
+        }
+        this.rewards = new Types.FightLoot();
+        this.rewards.deserialize(buffer);
+    }
+}
+
+export class FightResultFighterListEntry extends FightResultListEntry {
+    constructor(param1, param2, param3, id, alive) {
+        super(param1, param2, param3);
+        this.id = id;
+        this.alive = alive;
+        this.protocolId = 189;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        buffer.writeDouble(this.id);
+        buffer.writeBoolean(this.alive);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of FightResultFighterListEntry.id.");
+        }
+        this.alive = buffer.readBoolean();
+    }
+}
+
+export class FightResultMutantListEntry extends FightResultFighterListEntry {
+    constructor(param1, param2, param3, param4, param5, level) {
+        super(param1, param2, param3, param4, param5);
+        this.level = level;
+        this.protocolId = 216;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.level < 0) {
+            Logger.error("Forbidden value (" + this.level + ") on element level.");
+        }
+        buffer.writeVarShort(this.level);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.level = buffer.readVarUhShort();
+        if (this.level < 0) {
+            Logger.error("Forbidden value (" + this.level + ") on element of FightResultMutantListEntry.level.");
+        }
+    }
+}
+
+export class FightLoot {
+    constructor(objects, kamas) {
+        this.objects = objects;
+        this.kamas = kamas;
+        this.protocolId = 41;
+    }
+    serialize(buffer) {
+        buffer.writeShort(this.objects.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.objects.length) {
+            if (this.objects[_loc2_] < 0) {
+                Logger.error("Forbidden value (" + this.objects[_loc2_] + ") on element 1 (starting at 1) of objects.");
+            }
+            buffer.writeVarShort(this.objects[_loc2_]);
+            _loc2_++;
+        }
+        if (this.kamas < 0) {
+            Logger.error("Forbidden value (" + this.kamas + ") on element kamas.");
+        }
+        buffer.writeVarInt(this.kamas);
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readVarUhShort();
+            if (_loc4_ < 0) {
+                Logger.error("Forbidden value (" + _loc4_ + ") on elements of objects.");
+            }
+            this.objects.push(_loc4_);
+            _loc3_++;
+        }
+        this.kamas = buffer.readVarUhInt();
+        if (this.kamas < 0) {
+            Logger.error("Forbidden value (" + this.kamas + ") on element of FightLoot.kamas.");
         }
     }
 }

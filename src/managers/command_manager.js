@@ -21,7 +21,7 @@ export default class CommandManager {
     static commandsList = [
         { name:"infos", role:AccountRole.MODERATOR , description:"Donne des informations sur le serveur"},
         { name:"start", role:AccountRole.PLAYER , description: "Téléporte a la zone de départ"},
-        { name:"goto", role:AccountRole.ANIMATOR, description: "Téléporte sur une map (mapId, cellId)"},
+        { name:"go", role:AccountRole.ANIMATOR, description: "Téléporte sur une map (mapId, cellId)"},
         { name:"help", role:AccountRole.ANIMATOR, description: "Affiche les commandes disponible"},
         { name:"kick", role:AccountRole.ANIMATOR, description: "Permet d'expulser un joueur du serveur"},
         { name:"ban", role:AccountRole.MODERATOR, description: "Permet de bannir un joueur du serveur"},
@@ -30,6 +30,8 @@ export default class CommandManager {
         { name:"item", role:AccountRole.MODERATOR, description: "Créer un objet pour le personnage"},
         { name:"emote", role:AccountRole.ANIMATOR, description: "Ajoute une ou plusieurs émote a un personnage"},
         { name:"kamas", role:AccountRole.ANIMATOR, description: "Ajoute des kamas a un personnage"},
+        { name:"goto", role:AccountRole.ANIMATOR, description: "Téleporte a un personnage"},
+        { name:"gome", role:AccountRole.ANIMATOR, description: "Téleporte un personnage sur votre position"},
     ];
     
     static manageCommand(command, client)
@@ -102,7 +104,7 @@ export default class CommandManager {
         });
     }
 
-    static handle_goto(data, client)
+    static handle_go(data, client)
     {
         if (data[1] && data[2])
         {
@@ -112,7 +114,7 @@ export default class CommandManager {
             });
         }
         else
-            client.character.replyError("Erreur de syntaxe (.goto mapId cellId)");
+            client.character.replyError("Erreur de syntaxe (.go mapId cellId)");
     }
 
     static handle_help(data, client)
@@ -303,5 +305,47 @@ export default class CommandManager {
         }
         else
             client.character.replyError("Erreur de syntaxe (.kamas characterName amount)");
+    }
+
+    static handle_goto(data, client)
+    {
+        if (client.character.isBusy())
+        {
+            client.character.replyError("Impossible car vous êtes occupé.");
+            return;
+        }
+        if(data[1]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target) {
+                WorldManager.teleportClient(client, target.character.mapid, target.character.cellid, function(result) {
+                    if (!result)
+                        client.character.replyError("Impossible de vous téléporter sur cette carte.");
+                });
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.goto characterName)");
+    }
+
+    static handle_gome(data, client)
+    {
+        if(data[1]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target) {
+                if (!target.character.isBusy()) {
+                    WorldManager.teleportClient(target, client.character.mapid, client.character.cellid, function (result) {
+                        if (!result)
+                            client.character.replyError("Impossible de téleporter le personnage sur cette carte.");
+                    });
+                } else
+                    client.character.replyError("Impossible de téléporter ce personnage car il est occupé.");
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage.");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.gome characterName)");
     }
 }

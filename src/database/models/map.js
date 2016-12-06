@@ -23,6 +23,7 @@ export default class Map {
         this.rightNeighbourId = raw.rightNeighbourId;
         this.cellsRaw = raw.cells;
         this.dataMapProvider = new DataMapProvider(this);
+        this.fights = [];
     }
 
     init() {
@@ -69,6 +70,13 @@ export default class Map {
             if(client.character) {
                 if(client.character._id == characterId) return client;
             }
+        }
+        return null;
+    }
+
+    getFightById(fightId) {
+        for(var fight of this.fights) {
+            if(fight.id == fightId) return fight;
         }
         return null;
     }

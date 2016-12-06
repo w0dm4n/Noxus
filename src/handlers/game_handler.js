@@ -66,19 +66,25 @@ export default class GameHandler {
             cells.push({id: packet.keyMovements[i] & 4095, dir: packet.keyMovements[i] >> 12, point: MapPoint.fromCellId(packet.keyMovements[i] & 4095)});
         }
         var distance = cells[0].point.distanceTo(cells[cells.length - 1].point);
-		
-		// Calcul du chemin
+
+        var pathfinding = new Pathfinding(client.character.getMap().dataMapProvider);
+		/* Calcul du chemin
         var pathfinding = new Pathfinding(client.character.getMap().dataMapProvider);
         var path = pathfinding.findShortestPath(cells[0].id, cells[cells.length - 1].id, []);
         var keyMovements = [];
         keyMovements.push(client.character.cellid & 4095);
         for(var i in path) {
             keyMovements.push(path[i].id & 4095);
-        }
-		
-        client.character.getMap().send(new Messages.GameMapMovementMessage(packet.keyMovements, client.character._id));
-        client.character.nextCellId = cells[cells.length - 1].id;
-		client.character.dirId = cells[0].point.orientationTo(cells[cells.length - 1].point);
+        }*/
+
+        if(!client.character.isInFight()) {
+            client.character.getMap().send(new Messages.GameMapMovementMessage(packet.keyMovements, client.character._id));
+            client.character.nextCellId = cells[cells.length - 1].id;
+            client.character.dirId = cells[0].point.orientationTo(cells[cells.length - 1].point);
+		}
+        else {
+			client.character.fight.requestMove(client.character.fighter, packet.keyMovements, pathfinding);
+		}
     }
 	
 	static handleGameMapMovementCancelMessage(client, packet) {
