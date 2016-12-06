@@ -8,7 +8,7 @@ d = function(it){
 return console.log(format(it));
 };
 
-file = "./MapPositions"
+file = "./NpcActions"
 console.log("Processing " + file);
 BigEndianReader = (function(){
 BigEndianReader.displayName = 'BigEndianReader';

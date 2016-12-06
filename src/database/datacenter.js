@@ -11,6 +11,10 @@ export default class Datacenter {
     static interactivesObjects;
     static emotes;
     static items;
+    static maps_positions;
+    static spells;
+    static spellsLevels;
+    static elements;
 
     static load(callback) {
         var loaders = [
@@ -22,6 +26,11 @@ export default class Datacenter {
             Datacenter.loadInteractivesObjects,
             Datacenter.loadEmotes,
             Datacenter.loadItems,
+            Datacenter.loadMapsPositions,
+            Datacenter.loadSpells,
+            Datacenter.loadSpellsLevels,
+            Datacenter.loadElements,
+
         ];
         var loaded = 0;
 
@@ -83,6 +92,22 @@ export default class Datacenter {
         });
     }
 
+    static loadMapsPositions(callback) {
+        DBManager.getMapPositions(function(maps_positions){
+            Datacenter.maps_positions = maps_positions;
+            Logger.infos("Loaded '" + maps_positions.length + "' maps_positions object(s)");
+            callback();
+        });
+    }
+
+    static loadElements(callback) {
+        DBManager.getElements(function(elements){
+            Datacenter.elements = elements;
+            Logger.infos("Loaded '" + elements.length + "' elements object(s)");
+            callback();
+        });
+    }
+
     static loadEmotes(callback) {
         DBManager.getEmotes(function(emotes){
             Datacenter.emotes = emotes;
@@ -98,6 +123,22 @@ export default class Datacenter {
             callback();
         });
     }
+    
+    static loadSpells(callback) {
+        DBManager.getSpells(function(spells){
+            Datacenter.spells = spells;
+            Logger.infos("Loaded '" + spells.length + "' spell(s)");
+            callback();
+        });
+    }
+
+    static loadSpellsLevels(callback) {
+        DBManager.getSpellsLevels(function(spells){
+            Datacenter.spellsLevels = spells;
+            Logger.infos("Loaded '" + spells.length + "' spell level(s)");
+            callback();
+        });
+    }
 
     static getMapScrollActionById(id) {
         for(var i in Datacenter.mapScrollsActions) {
@@ -106,6 +147,16 @@ export default class Datacenter {
         }
         return null;
     }
+
+    static getMapElement(map,element) {
+        for(var i in Datacenter.elements) {
+            if(Datacenter.elements[i].Map_id == map && Datacenter.elements[i].Element_id  ==  element ) 
+            return Datacenter.elements[i];
+        }
+        return null;
+    }
+
+    
 
     static getInteractivesMap(id) {
         var result = new Array();

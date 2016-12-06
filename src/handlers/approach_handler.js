@@ -143,6 +143,7 @@ export default class ApproachHandler {
                     sex: packet.sex,
                     colors: packet.colors,
                     cosmeticId: packet.cosmeticId,
+                    scale: CharacterManager.getDefaultScale(packet.breed, packet.sex),
                     level: ConfigManager.configData.characters_start.level,
                     experience: CharacterManager.getExperienceFloorByLevel(ConfigManager.configData.characters_start.level).xp,
                     mapid: ConfigManager.configData.characters_start.startMap,
@@ -151,8 +152,8 @@ export default class ApproachHandler {
                     statsPoints: (ConfigManager.configData.characters_start.level * 5) - 5,
                     spellPoints: 0 + (ConfigManager.configData.characters_start.level) - 1,
                     bagId: -1,
-                    ZaapSave : "",
-                    ZaapExist : 0,
+                    zaapSave : 0,
+                    zaapKnows : [],
                 }, true);
                 DBManager.createCharacter(character, function(){
                     client.send(new Messages.CharacterCreationResultMessage(0));

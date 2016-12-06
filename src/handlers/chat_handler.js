@@ -11,11 +11,24 @@ import ChatChannel from "../enums/chat_activable_channels_enum"
 import Character from "../database/models/character"
 import CommandManager from "../managers/command_manager"
 import IgnoredHandler from "../handlers/ignored_handler"
+import AccountRoleEnum from "../enums/account_role_enum"
 
 export default class ChatHandler {
-    
+
+
+    static escapeHtml(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     static handleChatClientPrivateMessage(client, packet)
     {
+        if (packet.content.length > 256)
+            return;
         if (packet.receiver == client.character.name)
         {
             client.character.replyText("Le message n'a pas été envoyé : vous vous parlez à vous-même...");
@@ -26,15 +39,17 @@ export default class ChatHandler {
         var clientTarget = WorldServer.getOnlineClientByCharacterName(packet.receiver);
         if (clientTarget)
         {
+            if (client.account.role < AccountRoleEnum.ADMINISTRATOR)
+                packet.content = ChatHandler.escapeHtml(packet.content);
             if (client.character.canSendMessage()) {
-                if (!IgnoredHandler.isIgnoringForSession(clientTarget, client.character)) {
+                if (!IgnoredHandler.isIgnoringForSession(clientTarget, client.character) && !IgnoredHandler.isIgnoring(clientTarget, client.account)) {
                     client.send(new Messages.ChatServerCopyMessage(ChatChannel.PSEUDO_CHANNEL_PRIVATE, packet.content, time(), clientTarget.character.name, clientTarget.character._id, clientTarget.character.name));
                     clientTarget.send(new Messages.ChatServerMessage(ChatChannel.PSEUDO_CHANNEL_PRIVATE, packet.content, time(), clientTarget.character.name, client.character._id, client.character.name, client.account.uid));
                     client.character.updateLastMessage();
                 }
                 else
                 {
-                    client.character.replyLangsMessage(370, [clientTarget.character.name]);
+                    client.character.replyLangsMessage(1, 370, [clientTarget.character.name]);
                 }
             }
         }
@@ -44,6 +59,10 @@ export default class ChatHandler {
 
     static handleChatClientMultiMessage(client, packet)
     {
+        if (packet.content.length > 256)
+            return;
+        if (client.account.role < AccountRoleEnum.ADMINISTRATOR)
+            packet.content = ChatHandler.escapeHtml(packet.content);
         if (client.character.canSendMessage())
         {
             var time = Date.now || function() {return +new Date;};
@@ -80,6 +99,12 @@ export default class ChatHandler {
                         client.character.updateLastSeekMessage();
                     }
                 break;
+
+                case ChatChannel.CHANNEL_PARTY:
+                        if (client.character.party) {
+                            client.character.party.sendToParty(new Messages.ChatServerMessage(ChatChannel.CHANNEL_PARTY, packet.content, time(), client.character.name, client.character._id, client.character.name, client.account.uid));
+                        }
+                    break;
             }
             client.character.updateLastMessage();
         }

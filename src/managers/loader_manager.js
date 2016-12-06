@@ -21,6 +21,7 @@ export default class LoaderManager {
         try
         {
             client.account.friends = [];
+            client.account.ignoredsList = [];
 
             DBManager.getFriends({accountId: client.account.uid}, function(friends){
                 for (var i in friends) {
@@ -35,8 +36,22 @@ export default class LoaderManager {
                         });
                     })(friend);
                 }
-                Logger.infos("Account data successfully loaded for account " + client.account.username + " (" + client.account.uid + ")");
-                callback();
+                DBManager.getIgnoreds({accountId: client.account.uid}, function(ignoreds) {
+                    for (var i in ignoreds)
+                    {
+                        var ignored = ignoreds[i];
+                        (function(tmp2) {
+                            DBManager.getAccount({uid: tmp2.ignoredAccountId}, function (account) {
+                                if (account) {
+                                    tmp2.account = account;
+                                    client.account.ignoredsList.push(tmp2);
+                                }
+                            });
+                        })(ignored);
+                    }
+                    Logger.infos("Account data successfully loaded for account " + client.account.username + " (" + client.account.uid + ")");
+                    callback();
+                });
             });
         }
         catch (error)
@@ -70,8 +85,6 @@ export default class LoaderManager {
 
     static LoadCharacterData(client, callback)
     {
-
-        // load character emotes list
         LoaderManager.getFriendsOnline(client, function(online){
             client.character.friendsOnline = online;
             callback();

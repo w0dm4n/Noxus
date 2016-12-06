@@ -1,0 +1,431 @@
+[
+	{
+		"memberName": "EffectInstance",
+		"packageName": "com.ankamagames.dofus.datacenter.effects",
+		"fields": [
+			{
+				"name": "effectUid",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetMask",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "random",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "group",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInBuffUi",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInFightLog",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "rawZone",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "delay",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectElement",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "EffectInstanceInteger",
+		"packageName": "com.ankamagames.dofus.datacenter.effects.instances",
+		"fields": [
+			{
+				"name": "visibleInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "random",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "rawZone",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetMask",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInFightLog",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectUid",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectElement",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "value",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInBuffUi",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "delay",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "group",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "EffectInstanceDice",
+		"packageName": "com.ankamagames.dofus.datacenter.effects.instances",
+		"fields": [
+			{
+				"name": "visibleInTooltip",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "random",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "rawZone",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "targetMask",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "diceNum",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "duration",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInFightLog",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectUid",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "diceSide",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "visibleInBuffUi",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "value",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "effectElement",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "delay",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "triggers",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "group",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "SpellLevel",
+		"packageName": "com.ankamagames.dofus.datacenter.spells",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "spellId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "grade",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "spellBreed",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "apCost",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "minRange",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "range",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "castInLine",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "castInDiagonal",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "castTestLos",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "criticalHitProbability",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "criticalFailureProbability",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "needFreeCell",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "needTakenCell",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "needFreeTrapCell",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "rangeCanBeBoosted",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "maxStack",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "maxCastPerTurn",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "maxCastPerTarget",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "minCastInterval",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "initialCooldown",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "globalCooldown",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "minPlayerLevel",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "criticalFailureEndsTurn",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "hideEffects",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "hidden",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "playAnimation",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "statesRequired",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "statesForbidden",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "effects",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.effects.instances::EffectInstanceDice>",
+						"type": 3
+					}
+				]
+			},
+			{
+				"name": "criticalEffect",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.effects.instances::EffectInstanceDice>",
+						"type": 3
+					}
+				]
+			}
+		]
+	}
+]

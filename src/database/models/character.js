@@ -13,15 +13,18 @@ import Basic from "../../utils/basic"
 
 export default class Character {
 
-    
+
     lastSalesMessage = 0;
     lastSeekMessage = 0;
     lastMessage = 0;
     isTemporaryMuted = false;
     firstContext = true;
     client = null;
-    ignoredsList = [];
     ignoredForSession = [];
+    ignoredsList = [];
+    friends = [];
+    party = null;
+    dialog = null;
 
     constructor(raw, creation) {
         var self = this;
@@ -36,30 +39,21 @@ export default class Character {
         this.experience = raw.experience;
         this.mapid = raw.mapid;
         this.cellid = raw.cellid;
+        this.scale = raw.scale;
         this.dirId = raw.dirId;
         this.statsPoints = raw.statsPoints;
         this.spellPoints = raw.spellPoints;
         this.emotes = raw.emotes;
-        this.bagId = raw.bagId ? raw.bagId: -1;
+        this.bagId = raw.bagId ? raw.bagId : -1;
         this.skins = [];
-
-        this.stats = [];
-        this.stats[1] = new Types.CharacterBaseCharacteristic(6, 0, 0, 0, 0); // PA
-        this.stats[2] = new Types.CharacterBaseCharacteristic(3, 0, 0, 0, 0); // PM
-        this.stats[10] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.strength : 0, 0, 0, 0, 0);
-        this.stats[11] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.vitality : 0, 0, 0, 0, 0);
-        this.stats[12] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.wisdom : 0, 0, 0, 0, 0);
-        this.stats[13] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.chance : 0, 0, 0, 0, 0);
-        this.stats[14] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.agility : 0, 0, 0, 0, 0);
-        this.stats[15] = new Types.CharacterBaseCharacteristic(raw.stats ? raw.stats.intelligence : 0, 0, 0, 0, 0);
-        this.statsManager = new StatsManager(this);
-        this.ZaapSave = raw.ZaapSave;
-        this.ZaapExist = raw.ZaapExist;
-        this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
+        this.zaapSave = raw.zaapSave;
+        this.zaapKnows = raw.zaapKnows;
+        this.regenTimestamp = Math.floor(Date.now() / 1000);
+        this.spells = raw.spells ? raw.spells : [];
 
         // Bag creation
-        if(this.bagId == -1) {
-            if(!creation) {
+        if (this.bagId == -1) {
+            if (!creation) {
                 var bag = new ItemBag();
                 this.bindBag(bag);
                 this.updateBag();
@@ -67,8 +61,8 @@ export default class Character {
         }
         else {
             //Get bag by id
-            DBManager.getBag(this.bagId, function(bag) {
-                if(bag) {
+            DBManager.getBag(this.bagId, function (bag) {
+                if (bag) {
                     var itemBag = new ItemBag();
                     itemBag.fromRaw(bag);
                     self.itemBag = itemBag;
@@ -82,15 +76,19 @@ export default class Character {
                 }
             });
         }
+
+        this.stats = [];
+        this.statsManager = new StatsManager(this);
+        this.statsManager.recalculateStats(raw);
+
+        this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
     }
 
-    onDisconnect()
-    {
+    onDisconnect() {
         CharacterManager.onDisconnect(this);
     }
 
-    onConnected()
-    {
+    onConnected() {
         CharacterManager.onConnected(this);
     }
 
@@ -110,6 +108,12 @@ export default class Character {
         return 1;
     }
 
+    regen(life) {
+        this.life += life;
+        if (this.statsManager.getMaxLife() < this.life) this.life = this.statsManager.getMaxLife();
+        this.client.send(new Messages.UpdateLifePointsMessage(this.life, this.statsManager.getMaxLife()));
+    }
+
     getColors() {
         var nextColors = [];
         for (var i = 0; i < this.colors.length; i++) {
@@ -122,26 +126,26 @@ export default class Character {
         var appearenceToShow = [];
         appearenceToShow.push(parseInt(this.getBaseSkin()));
         appearenceToShow.push(parseInt(this.getHeadSkinId()));
-        if(this.itemBag) {
-            if(this.itemBag.getItemAtPosition(6)) appearenceToShow.push(this.itemBag.getItemAtPosition(6).getTemplate().appearanceId); // Head
-            if(this.itemBag.getItemAtPosition(7)) appearenceToShow.push(this.itemBag.getItemAtPosition(7).getTemplate().appearanceId); // Cape
+        if (this.itemBag) {
+            if (this.itemBag.getItemAtPosition(6)) appearenceToShow.push(this.itemBag.getItemAtPosition(6).getTemplate().appearanceId); // Head
+            if (this.itemBag.getItemAtPosition(7)) appearenceToShow.push(this.itemBag.getItemAtPosition(7).getTemplate().appearanceId); // Cape
         }
         this.skins = appearenceToShow;
     }
 
     refreshLookOnMap() {
-        if(this.getMap()) {
+        if (this.getMap()) {
             this.getMap().send(new Messages.GameContextRefreshEntityLookMessage(this._id, this.getEntityLook()));
         }
     }
 
     getSubentities() {
         var subentities = [];
-        if(this.itemBag) {
+        if (this.itemBag) {
             if (this.itemBag.getItemAtPosition(8)) {
                 let look = Basic.parseLook(this.itemBag.getItemAtPosition(8).getTemplate().look);
                 var entity = new Types.SubEntity(1, 0, new Types.EntityLook
-                    (parseInt(look[0]), [], [0, 0, 0, 0, 0], [look[3] ? parseInt(look[3]) : 100], []));
+                (parseInt(look[0]), [], [0, 0, 0, 0, 0], [look[3] ? parseInt(look[3]) : 100], []));
                 subentities.push(entity);
             }
         }
@@ -151,10 +155,11 @@ export default class Character {
     getEntityLook() {
         this.refreshEntityLook();
         return new Types.EntityLook(this.getBonesId(), this.skins,
-            this.getColors(), [120], this.getSubentities());
+            this.getColors(), [this.scale], this.getSubentities());
     }
 
     getCharacterBaseInformations() {
+        //return new Types.CharacterBaseInformations(this._id, this.name, this.level, this.getEntityLook(), this.breed, this.sex);
         return new Types.CharacterBaseInformations(this._id, this.name, this.level, this.getEntityLook(), this.breed, this.sex);
     }
 
@@ -164,9 +169,8 @@ export default class Character {
     }
 
     getGameRolePlayCharacterInformations(account) {
-        return new Types.GameRolePlayCharacterInformations(new Types.ActorAlignmentInformations(0, 0, 0, 0),
-            new Types.HumanInformations(this.getCharacterRestrictions(), this.sex, []), account.uid, this.name, this._id, this.getEntityLook(),
-            new Types.EntityDispositionInformations(this.cellid, this.dirId));
+        return new Types.GameRolePlayCharacterInformations(this._id, this.getEntityLook(), new Types.EntityDispositionInformations(this.cellid, this.dirId),
+            this.name, new Types.HumanInformations(this.getCharacterRestrictions(), this.sex, []), account.uid, new Types.ActorAlignmentInformations(0, 0, 0, 0));
     }
 
     getMap() {
@@ -174,28 +178,57 @@ export default class Character {
     }
 
     replyText(string) {
-        try { this.client.send(new Messages.TextInformationMessage(0, 0, [string])); }
-        catch (error) { Logger.error(error); }
+        try {
+            this.client.send(new Messages.TextInformationMessage(0, 0, [string]));
+        }
+        catch (error) {
+            Logger.error(error);
+        }
     }
 
     replyError(string) {
-        try { this.client.send(new Messages.TextInformationMessage(0, 0, ["<font color=\"#ff0000\">" + string + "</font>"])); }
-        catch (error) { Logger.error(error); }
+        try {
+            this.client.send(new Messages.TextInformationMessage(0, 0, ["<font color=\"#ff0000\">" + string + "</font>"]));
+        }
+        catch (error) {
+            Logger.error(error);
+        }
+    }
+
+    replyImportant(string) {
+        try {
+            this.client.send(new Messages.TextInformationMessage(0, 0, ["<font color=\"#E8890D\">" + string + "</font>"]));
+        }
+        catch (error) {
+            Logger.error(error);
+        }
     }
 
     replyWelcome(string) {
-        try { this.client.send(new Messages.TextInformationMessage(0, 0, ["<font color=\"#ffffff\">" + string + "</font>"])); }
-        catch (error) { Logger.error(error); }
+        try {
+            this.client.send(new Messages.TextInformationMessage(0, 0, ["<font color=\"#ffffff\">" + string + "</font>"]));
+        }
+        catch (error) {
+            Logger.error(error);
+        }
     }
 
-    replyLangsMessage(id, params) {
-        try { this.client.send(new Messages.TextInformationMessage(1, id, params)); }
-        catch (error) { Logger.error(error); }
+    replyLangsMessage(typeId, id, params) {
+        try {
+            this.client.send(new Messages.TextInformationMessage(typeId, id, params));
+        }
+        catch (error) {
+            Logger.error(error);
+        }
     }
 
-    replySystemMessage(string) {
-        try { this.client.send(new Messages.SystemMessageDisplayMessage(true, 61, [string])); }
-        catch (error) { Logger.error(error); }
+    replySystemMessage(hangup, string) {
+        try {
+            this.client.send(new Messages.SystemMessageDisplayMessage(hangup, 61, [string]));
+        }
+        catch (error) {
+            Logger.error(error);
+        }
     }
 
     canSendSalesMessage() {
@@ -203,7 +236,9 @@ export default class Character {
     }
 
     updateLastSalesMessage() {
-        var time = Date.now || function () { return +new Date; };
+        var time = Date.now || function () {
+                return +new Date;
+            };
         this.lastSalesMessage = time();
     }
 
@@ -212,7 +247,9 @@ export default class Character {
     }
 
     updateLastSeekMessage() {
-        var time = Date.now || function () { return +new Date; };
+        var time = Date.now || function () {
+                return +new Date;
+            };
         this.lastSeekMessage = time();
     }
 
@@ -221,7 +258,9 @@ export default class Character {
     }
 
     updateLastMessage() {
-        var time = Date.now || function () { return +new Date; };
+        var time = Date.now || function () {
+                return +new Date;
+            };
         this.lastMessage = time();
         this.isTemporaryMuted = false;
     }
@@ -238,7 +277,7 @@ export default class Character {
 
     ban(byName, reason) {
         var self = this;
-        DBManager.updateAccount(this.client.account.uid, { locked: 1 }, function () {
+        DBManager.updateAccount(this.client.account.uid, {locked: 1}, function () {
             if (reason)
                 self.disconnect("Vous avez été banni par " + byName + ": " + reason);
             else
@@ -258,6 +297,8 @@ export default class Character {
             spellPoints: this.spellPoints,
             life: this.life,
             bagId: this.bagId,
+            spells: this.spells,
+            scale: this.scale,
             stats: {
                 strength: this.statsManager.getStatById(10).base,
                 vitality: this.statsManager.getStatById(11).base,
@@ -265,30 +306,30 @@ export default class Character {
                 chance: this.statsManager.getStatById(13).base,
                 agility: this.statsManager.getStatById(14).base,
                 intelligence: this.statsManager.getStatById(15).base,
-            }
+            },
+            zaapKnows : this.zaapKnows
+
         };
         DBManager.updateCharacter(this._id, toUpdate, function () {
             Logger.infos("Character '" + self.name + "(" + self._id + ")' saved");
             if (callback) callback();
         });
     }
-    
-    sendEmotesList()
-    {
+
+    sendEmotesList() {
         CharacterManager.sendEmotesList(this);
     }
 
-    sendWarnOnStateMessages()
-    {
+    sendWarnOnStateMessages() {
         this.client.send(new Messages.FriendWarnOnConnectionStateMessage(this.client.account.warnOnConnection));
     }
 
     updateBag() {
         var self = this;
-        if(this.bagId == -1) {
-            if(this.itemBag != null) {
+        if (this.bagId == -1) {
+            if (this.itemBag != null) {
                 this.itemBag.money = ConfigManager.configData.characters_start.kamas;
-                this.itemBag.create(function(){
+                this.itemBag.create(function () {
                     self.bindBag(self.itemBag);
                     self.bagId = self.itemBag._id;
                     self.save();
@@ -299,31 +340,102 @@ export default class Character {
 
     bindBag(bag) {
         var self = this;
-        if(this.itemBag != null) {
+        if (this.itemBag != null) {
             this.itemBag.unbind();
         }
-        if(bag == null) return;
+        if (bag == null) return;
         this.itemBag = bag;
-        this.itemBag.onItemAdded = function(item) {
+        this.itemBag.onItemAdded = function (item) {
             Logger.debug("Item added to character bag");
             self.sendInventoryBag();
         };
 
-        this.itemBag.onItemDeleted = function(item) {
-            Logger.debug("Item removed to character bag");
+        this.itemBag.onItemDeleted = function (item) {
+            Logger.debug("Item removed from character bag");
             self.client.send(new Messages.ObjectDeletedMessage(item._id));
+            self.sendInventoryBag();
+        };
+
+        this.itemBag.onItemUpdated = function (item) {
+            Logger.debug("Item updated in character bag");
+            self.client.send(new Messages.ObjectQuantityMessage(item._id, item.quantity));
             self.sendInventoryBag();
         };
     }
 
     sendInventoryBag() {
-        if(this.itemBag == null) return;
+        if (this.itemBag == null) return;
         this.client.send(new Messages.InventoryWeightMessage(0, 1000));
         this.client.send(new Messages.InventoryContentMessage(this.itemBag.getObjectItemArray(), this.itemBag.money));
     }
-    
-    isBusy()
-    {
-        return true;
+
+    subKamas(amount) {
+        this.itemBag.money -= parseInt(amount);
+        this.sendInventoryBag();
+        this.replyText("Vous avez perdu " + amount + " kamas.");
+    }
+
+    addKamas(amount) {
+        this.itemBag.money = this.itemBag.money + parseInt(amount);
+        this.replyLangsMessage(0, 45, [amount]);
+        this.sendInventoryBag();
+    }
+
+    isInZaap() {
+        if (this.dialog.constructor.name == "ZaapDialog")
+            return true;
+        else
+            return false;
+    }
+
+    isInZaapi() {
+        if (this.dialog.constructor.name == "ZaapiDialog")
+            return true;
+        else
+            return false;
+    }
+
+    setDialog(typedialog) {
+        if (this.dialog != null)
+            this.dialog.close();
+
+        this.dialog = typedialog;
+    }
+
+    closeDialog(typedialog) {
+        if (this.dialog == typedialog)
+            this.dialog = null;
+    }
+
+    leaveDialog() {
+        if (this.dialog != null)
+            this.dialog.close();
+
+    }
+
+    addSpell(spell) {
+        this.spells.push(spell);
+        this.save();
+    }
+
+    isBusy() {
+        if (this.dialog != null)
+            return true;
+        if(this.requestedFighterId)
+            return true;
+        return false;
+    }
+
+    isInFight() {
+        return this.fighter ? true : false;
+    }
+
+    getPartyInformations() {
+        return new Types.PartyMemberInformations(this._id, this.name, this.level, this.getEntityLook(), this.breed, this.sex, this.life, this.statsManager.getMaxLife(),
+            100, 1, 1000, 0, 1, 1, this.mapid, this.getMap().subareaId, new Types.PlayerStatus(0), []);
+    }
+
+    getPartyGuestInformations(leaderId) {
+        return new Types.PartyGuestInformations(this._id, leaderId, this.name, this.getEntityLook(), this.breed, this.sex, new Types.PlayerStatus(0), []);
     }
 }

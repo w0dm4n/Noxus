@@ -1,0 +1,97 @@
+[
+	{
+		"memberName": "AnimFunNpcData",
+		"packageName": "com.ankamagames.dofus.datacenter.npcs",
+		"fields": [
+			{
+				"name": "animName",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "animWeight",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "Npc",
+		"packageName": "com.ankamagames.dofus.datacenter.npcs",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "dialogMessages",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "dialogReplies",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "actions",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "gender",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "look",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "animFunList",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.dofus.datacenter.npcs::AnimFunNpcData>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "fastAnimsFun",
+				"type": "Bool",
+				"vectorTypes": false
+			}
+		]
+	}
+]

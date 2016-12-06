@@ -109,103 +109,144 @@ export class CharacterMinimalInformations extends CharacterBasicMinimalInformati
 }
 
 export class CharacterMinimalPlusLookInformations extends CharacterMinimalInformations {
-    constructor(id, name, level, entityLook) {
-        super(id, name, level);
+    constructor(param1, param2, param3, entityLook) {
+        super(param1, param2, param3);
         this.entityLook = entityLook;
+        this.protocolId = 163;
     }
-
     serialize(buffer) {
         super.serialize(buffer);
         this.entityLook.serialize(buffer);
     }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.entityLook = new EntityLook();
+        this.entityLook.deserialize(buffer);
+    }
 }
 
 export class CharacterBaseInformations extends CharacterMinimalPlusLookInformations {
-
-    static typeId = 45;
-
-    constructor(id, name, level, entityLook, breed, sex) {
-        super(id, name, level, entityLook);
+    constructor(param1, param2, param3, param4, breed, sex) {
+        super(param1, param2, param3, param4);
         this.breed = breed;
         this.sex = sex;
+        this.protocolId = 45;
     }
-
     serialize(buffer) {
         super.serialize(buffer);
         buffer.writeByte(this.breed);
         buffer.writeBoolean(this.sex);
     }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.breed = buffer.readByte();
+        this.sex = buffer.readBoolean();
+    }
 }
 
 export class GameContextActorInformations {
     constructor(contextualId, look, disposition) {
-        this.protocolId = 150;
         this.contextualId = contextualId;
         this.look = look;
         this.disposition = disposition;
+        this.protocolId = 150;
     }
-
     serialize(buffer) {
+        if (this.contextualId < -9007199254740990 || this.contextualId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.contextualId + ") on element contextualId.");
+        }
         buffer.writeDouble(this.contextualId);
         this.look.serialize(buffer);
         buffer.writeShort(this.disposition.protocolId);
         this.disposition.serialize(buffer);
     }
+    deserialize(buffer) {
+        this.contextualId = buffer.readDouble();
+        if (this.contextualId < -9007199254740990 || this.contextualId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.contextualId + ") on element of GameContextActorInformations.contextualId.");
+        }
+        this.look = new EntityLook();
+        this.look.deserialize(buffer);
+        var _loc2_ = buffer.readUnsignedShort();
+        this.disposition = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.EntityDispositionInformations, _loc2_);
+        this.disposition.deserialize(buffer);
+    }
 }
 
 export class GameRolePlayActorInformations extends GameContextActorInformations {
-    constructor(contextualId, look, disposition) {
-        super(contextualId, look, disposition);
+    constructor(param1, param2, param3) {
+        super(param1, param2, param3);
         this.protocolId = 141;
     }
-
     serialize(buffer) {
         super.serialize(buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
     }
 }
 
 export class GameRolePlayNamedActorInformations extends GameRolePlayActorInformations {
-    constructor(name, contextualId, look, disposition) {
-        super(contextualId, look, disposition);
-        this.protocolId = 154;
+    constructor(param1, param2, param3, name) {
+        super(param1, param2, param3);
         this.name = name;
+        this.protocolId = 154;
     }
-
     serialize(buffer) {
         super.serialize(buffer);
         buffer.writeUTF(this.name);
     }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.name = buffer.readUTF();
+    }
 }
 
-
 export class GameRolePlayHumanoidInformations extends GameRolePlayNamedActorInformations {
-    constructor(humanoidInfo, accountId, name, contextualId, look, disposition) {
-        super(name, contextualId, look, disposition);
-        this.protocolId = 159;
+    constructor(param1, param2, param3, param4, humanoidInfo, accountId) {
+        super(param1, param2, param3, param4);
         this.humanoidInfo = humanoidInfo;
         this.accountId = accountId;
+        this.protocolId = 159;
     }
-
     serialize(buffer) {
         super.serialize(buffer);
         buffer.writeShort(this.humanoidInfo.protocolId);
         this.humanoidInfo.serialize(buffer);
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element accountId.");
+        }
         buffer.writeInt(this.accountId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        var _loc2_ = buffer.readUnsignedShort();
+        this.humanoidInfo = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.roleplay.HumanInformations, _loc2_);
+        this.humanoidInfo.deserialize(buffer);
+        this.accountId = buffer.readInt();
+        if (this.accountId < 0) {
+            Logger.error("Forbidden value (" + this.accountId + ") on element of GameRolePlayHumanoidInformations.accountId.");
+        }
     }
 }
 
 export class GameRolePlayCharacterInformations extends GameRolePlayHumanoidInformations {
-    constructor(alignmentInfos, humanoidInfo, accountId, name, contextualId, look, disposition) {
-        super(humanoidInfo, accountId, name, contextualId, look, disposition);
-        this.protocolId = 36;
+    constructor(param1, param2, param3, param4, param5, param6, alignmentInfos) {
+        super(param1, param2, param3, param4, param5, param6);
         this.alignmentInfos = alignmentInfos;
+        this.protocolId = 36;
     }
-
     serialize(buffer) {
         super.serialize(buffer);
         this.alignmentInfos.serialize(buffer);
     }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.alignmentInfos = new ActorAlignmentInformations();
+        this.alignmentInfos.deserialize(buffer);
+    }
 }
+
 
 export class ActorAlignmentInformations {
     constructor(alignmentSide, alignmentValue, alignmentGrade, characterPower) {
@@ -1465,5 +1506,619 @@ export class SubEntity {
         }
         this.subEntityLook = new Types.EntityLook();
         this.subEntityLook.deserialize(buffer);
+    }
+}
+
+export class SpellItem extends Item {
+    constructor(spellId, spellLevel) {
+        super();
+        this.spellId = spellId;
+        this.spellLevel = spellLevel;
+        this.protocolId = 49;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeInt(this.spellId);
+        if (this.spellLevel < 1 || this.spellLevel > 6) {
+            Logger.error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
+        }
+        buffer.writeByte(this.spellLevel);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.spellId = buffer.readInt();
+        this.spellLevel = buffer.readByte();
+        if (this.spellLevel < 1 || this.spellLevel > 6) {
+            Logger.error("Forbidden value (" + this.spellLevel + ") on element of SpellItem.spellLevel.");
+        }
+    }
+}
+
+
+export class PartyMemberInformations extends CharacterBaseInformations {
+    constructor(param1, param2, param3, param4, param5, param6, lifePoints, maxLifePoints, prospecting, regenRate, initiative, alignmentSide, worldX, worldY, mapId, subAreaId, status, companions) {
+        super(param1, param2, param3, param4, param5, param6);
+        this.lifePoints = lifePoints;
+        this.maxLifePoints = maxLifePoints;
+        this.prospecting = prospecting;
+        this.regenRate = regenRate;
+        this.initiative = initiative;
+        this.alignmentSide = alignmentSide;
+        this.worldX = worldX;
+        this.worldY = worldY;
+        this.mapId = mapId;
+        this.subAreaId = subAreaId;
+        this.status = status;
+        this.companions = companions;
+        this.protocolId = 90;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.lifePoints < 0) {
+            Logger.error("Forbidden value (" + this.lifePoints + ") on element lifePoints.");
+        }
+        buffer.writeVarInt(this.lifePoints);
+        if (this.maxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.maxLifePoints + ") on element maxLifePoints.");
+        }
+        buffer.writeVarInt(this.maxLifePoints);
+        if (this.prospecting < 0) {
+            Logger.error("Forbidden value (" + this.prospecting + ") on element prospecting.");
+        }
+        buffer.writeVarShort(this.prospecting);
+        if (this.regenRate < 0 || this.regenRate > 255) {
+            Logger.error("Forbidden value (" + this.regenRate + ") on element regenRate.");
+        }
+        buffer.writeByte(this.regenRate);
+        if (this.initiative < 0) {
+            Logger.error("Forbidden value (" + this.initiative + ") on element initiative.");
+        }
+        buffer.writeVarShort(this.initiative);
+        buffer.writeByte(this.alignmentSide);
+        if (this.worldX < -255 || this.worldX > 255) {
+            Logger.error("Forbidden value (" + this.worldX + ") on element worldX.");
+        }
+        buffer.writeShort(this.worldX);
+        if (this.worldY < -255 || this.worldY > 255) {
+            Logger.error("Forbidden value (" + this.worldY + ") on element worldY.");
+        }
+        buffer.writeShort(this.worldY);
+        buffer.writeInt(this.mapId);
+        if (this.subAreaId < 0) {
+            Logger.error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
+        }
+        buffer.writeVarShort(this.subAreaId);
+        buffer.writeShort(this.status.protocolId);
+        this.status.serialize(buffer);
+        buffer.writeShort(this.companions.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.companions.length) {
+            this.companions[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc5_ = null;
+        super.deserialize(buffer);
+        this.lifePoints = buffer.readVarUhInt();
+        if (this.lifePoints < 0) {
+            Logger.error("Forbidden value (" + this.lifePoints + ") on element of PartyMemberInformations.lifePoints.");
+        }
+        this.maxLifePoints = buffer.readVarUhInt();
+        if (this.maxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.maxLifePoints + ") on element of PartyMemberInformations.maxLifePoints.");
+        }
+        this.prospecting = buffer.readVarUhShort();
+        if (this.prospecting < 0) {
+            Logger.error("Forbidden value (" + this.prospecting + ") on element of PartyMemberInformations.prospecting.");
+        }
+        this.regenRate = buffer.readUnsignedByte();
+        if (this.regenRate < 0 || this.regenRate > 255) {
+            Logger.error("Forbidden value (" + this.regenRate + ") on element of PartyMemberInformations.regenRate.");
+        }
+        this.initiative = buffer.readVarUhShort();
+        if (this.initiative < 0) {
+            Logger.error("Forbidden value (" + this.initiative + ") on element of PartyMemberInformations.initiative.");
+        }
+        this.alignmentSide = buffer.readByte();
+        this.worldX = buffer.readShort();
+        if (this.worldX < -255 || this.worldX > 255) {
+            Logger.error("Forbidden value (" + this.worldX + ") on element of PartyMemberInformations.worldX.");
+        }
+        this.worldY = buffer.readShort();
+        if (this.worldY < -255 || this.worldY > 255) {
+            Logger.error("Forbidden value (" + this.worldY + ") on element of PartyMemberInformations.worldY.");
+        }
+        this.mapId = buffer.readInt();
+        this.subAreaId = buffer.readVarUhShort();
+        if (this.subAreaId < 0) {
+            Logger.error("Forbidden value (" + this.subAreaId + ") on element of PartyMemberInformations.subAreaId.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        this.status = ProtocolTypeManager.getInstance(PlayerStatus, _loc2_);
+        this.status.deserialize(buffer);
+        var _loc3_ = buffer.readUnsignedShort();
+        var _loc4_ = 0;
+        while (_loc4_ < _loc3_) {
+            _loc5_ = new PartyCompanionMemberInformations();
+            _loc5_.deserialize(buffer);
+            this.companions.push(_loc5_);
+            _loc4_++;
+        }
+    }
+}
+
+export class PartyCompanionBaseInformations {
+    constructor(indexId, companionGenericId, entityLook) {
+        this.indexId = indexId;
+        this.companionGenericId = companionGenericId;
+        this.entityLook = entityLook;
+        this.protocolId = 453;
+    }
+    serialize(buffer) {
+        if (this.indexId < 0) {
+            Logger.error("Forbidden value (" + this.indexId + ") on element indexId.");
+        }
+        buffer.writeByte(this.indexId);
+        if (this.companionGenericId < 0) {
+            Logger.error("Forbidden value (" + this.companionGenericId + ") on element companionGenericId.");
+        }
+        buffer.writeByte(this.companionGenericId);
+        this.entityLook.serialize(buffer);
+    }
+    deserialize(buffer) {
+        this.indexId = buffer.readByte();
+        if (this.indexId < 0) {
+            Logger.error("Forbidden value (" + this.indexId + ") on element of PartyCompanionBaseInformations.indexId.");
+        }
+        this.companionGenericId = buffer.readByte();
+        if (this.companionGenericId < 0) {
+            Logger.error("Forbidden value (" + this.companionGenericId + ") on element of PartyCompanionBaseInformations.companionGenericId.");
+        }
+        this.entityLook = new EntityLook();
+        this.entityLook.deserialize(buffer);
+    }
+}
+
+export class PartyCompanionMemberInformations extends PartyCompanionBaseInformations {
+    constructor(param1, param2, param3, initiative, lifePoints, maxLifePoints, prospecting, regenRate) {
+        super(param1, param2, param3);
+        this.initiative = initiative;
+        this.lifePoints = lifePoints;
+        this.maxLifePoints = maxLifePoints;
+        this.prospecting = prospecting;
+        this.regenRate = regenRate;
+        this.protocolId = 452;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.initiative < 0) {
+            Logger.error("Forbidden value (" + this.initiative + ") on element initiative.");
+        }
+        buffer.writeVarShort(this.initiative);
+        if (this.lifePoints < 0) {
+            Logger.error("Forbidden value (" + this.lifePoints + ") on element lifePoints.");
+        }
+        buffer.writeVarInt(this.lifePoints);
+        if (this.maxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.maxLifePoints + ") on element maxLifePoints.");
+        }
+        buffer.writeVarInt(this.maxLifePoints);
+        if (this.prospecting < 0) {
+            Logger.error("Forbidden value (" + this.prospecting + ") on element prospecting.");
+        }
+        buffer.writeVarShort(this.prospecting);
+        if (this.regenRate < 0 || this.regenRate > 255) {
+            Logger.error("Forbidden value (" + this.regenRate + ") on element regenRate.");
+        }
+        buffer.writeByte(this.regenRate);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.initiative = buffer.readVarUhShort();
+        if (this.initiative < 0) {
+            Logger.error("Forbidden value (" + this.initiative + ") on element of PartyCompanionMemberInformations.initiative.");
+        }
+        this.lifePoints = buffer.readVarUhInt();
+        if (this.lifePoints < 0) {
+            Logger.error("Forbidden value (" + this.lifePoints + ") on element of PartyCompanionMemberInformations.lifePoints.");
+        }
+        this.maxLifePoints = buffer.readVarUhInt();
+        if (this.maxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.maxLifePoints + ") on element of PartyCompanionMemberInformations.maxLifePoints.");
+        }
+        this.prospecting = buffer.readVarUhShort();
+        if (this.prospecting < 0) {
+            Logger.error("Forbidden value (" + this.prospecting + ") on element of PartyCompanionMemberInformations.prospecting.");
+        }
+        this.regenRate = buffer.readUnsignedByte();
+        if (this.regenRate < 0 || this.regenRate > 255) {
+            Logger.error("Forbidden value (" + this.regenRate + ") on element of PartyCompanionMemberInformations.regenRate.");
+        }
+    }
+}
+
+export class PartyGuestInformations {
+    constructor(guestId, hostId, name, guestLook, breed, sex, status, companions) {
+        this.guestId = guestId;
+        this.hostId = hostId;
+        this.name = name;
+        this.guestLook = guestLook;
+        this.breed = breed;
+        this.sex = sex;
+        this.status = status;
+        this.companions = companions;
+        this.protocolId = 374;
+    }
+    serialize(buffer) {
+        if (this.guestId < 0 || this.guestId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.guestId + ") on element guestId.");
+        }
+        buffer.writeVarLong(this.guestId);
+        if (this.hostId < 0 || this.hostId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.hostId + ") on element hostId.");
+        }
+        buffer.writeVarLong(this.hostId);
+        buffer.writeUTF(this.name);
+        this.guestLook.serialize(buffer);
+        buffer.writeByte(this.breed);
+        buffer.writeBoolean(this.sex);
+        buffer.writeShort(this.status.protocolId);
+        this.status.serialize(buffer);
+        buffer.writeShort(this.companions.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.companions.length) {
+            this.companions[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc5_ = null;
+        this.guestId = buffer.readVarUhLong();
+        if (this.guestId < 0 || this.guestId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.guestId + ") on element of PartyGuestInformations.guestId.");
+        }
+        this.hostId = buffer.readVarUhLong();
+        if (this.hostId < 0 || this.hostId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.hostId + ") on element of PartyGuestInformations.hostId.");
+        }
+        this.name = buffer.readUTF();
+        this.guestLook = new EntityLook();
+        this.guestLook.deserialize(buffer);
+        this.breed = buffer.readByte();
+        this.sex = buffer.readBoolean();
+        var _loc2_ = buffer.readUnsignedShort();
+        this.status = ProtocolTypeManager.getInstance(PlayerStatus, _loc2_);
+        this.status.deserialize(buffer);
+        var _loc3_ = buffer.readUnsignedShort();
+        var _loc4_ = 0;
+        while (_loc4_ < _loc3_) {
+            _loc5_ = new PartyCompanionBaseInformations();
+            _loc5_.deserialize(buffer);
+            this.companions.push(_loc5_);
+            _loc4_++;
+        }
+    }
+}
+
+export class GameFightFighterInformations extends GameContextActorInformations {
+    constructor(param1, param2, param3, teamId, wave, alive, stats, previousPositions) {
+        super(param1, param2, param3);
+        this.teamId = teamId;
+        this.wave = wave;
+        this.alive = alive;
+        this.stats = stats;
+        this.previousPositions = previousPositions;
+        this.protocolId = 143;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeByte(this.teamId);
+        if (this.wave < 0) {
+            Logger.error("Forbidden value (" + this.wave + ") on element wave.");
+        }
+        buffer.writeByte(this.wave);
+        buffer.writeBoolean(this.alive);
+        buffer.writeShort(this.stats.protocolId);
+        this.stats.serialize(buffer);
+        buffer.writeShort(this.previousPositions.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.previousPositions.length) {
+            if (this.previousPositions[_loc2_] < 0 || this.previousPositions[_loc2_] > 559) {
+                Logger.error("Forbidden value (" + this.previousPositions[_loc2_] + ") on element 5 (starting at 1) of previousPositions.");
+            }
+            buffer.writeVarShort(this.previousPositions[_loc2_]);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc5_ = 0;
+        super.deserialize(buffer);
+        this.teamId = buffer.readByte();
+        if (this.teamId < 0) {
+            Logger.error("Forbidden value (" + this.teamId + ") on element of GameFightFighterInformations.teamId.");
+        }
+        this.wave = buffer.readByte();
+        if (this.wave < 0) {
+            Logger.error("Forbidden value (" + this.wave + ") on element of GameFightFighterInformations.wave.");
+        }
+        this.alive = buffer.readBoolean();
+        var _loc2_ = buffer.readUnsignedShort();
+        this.stats = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.fight.GameFightMinimalStats, _loc2_);
+        this.stats.deserialize(buffer);
+        var _loc3_ = buffer.readUnsignedShort();
+        var _loc4_ = 0;
+        while (_loc4_ < _loc3_) {
+            _loc5_ = buffer.readVarUhShort();
+            if (_loc5_ < 0 || _loc5_ > 559) {
+                Logger.error("Forbidden value (" + _loc5_ + ") on elements of previousPositions.");
+            }
+            this.previousPositions.push(_loc5_);
+            _loc4_++;
+        }
+    }
+}
+
+export class GameFightFighterNamedInformations extends GameFightFighterInformations {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, name, status) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8);
+        this.name = name;
+        this.status = status;
+        this.protocolId = 158;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeUTF(this.name);
+        this.status.serialize(buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.name = buffer.readUTF();
+        this.status = new PlayerStatus();
+        this.status.deserialize(buffer);
+    }
+}
+
+export class GameFightMutantInformations extends GameFightFighterNamedInformations {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, powerLevel) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+        this.powerLevel = powerLevel;
+        this.protocolId = 50;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.powerLevel < 0) {
+            Logger.error("Forbidden value (" + this.powerLevel + ") on element powerLevel.");
+        }
+        buffer.writeByte(this.powerLevel);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.powerLevel = buffer.readByte();
+        if (this.powerLevel < 0) {
+            Logger.error("Forbidden value (" + this.powerLevel + ") on element of GameFightMutantInformations.powerLevel.");
+        }
+    }
+}
+
+export class GameFightMinimalStats {
+    constructor(lifePoints, maxLifePoints, baseMaxLifePoints, permanentDamagePercent, shieldPoints, actionPoints, maxActionPoints, movementPoints, maxMovementPoints, summoner, summoned, neutralElementResistPercent, earthElementResistPercent, waterElementResistPercent, airElementResistPercent, fireElementResistPercent, neutralElementReduction, earthElementReduction, waterElementReduction, airElementReduction, fireElementReduction, criticalDamageFixedResist, pushDamageFixedResist, pvpNeutralElementResistPercent, pvpEarthElementResistPercent, pvpWaterElementResistPercent, pvpAirElementResistPercent, pvpFireElementResistPercent, pvpNeutralElementReduction, pvpEarthElementReduction, pvpWaterElementReduction, pvpAirElementReduction, pvpFireElementReduction, dodgePALostProbability, dodgePMLostProbability, tackleBlock, tackleEvade, fixedDamageReflection, invisibilityState) {
+        this.lifePoints = lifePoints;
+        this.maxLifePoints = maxLifePoints;
+        this.baseMaxLifePoints = baseMaxLifePoints;
+        this.permanentDamagePercent = permanentDamagePercent;
+        this.shieldPoints = shieldPoints;
+        this.actionPoints = actionPoints;
+        this.maxActionPoints = maxActionPoints;
+        this.movementPoints = movementPoints;
+        this.maxMovementPoints = maxMovementPoints;
+        this.summoner = summoner;
+        this.summoned = summoned;
+        this.neutralElementResistPercent = neutralElementResistPercent;
+        this.earthElementResistPercent = earthElementResistPercent;
+        this.waterElementResistPercent = waterElementResistPercent;
+        this.airElementResistPercent = airElementResistPercent;
+        this.fireElementResistPercent = fireElementResistPercent;
+        this.neutralElementReduction = neutralElementReduction;
+        this.earthElementReduction = earthElementReduction;
+        this.waterElementReduction = waterElementReduction;
+        this.airElementReduction = airElementReduction;
+        this.fireElementReduction = fireElementReduction;
+        this.criticalDamageFixedResist = criticalDamageFixedResist;
+        this.pushDamageFixedResist = pushDamageFixedResist;
+        this.pvpNeutralElementResistPercent = pvpNeutralElementResistPercent;
+        this.pvpEarthElementResistPercent = pvpEarthElementResistPercent;
+        this.pvpWaterElementResistPercent = pvpWaterElementResistPercent;
+        this.pvpAirElementResistPercent = pvpAirElementResistPercent;
+        this.pvpFireElementResistPercent = pvpFireElementResistPercent;
+        this.pvpNeutralElementReduction = pvpNeutralElementReduction;
+        this.pvpEarthElementReduction = pvpEarthElementReduction;
+        this.pvpWaterElementReduction = pvpWaterElementReduction;
+        this.pvpAirElementReduction = pvpAirElementReduction;
+        this.pvpFireElementReduction = pvpFireElementReduction;
+        this.dodgePALostProbability = dodgePALostProbability;
+        this.dodgePMLostProbability = dodgePMLostProbability;
+        this.tackleBlock = tackleBlock;
+        this.tackleEvade = tackleEvade;
+        this.fixedDamageReflection = fixedDamageReflection;
+        this.invisibilityState = invisibilityState;
+        this.protocolId = 31;
+    }
+    serialize(buffer) {
+        if (this.lifePoints < 0) {
+            Logger.error("Forbidden value (" + this.lifePoints + ") on element lifePoints.");
+        }
+        buffer.writeVarInt(this.lifePoints);
+        if (this.maxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.maxLifePoints + ") on element maxLifePoints.");
+        }
+        buffer.writeVarInt(this.maxLifePoints);
+        if (this.baseMaxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.baseMaxLifePoints + ") on element baseMaxLifePoints.");
+        }
+        buffer.writeVarInt(this.baseMaxLifePoints);
+        if (this.permanentDamagePercent < 0) {
+            Logger.error("Forbidden value (" + this.permanentDamagePercent + ") on element permanentDamagePercent.");
+        }
+        buffer.writeVarInt(this.permanentDamagePercent);
+        if (this.shieldPoints < 0) {
+            Logger.error("Forbidden value (" + this.shieldPoints + ") on element shieldPoints.");
+        }
+        buffer.writeVarInt(this.shieldPoints);
+        buffer.writeVarShort(this.actionPoints);
+        buffer.writeVarShort(this.maxActionPoints);
+        buffer.writeVarShort(this.movementPoints);
+        buffer.writeVarShort(this.maxMovementPoints);
+        if (this.summoner < -9007199254740990 || this.summoner > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.summoner + ") on element summoner.");
+        }
+        buffer.writeDouble(this.summoner);
+        buffer.writeBoolean(this.summoned);
+        buffer.writeVarShort(this.neutralElementResistPercent);
+        buffer.writeVarShort(this.earthElementResistPercent);
+        buffer.writeVarShort(this.waterElementResistPercent);
+        buffer.writeVarShort(this.airElementResistPercent);
+        buffer.writeVarShort(this.fireElementResistPercent);
+        buffer.writeVarShort(this.neutralElementReduction);
+        buffer.writeVarShort(this.earthElementReduction);
+        buffer.writeVarShort(this.waterElementReduction);
+        buffer.writeVarShort(this.airElementReduction);
+        buffer.writeVarShort(this.fireElementReduction);
+        buffer.writeVarShort(this.criticalDamageFixedResist);
+        buffer.writeVarShort(this.pushDamageFixedResist);
+        buffer.writeVarShort(this.pvpNeutralElementResistPercent);
+        buffer.writeVarShort(this.pvpEarthElementResistPercent);
+        buffer.writeVarShort(this.pvpWaterElementResistPercent);
+        buffer.writeVarShort(this.pvpAirElementResistPercent);
+        buffer.writeVarShort(this.pvpFireElementResistPercent);
+        buffer.writeVarShort(this.pvpNeutralElementReduction);
+        buffer.writeVarShort(this.pvpEarthElementReduction);
+        buffer.writeVarShort(this.pvpWaterElementReduction);
+        buffer.writeVarShort(this.pvpAirElementReduction);
+        buffer.writeVarShort(this.pvpFireElementReduction);
+        if (this.dodgePALostProbability < 0) {
+            Logger.error("Forbidden value (" + this.dodgePALostProbability + ") on element dodgePALostProbability.");
+        }
+        buffer.writeVarShort(this.dodgePALostProbability);
+        if (this.dodgePMLostProbability < 0) {
+            Logger.error("Forbidden value (" + this.dodgePMLostProbability + ") on element dodgePMLostProbability.");
+        }
+        buffer.writeVarShort(this.dodgePMLostProbability);
+        buffer.writeVarShort(this.tackleBlock);
+        buffer.writeVarShort(this.tackleEvade);
+        buffer.writeVarShort(this.fixedDamageReflection);
+        buffer.writeByte(this.invisibilityState);
+    }
+    deserialize(buffer) {
+        this.lifePoints = buffer.readVarUhInt();
+        if (this.lifePoints < 0) {
+            Logger.error("Forbidden value (" + this.lifePoints + ") on element of GameFightMinimalStats.lifePoints.");
+        }
+        this.maxLifePoints = buffer.readVarUhInt();
+        if (this.maxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.maxLifePoints + ") on element of GameFightMinimalStats.maxLifePoints.");
+        }
+        this.baseMaxLifePoints = buffer.readVarUhInt();
+        if (this.baseMaxLifePoints < 0) {
+            Logger.error("Forbidden value (" + this.baseMaxLifePoints + ") on element of GameFightMinimalStats.baseMaxLifePoints.");
+        }
+        this.permanentDamagePercent = buffer.readVarUhInt();
+        if (this.permanentDamagePercent < 0) {
+            Logger.error("Forbidden value (" + this.permanentDamagePercent + ") on element of GameFightMinimalStats.permanentDamagePercent.");
+        }
+        this.shieldPoints = buffer.readVarUhInt();
+        if (this.shieldPoints < 0) {
+            Logger.error("Forbidden value (" + this.shieldPoints + ") on element of GameFightMinimalStats.shieldPoints.");
+        }
+        this.actionPoints = buffer.readVarShort();
+        this.maxActionPoints = buffer.readVarShort();
+        this.movementPoints = buffer.readVarShort();
+        this.maxMovementPoints = buffer.readVarShort();
+        this.summoner = buffer.readDouble();
+        if (this.summoner < -9007199254740990 || this.summoner > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.summoner + ") on element of GameFightMinimalStats.summoner.");
+        }
+        this.summoned = buffer.readBoolean();
+        this.neutralElementResistPercent = buffer.readVarShort();
+        this.earthElementResistPercent = buffer.readVarShort();
+        this.waterElementResistPercent = buffer.readVarShort();
+        this.airElementResistPercent = buffer.readVarShort();
+        this.fireElementResistPercent = buffer.readVarShort();
+        this.neutralElementReduction = buffer.readVarShort();
+        this.earthElementReduction = buffer.readVarShort();
+        this.waterElementReduction = buffer.readVarShort();
+        this.airElementReduction = buffer.readVarShort();
+        this.fireElementReduction = buffer.readVarShort();
+        this.criticalDamageFixedResist = buffer.readVarShort();
+        this.pushDamageFixedResist = buffer.readVarShort();
+        this.pvpNeutralElementResistPercent = buffer.readVarShort();
+        this.pvpEarthElementResistPercent = buffer.readVarShort();
+        this.pvpWaterElementResistPercent = buffer.readVarShort();
+        this.pvpAirElementResistPercent = buffer.readVarShort();
+        this.pvpFireElementResistPercent = buffer.readVarShort();
+        this.pvpNeutralElementReduction = buffer.readVarShort();
+        this.pvpEarthElementReduction = buffer.readVarShort();
+        this.pvpWaterElementReduction = buffer.readVarShort();
+        this.pvpAirElementReduction = buffer.readVarShort();
+        this.pvpFireElementReduction = buffer.readVarShort();
+        this.dodgePALostProbability = buffer.readVarUhShort();
+        if (this.dodgePALostProbability < 0) {
+            Logger.error("Forbidden value (" + this.dodgePALostProbability + ") on element of GameFightMinimalStats.dodgePALostProbability.");
+        }
+        this.dodgePMLostProbability = buffer.readVarUhShort();
+        if (this.dodgePMLostProbability < 0) {
+            Logger.error("Forbidden value (" + this.dodgePMLostProbability + ") on element of GameFightMinimalStats.dodgePMLostProbability.");
+        }
+        this.tackleBlock = buffer.readVarShort();
+        this.tackleEvade = buffer.readVarShort();
+        this.fixedDamageReflection = buffer.readVarShort();
+        this.invisibilityState = buffer.readByte();
+        if (this.invisibilityState < 0) {
+            Logger.error("Forbidden value (" + this.invisibilityState + ") on element of GameFightMinimalStats.invisibilityState.");
+        }
+    }
+}
+
+export class GameFightMinimalStatsPreparation extends GameFightMinimalStats {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18, param19, param20, param21, param22, param23, param24, param25, param26, param27, param28, param29, param30, param31, param32, param33, param34, param35, param36, param37, param38, param39, initiative) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18, param19, param20, param21, param22, param23, param24, param25, param26, param27, param28, param29, param30, param31, param32, param33, param34, param35, param36, param37, param38, param39);
+        this.initiative = initiative;
+        this.protocolId = 360;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.initiative < 0) {
+            Logger.error("Forbidden value (" + this.initiative + ") on element initiative.");
+        }
+        buffer.writeVarInt(this.initiative);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.initiative = buffer.readVarUhInt();
+        if (this.initiative < 0) {
+            Logger.error("Forbidden value (" + this.initiative + ") on element of GameFightMinimalStatsPreparation.initiative.");
+        }
+    }
+}
+
+export class IdentifiedEntityDispositionInformations extends EntityDispositionInformations {
+    constructor(param1, param2, id) {
+        super(param1, param2);
+        this.id = id;
+        this.protocolId = 107;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        buffer.writeDouble(this.id);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of IdentifiedEntityDispositionInformations.id.");
+        }
     }
 }

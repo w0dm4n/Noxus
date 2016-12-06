@@ -4,7 +4,9 @@ import WorldClient from "./world_client"
 
 export default class WorldServer {
 
-    static clients = new Array();
+    static clients = [];
+
+    static partys = [];
 
     static startTime = null;
 
@@ -107,5 +109,13 @@ export default class WorldServer {
     static getAllClients()
     {
         return WorldServer.clients;
+    }
+
+    static getPartyById(id) {
+        for (var i in WorldServer.partys) {
+            if (WorldServer.partys[i].id == id)
+                return WorldServer.partys[i];
+        }
+        return null;
     }
 }

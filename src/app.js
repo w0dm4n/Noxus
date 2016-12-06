@@ -11,6 +11,11 @@ class App {
     constructor() {
         Logger.infos("Noxus v" + Common.NOXUS_VERSION.major + "." + Common.NOXUS_VERSION.minor + " " + Common.NOXUS_VERSION.type);
 
+         process.on('uncaughtException', function(error) {
+            console.error((new Date).toUTCString() + ' uncaughtException:', error.message)
+            console.error(error.stack);
+        });
+
         ConfigManager.load(function() {
             DBManager.start(function(){
                 Logger.infos("Trying to connect to MongoDB ..");

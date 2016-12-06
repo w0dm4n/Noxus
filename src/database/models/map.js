@@ -3,6 +3,8 @@ import Datacenter from "../../database/datacenter"
 import * as Messages from "../../io/dofus/messages"
 import * as Types from "../../io/dofus/types"
 import DataMapProvider from "../../game/pathfinding/data_map_provider"
+import ConfigManager from "../../utils/configmanager.js"
+import InteractiveHandler from "../../handlers/interactive_handler"
 
 var zlib = require('zlib');
 
@@ -25,14 +27,25 @@ export default class Map {
 
     init() {
         this.cells = JSON.parse(zlib.inflateSync(new Buffer(this.cellsRaw, 'base64')).toString());
+        this.zaap = this.getZaap(); 
+    }
+
+    getAvailableCells() {
+        var aCells = [];
+        for(var cell of this.cells) {
+            if(cell._mov) {
+                aCells.push(cell);
+            }
+        }
+        return aCells;
     }
 
     addClient(client) {
         Logger.debug("Add new player in the mapId: " + this._id);    
         this.send(new Messages.GameRolePlayShowActorMessage(client.character.getGameRolePlayCharacterInformations(client.account)));
         this.clients.push(client);
-
         client.send(new Messages.CurrentMapMessage(this._id, Map.MAP_DECRYPT_KEY));
+        InteractiveHandler.checkIfCharacterHaveZaap(client, this);
     }
 
     removeClient(client) {
@@ -49,6 +62,15 @@ export default class Map {
             actors.push(this.clients[i].character.getGameRolePlayCharacterInformations(this.clients[i].account));
         }
         return actors;
+    }
+
+    getClientByCharacterId(characterId) {
+        for(var client of this.clients) {
+            if(client.character) {
+                if(client.character._id == characterId) return client;
+            }
+        }
+        return null;
     }
 
     sendComplementaryInformations(client) {
@@ -69,6 +91,24 @@ export default class Map {
             this.clients[i].send(packet);
         }
     }
+
+    getZaap() {
+        for (var i in Datacenter.interactivesObjects) {
+
+            if (Datacenter.interactivesObjects[i].mapId == this._id && Datacenter.interactivesObjects[i].actionType == "Zaap")
+                return Datacenter.interactivesObjects[i];
+        }
+        return null;
+    }
+    getZaapi() {
+        for (var i in Datacenter.interactivesObjects) {
+
+            if (Datacenter.interactivesObjects[i].mapId == this._id && Datacenter.interactivesObjects[i].actionType == "Zaapi")
+                return Datacenter.interactivesObjects[i];
+        }
+        return null;
+    }
+
 
     sendExcept(packet, client) {
         for(var i in this.clients) {

@@ -27,16 +27,25 @@ export default class AuthClient {
     receive() {
         var self = this;
         this.socket.on('data', function(data){
-            var buffer = new IO.CustomDataWrapper(Formatter.toArrayBuffer(data));
-            while(buffer.bytesAvailable > 0) {
-               self.processPart(buffer);
+            try {
+                var buffer = new IO.CustomDataWrapper(Formatter.toArrayBuffer(data));
+                while(buffer.bytesAvailable > 0) {
+                    self.processPart(buffer);
+                }
+            }
+            catch (ex) {
+                Logger.error("Can't parse properly packet client");
             }
         });
 
         this.socket.on('end', function(data){
-
-            Auth.removeClient(self);
-            Logger.infos("Client disconnected");
+            try {
+                Auth.removeClient(self);
+                Logger.infos("Client disconnected");
+            }
+            catch (ex) {
+                Logger.error("Can't disconnect properly client");
+            }
         });
     }
 
@@ -56,16 +65,21 @@ export default class AuthClient {
     }
 
     send(packet) {
-        packet.serialize();
-        var messageBuffer = new IO.CustomDataWrapper(new ByteArray());
-        var offset = NetworkMessage.writePacket(messageBuffer, packet.messageId, packet.buffer._data);
-        var b = arrayBufferToBuffer(messageBuffer.data.buffer);
-        if(offset == undefined) {
-            offset = 2;
-        }
-        var finalBuffer = b.slice(0, packet.buffer._data.write_position + offset);
-        this.socket.write(finalBuffer); 
+        try {
+            packet.serialize();
+            var messageBuffer = new IO.CustomDataWrapper(new ByteArray());
+            var offset = NetworkMessage.writePacket(messageBuffer, packet.messageId, packet.buffer._data);
+            var b = arrayBufferToBuffer(messageBuffer.data.buffer);
+            if(offset == undefined) {
+                offset = 2;
+            }
+            var finalBuffer = b.slice(0, packet.buffer._data.write_position + offset);
+            this.socket.write(finalBuffer);
 
-        Logger.debug("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")"); 
+            Logger.debug("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")");
+        }
+        catch (ex) {
+            Logger.error("Can't send properly packet client");
+        }
     }
 }

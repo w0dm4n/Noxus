@@ -29,6 +29,7 @@ export default class CommandManager {
         { name:"exp", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points d'experience"},
         { name:"item", role:AccountRole.MODERATOR, description: "Créer un objet pour le personnage"},
         { name:"emote", role:AccountRole.ANIMATOR, description: "Ajoute une ou plusieurs émote a un personnage"},
+        { name:"kamas", role:AccountRole.ANIMATOR, description: "Ajoute des kamas a un personnage"},
     ];
     
     static manageCommand(command, client)
@@ -250,22 +251,26 @@ export default class CommandManager {
             if (target) {
                 if (data[2] == "all")
                 {
-                    client.character.emotes = EmoteHandler.getAllEmotes();
-                    DBManager.updateCharacter(client.character._id, {emotes: client.character.emotes}, function () {
+                    target.character.emotes = EmoteHandler.getAllEmotes();
+                    DBManager.updateCharacter(target.character._id, {emotes: target.character.emotes}, function () {
 
                     });
-                    for (var i in client.character.emotes){
-                        client.send(new Messages.EmoteAddMessage(client.character.emotes[i]));
+                    for (var i in target.character.emotes){
+                        target.send(new Messages.EmoteAddMessage(target.character.emotes[i]));
                     }
+                    if (target.character.name != client.character.name)
+                        client.character.replyText("Toutes les émotes ont été rajouté au personnage " + target.character.name);
                 }
                 else
                 {
                     var emote = EmoteHandler.getEmoteById(data[2]);
                     if (emote) {
-                        if (!EmoteHandler.haveEmote(client, emote._id)) {
-                            client.character.emotes.push(emote._id);
-                            DBManager.updateCharacter(client.character._id, {emotes: client.character.emotes}, function () {
-                                client.send(new Messages.EmoteAddMessage(emote._id));
+                        if (!EmoteHandler.haveEmote(target, emote._id)) {
+                            target.character.emotes.push(emote._id);
+                            DBManager.updateCharacter(target.character._id, {emotes: target.character.emotes}, function () {
+                                target.send(new Messages.EmoteAddMessage(emote._id));
+                                if (target.character.name != client.character.name)
+                                    client.character.replyText("L'émote a bien été ajouté sur le personnage " + target.character.name);
                             });
                         }
                         else
@@ -280,5 +285,23 @@ export default class CommandManager {
         }
         else
             client.character.replyError("Erreur de syntaxe (.emote characterName id/all)");
+    }
+
+    static handle_kamas(data, client)
+    {
+        if(data[1] && data[2]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target)
+            {
+                target.character.addKamas(data[2]);
+                if (target.character.name != client.character.name)
+                    client.character.replyText("Les kamas <b>(" + data[2] + ")</b> ont été ajouté au personnage " + target.character.name);
+
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.kamas characterName amount)");
     }
 }

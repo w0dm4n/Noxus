@@ -1,6 +1,7 @@
 import Logger from "../io/logger"
 import Account from "./models/account";
 import AccountFriend from "./models/account_friend";
+import AccountIgnored from "./models/account_ignored";
 import Character from "./models/character";
 import ConfigManager from "../utils/configmanager.js"
 import Datacenter from "../database/datacenter"
@@ -49,6 +50,7 @@ export default class DBManager {
                     sex: character.sex,
                     colors: character.colors,
                     cosmeticId: parseInt(character.cosmeticId),
+                    scale: parseInt(character.scale),
                     level: parseInt(character.level),
                     experience: parseInt(character.experience),
                     mapid: parseInt(character.mapid),
@@ -58,8 +60,9 @@ export default class DBManager {
                     bagId: character.bagId,
                     statsPoints: character.statsPoints,
                     spellPoints: character.spellPoints,                    
-                    ZaapExist:character.ZaapExist,
-                    ZaapSave:character.ZaapSave,                   
+                    zaapKnows:character.zaapKnows,
+                    zaapSave:character.zaapSave,
+                    spells: character.spells,
                     stats: {
                         strength: character.statsManager.getStatById(10).base,
                         vitality: character.statsManager.getStatById(11).base,
@@ -105,14 +108,29 @@ export default class DBManager {
         });
     }
 
-    static getFriend(query, callback){
-        var collection = DBManager.db.collection('accounts_friends');
-        collection.findOne(query, function(err, friend){
-            if(friend == null){
-                callback(null);
-                return;
+    static createIgnored(ignored, callback){
+        autoIncrement.getNextSequence(DBManager.db, "accounts_ignoreds", function (err, autoIndex) {
+            DBManager.db.collection("accounts_ignoreds", function(error, collection) {
+                collection.insertOne({
+                    _id: autoIndex,
+                    accountId: parseInt(ignored.accountId),
+                    ignoredAccountId: parseInt(ignored.ignoredAccountId),
+                }, function() {
+                    ignored._id = autoIndex;
+                    callback(ignored);
+                });
+            });
+        });
+    }
+
+    static getIgnoreds(query, callback){
+        var collection = DBManager.db.collection('accounts_ignoreds');
+        collection.find(query).toArray(function(err, ignoreds){
+            var result = new Array();
+            for(var i in ignoreds) {
+                result.push(new AccountIgnored(ignoreds[i]));
             }
-            callback(new AccountFriend(friend));
+            callback(result);
         });
     }
 
@@ -134,6 +152,20 @@ export default class DBManager {
         var success = false;
         try{
             var collection = DBManager.db.collection('accounts_friends');
+            collection.remove(query);
+            success = true;
+        }
+        catch (error){
+            Logger.error(error);
+            success = false;
+        }
+        callback(success);
+    }
+
+    static removeIgnored(query, callback) {
+        var success = false;
+        try{
+            var collection = DBManager.db.collection('accounts_ignoreds');
             collection.remove(query);
             success = true;
         }
@@ -292,6 +324,13 @@ export default class DBManager {
         });              
     }
 
+    static getMapPositions(callback) {
+        var collection = DBManager.db.collection('maps_positions');
+        collection.find({}).toArray(function(err, maps_positions){
+            callback(maps_positions);
+        });              
+    }
+
     static getEmotes(callback) {
         var collection = DBManager.db.collection('emoticons');
         collection.find({}).toArray(function(err, emoticons){
@@ -332,6 +371,27 @@ export default class DBManager {
         var collection = DBManager.db.collection('items_bags');
         collection.update({ _id: bag._id }, { $set: query }, function() {
             callback();
+        });
+    }
+
+    static getSpells(callback) {
+        var collection = DBManager.db.collection('spells');
+        collection.find({}).toArray(function(err, spells){
+            callback(spells);
+        });
+    }
+
+    static getElements(callback) {
+        var collection = DBManager.db.collection('elements');
+        collection.find({}).toArray(function(err, elements){
+            callback(elements);
+        });
+    }
+
+    static getSpellsLevels(callback) {
+        var collection = DBManager.db.collection('spells_levels');
+        collection.find({}).toArray(function(err, spellsLevels){
+            callback(spellsLevels);
         });
     }
 }

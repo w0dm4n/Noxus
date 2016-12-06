@@ -9,9 +9,16 @@ export default class AuthServer {
 
     static start(host, port) {
         var server = net.createServer(function(socket) {
-            Logger.debug("Connexion d'un client sur le serveur d'authentification");
-            var client = new AuthClient(socket);
-            AuthServer.clients.push(client);
+            try
+            {
+                Logger.debug("Connexion d'un client sur le serveur d'authentification");
+                var client = new AuthClient(socket);
+                AuthServer.clients.push(client);
+            }
+            catch(error)
+            {
+                Logger.error("Unable to properly welcome the client");
+            }
         });
         try
         {

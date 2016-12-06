@@ -56,7 +56,7 @@ export default class GameHandler {
 
     static sendWelcomeMessage(client)
     {
-        client.character.replyLangsMessage(89, []);
+        client.character.replyLangsMessage(1, 89, []);
         client.character.replyWelcome(ConfigManager.configData.welcome_message);
     }
 
@@ -181,6 +181,8 @@ export default class GameHandler {
 				if(packet.statId == 11) { // Life update
 					client.character.life++;
 				}
+
+				client.character.statsManager.saveRaw();
 			}
 			else {
 				break;
@@ -204,6 +206,25 @@ export default class GameHandler {
 		}
 	}
 
-
-
+	static handleSpellModifyRequestMessage(client, packet) {
+    	Logger.debug("Request spell boost for spellId: " + packet.spellId);
+		if(client.character.statsManager.hasSpell(packet.spellId)){
+			var spell = client.character.statsManager.getSpell(packet.spellId);
+			if(spell) {
+				var cost = 0;
+				if(packet.spellLevel > 6 || packet.spellLevel <= spell.spellLevel) return;
+				for(var i = spell.spellLevel; i < packet.spellLevel; i++) {
+					cost += i;
+				}
+				if(client.character.spellPoints >= cost) {
+					client.character.spellPoints -= cost;
+                    spell.spellLevel = packet.spellLevel;
+                    client.send(new Messages.SpellModifySuccessMessage(spell.spellId, spell.spellLevel));
+                    client.character.statsManager.sendStats();
+                    client.character.statsManager.sendSpellsList();
+                    client.character.save();
+				}
+			}
+		}
+	}
 }

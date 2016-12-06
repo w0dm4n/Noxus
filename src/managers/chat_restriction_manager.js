@@ -82,7 +82,7 @@ export default class ChatRestrictionManager {
                     return true;
                 }
                 else {
-                        character.replyLangsMessage(124, ["10"]);
+                        character.replyLangsMessage(1, 124, ["10"]);
                         character.isTemporaryMuted = true;
                         character.lastMessage = time();
                         return false;
@@ -102,7 +102,7 @@ export default class ChatRestrictionManager {
                     var timeleft = (ConfigManager.configData.time_channel.global_time_on_exceeded * 1000) - seconds;
                     if (Math.round((timeleft / 1000)) > 0)
                     {
-                        character.replyLangsMessage(124, [Math.round((timeleft / 1000)).toString()]);
+                        character.replyLangsMessage(1, 124, [Math.round((timeleft / 1000)).toString()]);
                         return false;
                     }
                     else

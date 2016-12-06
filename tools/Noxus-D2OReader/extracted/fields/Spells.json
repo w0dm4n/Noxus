@@ -1,0 +1,73 @@
+[
+	{
+		"memberName": "Spell",
+		"packageName": "com.ankamagames.dofus.datacenter.spells",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "descriptionId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "typeId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "order",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "scriptParams",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "scriptParamsCritical",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "scriptId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "scriptIdCritical",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "iconId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "spellLevels",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			},
+			{
+				"name": "verbose_cast",
+				"type": "Bool",
+				"vectorTypes": false
+			}
+		]
+	}
+]

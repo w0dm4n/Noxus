@@ -31,7 +31,7 @@ export default class ItemBag {
             rebuildedItem.position = item.position;
             this.items.push(rebuildedItem);
         }
-        this.money = raw.money;
+        this.money = parseInt(raw.money);
     }
 
     add(item, checkSame, callback) {
@@ -93,6 +93,7 @@ export default class ItemBag {
         var newStack = new CharacterItem({templateId: item.templateId, effects: item.copyEffects(), quantity: quantity});
         item.quantity -= quantity;
         this.add(newStack, false, function() {
+            if(self.onItemUpdated) self.onItemUpdated(item);
             callback(newStack);
         });
     }
@@ -102,6 +103,13 @@ export default class ItemBag {
             if(item.position == position) return item;
         }
         return null;
+    }
+
+    hasAlreadyWearedItem(templateId) {
+        for(var item of this.items) {
+            if(item.position != CharacterItem.DEFAULT_SLOT && item.getTemplate()._id == templateId) return true;
+        }
+        return false;
     }
 
     moveItem(item, position) {

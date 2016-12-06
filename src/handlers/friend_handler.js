@@ -13,6 +13,7 @@ import WorldManager from "../managers/world_manager"
 import AccountFriend from "../database/models/account_friend"
 import FriendFailureEnum from "../enums/friend_failure_enum"
 import PlayerStateEnum from "../enums/player_state_enum"
+import IgnoredHandler from "../handlers/ignored_handler"
  
  
 export default class FriendHandler {
@@ -31,12 +32,21 @@ export default class FriendHandler {
         {
             if (packet.name && packet.name.length > 0)
             {
+                if (packet.name.toLowerCase() == client.character.name.toLowerCase() ||
+                    packet.name.toLowerCase() == client.account.nickname.toLowerCase()) {
+                    client.character.replyText("Impossible de vous ajouter vous-même à votre liste.");
+                    return;
+                }
                 var target = WorldServer.getOnlineClientByCharacterName(packet.name);
                 if (target == null)
                     target = WorldServer.getOnlineClientByNickName(packet.name);
                  
                 if (target)
                 {
+                    if (IgnoredHandler.isIgnoring(client, target.account)) {
+                        client.character.replyImportant("Impossible d'ajouter en ami quelqu'un de votre liste d'ennemis.");
+                        return;
+                    }
                     if (!FriendHandler.isAlreadyFriend(client, target.account))
                     {
                         var friend = new AccountFriend({_id: 0, accountId: client.account.uid, friendAccountId: target.account.uid});
@@ -125,7 +135,7 @@ export default class FriendHandler {
                                     if (index != -1)
                                          client.account.friends.splice(index, 1);
 
-                                    DBManager.removeFriend({friendAccountId: friendAccount.uid}, function(result)
+                                    DBManager.removeFriend({accountId: client.account.uid, friendAccountId: friendAccount.uid}, function(result)
                                     {
                                         if (result)
                                             FriendHandler.sendFriendsList(client);
@@ -171,7 +181,7 @@ export default class FriendHandler {
                 for (var i in client.account.friends) {
                     var friendCharacter = WorldServer.getOnlineCharacterByAccountId(client.account.friends[i].friendAccountId);
                     if (friendCharacter) {
-                        if (friendCharacter.client.account.warnOnConnection == true)
+                        if (friendCharacter.client.account.warnOnConnection == true && FriendHandler.isAlreadyFriend(friendCharacter.client, client.account))
                             friendCharacter.client.send(new Messages.TextInformationMessage(0, 143, [client.account.nickname, client.character.name, client.character._id]));
                     }
                 }

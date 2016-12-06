@@ -13,6 +13,8 @@ import InteractiveHandler from "../handlers/interactive_handler"
 import EmoteHandler from "../handlers/emote_handler"
 import ItemHandler from "../handlers/item_handler"
 import IgnoredHandler from "../handlers/ignored_handler"
+import PartyHandler from "../handlers/party_handler"
+import FightHandler from "../handlers/fight_handler"
 
 export default class Processor {
 
@@ -44,13 +46,30 @@ export default class Processor {
         800:  { message: Messages.ChatSmileyRequestMessage, handler: GameHandler.handleChatSmileyRequestMessage },
         6192: {message: Messages.MoodSmileyRequestMessage, handler: FriendHandler.handleMoodSmileyRequestMessage },
         5001: {message: Messages.InteractiveUseRequestMessage , handler : InteractiveHandler.parseInteractive},
+        5501: {message: Messages.LeaveDialogRequestMessage , handler :InteractiveHandler.leaveInteractive},
+        5961: {message: Messages.TeleportRequestMessage , handler :InteractiveHandler.teleportRequest},
         5685: {message: Messages.EmotePlayRequestMessage, handler: EmoteHandler.handleEmotePlayRequestMessage},
         5673: { message: Messages.IgnoredAddRequestMessage, handler:IgnoredHandler.handleIgnoredAddRequestMessage },
         5676: { message: Messages.IgnoredGetListMessage, handler:IgnoredHandler.handleIgnoredGetListMessage },
         5680: { message: Messages.IgnoredDeleteRequestMessage, handler:IgnoredHandler.handleIgnoredDeleteRequestMessage },
 
+        // Party handler
+        5585: { message: Messages.PartyInvitationRequestMessage, handler:PartyHandler.handlePartyInvitationRequestMessage },
+        5582: { message: Messages.PartyRefuseInvitationMessage, handler:PartyHandler.handlePartyRefuseInvitationMessage },
+        5580: { message: Messages.PartyAcceptInvitationMessage, handler:PartyHandler.handlePartyAcceptInvitationMessage },
+        5593: { message: Messages.PartyLeaveRequestMessage, handler:PartyHandler.handlePartyLeaveRequestMessage },
+
         //Item handler
         3021: {message: Messages.ObjectSetPositionMessage, handler: ItemHandler.handleObjectSetPositionMessage},
+        3022: {message: Messages.ObjectDeleteMessage, handler: ItemHandler.handleObjectDeleteMessage},
+
+        // Spell handler
+        6655: {message: Messages.SpellModifyRequestMessage, handler: GameHandler.handleSpellModifyRequestMessage},
+
+        // Fight handler
+        5731: {message: Messages.GameRolePlayPlayerFightRequestMessage, handler: FightHandler.handleGameRolePlayPlayerFightRequestMessage},
+        5732: {message: Messages.GameRolePlayPlayerFightFriendlyAnswerMessage, handler: FightHandler.handleGameRolePlayPlayerFightFriendlyAnswerMessage},
+        704: {message: Messages.GameFightPlacementPositionRequestMessage, handler: FightHandler.handleGameFightPlacementPositionRequestMessage}
     } 
 
     static handle(client, messageId, buffer) {
