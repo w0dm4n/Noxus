@@ -1,5 +1,6 @@
 import * as Types from "../../io/dofus/types"
 import * as Messages from "../../io/dofus/messages"
+import ProtocolTypeManager from "../../io/dofus/protocol_type_manager"
 import CharacterManager from "../../managers/character_manager.js"
 import ChatRestrictionManager from "../../managers/chat_restriction_manager.js"
 import WorldManager from "../../managers/world_manager.js"
@@ -13,7 +14,6 @@ import Basic from "../../utils/basic"
 
 export default class Character {
 
-
     lastSalesMessage = 0;
     lastSeekMessage = 0;
     lastMessage = 0;
@@ -25,6 +25,7 @@ export default class Character {
     friends = [];
     party = null;
     dialog = null;
+    exchange = null;
 
     constructor(raw, creation) {
         var self = this;
@@ -83,6 +84,9 @@ export default class Character {
 
         this.life = raw.life ? raw.life : this.statsManager.getMaxLife();
         this.requestedFighterId = null;
+
+        this.shortcuts = raw.shortcuts ? raw.shortcuts : {};
+        this.loadShortcuts();
     }
 
     onDisconnect() {
@@ -308,8 +312,8 @@ export default class Character {
                 agility: this.statsManager.getStatById(14).base,
                 intelligence: this.statsManager.getStatById(15).base,
             },
-            zaapKnows : this.zaapKnows
-
+            zaapKnows : this.zaapKnows,
+            shortcuts: this.shortcuts
         };
         DBManager.updateCharacter(this._id, toUpdate, function () {
             Logger.infos("Character '" + self.name + "(" + self._id + ")' saved");
@@ -419,12 +423,19 @@ export default class Character {
         this.save();
     }
 
+    isInExchange()
+    {
+        return (this.exchange) ? true : false;
+    }
+
     isBusy() {
         if (this.dialog != null)
             return true;
         if(this.requestedFighterId)
             return true;
         if(this.isInFight())
+            return true;
+        if (this.isInExchange())
             return true;
         return false;
     }
@@ -434,11 +445,54 @@ export default class Character {
     }
 
     getPartyInformations() {
+        var mapPosition = this.getMap().getMapPosition();
         return new Types.PartyMemberInformations(this._id, this.name, this.level, this.getEntityLook(), this.breed, this.sex, this.life, this.statsManager.getMaxLife(),
-            100, 1, 1000, 0, 1, 1, this.mapid, this.getMap().subareaId, new Types.PlayerStatus(0), []);
+            100, 1, 1000, 0, mapPosition.posX, mapPosition.posY, this.mapid, this.getMap().subareaId, new Types.PlayerStatus(0), []);
     }
 
     getPartyGuestInformations(leaderId) {
         return new Types.PartyGuestInformations(this._id, leaderId, this.name, this.getEntityLook(), this.breed, this.sex, new Types.PlayerStatus(0), []);
     }
+
+    getPartyInvitationMemberInformations() {
+        var mapPosition = this.getMap().getMapPosition();
+        return new Types.PartyInvitationMemberInformations(this._id, this.name, this.level, this.getEntityLook(), this.breed, this.sex, mapPosition.posX, mapPosition.posY,
+            this.mapid, this.getMap().subareaId, []);
+    }
+
+    getMapCoordinates() {
+        var mapPosition = this.getMap().getMapPosition();
+        return new Types.MapCoordinates(mapPosition.posX, mapPosition.posY);
+    }
+
+    // Shortcuts
+
+    loadShortcuts() {
+        for(var i in this.shortcuts) {
+            var bar = this.shortcuts[i];
+            for(var i2 in bar) {
+                var shortcut = bar[i2];
+                if(ProtocolTypeManager.getTypeName(shortcut.protocolId) == "ShortcutSpell") {
+                    shortcut.__proto__ = Types.ShortcutSpell.prototype;
+                }
+            }
+        }
+    }
+
+    getShortcutBar(barType) {
+        if(!this.shortcuts[barType]) this.shortcuts[barType] = {};
+        var bar = this.shortcuts[barType];
+        var values = [];
+        for(var i in bar) {
+            values.push(bar[i]);
+        }
+        return values;
+    }
+
+    refreshShortcutsBar() {
+        this.client.send(new Messages.ShortcutBarContentMessage(0, this.getShortcutBar(0)));
+        this.client.send(new Messages.ShortcutBarContentMessage(1, this.getShortcutBar(1)));
+    }
+
+    // End shortcuts
 }

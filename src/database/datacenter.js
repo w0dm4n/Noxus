@@ -1,6 +1,6 @@
 import DBManager from "./dbmanager.js"
 import Logger from "../io/logger"
-import Look from "../managers/look_managers.js"
+import LookManager from "../managers/look_manager.js"
 
 export default class Datacenter {
 
@@ -16,9 +16,10 @@ export default class Datacenter {
     static spells;
     static spellsLevels;
     static elements;
-    static npcs;
+    static npcs  = { npcs : [] , look : []};
     static npcMessages;
     static npcActions;
+    
 
     static load(callback) {
         var loaders = [
@@ -93,10 +94,15 @@ export default class Datacenter {
 
     static loadNpcs(callback) {
         DBManager.getNpcs(function(npcs){
-            Datacenter.npcs = npcs;
-            Logger.infos("Loaded '" + npcs.length + "' npcs");
-            console.log("id : "+npcs[13]._id);
-            Look.parseLook(npcs[13].look);
+            Datacenter.npcs.npcs = npcs;
+            Logger.infos("Loaded '" + Datacenter.npcs.npcs.length + "' npcs");
+            
+           for(var i in Datacenter.npcs.npcs){
+               if(Datacenter.npcs.npcs[i]._id != 1046 && Datacenter.npcs.npcs[i]._id != 3193 )
+                     Datacenter.npcs.look.push(LookManager.parseLook(Datacenter.npcs.npcs[i].look))
+            }
+            
+            Logger.infos("Loaded '" + Datacenter.npcs.look.length + "' lookNpcs");
             callback();
 
         });

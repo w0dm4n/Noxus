@@ -15,6 +15,7 @@ import ItemHandler from "../handlers/item_handler"
 import IgnoredHandler from "../handlers/ignored_handler"
 import PartyHandler from "../handlers/party_handler"
 import FightHandler from "../handlers/fight_handler"
+import ExchangeHandler from "../handlers/exchange_handler"
 
 export default class Processor {
 
@@ -52,6 +53,9 @@ export default class Processor {
         5673: { message: Messages.IgnoredAddRequestMessage, handler:IgnoredHandler.handleIgnoredAddRequestMessage },
         5676: { message: Messages.IgnoredGetListMessage, handler:IgnoredHandler.handleIgnoredGetListMessage },
         5680: { message: Messages.IgnoredDeleteRequestMessage, handler:IgnoredHandler.handleIgnoredDeleteRequestMessage },
+        6225: {message: Messages.ShortcutBarAddRequestMessage, handler: GameHandler.handleShortcutBarAddRequestMessage},
+        6230: {message: Messages.ShortcutBarSwapRequestMessage, handler: GameHandler.handleShortcutBarSwapRequestMessage},
+        6228: {message: Messages.ShortcutBarRemoveRequestMessage, handler: GameHandler.handleShortcutBarRemoveRequestMessage},
 
         // Party handler
         5585: { message: Messages.PartyInvitationRequestMessage, handler:PartyHandler.handlePartyInvitationRequestMessage },
@@ -59,6 +63,15 @@ export default class Processor {
         5580: { message: Messages.PartyAcceptInvitationMessage, handler:PartyHandler.handlePartyAcceptInvitationMessage },
         5593: { message: Messages.PartyLeaveRequestMessage, handler:PartyHandler.handlePartyLeaveRequestMessage },
         5592: { message: Messages.PartyKickRequestMessage, handler:PartyHandler.handlePartyKickRequestMessage },
+        6080: { message: Messages.PartyAbdicateThroneMessage, handler:PartyHandler.handlePartyAbdicateThroneMessage },
+        5577: { message: Messages.PartyFollowMemberRequestMessage, handler:PartyHandler.handlePartyFollowMemberRequestMessage },
+        5574: { message: Messages.PartyStopFollowRequestMessage, handler:PartyHandler.handlePartyStopFollowRequestMessage },
+        6264: { message: Messages.PartyInvitationDetailsRequestMessage, handler:PartyHandler.handlePartyInvitationDetailsRequestMessage },
+        6254: { message: Messages.PartyCancelInvitationMessage, handler:PartyHandler.handlePartyCancelInvitationMessage },
+
+        //Exchange handler
+        5773: { message: Messages.ExchangePlayerRequestMessage, handler:ExchangeHandler.handleExchangePlayerRequestMessage },
+
 
         //Item handler
         3021: {message: Messages.ObjectSetPositionMessage, handler: ItemHandler.handleObjectSetPositionMessage},
@@ -81,7 +94,7 @@ export default class Processor {
         var handler = Processor.PROTOCOL_HANDLERS[parseInt(messageId)];
         if(handler != null) {
             var packet = new handler.message();
-            Logger.debug("Process message '" + packet.constructor.name + "'");
+            Logger.network("Process message '" + packet.constructor.name + "'");
             //try {
                 packet.deserialize(buffer);
                 handler.handler(client, packet);

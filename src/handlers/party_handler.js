@@ -114,4 +114,115 @@ export default class PartyHandler {
         else
             client.character.replyImportant("Impossible car vous n'êtes pas dans un groupe.");
     }
+
+    static handlePartyAbdicateThroneMessage(client, packet) {
+        if (client.character.party && WorldServer.getPartyById(client.character.party.id)
+            && client.character.party.isInParty(client.character))
+        {
+            if (packet.partyId == client.character.party.id)
+            {
+                if (client.character.party.isLeader(client.character))
+                {
+                    var target = WorldServer.getOnlineClientByCharacterId(packet.playerId);
+                    if (target) {
+                        if (target.character.party && target.character.party == client.character.party
+                        && target.character.party.isInParty(target.character)) {
+                            client.character.party.setLeader(target.character);
+                        }
+                        else
+                            client.character.replyImportant("Impossible car la cible n'est pas dans le groupe.");
+                    }
+                }
+                else
+                    client.character.replyImportant("Impossible car vous n'êtes pas le chef du groupe.")
+            }
+            else
+                client.character.replyError("Une erreur est survenu, le groupe est invalide.");
+        }
+        else
+            client.character.replyImportant("Impossible car vous n'êtes pas dans un groupe.");
+    }
+
+    static handlePartyFollowMemberRequestMessage(client, packet)
+    {
+        if (client.character.party && WorldServer.getPartyById(client.character.party.id)
+            && client.character.party.isInParty(client.character))
+        {
+            if (packet.partyId == client.character.party.id)
+            {
+                var target = WorldServer.getOnlineClientByCharacterId(packet.playerId);
+                if (target) {
+                    if (target.character.party && target.character.party == client.character.party
+                        && target.character.party.isInParty(target.character)) {
+                        client.character.party.setAsFollower(client.character, target.character);
+                    }
+                    else
+                        client.character.replyImportant("Impossible car la cible n'est pas dans le groupe.");
+                }
+            }
+            else
+                client.character.replyError("Une erreur est survenu, le groupe est invalide.");
+        }
+        else
+            client.character.replyImportant("Impossible car vous n'êtes pas dans un groupe.");
+    }
+
+    static handlePartyStopFollowRequestMessage(client, packet)
+    {
+        if (client.character.party && WorldServer.getPartyById(client.character.party.id)
+            && client.character.party.isInParty(client.character))
+        {
+            if (packet.partyId == client.character.party.id)
+            {
+                var target = WorldServer.getOnlineClientByCharacterId(packet.playerId);
+                if (target) {
+                    if (target.character.party && target.character.party == client.character.party
+                        && target.character.party.isInParty(target.character)) {
+                        client.character.party.stopFollowing(client.character, target.character);
+                    }
+                    else
+                        client.character.replyImportant("Impossible car la cible n'est pas dans le groupe.");
+                }
+            }
+            else
+                client.character.replyError("Une erreur est survenu, le groupe est invalide.");
+        }
+        else
+            client.character.replyImportant("Impossible car vous n'êtes pas dans un groupe.");
+    }
+
+    static handlePartyInvitationDetailsRequestMessage(client, packet)
+    {
+        if (client.character.invitation.party && WorldServer.getPartyById(client.character.invitation.party.id))
+        {
+            if (packet.partyId == client.character.invitation.party.id)
+            {
+                client.character.invitation.party.getDetails(client.character, client.character.invitation.leader);
+            }
+            else
+                client.character.replyError("Une erreur est survenu, le groupe est invalide.");
+        }
+        else
+            client.character.replyImportant("Impossible car vous n'êtes pas dans un groupe.");
+    }
+
+    static handlePartyCancelInvitationMessage(client, packet)
+    {
+        if (client.character.party && WorldServer.getPartyById(client.character.party.id)
+            && client.character.party.isInParty(client.character)) {
+            if (packet.partyId == client.character.party.id) {
+
+                if (client.character.party.isLeader(client.character)) {
+                    var target = WorldServer.getOnlineClientByCharacterId(packet.guestId);
+                    if (target) {
+                        if (target.character.invitation.party.id == client.character.party.id) {
+                            target.character.invitation = null;
+                            target.send(new Messages.PartyInvitationCancelledForGuestMessage(client.character.party.id, target.character._id));
+                            client.character.party.sendToParty(new Messages.PartyMemberRemoveMessage(client.character.party.id, packet.guestId));
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

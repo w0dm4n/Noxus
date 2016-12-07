@@ -2500,3 +2500,252 @@ export class FightLoot {
         }
     }
 }
+
+export class MapCoordinates {
+    constructor(worldX, worldY) {
+        this.worldX = worldX;
+        this.worldY = worldY;
+        this.protocolId = 174;
+    }
+    serialize(buffer) {
+        if (this.worldX < -255 || this.worldX > 255) {
+            Logger.error("Forbidden value (" + this.worldX + ") on element worldX.");
+        }
+        buffer.writeShort(this.worldX);
+        if (this.worldY < -255 || this.worldY > 255) {
+            Logger.error("Forbidden value (" + this.worldY + ") on element worldY.");
+        }
+        buffer.writeShort(this.worldY);
+    }
+    deserialize(buffer) {
+        this.worldX = buffer.readShort();
+        if (this.worldX < -255 || this.worldX > 255) {
+            Logger.error("Forbidden value (" + this.worldX + ") on element of MapCoordinates.worldX.");
+        }
+        this.worldY = buffer.readShort();
+        if (this.worldY < -255 || this.worldY > 255) {
+            Logger.error("Forbidden value (" + this.worldY + ") on element of MapCoordinates.worldY.");
+        }
+    }
+}
+
+export class PartyInvitationMemberInformations extends CharacterBaseInformations {
+    constructor(param1, param2, param3, param4, param5, param6, worldX, worldY, mapId, subAreaId, companions) {
+        super(param1, param2, param3, param4, param5, param6);
+        this.worldX = worldX;
+        this.worldY = worldY;
+        this.mapId = mapId;
+        this.subAreaId = subAreaId;
+        this.companions = companions;
+        this.protocolId = 376;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.worldX < -255 || this.worldX > 255) {
+            Logger.error("Forbidden value (" + this.worldX + ") on element worldX.");
+        }
+        buffer.writeShort(this.worldX);
+        if (this.worldY < -255 || this.worldY > 255) {
+            Logger.error("Forbidden value (" + this.worldY + ") on element worldY.");
+        }
+        buffer.writeShort(this.worldY);
+        buffer.writeInt(this.mapId);
+        if (this.subAreaId < 0) {
+            Logger.error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
+        }
+        buffer.writeVarShort(this.subAreaId);
+        buffer.writeShort(this.companions.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.companions.length) {
+            this.companions[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = null;
+        super.deserialize(buffer);
+        this.worldX = buffer.readShort();
+        if (this.worldX < -255 || this.worldX > 255) {
+            Logger.error("Forbidden value (" + this.worldX + ") on element of PartyInvitationMemberInformations.worldX.");
+        }
+        this.worldY = buffer.readShort();
+        if (this.worldY < -255 || this.worldY > 255) {
+            Logger.error("Forbidden value (" + this.worldY + ") on element of PartyInvitationMemberInformations.worldY.");
+        }
+        this.mapId = buffer.readInt();
+        this.subAreaId = buffer.readVarUhShort();
+        if (this.subAreaId < 0) {
+            Logger.error("Forbidden value (" + this.subAreaId + ") on element of PartyInvitationMemberInformations.subAreaId.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = new PartyCompanionBaseInformations();
+            _loc4_.deserialize(buffer);
+            this.companions.push(_loc4_);
+            _loc3_++;
+        }
+    }
+}
+
+export class Shortcut {
+    constructor(slot) {
+        this.slot = slot;
+        this.protocolId = 369;
+    }
+    serialize(buffer) {
+        if (this.slot < 0 || this.slot > 99) {
+            Logger.error("Forbidden value (" + this.slot + ") on element slot.");
+        }
+        buffer.writeByte(this.slot);
+    }
+    deserialize(buffer) {
+        this.slot = buffer.readByte();
+        if (this.slot < 0 || this.slot > 99) {
+            Logger.error("Forbidden value (" + this.slot + ") on element of Shortcut.slot.");
+        }
+    }
+}
+
+export class ShortcutEmote extends Shortcut {
+    constructor(param1, emoteId) {
+        super(param1);
+        this.emoteId = emoteId;
+        this.protocolId = 389;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element emoteId.");
+        }
+        buffer.writeByte(this.emoteId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.emoteId = buffer.readUnsignedByte();
+        if (this.emoteId < 0 || this.emoteId > 255) {
+            Logger.error("Forbidden value (" + this.emoteId + ") on element of ShortcutEmote.emoteId.");
+        }
+    }
+}
+
+export class ShortcutObject extends Shortcut {
+    constructor(param1) {
+        super(param1);
+        this.protocolId = 367;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+    }
+}
+
+export class ShortcutObjectIdolsPreset extends ShortcutObject {
+    constructor(param1, presetId) {
+        super(param1);
+        this.presetId = presetId;
+        this.protocolId = 492;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.presetId < 0) {
+            Logger.error("Forbidden value (" + this.presetId + ") on element presetId.");
+        }
+        buffer.writeByte(this.presetId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.presetId = buffer.readByte();
+        if (this.presetId < 0) {
+            Logger.error("Forbidden value (" + this.presetId + ") on element of ShortcutObjectIdolsPreset.presetId.");
+        }
+    }
+}
+
+export class ShortcutObjectItem extends ShortcutObject {
+    constructor(param1, itemUID, itemGID) {
+        super(param1);
+        this.itemUID = itemUID;
+        this.itemGID = itemGID;
+        this.protocolId = 371;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeInt(this.itemUID);
+        buffer.writeInt(this.itemGID);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.itemUID = buffer.readInt();
+        this.itemGID = buffer.readInt();
+    }
+}
+
+export class ShortcutObjectPreset extends ShortcutObject {
+    constructor(param1, presetId) {
+        super(param1);
+        this.presetId = presetId;
+        this.protocolId = 370;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.presetId < 0) {
+            Logger.error("Forbidden value (" + this.presetId + ") on element presetId.");
+        }
+        buffer.writeByte(this.presetId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.presetId = buffer.readByte();
+        if (this.presetId < 0) {
+            Logger.error("Forbidden value (" + this.presetId + ") on element of ShortcutObjectPreset.presetId.");
+        }
+    }
+}
+
+export class ShortcutSmiley extends Shortcut {
+    constructor(param1, smileyId) {
+        super(param1);
+        this.smileyId = smileyId;
+        this.protocolId = 388;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.smileyId < 0) {
+            Logger.error("Forbidden value (" + this.smileyId + ") on element smileyId.");
+        }
+        buffer.writeVarShort(this.smileyId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.smileyId = buffer.readVarUhShort();
+        if (this.smileyId < 0) {
+            Logger.error("Forbidden value (" + this.smileyId + ") on element of ShortcutSmiley.smileyId.");
+        }
+    }
+}
+
+export class ShortcutSpell extends Shortcut {
+    constructor(param1, spellId) {
+        super(param1);
+        this.spellId = spellId;
+        this.protocolId = 368;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element spellId.");
+        }
+        buffer.writeVarShort(this.spellId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.spellId = buffer.readVarUhShort();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element of ShortcutSpell.spellId.");
+        }
+    }
+}
+

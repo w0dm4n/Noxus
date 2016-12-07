@@ -56,7 +56,7 @@ export default class AuthClient {
         var messageId = header >> 2;
         var typeLen = header & 3;
         var messageLen = NetworkMessage.getPacketLength(buffer, typeLen);
-        Logger.debug("Received data (messageId: " + messageId + ", len: " + messageLen + ", real len: " + buffer.data.length + ")");
+        Logger.network("Received data (messageId: " + messageId + ", len: " + messageLen + ", real len: " + buffer.data.length + ")");
         var b = arrayBufferToBuffer(buffer.data.buffer);
         var messagePart = null;
         messagePart = b.slice(buffer.position, buffer.position + messageLen);
@@ -76,7 +76,7 @@ export default class AuthClient {
             var finalBuffer = b.slice(0, packet.buffer._data.write_position + offset);
             this.socket.write(finalBuffer);
 
-            Logger.debug("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")");
+            Logger.network("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")");
         }
         catch (ex) {
             Logger.error("Can't send properly packet client");

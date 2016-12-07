@@ -21,6 +21,11 @@ export default class FightTimeline {
     }
 
     remixTimeline() {
+        var fighterCurrent = null;
+        if(this.currentTimelineIndex != -1) {
+            fighterCurrent = this.currentFighter();
+        }
+
         Logger.debug("Remix the timeline for the fight id: " + this.fight.id);
         var delta = this.fighters.length;
         this.fighters = [];
@@ -30,29 +35,39 @@ export default class FightTimeline {
         var blue = this.fight.teams.blue.getAliveMembers();
         this.orderFightersPerInitiative(blue);
 
-        if(blue[0].getStats().getTotalStats(16) > red[0].getStats().getTotalStats(16)) {
-            alter = true;
-        }
-
-        while(red.length > 0 || blue.length > 0) {
-            if(!alter) {
-                if(red.length > 0) {
-                    this.fighters.push(red[0]);
-                    red.splice(0, 1);
-                }
+        if(blue.length > 0 && red.length > 0) {
+            if(blue[0].getStats().getTotalStats(16) > red[0].getStats().getTotalStats(16)) {
+                alter = true;
             }
-            else {
-                if(blue.length > 0) {
-                    this.fighters.push(blue[0]);
-                    blue.splice(0, 1);
-                }
-            }
-            alter = !alter;
-        }
 
-        delta = delta - this.fighters.length;
-        this.currentTimelineIndex -= delta;
-        if(this.currentTimelineIndex <= 0) this.currentTimelineIndex = 0;
+            while(red.length > 0 || blue.length > 0) {
+                if(!alter) {
+                    if(red.length > 0) {
+                        this.fighters.push(red[0]);
+                        red.splice(0, 1);
+                    }
+                }
+                else {
+                    if(blue.length > 0) {
+                        this.fighters.push(blue[0]);
+                        blue.splice(0, 1);
+                    }
+                }
+                alter = !alter;
+            }
+
+            if(this.currentTimelineIndex != -1) {
+                this.resetToFighterIndex(fighterCurrent.id);
+            }
+        }
+    }
+
+    resetToFighterIndex(id) {
+        var index = 0;
+        for(var i in this.fighters) {
+            if(this.fighters[i].id == id) index = i;
+        }
+        this.currentTimelineIndex = index;
     }
 
     refreshTimeline() {
@@ -68,7 +83,20 @@ export default class FightTimeline {
         return this.fighters[this.currentTimelineIndex];
     }
 
+    anyoneAlive() {
+        var aliveCount = 0;
+        for(var f of this.fighters) {
+            if(f.alive) aliveCount++;
+        }
+        return aliveCount > 1;
+    }
+
     next() {
+        if(this.fighters.length <= 1) {
+            this.cancelTimer();
+            return;
+        }
+
         this.cancelTimer();
         if(this.currentFighter() != null && this.currentTimelineIndex >= 0) {
             if(this.currentFighter().alive) {
@@ -90,7 +118,9 @@ export default class FightTimeline {
             this.startTimer();
         }
         else {
-            this.next();
+            if(this.anyoneAlive()) {
+                this.next();
+            }
         }
     }
 

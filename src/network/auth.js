@@ -11,7 +11,7 @@ export default class AuthServer {
         var server = net.createServer(function(socket) {
             try
             {
-                Logger.debug("Connexion d'un client sur le serveur d'authentification");
+                Logger.debug("A new client is connected on the auth server");
                 var client = new AuthClient(socket);
                 AuthServer.clients.push(client);
             }

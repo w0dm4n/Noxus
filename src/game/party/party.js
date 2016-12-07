@@ -4,6 +4,8 @@ import WorldServer from "../../network/world"
 import Datacenter from "../../database/datacenter"
 import * as Messages from "../../io/dofus/messages"
 import * as Types from "../../io/dofus/types"
+import PartyFollower from "../../game/party/party_follower"
+import CompassEnum from "../../enums/compass_type_enum"
 
 export default class Party {
     id = 0;
@@ -12,6 +14,7 @@ export default class Party {
     members = null;
     name = null;
     max_members = 0;
+    followers = [];
     constructor(partyType, characterLeader)
     {
         this.id = Math.floor(new Date().valueOf() / 1000);
@@ -74,6 +77,7 @@ export default class Party {
                     this.members[i].party = null;
                     this.members[i].invitation = null;
                 }
+
                 var index = this.members.indexOf(this.members[i]);
                 if (index != -1)
                     this.members.splice(index, 1);
@@ -114,8 +118,28 @@ export default class Party {
             character.client.send(new Messages.PartyJoinMessage(this.id, this.partyType, this.leader._id, this.max_members, membersPartyInformations, [], 0, this.name));
     }
 
+    getDetails(character, inviter)
+    {
+        var members = [];
+        for (var i in this.members)
+        {
+            if (this.members[i] && this.members[i].client)
+            {
+                members.push(this.members[i].getPartyInvitationMemberInformations());
+            }
+        }
+        character.client.send(new Messages.PartyInvitationDetailsMessage(this.id, this.partyType, this.name, inviter._id, inviter.name, this.leader._id, members, []));
+    }
+
     removeMember(character, isOnDisconnect)
     {
+        this.warnFollowers(character);
+        if (this.isFollower(character))
+        {
+            var followeds = this.getFollowersFromFollower(character);
+            if (followeds.length > 0)
+                this.sendCompassUpdate(character, followeds);
+        }
         if (this.members.length > 2) {
             this.removeFromMembers(character, isOnDisconnect);
             if (this.isLeader(character)) {
@@ -135,6 +159,60 @@ export default class Party {
                 this.sendToPartyExcept(new Messages.PartyLeaveMessage(this.id), character);
             this.dispose();
         }
+    }
+
+    sendCompassUpdate(character, followeds) {
+        for (var i in followeds) {
+            try {
+                followeds[i].replyLangsMessage(0, 53, [character.name]);
+                character.client.send(new Messages.PartyFollowStatusUpdateMessage(this.id, true, false, followeds[i]._id));
+            }
+            catch (error) { Logger.error(error); }
+            try {
+                character.client.send(new Messages.CompassUpdatePartyMemberMessage(CompassEnum.TYPE_PARTY, followeds[i].getMapCoordinates(), followeds[i]._id, false));
+            } catch (error) {
+                Logger.error(error);
+            }
+        }
+    }
+
+    warnFollowers(character)
+    {
+        try
+        {
+            var followers = this.getFollowers(character);
+            if (followers.length > 0)
+            {
+                for (var i in followers) {
+                    this.sendCompassUpdate(followers[i].follower, [character]);
+                }
+            }
+        }
+        catch (error)
+        {
+            Logger.error(error);
+        }
+    }
+
+    isFollower(character)
+    {
+        for (var i in this.followers)
+        {
+            if (this.followers[i].follower._id == character._id)
+                return true;
+        }
+        return false;
+    }
+
+    getFollowersFromFollower(character)
+    {
+        var followed = [];
+        for (var i in this.followers)
+        {
+            if (this.followers[i].follower._id == character._id)
+                followed.push(this.followers[i].followed);
+        }
+        return followed;
     }
 
     isInParty(character) {
@@ -159,7 +237,71 @@ export default class Party {
         }
         this.sendToPartyExcept(new Messages.PartyLeaderUpdateMessage(this.id, this.leader._id), oldLeader);
     }
+
+    setLeader(character)
+    {
+        this.leader = character;
+        this.sendToParty(new Messages.PartyLeaderUpdateMessage(this.id, this.leader._id));
+    }
+
+    setAsFollower(follower, followed)
+    {
+        this.followers.push(new PartyFollower(follower, followed));
+        follower.client.send(new Messages.PartyFollowStatusUpdateMessage(this.id, true, true, followed._id));
+        follower.client.send(new Messages.CompassUpdatePartyMemberMessage(CompassEnum.TYPE_PARTY, followed.getMapCoordinates(), followed._id, true));
+        follower.replyLangsMessage(0, 368, [followed.name]);
+        followed.replyLangsMessage(0, 52, [follower.name]);
+    }
+
+    isFollowing(follower, followed) {
+         var followers = this.followers;
+         for (var i in followers)
+         {
+             if (followers[i].follower._id == follower._id
+             && followers[i].followed._id == followed._id)
+             {
+                 var index = this.followers.indexOf(followers[i]);
+                 if (index != -1)
+                     this.followers.splice(index, 1);
+                 return true;
+             }
+         }
+         return false;
+    }
+
+    getFollowers(followed)
+    {
+        var followers = [];
+        for (var i in this.followers) {
+            if (this.followers[i].followed._id == followed._id)
+                followers.push(this.followers[i]);
+        }
+        return followers;
+    }
+
+    stopFollowing(follower, followed)
+    {
+        if (this.isFollowing(follower, followed))
+        {
+            followed.replyLangsMessage(0, 53, [follower.name]);
+            follower.client.send(new Messages.PartyFollowStatusUpdateMessage(this.id, true, false, followed._id));
+            follower.client.send(new Messages.CompassUpdatePartyMemberMessage(CompassEnum.TYPE_PARTY, followed.getMapCoordinates(), followed._id, false));
+        }
+    }
+
+    sendPositionToFollowers(followed)
+    {
+        var followers = this.getFollowers(followed);
+        if (followers.length > 0)
+        {
+            for (var i in followers)
+            {
+                try { followers[i].follower.client.send(new Messages.CompassUpdatePartyMemberMessage(CompassEnum.TYPE_PARTY, followed.getMapCoordinates(), followed._id, true)); } catch (error) { Logger.error(error); }
+            }
+        }
+    }
 }
+
 
 
 

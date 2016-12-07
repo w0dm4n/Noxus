@@ -15,6 +15,7 @@ export default class FightTeam {
         this.addMember(this.leader);
         this.placementCells = [];
         this.bladeCellId = leader.character.cellid;
+        this.fixedMembers = [];
     }
 
     addMember(fighter) {

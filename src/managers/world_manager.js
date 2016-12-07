@@ -19,7 +19,10 @@ export default class WorldManager {
 				client.character.cellid = cellId;
 				client.character.mapid = mapId;
 				map.addClient(client);
+                if (client.character.party)
+                    client.character.party.sendPositionToFollowers(client.character);
 				callback(true);
+
 			}
 		});
     }

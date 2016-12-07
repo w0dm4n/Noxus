@@ -121,6 +121,7 @@ export default class CharacterManager {
         character.statsManager.sendStats();
         CharacterManager.learnSpellsForCharacter(character);
         character.statsManager.sendSpellsList();
+        character.refreshShortcutsBar();
         CharacterManager.setRegenState(character);
     }
 

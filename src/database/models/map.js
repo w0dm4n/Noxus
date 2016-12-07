@@ -124,4 +124,21 @@ export default class Map {
             this.clients[i].send(packet);
         }
     }
+
+    getMapPosition()
+    {
+        var mapsPositions = Datacenter.maps_positions;
+        for (var i in mapsPositions)
+        {
+            if (mapsPositions[i]._id == this._id)
+                return mapsPositions[i];
+        }
+        return null;
+    }
+
+    //juste pour test
+    affichenpc(){
+     // return new GameRolePlayNpcInformations(-Id, NpcTemplateRecord.GetNpcLook(TemplateId), new EntityDispositionInformations(CellId, Direction), TemplateId, false, 0);
+
+    }
 }

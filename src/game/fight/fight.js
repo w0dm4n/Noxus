@@ -25,7 +25,8 @@ export default class Fight {
 
     static FIGHT_STATES = {
         "STARTING": 1,
-        "FIGHTING": 2
+        "FIGHTING": 2,
+        "END": 3
     };
 
     constructor(fighterOne) {
@@ -67,6 +68,11 @@ export default class Fight {
             this.showFighters(fighter);
         }
         this.displayMapBlades();
+        this.refreshBaseFighters();
+    }
+
+    refreshBaseFighters() {
+        this.baseFighters = this.allFighters();
     }
 
     getFightCommonInformations() {
@@ -113,6 +119,7 @@ export default class Fight {
         this.sendStartupPhase(fighter)
         this.showFighters(fighter);
         this.send(new Messages.GameFightShowFighterMessage(fighter.getGameFightFighterInformations()));
+        this.refreshBaseFighters();
     }
 
     getFighterOnCell(cellId) {
@@ -166,53 +173,60 @@ export default class Fight {
 
     leaveFight(fighter, leaveType) {
         var team = fighter.team;
-        if(this.fightState == Fight.FIGHT_STATES.STARTING) {
-
-
-        }
-        else if(this.fightState == Fight.FIGHT_STATES.FIGHTING){
-            //TODO
-        }
-
-        if(leaveType != Fight.FIGHT_LEAVE_TYPE.FORCED) {
-            var ended = false;
-            if(team.leader.id == fighter.id) {
-                this.setWinner(this.getOppositeTeam(team));
-                this.endFight();
-                ended = true;
-            }
-
-            if(team.members.length <= 0) {
-                this.setWinner(this.getOppositeTeam(team));
-                this.endFight();
-                ended = true;
-            }
-            if(ended) {
-                if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) this.showFightEnd(fighter, this.winner, this.looser);
-            }
-            else {
-                if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) this.showFightEnd(fighter, this.getOppositeTeam(team), team);
-            }
-
-            if(this.fightState == Fight.FIGHT_STATES.FIGHTING && leaveType != Fight.FIGHT_LEAVE_TYPE.FORCED){
-                if(this.timeline.currentFighter().id == fighter.id) {
-                    this.timeline.next();
-                    this.timeline.remixTimeline();
-                }
-            }
-        }
-        else {
-            if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) this.showFightEnd(fighter, this.winner, this.looser);
-        }
+        team.removeMember(fighter);
+        this.send(new Messages.GameFightRemoveTeamMemberMessage(this.id, team.id, fighter.id));
+        this.send(new Messages.GameFightLeaveMessage(fighter.id));
+        this.send(new Messages.GameContextRemoveElementMessage(fighter.id));
 
         fighter.alive = false;
         fighter.character.fight = null;
         fighter.character.fighter = null;
-        if(leaveType != Fight.FIGHT_LEAVE_TYPE.DISCONNECTED) {
-            fighter.restoreRoleplayContext();
-            this.send(new Messages.GameFightRemoveTeamMemberMessage(this.id, team.id, fighter.id));
-            this.send(new Messages.GameFightLeaveMessage(fighter.id));
-            this.send(new Messages.GameContextRemoveElementMessage(fighter.id));
+
+        if(this.fightState == Fight.FIGHT_STATES.FIGHTING){
+            if(this.timeline.currentFighter().id == fighter.id) {
+                this.timeline.next();
+                this.timeline.remixTimeline();
+            }
+        }
+
+        if(this.fightState != Fight.FIGHT_STATES.END) this.checkEnd();
+
+        if(this.fightState == Fight.FIGHT_STATES.END) {
+            this.showFightEnd(fighter, this.winner, this.looser);
+        }
+
+        fighter.restoreRoleplayContext();
+    }
+
+    disconnectFighter(fighter) {
+        var team = fighter.team;
+        team.removeMember(fighter);
+        this.send(new Messages.GameFightRemoveTeamMemberMessage(this.id, team.id, fighter.id));
+        this.send(new Messages.GameFightLeaveMessage(fighter.id));
+        this.send(new Messages.GameContextRemoveElementMessage(fighter.id));
+
+        fighter.alive = false;
+        fighter.character.fight = null;
+        fighter.character.fighter = null;
+
+        if(this.fightState == Fight.FIGHT_STATES.FIGHTING){
+            if(this.timeline.currentFighter().id == fighter.id) {
+                this.timeline.next();
+                this.timeline.remixTimeline();
+            }
+        }
+
+        if(this.fightState != Fight.FIGHT_STATES.END) this.checkEnd();
+    }
+
+    checkEnd() {
+        var alive = true;
+        if(this.teams.red.members.length <= 0 || this.teams.blue.members.length <= 0) {
+            alive = false;
+        }
+
+        if(!alive) {
+            this.endFight();
         }
     }
 
@@ -233,39 +247,46 @@ export default class Fight {
         if(this.fightState == Fight.FIGHT_STATES.STARTING) {
             this.removeMapBlades();
         }
+
+        // Check winners
+        if(this.teams.red.members.length <= 0) {
+            this.setWinner(this.teams.blue);
+        } else if (this.teams.blue.members.length <= 0) {
+            this.setWinner(this.teams.red);
+        }
+
+        this.fightState = Fight.FIGHT_STATES.END;
         for(var f of this.allFighters()) {
             this.leaveFight(f, Fight.FIGHT_LEAVE_TYPE.FORCED);
         }
     }
 
+
     showFightEnd(fighter, winners, loosers) {
-        if(this.fightState == Fight.FIGHT_STATES.STARTING) {
-            var winnerResult = [];
-            var looserResult = [];
+        var winnerResult = [];
+        var looserResult = [];
 
-            for(var f of winners.members) {
-                winnerResult.push(new Types.FightResultMutantListEntry(2, 0, new Types.FightLoot([], 0), f.id, f.alive, f.level));
-            }
-
-            for(var f of loosers.members) {
-                looserResult.push(new Types.FightResultMutantListEntry(0, 0, new Types.FightLoot([], 0), f.id, f.alive, f.level));
-            }
-
-            var result = [];
-            result = result.concat(winnerResult);
-            result = result.concat(looserResult);
-
-            fighter.send(new Messages.GameFightEndMessage(0, -1, -1, result, []));
+        for(var f of winners.fixedMembers) {
+            winnerResult.push(new Types.FightResultMutantListEntry(2, 0, new Types.FightLoot([], 0), f.id, f.alive, f.level));
         }
-        else if(this.fightState == Fight.FIGHT_STATES.FIGHTING){
-            //TODO
+
+        for(var f of loosers.fixedMembers) {
+            looserResult.push(new Types.FightResultMutantListEntry(0, 0, new Types.FightLoot([], 0), f.id, f.alive, f.level));
         }
+
+        var result = [];
+        result = result.concat(winnerResult);
+        result = result.concat(looserResult);
+
+        fighter.send(new Messages.GameFightEndMessage(0, -1, -1, result, []));
     }
 
     startFight() {
         this.fightState = Fight.FIGHT_STATES.FIGHTING;
         this.removeMapBlades();
         this.send(new Messages.GameFightStartMessage([])); //TODO: Idols
+        this.teams.blue.fixedMembers = this.teams.blue.members.slice();
+        this.teams.red.fixedMembers = this.teams.red.members.slice();
         this.timeline.refreshTimeline();
         this.timeline.next();
     }

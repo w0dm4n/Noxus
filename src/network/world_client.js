@@ -49,7 +49,7 @@ export default class WorldClient {
                 }
 
                 if(self.character.isInFight()) {
-                    self.character.fight.leaveFight(self.character.fighter, Fight.FIGHT_LEAVE_TYPE.DISCONNECTED);
+                    self.character.fight.disconnectFighter(self.character.fighter);
                 }
             }
             World.removeClient(self);
@@ -66,7 +66,7 @@ export default class WorldClient {
         var messageId = header >> 2;
         var typeLen = header & 3;
         var messageLen = NetworkMessage.getPacketLength(buffer, typeLen);
-        Logger.debug("Received data (messageId: " + messageId + ", len: " + messageLen + ")");
+        Logger.network("Received data (messageId: " + messageId + ", len: " + messageLen + ")");
         var b = arrayBufferToBuffer(buffer.data.buffer);
         var messagePart = b.slice(buffer.position, buffer.position + messageLen);
         Processor.handle(self, messageId, new IO.CustomDataWrapper(Formatter.toArrayBuffer(messagePart)));
@@ -90,7 +90,7 @@ export default class WorldClient {
             packet.buffer = new IO.CustomDataWrapper();
             this.socket.write(finalBuffer);
 
-            Logger.debug("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", packetlen: " + packet.buffer._data.write_position + ", len: " + finalBuffer.length + " -- " + b.length + ")");
+            Logger.network("Sended packet '" + packet.constructor.name + "' (id: " + packet.messageId + ", len: " + finalBuffer.length + " -- " + b.length + ")");
         }
         catch (e) {
             Logger.error("Can't send packet to client because: " + e);

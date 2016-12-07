@@ -233,4 +233,42 @@ export default class GameHandler {
 			}
 		}
 	}
+
+	static handleShortcutBarAddRequestMessage(client, packet) {
+        Logger.debug("Player id:" + client.character._id + " want to create a new shortcut");
+        if(packet.shortcut instanceof Types.ShortcutSpell) {
+            if(!client.character.shortcuts[packet.barType]) client.character.shortcuts[packet.barType] = {};
+            client.character.shortcuts[packet.barType][packet.shortcut.slot] = packet.shortcut;
+            client.send(new Messages.ShortcutBarRefreshMessage(packet.barType, packet.shortcut));
+            client.character.refreshShortcutsBar();
+            client.character.save();
+        }
+	}
+
+	static handleShortcutBarSwapRequestMessage(client, packet) {
+        var shortcuts = client.character.shortcuts;
+        var bar = shortcuts[packet.barType];
+        var firstShortcut = bar[packet.firstSlot];
+        var secondShortcut = bar[packet.secondSlot];
+        firstShortcut.slot = packet.secondSlot;
+        bar[packet.secondSlot] = firstShortcut;
+
+        if(secondShortcut) {
+            secondShortcut.slot = packet.firstSlot;
+            bar[packet.firstSlot] = secondShortcut;
+        }
+        else {
+            delete bar[packet.firstSlot];
+        }
+        client.character.refreshShortcutsBar();
+        client.character.save();
+    }
+
+    static handleShortcutBarRemoveRequestMessage(client, packet) {
+        var shortcuts = client.character.shortcuts;
+        var bar = shortcuts[packet.barType];
+        delete bar[packet.slot];
+        client.character.refreshShortcutsBar();
+        client.character.save();
+    }
 }

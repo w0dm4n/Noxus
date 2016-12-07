@@ -1,11 +1,30 @@
 import Logger from "../io/logger"
+import SubLookManager from "../managers/sublook_manager.js"
+import Types from "../io/dofus/types.js"
 
 export default class LookManager {
 
+    constructor(bone,skin,color,scale,sublook){
+        this.bones = bone;
+        this.skins = skin;
+        this.colors = color;
+        this.scales = scale;
+        this.sublooks = sublook;
+    }   
+    static toString()
+    {
+        var str = [];
+   
+    }
 
+    toEntityLook()
+    {
+        return new Types.EntityLook(this.bones,this.skins,this.colors,this.scales,this.sublooks);
+    }
+    
     static parseLook(str) {
 
-        if (!str || str[0] != '{') {
+        if (!str || str[0] != '{' ) {
             Logger.infos("Incorrect EntityLook format : " + str);
         }
         var i = 1;
@@ -21,16 +40,56 @@ export default class LookManager {
         var bones = parseInt(str.substring(i, num));
         i = num + 1;
         var skins = [];
-
         if ((num = str.indexOf('|', i)) != -1 || (num = str.indexOf('}', i)) != -1) {
             skins = LookManager.parseCollection(str.substring(i, num));
             i = num + 1;
         }
 
+        var source;
         if ((num = str.indexOf('|', i)) != -1 || (num = str.indexOf('}', i)) != -1) {
-            LookManager.parseCollectionColor(str.substring(i, num));
+            source = LookManager.parseCollectionColor(str.substring(i, num));
             i = num + 1;
         }
+        var scales = [];
+        if ((num = str.indexOf('|', i)) != -1 || (num = str.indexOf('}', i)) != -1) {
+
+            scales = LookManager.parseCollection(str.substring(i, num));
+            i = num + 1;
+        }
+
+        var sublook = [];
+
+        while (i < str.length) {
+            var num2 = str.indexOf('@', i, 3);
+            var num3 = str.indexOf('=', num2 + 1, 3);
+            var category = str.substring(i, num2);
+            var b = str.substring(num2 + 1, num3);
+
+
+            var num4 = 0;
+            var num5 = num3 + 1;
+            var string = [];
+            do {
+                string.push(str[num5]);
+                if (str[num5] == '{') {
+                    num4++;
+                }
+                else {
+                    if (str[num5] == '}') {
+                        num4--;
+                    }
+                }
+                num5++;
+            }
+            while (num4 > 0);
+
+            sublook.push(new SubLookManager(b, category, LookManager.parseLook(string.join(""))));
+            i = num5 + 1;
+
+        }
+
+        return new LookManager(bones,skins,source,scales,sublook);
+
     }
 
 
@@ -95,8 +154,7 @@ export default class LookManager {
         var flag = str[num + 1] == '#';
         var item = parseInt(str.substring(0, num));
         var item2 = str.split('=')[1];
-        console.log("item 1 : " + item);
-        console.log("item 2 : " + item2);
+        return { item1: item, item2: item2 };
 
     }
 }

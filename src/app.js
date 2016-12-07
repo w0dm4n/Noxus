@@ -9,7 +9,7 @@ import Common from "./Common"
 class App {
 
     constructor() {
-        Logger.infos("Noxus v" + Common.NOXUS_VERSION.major + "." + Common.NOXUS_VERSION.minor + " " + Common.NOXUS_VERSION.type);
+        Logger.drawAscii();
 
          process.on('uncaughtException', function(error) {
             console.error((new Date).toUTCString() + ' uncaughtException:', error.message)

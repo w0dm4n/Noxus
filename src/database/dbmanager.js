@@ -63,6 +63,7 @@ export default class DBManager {
                     zaapKnows:character.zaapKnows,
                     zaapSave:character.zaapSave,
                     spells: character.spells,
+                    shortcuts: character.shortcuts,
                     stats: {
                         strength: character.statsManager.getStatById(10).base,
                         vitality: character.statsManager.getStatById(11).base,
