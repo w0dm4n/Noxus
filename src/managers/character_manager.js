@@ -11,7 +11,7 @@ export default class CharacterManager {
     static getBreed(breedId) {
         for (var i in Datacenter.breeds) {
             var b = Datacenter.breeds[i];
-            if (b.id == breedId) {
+            if (b._id == breedId) {
                 return b;
             }
         }
@@ -146,7 +146,7 @@ export default class CharacterManager {
         for(var s of character.getBreed().breedSpellsId) {
             var spellTemplate = SpellManager.getSpell(s);
             if(spellTemplate) {
-                var spellLevel = SpellManager.getSpellLevel(spellTemplate.spellLevels[0]);
+                var spellLevel = SpellManager.getSpellLevelById(spellTemplate.spellLevels[0]);
                 if(spellLevel) {
                     if(!character.statsManager.hasSpell(spellTemplate._id) && spellLevel.minPlayerLevel <= character.level) {
                         character.spells.push({spellId: spellTemplate._id, spellLevel: 1});

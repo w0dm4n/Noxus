@@ -18,7 +18,12 @@ export default class Fighter {
         this.dirId = 3;
         this.alive = true;
         CharacterManager.applyRegen(this.character);
-        this.current = { life: this.character.life, AP: this.character.statsManager.getTotalStats(1), MP: this.character.statsManager.getTotalStats(2) }
+        this.current = {
+            life: this.character.life,
+            shieldPoint: 0,
+            AP: this.character.statsManager.getTotalStats(1),
+            MP: this.character.statsManager.getTotalStats(2)
+        }
     }
 
     get id() {
@@ -50,6 +55,7 @@ export default class Fighter {
     restoreRoleplayContext() {
         this.send(new Messages.GameContextDestroyMessage());
         this.send(new Messages.GameContextCreateMessage(1));
+        this.character.statsManager.sendStats();
         WorldManager.teleportClient(this.character.client, this.character.mapid, this.character.cellid, function(result){
             if (!result)
             {
@@ -86,9 +92,40 @@ export default class Fighter {
 
     passTurn() {
         if(this.fight.timeline.currentFighter()) {
-            if(this.fight.timeline.currentFighter().character._id == this.character._id) {
+            if(this.isMyTurn()) {
                 this.fight.timeline.next();
             }
         }
+    }
+
+    isMyTurn() {
+        return this.fight.timeline.currentFighter().character._id == this.character._id;
+    }
+
+    takeDamage(from, damages, elementType) {
+        //TODO: Apply damage reduction and invu
+        //TODO: Check shield point because the packet is not the same
+        //TODO: Erosion system
+        if(this.alive) {
+            this.current.life -= damages;
+            this.fight.send(new Messages.GameActionFightLifePointsLostMessage(0, from.id, this.id, damages, 0));
+            this.checkIfIsDead();
+        }
+    }
+
+    checkIfIsDead() {
+        if(this.current.life <= 0) {
+            this.alive = false;
+        }
+
+        if(!this.alive) {
+            this.enableDeadState();
+        }
+    }
+
+    enableDeadState() {
+        this.alive = false;
+        this.fight.send(new Messages.GameActionFightDeathMessage(103, this.id, this.id))
+        this.fight.checkEnd();
     }
 }

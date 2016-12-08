@@ -2183,14 +2183,14 @@ export class SpellModifyRequestMessage extends ProtocolMessage {
         if (this.spellLevel < 1 || this.spellLevel > 6) {
             Logger.error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
         }
-        this.buffer.writeByte(this.spellLevel);
+        this.buffer.writeShort(this.spellLevel);
     }
     deserialize(buffer) {
         this.spellId = buffer.readVarUhShort();
         if (this.spellId < 0) {
             Logger.error("Forbidden value (" + this.spellId + ") on element of SpellModifyRequestMessage.spellId.");
         }
-        this.spellLevel = buffer.readByte();
+        this.spellLevel = buffer.readShort();
         if (this.spellLevel < 1 || this.spellLevel > 6) {
             Logger.error("Forbidden value (" + this.spellLevel + ") on element of SpellModifyRequestMessage.spellLevel.");
         }
@@ -2205,15 +2205,15 @@ export class SpellModifySuccessMessage extends ProtocolMessage {
     }
     serialize() {
         this.buffer.writeInt(this.spellId);
-        if (this.spellLevel < 1 || this.spellLevel > 6) {
+        if (this.spellLevel < 1 || this.spellLevel > 200) {
             Logger.error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
         }
-        this.buffer.writeByte(this.spellLevel);
+        this.buffer.writeShort(this.spellLevel);
     }
     deserialize(buffer) {
         this.spellId = buffer.readInt();
-        this.spellLevel = buffer.readByte();
-        if (this.spellLevel < 1 || this.spellLevel > 6) {
+        this.spellLevel = buffer.readShort();
+        if (this.spellLevel < 1 || this.spellLevel > 200) {
             Logger.error("Forbidden value (" + this.spellLevel + ") on element of SpellModifySuccessMessage.spellLevel.");
         }
     }
@@ -3728,4 +3728,311 @@ this.subentities[_loc5_].serialize(buffer);
             _loc5_++;
          }
 }
+}
+
+export class ExchangeLeaveMessage extends LeaveDialogMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.success = param2;
+        this.messageId = 5628;
+    }
+    serialize() {
+        super.serialize();
+        this.buffer.writeBoolean(this.success);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.success = buffer.readBoolean();
+    }
+}
+
+export class ExchangeAcceptMessage extends ProtocolMessage {
+    constructor() {
+        super(5508);
+    }
+    serialize() {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class ExchangeStartedMessage extends ProtocolMessage {
+    constructor(exchangeType) {
+        super(5512);
+        this.exchangeType = exchangeType;
+    }
+    serialize() {
+        this.buffer.writeByte(this.exchangeType);
+    }
+    deserialize(buffer) {
+        this.exchangeType = buffer.readByte();
+    }
+}
+
+export class ExchangeStartedWithPodsMessage extends ExchangeStartedMessage {
+    constructor(param1, param2, param3, param4, param5, param6, param7) {
+        super(param1);
+        this.firstCharacterId = param2;
+        this.firstCharacterCurrentWeight = param3;
+        this.firstCharacterMaxWeight = param4;
+        this.secondCharacterId = param5;
+        this.secondCharacterCurrentWeight = param6;
+        this.secondCharacterMaxWeight = param7;
+        this.messageId = 6129;
+    }
+    serialize() {
+        super.serialize();
+        if (this.firstCharacterId < -9007199254740990 || this.firstCharacterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.firstCharacterId + ") on element firstCharacterId.");
+        }
+        this.buffer.writeDouble(this.firstCharacterId);
+        if (this.firstCharacterCurrentWeight < 0) {
+            Logger.error("Forbidden value (" + this.firstCharacterCurrentWeight + ") on element firstCharacterCurrentWeight.");
+        }
+        this.buffer.writeVarInt(this.firstCharacterCurrentWeight);
+        if (this.firstCharacterMaxWeight < 0) {
+            Logger.error("Forbidden value (" + this.firstCharacterMaxWeight + ") on element firstCharacterMaxWeight.");
+        }
+        this.buffer.writeVarInt(this.firstCharacterMaxWeight);
+        if (this.secondCharacterId < -9007199254740990 || this.secondCharacterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.secondCharacterId + ") on element secondCharacterId.");
+        }
+        this.buffer.writeDouble(this.secondCharacterId);
+        if (this.secondCharacterCurrentWeight < 0) {
+            Logger.error("Forbidden value (" + this.secondCharacterCurrentWeight + ") on element secondCharacterCurrentWeight.");
+        }
+        this.buffer.writeVarInt(this.secondCharacterCurrentWeight);
+        if (this.secondCharacterMaxWeight < 0) {
+            Logger.error("Forbidden value (" + this.secondCharacterMaxWeight + ") on element secondCharacterMaxWeight.");
+        }
+        this.buffer.writeVarInt(this.secondCharacterMaxWeight);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.firstCharacterId = buffer.readDouble();
+        if (this.firstCharacterId < -9007199254740990 || this.firstCharacterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.firstCharacterId + ") on element of ExchangeStartedWithPodsMessage.firstCharacterId.");
+        }
+        this.firstCharacterCurrentWeight = buffer.readVarUhInt();
+        if (this.firstCharacterCurrentWeight < 0) {
+            Logger.error("Forbidden value (" + this.firstCharacterCurrentWeight + ") on element of ExchangeStartedWithPodsMessage.firstCharacterCurrentWeight.");
+        }
+        this.firstCharacterMaxWeight = buffer.readVarUhInt();
+        if (this.firstCharacterMaxWeight < 0) {
+            Logger.error("Forbidden value (" + this.firstCharacterMaxWeight + ") on element of ExchangeStartedWithPodsMessage.firstCharacterMaxWeight.");
+        }
+        this.secondCharacterId = buffer.readDouble();
+        if (this.secondCharacterId < -9007199254740990 || this.secondCharacterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.secondCharacterId + ") on element of ExchangeStartedWithPodsMessage.secondCharacterId.");
+        }
+        this.secondCharacterCurrentWeight = buffer.readVarUhInt();
+        if (this.secondCharacterCurrentWeight < 0) {
+            Logger.error("Forbidden value (" + this.secondCharacterCurrentWeight + ") on element of ExchangeStartedWithPodsMessage.secondCharacterCurrentWeight.");
+        }
+        this.secondCharacterMaxWeight = buffer.readVarUhInt();
+        if (this.secondCharacterMaxWeight < 0) {
+            Logger.error("Forbidden value (" + this.secondCharacterMaxWeight + ") on element of ExchangeStartedWithPodsMessage.secondCharacterMaxWeight.");
+        }
+    }
+}
+
+export class GameActionFightCastRequestMessage extends ProtocolMessage {
+    constructor(spellId, cellId) {
+        super(1005);
+        this.spellId = spellId;
+        this.cellId = cellId;
+    }
+    serialize() {
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element spellId.");
+        }
+        this.buffer.writeVarShort(this.spellId);
+        if (this.cellId < -1 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element cellId.");
+        }
+        this.buffer.writeShort(this.cellId);
+    }
+    deserialize(buffer) {
+        this.spellId = buffer.readVarUhShort();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element of GameActionFightCastRequestMessage.spellId.");
+        }
+        this.cellId = buffer.readShort();
+        if (this.cellId < -1 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element of GameActionFightCastRequestMessage.cellId.");
+        }
+    }
+}
+
+export class GameContextKickMessage extends ProtocolMessage {
+    constructor(targetId) {
+        super(6081);
+        this.targetId = targetId;
+    }
+    serialize() {
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+    }
+    deserialize(buffer) {
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameContextKickMessage.targetId.");
+        }
+    }
+}
+
+export class AbstractGameActionFightTargetedAbilityMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4, param5, param6, param7) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.destinationCellId = param4;
+        this.critical = param5;
+        this.silentCast = param6;
+        this.verboseCast = param7;
+        this.messageId = 6118;
+    }
+    serialize() {
+        super.serialize();
+        var _loc2_ = 0;
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 0, this.silentCast);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 1, this.verboseCast);
+        this.buffer.writeByte(_loc2_);
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.destinationCellId < -1 || this.destinationCellId > 559) {
+            Logger.error("Forbidden value (" + this.destinationCellId + ") on element destinationCellId.");
+        }
+        this.buffer.writeShort(this.destinationCellId);
+        this.buffer.writeByte(this.critical);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        var _loc2_ = buffer.readByte();
+        this.silentCast = IO.BooleanByteWrapper.getFlag(_loc2_, 0);
+        this.verboseCast = IO.BooleanByteWrapper.getFlag(_loc2_, 1);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of AbstractGameActionFightTargetedAbilityMessage.targetId.");
+        }
+        this.destinationCellId = buffer.readShort();
+        if (this.destinationCellId < -1 || this.destinationCellId > 559) {
+            Logger.error("Forbidden value (" + this.destinationCellId + ") on element of AbstractGameActionFightTargetedAbilityMessage.destinationCellId.");
+        }
+        this.critical = buffer.readByte();
+        if (this.critical < 0) {
+            Logger.error("Forbidden value (" + this.critical + ") on element of AbstractGameActionFightTargetedAbilityMessage.critical.");
+        }
+    }
+}
+
+export class GameActionFightSpellCastMessage extends AbstractGameActionFightTargetedAbilityMessage {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) {
+        super(param1, param2, param3, param4, param5, param6, param7);
+        this.spellId = param8;
+        this.spellLevel = param9;
+        this.portalsIds = param10;
+        this.messageId = 1010;
+    }
+    serialize() {
+        super.serialize();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element spellId.");
+        }
+        this.buffer.writeVarShort(this.spellId);
+        if (this.spellLevel < 1 || this.spellLevel > 200) {
+            Logger.error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
+        }
+        this.buffer.writeShort(this.spellLevel);
+        this.buffer.writeShort(this.portalsIds.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.portalsIds.length) {
+            this.buffer.writeShort(this.portalsIds[_loc2_]);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        super.deserialize(buffer);
+        this.spellId = buffer.readVarUhShort();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element of GameActionFightSpellCastMessage.spellId.");
+        }
+        this.spellLevel = buffer.readShort();
+        if (this.spellLevel < 1 || this.spellLevel > 200) {
+            Logger.error("Forbidden value (" + this.spellLevel + ") on element of GameActionFightSpellCastMessage.spellLevel.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readShort();
+            this.portalsIds.push(_loc4_);
+            _loc3_++;
+        }
+    }
+}
+
+export class GameActionFightLifePointsLostMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4, param5) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.loss = param4;
+        this.permanentDamages = param5;
+        this.messageId = 6312;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.loss < 0) {
+            Logger.error("Forbidden value (" + this.loss + ") on element loss.");
+        }
+        this.buffer.writeVarInt(this.loss);
+        if (this.permanentDamages < 0) {
+            Logger.error("Forbidden value (" + this.permanentDamages + ") on element permanentDamages.");
+        }
+        this.buffer.writeVarInt(this.permanentDamages);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightLifePointsLostMessage.targetId.");
+        }
+        this.loss = buffer.readVarUhInt();
+        if (this.loss < 0) {
+            Logger.error("Forbidden value (" + this.loss + ") on element of GameActionFightLifePointsLostMessage.loss.");
+        }
+        this.permanentDamages = buffer.readVarUhInt();
+        if (this.permanentDamages < 0) {
+            Logger.error("Forbidden value (" + this.permanentDamages + ") on element of GameActionFightLifePointsLostMessage.permanentDamages.");
+        }
+    }
+}
+
+export class GameActionFightDeathMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.messageId = 1099;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightDeathMessage.targetId.");
+        }
+    }
 }

@@ -10,15 +10,17 @@ import ExchangeType from "../enums/exchange_type_enum"
 
 export default class ExchangeManager {
 
-    exchangeAvailable = {
-        1:require("../game/exchange_player"),
+    static exchangeAvailable = {
+        1:require("../game/exchange/exchange_player"),
     };
 
     static newExchange(exchangeType, firstActor, secondActor)
     {
-        if (this.exchangeAvailable[exchangeType])
+        if (ExchangeManager.exchangeAvailable[exchangeType])
         {
-            return new this.exchangeAvailable[exchangeType](exchangeType, firstActor, secondActor);
+            return new ExchangeManager.exchangeAvailable[exchangeType](exchangeType, firstActor, secondActor);
         }
+        else
+            firstActor.character.replyImportant("Ce type d'échange n'est pas encore disponible ou est invalide.");
     }
 }

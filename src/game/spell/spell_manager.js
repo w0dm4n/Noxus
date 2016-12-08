@@ -11,10 +11,20 @@ export default class SpellManager {
         return null;
     }
 
-    static getSpellLevel(spellLevelId) {
+    static getSpellLevelById(id) {
         for(var s of Datacenter.spellsLevels) {
-            if(s._id == spellLevelId) return s;
+            if(s._id == id) return s;
         }
         return null;
     }
+
+    static getSpellLevel(spellId, spellGrade) {
+        for(var s of Datacenter.spellsLevels) {
+            if(s.spellId == spellId && s.grade == spellGrade) return s;
+        }
+        return null;
+    }
+
+    // Spell effect helpers
+
 }

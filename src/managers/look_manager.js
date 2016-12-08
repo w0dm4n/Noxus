@@ -1,6 +1,6 @@
 import Logger from "../io/logger"
 import SubLookManager from "../managers/sublook_manager.js"
-import Types from "../io/dofus/types.js"
+import * as Types from "../io/dofus/types.js"
 
 export default class LookManager {
 
@@ -23,7 +23,6 @@ export default class LookManager {
     }
     
     static parseLook(str) {
-
         if (!str || str[0] != '{' ) {
             Logger.infos("Incorrect EntityLook format : " + str);
         }
@@ -87,8 +86,15 @@ export default class LookManager {
             i = num5 + 1;
 
         }
-
-        return new LookManager(bones,skins,source,scales,sublook);
+         var nextColors = [];
+     
+            for(var i in source)
+            {
+                nextColors[i] = i + 1 << 24 | source[i].item2 & 16777215;
+            }
+        console.log("test : ");
+        console.log(nextColors);
+        return new LookManager(bones,skins,nextColors,scales,sublook);
 
     }
 

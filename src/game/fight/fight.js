@@ -7,7 +7,8 @@ import * as Types from "../../io/dofus/types"
 import Basic from "../../utils/basic"
 import MapPoint from "../../game/pathfinding/map_point"
 import Pathfinding from "../../game/pathfinding/pathfinding"
-
+import SpellManager from "../spell/spell_manager"
+import FightSpellProcessor from "./fight_spell_processor"
 
 export default class Fight {
 
@@ -225,6 +226,10 @@ export default class Fight {
             alive = false;
         }
 
+        if(this.teams.red.getAliveMembers() <= 0 || this.teams.blue.getAliveMembers() <= 0) {
+            alive = false;
+        }
+
         if(!alive) {
             this.endFight();
         }
@@ -255,10 +260,19 @@ export default class Fight {
             this.setWinner(this.teams.red);
         }
 
-        this.fightState = Fight.FIGHT_STATES.END;
-        for(var f of this.allFighters()) {
-            this.leaveFight(f, Fight.FIGHT_LEAVE_TYPE.FORCED);
+        if(this.teams.red.getAliveMembers() <= 0) {
+            this.setWinner(this.teams.blue);
+        } else if (this.teams.blue.getAliveMembers() <= 0) {
+            this.setWinner(this.teams.red);
         }
+
+        this.fightState = Fight.FIGHT_STATES.END;
+        var self = this;
+        setTimeout(function(){
+            for(var f of self.allFighters()) {
+                self.leaveFight(f, Fight.FIGHT_LEAVE_TYPE.FORCED);
+            }
+        }, 2000);
     }
 
 
@@ -327,6 +341,31 @@ export default class Fight {
             this.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
             fighter.cellId = cells[cells.length - 1].id;
             fighter.current.MP -= distance;
+        }
+    }
+
+    requestCastSpell(fighter, spellId, cellId) {
+        //TODO: Check cellId validity
+        var spell = fighter.character.statsManager.getSpell(spellId);
+        if(spell) {
+            var spellLevel = SpellManager.getSpellLevel(spellId, spell.spellLevel);
+            if(spellLevel) {
+                this.castSpell(fighter, spell, spellLevel, cellId);
+            }
+        }
+    }
+
+    castSpell(fighter, spell, spellLevel, cellId) {
+        if(fighter.current.AP >= spellLevel.apCost && fighter.isMyTurn()) {
+            fighter.current.AP -= spellLevel.apCost;
+            this.send(new Messages.SequenceStartMessage(1, fighter.id));
+            this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
+            this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
+
+            var effects = spellLevel.effects;
+            FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
+
+            this.send(new Messages.SequenceEndMessage(3, fighter.id, 1));
         }
     }
 }

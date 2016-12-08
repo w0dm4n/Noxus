@@ -111,4 +111,18 @@ export default class FightHandler {
             client.character.fighter.passTurn();
         }
     }
+
+    static handleGameActionFightCastRequestMessage(client, packet) {
+        if (client.character.isInFight()) {
+            Logger.debug("Fighter want to cast spell id: " + packet.spellId + ", on cell id: " + packet.cellId);
+            client.character.fight.requestCastSpell(client.character.fighter, packet.spellId, packet.cellId);
+        }
+    }
+
+    static handleGameContextKickMessage(client, packet) {
+        if(client.character.isInFight()) {
+            Logger.debug("Fighter want to kick target id: " + packet.targetId);
+
+        }
+    }
 }

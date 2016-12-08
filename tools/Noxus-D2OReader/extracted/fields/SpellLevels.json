@@ -307,11 +307,6 @@
 				"vectorTypes": false
 			},
 			{
-				"name": "criticalFailureProbability",
-				"type": "Int",
-				"vectorTypes": false
-			},
-			{
 				"name": "needFreeCell",
 				"type": "Bool",
 				"vectorTypes": false
@@ -364,11 +359,6 @@
 			{
 				"name": "minPlayerLevel",
 				"type": "Int",
-				"vectorTypes": false
-			},
-			{
-				"name": "criticalFailureEndsTurn",
-				"type": "Bool",
 				"vectorTypes": false
 			},
 			{

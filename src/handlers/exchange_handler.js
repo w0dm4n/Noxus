@@ -28,12 +28,13 @@ export default class ExchangeHandler {
     static handleExchangePlayerRequestMessage(client, packet)
     {
         var target = WorldServer.getOnlineClientByCharacterId(packet.target);
-        if (target) {
+        if (target && target.character.mapid == client.character.mapid) {
             if (!IgnoredHandler.isIgnoringForSession(target, client.character) && !IgnoredHandler.isIgnoring(target, client.account)) {
                 if (!target.character.isBusy()) {
-                    var exchange = ExchangeManager.newExchange(packet.exchangeType, client, target);
+                    var exchange = ExchangeManager.newExchange(packet.exchangeType, client.character, target.character);
                     if (exchange) {
                         client.character.exchange = exchange;
+                        target.character.exchange = exchange;
                     }
                 }
                 else
@@ -41,6 +42,15 @@ export default class ExchangeHandler {
             }
             else
                 client.character.replyLangsMessage(1, 370, [target.character.name]);
+        }
+    }
+
+    static handleExchangeAcceptMessage(client, packet)
+    {
+        if (client.character.exchange
+            && client.character.exchange.secondActor._id == client.character._id)
+        {
+            client.character.exchange.acceptExchange();
         }
     }
 

@@ -2748,4 +2748,26 @@ export class ShortcutSpell extends Shortcut {
         }
     }
 }
+export class GameRolePlayNpcInformations extends GameRolePlayActorInformations {
+    constructor(param1, param2, param3, npcId, sex, specialArtworkId) {
+        super(param1, param2, param3);
+        this.npcId = npcId;
+        this.sex = sex;
+        this.specialArtworkId = specialArtworkId;
+        this.protocolId = 156;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.npcId < 0) {
+            Logger.error("Forbidden value (" + this.npcId + ") on element npcId.");
+        }
+        buffer.writeVarShort(this.npcId);
+        buffer.writeBoolean(this.sex);
+        if (this.specialArtworkId < 0) {
+            Logger.error("Forbidden value (" + this.specialArtworkId + ") on element specialArtworkId.");
+        }
+        buffer.writeVarShort(this.specialArtworkId);
+    }
+}
+
 

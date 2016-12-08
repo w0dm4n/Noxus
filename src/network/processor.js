@@ -71,6 +71,7 @@ export default class Processor {
 
         //Exchange handler
         5773: { message: Messages.ExchangePlayerRequestMessage, handler:ExchangeHandler.handleExchangePlayerRequestMessage },
+        5508: { message: Messages.ExchangeAcceptMessage, handler:ExchangeHandler.handleExchangeAcceptMessage },
 
 
         //Item handler
@@ -88,6 +89,8 @@ export default class Processor {
         701: {message: Messages.GameFightJoinRequestMessage, handler: FightHandler.handleGameFightJoinRequestMessage},
         255: {message: Messages.GameContextQuitMessage, handler: FightHandler.handleGameContextQuitMessage},
         718: {message: Messages.GameFightTurnFinishMessage, handler: FightHandler.handleGameFightTurnFinishMessage},
+        1005: {message: Messages.GameActionFightCastRequestMessage, handler: FightHandler.handleGameActionFightCastRequestMessage},
+        6081: {message: Messages.GameContextKickMessage, handler: FightHandler.handleGameContextKickMessage},
     } 
 
     static handle(client, messageId, buffer) {

@@ -47,6 +47,7 @@ export default class Map {
         this.clients.push(client);
         client.send(new Messages.CurrentMapMessage(this._id, Map.MAP_DECRYPT_KEY));
         InteractiveHandler.checkIfCharacterHaveZaap(client, this);
+
     }
 
     removeClient(client) {
@@ -62,6 +63,7 @@ export default class Map {
         for(var i in this.clients) {
             actors.push(this.clients[i].character.getGameRolePlayCharacterInformations(this.clients[i].account));
         }
+        this.send(new Messages.GameRolePlayShowActorMessage(new Types.GameRolePlayNpcInformations(-10, Datacenter.getLookNpcs(41).toEntityLook(), new Types.EntityDispositionInformations(399, 2), 41, false, 0)));
         return actors;
     }
 
@@ -137,8 +139,5 @@ export default class Map {
     }
 
     //juste pour test
-    affichenpc(){
-     // return new GameRolePlayNpcInformations(-Id, NpcTemplateRecord.GetNpcLook(TemplateId), new EntityDispositionInformations(CellId, Direction), TemplateId, false, 0);
-
-    }
+    
 }

@@ -415,17 +415,11 @@ export default class Character {
     leaveDialog() {
         if (this.dialog != null)
             this.dialog.close();
-
     }
 
     addSpell(spell) {
         this.spells.push(spell);
         this.save();
-    }
-
-    isInExchange()
-    {
-        return (this.exchange) ? true : false;
     }
 
     isBusy() {
@@ -434,8 +428,6 @@ export default class Character {
         if(this.requestedFighterId)
             return true;
         if(this.isInFight())
-            return true;
-        if (this.isInExchange())
             return true;
         return false;
     }

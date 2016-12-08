@@ -96,11 +96,13 @@ export default class Datacenter {
         DBManager.getNpcs(function(npcs){
             Datacenter.npcs.npcs = npcs;
             Logger.infos("Loaded '" + Datacenter.npcs.npcs.length + "' npcs");
-            
-           for(var i in Datacenter.npcs.npcs){
+          /* for(var i in Datacenter.npcs.npcs){
                if(Datacenter.npcs.npcs[i]._id != 1046 && Datacenter.npcs.npcs[i]._id != 3193 )
                      Datacenter.npcs.look.push(LookManager.parseLook(Datacenter.npcs.npcs[i].look))
-            }
+                else
+                     Datacenter.npcs.look.push(0)
+     
+            }*/
             
             Logger.infos("Loaded '" + Datacenter.npcs.look.length + "' lookNpcs");
             callback();
@@ -206,5 +208,15 @@ export default class Datacenter {
             return result;
         else
             return [];
+    }
+
+    static getLookNpcs(id){
+        for(var i in Datacenter.npcs.npcs) {
+            if( Datacenter.npcs.npcs[i]._id == id) 
+            {            
+                return Datacenter.npcs.look[i];
+            }
+        }
+        return null;
     }
 }
