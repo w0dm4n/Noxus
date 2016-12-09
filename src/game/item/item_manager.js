@@ -28,7 +28,7 @@ export default class ItemManager {
     static generateRandomEffect(effect) {
         var randomableEffects = [78, 105, 106, 107, 110, 111, 112, 114, 115, 117, 118, 119, 120, 121, 123, 124, 125, 126, 128, 136,
             137, 142, 150, 160, 161, 164, 165, 176, 178, 182, 184, 210, 211, 212, 213, 214, 240, 241, 242, 243, 244, 265, 174, 430,
-            422, 219, 215, 218, 216, 217, 410, 753, 414, 418, 428]; // Effects who can be random
+            422, 219, 215, 218, 216, 217, 410, 753, 414, 418, 428, 138, 424, 426, 419]; // Effects who can be random
 
         if(randomableEffects.indexOf(effect.effectId) != -1) { // ObjectEffectInteger
             let lowValue = effect.diceNum;

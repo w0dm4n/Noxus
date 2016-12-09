@@ -358,14 +358,17 @@ export default class Fight {
     castSpell(fighter, spell, spellLevel, cellId) {
         if(fighter.current.AP >= spellLevel.apCost && fighter.isMyTurn()) {
             fighter.current.AP -= spellLevel.apCost;
+            fighter.sequenceCount = 1;
             this.send(new Messages.SequenceStartMessage(1, fighter.id));
             this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
+            fighter.sequenceCount++;
             this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
+            fighter.sequenceCount++;
 
             var effects = spellLevel.effects;
             FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
-
-            this.send(new Messages.SequenceEndMessage(3, fighter.id, 1));
+            console.log(fighter.sequenceCount);
+            this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
         }
     }
 }

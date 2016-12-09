@@ -63,7 +63,7 @@ export default class Map {
         for(var i in this.clients) {
             actors.push(this.clients[i].character.getGameRolePlayCharacterInformations(this.clients[i].account));
         }
-        this.send(new Messages.GameRolePlayShowActorMessage(new Types.GameRolePlayNpcInformations(-10, Datacenter.getLookNpcs(41).toEntityLook(), new Types.EntityDispositionInformations(399, 2), 41, false, 0)));
+       this.send(new Messages.GameRolePlayShowActorMessage(new Types.GameRolePlayNpcInformations(-10, Datacenter.getLookNpcs(52).toEntityLook(), new Types.EntityDispositionInformations(399, 2), 52, false, 0)));
         return actors;
     }
 

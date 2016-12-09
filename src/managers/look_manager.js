@@ -86,14 +86,14 @@ export default class LookManager {
             i = num5 + 1;
 
         }
+
          var nextColors = [];
      
             for(var i in source)
             {
-                nextColors[i] = i + 1 << 24 | source[i].item2 & 16777215;
+                nextColors.push(source[i].item1 << 24 | source[i].item2 & 16777215);
             }
-        console.log("test : ");
-        console.log(nextColors);
+
         return new LookManager(bones,skins,nextColors,scales,sublook);
 
     }

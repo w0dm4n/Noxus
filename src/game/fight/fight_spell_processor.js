@@ -1,5 +1,7 @@
 import FightShapeProcessor from "./fight_shape_processor"
 import Logger from "../../io/logger"
+import * as Messages from "../../io/dofus/messages"
+import * as Types from "../../io/dofus/types"
 
 export default class FightSpellProcessor {
 
@@ -43,9 +45,11 @@ export default class FightSpellProcessor {
     static getTargets(fight, caster, spell, spellLevel, effect, cellId) {
         var targets = [];
         var shape = FightShapeProcessor.buildShape(effect.rawZone[0], effect.rawZone[1], cellId);
-        for(var cell of shape) {
-            var fighterOnCell = fight.getFighterOnCell(cell);
-            if(fighterOnCell) targets.push(fighterOnCell);
+        if(shape) {
+            for(var cell of shape) {
+                var fighterOnCell = fight.getFighterOnCell(cell);
+                if(fighterOnCell) targets.push(fighterOnCell);
+            }
         }
         //TODO: Check if this spell can be casted on a friendly, ennemie etc ..
         return targets;

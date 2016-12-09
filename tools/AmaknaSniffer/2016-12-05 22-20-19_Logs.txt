@@ -1,0 +1,264 @@
+ID=5937 Name=GameRolePlayPlayerFightFriendlyRequestedMessage Origin=Server
+    fightId = 2160
+    sourceId = 521976217606
+    targetId = 771939368966
+
+ID=5732 Name=GameRolePlayPlayerFightFriendlyAnswerMessage Origin=Client
+    fightId = 2160
+    accept = True
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 61
+    lastPacketId = 5732
+
+ID=5733 Name=GameRolePlayPlayerFightFriendlyAnsweredMessage Origin=Server
+    fightId = 2160
+    sourceId = 521976217606
+    targetId = 771939368966
+    accept = True
+
+ID=251 Name=GameContextRemoveElementMessage Origin=Server
+    id = 521976217606
+
+ID=201 Name=GameContextDestroyMessage Origin=Server
+
+ID=200 Name=GameContextCreateMessage Origin=Server
+    context = 2
+
+ID=500 Name=CharacterStatsListMessage Origin=Server
+    stats = AmaknaCore.Protocol.Types.CharacterCharacteristicsInformations
+
+ID=700 Name=GameFightStartingMessage Origin=Server
+    fightType = 0
+    attackerId = 521976217606
+    defenderId = 771939368966
+
+ID=702 Name=GameFightJoinMessage Origin=Server
+    isTeamPhase = True
+    canBeCancelled = True
+    canSayReady = True
+    isFightStarted = False
+    timeMaxBeforeFightStart = 0
+    fightType = 0
+
+ID=703 Name=GameFightPlacementPossiblePositionsMessage Origin=Server
+    positionsForChallengers = System.UInt32[]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+    positionsForDefenders = System.UInt32[]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+    teamNumber = 1
+
+ID=5864 Name=GameFightShowFighterMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameFightCharacterInformations
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 2160
+    teamId = 1
+    option = 2
+    state = False
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 2160
+    teamId = 1
+    option = 1
+    state = False
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 2160
+    teamId = 1
+    option = 3
+    state = False
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 2160
+    teamId = 1
+    option = 0
+    state = False
+
+ID=5686 Name=LifePointsRegenEndMessage Origin=Server
+    lifePointsGained = 0
+    lifePoints = 1981
+    maxLifePoints = 1981
+
+ID=5696 Name=GameEntitiesDispositionMessage Origin=Server
+    dispositions = AmaknaCore.Protocol.Types.IdentifiedEntityDispositionInformations[]
+        [
+        id = 521976217606
+        cellId = 45
+        direction = 1
+        ]
+        [
+        id = 771939368966
+        cellId = 94
+        direction = 5
+        ]
+
+ID=5864 Name=GameFightShowFighterMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameFightCharacterInformations
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 2160
+    teamId = 0
+    option = 1
+    state = True
+
+ID=5572 Name=GameFightUpdateTeamMessage Origin=Server
+    fightId = 2160
+    team = AmaknaCore.Protocol.Types.FightTeamInformations
+
+ID=5572 Name=GameFightUpdateTeamMessage Origin=Server
+    fightId = 2160
+    team = AmaknaCore.Protocol.Types.FightTeamInformations
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=5696 Name=GameEntitiesDispositionMessage Origin=Server
+    dispositions = AmaknaCore.Protocol.Types.IdentifiedEntityDispositionInformations[]
+        [
+        id = 771939368966
+        cellId = 94
+        direction = 5
+        ]
+        [
+        id = 521976217606
+        cellId = 48
+        direction = 1
+        ]
+
+ID=740 Name=GameFightHumanReadyStateMessage Origin=Server
+    characterId = 521976217606
+    isReady = True
+
+ID=708 Name=GameFightReadyMessage Origin=Client
+    isReady = True
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 62
+    lastPacketId = 708
+
+ID=740 Name=GameFightHumanReadyStateMessage Origin=Server
+    characterId = 771939368966
+    isReady = True
+
+ID=5696 Name=GameEntitiesDispositionMessage Origin=Server
+    dispositions = AmaknaCore.Protocol.Types.IdentifiedEntityDispositionInformations[]
+        [
+        id = 771939368966
+        cellId = 94
+        direction = 5
+        ]
+        [
+        id = 521976217606
+        cellId = 48
+        direction = 1
+        ]
+
+ID=712 Name=GameFightStartMessage Origin=Server
+    idols = AmaknaCore.Protocol.Types.Idol[]
+
+ID=713 Name=GameFightTurnListMessage Origin=Server
+    ids = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    deadsIds = System.Double[]
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=5921 Name=GameFightSynchronizeMessage Origin=Server
+    fighters = AmaknaCore.Protocol.Types.GameFightFighterInformations[]
+        [
+        level = 126
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        breed = 1
+        sex = True
+        name = Chaary
+        status = AmaknaCore.Protocol.Types.PlayerStatus
+        teamId = 1
+        wave = 0
+        alive = True
+        stats = AmaknaCore.Protocol.Types.GameFightMinimalStats
+        previousPositions = System.UInt32[]
+        contextualId = 771939368966
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.FightEntityDispositionInformations
+        ]
+        [
+        level = 199
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        breed = 9
+        sex = False
+        name = Cossaire
+        status = AmaknaCore.Protocol.Types.PlayerStatus
+        teamId = 0
+        wave = 0
+        alive = True
+        stats = AmaknaCore.Protocol.Types.GameFightMinimalStats
+        previousPositions = System.UInt32[]
+        contextualId = 521976217606
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.FightEntityDispositionInformations
+        ]
+
+ID=6239 Name=GameFightNewRoundMessage Origin=Server
+    roundNumber = 1
+
+ID=714 Name=GameFightTurnStartMessage Origin=Server
+    id = 521976217606
+    waitTime = 290
+

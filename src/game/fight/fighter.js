@@ -17,6 +17,7 @@ export default class Fighter {
         this.cellId = -1;
         this.dirId = 3;
         this.alive = true;
+        this.sequenceCount = 0;
         CharacterManager.applyRegen(this.character);
         this.current = {
             life: this.character.life,

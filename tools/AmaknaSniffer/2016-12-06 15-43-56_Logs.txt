@@ -1,0 +1,693 @@
+ID=5733 Name=GameRolePlayPlayerFightFriendlyAnsweredMessage Origin=Server
+    fightId = 52
+    sourceId = 771939368966
+    targetId = 776157200390
+    accept = True
+
+ID=201 Name=GameContextDestroyMessage Origin=Server
+
+ID=200 Name=GameContextCreateMessage Origin=Server
+    context = 2
+
+ID=500 Name=CharacterStatsListMessage Origin=Server
+    stats = AmaknaCore.Protocol.Types.CharacterCharacteristicsInformations
+
+ID=700 Name=GameFightStartingMessage Origin=Server
+    fightType = 0
+    attackerId = 771939368966
+    defenderId = 776157200390
+
+ID=702 Name=GameFightJoinMessage Origin=Server
+    isTeamPhase = True
+    canBeCancelled = True
+    canSayReady = True
+    isFightStarted = False
+    timeMaxBeforeFightStart = 0
+    fightType = 0
+
+ID=703 Name=GameFightPlacementPossiblePositionsMessage Origin=Server
+    positionsForChallengers = System.UInt32[]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+    positionsForDefenders = System.UInt32[]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+    teamNumber = 0
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 52
+    teamId = 0
+    option = 2
+    state = False
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 52
+    teamId = 0
+    option = 1
+    state = False
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 52
+    teamId = 0
+    option = 3
+    state = False
+
+ID=5927 Name=GameFightOptionStateUpdateMessage Origin=Server
+    fightId = 52
+    teamId = 0
+    option = 0
+    state = False
+
+ID=5686 Name=LifePointsRegenEndMessage Origin=Server
+    lifePointsGained = 0
+    lifePoints = 1981
+    maxLifePoints = 1981
+
+ID=5696 Name=GameEntitiesDispositionMessage Origin=Server
+    dispositions = AmaknaCore.Protocol.Types.IdentifiedEntityDispositionInformations[]
+        [
+        id = 771939368966
+        cellId = 176
+        direction = 1
+        ]
+
+ID=5864 Name=GameFightShowFighterMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameFightCharacterInformations
+
+ID=5696 Name=GameEntitiesDispositionMessage Origin=Server
+    dispositions = AmaknaCore.Protocol.Types.IdentifiedEntityDispositionInformations[]
+        [
+        id = 771939368966
+        cellId = 176
+        direction = 3
+        ]
+        [
+        id = 776157200390
+        cellId = 371
+        direction = 7
+        ]
+
+ID=5864 Name=GameFightShowFighterMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameFightCharacterInformations
+
+ID=5572 Name=GameFightUpdateTeamMessage Origin=Server
+    fightId = 52
+    team = AmaknaCore.Protocol.Types.FightTeamInformations
+
+ID=5572 Name=GameFightUpdateTeamMessage Origin=Server
+    fightId = 52
+    team = AmaknaCore.Protocol.Types.FightTeamInformations
+
+ID=255 Name=GameContextQuitMessage Origin=Client
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 43
+    lastPacketId = 255
+
+ID=720 Name=GameFightEndMessage Origin=Server
+    duration = 0
+    ageBonus = -1
+    lootShareLimitMalus = -1
+    results = AmaknaCore.Protocol.Types.FightResultListEntry[]
+        [
+        level = 188
+        additional = AmaknaCore.Protocol.Types.FightResultAdditionalData[]
+        id = 776157200390
+        alive = True
+        outcome = 2
+        wave = 0
+        rewards = AmaknaCore.Protocol.Types.FightLoot
+        ]
+        [
+        level = 126
+        additional = AmaknaCore.Protocol.Types.FightResultAdditionalData[]
+        id = 771939368966
+        alive = True
+        outcome = 0
+        wave = 0
+        rewards = AmaknaCore.Protocol.Types.FightLoot
+        ]
+    namedPartyTeamsOutcomes = AmaknaCore.Protocol.Types.NamedPartyTeamWithOutcome[]
+
+ID=201 Name=GameContextDestroyMessage Origin=Server
+
+ID=200 Name=GameContextCreateMessage Origin=Server
+    context = 1
+
+ID=5684 Name=LifePointsRegenBeginMessage Origin=Server
+    regenRate = 5
+
+ID=220 Name=CurrentMapMessage Origin=Server
+    mapId = 88212759
+    mapKey = 649ae451ca33ec53bbcbcc33becf15f4
+
+ID=175 Name=BasicTimeMessage Origin=Server
+    timestamp = 1481035412545
+    timezoneOffset = 60
+
+ID=500 Name=CharacterStatsListMessage Origin=Server
+    stats = AmaknaCore.Protocol.Types.CharacterCharacteristicsInformations
+
+ID=500 Name=CharacterStatsListMessage Origin=Server
+    stats = AmaknaCore.Protocol.Types.CharacterCharacteristicsInformations
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=225 Name=MapInformationsRequestMessage Origin=Client
+    mapId = 88212759
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 44
+    lastPacketId = 225
+
+ID=226 Name=MapComplementaryInformationsDataMessage Origin=Server
+    subAreaId = 10
+    mapId = 88212759
+    houses = AmaknaCore.Protocol.Types.HouseInformations[]
+    actors = AmaknaCore.Protocol.Types.GameRolePlayActorInformations[]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 8979919
+        name = Supra-jnouneye
+        contextualId = 672507887622
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 2375676
+        name = Supra-cafe
+        contextualId = 329415852038
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 81492655
+        name = Jessica-Alba
+        contextualId = 672483639302
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 56013869
+        name = Castiels
+        contextualId = 776157200390
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 1688898
+        name = Chaary
+        contextualId = 771939368966
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 57604258
+        name = Red-fox
+        contextualId = 636150087686
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 80119533
+        name = Lhooq
+        contextualId = 663441768454
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 75515391
+        name = Kyrlia
+        contextualId = 641903427590
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 20410629
+        name = Dark-Kyro
+        contextualId = 439625973766
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 75536845
+        name = Keny-arkana
+        contextualId = 688333455366
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1480971280247
+        ageBonusRate = 1800000
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10004
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1481003021828
+        ageBonusRate = 1800000
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10003
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1481006640155
+        ageBonusRate = 1800000
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10005
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        sellType = 0
+        options = AmaknaCore.Protocol.Types.HumanOption[]
+            [
+            guildInformations = AmaknaCore.Protocol.Types.GuildInformations
+            ]
+        name = Ipraiz
+        contextualId = 593404559366
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        sellType = 1
+        options = AmaknaCore.Protocol.Types.HumanOption[]
+        name = Money-vente
+        contextualId = 694179725318
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        sellType = 1
+        options = AmaknaCore.Protocol.Types.HumanOption[]
+            [
+            guildInformations = AmaknaCore.Protocol.Types.GuildInformations
+            ]
+            [
+            allianceInformations = AmaknaCore.Protocol.Types.AllianceInformations
+            aggressable = 0
+            ]
+        name = laullllle
+        contextualId = 227264888838
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        sellType = 3
+        options = AmaknaCore.Protocol.Types.HumanOption[]
+        name = Best-Shop
+        contextualId = 778104799238
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        sellType = 3
+        options = AmaknaCore.Protocol.Types.HumanOption[]
+        name = Mimitsuh
+        contextualId = 777664724998
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        sellType = 0
+        options = AmaknaCore.Protocol.Types.HumanOption[]
+            [
+            guildInformations = AmaknaCore.Protocol.Types.GuildInformations
+            ]
+        name = Apple-pie
+        contextualId = 655875899398
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+    interactiveElements = AmaknaCore.Protocol.Types.InteractiveElement[]
+        [
+        elementId = 475424
+        elementTypeId = 84
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 102
+            skillInstanceUid = 7637230
+            ]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        onCurrentMap = True
+        ]
+        [
+        ageBonus = 0
+        elementId = 495835
+        elementTypeId = 255
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 69
+            skillInstanceUid = 7637234
+            ]
+        onCurrentMap = True
+        ]
+        [
+        elementId = 472654
+        elementTypeId = 16
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 114
+            skillInstanceUid = 7637227
+            ]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        onCurrentMap = False
+        ]
+        [
+        ageBonus = 0
+        elementId = 495927
+        elementTypeId = 255
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 69
+            skillInstanceUid = 7637263
+            ]
+        onCurrentMap = False
+        ]
+        [
+        ageBonus = 0
+        elementId = 495630
+        elementTypeId = 254
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 68
+            skillInstanceUid = 7637231
+            ]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        onCurrentMap = True
+        ]
+        [
+        ageBonus = 0
+        elementId = 495834
+        elementTypeId = 255
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 69
+            skillInstanceUid = 7637233
+            ]
+        onCurrentMap = True
+        ]
+    statedElements = AmaknaCore.Protocol.Types.StatedElement[]
+        [
+        elementId = 475424
+        elementCellId = 272
+        elementState = 0
+        onCurrentMap = True
+        ]
+        [
+        elementId = 495927
+        elementCellId = 379
+        elementState = 0
+        onCurrentMap = False
+        ]
+        [
+        elementId = 495835
+        elementCellId = 452
+        elementState = 0
+        onCurrentMap = True
+        ]
+        [
+        elementId = 495630
+        elementCellId = 268
+        elementState = 0
+        onCurrentMap = True
+        ]
+        [
+        elementId = 495834
+        elementCellId = 73
+        elementState = 0
+        onCurrentMap = True
+        ]
+    obstacles = AmaknaCore.Protocol.Types.MapObstacle[]
+    fights = AmaknaCore.Protocol.Types.FightCommonInformations[]
+    hasAggressiveMonsters = False
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 771939368966
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 776157200390
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=5637 Name=GameContextRefreshEntityLookMessage Origin=Server
+    id = 776157200390
+    look = AmaknaCore.Protocol.Types.EntityLook
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 776157200390
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 688333455366
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=5637 Name=GameContextRefreshEntityLookMessage Origin=Server
+    id = 641903427590
+    look = AmaknaCore.Protocol.Types.EntityLook
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 641903427590
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=951 Name=GameMapMovementMessage Origin=Server
+    keyMovements = System.Int16[]
+        [
+        ]
+        [
+        ]
+    actorId = -10005
+
+ID=5632 Name=GameRolePlayShowActorMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameRolePlayCharacterInformations
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 407777968134
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=5632 Name=GameRolePlayShowActorMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameRolePlayCharacterInformations
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 641903427590
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=5637 Name=GameContextRefreshEntityLookMessage Origin=Server
+    id = 641903427590
+    look = AmaknaCore.Protocol.Types.EntityLook
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 641903427590
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=951 Name=GameMapMovementMessage Origin=Server
+    keyMovements = System.Int16[]
+        [
+        ]
+        [
+        ]
+    actorId = -10004
+
+ID=5632 Name=GameRolePlayShowActorMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameRolePlayCharacterInformations
+
+ID=5632 Name=GameRolePlayShowActorMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameRolePlayCharacterInformations
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 266816061446
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=5632 Name=GameRolePlayShowActorMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameRolePlayCharacterInformations
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 672507887622
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 266816061446
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=951 Name=GameMapMovementMessage Origin=Server
+    keyMovements = System.Int16[]
+        [
+        ]
+        [
+        ]
+    actorId = -10003
+
+ID=5632 Name=GameRolePlayShowActorMessage Origin=Server
+    informations = AmaknaCore.Protocol.Types.GameRolePlayCharacterInformations
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 256538378246
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=951 Name=GameMapMovementMessage Origin=Server
+    keyMovements = System.Int16[]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+        [
+        ]
+    actorId = 256538378246
+

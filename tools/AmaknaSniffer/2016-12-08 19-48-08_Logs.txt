@@ -1,0 +1,327 @@
+ID=6330 Name=GameActionFightCastOnTargetRequestMessage Origin=Client
+    spellId = 3
+    targetId = -1
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 68
+    lastPacketId = 6330
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=955 Name=SequenceStartMessage Origin=Server
+    sequenceType = 1
+    authorId = 771939368966
+
+ID=1010 Name=GameActionFightSpellCastMessage Origin=Server
+    spellId = 3
+    spellLevel = 6
+    portalsIds = System.Int16[]
+    silentCast = False
+    verboseCast = True
+    targetId = -1
+    destinationCellId = 438
+    critical = 1
+    actionId = 300
+    sourceId = 771939368966
+
+ID=1030 Name=GameActionFightPointsVariationMessage Origin=Server
+    targetId = 771939368966
+    delta = -3
+    actionId = 102
+    sourceId = 771939368966
+
+ID=6070 Name=GameActionFightDispellableEffectMessage Origin=Server
+    effect = AmaknaCore.Protocol.Types.FightTemporaryBoostEffect
+    actionId = 155
+    sourceId = 771939368966
+
+ID=6070 Name=GameActionFightDispellableEffectMessage Origin=Server
+    effect = AmaknaCore.Protocol.Types.FightTemporaryBoostEffect
+    actionId = 126
+    sourceId = 771939368966
+
+ID=6312 Name=GameActionFightLifePointsLostMessage Origin=Server
+    targetId = -1
+    loss = 100
+    permanentDamages = 14
+    actionId = 99
+    sourceId = 771939368966
+
+ID=1099 Name=GameActionFightDeathMessage Origin=Server
+    targetId = -1
+    actionId = 103
+    sourceId = 771939368966
+
+ID=956 Name=SequenceEndMessage Origin=Server
+    actionId = 7
+    authorId = 771939368966
+    sequenceType = 1
+
+ID=715 Name=GameFightTurnReadyRequestMessage Origin=Server
+    id = 771939368966
+
+ID=957 Name=GameActionAcknowledgementMessage Origin=Client
+    valid = True
+    actionId = 7
+
+ID=716 Name=GameFightTurnReadyMessage Origin=Client
+    isReady = True
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 69
+    lastPacketId = 957
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 70
+    lastPacketId = 716
+
+ID=720 Name=GameFightEndMessage Origin=Server
+    duration = 10541
+    ageBonus = 0
+    lootShareLimitMalus = -1
+    results = AmaknaCore.Protocol.Types.FightResultListEntry[]
+        [
+        level = 126
+        additional = AmaknaCore.Protocol.Types.FightResultAdditionalData[]
+            [
+            showExperience = True
+            showExperienceLevelFloor = True
+            showExperienceNextLevelFloor = True
+            showExperienceFightDelta = False
+            showExperienceForGuild = False
+            showExperienceForMount = False
+            isIncarnationExperience = False
+            experience = 251237874
+            experienceLevelFloor = 248712000
+            experienceNextLevelFloor = 257209000
+            experienceFightDelta = 0
+            experienceForGuild = 0
+            experienceForMount = 0
+            rerollExperienceMul = 2
+            ]
+        id = 771939368966
+        alive = True
+        outcome = 2
+        wave = 0
+        rewards = AmaknaCore.Protocol.Types.FightLoot
+        ]
+        [
+        id = -1
+        alive = True
+        outcome = 0
+        wave = 0
+        rewards = AmaknaCore.Protocol.Types.FightLoot
+        ]
+    namedPartyTeamsOutcomes = AmaknaCore.Protocol.Types.NamedPartyTeamWithOutcome[]
+
+ID=6367 Name=TitlesAndOrnamentsListMessage Origin=Server
+    titles = System.UInt32[]
+    ornaments = System.UInt32[]
+        [
+        ]
+    activeTitle = 0
+    activeOrnament = 13
+
+ID=201 Name=GameContextDestroyMessage Origin=Server
+
+ID=200 Name=GameContextCreateMessage Origin=Server
+    context = 1
+
+ID=5684 Name=LifePointsRegenBeginMessage Origin=Server
+    regenRate = 5
+
+ID=220 Name=CurrentMapMessage Origin=Server
+    mapId = 99090957
+    mapKey = 649ae451ca33ec53bbcbcc33becf15f4
+
+ID=175 Name=BasicTimeMessage Origin=Server
+    timestamp = 1481222883830
+    timezoneOffset = 60
+
+ID=500 Name=CharacterStatsListMessage Origin=Server
+    stats = AmaknaCore.Protocol.Types.CharacterCharacteristicsInformations
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=225 Name=MapInformationsRequestMessage Origin=Client
+    mapId = 99090957
+
+ID=6362 Name=BasicAckMessage Origin=Server
+    seq = 71
+    lastPacketId = 225
+
+ID=226 Name=MapComplementaryInformationsDataMessage Origin=Server
+    subAreaId = 10
+    mapId = 99090957
+    houses = AmaknaCore.Protocol.Types.HouseInformations[]
+    actors = AmaknaCore.Protocol.Types.GameRolePlayActorInformations[]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 43487053
+        name = Akija
+        contextualId = 579068428294
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 1688898
+        name = Chaary
+        contextualId = 771939368966
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        alignmentInfos = AmaknaCore.Protocol.Types.ActorAlignmentInformations
+        humanoidInfo = AmaknaCore.Protocol.Types.HumanInformations
+        accountId = 35622123
+        name = Zelhart
+        contextualId = 661959671814
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1481222796636
+        ageBonusRate = 0
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10005
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1350193112833
+        ageBonusRate = 0
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10002
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1481222775028
+        ageBonusRate = 0
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10000
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1350193246332
+        ageBonusRate = 0
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10003
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1481222431516
+        ageBonusRate = 0
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10004
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+        [
+        keyRingBonus = False
+        hasHardcoreDrop = False
+        hasAVARewardToken = False
+        staticInfos = AmaknaCore.Protocol.Types.GroupMonsterStaticInformations
+        creationTime = 1481222802886
+        ageBonusRate = 0
+        lootShare = -1
+        alignmentSide = -1
+        contextualId = -10001
+        look = AmaknaCore.Protocol.Types.EntityLook
+        disposition = AmaknaCore.Protocol.Types.EntityDispositionInformations
+        ]
+    interactiveElements = AmaknaCore.Protocol.Types.InteractiveElement[]
+        [
+        elementId = 483868
+        elementTypeId = -1
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 184
+            skillInstanceUid = 7632920
+            ]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        onCurrentMap = True
+        ]
+        [
+        elementId = 504556
+        elementTypeId = -1
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 339
+            skillInstanceUid = 7632919
+            ]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        onCurrentMap = True
+        ]
+        [
+        elementId = 504555
+        elementTypeId = -1
+        enabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+            [
+            skillId = 339
+            skillInstanceUid = 7632918
+            ]
+        disabledSkills = AmaknaCore.Protocol.Types.InteractiveElementSkill[]
+        onCurrentMap = True
+        ]
+    statedElements = AmaknaCore.Protocol.Types.StatedElement[]
+    obstacles = AmaknaCore.Protocol.Types.MapObstacle[]
+    fights = AmaknaCore.Protocol.Types.FightCommonInformations[]
+    hasAggressiveMonsters = False
+
+ID=6454 Name=UpdateMapPlayersAgressableStatusMessage Origin=Server
+    playerIds = System.Double[]
+        [
+        Epsilon = 4,94065645841247E-324
+        NegativeInfinity = -∞
+        PositiveInfinity = ∞
+        NaN = NaN
+        ]
+    enable = System.SByte[]
+
+ID=170 Name=SetCharacterRestrictionsMessage Origin=Server
+    actorId = 771939368966
+    restrictions = AmaknaCore.Protocol.Types.ActorRestrictionsInformations
+
+ID=176 Name=BasicNoOperationMessage Origin=Server
+
+ID=951 Name=GameMapMovementMessage Origin=Server
+    keyMovements = System.Int16[]
+        [
+        ]
+        [
+        ]
+    actorId = -10003
+
