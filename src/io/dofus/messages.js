@@ -4036,3 +4036,288 @@ export class GameActionFightDeathMessage extends AbstractGameActionMessage {
         }
     }
 }
+
+export class ExchangeObjectMoveKamaMessage extends ProtocolMessage {
+    constructor(quantity) {
+        super(5520);
+        this.quantity = quantity;
+    }
+    serialize() {
+        this.buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        this.quantity = buffer.readVarInt();
+    }
+}
+
+export class ExchangeObjectMessage extends ProtocolMessage {
+    constructor(remote) {
+        super(5515);
+        this.remote = remote;
+    }
+    serialize() {
+        this.buffer.writeBoolean(this.remote);
+    }
+    deserialize(buffer) {
+        this.remote = buffer.readBoolean();
+    }
+}
+
+export class ExchangeKamaModifiedMessage extends ExchangeObjectMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.quantity = param2;
+        this.messageId = 5521;
+    }
+    serialize() {
+        super.serialize();
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element quantity.");
+        }
+        this.buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.quantity = buffer.readVarUhInt();
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element of ExchangeKamaModifiedMessage.quantity.");
+        }
+    }
+}
+
+export class ExchangeObjectMoveMessage extends ProtocolMessage {
+    constructor(objectUID, quantity) {
+        super(5518);
+        this.objectUID = objectUID;
+        this.quantity = quantity;
+    }
+    serialize() {
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element objectUID.");
+        }
+        this.buffer.writeVarInt(this.objectUID);
+        this.buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        this.objectUID = buffer.readVarUhInt();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element of ExchangeObjectMoveMessage.objectUID.");
+        }
+        this.quantity = buffer.readVarInt();
+    }
+}
+
+export class ExchangeObjectAddedMessage extends ExchangeObjectMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.object = param2;
+        this.messageId = 5516;
+    }
+    serialize() {
+        super.serialize();
+        this.object.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.object = new ObjectItem();
+        this.object.deserialize(buffer);
+    }
+}
+
+export class ExchangeObjectModifiedMessage extends ExchangeObjectMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.object = param2;
+        this.messageId = 5519;
+    }
+    serialize() {
+        super.serialize();
+        this.object.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.object = new ObjectItem();
+        this.object.deserialize(buffer);
+    }
+}
+
+export class ExchangeObjectRemovedMessage extends ExchangeObjectMessage {
+    constructor(param1, param2) {
+        super(param1);
+        this.objectUID = param2;
+        this.messageId = 5517;
+    }
+    serialize() {
+        super.serialize();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element objectUID.");
+        }
+        this.buffer.writeVarInt(this.objectUID);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.objectUID = buffer.readVarUhInt();
+        if (this.objectUID < 0) {
+            Logger.error("Forbidden value (" + this.objectUID + ") on element of ExchangeObjectRemovedMessage.objectUID.");
+        }
+    }
+}
+
+export class ExchangeReadyMessage extends ProtocolMessage {
+    constructor(ready, step) {
+        super(5511);
+        this.ready = ready;
+        this.step = step;
+    }
+    serialize() {
+        this.buffer.writeBoolean(this.ready);
+        if (this.step < 0) {
+            Logger.error("Forbidden value (" + this.step + ") on element step.");
+        }
+        this.buffer.writeVarShort(this.step);
+    }
+    deserialize(buffer) {
+        this.ready = buffer.readBoolean();
+        this.step = buffer.readVarUhShort();
+        if (this.step < 0) {
+            Logger.error("Forbidden value (" + this.step + ") on element of ExchangeReadyMessage.step.");
+        }
+    }
+}
+
+export class ExchangeIsReadyMessage extends ProtocolMessage {
+    constructor(id, ready) {
+        super(5509);
+        this.id = id;
+        this.ready = ready;
+    }
+    serialize() {
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element id.");
+        }
+        this.buffer.writeDouble(this.id);
+        this.buffer.writeBoolean(this.ready);
+    }
+    deserialize(buffer) {
+        this.id = buffer.readDouble();
+        if (this.id < -9007199254740990 || this.id > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.id + ") on element of ExchangeIsReadyMessage.id.");
+        }
+        this.ready = buffer.readBoolean();
+    }
+}
+
+export class GameActionFightTeleportOnSameMapMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.cellId = param4;
+        this.messageId = 5528;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.cellId < -1 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element cellId.");
+        }
+        this.buffer.writeShort(this.cellId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightTeleportOnSameMapMessage.targetId.");
+        }
+        this.cellId = buffer.readShort();
+        if (this.cellId < -1 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element of GameActionFightTeleportOnSameMapMessage.cellId.");
+        }
+    }
+}
+export class NpcGenericActionRequestMessage extends ProtocolMessage {
+    constructor(npcId, npcActionId, npcMapId) {
+        super(5898);
+        this.npcId = npcId;
+        this.npcActionId = npcActionId;
+        this.npcMapId = npcMapId;
+    }
+    serialize() {
+        this.buffer.writeInt(this.npcId);
+        if (this.npcActionId < 0) {
+            Logger.error("Forbidden value (" + this.npcActionId + ") on element npcActionId.");
+        }
+        this.buffer.writeByte(this.npcActionId);
+        this.buffer.writeInt(this.npcMapId);
+    }
+    deserialize(buffer) {
+        this.npcId = buffer.readInt();
+        this.npcActionId = buffer.readByte();
+        if (this.npcActionId < 0) {
+            Logger.error("Forbidden value (" + this.npcActionId + ") on element of NpcGenericActionRequestMessage.npcActionId.");
+        }
+        this.npcMapId = buffer.readInt();
+    }
+}
+
+export class GameActionFightDispellableEffectMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3) {
+        super(param1, param2);
+        this.effect = param3;
+        this.messageId = 6070;
+    }
+    serialize() {
+        super.serialize();
+        this.buffer.writeShort(this.effect.protocolId);
+        this.effect.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        var _loc2_ = buffer.readUnsignedShort();
+        this.effect = ProtocolTypeManager.getInstance(AbstractFightDispellableEffect, _loc2_);
+        this.effect.deserialize(buffer);
+    }
+}
+
+export class NpcDialogCreationMessage extends ProtocolMessage {
+    constructor(mapId, npcId) {
+        super(5618);
+        this.mapId = mapId;
+        this.npcId = npcId;
+    }
+    serialize() {
+        this.buffer.writeInt(this.mapId);
+        this.buffer.writeInt(this.npcId);
+    }
+}
+export class NpcDialogQuestionMessage extends ProtocolMessage {
+    constructor(messageId, dialogParams, visibleReplies) {
+        super(5617);
+        this.messageId = messageId;
+        this.dialogParams = dialogParams;
+        this.visibleReplies = visibleReplies;
+    }
+    serialize() {
+        if (this.messageId < 0) {
+            Logger.error("Forbidden value (" + this.messageId + ") on element messageId.");
+        }
+        this.buffer.writeVarShort(this.messageId);
+        this.buffer.writeShort(this.dialogParams.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.dialogParams.length) {
+            this.buffer.writeUTF(this.dialogParams[_loc2_]);
+            _loc2_++;
+        }
+        this.buffer.writeShort(this.visibleReplies.length);
+        var _loc3_ = 0;
+        while (_loc3_ < this.visibleReplies.length) {
+            if (this.visibleReplies[_loc3_] < 0) {
+                Logger.error("Forbidden value (" + this.visibleReplies[_loc3_] + ") on element 3 (starting at 1) of visibleReplies.");
+            }
+            this.buffer.writeVarShort(this.visibleReplies[_loc3_]);
+            _loc3_++;
+        }
+    }
+}

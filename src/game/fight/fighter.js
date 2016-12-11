@@ -25,6 +25,22 @@ export default class Fighter {
             AP: this.character.statsManager.getTotalStats(1),
             MP: this.character.statsManager.getTotalStats(2)
         }
+        this.generateFighterStatsBonus();
+        this.buffs = [];
+    }
+
+    generateFighterStatsBonus() {
+        this.fightStatsBonus = [];
+        this.fightStatsBonus[1] = 0;
+        this.fightStatsBonus[2] = 0;
+        this.fightStatsBonus[10] = 0;
+        this.fightStatsBonus[11] = 0;
+        this.fightStatsBonus[12] = 0;
+        this.fightStatsBonus[13] = 0;
+        this.fightStatsBonus[14] = 0;
+        this.fightStatsBonus[15] = 0;
+        this.fightStatsBonus[16] = 0;
+        this.fightStatsBonus[17] = 0;
     }
 
     get id() {
@@ -41,6 +57,10 @@ export default class Fighter {
 
     getStats() {
         return this.character.statsManager;
+    }
+
+    refreshStats() {
+        this.getStats().sendStats();
     }
 
     resetPoints() {
@@ -67,16 +87,15 @@ export default class Fighter {
     }
 
     getGameFightMinimalStatsPreparation() {
-        return new Types.GameFightMinimalStatsPreparation(this.current.life, this.character.statsManager.getMaxLife(), this.character.statsManager.getMaxLife(), 0, 0,
-            this.current.AP, this.character.statsManager.getTotalStats(1),
-            this.current.MP, this.character.statsManager.getTotalStats(2),
-            0, false, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000);
+        return new Types.GameFightMinimalStatsPreparation(this.current.life, this.getStats().getMaxLife(), this.getStats().getMaxLife(), this.getStats().getTotalStats(17), 0,
+            this.current.AP, this.getStats().getTotalStats(1),
+            this.current.MP, this.getStats().getTotalStats(2), 0, false, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000);
     }
 
     getGameFightFighterInformations() {
-        return new Types.GameFightMutantInformations(this.character._id, this.character.getEntityLook(),
+        return new Types.GameFightCharacterInformations(this.id, this.character.getEntityLook(),
             new Types.EntityDispositionInformations(this.cellId, this.dirId), this.team.id, 0, this.alive, this.getGameFightMinimalStatsPreparation(), [],
-            this.character.name, new Types.PlayerStatus(1), this.character.level);
+            this.character.name, new Types.PlayerStatus(1), this.character.level, new Types.ActorAlignmentInformations(0, 0, 0, 0), this.character.breed, this.character.sex);
     }
 
     setReadyState(state) {
@@ -103,6 +122,24 @@ export default class Fighter {
         return this.fight.timeline.currentFighter().character._id == this.character._id;
     }
 
+    beginTurn() {
+        var newBuffs = [];
+        for(var buff of this.buffs) {
+            buff.continueLifetime();
+            if(!buff.expired) {
+                newBuffs.push(buff);
+            }
+        }
+
+        this.buffs = newBuffs;
+    }
+
+    addBuff(buff) {
+        Logger.debug("Add buff id: " + buff.effectId + " on fighter id: " + this.id);
+        this.buffs.push(buff);
+        buff.tryApply();
+    }
+
     takeDamage(from, damages, elementType) {
         //TODO: Apply damage reduction and invu
         //TODO: Check shield point because the packet is not the same
@@ -127,6 +164,16 @@ export default class Fighter {
     enableDeadState() {
         this.alive = false;
         this.fight.send(new Messages.GameActionFightDeathMessage(103, this.id, this.id))
+
+        if(this.isMyTurn()) {
+            this.fight.timeline.next();
+        }
+
         this.fight.checkEnd();
+    }
+
+    teleport(cellId) {
+        this.cellId = cellId;
+        this.fight.send(new Messages.GameActionFightTeleportOnSameMapMessage(5, this.id, this.id, this.cellId));
     }
 }

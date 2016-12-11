@@ -6,6 +6,7 @@
   "dependencies": {
     "arraybuffer-to-buffer": "0.0.4",
     "babel-cli": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "base64-js": "^1.2.0",
     "colors": "^1.1.2",

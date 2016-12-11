@@ -16,6 +16,7 @@ import IgnoredHandler from "../handlers/ignored_handler"
 import PartyHandler from "../handlers/party_handler"
 import FightHandler from "../handlers/fight_handler"
 import ExchangeHandler from "../handlers/exchange_handler"
+import NpcHandler from "../handlers/npc_handler"
 
 export default class Processor {
 
@@ -72,6 +73,9 @@ export default class Processor {
         //Exchange handler
         5773: { message: Messages.ExchangePlayerRequestMessage, handler:ExchangeHandler.handleExchangePlayerRequestMessage },
         5508: { message: Messages.ExchangeAcceptMessage, handler:ExchangeHandler.handleExchangeAcceptMessage },
+        5520: { message: Messages.ExchangeObjectMoveKamaMessage, handler:ExchangeHandler.handleExchangeObjectMoveKamaMessage },
+        5518: { message: Messages.ExchangeObjectMoveMessage, handler:ExchangeHandler.handleExchangeObjectMoveMessage },
+        5511: { message: Messages.ExchangeReadyMessage, handler:ExchangeHandler.handleExchangeReadyMessage },
 
 
         //Item handler
@@ -91,6 +95,9 @@ export default class Processor {
         718: {message: Messages.GameFightTurnFinishMessage, handler: FightHandler.handleGameFightTurnFinishMessage},
         1005: {message: Messages.GameActionFightCastRequestMessage, handler: FightHandler.handleGameActionFightCastRequestMessage},
         6081: {message: Messages.GameContextKickMessage, handler: FightHandler.handleGameContextKickMessage},
+
+        //Npcs handler
+        5898 : {message : Messages.NpcGenericActionRequestMessage , handler : NpcHandler.handleNpcGenericActionRequestMessage }
     } 
 
     static handle(client, messageId, buffer) {

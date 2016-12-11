@@ -54,4 +54,25 @@ export default class ExchangeHandler {
         }
     }
 
+    static handleExchangeObjectMoveKamaMessage(client, packet)
+    {
+        if (client.character.exchange) {
+            client.character.exchange.updateKamas(client.character, packet.quantity);
+        }
+    }
+
+    static handleExchangeObjectMoveMessage(client, packet)
+    {
+        if (client.character.exchange) {
+            client.character.exchange.moveItem(client.character, packet.objectUID, packet.quantity);
+        }
+    }
+
+    static handleExchangeReadyMessage(client, packet)
+    {
+        if (client.character.exchange) {
+            client.character.exchange.setReady(client.character, packet.ready);
+        }
+    }
+
 }

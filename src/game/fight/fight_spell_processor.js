@@ -24,17 +24,18 @@ export default class FightSpellProcessor {
         for(var e of effects) {
             var targets = this.getTargets(fight, caster, spell, spellLevel, e, cellId);
             var effectProcessor = this.getEffects(e.effectId);
+            console.log(e);
             if(effectProcessor) {
-                for(var t of targets) {
-                    effectProcessor.process({
-                        fight: fight,
-                        caster: caster,
-                        spell: spell, spellLevel: spellLevel,
-                        effect: e,
-                        cellId: cellId,
-                        target: t
-                    });
-                }
+                Logger.debug("Process effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id);
+                effectProcessor.process({
+                    fight: fight,
+                    caster: caster,
+                    spell: spell,
+                    spellLevel: spellLevel,
+                    effect: e,
+                    cellId: cellId,
+                    targets: targets
+                });
             }
             else {
                 Logger.error("Effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id + " is not handled yet");
@@ -51,7 +52,46 @@ export default class FightSpellProcessor {
                 if(fighterOnCell) targets.push(fighterOnCell);
             }
         }
+        var filteredTargets = this.filterTargets(targets, caster, spell, spellLevel, effect, cellId);
         //TODO: Check if this spell can be casted on a friendly, ennemie etc ..
-        return targets;
+        //TODO: targetMask: 'a,A'
+        return filteredTargets;
+    }
+
+    static filterTargets(targets, caster, spell, spellLevel, effect, cellId) {
+        var masks = effect.targetMask.split(',');
+        var filtered = [];
+        for(var m of masks) {
+            switch (m) {
+                case 'a': // All allies
+                    for(var t of targets) {
+                        if(caster.team.isInThisTeam(t.id)) {
+                            filtered.push(t);
+                        }
+                    }
+                    break;
+
+                case 'A': // Ennemies
+                    for(var t of targets) {
+                        if(!caster.team.isInThisTeam(t.id)) {
+                            filtered.push(t);
+                        }
+                    }
+                    break;
+
+                case 'g': // Allies
+                    for(var t of targets) {
+                        if(caster.team.isInThisTeam(t.id) && t.id != caster.id) {
+                            filtered.push(t);
+                        }
+                    }
+                    break;
+
+                case 'c': // Self
+                    filtered.push(caster);
+                    break;
+            }
+        }
+        return filtered;
     }
 }

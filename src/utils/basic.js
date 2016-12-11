@@ -8,4 +8,8 @@ export default class Basic {
         var look = look.replace('{', '').replace('}', '').split('|');
         return look;
     }
+
+    static getPercentage(val1, val2) {
+        return Math.floor((val2 / 100) * val1);
+    }
 }

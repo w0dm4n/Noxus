@@ -97,6 +97,8 @@ export default class CharacterManager {
     {
         if (character.party != null)
             character.party.removeMember(character, true);
+        if (character.exchange != null)
+            character.exchange.close();
         else if (character.invitation != null)
         {
             var party = WorldServer.getPartyById(character.invitation.party.id);

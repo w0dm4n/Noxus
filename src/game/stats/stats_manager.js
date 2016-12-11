@@ -42,18 +42,36 @@ export default class StatsManager {
         this.raw.stats.intelligence = this.stats[15].base;
     }
 
+    getFightStatsManager() {
+        var self = this;
+        var fight = {
+            getBuffBonus: function(id) {
+                if(self.character.isInFight()) {
+                    return self.character.fighter.fightStatsBonus[id];
+                }
+                else {
+                    return 0;
+                }
+            }
+        };
+
+        return fight;
+    }
+
     recalculateStats(raw) {
         if(raw) this.raw = raw;
-        this.stats[1] = new Types.CharacterBaseCharacteristic(6 + (this.character.level >= 100 ? 1 : 0), this.getItemTotalStat(111), 0, 0, 0); // PA
-        this.stats[2] = new Types.CharacterBaseCharacteristic(3, this.getItemTotalStat(128), 0, 0, 0); // PM
-        this.stats[10] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.strength : 0, this.getItemTotalStat(118), 0, 0, 0);
-        this.stats[11] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.vitality : 0, this.getItemTotalStat(125), 0, 0, 0);
-        this.stats[12] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.wisdom : 0, this.getItemTotalStat(124), 0, 0, 0);
-        this.stats[13] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.chance : 0, this.getItemTotalStat(123), 0, 0, 0);
-        this.stats[14] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.agility : 0, this.getItemTotalStat(119), 0, 0, 0);
-        this.stats[15] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.intelligence : 0, this.getItemTotalStat(126), 0, 0, 0);
-        this.stats[16] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(174), 0, 0, 0); // Initiative
-        this.stats[17] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(138), 0, 0, 0); // Puissance
+        var fightBuff = this.getFightStatsManager();
+
+        this.stats[1] = new Types.CharacterBaseCharacteristic(6 + (this.character.level >= 100 ? 1 : 0), this.getItemTotalStat(111), 0, 0, fightBuff.getBuffBonus(1)); // PA
+        this.stats[2] = new Types.CharacterBaseCharacteristic(3, this.getItemTotalStat(128), 0, 0, fightBuff.getBuffBonus(2)); // PM
+        this.stats[10] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.strength : 0, this.getItemTotalStat(118), 0, 0, fightBuff.getBuffBonus(10));
+        this.stats[11] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.vitality : 0, this.getItemTotalStat(125), 0, 0, fightBuff.getBuffBonus(11));
+        this.stats[12] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.wisdom : 0, this.getItemTotalStat(124), 0, 0, fightBuff.getBuffBonus(12));
+        this.stats[13] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.chance : 0, this.getItemTotalStat(123), 0, 0, fightBuff.getBuffBonus(13));
+        this.stats[14] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.agility : 0, this.getItemTotalStat(119), 0, 0, fightBuff.getBuffBonus(14));
+        this.stats[15] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.intelligence : 0, this.getItemTotalStat(126), 0, 0, fightBuff.getBuffBonus(15));
+        this.stats[16] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(174), 0, 0, fightBuff.getBuffBonus(16)); // Initiative
+        this.stats[17] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(138), 0, 0, fightBuff.getBuffBonus(17)); // Puissance
     }
 
     getItemTotalStat(effectId) {

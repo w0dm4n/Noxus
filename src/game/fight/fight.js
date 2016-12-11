@@ -42,6 +42,14 @@ export default class Fight {
         this.winner = null;
         this.looser = null;
         this.timeline = new FightTimeline(this);
+        this.cache = { buffId: 0 };
+    }
+
+    incrementCacheValue(value) {
+        var v = this.cache[value];
+        v += 1;
+        this.cache[value] = v;
+        return v;
     }
 
     send(packet) {
@@ -112,6 +120,8 @@ export default class Fight {
         } else if (this.teams.blue.isInThisTeam(fighterId))  {
             team = this.teams.blue;
         }
+        fighter.team = team;
+        this.send(new Messages.GameFightShowFighterMessage(fighter.getGameFightFighterInformations()));
         team.addMember(fighter);
 
         this.map.removeClient(fighter.character.client);
@@ -119,7 +129,6 @@ export default class Fight {
         fighter.send(new Messages.GameFightStartingMessage(this.fightType, this.teams.blue.leader.id, this.teams.red.leader.id));
         this.sendStartupPhase(fighter)
         this.showFighters(fighter);
-        this.send(new Messages.GameFightShowFighterMessage(fighter.getGameFightFighterInformations()));
         this.refreshBaseFighters();
     }
 
@@ -367,7 +376,6 @@ export default class Fight {
 
             var effects = spellLevel.effects;
             FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
-            console.log(fighter.sequenceCount);
             this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
         }
     }

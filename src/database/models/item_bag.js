@@ -43,7 +43,7 @@ export default class ItemBag {
                    sameItem.quantity += item.quantity;
                    self.save(function(){
                        if(callback) callback();
-                   });
+               });
                    if(self.onItemAdded) self.onItemAdded(this.hasSame(sameItem));
                    return;
                }
@@ -145,6 +145,24 @@ export default class ItemBag {
         this.items.splice(this.items.indexOf(item), 1);
         this.save();
         if(this.onItemDeleted) this.onItemDeleted(item);
+    }
+
+    updateItemByUIDAndQuantity(objectUID, quantity, client)
+    {
+        var self = this;
+        for (var i in this.items)
+        {
+            if (this.items[i]._id == objectUID)
+            {
+                if (quantity < this.items[i].quantity)
+                    this.items[i].quantity -= quantity;
+                else {
+                    this.deleteItem(this.items[i]);
+                }
+                self.save(function(){ });
+                break;
+            }
+        }
     }
 
     create(callback) {

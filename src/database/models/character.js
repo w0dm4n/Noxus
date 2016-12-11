@@ -4,6 +4,7 @@ import ProtocolTypeManager from "../../io/dofus/protocol_type_manager"
 import CharacterManager from "../../managers/character_manager.js"
 import ChatRestrictionManager from "../../managers/chat_restriction_manager.js"
 import WorldManager from "../../managers/world_manager.js"
+import ItemManager from "../../game/item/item_manager"
 import WorldServer from "../../network/world"
 import Logger from "../../io/logger"
 import ConfigManager from "../../utils/configmanager.js"
@@ -11,6 +12,7 @@ import DBManager from "../../database/dbmanager"
 import StatsManager from "../../game/stats/stats_manager"
 import ItemBag from "./item_bag"
 import Basic from "../../utils/basic"
+import CharacterItem from "../../database/models/character_item";
 
 export default class Character {
 
@@ -61,6 +63,7 @@ export default class Character {
             }
         }
         else {
+            var self = this;
             //Get bag by id
             DBManager.getBag(this.bagId, function (bag) {
                 if (bag) {
@@ -75,6 +78,7 @@ export default class Character {
                     self.bindBag(itemBag);
                     self.updateBag();
                 }
+                self.getItemsSet();
             });
         }
 
@@ -87,6 +91,34 @@ export default class Character {
 
         this.shortcuts = raw.shortcuts ? raw.shortcuts : {};
         this.loadShortcuts();
+    }
+
+    getItemsSet() {
+        var items = this.getItemsEquiped();
+        for (var i in items)
+        {
+            var itemTemplate = ItemManager.getItemTemplateById(items[i].templateId);
+            if (itemTemplate)
+            {
+                if (itemTemplate.itemSetId != -1)
+                {
+                    Logger.infos(itemTemplate.nameId);
+                }
+            }
+        }
+    }
+
+    getItemsEquiped() {
+        var equipedItems = [];
+        var items = this.itemBag.items;
+        for (var i in items)
+        {
+            if (items[i].position != CharacterItem.DEFAULT_SLOT)
+            {
+                equipedItems.push(items[i]);
+            }
+        }
+        return equipedItems;
     }
 
     onDisconnect() {
@@ -134,6 +166,7 @@ export default class Character {
         if (this.itemBag) {
             if (this.itemBag.getItemAtPosition(6)) appearenceToShow.push(this.itemBag.getItemAtPosition(6).getTemplate().appearanceId); // Head
             if (this.itemBag.getItemAtPosition(7)) appearenceToShow.push(this.itemBag.getItemAtPosition(7).getTemplate().appearanceId); // Cape
+            if (this.itemBag.getItemAtPosition(15)) appearenceToShow.push(this.itemBag.getItemAtPosition(15).getTemplate().appearanceId); // Bouclier
         }
         this.skins = appearenceToShow;
     }
@@ -374,15 +407,17 @@ export default class Character {
         this.client.send(new Messages.InventoryContentMessage(this.itemBag.getObjectItemArray(), this.itemBag.money));
     }
 
-    subKamas(amount) {
+    subKamas(amount, notif = true) {
         this.itemBag.money -= parseInt(amount);
         this.sendInventoryBag();
-        this.replyText("Vous avez perdu " + amount + " kamas.");
+        if (notif)
+            this.replyText("Vous avez perdu " + amount + " kamas.");
     }
 
-    addKamas(amount) {
+    addKamas(amount, notif = true) {
         this.itemBag.money = this.itemBag.money + parseInt(amount);
-        this.replyLangsMessage(0, 45, [amount]);
+        if (notif)
+            this.replyLangsMessage(0, 45, [amount]);
         this.sendInventoryBag();
     }
 

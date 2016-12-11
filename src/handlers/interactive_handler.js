@@ -9,7 +9,7 @@ import ZaapiDialog from "../game/dialog/zaapi_dialog.js"
 
 export default class InteractiveHandler {
 
-    static ActionInteractive =
+    static ActionInteractive  =
     {
         "Zaap": { handle: InteractiveHandler.openZaap },
         "Zaapi" : {handle : InteractiveHandler.openZaapi}

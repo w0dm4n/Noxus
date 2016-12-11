@@ -1,6 +1,7 @@
 import DBManager from "./dbmanager.js"
 import Logger from "../io/logger"
 import LookManager from "../managers/look_manager.js"
+import NpcSpawn from "../database/models/npc_spawn.js"
 
 export default class Datacenter {
 
@@ -12,14 +13,15 @@ export default class Datacenter {
     static interactivesObjects;
     static emotes;
     static items;
+    static itemsSets;
     static maps_positions;
     static spells;
     static spellsLevels;
     static elements;
-    static npcs  = { npcs : [] , look : []};
+    static npcs = { npcs: [], npcSpawns: [] };
     static npcMessages;
     static npcActions;
-    
+
 
     static load(callback) {
         var loaders = [
@@ -38,14 +40,15 @@ export default class Datacenter {
             Datacenter.loadNpcs,
             Datacenter.loadNpcMessages,
             Datacenter.loadNpcActions,
+            Datacenter.loadItemsSets,
 
         ];
         var loaded = 0;
 
-        for(var i in loaders) {
-            loaders[i](function(){
+        for (var i in loaders) {
+            loaders[i](function () {
                 loaded++;
-                if(loaded == loaders.length) {
+                if (loaded == loaders.length) {
                     callback();
                 }
             });
@@ -53,7 +56,7 @@ export default class Datacenter {
     }
 
     static loadBreeds(callback) {
-        DBManager.getBreeds(function(breeds){
+        DBManager.getBreeds(function (breeds) {
             Datacenter.breeds = breeds;
             Logger.infos("Loaded '" + breeds.length + "' breed(s)");
             callback();
@@ -61,7 +64,7 @@ export default class Datacenter {
     }
 
     static loadHeads(callback) {
-        DBManager.getHeads(function(heads){
+        DBManager.getHeads(function (heads) {
             Datacenter.heads = heads;
             Logger.infos("Loaded '" + heads.length + "' heads(s)");
             callback();
@@ -69,7 +72,7 @@ export default class Datacenter {
     }
 
     static loadMapScrollsActions(callback) {
-        DBManager.getMapScrollActions(function(scrolls){
+        DBManager.getMapScrollActions(function (scrolls) {
             Datacenter.mapScrollsActions = scrolls;
             Logger.infos("Loaded '" + scrolls.length + "' map scroll actions(s)");
             callback();
@@ -77,7 +80,7 @@ export default class Datacenter {
     }
 
     static loadExperiences(callback) {
-        DBManager.getExperiences(function(experiences){
+        DBManager.getExperiences(function (experiences) {
             Datacenter.experiences = experiences;
             Logger.infos("Loaded '" + experiences.length + "' experience floor(s)");
             callback();
@@ -85,7 +88,7 @@ export default class Datacenter {
     }
 
     static loadSmileys(callback) {
-        DBManager.getSmileys(function(smileys){
+        DBManager.getSmileys(function (smileys) {
             Datacenter.smileys = smileys;
             Logger.infos("Loaded '" + smileys.length + "' smiley(s)");
             callback();
@@ -93,41 +96,41 @@ export default class Datacenter {
     }
 
     static loadNpcs(callback) {
-        DBManager.getNpcs(function(npcs){
+        DBManager.getNpcs(function (npcs) {
             Datacenter.npcs.npcs = npcs;
             Logger.infos("Loaded '" + Datacenter.npcs.npcs.length + "' npcs");
-                   //  Datacenter.npcs.look.push(LookManager.parseLook(Datacenter.npcs.npcs[6].look))
-           for(var i in Datacenter.npcs.npcs){
-               if(Datacenter.npcs.npcs[i]._id != 1046 && Datacenter.npcs.npcs[i]._id != 3193 )
-                     Datacenter.npcs.look.push(LookManager.parseLook(Datacenter.npcs.npcs[i].look))
-                else
-                     Datacenter.npcs.look.push(0)
-     
-            }
-            
-            Logger.infos("Loaded '" + Datacenter.npcs.look.length + "' lookNpcs");
-            callback();
+
+            DBManager.getNpcSpawns(function (npcSpawns) {
+                for (var i in npcSpawns) {
+                    var npc = Datacenter.getNpcs(npcSpawns[i].npcId);
+                    Datacenter.npcs.npcSpawns.push(new NpcSpawn(npcSpawns[i], LookManager.parseLook(npc.look),npc.actions,npc.dialogMessages,npc.dialogReplies));
+                }
+                Logger.infos("Loaded '" + Datacenter.npcs.npcSpawns.length + "' npc_spawns");
+                callback();
+            });
+
 
         });
     }
 
     static loadNpcMessages(callback) {
-        DBManager.getNpcMessages(function(npcMessages){
+        DBManager.getNpcMessages(function (npcMessages) {
             Datacenter.npcMessages = npcMessages;
             Logger.infos("Loaded '" + npcMessages.length + "' npc_messages");
             callback();
         });
     }
 
+
     static loadNpcActions(callback) {
-        DBManager.getNpcActions(function(npcAction){
+        DBManager.getNpcActions(function (npcAction) {
             Datacenter.npcAction = npcAction;
             Logger.infos("Loaded '" + npcAction.length + "' npc_actions");
             callback();
         });
     }
-     static loadInteractivesObjects(callback) {
-        DBManager.getInteractivesObjects(function(interactivesObjects){
+    static loadInteractivesObjects(callback) {
+        DBManager.getInteractivesObjects(function (interactivesObjects) {
             Datacenter.interactivesObjects = interactivesObjects;
             Logger.infos("Loaded '" + interactivesObjects.length + "' interactives object(s)");
             callback();
@@ -135,7 +138,7 @@ export default class Datacenter {
     }
 
     static loadMapsPositions(callback) {
-        DBManager.getMapPositions(function(maps_positions){
+        DBManager.getMapPositions(function (maps_positions) {
             Datacenter.maps_positions = maps_positions;
             Logger.infos("Loaded '" + maps_positions.length + "' maps_positions object(s)");
             callback();
@@ -143,7 +146,7 @@ export default class Datacenter {
     }
 
     static loadElements(callback) {
-        DBManager.getElements(function(elements){
+        DBManager.getElements(function (elements) {
             Datacenter.elements = elements;
             Logger.infos("Loaded '" + elements.length + "' elements object(s)");
             callback();
@@ -151,7 +154,7 @@ export default class Datacenter {
     }
 
     static loadEmotes(callback) {
-        DBManager.getEmotes(function(emotes){
+        DBManager.getEmotes(function (emotes) {
             Datacenter.emotes = emotes;
             Logger.infos("Loaded '" + emotes.length + "' emote(s)");
             callback();
@@ -159,15 +162,23 @@ export default class Datacenter {
     }
 
     static loadItems(callback) {
-        DBManager.getItems(function(items){
+        DBManager.getItems(function (items) {
             Datacenter.items = items;
             Logger.infos("Loaded '" + items.length + "' item(s)");
             callback();
         });
     }
-    
+
+    static loadItemsSets(callback) {
+        DBManager.getItemsSets(function (itemsSets) {
+            Datacenter.itemsSet = itemsSets;
+            Logger.infos("Loaded '" + itemsSets.length + "' items sets");
+            callback();
+        });
+    }
+
     static loadSpells(callback) {
-        DBManager.getSpells(function(spells){
+        DBManager.getSpells(function (spells) {
             Datacenter.spells = spells;
             Logger.infos("Loaded '" + spells.length + "' spell(s)");
             callback();
@@ -175,7 +186,7 @@ export default class Datacenter {
     }
 
     static loadSpellsLevels(callback) {
-        DBManager.getSpellsLevels(function(spells){
+        DBManager.getSpellsLevels(function (spells) {
             Datacenter.spellsLevels = spells;
             Logger.infos("Loaded '" + spells.length + "' spell level(s)");
             callback();
@@ -183,41 +194,59 @@ export default class Datacenter {
     }
 
     static getMapScrollActionById(id) {
-        for(var i in Datacenter.mapScrollsActions) {
-            if(Datacenter.mapScrollsActions[i].id == id) 
-            return Datacenter.mapScrollsActions[i];
+        for (var i in Datacenter.mapScrollsActions) {
+            if (Datacenter.mapScrollsActions[i].id == id)
+                return Datacenter.mapScrollsActions[i];
         }
         return null;
     }
 
-    static getMapElement(map,element) {
-        for(var i in Datacenter.elements) {
-            if(Datacenter.elements[i].Map_id == map && Datacenter.elements[i].Element_id  ==  element ) 
-            return Datacenter.elements[i];
+    static getMapElement(map, element) {
+        for (var i in Datacenter.elements) {
+            if (Datacenter.elements[i].Map_id == map && Datacenter.elements[i].Element_id == element)
+                return Datacenter.elements[i];
         }
         return null;
     }
 
     static getInteractivesMap(id) {
         var result = new Array();
-        for(var i in Datacenter.interactivesObjects) {
-            
-            if(Datacenter.interactivesObjects[i].mapId == id)
+        for (var i in Datacenter.interactivesObjects) {
+
+            if (Datacenter.interactivesObjects[i].mapId == id)
                 result.push(Datacenter.interactivesObjects[i]);
         }
-        if(result.length > 0 )
+        if (result.length > 0)
             return result;
         else
             return [];
     }
 
-    static getLookNpcs(id){
-        for(var i in Datacenter.npcs.npcs) {
-            if( Datacenter.npcs.npcs[i]._id == id) 
-            {            
+    static getLookNpcs(id) {
+        for (var i in Datacenter.npcs.npcs) {
+            if (Datacenter.npcs.npcs[i]._id == id) {
                 return Datacenter.npcs.look[i];
             }
         }
         return null;
     }
+    static getNpcs(id) {
+        for (var i in Datacenter.npcs.npcs) {
+            if (Datacenter.npcs.npcs[i]._id == id) {
+                return Datacenter.npcs.npcs[i];
+            }
+        }
+        return null;
+    }
+
+    static getNpcsMap(id) {
+        var result = [];
+        for (var i in Datacenter.npcs.npcSpawns) {
+            if (Datacenter.npcs.npcSpawns[i].mapId == id) {
+                result.push(Datacenter.npcs.npcSpawns[i]);
+            }
+        }
+        return result;
+    }
+
 }

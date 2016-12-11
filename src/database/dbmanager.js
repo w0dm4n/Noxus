@@ -346,6 +346,13 @@ export default class DBManager {
         });
     }
 
+    static getItemsSets(callback) {
+        var collection = DBManager.db.collection('items_sets');
+        collection.find({}).toArray(function(err, itemsSets){
+            callback(itemsSets);
+        });
+    }
+
     static createItembag(bag, callback) {
         autoIncrement.getNextSequence(DBManager.db, "items_bags", function (err, autoIndex) {
             DBManager.db.collection("items_bags", function(error, collection) {
@@ -397,16 +404,23 @@ export default class DBManager {
     }
 
     static getNpcActions(callback) {
-        var collection = DBManager.db.collection('npc_actions');
+        var collection = DBManager.db.collection('npcs_actions');
         collection.find({}).toArray(function(err, npcActions){
             callback(npcActions);
         });
     }
 
     static getNpcMessages(callback) {
-        var collection = DBManager.db.collection('npc_messages');
+        var collection = DBManager.db.collection('npcs_messages');
         collection.find({}).toArray(function(err, npcMessages){
             callback(npcMessages);
+        });
+    }
+
+    static getNpcSpawns(callback) {
+        var collection = DBManager.db.collection('npcs_spawns');
+        collection.find({}).toArray(function(err, npcSpawns){
+            callback(npcSpawns);
         });
     }
 
