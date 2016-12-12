@@ -4,7 +4,7 @@ import ItemEffectInteger from "./item_effect_integer"
 import Basic from "../../utils/basic"
 import Logger from "../../io/logger"
 import CharacterItem from "../../database/models/character_item";
-
+import Types from "../../io/dofus/types.js"
 export default class ItemManager {
 
     static getItemTemplateById(id) {
@@ -40,5 +40,13 @@ export default class ItemManager {
 
         Logger.error("Can't generate effect for effectId: " + effect.effectId);
         return null;
+    }
+
+    static getObjectEffectDice(effect){
+            let lowValue = effect.diceNum;
+            let highValue = effect.diceSide;
+            let randomValue = Basic.getRandomInt(lowValue, highValue);
+            let diceEffect = new ItemEffectInteger(randomValue, effect.effectId, "ObjectEffectInteger");
+           return new Types.ObjectEffectDice(effect.effectId,lowValue,highValue,randomValue);
     }
 }

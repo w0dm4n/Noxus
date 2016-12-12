@@ -12,6 +12,7 @@ import DBManager from "../../database/dbmanager"
 import StatsManager from "../../game/stats/stats_manager"
 import ItemBag from "./item_bag"
 import Basic from "../../utils/basic"
+import DataCenter from "../../database/datacenter"
 import CharacterItem from "../../database/models/character_item";
 
 export default class Character {
@@ -93,6 +94,17 @@ export default class Character {
         this.loadShortcuts();
     }
 
+    getSetById(setId)
+    {
+        var sets = DataCenter.itemsSets;
+        for (var i in sets)
+        {
+            if (sets[i]._id == setId)
+                return sets[i];
+        }
+        return null;
+    }
+
     getItemsSet() {
         var items = this.getItemsEquiped();
         for (var i in items)
@@ -100,9 +112,14 @@ export default class Character {
             var itemTemplate = ItemManager.getItemTemplateById(items[i].templateId);
             if (itemTemplate)
             {
-                if (itemTemplate.itemSetId != -1)
-                {
-                    Logger.infos(itemTemplate.nameId);
+                if (itemTemplate.itemSetId != -1) {
+                    var set = this.getSetById(itemTemplate.itemSetId);
+                    if (set)
+                        items[i].set = set;
+                    else
+                    {
+                        Logger.error("Cannot find current set on item !");
+                    }
                 }
             }
         }
@@ -384,6 +401,19 @@ export default class Character {
         if (bag == null) return;
         this.itemBag = bag;
         this.itemBag.onItemAdded = function (item) {
+            if (item) {
+                var itemTemplate = ItemManager.getItemTemplateById(item.templateId);
+                if (itemTemplate) {
+                    if (itemTemplate.itemSetId != -1) {
+                        var set = self.getSetById(itemTemplate.itemSetId);
+                        if (set)
+                            item.set = set;
+                        else {
+                            Logger.error("Cannot find current set on item !");
+                        }
+                    }
+                }
+            }
             Logger.debug("Item added to character bag");
             self.sendInventoryBag();
         };

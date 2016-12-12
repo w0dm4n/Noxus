@@ -4293,17 +4293,17 @@ export class NpcDialogCreationMessage extends ProtocolMessage {
     }
 }
 export class NpcDialogQuestionMessage extends ProtocolMessage {
-    constructor(messageId, dialogParams, visibleReplies) {
+    constructor(message, dialogParams, visibleReplies) {
         super(5617);
-        this.messageId = messageId;
+        this.message = message;
         this.dialogParams = dialogParams;
         this.visibleReplies = visibleReplies;
     }
     serialize() {
-        if (this.messageId < 0) {
-            Logger.error("Forbidden value (" + this.messageId + ") on element messageId.");
+        if (this.message < 0) {
+            Logger.error("Forbidden value (" + this.message + ") on element messageId.");
         }
-        this.buffer.writeVarShort(this.messageId);
+        this.buffer.writeVarShort(this.message);
         this.buffer.writeShort(this.dialogParams.length);
         var _loc2_ = 0;
         while (_loc2_ < this.dialogParams.length) {
@@ -4319,5 +4319,133 @@ export class NpcDialogQuestionMessage extends ProtocolMessage {
             this.buffer.writeVarShort(this.visibleReplies[_loc3_]);
             _loc3_++;
         }
+    }
+}
+
+export class GameActionFightSlideMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4, param5) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.startCellId = param4;
+        this.endCellId = param5;
+        this.messageId = 5525;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.startCellId < -1 || this.startCellId > 559) {
+            Logger.error("Forbidden value (" + this.startCellId + ") on element startCellId.");
+        }
+        this.buffer.writeShort(this.startCellId);
+        if (this.endCellId < -1 || this.endCellId > 559) {
+            Logger.error("Forbidden value (" + this.endCellId + ") on element endCellId.");
+        }
+        this.buffer.writeShort(this.endCellId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightSlideMessage.targetId.");
+        }
+        this.startCellId = buffer.readShort();
+        if (this.startCellId < -1 || this.startCellId > 559) {
+            Logger.error("Forbidden value (" + this.startCellId + ") on element of GameActionFightSlideMessage.startCellId.");
+        }
+        this.endCellId = buffer.readShort();
+        if (this.endCellId < -1 || this.endCellId > 559) {
+            Logger.error("Forbidden value (" + this.endCellId + ") on element of GameActionFightSlideMessage.endCellId.");
+        }
+    }
+}
+export class NpcDialogReplyMessage extends ProtocolMessage {
+    constructor(replyId) {
+        super(5616);
+        this.replyId = replyId;
+    }
+    serialize() {
+        if (this.replyId < 0) {
+            Logger.error("Forbidden value (" + this.replyId + ") on element replyId.");
+        }
+        this.buffer.writeVarShort(this.replyId);
+    }
+    deserialize(buffer) {
+        this.replyId = buffer.readVarUhShort();
+        if (this.replyId < 0) {
+            Logger.error("Forbidden value (" + this.replyId + ") on element of NpcDialogReplyMessage.replyId.");
+        }
+    }
+}
+
+export class GameActionFightDodgePointLossMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.amount = param4;
+        this.messageId = 5828;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.amount < 0) {
+            Logger.error("Forbidden value (" + this.amount + ") on element amount.");
+        }
+        this.buffer.writeVarShort(this.amount);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightDodgePointLossMessage.targetId.");
+        }
+        this.amount = buffer.readVarUhShort();
+        if (this.amount < 0) {
+            Logger.error("Forbidden value (" + this.amount + ") on element of GameActionFightDodgePointLossMessage.amount.");
+        }
+    }
+}
+
+export class ExchangeStartOkNpcShopMessage extends ProtocolMessage {
+    constructor(npcSellerId, tokenId, objectsInfos) {
+        super(5761);
+        this.npcSellerId = npcSellerId;
+        this.tokenId = tokenId;
+        this.objectsInfos = objectsInfos;
+    }
+    serialize() {
+        if (this.npcSellerId < -9007199254740990 || this.npcSellerId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.npcSellerId + ") on element npcSellerId.");
+        }
+        this.buffer.writeDouble(this.npcSellerId);
+        if (this.tokenId < 0) {
+            Logger.error("Forbidden value (" + this.tokenId + ") on element tokenId.");
+        }
+        this.buffer.writeVarShort(this.tokenId);
+        this.buffer.writeShort(this.objectsInfos.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.objectsInfos.length) {
+            this.objectsInfos[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+    }
+}
+
+export class FighterStatsListMessage extends ProtocolMessage {
+    constructor(stats) {
+        super(6322);
+        this.stats = stats;
+    }
+    serialize() {
+        this.stats.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        this.stats = new CharacterCharacteristicsInformations();
+        this.stats.deserialize(buffer);
     }
 }

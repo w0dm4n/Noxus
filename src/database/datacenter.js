@@ -18,9 +18,7 @@ export default class Datacenter {
     static spells;
     static spellsLevels;
     static elements;
-    static npcs = { npcs: [], npcSpawns: [] };
-    static npcMessages;
-    static npcActions;
+    static npcs = { npcs: [], npcSpawns: [] , npcReplies :[] , npcActions :[] , npcItems : [] };
 
 
     static load(callback) {
@@ -38,9 +36,10 @@ export default class Datacenter {
             Datacenter.loadSpellsLevels,
             Datacenter.loadElements,
             Datacenter.loadNpcs,
-            Datacenter.loadNpcMessages,
+            Datacenter.loadNpcItems,
             Datacenter.loadNpcActions,
             Datacenter.loadItemsSets,
+            Datacenter.loadNpcsReplies
 
         ];
         var loaded = 0;
@@ -103,8 +102,10 @@ export default class Datacenter {
             DBManager.getNpcSpawns(function (npcSpawns) {
                 for (var i in npcSpawns) {
                     var npc = Datacenter.getNpcs(npcSpawns[i].npcId);
-                    Datacenter.npcs.npcSpawns.push(new NpcSpawn(npcSpawns[i], LookManager.parseLook(npc.look),npc.actions,npc.dialogMessages,npc.dialogReplies));
+                    
+                    Datacenter.npcs.npcSpawns.push(new NpcSpawn(npcSpawns[i], LookManager.parseLook(npc.look),Datacenter.getNpcAction(npcSpawns[i].npcId)));                 
                 }
+
                 Logger.infos("Loaded '" + Datacenter.npcs.npcSpawns.length + "' npc_spawns");
                 callback();
             });
@@ -113,18 +114,25 @@ export default class Datacenter {
         });
     }
 
-    static loadNpcMessages(callback) {
-        DBManager.getNpcMessages(function (npcMessages) {
-            Datacenter.npcMessages = npcMessages;
-            Logger.infos("Loaded '" + npcMessages.length + "' npc_messages");
-            callback();
+    static loadNpcsReplies(callback){
+        DBManager.getNpcReplies(function(npcReplies) {
+                Datacenter.npcs.npcReplies = npcReplies;
+                Logger.infos("Loaded '" + Datacenter.npcs.npcReplies.length + "' npcs_replies");
+                callback();  
         });
     }
 
+    static loadNpcItems(callback){
+        DBManager.getNpcItems(function(npcItems) {
+                Datacenter.npcs.npcItems = npcItems;
+                Logger.infos("Loaded '" + Datacenter.npcs.npcItems.length + "' npcs_items");
+                callback();  
+        });
+    }
 
     static loadNpcActions(callback) {
         DBManager.getNpcActions(function (npcAction) {
-            Datacenter.npcAction = npcAction;
+            Datacenter.npcs.npcActions = npcAction;
             Logger.infos("Loaded '" + npcAction.length + "' npc_actions");
             callback();
         });
@@ -171,7 +179,7 @@ export default class Datacenter {
 
     static loadItemsSets(callback) {
         DBManager.getItemsSets(function (itemsSets) {
-            Datacenter.itemsSet = itemsSets;
+            Datacenter.itemsSets = itemsSets;
             Logger.infos("Loaded '" + itemsSets.length + "' items sets");
             callback();
         });
@@ -247,6 +255,41 @@ export default class Datacenter {
             }
         }
         return result;
+    }
+
+    static getNpcReplies(id){
+        var result = [];
+        for(var i in this.npcs.npcReplies){
+            if(this.npcs.npcReplies[i].messageId == id){
+                result.push(this.npcs.npcReplies[i]);
+            }
+        }
+
+        return result;       
+    }
+
+
+
+    static getNpcAction(id){
+        var result = [];
+        for(var i in Datacenter.npcs.npcActions){
+            if(this.npcs.npcActions[i].npcId == id){
+                result.push(this.npcs.npcActions[i]);
+            }
+        }
+
+        return result;       
+    }
+
+    static getNpcItems(id){
+        var result = [];
+        for(var i in Datacenter.npcs.npcItems){
+            if(this.npcs.npcItems[i].npcId == id){
+                result.push(this.npcs.npcItems[i]);
+            }
+        }
+
+        return result;  
     }
 
 }

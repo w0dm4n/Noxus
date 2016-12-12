@@ -39,13 +39,29 @@ export default class Map {
     }
 
     getAvailableCells() {
+        if(this.availableCells) {
+            return this.availableCells;
+        }
         var aCells = [];
         for (var cell of this.cells) {
             if (cell._mov) {
                 aCells.push(cell);
             }
         }
+        this.availableCells = aCells;
         return aCells;
+    }
+
+    isWalkableCell(cellId) {
+        var cells = this.getAvailableCells();
+        var result = false;
+        for(var c of cells) {
+            if(c.id == cellId && c._mov) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     addClient(client) {

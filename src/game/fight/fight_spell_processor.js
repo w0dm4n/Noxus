@@ -2,6 +2,7 @@ import FightShapeProcessor from "./fight_shape_processor"
 import Logger from "../../io/logger"
 import * as Messages from "../../io/dofus/messages"
 import * as Types from "../../io/dofus/types"
+import MapPoint from "../pathfinding/map_point"
 
 export default class FightSpellProcessor {
 
@@ -45,7 +46,9 @@ export default class FightSpellProcessor {
 
     static getTargets(fight, caster, spell, spellLevel, effect, cellId) {
         var targets = [];
-        var shape = FightShapeProcessor.buildShape(effect.rawZone[0], effect.rawZone[1], cellId);
+        var point = MapPoint.fromCellId(caster.cellId);
+        var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
+        var shape = FightShapeProcessor.buildShape(effect.rawZone[0], effect.rawZone[1], cellId, directionId);
         if(shape) {
             for(var cell of shape) {
                 var fighterOnCell = fight.getFighterOnCell(cell);

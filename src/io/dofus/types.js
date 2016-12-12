@@ -1007,6 +1007,43 @@ export class Item {
     }
 }
 
+export class ObjectItemMinimalInformation extends Item {
+    constructor(objectGID, effects) {
+        super();
+        this.objectGID = objectGID;
+        this.effects = effects;
+        this.protocolId = 124;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.objectGID < 0) {
+            Logger.error("Forbidden value (" + this.objectGID + ") on element objectGID.");
+        }
+        buffer.writeVarShort(this.objectGID);
+        buffer.writeShort(this.effects.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.effects.length) {
+            this.effects[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+}
+export class ObjectItemToSellInNpcShop extends ObjectItemMinimalInformation {
+    constructor(param1, param2, objectPrice, buyCriterion) {
+        super(param1, param2);
+        this.objectPrice = objectPrice;
+        this.buyCriterion = buyCriterion;
+        this.protocolId = 352;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.objectPrice < 0) {
+            Logger.error("Forbidden value (" + this.objectPrice + ") on element objectPrice.");
+        }
+        buffer.writeVarInt(this.objectPrice);
+        buffer.writeUTF(this.buyCriterion);
+    }
+}
 export class ObjectItem extends Item {
     constructor(position, objectGID, effects, objectUID, quantity) {
         super();
@@ -1181,6 +1218,7 @@ export class ObjectEffectDice extends ObjectEffect {
     }
     serialize(buffer) {
         super.serialize(buffer);
+
         if (this.diceNum < 0) {
             Logger.error("Forbidden value (" + this.diceNum + ") on element diceNum.");
         }

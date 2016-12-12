@@ -9,4 +9,11 @@ export default class NpcHandler{
              npcs.open(client.character,packet.npcActionId);
         }     
     }
+
+    static handleNpcDialogReplyMessage(client,packet){
+        if(client.character.dialog != null){
+            //todo : add verification talk with npcs
+            client.character.dialog.reply(packet.replyId);
+        }
+    }
 }

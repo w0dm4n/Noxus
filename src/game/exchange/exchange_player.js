@@ -7,7 +7,6 @@ import * as Types from "../../io/dofus/types"
 import PartyFollower from "../../game/party/party_follower"
 import CompassEnum from "../../enums/compass_type_enum"
 import ExchangeType from "../../enums/exchange_type_enum"
-import Exchange from "./exchange"
 import ItemManager from "../../game/item/item_manager"
 
 export default class ExchangePlayer {

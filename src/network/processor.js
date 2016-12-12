@@ -97,8 +97,9 @@ export default class Processor {
         6081: {message: Messages.GameContextKickMessage, handler: FightHandler.handleGameContextKickMessage},
 
         //Npcs handler
-        5898 : {message : Messages.NpcGenericActionRequestMessage , handler : NpcHandler.handleNpcGenericActionRequestMessage }
-    } 
+        5898 : {message : Messages.NpcGenericActionRequestMessage , handler : NpcHandler.handleNpcGenericActionRequestMessage },
+        5616 : {message : Messages.NpcDialogReplyMessage , handler : NpcHandler.handleNpcDialogReplyMessage }
+} 
 
     static handle(client, messageId, buffer) {
         var handler = Processor.PROTOCOL_HANDLERS[parseInt(messageId)];

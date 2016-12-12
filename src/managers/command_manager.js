@@ -15,6 +15,7 @@ import WorldManager from "../managers/world_manager"
 import ItemManager from "../game/item/item_manager"
 import Datacenter from "../database/datacenter"
 import EmoteHandler from "../handlers/emote_handler"
+import DataCenter from "../database/datacenter"
 
 export default class CommandManager {
 
@@ -32,6 +33,9 @@ export default class CommandManager {
         { name:"kamas", role:AccountRole.ANIMATOR, description: "Ajoute des kamas a un personnage"},
         { name:"goto", role:AccountRole.ANIMATOR, description: "Téleporte a un personnage"},
         { name:"gome", role:AccountRole.ANIMATOR, description: "Téleporte un personnage sur votre position"},
+        { name:"itemset", role:AccountRole.ANIMATOR, description: "Vous ajoute une panoplie complète"},
+        { name:"life", role:AccountRole.PLAYER, description: "Permet de régénerer ses points de vie"},
+        { name:"save", role:AccountRole.PLAYER, description: "Permet de sauvegarder votre personnage"},
     ];
     
     static manageCommand(command, client)
@@ -246,6 +250,39 @@ export default class CommandManager {
         }
     }
 
+    static getSetById(setId)
+    {
+        var sets = DataCenter.itemsSets;
+        for (var i in sets)
+        {
+            if (sets[i]._id == setId)
+                return sets[i];
+        }
+        return null;
+    }
+
+    static handle_itemset(data, client)
+    {
+        if(data[1]) {
+            var set = CommandManager.getSetById(data[1]);
+            if (set) {
+                var items = set.items;
+                for (var item of items)
+                {
+                    var newItem = ItemManager.generateItem(item);
+                    client.character.itemBag.add(newItem, true, function(){
+                    });
+                }
+            }
+            else
+                client.character.replyError("Impossible de trouver cette panoplie.");
+        }
+        else
+        {
+            client.character.replyError("Erreur de syntaxe (.itemset id name)");
+        }
+    }
+
     static handle_emote(data, client)
     {
         if(data[1] && data[2]) {
@@ -347,5 +384,27 @@ export default class CommandManager {
         }
         else
             client.character.replyError("Erreur de syntaxe (.gome characterName)");
+    }
+
+    static handle_life(data, client)
+    {
+        if (!client.character.isInFight()) {
+            client.character.life = client.character.statsManager.getMaxLife();
+            client.character.statsManager.sendStats();
+            client.character.replyText("Vous avez récuperer vos points de vie !");
+        }
+        else
+            client.character.replyImportant("Impossible en combat.");
+    }
+
+    static handle_save(data, client)
+    {
+        if (!client.character.isInFight()) {
+            client.character.save(function(){
+                client.character.replyText("Votre personnage a bien été sauvegardé !");
+            });
+        }
+        else
+            client.character.replyImportant("Impossible en combat.");
     }
 }

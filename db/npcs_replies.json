@@ -1,0 +1,27 @@
+{ 
+    "_id" : NumberInt(1), 
+    "type" : "dialog", 
+    "replyId" : NumberInt(220), 
+    "messageId" : NumberInt(91), 
+    "condition" : null, 
+    "param1" : "274", 
+    "param2" : null
+}
+{ 
+    "_id" : NumberInt(2), 
+    "type" : "dialog", 
+    "replyId" : NumberInt(4166), 
+    "messageId" : NumberInt(91), 
+    "condition" : null, 
+    "param1" : null, 
+    "param2" : null
+}
+{ 
+    "_id" : NumberInt(3), 
+    "type" : "dialog", 
+    "replyId" : NumberInt(5202), 
+    "messageId" : NumberInt(274), 
+    "condition" : null, 
+    "param1" : null, 
+    "param2" : null
+}

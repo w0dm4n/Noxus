@@ -86,24 +86,6 @@ export default class ZaapDialog {
                         if (!result)
                             client.character.replyError("Impossible de vous téléporter sur cette carte !");
                         else {
-                            var cells = client.character.getMap().cells;
-
-                            if (!cells[client.character.cellid]._mov) {
-                                var newCell = Pathfinding.findClosestWalkableCell(client);
-                                if (newCell != 0 && cells[newCell]._mov) {
-                                    WorldManager.teleportClient(client, client.character.getMap()._id, newCell, function () {
-                                        client.character.subKamas(price);
-                                    });
-                                }
-                                else {
-                                    WorldManager.teleportClient(client, ConfigManager.configData.characters_start.startMap, ConfigManager.configData.characters_start.startCell, function () {
-                                        client.character.replyError("Une erreur de cellule vous a obligé à revenir sur la map de départ !");
-                                    });
-                                }
-                            }
-                            else {
-                                client.character.subKamas(price);
-                            }
                             client.character.leaveDialog();
                         }
                     });

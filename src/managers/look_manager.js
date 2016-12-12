@@ -88,12 +88,10 @@ export default class LookManager {
         }
 
          var nextColors = [];
-     
             for(var i in source)
             {
                 nextColors.push(source[i].item1 << 24 | source[i].item2 & 16777215);
             }
-
         return new LookManager(bones,skins,nextColors,scales,sublook);
 
     }
@@ -147,7 +145,6 @@ export default class LookManager {
                     num2 = str.indexOf(',', num);
                     num3++;
                 }
-
                 array[num3] = LookManager.ParseIndexedColor(str.substring(num, str.Length));
                 result = array;
             }
@@ -158,8 +155,10 @@ export default class LookManager {
     static ParseIndexedColor(str) {
         var num = str.indexOf("=");
         var flag = str[num + 1] == '#';
+
         var item = parseInt(str.substring(0, num));
-        var item2 = str.split('=')[1];
+
+        var item2 = parseInt(str.substring((flag == true ? 2 : 1) + num),16);
         return { item1: item, item2: item2 };
 
     }

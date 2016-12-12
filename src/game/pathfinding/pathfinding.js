@@ -61,8 +61,10 @@ export default class Pathfinding {
         for (var i in neigh) {
             var n = neigh[i];
             if (n != null) {
-                if(dyn.indexOf(n._nCellId) == -1) {
-                    cells.push(this.getCell(n._nCellId));
+                if (dyn) {
+                    if (dyn.indexOf(n._nCellId) == -1) {
+                        cells.push(this.getCell(n._nCellId));
+                    }
                 }
             }
         }
@@ -81,7 +83,7 @@ export default class Pathfinding {
         var newCell = 0;
         var testedCell = [];
         var cells_near = pathFinding.getNeighbours(pathFinding.cells[client.character.cellid]);
-        while (newCell == 0 && index < 600)
+        while (newCell == 0 && index < 900)
         {
             if (cells_near.length)
             {

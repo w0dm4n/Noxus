@@ -2,6 +2,7 @@ import * as Types from "../../io/dofus/types"
 import * as Messages from "../../io/dofus/messages"
 import CharacterManager from "../../managers/character_manager.js"
 import CharacterItem from "../../database/models/character_item";
+import Logger from "../../io/logger"
 
 
 export default class StatsManager {
@@ -47,7 +48,12 @@ export default class StatsManager {
         var fight = {
             getBuffBonus: function(id) {
                 if(self.character.isInFight()) {
-                    return self.character.fighter.fightStatsBonus[id];
+                    if(self.character.fighter.fightStatsBonus[id]) {
+                        return self.character.fighter.fightStatsBonus[id];
+                    }
+                    else {
+                        return 0;
+                    }
                 }
                 else {
                     return 0;
@@ -61,7 +67,7 @@ export default class StatsManager {
     recalculateStats(raw) {
         if(raw) this.raw = raw;
         var fightBuff = this.getFightStatsManager();
-
+        // Ajouter ici et dans fighter init fightStats
         this.stats[1] = new Types.CharacterBaseCharacteristic(6 + (this.character.level >= 100 ? 1 : 0), this.getItemTotalStat(111), 0, 0, fightBuff.getBuffBonus(1)); // PA
         this.stats[2] = new Types.CharacterBaseCharacteristic(3, this.getItemTotalStat(128), 0, 0, fightBuff.getBuffBonus(2)); // PM
         this.stats[10] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.strength : 0, this.getItemTotalStat(118), 0, 0, fightBuff.getBuffBonus(10));
@@ -72,6 +78,78 @@ export default class StatsManager {
         this.stats[15] = new Types.CharacterBaseCharacteristic(this.raw.stats ? this.raw.stats.intelligence : 0, this.getItemTotalStat(126), 0, 0, fightBuff.getBuffBonus(15));
         this.stats[16] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(174), 0, 0, fightBuff.getBuffBonus(16)); // Initiative
         this.stats[17] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(138), 0, 0, fightBuff.getBuffBonus(17)); // Puissance
+        this.stats[18] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(112), 0, 0, fightBuff.getBuffBonus(18)); // Fix damage
+    }
+
+    checkIfSet(sets, setId)
+    {
+        for (var i in sets)
+        {
+            if (sets[i]._id == setId)
+                return true;
+        }
+        return false
+    }
+
+    getSetById(sets, setId)
+    {
+        for (var i in sets)
+        {
+            if (sets[i]._id == setId)
+                return sets[i];
+        }
+        return null;
+    }
+
+    getSetEffectByActiveItem(effectId, set)
+    {
+        var bonus = 0;
+        var effects = set.effects[(set.activeItem - 1)];
+        if (effects.length > 0) {
+            for (var effect of effects) {
+                if (effect) {
+                    if (effect.effectId == effectId) {
+                        Logger.debug(effect.diceNum + " added for effect " + effectId);
+                        bonus += effect.diceNum;
+                    }
+                }
+            }
+        }
+        return bonus;
+    }
+
+    getSetsByEffect(effectId, total)
+    {
+        if (effectId <= 0)
+            return total;
+        var items = this.character.getItemsEquiped();
+        var sets = [];
+        for (var i in items)
+        {
+            if (items[i].set)
+            {
+                if (!this.checkIfSet(sets, items[i].set._id)) {
+                    items[i].set.activeItem = 1;
+                    sets.push(items[i].set)
+                }
+                else
+                {
+                    var set = this.getSetById(sets, items[i].set._id);
+                    if (set)
+                    {
+                        set.activeItem = set.activeItem + 1;
+                    }
+                }
+            }
+        }
+        for (var set of sets)
+        {
+            var bonus = this.getSetEffectByActiveItem(effectId, set);
+            if (bonus > 0)
+                total += bonus;
+        }
+
+        return total;
     }
 
     getItemTotalStat(effectId) {
@@ -83,7 +161,7 @@ export default class StatsManager {
                 if(effect.effectId == effectId) total += effect.value;
             }
         }
-        return total;
+        return this.getSetsByEffect(effectId, total);
     }
 
     getActorExtendedAlignmentInformations() {
@@ -99,8 +177,8 @@ export default class StatsManager {
             this.character.spellPoints, 
             this.getActorExtendedAlignmentInformations(),
             this.character.life, this.getMaxLife(), 10000, 10000,
-            this.getTotalStats(1),
-            this.getTotalStats(2),
+            this.character.isInFight() ? this.character.fighter.current.AP : this.getTotalStats(1),
+            this.character.isInFight() ? this.character.fighter.current.MP : this.getTotalStats(2),
             this.getStatById(16),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             this.getStatById(1),
@@ -118,7 +196,7 @@ export default class StatsManager {
             0,
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
+            this.getStatById(18),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             this.getStatById(17),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
@@ -169,6 +247,12 @@ export default class StatsManager {
         this.recalculateStats();
         this.character.client.send(new Messages.CharacterStatsListMessage(this.getCharacterCharacteristicsInformations()));
         this.character.client.send(new Messages.UpdateLifePointsMessage(this.character.life, this.getMaxLife()));
+        //this.character.client.send(new Messages.LifePointsRegenEndMessage(this.character.life, this.getMaxLife(), this.getMaxLife() - this.character.life));
+    }
+
+    sendFightStats() {
+        this.recalculateStats();
+        this.character.client.send(new Messages.FighterStatsListMessage(this.getCharacterCharacteristicsInformations()));
         //this.character.client.send(new Messages.LifePointsRegenEndMessage(this.character.life, this.getMaxLife(), this.getMaxLife() - this.character.life));
     }
 

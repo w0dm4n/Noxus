@@ -1,16 +1,20 @@
-import NpcBuySell from "../../game/npcs/npcBuySell"
-import NpcTalk from "../../game/npcs/npcTalk"
-
+import NpcBuySell from "../../game/npcs/actions/npcBuySell"
+import NpcTalk from "../../game/npcs/actions/npcTalk"
+import Datacenter from "../../database/datacenter"
 export default class NpcSpawn {
+
 
     static handlerAction =
     {
         1: { handle: NpcBuySell.execute },
         2: { handle: "" },
         3: { handle: NpcTalk.execute }
-
     };
-    constructor(raw, look, actions , messages , replies) {
+
+    currentMessage;
+    items = [];
+
+    constructor(raw, look, actions  ) {
         this._id = raw._id;
         this.npcId = raw.npcId;
         this.mapId = raw.mapId;
@@ -18,13 +22,26 @@ export default class NpcSpawn {
         this.direction = raw.direction;
         this.realLook = look;
         this.actions = actions;
-        this.messages = messages;
-        this.replies = replies;
+        var replies = this.existReplies();
+
+        if(replies != null){
+            this.currentMessage = replies.messageId;     
+        }
+        var items = Datacenter.getNpcItems(this.npcId);
+
+        if(items.length > 0){
+            for(var i in items){
+                this.items.push(items[i]);
+            }
+        }
 
     }
 
-    open(character, action) {
+    getReplies(messageId){
+        return Datacenter.getNpcReplies(messageId);       
+    }
 
+    open(character, action) {
         if (this.canOpen(character, action)) {
             var handler = NpcSpawn.handlerAction[action];
             if (handler)
@@ -44,10 +61,21 @@ export default class NpcSpawn {
 
     actionExist(action) {
         for (var i in this.actions) {
-            if (this.actions[i] == action) {
+            if (this.actions[i].action == action) {
                 return true;
             }
         }
         return false;
     }
+
+    existReplies(){
+        for(var i in this.actions){
+            if(this.actions[i].action == 3){
+                return this.actions[i];
+            }
+        }
+        return null;
+    }
+
+
 }

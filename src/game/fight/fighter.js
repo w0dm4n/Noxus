@@ -4,6 +4,8 @@ import Logger from "../../io/logger"
 import Fight from "./fight"
 import CharacterManager from "../../managers/character_manager"
 import WorldManager from "../../managers/world_manager"
+import MapPoint from "../pathfinding/map_point"
+import RemoveAPBuff from "../../game/spell/buffs/remove_ap_buff"
 
 export default class Fighter {
 
@@ -41,6 +43,7 @@ export default class Fighter {
         this.fightStatsBonus[15] = 0;
         this.fightStatsBonus[16] = 0;
         this.fightStatsBonus[17] = 0;
+        this.fightStatsBonus[18] = 8;
     }
 
     get id() {
@@ -151,6 +154,24 @@ export default class Fighter {
         }
     }
 
+    looseAP(data, apPoints)
+    {
+        if (this.alive)
+        {
+
+            /*var calc = Math.floor((apPoints * this.getStats().getTotalStats(12)) / 100);
+            if (calc <= 0)
+            {
+                this.fight.send(new Messages.GameActionFightDodgePointLossMessage(308, caster.id, this.id, calc));
+            }
+            else {
+
+            }*/
+            this.addBuff(new RemoveAPBuff(apPoints, data.spell, data.spellLevel, data.effect, data.caster, this));
+        }
+
+    }
+
     checkIfIsDead() {
         if(this.current.life <= 0) {
             this.alive = false;
@@ -175,5 +196,32 @@ export default class Fighter {
     teleport(cellId) {
         this.cellId = cellId;
         this.fight.send(new Messages.GameActionFightTeleportOnSameMapMessage(5, this.id, this.id, this.cellId));
+    }
+
+    push(dir, power) {
+        var point = MapPoint.fromCellId(this.cellId);
+        var toCell = this.cellId;
+        var collidedFighter = null;
+        var path = [];
+        for(var i = 0; i < power; i++) {
+            var dirCell = point.getNearestCellInDirection(dir);
+            if(dirCell) {
+                if(this.fight.getFighterOnCell(dirCell)) {
+                    collidedFighter = this.fight.getFighterOnCell(dirCell);
+                    break;
+                }
+
+                if(!this.fight.map.isWalkableCell(dirCell._nCellId)) {
+                    break;
+                }
+                point = dirCell;
+                toCell = dirCell._nCellId;
+            }
+            else {
+                break;
+            }
+        }
+        this.fight.send(new Messages.GameActionFightSlideMessage(0, this.id, this.id, this.cellId, toCell));
+        this.cellId = toCell;
     }
 }

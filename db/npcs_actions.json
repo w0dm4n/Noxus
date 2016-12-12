@@ -1,72 +1,7 @@
-[
-	{
-		"_id": 1,
-		"realId": 1,
-		"nameId": 8944
-	},
-	{
-		"_id": 2,
-		"realId": 2,
-		"nameId": 8939
-	},
-	{
-		"_id": 3,
-		"realId": 3,
-		"nameId": 8941
-	},
-	{
-		"_id": 4,
-		"realId": 4,
-		"nameId": 307972
-	},
-	{
-		"_id": 5,
-		"realId": 5,
-		"nameId": 8940
-	},
-	{
-		"_id": 6,
-		"realId": 6,
-		"nameId": 8945
-	},
-	{
-		"_id": 7,
-		"realId": 7,
-		"nameId": 8943
-	},
-	{
-		"_id": 8,
-		"realId": 8,
-		"nameId": 640793
-	},
-	{
-		"_id": 9,
-		"realId": 9,
-		"nameId": 8947
-	},
-	{
-		"_id": 10,
-		"realId": 10,
-		"nameId": 8946
-	},
-	{
-		"_id": 11,
-		"realId": 11,
-		"nameId": 429773
-	},
-	{
-		"_id": 12,
-		"realId": 12,
-		"nameId": 429774
-	},
-	{
-		"_id": 14,
-		"realId": 14,
-		"nameId": 652644
-	},
-	{
-		"_id": 15,
-		"realId": 3,
-		"nameId": 482709
-	}
-]
+{ 
+    "_id" : NumberInt(1), 
+    "npcId" : NumberInt(46), 
+    "action" : NumberInt(3), 
+    "condition" : null, 
+    "messageId" : NumberInt(91)
+}

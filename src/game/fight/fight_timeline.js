@@ -115,6 +115,7 @@ export default class FightTimeline {
             this.currentFighter().beginTurn();
             this.fight.send(new Messages.GameFightTurnReadyRequestMessage(this.currentFighter().id));
             this.fight.send(new Messages.GameFightTurnStartMessage(this.currentFighter().id, FightTimeline.TURN_BASE_TIME * 10));
+            this.currentFighter().getStats().sendFightStats();
             this.fight.synchronizeFight();
             this.fight.send(new Messages.GameFightTurnStartPlayingMessage());
             this.startTimer();

@@ -1,5 +1,6 @@
-import NpcDialog from "../dialog/npc_dialog"
+import NpcDialog from "../../dialog/npc_dialog"
 export default class NpcTalk{
+    
     action = 3;
 
     static execute(character,npc){

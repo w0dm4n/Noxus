@@ -1,6 +1,6 @@
 { 
     "_id" : NumberInt(1), 
-    "npcId" : NumberInt(52), 
+    "npcId" : NumberInt(46), 
     "mapId" : NumberInt(88084243), 
     "cellId" : NumberInt(399), 
     "direction" : NumberInt(3), 
@@ -8,7 +8,7 @@
 }
 { 
     "_id" : NumberInt(2), 
-    "npcId" : NumberInt(104), 
+    "npcId" : NumberInt(46), 
     "mapId" : NumberInt(88084244), 
     "cellId" : NumberInt(371), 
     "direction" : NumberInt(2), 

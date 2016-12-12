@@ -417,6 +417,20 @@ export default class DBManager {
         });
     }
 
+    static getNpcReplies(callback) {
+        var collection = DBManager.db.collection('npcs_replies');
+        collection.find({}).toArray(function(err, npcReplies){
+            callback(npcReplies);
+        });
+    }
+
+    static getNpcItems(callback) {
+        var collection = DBManager.db.collection('npcs_items');
+        collection.find({}).toArray(function(err, npcItems){
+            callback(npcItems);
+        });
+    }
+
     static getNpcSpawns(callback) {
         var collection = DBManager.db.collection('npcs_spawns');
         collection.find({}).toArray(function(err, npcSpawns){
