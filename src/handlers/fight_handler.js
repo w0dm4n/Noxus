@@ -125,4 +125,15 @@ export default class FightHandler {
 
         }
     }
+
+    static handleGameActionFightCastOnTargetRequestMessage(client, packet)
+    {
+        if (client.character.isInFight())
+        {
+            var fighter = client.character.fight.getFighterById(packet.targetId);
+            if (fighter) {
+                client.character.fight.requestCastSpell(client.character.fighter, packet.spellId, fighter.cellId);
+            }
+        }
+    }
 }

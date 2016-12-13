@@ -6,6 +6,8 @@ import CharacterManager from "../../managers/character_manager"
 import WorldManager from "../../managers/world_manager"
 import MapPoint from "../pathfinding/map_point"
 import RemoveAPBuff from "../../game/spell/buffs/remove_ap_buff"
+import RemoveMPBuff from "../../game/spell/buffs/remove_mp_buff"
+import Basic from "../../utils/basic"
 
 export default class Fighter {
 
@@ -43,7 +45,8 @@ export default class Fighter {
         this.fightStatsBonus[15] = 0;
         this.fightStatsBonus[16] = 0;
         this.fightStatsBonus[17] = 0;
-        this.fightStatsBonus[18] = 8;
+        this.fightStatsBonus[18] = 0;
+        this.fightStatsBonus[19] = 0;
     }
 
     get id() {
@@ -63,7 +66,7 @@ export default class Fighter {
     }
 
     refreshStats() {
-        this.getStats().sendStats();
+        this.getStats().sendFightStats();
     }
 
     resetPoints() {
@@ -84,7 +87,7 @@ export default class Fighter {
             if (!result)
             {
                 Logger.error("An error occured while trying to load a map for the character " + this.character.name);
-                client.character.disconnect();
+                this.character.client.disconnect();
             }
         });
     }
@@ -148,28 +151,117 @@ export default class Fighter {
         //TODO: Check shield point because the packet is not the same
         //TODO: Erosion system
         if(this.alive) {
+            if(this.current.life - damages < 0) {
+                damages = this.current.life;
+            }
             this.current.life -= damages;
             this.fight.send(new Messages.GameActionFightLifePointsLostMessage(0, from.id, this.id, damages, 0));
             this.checkIfIsDead();
+            return damages;
+        }
+        else {
+            return 0;
         }
     }
+
+    heal(from, heal, elementType) {
+        if(this.current.life + heal > this.getStats().getMaxLife()) {
+            heal = this.getStats().getMaxLife() - this.current.life;
+        }
+        this.current.life += heal;
+        if(heal > 0) this.fight.send(new Messages.GameActionFightLifePointsGainMessage(0, from.id, this.id, heal));
+    }
+
+    checkCalcRate(calc)
+    {
+        if (calc == 0 || calc < 10)
+            return 10;
+        if (calc > 100 && calc <= 150)
+             return 60;
+        else if (calc > 100 && calc <= 160)
+            return 65;
+        else if (calc > 180)
+            return 70;
+        return calc;
+    }
+
 
     looseAP(data, apPoints)
     {
         if (this.alive)
         {
-
-            /*var calc = Math.floor((apPoints * this.getStats().getTotalStats(12)) / 100);
-            if (calc <= 0)
-            {
-                this.fight.send(new Messages.GameActionFightDodgePointLossMessage(308, caster.id, this.id, calc));
+            var baseLostAp = apPoints;
+            if (apPoints > 0) {
+                var totalAPLost = 0;
+                var calc = 0;
+                var rand = 0;
+                var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
+                var target_esquive = this.getStats().getDodgeAndWithdrawal();
+                Logger.infos("Caster retrait: " + caster_retrait + ", Target esquive: " + target_esquive);
+                while (apPoints > 0) {
+                    if (this.current.AP > 0) {
+                        calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.AP / this.getStats().getTotalStats(1))));
+                        calc = this.checkCalcRate(calc);
+                        if (calc > 0) {
+                            rand = Basic.getRandomInt(0, 100);
+                            if (calc >= rand) {
+                                Logger.debug("One PA lose with calc : " + calc + ", rand : " + rand);
+                                this.current.AP -= 1;
+                                totalAPLost++;
+                            }
+                            else {
+                                Logger.debug("One PA lose avoid with calc : " + calc + ", rand : " + rand);
+                            }
+                        }
+                    }
+                    apPoints--;
+                }
+                if (totalAPLost != 0)
+                    this.addBuff(new RemoveAPBuff(totalAPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
+                if (totalAPLost < baseLostAp)
+                {
+                    this.fight.send(new Messages.GameActionFightDodgePointLossMessage(308, data.caster.id, this.id, (baseLostAp - totalAPLost)));
+                }
             }
-            else {
-
-            }*/
-            this.addBuff(new RemoveAPBuff(apPoints, data.spell, data.spellLevel, data.effect, data.caster, this));
         }
 
+    }
+
+    looseMP(data, mpPoints)
+    {
+        if (this.alive) {
+            var baseLostMP = mpPoints;
+            var totalMPLost = 0;
+            var calc = 0;
+            var rand = 0;
+            var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
+            var target_esquive = this.getStats().getDodgeAndWithdrawal();
+            Logger.infos("Caster retrait: " + caster_retrait + ", Target esquive: " + target_esquive);
+            while (mpPoints > 0) {
+                if (this.current.MP > 0) {
+                    calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.MP / this.getStats().getTotalStats(2))));
+                    calc = this.checkCalcRate(calc);
+                    if (calc > 0) {
+                        rand = Basic.getRandomInt(0, 100);
+                        if (calc >= rand) {
+                            Logger.debug("One PM lose with calc : " + calc + ", rand : " + rand);
+                            this.current.MP -= 1;
+                            totalMPLost++;
+                        }
+                        else {
+                            Logger.debug("One PM lose avoid with calc : " + calc + ", rand : " + rand);
+                        }
+                    }
+                }
+                mpPoints--;
+            }
+            if (totalMPLost != 0)
+                this.addBuff(new RemoveMPBuff(totalMPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
+            if (totalMPLost < baseLostMP)
+            {
+                this.fight.send(new Messages.GameActionFightDodgePointLossMessage(309, data.caster.id, this.id, (baseLostMP - totalMPLost)));
+            }
+        }
     }
 
     checkIfIsDead() {
@@ -206,8 +298,8 @@ export default class Fighter {
         for(var i = 0; i < power; i++) {
             var dirCell = point.getNearestCellInDirection(dir);
             if(dirCell) {
-                if(this.fight.getFighterOnCell(dirCell)) {
-                    collidedFighter = this.fight.getFighterOnCell(dirCell);
+                if(this.fight.getFighterOnCell(dirCell._nCellId)) {
+                    collidedFighter = this.fight.getFighterOnCell(dirCell._nCellId);
                     break;
                 }
 

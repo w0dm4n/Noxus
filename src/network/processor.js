@@ -95,10 +95,13 @@ export default class Processor {
         718: {message: Messages.GameFightTurnFinishMessage, handler: FightHandler.handleGameFightTurnFinishMessage},
         1005: {message: Messages.GameActionFightCastRequestMessage, handler: FightHandler.handleGameActionFightCastRequestMessage},
         6081: {message: Messages.GameContextKickMessage, handler: FightHandler.handleGameContextKickMessage},
+        6330: { message: Messages.GameActionFightCastOnTargetRequestMessage, handler: FightHandler.handleGameActionFightCastOnTargetRequestMessage },
 
         //Npcs handler
         5898 : {message : Messages.NpcGenericActionRequestMessage , handler : NpcHandler.handleNpcGenericActionRequestMessage },
-        5616 : {message : Messages.NpcDialogReplyMessage , handler : NpcHandler.handleNpcDialogReplyMessage }
+        5616 : {message : Messages.NpcDialogReplyMessage , handler : NpcHandler.handleNpcDialogReplyMessage },
+        5774 : {message : Messages.ExchangeBuyMessage , handler : NpcHandler.handleExchangeBuyMessage },
+        5778 : {message : Messages.ExchangeSellMessage , handler : NpcHandler.handleExchangeSellMessage}
 } 
 
     static handle(client, messageId, buffer) {

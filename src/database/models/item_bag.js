@@ -58,6 +58,8 @@ export default class ItemBag {
         });
     }
 
+
+
     getObjectItemArray() {
         var objects = [];
         for(var item of this.items) {
@@ -65,7 +67,12 @@ export default class ItemBag {
         }
         return objects;
     }
-
+    getItemByUID(id) {
+        for(var item of this.items) {
+           if(item.templateId == id) return item;
+        }
+        return null;
+    }
     getItemByID(id) {
         for(var item of this.items) {
             if(item._id == id) return item;
@@ -147,6 +154,17 @@ export default class ItemBag {
         if(this.onItemDeleted) this.onItemDeleted(item);
     }
 
+    updateItemByTemplateIdAndQuantity(id, quantity){
+        var item = this.getItemByUID(id);
+        if(item != null){
+            if (quantity < item.quantity)
+                    item.quantity -= quantity;
+                else {
+                    this.deleteItem(item);
+                }
+                this.save(function(){ });
+        }
+    }
     updateItemByUIDAndQuantity(objectUID, quantity, client)
     {
         var self = this;

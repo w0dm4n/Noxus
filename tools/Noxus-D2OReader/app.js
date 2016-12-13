@@ -8,7 +8,7 @@ d = function(it){
 return console.log(format(it));
 };
 
-file = "./ItemSets"
+file = "./SpellLevels"
 console.log("Processing " + file);
 BigEndianReader = (function(){
 BigEndianReader.displayName = 'BigEndianReader';
@@ -17,7 +17,7 @@ function BigEndianReader(buffer, offset){
     this.buffer = buffer;
     this.offset = offset != null ? offset : 0;
 }
-for (i$ = 0, len$ = (ref$ = [['Double', 'DoubleBE', 8], ['Int', 'Int32BE', 4], ['Uint', 'UInt32BE', 4], ['Short', 'Int16BE', 2]]).length; i$ < len$; ++i$) {
+for (i$ = 0, len$ = (ref$ = [['Double', 'DoubleBE', 8], ['Int', 'Int32BE', 4], ['Uint', 'UInt32BE', 4], ['Short', 'Int16BE', 2], ['Byte', 'Int8', 1]]).length; i$ < len$; ++i$) {
     ref1$ = ref$[i$], name = ref1$[0], type = ref1$[1], size = ref1$[2];
     (fn$.call(BigEndianReader, type, size));
 }
@@ -28,7 +28,7 @@ prototype.readUtfBytes = function(it){
     return this.sl(it).toString();
 };
 prototype.readBool = function(){
-    return !!this.sl(1).toString();
+    return this.readByte() == 1;
 };
 prototype.seek = function(offset){
     this.offset = offset;

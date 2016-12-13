@@ -4449,3 +4449,168 @@ export class FighterStatsListMessage extends ProtocolMessage {
         this.stats.deserialize(buffer);
     }
 }
+
+export class ExchangeBuyMessage extends ProtocolMessage {
+    constructor(objectToBuyId, quantity) {
+        super(5774);
+        this.objectToBuyId = objectToBuyId;
+        this.quantity = quantity;
+    }
+    serialize() {
+        if (this.objectToBuyId < 0) {
+            Logger.error("Forbidden value (" + this.objectToBuyId + ") on element objectToBuyId.");
+        }
+        this.buffer.writeVarInt(this.objectToBuyId);
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element quantity.");
+        }
+        this.buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        this.objectToBuyId = buffer.readVarUhInt();
+        if (this.objectToBuyId < 0) {
+            Logger.error("Forbidden value (" + this.objectToBuyId + ") on element of ExchangeBuyMessage.objectToBuyId.");
+        }
+        this.quantity = buffer.readVarUhInt();
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element of ExchangeBuyMessage.quantity.");
+        }
+    }
+}
+export class ExchangeErrorMessage extends ProtocolMessage {
+    constructor(errorType) {
+        super(5513);
+        this.errorType = errorType;
+    }
+    serialize() {
+        this.buffer.writeByte(this.errorType);
+    }
+    deserialize(buffer) {
+        this.errorType = buffer.readByte();
+    }
+}
+
+export class GameActionFightLifePointsGainMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.delta = param4;
+        this.messageId = 6311;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.delta < 0) {
+            Logger.error("Forbidden value (" + this.delta + ") on element delta.");
+        }
+        this.buffer.writeVarInt(this.delta);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightLifePointsGainMessage.targetId.");
+        }
+        this.delta = buffer.readVarUhInt();
+        if (this.delta < 0) {
+            Logger.error("Forbidden value (" + this.delta + ") on element of GameActionFightLifePointsGainMessage.delta.");
+        }
+    }
+}
+
+export class ExchangeBuyOkMessage extends ProtocolMessage {
+    constructor() {
+        super(5759);
+    }
+    serialize() {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class GameActionFightCastOnTargetRequestMessage extends ProtocolMessage {
+    constructor(spellId, targetId) {
+        super(6330);
+        this.spellId = spellId;
+        this.targetId = targetId;
+    }
+    serialize() {
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element spellId.");
+        }
+        this.buffer.writeVarShort(this.spellId);
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+    }
+    deserialize(buffer) {
+        this.spellId = buffer.readVarUhShort();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element of GameActionFightCastOnTargetRequestMessage.spellId.");
+        }
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightCastOnTargetRequestMessage.targetId.");
+        }
+    }
+}
+export class ExchangeSellMessage extends ProtocolMessage {
+    constructor(objectToSellId, quantity) {
+        super(5778);
+        this.objectToSellId = objectToSellId;
+        this.quantity = quantity;
+    }
+    serialize() {
+        if (this.objectToSellId < 0) {
+            Logger.error("Forbidden value (" + this.objectToSellId + ") on element objectToSellId.");
+        }
+        this.buffer.writeVarInt(this.objectToSellId);
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element quantity.");
+        }
+        this.buffer.writeVarInt(this.quantity);
+    }
+    deserialize(buffer) {
+        this.objectToSellId = buffer.readVarUhInt();
+        if (this.objectToSellId < 0) {
+            Logger.error("Forbidden value (" + this.objectToSellId + ") on element of ExchangeSellMessage.objectToSellId.");
+        }
+        this.quantity = buffer.readVarUhInt();
+        if (this.quantity < 0) {
+            Logger.error("Forbidden value (" + this.quantity + ") on element of ExchangeSellMessage.quantity.");
+        }
+    }
+}
+
+export class ExchangeSellOkMessage extends ProtocolMessage {
+    constructor() {
+        super(5792);
+    }
+    serialize() {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class GameActionFightNoSpellCastMessage extends ProtocolMessage {
+    constructor(spellLevelId) {
+        super(6132);
+        this.spellLevelId = spellLevelId;
+    }
+    serialize() {
+        if (this.spellLevelId < 0) {
+            Logger.error("Forbidden value (" + this.spellLevelId + ") on element spellLevelId.");
+        }
+        this.buffer.writeVarInt(this.spellLevelId);
+    }
+    deserialize(buffer) {
+        this.spellLevelId = buffer.readVarUhInt();
+        if (this.spellLevelId < 0) {
+            Logger.error("Forbidden value (" + this.spellLevelId + ") on element of GameActionFightNoSpellCastMessage.spellLevelId.");
+        }
+    }
+}

@@ -4,26 +4,28 @@ import * as Types from "../io/dofus/types.js"
 
 export default class LookManager {
 
-    constructor(bone,skin,color,scale,sublook){
+    constructor(bone, skin, color, scale, sublook) {
         this.bones = bone;
         this.skins = skin;
         this.colors = color;
         this.scales = scale;
         this.sublooks = sublook;
-    }   
-    static toString()
-    {
+    }
+    static toString() {
         var str = [];
-   
+
     }
 
-    toEntityLook()
-    {
-        return new Types.EntityLook(this.bones,this.skins,this.colors,this.scales,this.sublooks);
+    toEntityLook() {
+        if (this.colors.length > 1) {
+            return new Types.EntityLook(this.bones, this.skins, this.colors, this.scales, this.sublooks);
+        } else {
+            return new Types.EntityLook(this.bones, this.skins, [], this.scales, this.sublooks);
+        }
     }
-    
+
     static parseLook(str) {
-        if (!str || str[0] != '{' ) {
+        if (!str || str[0] != '{') {
             Logger.infos("Incorrect EntityLook format : " + str);
         }
         var i = 1;
@@ -87,12 +89,12 @@ export default class LookManager {
 
         }
 
-         var nextColors = [];
-            for(var i in source)
-            {
-                nextColors.push(source[i].item1 << 24 | source[i].item2 & 16777215);
-            }
-        return new LookManager(bones,skins,nextColors,scales,sublook);
+        var nextColors = [];
+        for (var i in source) {
+            nextColors.push(source[i].item1 << 24 | source[i].item2 & 16777215);
+        }
+
+        return new LookManager(bones, skins, nextColors, scales, sublook);
 
     }
 
@@ -158,7 +160,7 @@ export default class LookManager {
 
         var item = parseInt(str.substring(0, num));
 
-        var item2 = parseInt(str.substring((flag == true ? 2 : 1) + num),16);
+        var item2 = parseInt(str.substring((flag == true ? 2 : 1) + num), 16);
         return { item1: item, item2: item2 };
 
     }

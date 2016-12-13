@@ -12,7 +12,6 @@ export default class RemoveAPBuff extends Buff {
     }
 
     apply() {
-        this.fighter.current.AP -= this.delta;
     }
 
     unapply() {
@@ -27,4 +26,5 @@ export default class RemoveAPBuff extends Buff {
     getAbstractFightDispellableEffect() {
         return new Types.FightTemporaryBoostEffect(this.id, this.fighter.id, this.duration, 1, this.spell.spellId, this.effectId, 16, this.delta);
     }
+
 }

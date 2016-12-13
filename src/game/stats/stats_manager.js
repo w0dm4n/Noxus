@@ -28,6 +28,12 @@ export default class StatsManager {
         return stat.base + stat.additionnal + stat.objectsAndMountBonus + stat.alignGiftBonus + stat.contextModif;
     }
 
+    getDodgeAndWithdrawal()
+    {
+        var totalWisdom = this.raw.stats.wisdom + this.getItemTotalStat(124);
+        return (totalWisdom > 0) ? (totalWisdom / 10) : 0;
+    }
+
     getMaxLife() {
         return this.getBaseLife() + this.getTotalStats(11);
     }
@@ -79,6 +85,7 @@ export default class StatsManager {
         this.stats[16] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(174), 0, 0, fightBuff.getBuffBonus(16)); // Initiative
         this.stats[17] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(138), 0, 0, fightBuff.getBuffBonus(17)); // Puissance
         this.stats[18] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(112), 0, 0, fightBuff.getBuffBonus(18)); // Fix damage
+        this.stats[19] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(117), 0, 0, fightBuff.getBuffBonus(19)); // PO
     }
 
     checkIfSet(sets, setId)
@@ -189,7 +196,7 @@ export default class StatsManager {
             this.getStatById(13),
             this.getStatById(14),
             this.getStatById(15),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
+            this.getStatById(19),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
@@ -215,8 +222,8 @@ export default class StatsManager {
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
+            new Types.CharacterBaseCharacteristic(this.getDodgeAndWithdrawal(), 0, 0, 0, 0),
+            new Types.CharacterBaseCharacteristic(this.getDodgeAndWithdrawal(), 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),

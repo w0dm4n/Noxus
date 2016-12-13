@@ -2,5 +2,6 @@
     "_id" : NumberInt(1), 
     "npcId" : NumberInt(81), 
     "maxStats" : NumberInt(0), 
-    "itemId" : NumberInt(17731)
+    "itemId" : NumberInt(17731), 
+    "price" : "100"
 }

@@ -74,6 +74,7 @@ export default class FightSpellProcessor {
                     }
                     break;
 
+                case 'L':
                 case 'A': // Ennemies
                     for(var t of targets) {
                         if(!caster.team.isInThisTeam(t.id)) {

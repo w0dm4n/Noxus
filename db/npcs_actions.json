@@ -3,5 +3,14 @@
     "npcId" : NumberInt(46), 
     "action" : NumberInt(3), 
     "condition" : null, 
-    "messageId" : NumberInt(91)
+    "messageId" : NumberInt(91), 
+    "itemId" : "null"
+}
+{ 
+    "_id" : NumberInt(2), 
+    "npcId" : NumberInt(81), 
+    "action" : NumberInt(1), 
+    "condition" : null, 
+    "messageId" : null, 
+    "itemId" : "0"
 }

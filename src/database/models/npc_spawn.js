@@ -14,7 +14,7 @@ export default class NpcSpawn {
     currentMessage;
     items = [];
 
-    constructor(raw, look, actions  ) {
+    constructor(raw, look, actions) {
         this._id = raw._id;
         this.npcId = raw.npcId;
         this.mapId = raw.mapId;
@@ -24,21 +24,21 @@ export default class NpcSpawn {
         this.actions = actions;
         var replies = this.existReplies();
 
-        if(replies != null){
-            this.currentMessage = replies.messageId;     
+        if (replies != null) {
+            this.currentMessage = replies.messageId;
         }
         var items = Datacenter.getNpcItems(this.npcId);
 
-        if(items.length > 0){
-            for(var i in items){
+        if (items.length > 0) {
+            for (var i in items) {
                 this.items.push(items[i]);
             }
         }
 
     }
 
-    getReplies(messageId){
-        return Datacenter.getNpcReplies(messageId);       
+    getReplies(messageId) {
+        return Datacenter.getNpcReplies(messageId);
     }
 
     open(character, action) {
@@ -68,14 +68,31 @@ export default class NpcSpawn {
         return false;
     }
 
-    existReplies(){
-        for(var i in this.actions){
-            if(this.actions[i].action == 3){
+    getAction(action) {
+        for (var i in this.actions) {
+            if (this.actions[i].action == action) {
                 return this.actions[i];
             }
         }
         return null;
     }
+    getItem(id) {
+        for (var i in this.items) {
+            if (this.items[i].itemId == id) {
+                return this.items[i];
+            }
+        }
+        return null;
+    }
+    existReplies() {
+        for (var i in this.actions) {
+            if (this.actions[i].action == 3) {
+                return this.actions[i];
+            }
+        }
+        return null;
+    }
+
 
 
 }

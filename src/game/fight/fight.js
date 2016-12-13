@@ -9,6 +9,7 @@ import MapPoint from "../../game/pathfinding/map_point"
 import Pathfinding from "../../game/pathfinding/pathfinding"
 import SpellManager from "../spell/spell_manager"
 import FightSpellProcessor from "./fight_spell_processor"
+import * as Shapes from "./fight_shape_processor"
 
 export default class Fight {
 
@@ -70,6 +71,7 @@ export default class Fight {
         for(var fighter of this.allFighters()) {
             this.map.removeClient(fighter.character.client);
             fighter.createContext();
+            fighter.getStats().sendStats();
             fighter.send(new Messages.GameFightStartingMessage(this.fightType, this.teams.blue.leader.id, this.teams.red.leader.id));
             this.sendStartupPhase(fighter)
         }
@@ -135,6 +137,17 @@ export default class Fight {
     getFighterOnCell(cellId) {
         for(var fighter of this.allFighters()) {
             if(fighter.cellId == cellId) return fighter;
+        }
+        return null;
+    }
+
+    getFighterById(id)
+    {
+        var fighters = this.allFighters();
+        for (var fighter of fighters)
+        {
+            if (fighter.id == id)
+                return fighter;
         }
         return null;
     }
@@ -353,6 +366,31 @@ export default class Fight {
         }
     }
 
+    checkRange(fighter, spellLevel, cellId)
+    {
+        var range = spellLevel.range;
+        if (spellLevel.rangeCanBeBoosted)
+            range += fighter.getStats().getTotalStats(19);
+        if (spellLevel.castInLine == false)
+        {
+            var lozenge = new Shapes.Lozenge(range, spellLevel.minRange);
+            var cells = lozenge.getCells(fighter.cellId);
+            if (cells.indexOf(cellId) != -1)
+                return true;
+        }
+        else {
+            var point = MapPoint.fromCellId(fighter.cellId);
+            var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
+            var line = new Shapes.Line(range);
+            line._nDirection = directionId;
+            line._minRadius = spellLevel.minRange;
+            var cells = line.getCells(fighter.cellId);
+            if (cells.indexOf(cellId) != -1)
+                return true;
+        }
+        return false;
+    }
+
     requestCastSpell(fighter, spellId, cellId) {
         //TODO: Check cellId validity
         var spell = fighter.character.statsManager.getSpell(spellId);
@@ -364,19 +402,31 @@ export default class Fight {
         }
     }
 
+    castSpellError(fighter, spellId, message)
+    {
+        fighter.character.client.send(new Messages.GameActionFightNoSpellCastMessage(spellId));
+        if (message)
+            fighter.character.replyLangsMessage(message.id, message.messageId, message.params);
+    }
+
     castSpell(fighter, spell, spellLevel, cellId) {
         if(fighter.current.AP >= spellLevel.apCost && fighter.isMyTurn()) {
-            fighter.current.AP -= spellLevel.apCost;
-            fighter.sequenceCount = 1;
-            this.send(new Messages.SequenceStartMessage(1, fighter.id));
-            this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
-            fighter.sequenceCount++;
-            this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
-            fighter.sequenceCount++;
+            if (this.checkRange(fighter, spellLevel, cellId)) {
+                fighter.current.AP -= spellLevel.apCost;
+                fighter.sequenceCount = 1;
+                this.send(new Messages.SequenceStartMessage(1, fighter.id));
+                this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
+                fighter.sequenceCount++;
+                this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
+                fighter.sequenceCount++;
 
-            var effects = spellLevel.effects;
-            FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
-            this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
+                var effects = spellLevel.effects;
+                FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
+                this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
+            }
+            else {
+                this.castSpellError(fighter, spellLevel._id, {id: 1, messageId: 175, params: []});
+            }
         }
     }
 }

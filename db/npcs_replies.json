@@ -18,10 +18,10 @@
 }
 { 
     "_id" : NumberInt(3), 
-    "type" : "dialog", 
+    "type" : "teleport", 
     "replyId" : NumberInt(5202), 
     "messageId" : NumberInt(274), 
     "condition" : null, 
-    "param1" : null, 
-    "param2" : null
+    "param1" : "88084756", 
+    "param2" : "298"
 }

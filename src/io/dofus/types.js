@@ -1023,6 +1023,7 @@ export class ObjectItemMinimalInformation extends Item {
         buffer.writeShort(this.effects.length);
         var _loc2_ = 0;
         while (_loc2_ < this.effects.length) {
+            buffer.writeShort(this.effects[_loc2_].protocolId);
             this.effects[_loc2_].serialize(buffer);
             _loc2_++;
         }
