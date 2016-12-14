@@ -8,6 +8,7 @@ import MapPoint from "../pathfinding/map_point"
 import RemoveAPBuff from "../../game/spell/buffs/remove_ap_buff"
 import RemoveMPBuff from "../../game/spell/buffs/remove_mp_buff"
 import Basic from "../../utils/basic"
+import AddStateBuff from "../spell/buffs/add_state_buff"
 
 export default class Fighter {
 
@@ -129,6 +130,11 @@ export default class Fighter {
     }
 
     beginTurn() {
+        //TODO
+    }
+
+    checkBuffs() {
+        this.fight.send(new Messages.SequenceStartMessage(0, this.id));
         var newBuffs = [];
         for(var buff of this.buffs) {
             buff.continueLifetime();
@@ -136,7 +142,7 @@ export default class Fighter {
                 newBuffs.push(buff);
             }
         }
-
+        this.fight.send(new Messages.SequenceEndMessage(1, this.id, 0));
         this.buffs = newBuffs;
     }
 
@@ -144,6 +150,27 @@ export default class Fighter {
         Logger.debug("Add buff id: " + buff.effectId + " on fighter id: " + this.id);
         this.buffs.push(buff);
         buff.tryApply();
+        if(buff instanceof AddStateBuff) {
+            Logger.debug("The buff is a state buff (id: " + buff.delta + "), so the fighter has now " + this.getStates().length + " state(s)");
+        }
+    }
+
+    getStates() {
+        var states = [];
+        for(var buff of this.buffs) {
+            if(buff instanceof AddStateBuff) {
+                states.push(buff);
+            }
+        }
+        return states;
+    }
+
+    hasState(stateId) {
+        var states = this.getStates();
+        for(var buff of states) {
+            if(buff.delta == stateId) return true;
+        }
+        return false;
     }
 
     takeDamage(from, damages, elementType) {

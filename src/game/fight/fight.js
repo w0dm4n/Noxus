@@ -10,6 +10,7 @@ import Pathfinding from "../../game/pathfinding/pathfinding"
 import SpellManager from "../spell/spell_manager"
 import FightSpellProcessor from "./fight_spell_processor"
 import * as Shapes from "./fight_shape_processor"
+import Dofus1Line from "../map_tools/dofus_1_line"
 
 export default class Fight {
 
@@ -64,6 +65,13 @@ export default class Fight {
        data = data.concat(this.teams.blue.members);
        data = data.concat(this.teams.red.members);
        return data;
+    }
+
+    allAliveFighters() {
+        var data = [];
+        data = data.concat(this.teams.blue.getAliveMembers());
+        data = data.concat(this.teams.red.getAliveMembers());
+        return data;
     }
 
     initialize() {
@@ -366,29 +374,113 @@ export default class Fight {
         }
     }
 
+    getCellById(cells, cellId)
+    {
+        for (var cell of cells)
+        {
+            if (cell.id == cellId)
+                return cell;
+        }
+    }
+
+    getAllFightersCell()
+    {
+        var cells = [];
+        var fighters = this.allAliveFighters();
+        for (var fighter of fighters)
+            cells.push(fighter.cellId);
+        return cells;
+    }
+
+    fighterOnTheLine(cells, cellId, currentFighterCell)
+    {
+        for (var cell of cells)
+        {
+            if (cell != currentFighterCell) {
+                if (cell == cellId)
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    checkLos(fighter, cellId)
+    {
+        var from = MapPoint.fromCellId(fighter.cellId);
+        var to = MapPoint.fromCellId(cellId);
+        var line = Dofus1Line.getLine(from.x, from.y, 0, to.x, to.y, 0);
+        var fightersCells = this.getAllFightersCell();
+
+        for (var point of line)
+        {
+            var cell = MapPoint.fromCoords(point.x, point.y);
+            if (cell)
+            {
+                var cellData = this.getCellById(this.map.cells, cell._nCellId);
+                if (cellData)
+                {
+                    if (this.fighterOnTheLine(fightersCells, cellData.id, cellId))
+                        return false;
+                    if (!cellData._los)
+                        return false;
+                    if (cellData.id == cellId)
+                        break;
+                }
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+        return true;
+    }
+
     checkRange(fighter, spellLevel, cellId)
     {
+        var result = false;
         var range = spellLevel.range;
         if (spellLevel.rangeCanBeBoosted)
             range += fighter.getStats().getTotalStats(19);
+        if (range < 1)
+            range = 1;
         if (spellLevel.castInLine == false)
         {
             var lozenge = new Shapes.Lozenge(range, spellLevel.minRange);
             var cells = lozenge.getCells(fighter.cellId);
             if (cells.indexOf(cellId) != -1)
-                return true;
+                result = true;
         }
         else {
-            var point = MapPoint.fromCellId(fighter.cellId);
-            var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
-            var line = new Shapes.Line(range);
-            line._nDirection = directionId;
-            line._minRadius = spellLevel.minRange;
+            var line = new Shapes.Cross(spellLevel.minRange, range);
+            line._diagonal = false;
             var cells = line.getCells(fighter.cellId);
             if (cells.indexOf(cellId) != -1)
-                return true;
+                 result = true;
         }
-        return false;
+        if (spellLevel.castTestLos) {
+            if (!this.checkLos(fighter, cellId, range)) {
+                this.castSpellError(fighter, spellLevel._id, {id: 1, messageId: 174, params: []});
+                return false;
+            }
+        }
+        if (result == false) {
+            if (fighter.cellId == cellId)
+            {
+                this.castSpellError(fighter, spellLevel._id, {
+                    id: 0,
+                    messageId: 0,
+                    params: ["Impossible de lancer ce sort : vous ne pouvez pas le lancer sur vous-même."]
+                });
+            }
+            else {
+                this.castSpellError(fighter, spellLevel._id, {
+                    id: 0,
+                    messageId: 0,
+                    params: ["Impossible de lancer ce sort : vous n'avez pas la portée."]
+                });
+            }
+        }
+        return result;
     }
 
     requestCastSpell(fighter, spellId, cellId) {
@@ -405,27 +497,47 @@ export default class Fight {
     castSpellError(fighter, spellId, message)
     {
         fighter.character.client.send(new Messages.GameActionFightNoSpellCastMessage(spellId));
-        if (message)
-            fighter.character.replyLangsMessage(message.id, message.messageId, message.params);
+        if (message) {
+            if (message.messageId != 0)
+                fighter.character.replyLangsMessage(message.id, message.messageId, message.params);
+            else
+                fighter.character.replyImportant(message.params[0]);
+        }
+    }
+
+    checkFighterStates(fighter, spell, spellLevel) {
+        for(var stateForbidden of spellLevel.statesForbidden) {
+            if(fighter.hasState(stateForbidden)) {
+                return false;
+            }
+        }
+        for(var stateRequired of spellLevel.statesRequired) {
+            if(!fighter.hasState(stateRequired)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     castSpell(fighter, spell, spellLevel, cellId) {
         if(fighter.current.AP >= spellLevel.apCost && fighter.isMyTurn()) {
             if (this.checkRange(fighter, spellLevel, cellId)) {
-                fighter.current.AP -= spellLevel.apCost;
-                fighter.sequenceCount = 1;
-                this.send(new Messages.SequenceStartMessage(1, fighter.id));
-                this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
-                fighter.sequenceCount++;
-                this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
-                fighter.sequenceCount++;
+                if(this.checkFighterStates(fighter, spell, spellLevel)) {
+                    fighter.current.AP -= spellLevel.apCost;
+                    fighter.sequenceCount = 1;
+                    this.send(new Messages.SequenceStartMessage(1, fighter.id));
+                    this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
+                    fighter.sequenceCount++;
+                    this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
+                    fighter.sequenceCount++;
 
-                var effects = spellLevel.effects;
-                FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
-                this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
-            }
-            else {
-                this.castSpellError(fighter, spellLevel._id, {id: 1, messageId: 175, params: []});
+                    var effects = spellLevel.effects;
+                    FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
+                    this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
+                }
+                else {
+                    this.castSpellError(fighter, spellLevel._id, {id: 1, messageId: 116, params: []});
+                }
             }
         }
     }

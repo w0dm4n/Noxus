@@ -2925,3 +2925,19 @@ export class FightTemporaryBoostEffect extends AbstractFightDispellableEffect {
         this.delta = buffer.readShort();
     }
 }
+
+export class FightTemporaryBoostStateEffect extends FightTemporaryBoostEffect {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, stateId) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8);
+        this.stateId = stateId;
+        this.protocolId = 214;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeShort(this.stateId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.stateId = buffer.readShort();
+    }
+}

@@ -102,6 +102,7 @@ export default class FightTimeline {
             if(this.currentFighter().alive) {
                 this.fight.send(new Messages.GameFightTurnEndMessage(this.currentFighter().id));
                 this.currentFighter().resetPoints();
+                this.currentFighter().checkBuffs();
                 this.currentFighter().refreshStats();
             }
         }

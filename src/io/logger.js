@@ -3,6 +3,8 @@ import Common from "../Common"
 
 export default class Logger {
 
+    static level = 1;
+
     static drawAscii() {
         var v = "ALPHA VERSION v" + Common.NOXUS_VERSION.major + "." + Common.NOXUS_VERSION.minor;
         console.log("    _   _                     ".cyan);
@@ -32,7 +34,7 @@ export default class Logger {
     }
 
     static network(message) {
-        Logger.log("cyan", "NETWORK", message);
+        if(Logger.level == 0) Logger.log("cyan", "NETWORK", message);
     }
 
     static warning(message) {

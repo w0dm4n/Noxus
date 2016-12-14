@@ -9,11 +9,11 @@ export default class FightSpellProcessor {
     static fightEffectsProcessor = null;
 
     static getEffects(effectId) {
-        if(!FightSpellProcessor.fightEffectsProcessor) {
+        if (!FightSpellProcessor.fightEffectsProcessor) {
             FightSpellProcessor.fightEffectsProcessor = [];
 
             var normalizedPath = require("path").join(__dirname, "../spell/effects");
-            require("fs").readdirSync(normalizedPath).forEach(function(file) {
+            require("fs").readdirSync(normalizedPath).forEach(function (file) {
                 var effect = require("../spell/effects/" + file);
                 FightSpellProcessor.fightEffectsProcessor[effect.effectId] = effect;
             });
@@ -22,11 +22,33 @@ export default class FightSpellProcessor {
     }
 
     static process(fight, caster, spell, spellLevel, effects, cellId) {
-        for(var e of effects) {
+
+        var randomEffects = [];
+        var nEffects = [];
+        for (var z in effects) {
+            if (effects[z].random > 0) {
+                randomEffects.push(effects[z]);
+            }else{
+              nEffects.push(effects[z]);
+            }
+        }
+        if (randomEffects.length > 0) {
+            var round = [];
+            var sum = 0 , i = 0;
+            for (var r in randomEffects) {
+                sum += (randomEffects[r].random / 100.0);
+                round[r] = sum;
+            }
+            var rand = Math.random();
+            var i;
+            for (i=0 ; i<round.length && rand>=round[i] ; i++);
+            nEffects.push(randomEffects[i]);
+        }
+        for (var e of nEffects) {
             var targets = this.getTargets(fight, caster, spell, spellLevel, e, cellId);
             var effectProcessor = this.getEffects(e.effectId);
-            console.log(e);
-            if(effectProcessor) {
+            if (effectProcessor) {
+                console.log(e);
                 Logger.debug("Process effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id);
                 effectProcessor.process({
                     fight: fight,
@@ -49,10 +71,10 @@ export default class FightSpellProcessor {
         var point = MapPoint.fromCellId(caster.cellId);
         var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
         var shape = FightShapeProcessor.buildShape(effect.rawZone[0], effect.rawZone[1], cellId, directionId);
-        if(shape) {
-            for(var cell of shape) {
+        if (shape) {
+            for (var cell of shape) {
                 var fighterOnCell = fight.getFighterOnCell(cell);
-                if(fighterOnCell) targets.push(fighterOnCell);
+                if (fighterOnCell) targets.push(fighterOnCell);
             }
         }
         var filteredTargets = this.filterTargets(targets, caster, spell, spellLevel, effect, cellId);
@@ -64,11 +86,11 @@ export default class FightSpellProcessor {
     static filterTargets(targets, caster, spell, spellLevel, effect, cellId) {
         var masks = effect.targetMask.split(',');
         var filtered = [];
-        for(var m of masks) {
+        for (var m of masks) {
             switch (m) {
                 case 'a': // All allies
-                    for(var t of targets) {
-                        if(caster.team.isInThisTeam(t.id)) {
+                    for (var t of targets) {
+                        if (caster.team.isInThisTeam(t.id)) {
                             filtered.push(t);
                         }
                     }
@@ -76,16 +98,16 @@ export default class FightSpellProcessor {
 
                 case 'L':
                 case 'A': // Ennemies
-                    for(var t of targets) {
-                        if(!caster.team.isInThisTeam(t.id)) {
+                    for (var t of targets) {
+                        if (!caster.team.isInThisTeam(t.id)) {
                             filtered.push(t);
                         }
                     }
                     break;
 
                 case 'g': // Allies
-                    for(var t of targets) {
-                        if(caster.team.isInThisTeam(t.id) && t.id != caster.id) {
+                    for (var t of targets) {
+                        if (caster.team.isInThisTeam(t.id) && t.id != caster.id) {
                             filtered.push(t);
                         }
                     }

@@ -50,6 +50,7 @@ export default class Buff {
 
     continueLifetime() {
         this.lifetime++;
+        var result = true;
         if(!this.applied) {
             this.tryApply();
         }
@@ -59,8 +60,10 @@ export default class Buff {
                 this.expired = true;
                 this.unapply();
                 this.hide();
+                result = false;
             }
         }
+        return result;
     }
 
     unapply() {

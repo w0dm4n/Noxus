@@ -5,6 +5,7 @@ import * as Types from "../../io/dofus/types"
 import DataMapProvider from "../../game/pathfinding/data_map_provider"
 import ConfigManager from "../../utils/configmanager.js"
 import InteractiveHandler from "../../handlers/interactive_handler"
+import Fight from "../../game/fight/fight"
 
 var zlib = require('zlib');
 
@@ -74,9 +75,6 @@ export default class Map {
         } else {
             client.character.dispose();
         }
-
-
-
     }
 
     removeClient(client) {
@@ -124,6 +122,12 @@ export default class Map {
             }
         }
         client.send(new Messages.MapComplementaryInformationsDataMessage(this.subareaId, this._id, [], this.getMapActors(), result, [], [], [], false));
+
+        for(var fight of this.fights) {
+            if(fight.fightState == Fight.FIGHT_STATES.STARTING) {
+                client.send(new Messages.GameRolePlayShowChallengeMessage(fight.getFightCommonInformations()));
+            }
+        }
     }
 
     send(packet) {
@@ -140,6 +144,7 @@ export default class Map {
         }
         return null;
     }
+
     getZaapi() {
         for (var i in Datacenter.interactivesObjects) {
 
@@ -148,7 +153,6 @@ export default class Map {
         }
         return null;
     }
-
 
     sendExcept(packet, client) {
         for (var i in this.clients) {

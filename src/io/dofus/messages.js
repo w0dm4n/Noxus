@@ -4614,3 +4614,47 @@ export class GameActionFightNoSpellCastMessage extends ProtocolMessage {
         }
     }
 }
+
+export class GameActionFightDispellMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.messageId = 5533;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightDispellMessage.targetId.");
+        }
+    }
+}
+
+export class GameActionFightDispellSpellMessage extends GameActionFightDispellMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2, param3);
+        this.spellId = param4;
+        this.messageId = 6176;
+    }
+    serialize() {
+        super.serialize();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element spellId.");
+        }
+        this.buffer.writeVarShort(this.spellId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.spellId = buffer.readVarUhShort();
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element of GameActionFightDispellSpellMessage.spellId.");
+        }
+    }
+}
