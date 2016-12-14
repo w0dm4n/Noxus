@@ -12,6 +12,7 @@ export default class Buff {
         this.fighter = fighter;
         this.effectId = effect.effectId;
         this.duration = effect.duration;
+        this.preshowed = false;
         this.delay = effect.delay;
         this.lifetime = 0;
         this.applied = false;
@@ -21,15 +22,30 @@ export default class Buff {
 
     tryApply() {
         Logger.debug("Trying to apply the buff");
-        if(this.lifetime <= this.delay) {
+        if(this.lifetime >= this.delay) {
             this.applied = true;
             this.apply();
             this.show();
+            Logger.debug("Buff id: " + this.effectId + " applied");
         }
+        else {
+            if(!this.preshowed) {
+                this.preshow();
+                this.preshowed = true;
+            }
+        }
+    }
+
+    preshow() {
+        //To implement
     }
 
     apply() {
         Logger.debug("The apply for the buff id: " + this.buffId + " is not implemented");
+    }
+
+    beginTurn() {
+        //To implement
     }
 
     show() {
@@ -50,20 +66,21 @@ export default class Buff {
 
     continueLifetime() {
         this.lifetime++;
-        var result = true;
         if(!this.applied) {
             this.tryApply();
         }
         else {
-            if(this.isExpired()) {
-                Logger.debug("Buff lifetime expired");
-                this.expired = true;
-                this.unapply();
-                this.hide();
-                result = false;
-            }
+            this.beginTurn();
         }
-        return result;
+    }
+
+    checkExpires() {
+        if(this.isExpired()) {
+            Logger.debug("Buff lifetime expired");
+            this.expired = true;
+            this.unapply();
+            this.hide();
+        }
     }
 
     unapply() {

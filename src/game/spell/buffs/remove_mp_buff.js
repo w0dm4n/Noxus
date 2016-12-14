@@ -20,11 +20,11 @@ export default class RemoveMPBuff extends Buff {
     }
 
     show() {
-        this.fighter.fight.send(new Messages.GameActionFightDispellableEffectMessage(this.effectId, this.caster.id, this.getAbstractFightDispellableEffect()));
+        this.fighter.fight.send(new Messages.GameActionFightDispellableEffectMessage(127, this.caster.id, this.getAbstractFightDispellableEffect()));
     }
 
     getAbstractFightDispellableEffect() {
-        return new Types.FightTemporaryBoostEffect(this.id, this.fighter.id, this.duration, 1, this.spell.spellId, this.effectId, 16, this.delta);
+        return new Types.FightTemporaryBoostEffect(this.id, this.fighter.id, this.duration, 1, this.spell.spellId, 127, 16, this.delta);
     }
 
 }

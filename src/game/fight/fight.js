@@ -131,7 +131,6 @@ export default class Fight {
             team = this.teams.blue;
         }
         fighter.team = team;
-        this.send(new Messages.GameFightShowFighterMessage(fighter.getGameFightFighterInformations()));
         team.addMember(fighter);
 
         this.map.removeClient(fighter.character.client);
@@ -139,7 +138,9 @@ export default class Fight {
         fighter.send(new Messages.GameFightStartingMessage(this.fightType, this.teams.blue.leader.id, this.teams.red.leader.id));
         this.sendStartupPhase(fighter)
         this.showFighters(fighter);
+        this.send(new Messages.GameFightShowFighterMessage(fighter.getGameFightFighterInformations()));
         this.refreshBaseFighters();
+        this.synchronizeFight();
     }
 
     getFighterOnCell(cellId) {
@@ -519,19 +520,36 @@ export default class Fight {
         return true;
     }
 
+    isCritical(criticalProbability)
+    {
+        var rand = Basic.getRandomInt(0, 100);
+        if (criticalProbability > 100)
+            criticalProbability = 100;
+        else if (criticalProbability < 0)
+            criticalProbability = 0;
+
+        return ((criticalProbability >= rand) ? true : false);
+    }
+
     castSpell(fighter, spell, spellLevel, cellId) {
         if(fighter.current.AP >= spellLevel.apCost && fighter.isMyTurn()) {
             if (this.checkRange(fighter, spellLevel, cellId)) {
                 if(this.checkFighterStates(fighter, spell, spellLevel)) {
+                    var effects = spellLevel.effects;
+                    var criticalResult = 1;
+                    if (spellLevel.criticalHitProbability > 0) {
+                        if (this.isCritical((spellLevel.criticalHitProbability + fighter.getStats().getTotalStats(21)))) {
+                            effects = spellLevel.criticalEffect;
+                            criticalResult = 2;
+                        }
+                    }
                     fighter.current.AP -= spellLevel.apCost;
                     fighter.sequenceCount = 1;
                     this.send(new Messages.SequenceStartMessage(1, fighter.id));
-                    this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, 1, false, true, spell.spellId, spell.spellLevel, []));
+                    this.send(new Messages.GameActionFightSpellCastMessage(300, fighter.id, 0, cellId, criticalResult, false, true, spell.spellId, spell.spellLevel, []));
                     fighter.sequenceCount++;
                     this.send(new Messages.GameActionFightPointsVariationMessage(102, fighter.id, fighter.id, -(spellLevel.apCost)));
                     fighter.sequenceCount++;
-
-                    var effects = spellLevel.effects;
                     FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
                     this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
                 }

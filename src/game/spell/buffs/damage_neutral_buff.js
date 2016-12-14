@@ -1,22 +1,26 @@
 import Buff from "../buff"
 import * as Messages from "../../../io/dofus/messages"
 import * as Types from "../../../io/dofus/types"
+import Basic from "../../../utils/basic"
 
-export default class AddPowerBuff extends Buff {
+export default class RemoveAPBuff extends Buff {
 
-    static displayId = 125;
+    static displayId = 133;
 
-    constructor(delta, spell, spellLevel, effect, caster, fighter) {
+    constructor(data, spell, spellLevel, effect, caster, fighter) {
         super(effect, spell, spellLevel, caster, fighter);
-        this.delta = delta;
+        this.data = data;
+    }
+
+    beginTurn()
+    {
+        this.fighter.takeDamage(this.data.caster, this.fighter.getDamage(this.data, 10), 10);
     }
 
     apply() {
-        this.fighter.fightStatsBonus[18] += this.delta;
     }
 
     unapply() {
-        this.fighter.fightStatsBonus[18] -= this.delta;
         this.fighter.refreshStats();
         this.fighter.checkIfIsDead();
     }
@@ -26,6 +30,7 @@ export default class AddPowerBuff extends Buff {
     }
 
     getAbstractFightDispellableEffect() {
-        return new Types.FightTemporaryBoostEffect(this.id, this.fighter.id, this.duration, 1, this.spell.spellId, this.effectId, 16, this.delta);
+        return new Types.FightTemporaryBoostEffect(this.id, this.fighter.id, this.duration, 1, this.spell.spellId, this.effectId, 16, this.data.effect.diceNum);
     }
+
 }

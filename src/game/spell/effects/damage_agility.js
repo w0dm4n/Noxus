@@ -8,10 +8,7 @@ export default class DamageAgility {
     static process(data) {
         for(var t of data.targets) {
             data.caster.sequenceCount++;
-            var roll = Basic.getRandomInt(data.effect.diceNum, data.effect.diceSide);
-            var power = data.caster.getStats().getTotalStats(DamageAgility.elementType);
-            var damages = (Math.floor((roll * (100 + power + data.caster.getStats().getTotalStats(17)) / 100)) + data.caster.getStats().getTotalStats(18));
-            t.takeDamage(data.caster, damages, DamageAgility.elementType);
+            t.takeDamage(data.caster, t.getDamage(data, DamageAgility.elementType), DamageAgility.elementType);
         }
     }
 }

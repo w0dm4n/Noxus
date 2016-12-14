@@ -28,10 +28,12 @@ export default class Fighter {
             life: this.character.life,
             shieldPoint: 0,
             AP: this.character.statsManager.getTotalStats(1),
-            MP: this.character.statsManager.getTotalStats(2)
+            MP: this.character.statsManager.getTotalStats(2),
+            erosion: 0,
         }
         this.generateFighterStatsBonus();
         this.buffs = [];
+        this.spellDamagesBoosts = {};
     }
 
     generateFighterStatsBonus() {
@@ -48,6 +50,8 @@ export default class Fighter {
         this.fightStatsBonus[17] = 0;
         this.fightStatsBonus[18] = 0;
         this.fightStatsBonus[19] = 0;
+        this.fightStatsBonus[20] = 0;
+        this.fightStatsBonus[21] = 0;
     }
 
     get id() {
@@ -133,17 +137,25 @@ export default class Fighter {
         //TODO
     }
 
-    checkBuffs() {
+    endTurn() {
         this.fight.send(new Messages.SequenceStartMessage(0, this.id));
         var newBuffs = [];
         for(var buff of this.buffs) {
-            buff.continueLifetime();
+            buff.checkExpires();
             if(!buff.expired) {
                 newBuffs.push(buff);
             }
         }
         this.fight.send(new Messages.SequenceEndMessage(1, this.id, 0));
         this.buffs = newBuffs;
+    }
+
+    checkBuffs() {
+        this.fight.send(new Messages.SequenceStartMessage(0, this.id));
+        for(var buff of this.buffs) {
+            buff.continueLifetime();
+        }
+        this.fight.send(new Messages.SequenceEndMessage(1, this.id, 0));
     }
 
     addBuff(buff) {
@@ -173,6 +185,22 @@ export default class Fighter {
         return false;
     }
 
+    getErodationByDamage(damage) {
+        //TODO: Get erosion by buffs
+        return Basic.getPercentage(10, damage);
+    }
+
+    getDamage(data, elementType, isWeapon = false)
+    {
+        var power = data.caster.getStats().getTotalStats(elementType);
+        var roll = Basic.getRandomInt(data.effect.diceNum, data.effect.diceSide);
+        var spellPowerBoost = data.caster.spellDamagesBoosts[data.spell.spellId] ? data.caster.spellDamagesBoosts[data.spell.spellId] : 0;
+        if (!isWeapon)
+            power += data.caster.getStats().getTotalStats(20);
+        var dmg = (Math.floor(((roll + spellPowerBoost) * (100 + power + data.caster.getStats().getTotalStats(17)) / 100)) + data.caster.getStats().getTotalStats(18));
+        return dmg < 0 ? data.effect.diceNum : dmg;
+    }
+
     takeDamage(from, damages, elementType) {
         //TODO: Apply damage reduction and invu
         //TODO: Check shield point because the packet is not the same
@@ -182,7 +210,10 @@ export default class Fighter {
                 damages = this.current.life;
             }
             this.current.life -= damages;
-            this.fight.send(new Messages.GameActionFightLifePointsLostMessage(0, from.id, this.id, damages, 0));
+            var erodedLife = this.getErodationByDamage(damages);
+            this.current.erosion += erodedLife;
+            Logger.debug("Fighter taking damages amount: " + damages + " and get erosion amount: " + erodedLife);
+            this.fight.send(new Messages.GameActionFightLifePointsLostMessage(0, from.id, this.id, damages, erodedLife));
             this.checkIfIsDead();
             return damages;
         }
@@ -215,11 +246,11 @@ export default class Fighter {
 
     looseAP(data, apPoints)
     {
+        var totalAPLost = 0;
         if (this.alive)
         {
             var baseLostAp = apPoints;
             if (apPoints > 0) {
-                var totalAPLost = 0;
                 var calc = 0;
                 var rand = 0;
                 var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
@@ -251,14 +282,14 @@ export default class Fighter {
                 }
             }
         }
-
+        return totalAPLost;
     }
 
     looseMP(data, mpPoints)
     {
+        var totalMPLost = 0;
         if (this.alive) {
             var baseLostMP = mpPoints;
-            var totalMPLost = 0;
             var calc = 0;
             var rand = 0;
             var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
@@ -289,6 +320,7 @@ export default class Fighter {
                 this.fight.send(new Messages.GameActionFightDodgePointLossMessage(309, data.caster.id, this.id, (baseLostMP - totalMPLost)));
             }
         }
+        return totalMPLost;
     }
 
     checkIfIsDead() {

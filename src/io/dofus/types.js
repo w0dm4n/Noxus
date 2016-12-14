@@ -2941,3 +2941,50 @@ export class FightTemporaryBoostStateEffect extends FightTemporaryBoostEffect {
         this.stateId = buffer.readShort();
     }
 }
+
+export class FightTemporarySpellBoostEffect extends FightTemporaryBoostEffect {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, boostedSpellId) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8);
+        this.boostedSpellId = boostedSpellId;
+        this.protocolId = 207;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.boostedSpellId < 0) {
+            Logger.error("Forbidden value (" + this.boostedSpellId + ") on element boostedSpellId.");
+        }
+        buffer.writeVarShort(this.boostedSpellId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.boostedSpellId = buffer.readVarUhShort();
+        if (this.boostedSpellId < 0) {
+            Logger.error("Forbidden value (" + this.boostedSpellId + ") on element of FightTemporarySpellBoostEffect.boostedSpellId.");
+        }
+    }
+}
+
+export class FightTriggeredEffect extends AbstractFightDispellableEffect {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, delay) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+        this.param8 = param8;
+        this.param9 = param9;
+        this.param10 = param10;
+        this.delay = delay;
+        this.protocolId = 210;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeInt(this.param8);
+        buffer.writeInt(this.param9);
+        buffer.writeInt(this.param10);
+        buffer.writeShort(this.delay);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.buffer = buffer.readInt();
+        this.param2 = buffer.readInt();
+        this.param3 = buffer.readInt();
+        this.delay = buffer.readShort();
+    }
+}

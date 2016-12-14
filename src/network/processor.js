@@ -120,6 +120,7 @@ export default class Processor {
         }
         else {
             Logger.error("Handler not found for messageId: " + messageId);
+            client.send(new Messages.BasicNoOperationMessage());
         }
     }
 

@@ -35,7 +35,15 @@ export default class StatsManager {
     }
 
     getMaxLife() {
-        return this.getBaseLife() + this.getTotalStats(11);
+        var erosion = 0;
+        if(this.character) {
+            if(this.character.isInFight()) {
+                if(this.character.fighter.current) {
+                    erosion = this.character.fighter.current.erosion;
+                }
+            }
+        }
+        return this.getBaseLife() + this.getTotalStats(11) - erosion;
     }
 
     saveRaw() {
@@ -86,6 +94,8 @@ export default class StatsManager {
         this.stats[17] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(138), 0, 0, fightBuff.getBuffBonus(17)); // Puissance
         this.stats[18] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(112), 0, 0, fightBuff.getBuffBonus(18)); // Fix damage
         this.stats[19] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(117), 0, 0, fightBuff.getBuffBonus(19)); // PO
+        this.stats[20] = new Types.CharacterBaseCharacteristic(0, 0, 0, 0, fightBuff.getBuffBonus(20)); // Puissance sort
+        this.stats[21] = new Types.CharacterBaseCharacteristic(0, this.getItemTotalStat(115), 0, 0, fightBuff.getBuffBonus(21)); // Critique percentage
     }
 
     checkIfSet(sets, setId)
@@ -199,7 +209,7 @@ export default class StatsManager {
             this.getStatById(19),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
-            new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
+            this.getStatById(21),
             0,
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),
             new Types.CharacterBaseCharacteristic(0, 0, 0, 0, 0),

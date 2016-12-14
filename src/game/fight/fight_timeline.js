@@ -102,8 +102,8 @@ export default class FightTimeline {
             if(this.currentFighter().alive) {
                 this.fight.send(new Messages.GameFightTurnEndMessage(this.currentFighter().id));
                 this.currentFighter().resetPoints();
-                this.currentFighter().checkBuffs();
                 this.currentFighter().refreshStats();
+                this.currentFighter().endTurn();
             }
         }
 
@@ -114,6 +114,7 @@ export default class FightTimeline {
 
         if(this.currentFighter().alive) {
             this.currentFighter().beginTurn();
+            this.currentFighter().checkBuffs();
             this.fight.send(new Messages.GameFightTurnReadyRequestMessage(this.currentFighter().id));
             this.fight.send(new Messages.GameFightTurnStartMessage(this.currentFighter().id, FightTimeline.TURN_BASE_TIME * 10));
             this.currentFighter().getStats().sendFightStats();

@@ -21,6 +21,11 @@ export default class FightSpellProcessor {
         return FightSpellProcessor.fightEffectsProcessor[effectId];
     }
 
+    static getValidatorMark()
+    {
+
+    }
+
     static process(fight, caster, spell, spellLevel, effects, cellId) {
 
         var randomEffects = [];
@@ -44,29 +49,34 @@ export default class FightSpellProcessor {
             for (i=0 ; i<round.length && rand>=round[i] ; i++);
             nEffects.push(randomEffects[i]);
         }
+        var effectsToApply = [];
         for (var e of nEffects) {
-            var targets = this.getTargets(fight, caster, spell, spellLevel, e, cellId);
+            var targets = this.getTargets(fight, caster, spell, spellLevel, e, cellId, effectsToApply);
             var effectProcessor = this.getEffects(e.effectId);
             if (effectProcessor) {
-                console.log(e);
                 Logger.debug("Process effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id);
-                effectProcessor.process({
-                    fight: fight,
-                    caster: caster,
-                    spell: spell,
-                    spellLevel: spellLevel,
-                    effect: e,
-                    cellId: cellId,
-                    targets: targets
-                });
+                effectsToApply.push({effect: e, processor: effectProcessor, targets: targets});
             }
             else {
+                console.log(e);
                 Logger.error("Effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id + " is not handled yet");
             }
         }
+
+        for(var toApply of effectsToApply) {
+            toApply.processor.process({
+                fight: fight,
+                caster: caster,
+                spell: spell,
+                spellLevel: spellLevel,
+                effect: toApply.effect,
+                cellId: cellId,
+                targets: toApply.targets
+            });
+        }
     }
 
-    static getTargets(fight, caster, spell, spellLevel, effect, cellId) {
+    static getTargets(fight, caster, spell, spellLevel, effect, cellId, effectsToApply) {
         var targets = [];
         var point = MapPoint.fromCellId(caster.cellId);
         var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
@@ -77,17 +87,18 @@ export default class FightSpellProcessor {
                 if (fighterOnCell) targets.push(fighterOnCell);
             }
         }
-        var filteredTargets = this.filterTargets(targets, caster, spell, spellLevel, effect, cellId);
+        var filteredTargets = this.filterTargets(targets, caster, spell, spellLevel, effect, cellId, effectsToApply);
         //TODO: Check if this spell can be casted on a friendly, ennemie etc ..
         //TODO: targetMask: 'a,A'
         return filteredTargets;
     }
 
-    static filterTargets(targets, caster, spell, spellLevel, effect, cellId) {
+    static filterTargets(targets, caster, spell, spellLevel, effect, cellId, effectsToApply) {
         var masks = effect.targetMask.split(',');
         var filtered = [];
         for (var m of masks) {
             switch (m) {
+                
                 case 'a': // All allies
                     for (var t of targets) {
                         if (caster.team.isInThisTeam(t.id)) {
@@ -107,17 +118,50 @@ export default class FightSpellProcessor {
 
                 case 'g': // Allies
                     for (var t of targets) {
+                       
                         if (caster.team.isInThisTeam(t.id) && t.id != caster.id) {
                             filtered.push(t);
                         }
                     }
                     break;
 
+    
+
+                case 'C':
                 case 'c': // Self
                     filtered.push(caster);
                     break;
             }
         }
+        // juste pour test
+        var index = effect.targetMask.indexOf("*e");
+        if(index != -1)
+        {
+            if(caster.hasState(parseInt(FightSpellProcessor.getIdState(effect.targetMask,"*e"))) == true)
+            {
+                return [];    
+            }
+        }
+
+       /* var indexE = effect.targetMask.indexOf("*E");
+        if(indexE != -1)
+        {
+            if(!caster.hasState(FightSpellProcessor.getIdState(effect.targetMask,"*E")) == true)
+            {
+                return [];    
+            }
+        }*/
+
         return filtered;
+    }
+
+    static getIdState(str,cara){
+        var mark = str.split(',');
+        for(var i of mark){
+            var index = i.indexOf(cara);
+            if(index != -1){
+                return i.substring(2);
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 import Basic from "../../../utils/basic"
+import DamageNeutralBuff from "../buffs/damage_neutral_buff"
 
 export default class DamageNeutral {
 
@@ -7,11 +8,14 @@ export default class DamageNeutral {
 
     static process(data) {
         for(var t of data.targets) {
-            data.caster.sequenceCount++;
-            var roll = Basic.getRandomInt(data.effect.diceNum, data.effect.diceSide);
-            var power = data.caster.getStats().getTotalStats(DamageNeutral.elementType);
-            var damages = (Math.floor((roll * (100 + power + data.caster.getStats().getTotalStats(17)) / 100)) + data.caster.getStats().getTotalStats(18));
-            t.takeDamage(data.caster, damages, DamageNeutral.elementType);
+            if (data.effect.duration > 0)
+            {
+                t.addBuff(new DamageNeutralBuff(data, data.spell, data.spellLevel, data.effect, data.caster, t));
+            }
+            else {
+                data.caster.sequenceCount++;
+                t.takeDamage(data.caster, t.getDamage(data, DamageNeutral.elementType), DamageNeutral.elementType);
+            }
         }
     }
 }
