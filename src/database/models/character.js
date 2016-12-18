@@ -158,14 +158,16 @@ export default class Character {
         return CharacterManager.getBreed(this.breed);
     }
 
-    getBonesId() {
-        return 1;
-    }
-
     regen(life) {
         this.life += life;
         if (this.statsManager.getMaxLife() < this.life) this.life = this.statsManager.getMaxLife();
         this.client.send(new Messages.UpdateLifePointsMessage(this.life, this.statsManager.getMaxLife()));
+    }
+
+    //// Look Manager ////////////
+
+    getBonesId() {
+        return 1;
     }
 
     getColors() {
@@ -196,22 +198,48 @@ export default class Character {
 
     getSubentities() {
         var subentities = [];
-        if (this.itemBag) {
-            if (this.itemBag.getItemAtPosition(8)) {
-                let look = Basic.parseLook(this.itemBag.getItemAtPosition(8).getTemplate().look);
-                var entity = new Types.SubEntity(1, 0, new Types.EntityLook
-                (parseInt(look[0]), [], [0, 0, 0, 0, 0], [look[3] ? parseInt(look[3]) : 100], []));
-                subentities.push(entity);
+        if (this.itemBag && !this.isRiding()) {
+            if (this.itemBag.getItemAtPosition(8)) { // Familier
+                if(this.itemBag.getItemAtPosition(8).getTemplate().look != null) {
+                    let look = Basic.parseLook(this.itemBag.getItemAtPosition(8).getTemplate().look);
+                    var entity = new Types.SubEntity(1, 0, new Types.EntityLook
+                    (parseInt(look[0]), [], [0, 0, 0, 0, 0], [look[3] ? parseInt(look[3]) : 100], []));
+                    subentities.push(entity);
+                }
             }
+        }
+        else {
+            subentities.push(new Types.SubEntity(2, 0, new Types.EntityLook(2, this.skins,
+                this.getColors(), [this.scale], [])));
         }
         return subentities;
     }
 
+    isRiding() {
+        if (this.itemBag) {
+            if (this.itemBag.getItemAtPosition(8)) { // Familier
+                if(this.itemBag.getItemAtPosition(8).getTemplate().typeId == 121) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     getEntityLook() {
         this.refreshEntityLook();
-        return new Types.EntityLook(this.getBonesId(), this.skins,
-            this.getColors(), [this.scale], this.getSubentities());
+        var characterColors = this.getColors();
+        if(this.isRiding()) {
+            return new Types.EntityLook(this.itemBag.getItemAtPosition(8).getTemplate().appearanceId, [],
+                [characterColors[0], characterColors[1], characterColors[2]], [100], this.getSubentities());
+        }
+        else {
+            return new Types.EntityLook(this.getBonesId(), this.skins,
+                this.getColors(), [this.scale], this.getSubentities());
+        }
     }
+
+    ///////////////////////////
 
     getCharacterBaseInformations() {
         //return new Types.CharacterBaseInformations(this._id, this.name, this.level, this.getEntityLook(), this.breed, this.sex);

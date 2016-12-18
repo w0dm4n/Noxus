@@ -62,7 +62,7 @@ export default class StatsManager {
         var fight = {
             getBuffBonus: function(id) {
                 if(self.character.isInFight()) {
-                    if(self.character.fighter.fightStatsBonus[id]) {
+                    if(self.character.fighter.fightStatsBonus[id] != null) {
                         return self.character.fighter.fightStatsBonus[id];
                     }
                     else {

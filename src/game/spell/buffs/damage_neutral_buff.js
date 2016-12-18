@@ -3,7 +3,7 @@ import * as Messages from "../../../io/dofus/messages"
 import * as Types from "../../../io/dofus/types"
 import Basic from "../../../utils/basic"
 
-export default class RemoveAPBuff extends Buff {
+export default class DamageNeutralBuff extends Buff {
 
     static displayId = 133;
 

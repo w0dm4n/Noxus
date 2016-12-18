@@ -5,6 +5,7 @@ import GameHandler from "../handlers/game_handler"
 import Logger from "../io/logger"
 import SpellManager from "../game/spell/spell_manager"
 import WorldServer from "../network/world"
+import * as Types from "../io/dofus/types"
 
 export default class CharacterManager {
 
@@ -125,6 +126,7 @@ export default class CharacterManager {
         character.statsManager.sendSpellsList();
         character.refreshShortcutsBar();
         CharacterManager.setRegenState(character);
+        character.client.send(new Messages.AlmanachCalendarDateMessage(94));
     }
 
     static sendEmotesList(character)
@@ -152,6 +154,7 @@ export default class CharacterManager {
                 if(spellLevel) {
                     if(!character.statsManager.hasSpell(spellTemplate._id) && spellLevel.minPlayerLevel <= character.level) {
                         character.spells.push({spellId: spellTemplate._id, spellLevel: 1});
+                        CharacterManager.createSpellShortcut(character, spellTemplate._id);
                         result = true;
                     }
                 }
@@ -161,5 +164,36 @@ export default class CharacterManager {
             character.statsManager.sendSpellsList();
             character.save();
         }
+    }
+
+    static LearnSpellById(character, spellId)
+    {
+        var spellTemplate = SpellManager.getSpell(spellId);
+        if(spellTemplate) {
+            var spellLevel = SpellManager.getSpellLevelById(spellTemplate.spellLevels[0]);
+            if(spellLevel) {
+               character.spells.push({spellId: spellTemplate._id, spellLevel: 1});
+               character.statsManager.sendSpellsList();
+               character.save();
+               return true;
+            }
+        }
+        return false;
+    }
+
+    static createSpellShortcut(character, spellId) {
+        var topIndex = 0;
+        if(!character.shortcuts[1])
+            character.shortcuts[1] = {}
+        for(var i in character.shortcuts[1]) {
+            var s = character.shortcuts[1][i];
+            if(topIndex <= s.slot) {
+                topIndex = s.slot + 1;
+            }
+        }
+        var shortcut = {spellId: spellId, protocolId: 368, slot: topIndex};
+        shortcut.__proto__ = Types.ShortcutSpell.prototype;
+        character.shortcuts[1][topIndex] = shortcut;
+        character.refreshShortcutsBar();
     }
 }

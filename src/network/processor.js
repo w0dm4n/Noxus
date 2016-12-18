@@ -96,6 +96,7 @@ export default class Processor {
         1005: {message: Messages.GameActionFightCastRequestMessage, handler: FightHandler.handleGameActionFightCastRequestMessage},
         6081: {message: Messages.GameContextKickMessage, handler: FightHandler.handleGameContextKickMessage},
         6330: { message: Messages.GameActionFightCastOnTargetRequestMessage, handler: FightHandler.handleGameActionFightCastOnTargetRequestMessage },
+        6191: { message: Messages.GameRolePlayAttackMonsterRequestMessage, handler: FightHandler.handleGameRolePlayAttackMonsterRequestMessage },
 
         //Npcs handler
         5898 : {message : Messages.NpcGenericActionRequestMessage , handler : NpcHandler.handleNpcGenericActionRequestMessage },

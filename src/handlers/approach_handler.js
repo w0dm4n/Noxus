@@ -178,7 +178,7 @@ export default class ApproachHandler {
         if(selectedCharacter != null) {
             client.character = selectedCharacter;
             client.character.client = client;
-            client.send(new Messages.NotificationListMessage([]));
+            client.send(new Messages.NotificationListMessage([553648126, 6]));
             client.send(new Messages.CharacterSelectedSuccessMessage(client.character.getCharacterBaseInformations(), false));
             client.send(new Messages.CharacterCapabilitiesMessage(6339));
             client.send(new Messages.CharacterLoadingCompleteMessage());

@@ -1,7 +1,7 @@
 import Basic from "../../../utils/basic"
 import RemoveApBuff from "../buffs/remove_ap_buff_fix"
 
-export default class BuffRemoveAP168 {
+export default class BuffRemoveAp168 {
 
     static effectId = 168;
 
@@ -12,4 +12,4 @@ export default class BuffRemoveAP168 {
     }
 }
 
-module.exports = BuffRemoveAP168;
+module.exports = BuffRemoveAp168;

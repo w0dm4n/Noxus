@@ -4658,3 +4658,108 @@ export class GameActionFightDispellSpellMessage extends GameActionFightDispellMe
         }
     }
 }
+
+export class AlmanachCalendarDateMessage extends ProtocolMessage {
+    constructor(date) {
+        super(6341);
+        this.date = date;
+    }
+    serialize() {
+        this.buffer.writeInt(this.date);
+    }
+    deserialize(buffer) {
+        this.date = buffer.readInt();
+    }
+}
+
+export class GameRolePlayAttackMonsterRequestMessage extends ProtocolMessage {
+    constructor(monsterGroupId) {
+        super(6191);
+        this.monsterGroupId = monsterGroupId;
+    }
+    serialize() {
+        if (this.monsterGroupId < -9007199254740990 || this.monsterGroupId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.monsterGroupId + ") on element monsterGroupId.");
+        }
+        this.buffer.writeDouble(this.monsterGroupId);
+    }
+    deserialize(buffer) {
+        this.monsterGroupId = buffer.readDouble();
+        if (this.monsterGroupId < -9007199254740990 || this.monsterGroupId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.monsterGroupId + ") on element of GameRolePlayAttackMonsterRequestMessage.monsterGroupId.");
+        }
+    }
+}
+
+export class GameActionFightInvisibilityMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.state = param4;
+        this.messageId = 5821;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        this.buffer.writeByte(this.state);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.targetId = buffer.readDouble();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element of GameActionFightInvisibilityMessage.targetId.");
+        }
+        this.state = buffer.readByte();
+        if (this.state < 0) {
+            Logger.error("Forbidden value (" + this.state + ") on element of GameActionFightInvisibilityMessage.state.");
+        }
+    }
+}
+
+export class ShowCellMessage extends ProtocolMessage {
+    constructor(sourceId, cellId) {
+        super(5612);
+        this.sourceId = sourceId;
+        this.cellId = cellId;
+    }
+    serialize() {
+        if (this.sourceId < -9007199254740990 || this.sourceId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.sourceId + ") on element sourceId.");
+        }
+        this.buffer.writeDouble(this.sourceId);
+        if (this.cellId < 0 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element cellId.");
+        }
+        this.buffer.writeVarShort(this.cellId);
+    }
+    deserialize(buffer) {
+        this.sourceId = buffer.readDouble();
+        if (this.sourceId < -9007199254740990 || this.sourceId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.sourceId + ") on element of ShowCellMessage.sourceId.");
+        }
+        this.cellId = buffer.readVarUhShort();
+        if (this.cellId < 0 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element of ShowCellMessage.cellId.");
+        }
+    }
+}
+
+export class GameActionFightMarkCellsMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3) {
+        super(param1, param2);
+        this.mark = param3;
+        this.messageId = 5540;
+    }
+    serialize() {
+        super.serialize();
+        this.mark.serialize(this.buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.mark = new GameActionMark();
+        this.mark.deserialize(buffer);
+    }
+}

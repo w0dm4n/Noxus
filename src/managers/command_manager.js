@@ -12,6 +12,7 @@ import Character from "../database/models/character"
 import AccountRole from "../enums/account_role_enum"
 import Common from "../Common"
 import WorldManager from "../managers/world_manager"
+import CharacterManager from "../managers/character_manager"
 import ItemManager from "../game/item/item_manager"
 import Datacenter from "../database/datacenter"
 import EmoteHandler from "../handlers/emote_handler"
@@ -36,6 +37,9 @@ export default class CommandManager {
         { name:"itemset", role:AccountRole.ANIMATOR, description: "Vous ajoute une panoplie complète"},
         { name:"life", role:AccountRole.PLAYER, description: "Permet de régénerer ses points de vie"},
         { name:"save", role:AccountRole.PLAYER, description: "Permet de sauvegarder votre personnage"},
+        { name:"capital", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points de capital"},
+        { name:"spell", role:AccountRole.MODERATOR, description: "Permet d'apprendre un sort"},
+        { name:"spellpoints", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points de sort"},
     ];
     
     static manageCommand(command, client)
@@ -406,5 +410,56 @@ export default class CommandManager {
         }
         else
             client.character.replyImportant("Impossible en combat.");
+    }
+
+    static handle_capital(data, client)
+    {
+        if(data[1] && data[2]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target) {
+                target.character.statsPoints += parseInt(data[2]);
+                client.character.replyText("Les points de caractéristiques ont bien été ajouté sur le personnage !");
+                target.character.statsManager.sendStats();
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.capital characterName capitalPoints)");
+    }
+
+    static handle_spell(data, client)
+    {
+        if(data[1] && data[2]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target) {
+                if (CharacterManager.LearnSpellById(target.character, parseInt(data[2])))
+                {
+                    client.character.replyText("Le sort a été appris avec succès !");
+                }
+                else
+                    client.character.replyError("Impossible d'apprendre ce sort.");
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.spell characterName spellId)");
+    }
+
+    static handle_spellpoints(data, client)
+    {
+        if(data[1] && data[2]) {
+            var target = WorldServer.getOnlineClientByCharacterName(data[1]);
+            if (target) {
+                target.character.spellPoints += parseInt(data[2]);
+                client.character.replyText("Les points de sort ont bien été ajouté sur le personnage !");
+                target.character.statsManager.sendStats();
+            }
+            else
+                client.character.replyError("Impossible de trouver ce personnage !");
+        }
+        else
+            client.character.replyError("Erreur de syntaxe (.spellpoints characterName spellPoints)");
     }
 }

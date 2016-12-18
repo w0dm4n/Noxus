@@ -8,6 +8,8 @@ export default class WorldServer {
 
     static partys = [];
 
+    static instanciedMaps = [];
+
     static startTime = null;
 
     static start(host, port) {

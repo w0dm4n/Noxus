@@ -62,7 +62,7 @@ export default class Pathfinding {
             var n = neigh[i];
             if (n != null) {
                 if (dyn) {
-                    if (dyn.indexOf(n._nCellId) == -1) {
+                    if (dyn.indexOf(n._nCellId) == -1 && this.isAvailableCell(n._nCellId)) {
                         cells.push(this.getCell(n._nCellId));
                     }
                 }

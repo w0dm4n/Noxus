@@ -444,4 +444,11 @@ export default class DBManager {
             callback(spellsLevels);
         });
     }
+
+    static getMonsters(callback) {
+        var collection = DBManager.db.collection('monsters');
+        collection.find({}).toArray(function(err, monsters){
+            callback(monsters);
+        });
+    }
 }

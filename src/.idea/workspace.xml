@@ -21,31 +21,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fight.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/fight/fight.js">
+      <file leaf-file-name="fighter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/fight/fighter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4008">
-              <caret line="542" column="47" lean-forward="true" selection-start-line="542" selection-start-column="47" selection-end-line="542" selection-end-column="47" />
+            <state relative-caret-position="528">
+              <caret line="512" column="16" lean-forward="false" selection-start-line="512" selection-start-column="16" selection-end-line="512" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="push.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/effects/push.js">
+      <file leaf-file-name="fight_glyph.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/game/fight/fight_glyph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="509">
+              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buff_add_critical.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_critical.js">
+      <file leaf-file-name="trap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/spell/effects/trap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+            <state relative-caret-position="187">
+              <caret line="11" column="107" lean-forward="false" selection-start-line="11" selection-start-column="107" selection-end-line="11" selection-end-column="107" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -53,14 +55,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spell_manager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/spell_manager.js">
+      <file leaf-file-name="fight_pvm_result.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/fight/results/fight_pvm_result.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#54#0" expanded="true" />
+                <marker date="1482084927000" expanded="true" signature="304:1011" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mark_cells_type_enum.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enums/mark_cells_type_enum.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fight_timeline.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/fight/fight_timeline.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56">
+              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+              <folding>
+                <marker date="1482080563000" expanded="true" signature="286:415" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mark_type_enum.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enums/mark_type_enum.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,62 +103,90 @@
       <file leaf-file-name="fight_spell_processor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/fight/fight_spell_processor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+            <state relative-caret-position="507">
+              <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
+                <marker date="1482083832000" expanded="true" signature="4570:4579" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="4674:6793" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="4782:6112" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="4807:6102" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="4893:5050" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="4955:5028" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="5186:5344" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="5249:5322" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="5452:5631" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="5536:5609" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="5906:6061" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="5961:6039" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="6164:6760" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="6221:6461" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="6391:6447" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="6510:6750" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="6686:6736" ph="{...}" />
+                <marker date="1482083832000" expanded="true" signature="6965:7019" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zaapi_dialog.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/game/dialog/zaapi_dialog.js">
+      <file leaf-file-name="fight.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/fight/fight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="64" column="58" lean-forward="true" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_critical_buff.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_critical_buff.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buff_add_ap_111.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_ap_111.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_power_spell_buff.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_power_spell_buff.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="706">
+              <caret line="293" column="74" lean-forward="false" selection-start-line="293" selection-start-column="74" selection-end-line="293" selection-end-column="74" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
+                <marker date="1482084750000" expanded="true" signature="12815:12825" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="12815:13029" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="12815:22426" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="13048:13428" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="13457:13680" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="13734:15684" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="13906:14053" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="14186:14539" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="14239:14529" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="14714:15678" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="15717:15832" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="15751:15826" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="15859:16038" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="16096:16298" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="16176:16260" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="16330:17242" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="16595:17215" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="17288:18924" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="18122:18268" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="18415:18602" ph="{&quot;id&quot;: 0...}" />
+                <marker date="1482084750000" expanded="true" signature="18636:18885" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="18699:18869" ph="{&quot;id&quot;: 0...}" />
+                <marker date="1482084750000" expanded="true" signature="18973:19315" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19102:19309" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19216:19299" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19363:19725" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19482:19719" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19778:20146" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19843:19950" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="19895:19940" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20012:20119" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20064:20109" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20184:20459" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20511:22424" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20588:22418" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20652:22408" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20715:22394" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="20794:22218" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="21096:21248" ph="{...}" />
+                <marker date="1482084750000" expanded="true" signature="22244:22376" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_ap_buff.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_ap_buff.js">
+      <file leaf-file-name="types.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/io/dofus/types.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="233">
+              <caret line="3419" column="33" lean-forward="false" selection-start-line="3419" selection-start-column="13" selection-end-line="3419" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -133,26 +196,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ObjectDeleteMessage</find>
-      <find>PartyGuestInformations</find>
-      <find>PartyNewGuestMessage</find>
-      <find>onDisconnect</find>
-      <find>checkIndex</find>
-      <find>PartyLeaderUpdateMessage</find>
-      <find>create</find>
-      <find>PartyMemberRemoveMessage</find>
-      <find>createCa</find>
-      <find>LoadMaps</find>
-      <find>AbstractPartyMessage</find>
-      <find>CharacterBaseInformations</find>
-      <find>leave</find>
-      <find>isBusy</find>
-      <find>LeaveDialogRequestMessage</find>
-      <find>LeaveDialogMessage</find>
-      <find>leaveDi</find>
-      <find>weig</find>
-      <find>getItem</find>
-      <find>ExchangeObjectMessage</find>
       <find>onDi</find>
       <find>isReady</find>
       <find>itemsSets</find>
@@ -163,62 +206,82 @@
       <find>heal</find>
       <find>getFighter</find>
       <find>checkRange</find>
+      <find>getStat</find>
+      <find>createCharacter</find>
+      <find>addBuff</find>
+      <find>begint</find>
+      <find>getCells</find>
+      <find>team</find>
+      <find>start</find>
+      <find>entityLook</find>
+      <find>be</find>
+      <find>checkBuff</find>
+      <find>refresh</find>
+      <find>endTurn</find>
+      <find>addbuf</find>
+      <find>Action</find>
+      <find>Invisi</find>
+      <find>send</find>
+      <find>shape</find>
+      <find>GameActionMark</find>
+      <find>take</find>
+      <find>synchroni</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/game/pathfinding/pathfinding.js" />
-        <option value="$PROJECT_DIR$/game/dialog/zaap_dialog.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/remove_pa.js" />
-        <option value="$PROJECT_DIR$/game/fight/fight_timeline.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_pa.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/damage_water.js" />
-        <option value="$PROJECT_DIR$/game/exchange/exchange_player.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/remove_ap_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_ap_1079.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_ap_101.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_mp_127.js" />
-        <option value="$PROJECT_DIR$/game/stats/stats_manager.js" />
-        <option value="$PROJECT_DIR$/network/processor.js" />
-        <option value="$PROJECT_DIR$/handlers/fight_handler.js" />
-        <option value="$PROJECT_DIR$/io/dofus/messages.js" />
-        <option value="$PROJECT_DIR$/game/dialog/shop_dialog.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_add_mp_128.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_add_ap_111.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_range.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_add_range.js" />
-        <option value="$PROJECT_DIR$/game/fight/fight_shape_processor.js" />
-        <option value="$PROJECT_DIR$/game/map_tools/map_tools.js" />
-        <option value="$PROJECT_DIR$/game/map_tools/dofus_1_line.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/steal_range.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/add_range_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/remove_range_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/damage_neutral_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/damage_neutral.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/steal_damage_luck.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/steal_damage_fire.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/steal_damage_agility.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/damage_strength.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/damage_luck.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/damage_fire.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/damage_agility.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_power.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/add_power_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/remove_power_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_fix_damage.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/buff_add_power_spell.js" />
         <option value="$PROJECT_DIR$/game/spell/buffs/add_power_spell_buff.js" />
-        <option value="$PROJECT_DIR$/game/fight/fighter.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/add_ap_buff.js" />
-        <option value="$PROJECT_DIR$/game/spell/effects/steal_mp.js" />
-        <option value="$PROJECT_DIR$/game/spell/buffs/add_mp_buff.js" />
         <option value="$PROJECT_DIR$/game/spell/buffs/remove_mp_buff.js" />
-        <option value="$PROJECT_DIR$/game/fight/fight.js" />
         <option value="$PROJECT_DIR$/game/spell/buffs/add_critical_buff.js" />
         <option value="$PROJECT_DIR$/game/spell/effects/buff_add_critical.js" />
-        <option value="$PROJECT_DIR$/game/fight/fight_spell_processor.js" />
         <option value="$PROJECT_DIR$/game/dialog/zaapi_dialog.js" />
+        <option value="$PROJECT_DIR$/managers/character_manager.js" />
+        <option value="$PROJECT_DIR$/managers/command_manager.js" />
+        <option value="$PROJECT_DIR$/game/spell/buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/damage_neutral_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/damage_agility_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/damage_agility.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/steal_mp.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/add_stat_agility_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/remove_stat_agility_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/add_stat_strength.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/add_stat_strength_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/steal_stat_agility.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/remove_stat_strength_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/steal_stat_strength.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/push_783.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/add_stat_fire_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/remove_stat_fire_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/steal_stat_fire.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/attraction.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_mp_127.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_mp_1080.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_ap_1079.js" />
+        <option value="$PROJECT_DIR$/game/monsters/monster.js" />
+        <option value="$PROJECT_DIR$/game/monsters/monsters_group.js" />
+        <option value="$PROJECT_DIR$/network/world.js" />
+        <option value="$PROJECT_DIR$/database/models/map.js" />
+        <option value="$PROJECT_DIR$/managers/spawn_manager.js" />
+        <option value="$PROJECT_DIR$/enums/invisibility_state_enum.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/invisbility_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/invisiblity.js" />
+        <option value="$PROJECT_DIR$/game/fight/fight_timeline.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/invisibility_buff.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/add_ap_buff.js" />
+        <option value="$PROJECT_DIR$/game/fight/fighter.js" />
+        <option value="$PROJECT_DIR$/game/fight/fight_team.js" />
+        <option value="$PROJECT_DIR$/game/spell/buffs/add_mp_buff.js" />
+        <option value="$PROJECT_DIR$/game/monsters/ai/basic_ai.js" />
+        <option value="$PROJECT_DIR$/game/spell/spell_history.js" />
+        <option value="$PROJECT_DIR$/game/fight/fight_spell_processor.js" />
+        <option value="$PROJECT_DIR$/io/dofus/messages.js" />
+        <option value="$PROJECT_DIR$/enums/mark_type_enum.js" />
+        <option value="$PROJECT_DIR$/game/fight/fight.js" />
+        <option value="$PROJECT_DIR$/io/dofus/types.js" />
+        <option value="$PROJECT_DIR$/enums/mark_cells_type_enum.js" />
+        <option value="$PROJECT_DIR$/game/spell/effects/trap.js" />
+        <option value="$PROJECT_DIR$/game/fight/fight_glyph.js" />
       </list>
     </option>
   </component>
@@ -400,7 +463,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -588,28 +650,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spell" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buffs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pathfinding" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -686,6 +726,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="monsters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monsters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="map_tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -740,7 +820,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="exchange" />
+              <option name="myItemId" value="fight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -758,7 +842,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dialog" />
+              <option name="myItemId" value="exchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -810,6 +908,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -938,11 +1037,17 @@
       <workItem from="1481571880814" duration="13446000" />
       <workItem from="1481640708650" duration="18150000" />
       <workItem from="1481737561541" duration="13142000" />
+      <workItem from="1481793796415" duration="7125000" />
+      <workItem from="1481830104842" duration="11033000" />
+      <workItem from="1481880690724" duration="1112000" />
+      <workItem from="1481911082062" duration="16679000" />
+      <workItem from="1481994249486" duration="19803000" />
+      <workItem from="1482079344187" duration="5773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246210000" />
+    <option name="totallyTimeSpent" value="307735000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -957,9 +1062,9 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2035865" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2014768" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31012657" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -979,7 +1084,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20372526" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20200334" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31012657" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
@@ -1018,96 +1123,130 @@
           <url>file://$PROJECT_DIR$/game/fight/fighter.js</url>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/game/fight/fight_spell_processor.js</url>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/game/map_tools/dofus_1_line.js">
+    <entry file="file://$PROJECT_DIR$/managers/world_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="129" column="30" lean-forward="false" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/pathfinding/map_point.js">
+    <entry file="file://$PROJECT_DIR$/game/party/party_friend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/party/party.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/exchange_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/managers/exchange_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/exchange/exchange_player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/monsters/monsters_manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/monsters/monster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/monsters/monsters_group.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="68" lean-forward="false" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/world.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buff.js">
+    <entry file="file://$PROJECT_DIR$/enums/friend_failure_enum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/teleport.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/buffs/damage_agility_buff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_damage_fire.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_mp_1080.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_damage_agility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_damage_luck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_strength.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_luck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_fire.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_agility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="82" />
+        <state relative-caret-position="17">
+          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1115,393 +1254,381 @@
     <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_spell_boost.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="140" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_range.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/remove_range_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_mp_127.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_ap_101.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_percentage_life.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_heal_108.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_damage_agility.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/add_state.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/buffs/heal_spell_buff.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_damage_fix_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="68" lean-forward="true" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_range_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/boost_spell_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/damage_neutral_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="87" lean-forward="true" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
           <folding>
             <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/remove_ap_buff.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_damage_luck.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_state_buff.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_fire.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_vitality_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <marker date="1481415624000" expanded="true" signature="1096:1104" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_neutral.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_power.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/remove_fix_damage_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="68" lean-forward="false" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_fix_damage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/invisiblity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/friend_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#0#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_fix_damage.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/buff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="396">
+          <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_power_buff.js">
+    <entry file="file://$PROJECT_DIR$/game/stats/stats_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="272" column="151" lean-forward="true" selection-start-line="272" selection-start-column="151" selection-end-line="272" selection-end-column="151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/fight_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="142" column="41" lean-forward="false" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enums/invisibility_state_enum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/spell/buffs/invisibility_buff.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_range.js">
+    <entry file="file://$PROJECT_DIR$/database/models/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_power_spell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_mp_128.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_range.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_mp_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_mp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/fight/fighter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="302" column="24" lean-forward="false" selection-start-line="300" selection-start-column="24" selection-end-line="300" selection-end-column="58" />
-          <folding>
-            <marker date="1481757360000" expanded="true" signature="4883:5551" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="7155:7954" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="7329:7901" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="7915:7948" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="7990:8297" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="8060:8140" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="8327:8596" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="8631:10484" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="8694:10450" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="8765:10440" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="9134:10034" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="9181:9984" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="9418:9962" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="9529:9763" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="9797:9936" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="10261:10426" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="10518:12201" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="10573:12167" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="10957:11789" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="11000:11747" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="11225:11729" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="11328:11546" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="11576:11707" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12000:12157" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12223:12382" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12260:12303" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12329:12376" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12406:12643" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12554:12605" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="12666:12816" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="13027:13589" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="13117:13523" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="13185:13316" ph="{...}" />
-            <marker date="1481757360000" expanded="true" signature="13541:13579" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/remove_mp_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/io/dofus/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="3932" column="4" lean-forward="false" selection-start-line="3932" selection-start-column="4" selection-end-line="3932" selection-end-column="4" />
+        <state relative-caret-position="243">
+          <caret line="169" column="4" lean-forward="false" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_ap_111.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_ap_buff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_power_spell_buff.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/damage_strength.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_critical_buff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="36" />
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_add_critical.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_mp_buff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+        <state relative-caret-position="442">
+          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/monsters/ai/basic_ai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="16" column="69" lean-forward="true" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/spell/spell_manager.js">
+    <entry file="file://$PROJECT_DIR$/game/fight/fight_team.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="611">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/fight/fight.js">
+    <entry file="file://$PROJECT_DIR$/game/spell/buffs/add_stat_fire_buff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4008">
-          <caret line="542" column="47" lean-forward="true" selection-start-line="542" selection-start-column="47" selection-end-line="542" selection-end-column="47" />
+        <state relative-caret-position="119">
+          <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_stat_fire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/spell/spell_history_information.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/spell/spell_history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/managers/spawn_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="179" column="38" lean-forward="true" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/spell/effects/push.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="119">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/dofus/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="4757" column="41" lean-forward="false" selection-start-line="4757" selection-start-column="41" selection-end-line="4757" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enums/npc_action_enum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fighter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="512" column="16" lean-forward="false" selection-start-line="512" selection-start-column="16" selection-end-line="512" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fight_timeline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+          <folding>
+            <marker date="1482080563000" expanded="true" signature="286:415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="293" column="74" lean-forward="false" selection-start-line="293" selection-start-column="74" selection-end-line="293" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1482084750000" expanded="true" signature="12815:12825" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="12815:13029" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="12815:22426" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="13048:13428" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="13457:13680" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="13734:15684" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="13906:14053" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="14186:14539" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="14239:14529" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="14714:15678" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="15717:15832" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="15751:15826" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="15859:16038" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="16096:16298" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="16176:16260" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="16330:17242" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="16595:17215" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="17288:18924" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="18122:18268" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="18415:18602" ph="{&quot;id&quot;: 0...}" />
+            <marker date="1482084750000" expanded="true" signature="18636:18885" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="18699:18869" ph="{&quot;id&quot;: 0...}" />
+            <marker date="1482084750000" expanded="true" signature="18973:19315" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19102:19309" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19216:19299" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19363:19725" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19482:19719" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19778:20146" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19843:19950" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="19895:19940" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20012:20119" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20064:20109" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20184:20459" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20511:22424" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20588:22418" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20652:22408" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20715:22394" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="20794:22218" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="21096:21248" ph="{...}" />
+            <marker date="1482084750000" expanded="true" signature="22244:22376" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/dofus/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="3419" column="33" lean-forward="false" selection-start-line="3419" selection-start-column="13" selection-end-line="3419" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/fight/fight_spell_processor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+        <state relative-caret-position="507">
+          <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
+            <marker date="1482083832000" expanded="true" signature="4570:4579" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="4674:6793" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="4782:6112" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="4807:6102" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="4893:5050" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="4955:5028" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="5186:5344" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="5249:5322" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="5452:5631" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="5536:5609" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="5906:6061" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="5961:6039" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="6164:6760" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="6221:6461" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="6391:6447" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="6510:6750" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="6686:6736" ph="{...}" />
+            <marker date="1482083832000" expanded="true" signature="6965:7019" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/dialog/zaapi_dialog.js">
+    <entry file="file://$PROJECT_DIR$/enums/mark_type_enum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="64" column="58" lean-forward="true" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enums/mark_cells_type_enum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/results/fight_pvm_result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1482084927000" expanded="true" signature="304:1011" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/spell/effects/trap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="107" lean-forward="false" selection-start-line="11" selection-start-column="107" selection-end-line="11" selection-end-column="107" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fight_glyph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

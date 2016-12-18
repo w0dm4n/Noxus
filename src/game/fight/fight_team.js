@@ -14,7 +14,7 @@ export default class FightTeam {
         this.members = [];
         this.addMember(this.leader);
         this.placementCells = [];
-        this.bladeCellId = leader.character.cellid;
+        this.bladeCellId = leader.fighterType == Fighter.FIGHTER_TYPE.HUMAN ? leader.character.cellid : leader.fight.monstersGroup.cellId;
         this.fixedMembers = [];
     }
 
@@ -45,7 +45,7 @@ export default class FightTeam {
             if(!this.fight.getFighterOnCell(cellId)) {
                 fighter.cellId = cellId;
             }
-            if(i > 666) return;
+            if(i > 666) return; // satan was here
         }
     }
 
@@ -61,10 +61,17 @@ export default class FightTeam {
         for(var f of this.members) {
             fighters.push(f.getFightTeamMemberCharacterInformations());
         }
-        return new Types.FightTeamInformations(this.id, this.leader.character._id, this.id, this.teamType, 0, fighters);
+        return new Types.FightTeamInformations(this.id, this.leader.id, this.id, this.teamType, 0, fighters);
     }
 
     getFightOptionsInformations() {
         return new Types.FightOptionsInformations(this.restrictions.isSecret, this.restrictions.onlyParty, this.restrictions.locked, this.restrictions.isAskingForHelp);
+    }
+
+    send(message) {
+        for (var f of this.members) {
+            if (!f.isAI)
+                f.character.client.send(message);
+        }
     }
 }

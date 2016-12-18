@@ -9,31 +9,62 @@ import RemoveAPBuff from "../../game/spell/buffs/remove_ap_buff"
 import RemoveMPBuff from "../../game/spell/buffs/remove_mp_buff"
 import Basic from "../../utils/basic"
 import AddStateBuff from "../spell/buffs/add_state_buff"
+import * as Shapes from "../../game/fight/fight_shape_processor"
+import MonsterStatsManager from "../../game/stats/monster_stats_manager"
+import InvisibilityStateEnum from "../../enums/invisibility_state_enum"
+import SpellHistory from "../../game/spell/spell_history"
 
 export default class Fighter {
 
-    constructor(character, fight) {
-        this.character = character;
+    static FIGHTER_TYPE = {
+        HUMAN: 1,
+        MONSTER: 2,
+    };
+
+
+    constructor(fight) {
         this.fight = fight;
-        this.character.fighter = this;
-        this.character.fight = this.fight;
         this.team = null;
         this.ready = false;
         this.cellId = -1;
         this.dirId = 3;
         this.alive = true;
         this.sequenceCount = 0;
+        this.generateFighterStatsBonus();
+        this.buffs = [];
+        this.spellDamagesBoosts = {};
+        this.fighterType = Fighter.FIGHTER_TYPE.HUMAN;
+        this.spellHistory = new SpellHistory(this);
+    }
+
+    initFromCharacter(character) {
+        this.character = character;
+        this.character.fighter = this;
+        this.character.fight = this.fight;
         CharacterManager.applyRegen(this.character);
         this.current = {
             life: this.character.life,
             shieldPoint: 0,
-            AP: this.character.statsManager.getTotalStats(1),
-            MP: this.character.statsManager.getTotalStats(2),
+            AP: this.getStats().getTotalStats(1),
+            MP: this.getStats().getTotalStats(2),
             erosion: 0,
-        }
-        this.generateFighterStatsBonus();
-        this.buffs = [];
-        this.spellDamagesBoosts = {};
+        };
+        this.fighterType = Fighter.FIGHTER_TYPE.HUMAN;
+        return this;
+    }
+
+    initFromMonster(monster) {
+        this.monster = monster;
+        this.monsterStatsManager = new MonsterStatsManager(this);
+        this.fighterType = Fighter.FIGHTER_TYPE.MONSTER;
+        this.current = {
+            life: this.getStats().getMaxLife(),
+            shieldPoint: 0,
+            AP: this.getStats().getTotalStats(1),
+            MP: this.getStats().getTotalStats(2),
+            erosion: 0,
+        };
+        return this;
     }
 
     generateFighterStatsBonus() {
@@ -62,12 +93,22 @@ export default class Fighter {
         return this.character.level;
     }
 
+    get isAI() {
+        return false;
+    }
+
     send(packet) {
-        this.character.client.send(packet);
+        if (!this.isAI)
+            this.character.client.send(packet);
     }
 
     getStats() {
-        return this.character.statsManager;
+        if (this.fighterType == Fighter.FIGHTER_TYPE.MONSTER) {
+            return this.monsterStatsManager;
+        }
+        else {
+            return this.character.statsManager;
+        }
     }
 
     refreshStats() {
@@ -75,8 +116,8 @@ export default class Fighter {
     }
 
     resetPoints() {
-        this.current.AP = this.character.statsManager.getTotalStats(1);
-        this.current.MP = this.character.statsManager.getTotalStats(2);
+        this.current.AP = this.getStats().getTotalStats(1);
+        this.current.MP = this.getStats().getTotalStats(2);
     }
 
     createContext() {
@@ -88,9 +129,8 @@ export default class Fighter {
         this.send(new Messages.GameContextDestroyMessage());
         this.send(new Messages.GameContextCreateMessage(1));
         this.character.statsManager.sendStats();
-        WorldManager.teleportClient(this.character.client, this.character.mapid, this.character.cellid, function(result){
-            if (!result)
-            {
+        WorldManager.teleportClient(this.character.client, this.character.mapid, this.character.cellid, function (result) {
+            if (!result) {
                 Logger.error("An error occured while trying to load a map for the character " + this.character.name);
                 this.character.client.disconnect();
             }
@@ -110,39 +150,41 @@ export default class Fighter {
     }
 
     setReadyState(state) {
-        if(this.fight.fightState == Fight.FIGHT_STATES.STARTING) {
+        if (this.fight.fightState == Fight.FIGHT_STATES.STARTING) {
             this.ready = state;
-            this.fight.send(new Messages.GameFightHumanReadyStateMessage(this.character._id, this.ready));
+            this.fight.send(new Messages.GameFightHumanReadyStateMessage(this.id, this.ready));
             this.fight.checkStartupPhaseReady();
         }
     }
 
     getFightTeamMemberCharacterInformations() {
-        return new Types.FightTeamMemberCharacterInformations(this.character._id, this.character.name, this.character.level);
+        return new Types.FightTeamMemberCharacterInformations(this.id, this.character.name, this.character.level);
     }
 
     passTurn() {
-        if(this.fight.timeline.currentFighter()) {
-            if(this.isMyTurn()) {
-                this.fight.timeline.next();
+        if (this.fight.timeline.currentFighter()) {
+            if (this.isMyTurn()) {
+                if (this.fight.fightState == Fight.FIGHT_STATES.FIGHTING) {
+                    this.fight.timeline.next();
+                }
             }
         }
     }
 
     isMyTurn() {
-        return this.fight.timeline.currentFighter().character._id == this.character._id;
+        return this.fight.timeline.currentFighter().id == this.id;
     }
 
     beginTurn() {
-        //TODO
+        //TODO: Apply glyph
     }
 
     endTurn() {
         this.fight.send(new Messages.SequenceStartMessage(0, this.id));
         var newBuffs = [];
-        for(var buff of this.buffs) {
+        for (var buff of this.buffs) {
             buff.checkExpires();
-            if(!buff.expired) {
+            if (!buff.expired) {
                 newBuffs.push(buff);
             }
         }
@@ -152,25 +194,51 @@ export default class Fighter {
 
     checkBuffs() {
         this.fight.send(new Messages.SequenceStartMessage(0, this.id));
-        for(var buff of this.buffs) {
+        for (var buff of this.buffs) {
             buff.continueLifetime();
         }
         this.fight.send(new Messages.SequenceEndMessage(1, this.id, 0));
     }
 
-    addBuff(buff) {
-        Logger.debug("Add buff id: " + buff.effectId + " on fighter id: " + this.id);
-        this.buffs.push(buff);
-        buff.tryApply();
-        if(buff instanceof AddStateBuff) {
-            Logger.debug("The buff is a state buff (id: " + buff.delta + "), so the fighter has now " + this.getStates().length + " state(s)");
+    getActiveBuffByEffectId(effectId, spellId) {
+        var i = 0;
+        for (var buff of this.buffs) {
+            if (buff.effectId == effectId && buff.spellLevel._id == spellId) {
+                if (!buff.isExpired())
+                    i++;
+            }
         }
+        return i;
+    }
+
+    checkBuffValidity(spellLevel, effectId, spellLevelId) {
+        var maxStack = spellLevel.maxStack;
+        if (maxStack > 0) {
+            var stack = this.getActiveBuffByEffectId(effectId, spellLevelId);
+            return (stack < maxStack) ? true : false;
+        }
+        else
+            return true;
+    }
+
+    addBuff(buff) {
+        if (this.checkBuffValidity(buff.spellLevel, buff.effectId, buff.spellLevel._id)) {
+            Logger.debug("Add buff id: " + buff.effectId + " on fighter id: " + this.id);
+            this.buffs.push(buff);
+            buff.tryApply();
+            if (buff instanceof AddStateBuff) {
+                Logger.debug("The buff is a state buff (id: " + buff.delta + "), so the fighter has now " + this.getStates().length + " state(s)");
+            }
+            this.refreshStats();
+        }
+        else
+            Logger.debug("Trying to apply buff id:" + buff.effectId + " but max stack reached !");
     }
 
     getStates() {
         var states = [];
-        for(var buff of this.buffs) {
-            if(buff instanceof AddStateBuff) {
+        for (var buff of this.buffs) {
+            if (buff instanceof AddStateBuff) {
                 states.push(buff);
             }
         }
@@ -179,8 +247,8 @@ export default class Fighter {
 
     hasState(stateId) {
         var states = this.getStates();
-        for(var buff of states) {
-            if(buff.delta == stateId) return true;
+        for (var buff of states) {
+            if (buff.delta == stateId) return true;
         }
         return false;
     }
@@ -190,8 +258,7 @@ export default class Fighter {
         return Basic.getPercentage(10, damage);
     }
 
-    getDamage(data, elementType, isWeapon = false)
-    {
+    getDamage(data, elementType, isWeapon = false) {
         var power = data.caster.getStats().getTotalStats(elementType);
         var roll = Basic.getRandomInt(data.effect.diceNum, data.effect.diceSide);
         var spellPowerBoost = data.caster.spellDamagesBoosts[data.spell.spellId] ? data.caster.spellDamagesBoosts[data.spell.spellId] : 0;
@@ -205,8 +272,8 @@ export default class Fighter {
         //TODO: Apply damage reduction and invu
         //TODO: Check shield point because the packet is not the same
         //TODO: Erosion system
-        if(this.alive) {
-            if(this.current.life - damages < 0) {
+        if (this.alive) {
+            if (this.current.life - damages < 0) {
                 damages = this.current.life;
             }
             this.current.life -= damages;
@@ -223,19 +290,18 @@ export default class Fighter {
     }
 
     heal(from, heal, elementType) {
-        if(this.current.life + heal > this.getStats().getMaxLife()) {
+        if (this.current.life + heal > this.getStats().getMaxLife()) {
             heal = this.getStats().getMaxLife() - this.current.life;
         }
         this.current.life += heal;
-        if(heal > 0) this.fight.send(new Messages.GameActionFightLifePointsGainMessage(0, from.id, this.id, heal));
+        if (heal > 0) this.fight.send(new Messages.GameActionFightLifePointsGainMessage(0, from.id, this.id, heal));
     }
 
-    checkCalcRate(calc)
-    {
+    checkCalcRate(calc) {
         if (calc == 0 || calc < 10)
             return 10;
         if (calc > 100 && calc <= 150)
-             return 60;
+            return 60;
         else if (calc > 100 && calc <= 160)
             return 65;
         else if (calc > 180)
@@ -244,11 +310,9 @@ export default class Fighter {
     }
 
 
-    looseAP(data, apPoints)
-    {
+    looseAP(data, apPoints) {
         var totalAPLost = 0;
-        if (this.alive)
-        {
+        if (this.alive) {
             var baseLostAp = apPoints;
             if (apPoints > 0) {
                 var calc = 0;
@@ -276,8 +340,7 @@ export default class Fighter {
                 }
                 if (totalAPLost != 0)
                     this.addBuff(new RemoveAPBuff(totalAPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
-                if (totalAPLost < baseLostAp)
-                {
+                if (totalAPLost < baseLostAp) {
                     this.fight.send(new Messages.GameActionFightDodgePointLossMessage(308, data.caster.id, this.id, (baseLostAp - totalAPLost)));
                 }
             }
@@ -285,8 +348,7 @@ export default class Fighter {
         return totalAPLost;
     }
 
-    looseMP(data, mpPoints)
-    {
+    looseMP(data, mpPoints) {
         var totalMPLost = 0;
         if (this.alive) {
             var baseLostMP = mpPoints;
@@ -315,8 +377,7 @@ export default class Fighter {
             }
             if (totalMPLost != 0)
                 this.addBuff(new RemoveMPBuff(totalMPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
-            if (totalMPLost < baseLostMP)
-            {
+            if (totalMPLost < baseLostMP) {
                 this.fight.send(new Messages.GameActionFightDodgePointLossMessage(309, data.caster.id, this.id, (baseLostMP - totalMPLost)));
             }
         }
@@ -324,11 +385,11 @@ export default class Fighter {
     }
 
     checkIfIsDead() {
-        if(this.current.life <= 0) {
+        if (this.current.life <= 0) {
             this.alive = false;
         }
 
-        if(!this.alive) {
+        if (!this.alive) {
             this.enableDeadState();
         }
     }
@@ -337,7 +398,7 @@ export default class Fighter {
         this.alive = false;
         this.fight.send(new Messages.GameActionFightDeathMessage(103, this.id, this.id))
 
-        if(this.isMyTurn()) {
+        if (this.isMyTurn()) {
             this.fight.timeline.next();
         }
 
@@ -354,15 +415,15 @@ export default class Fighter {
         var toCell = this.cellId;
         var collidedFighter = null;
         var path = [];
-        for(var i = 0; i < power; i++) {
+        for (var i = 0; i < power; i++) {
             var dirCell = point.getNearestCellInDirection(dir);
-            if(dirCell) {
-                if(this.fight.getFighterOnCell(dirCell._nCellId)) {
+            if (dirCell) {
+                if (this.fight.getFighterOnCell(dirCell._nCellId)) {
                     collidedFighter = this.fight.getFighterOnCell(dirCell._nCellId);
                     break;
                 }
 
-                if(!this.fight.map.isWalkableCell(dirCell._nCellId)) {
+                if (!this.fight.map.isWalkableCell(dirCell._nCellId)) {
                     break;
                 }
                 point = dirCell;
@@ -372,7 +433,86 @@ export default class Fighter {
                 break;
             }
         }
-        this.fight.send(new Messages.GameActionFightSlideMessage(0, this.id, this.id, this.cellId, toCell));
+        if (this.isInvisible()) {
+            this.team.send(new Messages.GameActionFightSlideMessage(0, this.id, this.id, this.cellId, toCell));
+        }
+        else {
+            this.fight.send(new Messages.GameActionFightSlideMessage(0, this.id, this.id, this.cellId, toCell));
+        }
         this.cellId = toCell;
+    }
+
+    attract(dir, data, radius) {
+        var line = new Shapes.Line(radius);
+        line._nDirection = dir;
+        var cells = line.getCells(data.caster.cellId);
+        var toCell = this.cellId;
+        var i = 0;
+        var distance = 0;
+        for (var cell of cells) {
+            if (cell == this.cellId)
+                break;
+            i++;
+        }
+        i--;
+        while (i > 0 && distance < data.effect.diceNum) {
+            if (this.fight.getFighterOnCell(cells[i]))
+                break;
+            if (!this.fight.map.isWalkableCell(cells[i]))
+                break;
+            toCell = cells[i];
+            i--;
+            distance++;
+        }
+        if (this.isInvisible()) {
+            this.team.send(new Messages.GameActionFightSlideMessage(0, this.id, this.id, this.cellId, toCell));
+        }
+        else {
+            this.fight.send(new Messages.GameActionFightSlideMessage(0, this.id, this.id, this.cellId, toCell));
+        }
+        this.cellId = toCell;
+    }
+
+    isInvisible() {
+        return (this.invisibilityState == InvisibilityStateEnum.INVISIBLE) ? true : false;
+    }
+
+    updateInvisibility(effectId) {
+        var oppositeTeam = this.fight.getOppositeTeam(this.team);
+        switch (this.invisibilityState) {
+            case InvisibilityStateEnum.INVISIBLE:
+                this.team.send(new Messages.GameActionFightInvisibilityMessage(150, effectId, this.id, InvisibilityStateEnum.DETECTED));
+                oppositeTeam.send(new Messages.GameActionFightInvisibilityMessage(150, effectId, this.id, InvisibilityStateEnum.INVISIBLE));
+                break;
+
+            case InvisibilityStateEnum.DETECTED:
+                break;
+
+            case InvisibilityStateEnum.VISIBLE:
+                this.fight.send(new Messages.GameActionFightInvisibilityMessage(150, effectId, this.id, InvisibilityStateEnum.VISIBLE));
+                break;
+        }
+    }
+
+    canCastSpell(spell,cell) {
+        var result;
+        if (this.alive) {
+            if (!this.character.statsManager.hasSpell(spell.spellId)) {
+                result = false;
+            } else {
+                /*
+                if (!this.spellHistory.canCastSpell(spell,cell)) {
+                    result = false;
+                } else {
+                    result = true;
+                }
+                */
+                result = true;
+            }
+
+        } else {
+            result = false;
+        }
+        return result;
     }
 }

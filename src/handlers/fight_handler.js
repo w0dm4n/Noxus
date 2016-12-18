@@ -9,6 +9,7 @@ import CharacterManager from "../managers/character_manager.js"
 import IgnoredHandler from "../handlers/ignored_handler"
 import Fight from "../game/fight/fight"
 import ChallengeFight from "../game/fight/challenge_fight"
+import PVMFight from "../game/fight/pvm_fight"
 
 export default class FightHandler {
 
@@ -134,6 +135,28 @@ export default class FightHandler {
             if (fighter) {
                 client.character.fight.requestCastSpell(client.character.fighter, packet.spellId, fighter.cellId);
             }
+        }
+    }
+
+    static handleGameRolePlayAttackMonsterRequestMessage(client, packet) {
+        Logger.debug("Player id: " + client.character._id + " want to attack the monster group id: " + packet.monsterGroupId);
+        var monsterGroup = client.character.getMap().getMonsterGroup(packet.monsterGroupId);
+        if(monsterGroup) {
+            if(client.character.cellid == monsterGroup.cellId) {
+                if (!client.character.isInFight()) {
+                    // Create fight properly
+                    var fight = new PVMFight(client, monsterGroup);
+                    fight.map.fights.push(fight);
+                    client.character.fight = fight;
+                    fight.initialize();
+                }
+            }
+            else {
+                Logger.error("Can't attack the monster group because he is not on the same cell");
+            }
+        }
+        else {
+            Logger.error("Can't attack the monster group because is missing");
         }
     }
 }

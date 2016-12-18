@@ -6,6 +6,10 @@ import DataMapProvider from "../../game/pathfinding/data_map_provider"
 import ConfigManager from "../../utils/configmanager.js"
 import InteractiveHandler from "../../handlers/interactive_handler"
 import Fight from "../../game/fight/fight"
+import MonstersGroup from "../../game/monsters/monsters_group"
+import MonstersManager from "../../game/monsters/monsters_manager"
+import SpawnManager from "../../managers/spawn_manager"
+import WorldServer from "../../network/world"
 
 var zlib = require('zlib');
 
@@ -14,7 +18,6 @@ export default class Map {
     static MAP_DECRYPT_KEY = "649ae451ca33ec53bbcbcc33becf15f4";
 
     clients =  [];
-    // npcs : spawn
     npcs = {npcs : [] , packet : []};
 
     constructor(raw) {
@@ -27,6 +30,9 @@ export default class Map {
         this.cellsRaw = raw.cells;
         this.dataMapProvider = new DataMapProvider(this);
         this.fights = [];
+        this.monsters = [];
+        this.monstersGroups = [];
+        this.mapType = raw.mapType;
     }
 
     init() {
@@ -37,6 +43,9 @@ export default class Map {
             this.npcs.npcs.push(result[i]);
             this.npcs.packet.push(new Messages.GameRolePlayShowActorMessage(new Types.GameRolePlayNpcInformations(-result[i]._id, result[i].realLook.toEntityLook(), new Types.EntityDispositionInformations(result[i].cellId, result[i].direction), result[i].npcId, false, 0)));
         }
+        //this.refillMapWithMonstersGroups();
+        SpawnManager.getMonstersAndGenerateGroups(this);
+        WorldServer.instanciedMaps.push(this);
     }
 
     getAvailableCells() {
@@ -93,6 +102,10 @@ export default class Map {
        
         for (var i in this.npcs.packet) {
             this.send(this.npcs.packet[i]);
+        }
+
+        for(var group of this.monstersGroups) {
+            actors.push(group.getGameRolePlayGroupMonsterInformations());
         }
         return actors;
     }
@@ -189,5 +202,30 @@ export default class Map {
         return false;
     }
 
+    refillMapWithMonstersGroups() {
+        Logger.debug("Refill the map id: " + this._id + " with monster(s) group(s)");
+        var data = [{templateId: 2850, grade: 5}];
+        for(var i = 0; i < 3; i++) {
+            var group = new MonstersGroup(data, this, 369);
+            this.monstersGroups.push(group);
+        }
+        this.monstersGroups.push(new MonstersGroup(data, this, 350));
+        this.monstersGroups.push(new MonstersGroup(data, this, 120));
+    }
 
+    getMonsterGroup(groupId) {
+        for(var g of this.monstersGroups) {
+            if(g.id == groupId) return g;
+        }
+        return null;
+    }
+
+    getNextMonsterGroupsId()
+    {
+        var id = 0;
+        for (var group of this.monstersGroups)
+            id++;
+        id += 1;
+        return id;
+    }
 }

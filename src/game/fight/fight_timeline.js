@@ -12,6 +12,7 @@ export default class FightTimeline {
         this.fighters = [];
         this.timer = null;
         this.currentTimelineIndex = -1;
+        this.round = 1;
     }
 
     orderFightersPerInitiative(fighters) {
@@ -110,6 +111,7 @@ export default class FightTimeline {
         this.currentTimelineIndex++;
         if(this.currentTimelineIndex > this.fighters.length - 1) {
             this.currentTimelineIndex = 0;
+            this.round++;
         }
 
         if(this.currentFighter().alive) {
@@ -117,10 +119,14 @@ export default class FightTimeline {
             this.currentFighter().checkBuffs();
             this.fight.send(new Messages.GameFightTurnReadyRequestMessage(this.currentFighter().id));
             this.fight.send(new Messages.GameFightTurnStartMessage(this.currentFighter().id, FightTimeline.TURN_BASE_TIME * 10));
-            this.currentFighter().getStats().sendFightStats();
-            this.fight.synchronizeFight();
-            this.fight.send(new Messages.GameFightTurnStartPlayingMessage());
+            this.currentFighter().refreshStats();
+            this.fight.synchronizeFight(this.currentFighter());
+            this.currentFighter().send(new Messages.GameFightTurnStartPlayingMessage());
             this.startTimer();
+
+            if(this.currentFighter().isAI) {
+                this.currentFighter().startBrain();
+            }
         }
         else {
             if(this.anyoneAlive()) {

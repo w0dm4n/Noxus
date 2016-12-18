@@ -11,6 +11,11 @@ export default class AddMPBuff extends Buff {
         this.delta = delta;
     }
 
+    beginTurn() {
+        if (this.fighter.isInvisible())
+            this.fighter.current.MP += this.delta;
+    }
+
     apply() {
         this.fighter.current.MP += this.delta;
     }
@@ -21,7 +26,17 @@ export default class AddMPBuff extends Buff {
     }
 
     show() {
-        this.fighter.fight.send(new Messages.GameActionFightDispellableEffectMessage(128, this.caster.id, this.getAbstractFightDispellableEffect()));
+        if (this.fighter.isInvisible())
+        {
+            this.fighter.fight.sendExcept(new Messages.GameActionFightDispellableEffectMessage(128, this.caster.id, this.getAbstractFightDispellableEffect()), this.fighter);
+
+            this.fighter.sequenceCount++;
+            this.fighter.character.client.send(new Messages.SequenceStartMessage(1, this.fighter.id));
+            this.fighter.character.client.send(new Messages.GameActionFightPointsVariationMessage(129, this.fighter.id, this.fighter.id, this.delta));
+            this.fighter.character.client.send(new Messages.SequenceEndMessage(this.fighter.sequenceCount, this.fighter.id, 1));
+        }
+        else
+            this.fighter.fight.send(new Messages.GameActionFightDispellableEffectMessage(128, this.caster.id, this.getAbstractFightDispellableEffect()));
     }
 
     getAbstractFightDispellableEffect() {

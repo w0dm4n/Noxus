@@ -2421,6 +2421,75 @@ export class FightTeamMemberCharacterInformations extends FightTeamMemberInforma
     }
 }
 
+export class FightTeamMemberMonsterInformations extends FightTeamMemberInformations {
+    constructor(param1, monsterId, grade) {
+        super(param1);
+        this.monsterId = monsterId;
+        this.grade = grade;
+        this.protocolId = 6;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        buffer.writeInt(this.monsterId);
+        if (this.grade < 0) {
+            Logger.error("Forbidden value (" + this.grade + ") on element grade.");
+        }
+        buffer.writeByte(this.grade);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.monsterId = buffer.readInt();
+        this.grade = buffer.readByte();
+        if (this.grade < 0) {
+            Logger.error("Forbidden value (" + this.grade + ") on element of FightTeamMemberMonsterInformations.grade.");
+        }
+    }
+}
+
+export class GameFightAIInformations extends GameFightFighterInformations {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8);
+        this.protocolId = 151;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+    }
+}
+
+export class GameFightMonsterInformations extends GameFightAIInformations {
+    constructor(param1, param2, param3, param4, param5, param6, param7, param8, creatureGenericId, creatureGrade) {
+        super(param1, param2, param3, param4, param5, param6, param7, param8);
+        this.creatureGenericId = creatureGenericId;
+        this.creatureGrade = creatureGrade;
+        this.protocolId = 29;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.creatureGenericId < 0) {
+            Logger.error("Forbidden value (" + this.creatureGenericId + ") on element creatureGenericId.");
+        }
+        buffer.writeVarShort(this.creatureGenericId);
+        if (this.creatureGrade < 0) {
+            Logger.error("Forbidden value (" + this.creatureGrade + ") on element creatureGrade.");
+        }
+        buffer.writeByte(this.creatureGrade);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.creatureGenericId = buffer.readVarUhShort();
+        if (this.creatureGenericId < 0) {
+            Logger.error("Forbidden value (" + this.creatureGenericId + ") on element of GameFightMonsterInformations.creatureGenericId.");
+        }
+        this.creatureGrade = buffer.readByte();
+        if (this.creatureGrade < 0) {
+            Logger.error("Forbidden value (" + this.creatureGrade + ") on element of GameFightMonsterInformations.creatureGrade.");
+        }
+    }
+}
+
 export class NamedPartyTeamWithOutcome {
     constructor(team, outcome) {
         this.team = team;
@@ -2536,6 +2605,48 @@ export class FightResultMutantListEntry extends FightResultFighterListEntry {
     }
 }
 
+export class FightResultPlayerListEntry extends FightResultFighterListEntry {
+    constructor(param1, param2, param3, param4, param5, level, additional) {
+        super(param1, param2, param3, param4, param5);
+        this.level = level;
+        this.additional = additional;
+        this.protocolId = 24;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        if (this.level < 1 || this.level > 206) {
+            Logger.error("Forbidden value (" + this.level + ") on element level.");
+        }
+        buffer.writeByte(this.level);
+        buffer.writeShort(this.additional.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.additional.length) {
+            buffer.writeShort(this.additional[_loc2_].protocolId);
+            this.additional[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = 0;
+        var _loc5_ = null;
+        super.deserialize(buffer);
+        this.level = buffer.readUnsignedByte();
+        if (this.level < 1 || this.level > 206) {
+            Logger.error("Forbidden value (" + this.level + ") on element of FightResultPlayerListEntry.level.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = buffer.readUnsignedShort();
+            _loc5_ = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.fight.FightResultAdditionalData, _loc4_);
+            _loc5_.deserialize(buffer);
+            this.additional.push(_loc5_);
+            _loc3_++;
+        }
+    }
+}
+
+
 export class FightLoot {
     constructor(objects, kamas) {
         this.objects = objects;
@@ -2572,6 +2683,116 @@ export class FightLoot {
         this.kamas = buffer.readVarUhInt();
         if (this.kamas < 0) {
             Logger.error("Forbidden value (" + this.kamas + ") on element of FightLoot.kamas.");
+        }
+    }
+}
+
+export class FightResultAdditionalData {
+    constructor() {
+        this.protocolId = 191;
+    }
+    serialize(buffer) {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class FightResultExperienceData extends FightResultAdditionalData {
+    constructor(experience, showExperience, experienceLevelFloor, showExperienceLevelFloor, experienceNextLevelFloor, showExperienceNextLevelFloor, experienceFightDelta, showExperienceFightDelta, experienceForGuild, showExperienceForGuild, experienceForMount, showExperienceForMount, isIncarnationExperience, rerollExperienceMul) {
+        super();
+        this.experience = experience;
+        this.showExperience = showExperience;
+        this.experienceLevelFloor = experienceLevelFloor;
+        this.showExperienceLevelFloor = showExperienceLevelFloor;
+        this.experienceNextLevelFloor = experienceNextLevelFloor;
+        this.showExperienceNextLevelFloor = showExperienceNextLevelFloor;
+        this.experienceFightDelta = experienceFightDelta;
+        this.showExperienceFightDelta = showExperienceFightDelta;
+        this.experienceForGuild = experienceForGuild;
+        this.showExperienceForGuild = showExperienceForGuild;
+        this.experienceForMount = experienceForMount;
+        this.showExperienceForMount = showExperienceForMount;
+        this.isIncarnationExperience = isIncarnationExperience;
+        this.rerollExperienceMul = rerollExperienceMul;
+        this.protocolId = 192;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        var _loc2_ = 0;
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 0, this.showExperience);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 1, this.showExperienceLevelFloor);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 2, this.showExperienceNextLevelFloor);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 3, this.showExperienceFightDelta);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 4, this.showExperienceForGuild);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 5, this.showExperienceForMount);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 6, this.isIncarnationExperience);
+        buffer.writeByte(_loc2_);
+        if (this.experience < 0 || this.experience > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experience + ") on element experience.");
+        }
+        buffer.writeVarLong(this.experience);
+        if (this.experienceLevelFloor < 0 || this.experienceLevelFloor > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceLevelFloor + ") on element experienceLevelFloor.");
+        }
+        buffer.writeVarLong(this.experienceLevelFloor);
+        if (this.experienceNextLevelFloor < 0 || this.experienceNextLevelFloor > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceNextLevelFloor + ") on element experienceNextLevelFloor.");
+        }
+        buffer.writeVarLong(this.experienceNextLevelFloor);
+        if (this.experienceFightDelta < 0 || this.experienceFightDelta > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceFightDelta + ") on element experienceFightDelta.");
+        }
+        buffer.writeVarLong(this.experienceFightDelta);
+        if (this.experienceForGuild < 0 || this.experienceForGuild > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceForGuild + ") on element experienceForGuild.");
+        }
+        buffer.writeVarLong(this.experienceForGuild);
+        if (this.experienceForMount < 0 || this.experienceForMount > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceForMount + ") on element experienceForMount.");
+        }
+        buffer.writeVarLong(this.experienceForMount);
+        if (this.rerollExperienceMul < 0) {
+            Logger.error("Forbidden value (" + this.rerollExperienceMul + ") on element rerollExperienceMul.");
+        }
+        buffer.writeByte(this.rerollExperienceMul);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        var _loc2_ = buffer.readByte();
+        this.showExperience = IO.BooleanByteWrapper.getFlag(_loc2_, 0);
+        this.showExperienceLevelFloor = IO.BooleanByteWrapper.getFlag(_loc2_, 1);
+        this.showExperienceNextLevelFloor = IO.BooleanByteWrapper.getFlag(_loc2_, 2);
+        this.showExperienceFightDelta = IO.BooleanByteWrapper.getFlag(_loc2_, 3);
+        this.showExperienceForGuild = IO.BooleanByteWrapper.getFlag(_loc2_, 4);
+        this.showExperienceForMount = IO.BooleanByteWrapper.getFlag(_loc2_, 5);
+        this.isIncarnationExperience = IO.BooleanByteWrapper.getFlag(_loc2_, 6);
+        this.experience = buffer.readVarUhLong();
+        if (this.experience < 0 || this.experience > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experience + ") on element of FightResultExperienceData.experience.");
+        }
+        this.experienceLevelFloor = buffer.readVarUhLong();
+        if (this.experienceLevelFloor < 0 || this.experienceLevelFloor > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceLevelFloor + ") on element of FightResultExperienceData.experienceLevelFloor.");
+        }
+        this.experienceNextLevelFloor = buffer.readVarUhLong();
+        if (this.experienceNextLevelFloor < 0 || this.experienceNextLevelFloor > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceNextLevelFloor + ") on element of FightResultExperienceData.experienceNextLevelFloor.");
+        }
+        this.experienceFightDelta = buffer.readVarUhLong();
+        if (this.experienceFightDelta < 0 || this.experienceFightDelta > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceFightDelta + ") on element of FightResultExperienceData.experienceFightDelta.");
+        }
+        this.experienceForGuild = buffer.readVarUhLong();
+        if (this.experienceForGuild < 0 || this.experienceForGuild > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceForGuild + ") on element of FightResultExperienceData.experienceForGuild.");
+        }
+        this.experienceForMount = buffer.readVarUhLong();
+        if (this.experienceForMount < 0 || this.experienceForMount > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.experienceForMount + ") on element of FightResultExperienceData.experienceForMount.");
+        }
+        this.rerollExperienceMul = buffer.readByte();
+        if (this.rerollExperienceMul < 0) {
+            Logger.error("Forbidden value (" + this.rerollExperienceMul + ") on element of FightResultExperienceData.rerollExperienceMul.");
         }
     }
 }
@@ -2986,5 +3207,240 @@ export class FightTriggeredEffect extends AbstractFightDispellableEffect {
         this.param2 = buffer.readInt();
         this.param3 = buffer.readInt();
         this.delay = buffer.readShort();
+    }
+}
+
+export class GameRolePlayGroupMonsterInformations extends GameRolePlayActorInformations {
+    constructor(param1, param2, param3, staticInfos, creationTime, ageBonusRate, lootShare, alignmentSide, keyRingBonus, hasHardcoreDrop, hasAVARewardToken) {
+        super(param1, param2, param3);
+        this.staticInfos = staticInfos;
+        this.creationTime = creationTime;
+        this.ageBonusRate = ageBonusRate;
+        this.lootShare = lootShare;
+        this.alignmentSide = alignmentSide;
+        this.keyRingBonus = keyRingBonus;
+        this.hasHardcoreDrop = hasHardcoreDrop;
+        this.hasAVARewardToken = hasAVARewardToken;
+        this.protocolId = 160;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        var _loc2_ = 0;
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 0, this.keyRingBonus);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 1, this.hasHardcoreDrop);
+        _loc2_ = IO.BooleanByteWrapper.setFlag(_loc2_, 2, this.hasAVARewardToken);
+        buffer.writeByte(_loc2_);
+        buffer.writeShort(this.staticInfos.protocolId);
+        this.staticInfos.serialize(buffer);
+        if (this.creationTime < 0 || this.creationTime > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.creationTime + ") on element creationTime.");
+        }
+        buffer.writeDouble(this.creationTime);
+        if (this.ageBonusRate < 0) {
+            Logger.error("Forbidden value (" + this.ageBonusRate + ") on element ageBonusRate.");
+        }
+        buffer.writeInt(this.ageBonusRate);
+        if (this.lootShare < -1 || this.lootShare > 8) {
+            Logger.error("Forbidden value (" + this.lootShare + ") on element lootShare.");
+        }
+        buffer.writeByte(this.lootShare);
+        buffer.writeByte(this.alignmentSide);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        var _loc2_ = buffer.readByte();
+        this.keyRingBonus = IO.BooleanByteWrapper.getFlag(_loc2_, 0);
+        this.hasHardcoreDrop = IO.BooleanByteWrapper.getFlag(_loc2_, 1);
+        this.hasAVARewardToken = IO.BooleanByteWrapper.getFlag(_loc2_, 2);
+        var _loc3_ = buffer.readUnsignedShort();
+        this.staticInfos = ProtocolTypeManager.getInstance(com.ankamagames.dofus.network.types.game.context.roleplay.GroupMonsterStaticInformations, _loc3_);
+        this.staticInfos.deserialize(buffer);
+        this.creationTime = buffer.readDouble();
+        if (this.creationTime < 0 || this.creationTime > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.creationTime + ") on element of GameRolePlayGroupMonsterInformations.creationTime.");
+        }
+        this.ageBonusRate = buffer.readInt();
+        if (this.ageBonusRate < 0) {
+            Logger.error("Forbidden value (" + this.ageBonusRate + ") on element of GameRolePlayGroupMonsterInformations.ageBonusRate.");
+        }
+        this.lootShare = buffer.readByte();
+        if (this.lootShare < -1 || this.lootShare > 8) {
+            Logger.error("Forbidden value (" + this.lootShare + ") on element of GameRolePlayGroupMonsterInformations.lootShare.");
+        }
+        this.alignmentSide = buffer.readByte();
+    }
+}
+
+export class GroupMonsterStaticInformations {
+    constructor(mainCreatureLightInfos, underlings) {
+        this.mainCreatureLightInfos = mainCreatureLightInfos;
+        this.underlings = underlings;
+        this.protocolId = 140;
+    }
+    serialize(buffer) {
+        this.mainCreatureLightInfos.serialize(buffer);
+        buffer.writeShort(this.underlings.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.underlings.length) {
+            this.underlings[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = null;
+        this.mainCreatureLightInfos = new Types.MonsterInGroupLightInformations();
+        this.mainCreatureLightInfos.deserialize(buffer);
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = new Types.MonsterInGroupInformations();
+            _loc4_.deserialize(buffer);
+            this.underlings.push(_loc4_);
+            _loc3_++;
+        }
+    }
+}
+
+export class MonsterInGroupLightInformations {
+    constructor(creatureGenericId, grade) {
+        this.creatureGenericId = creatureGenericId;
+        this.grade = grade;
+        this.protocolId = 395;
+    }
+    serialize(buffer) {
+        buffer.writeInt(this.creatureGenericId);
+        if (this.grade < 0) {
+            Logger.error("Forbidden value (" + this.grade + ") on element grade.");
+        }
+        buffer.writeByte(this.grade);
+    }
+    deserialize(buffer) {
+        this.creatureGenericId = buffer.readInt();
+        this.grade = buffer.readByte();
+        if (this.grade < 0) {
+            Logger.error("Forbidden value (" + this.grade + ") on element of MonsterInGroupLightInformations.grade.");
+        }
+    }
+}
+
+export class MonsterInGroupInformations extends MonsterInGroupLightInformations {
+    constructor(param1, param2, look) {
+        super(param1, param2);
+        this.look = look;
+        this.protocolId = 144;
+    }
+    serialize(buffer) {
+        super.serialize(buffer);
+        this.look.serialize(buffer);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.look = new EntityLook();
+        this.look.deserialize(buffer);
+    }
+}
+
+export class GameActionMark {
+    constructor(markAuthorId, markTeamId, markSpellId, markSpellLevel, markId, markType, markimpactCell, cells, active) {
+        this.markAuthorId = markAuthorId;
+        this.markTeamId = markTeamId;
+        this.markSpellId = markSpellId;
+        this.markSpellLevel = markSpellLevel;
+        this.markId = markId;
+        this.markType = markType;
+        this.markimpactCell = markimpactCell;
+        this.cells = cells;
+        this.active = active;
+        this.protocolId = 351;
+    }
+    serialize(buffer) {
+        if (this.markAuthorId < -9007199254740990 || this.markAuthorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.markAuthorId + ") on element markAuthorId.");
+        }
+        buffer.writeDouble(this.markAuthorId);
+        buffer.writeByte(this.markTeamId);
+        if (this.markSpellId < 0) {
+            Logger.error("Forbidden value (" + this.markSpellId + ") on element markSpellId.");
+        }
+        buffer.writeInt(this.markSpellId);
+        if (this.markSpellLevel < 1 || this.markSpellLevel > 200) {
+            Logger.error("Forbidden value (" + this.markSpellLevel + ") on element markSpellLevel.");
+        }
+        buffer.writeShort(this.markSpellLevel);
+        buffer.writeShort(this.markId);
+        buffer.writeByte(this.markType);
+        if (this.markimpactCell < -1 || this.markimpactCell > 559) {
+            Logger.error("Forbidden value (" + this.markimpactCell + ") on element markimpactCell.");
+        }
+        buffer.writeShort(this.markimpactCell);
+        buffer.writeShort(this.cells.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.cells.length) {
+            this.cells[_loc2_].serialize(buffer);
+            _loc2_++;
+        }
+        buffer.writeBoolean(this.active);
+    }
+    deserialize(buffer) {
+        var _loc4_ = null;
+        this.markAuthorId = buffer.readDouble();
+        if (this.markAuthorId < -9007199254740990 || this.markAuthorId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.markAuthorId + ") on element of GameActionMark.markAuthorId.");
+        }
+        this.markTeamId = buffer.readByte();
+        if (this.markTeamId < 0) {
+            Logger.error("Forbidden value (" + this.markTeamId + ") on element of GameActionMark.markTeamId.");
+        }
+        this.markSpellId = buffer.readInt();
+        if (this.markSpellId < 0) {
+            Logger.error("Forbidden value (" + this.markSpellId + ") on element of GameActionMark.markSpellId.");
+        }
+        this.markSpellLevel = buffer.readShort();
+        if (this.markSpellLevel < 1 || this.markSpellLevel > 200) {
+            Logger.error("Forbidden value (" + this.markSpellLevel + ") on element of GameActionMark.markSpellLevel.");
+        }
+        this.markId = buffer.readShort();
+        this.markType = buffer.readByte();
+        this.markimpactCell = buffer.readShort();
+        if (this.markimpactCell < -1 || this.markimpactCell > 559) {
+            Logger.error("Forbidden value (" + this.markimpactCell + ") on element of GameActionMark.markimpactCell.");
+        }
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = new Types.GameActionMarkedCell();
+            _loc4_.deserialize(buffer);
+            this.cells.push(_loc4_);
+            _loc3_++;
+        }
+        this.active = buffer.readBoolean();
+    }
+}
+
+export class GameActionMarkedCell {
+    constructor(cellId, zoneSize, cellColor, cellsType) {
+        this.cellId = cellId;
+        this.zoneSize = zoneSize;
+        this.cellColor = cellColor;
+        this.cellsType = cellsType;
+        this.protocolId = 85;
+    }
+    serialize(buffer) {
+        if (this.cellId < 0 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element cellId.");
+        }
+        buffer.writeVarShort(this.cellId);
+        buffer.writeByte(this.zoneSize);
+        buffer.writeInt(this.cellColor);
+        buffer.writeByte(this.cellsType);
+    }
+    deserialize(buffer) {
+        this.cellId = buffer.readVarUhShort();
+        if (this.cellId < 0 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element of GameActionMarkedCell.cellId.");
+        }
+        this.zoneSize = buffer.readByte();
+        this.cellColor = buffer.readInt();
+        this.cellsType = buffer.readByte();
     }
 }

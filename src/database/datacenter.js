@@ -19,7 +19,7 @@ export default class Datacenter {
     static spellsLevels;
     static elements;
     static npcs = { npcs: [], npcSpawns: [] , npcReplies :[] , npcActions :[] , npcItems : [] };
-
+    static monsters;
 
     static load(callback) {
         var loaders = [
@@ -39,7 +39,8 @@ export default class Datacenter {
             Datacenter.loadNpcItems,
             Datacenter.loadNpcActions,
             Datacenter.loadItemsSets,
-            Datacenter.loadNpcsReplies
+            Datacenter.loadNpcsReplies,
+            Datacenter.loadMonsters
 
         ];
         var loaded = 0;
@@ -197,6 +198,14 @@ export default class Datacenter {
         DBManager.getSpellsLevels(function (spells) {
             Datacenter.spellsLevels = spells;
             Logger.infos("Loaded '" + spells.length + "' spell level(s)");
+            callback();
+        });
+    }
+
+    static loadMonsters(callback) {
+        DBManager.getMonsters(function (monsters) {
+            Datacenter.monsters = monsters;
+            Logger.infos("Loaded '" + monsters.length + "' monster(s)");
             callback();
         });
     }
