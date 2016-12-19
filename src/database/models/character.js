@@ -510,6 +510,17 @@ export default class Character {
             this.dialog.close();
     }
 
+    getExperienceFloorsData() {
+        var nextFloor = null;
+        if(this.level + 1 <= 200) {
+            nextFloor = CharacterManager.getExperienceFloorByLevel(this.level + 1);
+        }
+        else {
+            nextFloor = CharacterManager.getExperienceFloorByLevel(200);
+        }
+        return { floor: CharacterManager.getExperienceFloorByLevel(this.level), nextFloor: nextFloor };
+    }
+
     addSpell(spell) {
         this.spells.push(spell);
         this.save();

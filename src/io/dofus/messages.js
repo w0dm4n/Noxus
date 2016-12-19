@@ -4763,3 +4763,74 @@ export class GameActionFightMarkCellsMessage extends AbstractGameActionMessage {
         this.mark.deserialize(buffer);
     }
 }
+export class GameActionFightSpellCooldownVariationMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4, param5) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.spellId = param4;
+        this.value = param5;
+        this.messageId = 6219;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        if (this.spellId < 0) {
+            Logger.error("Forbidden value (" + this.spellId + ") on element spellId.");
+        }
+        this.buffer.writeVarShort(this.spellId);
+        this.buffer.writeVarShort(this.value);
+    }
+}
+
+export class GameActionFightTriggerGlyphTrapMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4, param5) {
+        super(param1, param2);
+        this.markId = param3;
+        this.triggeringCharacterId = param4;
+        this.triggeredSpellId = param5;
+        this.messageId = 5741;
+    }
+    serialize() {
+        super.serialize();
+        this.buffer.writeShort(this.markId);
+        if (this.triggeringCharacterId < -9007199254740990 || this.triggeringCharacterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.triggeringCharacterId + ") on element triggeringCharacterId.");
+        }
+        this.buffer.writeDouble(this.triggeringCharacterId);
+        if (this.triggeredSpellId < 0) {
+            Logger.error("Forbidden value (" + this.triggeredSpellId + ") on element triggeredSpellId.");
+        }
+        this.buffer.writeVarShort(this.triggeredSpellId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.markId = buffer.readShort();
+        this.triggeringCharacterId = buffer.readDouble();
+        if (this.triggeringCharacterId < -9007199254740990 || this.triggeringCharacterId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.triggeringCharacterId + ") on element of GameActionFightTriggerGlyphTrapMessage.triggeringCharacterId.");
+        }
+        this.triggeredSpellId = buffer.readVarUhShort();
+        if (this.triggeredSpellId < 0) {
+            Logger.error("Forbidden value (" + this.triggeredSpellId + ") on element of GameActionFightTriggerGlyphTrapMessage.triggeredSpellId.");
+        }
+    }
+}
+
+export class GameActionFightUnmarkCellsMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3) {
+        super(param1, param2);
+        this.markId = param3;
+        this.messageId = 5570;
+    }
+    serialize() {
+        super.serialize();
+        this.buffer.writeShort(this.markId);
+    }
+    deserialize(buffer) {
+        super.deserialize(buffer);
+        this.markId = buffer.readShort();
+    }
+}

@@ -145,6 +145,7 @@ export default class FightHandler {
             if(client.character.cellid == monsterGroup.cellId) {
                 if (!client.character.isInFight()) {
                     // Create fight properly
+                    client.character.getMap().removeMonsterGroup(monsterGroup);
                     var fight = new PVMFight(client, monsterGroup);
                     fight.map.fights.push(fight);
                     client.character.fight = fight;

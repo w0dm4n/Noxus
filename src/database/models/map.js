@@ -33,6 +33,7 @@ export default class Map {
         this.monsters = [];
         this.monstersGroups = [];
         this.mapType = raw.mapType;
+        this.tempId = -1;
     }
 
     init() {
@@ -202,17 +203,6 @@ export default class Map {
         return false;
     }
 
-    refillMapWithMonstersGroups() {
-        Logger.debug("Refill the map id: " + this._id + " with monster(s) group(s)");
-        var data = [{templateId: 2850, grade: 5}];
-        for(var i = 0; i < 3; i++) {
-            var group = new MonstersGroup(data, this, 369);
-            this.monstersGroups.push(group);
-        }
-        this.monstersGroups.push(new MonstersGroup(data, this, 350));
-        this.monstersGroups.push(new MonstersGroup(data, this, 120));
-    }
-
     getMonsterGroup(groupId) {
         for(var g of this.monstersGroups) {
             if(g.id == groupId) return g;
@@ -220,12 +210,19 @@ export default class Map {
         return null;
     }
 
+    removeMonsterGroup(group) {
+        group.removeFromMap();
+        var index = this.monstersGroups.indexOf(group);
+        if (index != -1) {
+            this.monstersGroups.splice(index, 1);
+        }
+        var group = SpawnManager.generateGroup(this, true);
+        this.monstersGroups.push(group);
+        this.send(new Messages.GameRolePlayShowActorMessage(group.getGameRolePlayGroupMonsterInformations()));
+    }
+
     getNextMonsterGroupsId()
     {
-        var id = 0;
-        for (var group of this.monstersGroups)
-            id++;
-        id += 1;
-        return id;
+        return this.tempId--;
     }
 }

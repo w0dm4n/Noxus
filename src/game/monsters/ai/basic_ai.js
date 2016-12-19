@@ -35,6 +35,18 @@ export default class BasicAI {
             if(this.fighter.current.MP <= 0) {
                 break;
             }
+
+            var glyphsOnCell = this.fighter.fight.getGlyphsOnCell(c.cell.id);
+            if (glyphsOnCell.length > 0) {
+                for (var glyph of glyphsOnCell) {
+                    glyph.apply(this.fighter);
+                }
+                movementKeys.push(c.cell.id);
+                this.fighter.cellId = c.cell.id;
+                this.fighter.current.MP--;
+                break;
+            }
+
             movementKeys.push(c.cell.id);
             this.fighter.cellId = c.cell.id;
             this.fighter.current.MP--;

@@ -3,7 +3,8 @@ import * as Types from "../../../io/dofus/types"
 
 export default class FightChallengeResult {
 
-    constructor(fight, fighter, isWinner) {
+    constructor(applyTo, fight, fighter, isWinner) {
+        this.applyTo = applyTo;
         this.fight = fight;
         this.fighter = fighter;
         this.isWinner = isWinner;

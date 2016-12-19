@@ -11,6 +11,7 @@ export default class SpellHistoryInformation{
     }
 
     getElapsedRoundSpell(current){
-        return (this.getRound(current) - this.spell.minCastInterval);
+        
+        return (this.getRound(current) < this.spell.minCastInterval);
     }
 }

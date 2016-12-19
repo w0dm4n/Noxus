@@ -26,7 +26,7 @@ export default class FightSpellProcessor {
 
     }
 
-    static process(fight, caster, spell, spellLevel, effects, cellId) {
+    static process(fight, caster, spell, spellLevel, effects, cellId, forcedTarget = null) {
 
         var randomEffects = [];
         var nEffects = [];
@@ -93,7 +93,7 @@ export default class FightSpellProcessor {
                 spellLevel: spellLevel,
                 effect: toApply.effect,
                 cellId: cellId,
-                targets: toApply.targets,
+                targets: (forcedTarget) ? [forcedTarget] : toApply.targets,
                 shape: toApply.shape,
             });
         }

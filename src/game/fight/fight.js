@@ -220,9 +220,11 @@ export default class Fight {
     leaveFight(fighter, leaveType) {
         var team = fighter.team;
         team.removeMember(fighter);
-        this.send(new Messages.GameFightRemoveTeamMemberMessage(this.id, team.id, fighter.id));
-        this.send(new Messages.GameFightLeaveMessage(fighter.id));
-        this.send(new Messages.GameContextRemoveElementMessage(fighter.id));
+        if(!fighter.isAI) {
+            this.send(new Messages.GameFightRemoveTeamMemberMessage(this.id, team.id, fighter.id));
+            this.send(new Messages.GameFightLeaveMessage(fighter.id));
+            this.send(new Messages.GameContextRemoveElementMessage(fighter.id));
+        }
 
         fighter.alive = false;
         if (!fighter.isAI) {
@@ -259,14 +261,14 @@ export default class Fight {
         fighter.character.fight = null;
         fighter.character.fighter = null;
 
+        if (this.fightState != Fight.FIGHT_STATES.END) this.checkEnd();
+
         if (this.fightState == Fight.FIGHT_STATES.FIGHTING) {
             if (this.timeline.currentFighter().id == fighter.id) {
                 this.timeline.next();
                 this.timeline.remixTimeline();
             }
         }
-
-        if (this.fightState != Fight.FIGHT_STATES.END) this.checkEnd();
     }
 
     checkEnd() {
@@ -353,10 +355,10 @@ export default class Fight {
             var entry = null;
             switch(this.fightType) {
                 case Fight.FIGHT_TYPE.FIGHT_TYPE_CHALLENGE:
-                    entry = new FightChallengeResult(this, f, true).getEntry()
+                    entry = new FightChallengeResult(fighter, this, f, true).getEntry()
                     break;
                 case Fight.FIGHT_TYPE.FIGHT_TYPE_PvM:
-                    entry = new FightPVMResult(this, f, true).getEntry()
+                    entry = new FightPVMResult(fighter, this, f, true, winners, loosers).getEntry()
                     break;
             }
             winnerResult.push(entry);
@@ -366,10 +368,10 @@ export default class Fight {
             var entry = null;
             switch(this.fightType) {
                 case Fight.FIGHT_TYPE.FIGHT_TYPE_CHALLENGE:
-                    entry = new FightChallengeResult(this, f, true).getEntry()
+                    entry = new FightChallengeResult(fighter, this, f, false).getEntry()
                     break;
                 case Fight.FIGHT_TYPE.FIGHT_TYPE_PvM:
-                    entry = new FightPVMResult(this, f, false).getEntry()
+                    entry = new FightPVMResult(fighter, this, f, false, winners, winners).getEntry()
                     break;
             }
             winnerResult.push(entry);
@@ -402,6 +404,19 @@ export default class Fight {
         return obs;
     }
 
+    getGlyphsOnCell(cellId)
+    {
+        var glyphs = [];
+        for (var glyph of this.glyphs)
+        {
+            for (var cell of glyph.cells) {
+                if (cell == cellId)
+                    glyphs.push(glyph);
+            }
+        }
+        return glyphs;
+    }
+
     requestMove(fighter, keyMovements, pathfinding) {
         Logger.debug("Fighter id: " + fighter.id + ", request move (keys len: " + keyMovements.length + ")");
         var cells = [];
@@ -419,20 +434,41 @@ export default class Fight {
                 pathTotal = pathTotal.concat(path);
             }
         }
+        var pathWithGlyph = [];
+        for (var cell of pathTotal)
+        {
+            pathWithGlyph.push(cell);
+            var glyphsOnCell = this.getGlyphsOnCell(cell.id);
+            if (glyphsOnCell.length > 0) {
+                for (var glyph of glyphsOnCell) {
+                    glyph.apply(fighter);
+                }
+                break;
+            }
+        }
 
-        var distance = pathTotal.length;
+        var movementKeys = [fighter.cellId];
+        for (var cell of pathWithGlyph)
+            movementKeys.push(cell.id);
+
+        var distance = pathWithGlyph.length;
         Logger.debug("Fighter want to move to a distance equals to: " + distance);
+
+        if(!fighter.isMyTurn()) {
+            Logger.error("Can't move because is not the fighter turn ..");
+            return;
+        }
 
         if (fighter.current.MP - distance >= 0) {
             if (fighter.isInvisible()) {
                 fighter.team.send(new Messages.SequenceStartMessage(5, fighter.id));
-                fighter.team.send(new Messages.GameMapMovementMessage(keyMovements, fighter.id));
+                fighter.team.send(new Messages.GameMapMovementMessage(movementKeys, fighter.id));
                 fighter.team.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
                 fighter.team.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
             }
             else {
                 this.send(new Messages.SequenceStartMessage(5, fighter.id));
-                this.send(new Messages.GameMapMovementMessage(keyMovements, fighter.id));
+                this.send(new Messages.GameMapMovementMessage(movementKeys, fighter.id));
                 this.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
                 this.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
             }
@@ -610,6 +646,12 @@ export default class Fight {
                     else {
                         this.castSpellError(fighter, spellLevel._id, { id: 1, messageId: 116, params: [] });
                     }
+                }else{
+                      this.castSpellError(fighter, spellLevel._id, {
+                    id: 0,
+                    messageId: 0,
+                    params: ["Impossible de lancer ce sort : limite d'utilisation par tour atteinte."]
+                });
                 }
             }
         }

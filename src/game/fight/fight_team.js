@@ -51,7 +51,7 @@ export default class FightTeam {
 
     isInThisTeam(fighterId) {
         for(var f of this.members) {
-            if(f.character._id == fighterId) return true;
+            if(f.id == fighterId) return true;
         }
         return false;
     }

@@ -40,6 +40,7 @@ export default class CommandManager {
         { name:"capital", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points de capital"},
         { name:"spell", role:AccountRole.MODERATOR, description: "Permet d'apprendre un sort"},
         { name:"spellpoints", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points de sort"},
+        { name:"kill", role:AccountRole.MODERATOR, description: "Permet de tuer tout le monde"},
     ];
     
     static manageCommand(command, client)
@@ -461,5 +462,18 @@ export default class CommandManager {
         }
         else
             client.character.replyError("Erreur de syntaxe (.spellpoints characterName spellPoints)");
+    }
+
+    static handle_kill(data, client)
+    {
+        if(client.character.isInFight()) {
+            var fight = client.character.fight;
+            var otherTeam = fight.getOppositeTeam(client.character.fighter.team);
+            for(var f of otherTeam.getAliveMembers()) {
+                f.current.life = 0;
+                f.alive = false;
+            }
+            fight.checkEnd();
+        }
     }
 }

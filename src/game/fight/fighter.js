@@ -16,6 +16,7 @@ import SpellHistory from "../../game/spell/spell_history"
 
 export default class Fighter {
 
+
     static FIGHTER_TYPE = {
         HUMAN: 1,
         MONSTER: 2,
@@ -35,6 +36,8 @@ export default class Fighter {
         this.spellDamagesBoosts = {};
         this.fighterType = Fighter.FIGHTER_TYPE.HUMAN;
         this.spellHistory = new SpellHistory(this);
+        this.isSwapDamage = 0;
+        this.multipleDamage = 0;
     }
 
     initFromCharacter(character) {
@@ -213,6 +216,8 @@ export default class Fighter {
 
     checkBuffValidity(spellLevel, effectId, spellLevelId) {
         var maxStack = spellLevel.maxStack;
+        if (effectId == 950)
+            return true;
         if (maxStack > 0) {
             var stack = this.getActiveBuffByEffectId(effectId, spellLevelId);
             return (stack < maxStack) ? true : false;
@@ -273,16 +278,24 @@ export default class Fighter {
         //TODO: Check shield point because the packet is not the same
         //TODO: Erosion system
         if (this.alive) {
-            if (this.current.life - damages < 0) {
-                damages = this.current.life;
+            if (this.isSwapDamage == 1) {
+                this.heal(from, damages, 0);
+            } else {
+                if(this.multipleDamage > 0){
+                    damages *= (this.multipleDamage / 100);
+                }
+                if (this.current.life - damages < 0) {
+                    damages = this.current.life;
+                }
+                this.current.life -= damages;
+                var erodedLife = this.getErodationByDamage(damages);
+                this.current.erosion += erodedLife;
+                Logger.debug("Fighter taking damages amount: " + damages + " and get erosion amount: " + erodedLife);
+                this.fight.send(new Messages.GameActionFightLifePointsLostMessage(0, from.id, this.id, damages, erodedLife));
+                this.checkIfIsDead();
+                return damages;
             }
-            this.current.life -= damages;
-            var erodedLife = this.getErodationByDamage(damages);
-            this.current.erosion += erodedLife;
-            Logger.debug("Fighter taking damages amount: " + damages + " and get erosion amount: " + erodedLife);
-            this.fight.send(new Messages.GameActionFightLifePointsLostMessage(0, from.id, this.id, damages, erodedLife));
-            this.checkIfIsDead();
-            return damages;
+
         }
         else {
             return 0;
@@ -298,8 +311,8 @@ export default class Fighter {
     }
 
     checkCalcRate(calc) {
-        if (calc == 0 || calc < 10)
-            return 10;
+        if (calc < 0 || calc < 20)
+            return 20;
         if (calc > 100 && calc <= 150)
             return 60;
         else if (calc > 100 && calc <= 160)
@@ -358,10 +371,13 @@ export default class Fighter {
             var target_esquive = this.getStats().getDodgeAndWithdrawal();
             Logger.infos("Caster retrait: " + caster_retrait + ", Target esquive: " + target_esquive);
             while (mpPoints > 0) {
+                Logger.debug("fdp1");
                 if (this.current.MP > 0) {
+                    Logger.debug("fdp2");
                     calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.MP / this.getStats().getTotalStats(2))));
                     calc = this.checkCalcRate(calc);
                     if (calc > 0) {
+                        Logger.debug("fdp3");
                         rand = Basic.getRandomInt(0, 100);
                         if (calc >= rand) {
                             Logger.debug("One PM lose with calc : " + calc + ", rand : " + rand);
@@ -372,7 +388,11 @@ export default class Fighter {
                             Logger.debug("One PM lose avoid with calc : " + calc + ", rand : " + rand);
                         }
                     }
+                    else
+                        Logger.debug("fdp4");
                 }
+                else
+                    Logger.debug("NO PM !");
                 mpPoints--;
             }
             if (totalMPLost != 0)
@@ -414,7 +434,7 @@ export default class Fighter {
         var point = MapPoint.fromCellId(this.cellId);
         var toCell = this.cellId;
         var collidedFighter = null;
-        var path = [];
+        var cells = [];
         for (var i = 0; i < power; i++) {
             var dirCell = point.getNearestCellInDirection(dir);
             if (dirCell) {
@@ -426,8 +446,20 @@ export default class Fighter {
                 if (!this.fight.map.isWalkableCell(dirCell._nCellId)) {
                     break;
                 }
+
+                var glyphsOnCell = this.fight.getGlyphsOnCell(dirCell._nCellId);
+                if (glyphsOnCell.length > 0) {
+                    for (var glyph of glyphsOnCell) {
+                        glyph.apply(this);
+                    }
+                    point = dirCell;
+                    toCell = dirCell._nCellId;
+                    break;
+                }
+
                 point = dirCell;
                 toCell = dirCell._nCellId;
+                cells.push(dirCell);
             }
             else {
                 break;
@@ -494,25 +526,25 @@ export default class Fighter {
         }
     }
 
-    canCastSpell(spell,cell) {
+    canCastSpell(spell, cell) {
         var result;
         if (this.alive) {
             if (!this.character.statsManager.hasSpell(spell.spellId)) {
                 result = false;
             } else {
-                /*
-                if (!this.spellHistory.canCastSpell(spell,cell)) {
+
+                if (!this.spellHistory.canCastSpell(spell, cell)) {
                     result = false;
                 } else {
                     result = true;
                 }
-                */
-                result = true;
+
             }
 
         } else {
             result = false;
         }
         return result;
+
     }
 }

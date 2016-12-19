@@ -59,7 +59,10 @@ export default class FightGlyph {
 
     getRadius()
     {
-        return this.effect.rawZone[1];
+        if (this.getShape() == "P")
+            return 0;
+        else
+            return this.effect.rawZone[1];
     }
 
     getCellsType()
@@ -84,31 +87,94 @@ export default class FightGlyph {
         }
     }
 
-    getMarkedCells()
+    getMarkedCells(forOpposite = false)
     {
         var markedCells = [];
-        var cellsType = this.getCellsType();
-
-        for (var cell of this.cells)
-            markedCells.push(new Types.GameActionMarkedCell(this.centerCell, this.getRadius(), this.effect.value, cellsType));
+        if (forOpposite) {
+            return markedCells;
+        }
+        else {
+            markedCells.push(new Types.GameActionMarkedCell(this.centerCell, this.getRadius(), this.effect.value, this.getCellsType()));
+        }
         return markedCells;
     }
 
-    getMark()
+    getMark(forOpposite = false)
     {
-        return new Types.GameActionMark(this.caster.id, this.caster.team.id, this.spell._id, 1, this.id, this.getMarkType(),
-        this.centerCell, this.getMarkedCells(), true);
+        return new Types.GameActionMark(this.caster.id, this.caster.team.id, this.spell.spellId, this.spellLevel.grade, this.id, this.getMarkType(),
+            (forOpposite) ? -1 : this.centerCell, this.getMarkedCells(forOpposite), true);
     }
 
-    showGlyphToFight()
+    showGlyphToFight(all)
     {
-        var message = new Messages.GameActionFightMarkCellsMessage(0, this.caster.id, this.getMark());
         if (this.markType == MarkTypeEnum.TRAP)
         {
-            this.caster.team.send(message);
+            this.caster.team.send(new Messages.GameActionFightMarkCellsMessage(0, this.caster.id, this.getMark()));
+            var oppositeTeam = this.fight.getOppositeTeam(this.caster.team);
+            oppositeTeam.send(new Messages.GameActionFightMarkCellsMessage(0, this.caster.id, this.getMark(true)));
         }
         else {
             //this.fight.send();
+        }
+    }
+
+    getFightersOnGlyph()
+    {
+        var fighters = [];
+        for (var cell of this.cells)
+        {
+            var fighter = this.fight.getFighterOnCell(cell);
+            if (fighter)
+                fighters.push(fighter);
+        }
+        return fighters;
+    }
+
+    getCastInformations() {
+        var spell = SpellManager.getSpell(this.effect.diceNum);
+        if (spell) {
+            var id = spell.spellLevels[this.spellLevel.grade];
+            if (id > 0)
+            {
+                var spellLevel = SpellManager.getSpellLevelById(id);
+                if (spellLevel) {
+                    return {spell: spell, spellLevel: spellLevel};
+                }
+            }
+        }
+        return null;
+    }
+
+    apply(source, callback)
+    {
+        source.sequenceCount++;
+        this.fight.send(new Messages.SequenceStartMessage(1, source.id));
+
+        this.fight.send(new Messages.GameActionFightTriggerGlyphTrapMessage(306, this.caster.id, this.id, source.id, this.spell.spellId));
+        this.fight.send(new Messages.GameActionFightUnmarkCellsMessage(310, this.caster.id, this.id));
+
+        var fighters = this.getFightersOnGlyph();
+        if (fighters.length > 0) {
+            for (var fighter of fighters)
+            {
+                var data = this.getCastInformations();
+                if (data) {
+                    FightSpellProcessor.process(this.fight, this.caster, data.spell, data.spellLevel, data.spellLevel.effects, this.centerCell, fighter);
+                }
+            }
+        }
+        this.fight.send(new Messages.SequenceEndMessage(source.sequenceCount, source.id, 1));
+        this.dispose();
+        if (callback)
+            callback();
+    }
+
+    dispose()
+    {
+        var index = this.fight.glyphs.indexOf(this);
+        if (index != -1) {
+            this.fight.glyphs.splice(index, 1);
+            Logger.debug("Glyph with id " + this.id + " removed !");
         }
     }
 }

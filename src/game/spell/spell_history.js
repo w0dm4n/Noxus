@@ -14,6 +14,8 @@ export default class SpellHistory {
 
     }
 
+    
+
     canCastSpell(spell, cell) {
         var result;
         var SpellHistory = this.getLastSpell(spell.spellId);
@@ -24,10 +26,12 @@ export default class SpellHistory {
             if (SpellHistory == null) {
                 result = true;
             } else {
+
                 if (SpellHistory.getElapsedRoundSpell(round)) {
                     result = false;
                 } else {
-                    var array = this.getSpellCastTurn(spell.spellId);
+                    var array = this.getSpellCastTurn(spell.spellId).length;
+
                     if (array.length == 0) {
                         result = true;
                     } else {
@@ -38,15 +42,12 @@ export default class SpellHistory {
                             if (target == null) {
                                 result = true;
                             } else {
-                                var count = this.getSpellPerTarget(target);
-                                console.log(count);
-                                
-                                result = true;
-                                /*if (spell.maxCastPerTarget <= 0 || count < spell.maxCastPerTarget) {
+                                var count = this.getSpellPerTarget(target).length;
+                                if ((spell.maxCastPerTarget <= 0) || (count < spell.maxCastPerTarget) || (count.length == 0)) {
                                     result = true;
                                 } else {
                                     result = false;
-                                }*/
+                                }
                             }
                         }
                     }
@@ -61,7 +62,8 @@ export default class SpellHistory {
             return null;
         } else {
             for (var i = (this.spellStack.length - 1); i >= 0; i--) {
-                return this.spellStack[i];
+                if (this.spellStack[i].spell.spellId == spellId)
+                    return this.spellStack[i];
             }
         }
         return null;
@@ -81,11 +83,24 @@ export default class SpellHistory {
     getSpellPerTarget(target) {
         var result = [];
         for (var i of this.spellStack) {
-            if ((i.target != null) && (i.target == target)) {
+            if ((i.target != null) && (i.target == target) && (i.round == this.actor.fight.timeline.round)) {
                 result.push(i);
             }
         }
 
         return result;
     }
+
+    getHistorySpell(spellId) {
+
+        var round = this.actor.fight.timeline.round;
+        for (var i = (this.spellStack.length - 1); i >= 0; i--) {
+            if ((this.spellStack[i].spell.spellId == spellId) && (this.spellStack[i].getElapsedRoundSpell(round) == true)) {
+                return this.spellStack[i];
+            }
+        }
+
+        return null;
+    }
+
 }
