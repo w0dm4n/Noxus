@@ -21,20 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fighter.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/game/fight/fighter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="391" column="45" lean-forward="true" selection-start-line="391" selection-start-column="45" selection-end-line="391" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="map_point.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/pathfinding/map_point.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state relative-caret-position="969">
               <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
               <folding />
             </state>
@@ -44,9 +34,23 @@
       <file leaf-file-name="fight_team.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/fight/fight_team.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="748">
+              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+              <folding>
+                <marker date="1482157337000" expanded="true" signature="238:761" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="786:858" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="886:1037" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1061:1209" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1125:1178" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1252:1600" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1309:1594" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1478:1534" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1630:1753" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1667:1725" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1786:2049" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="1850:1933" ph="{...}" />
+                <marker date="1482157337000" expanded="true" signature="2085:2261" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,9 +58,11 @@
       <file leaf-file-name="basic_ai.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/monsters/ai/basic_ai.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="1479">
+              <caret line="90" column="44" lean-forward="false" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+              <folding>
+                <marker date="1482158848000" expanded="true" signature="6359:6366" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,8 +70,8 @@
       <file leaf-file-name="fight_glyph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/fight/fight_glyph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="168" column="23" lean-forward="true" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
+            <state relative-caret-position="514">
+              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -76,7 +82,7 @@
       <file leaf-file-name="fight_spell_processor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/fight/fight_spell_processor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
+            <state relative-caret-position="2703">
               <caret line="159" column="50" lean-forward="true" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
@@ -88,7 +94,7 @@
       <file leaf-file-name="steal_mp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_mp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="85">
               <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -100,7 +106,7 @@
       <file leaf-file-name="buff_remove_mp_1080.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_mp_1080.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="170">
               <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -112,10 +118,11 @@
       <file leaf-file-name="fight.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/fight/fight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="442" column="49" lean-forward="true" selection-start-line="442" selection-start-column="49" selection-end-line="442" selection-end-column="49" />
+            <state relative-caret-position="7429">
+              <caret line="453" column="50" lean-forward="false" selection-start-line="453" selection-start-column="50" selection-end-line="453" selection-end-column="50" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
+                <marker date="1482157391000" expanded="true" signature="838:24282" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -124,9 +131,21 @@
       <file leaf-file-name="spawn_manager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/managers/spawn_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="208" column="1" lean-forward="true" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+            <state relative-caret-position="445">
+              <caret line="183" column="58" lean-forward="false" selection-start-line="183" selection-start-column="58" selection-end-line="183" selection-end-column="58" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="command_manager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/managers/command_manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>heal</find>
       <find>getFighter</find>
       <find>checkRange</find>
       <find>getStat</find>
@@ -165,6 +183,7 @@
       <find>indexOf</find>
       <find>reQuestM</find>
       <find>requestMove</find>
+      <find>help</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -175,7 +194,6 @@
         <option value="$PROJECT_DIR$/game/spell/effects/buff_add_critical.js" />
         <option value="$PROJECT_DIR$/game/dialog/zaapi_dialog.js" />
         <option value="$PROJECT_DIR$/managers/character_manager.js" />
-        <option value="$PROJECT_DIR$/managers/command_manager.js" />
         <option value="$PROJECT_DIR$/game/spell/buff.js" />
         <option value="$PROJECT_DIR$/game/spell/buffs/damage_neutral_buff.js" />
         <option value="$PROJECT_DIR$/game/spell/buffs/damage_agility_buff.js" />
@@ -199,7 +217,6 @@
         <option value="$PROJECT_DIR$/game/monsters/monsters_group.js" />
         <option value="$PROJECT_DIR$/network/world.js" />
         <option value="$PROJECT_DIR$/database/models/map.js" />
-        <option value="$PROJECT_DIR$/managers/spawn_manager.js" />
         <option value="$PROJECT_DIR$/enums/invisibility_state_enum.js" />
         <option value="$PROJECT_DIR$/game/spell/buffs/invisbility_buff.js" />
         <option value="$PROJECT_DIR$/game/spell/effects/invisiblity.js" />
@@ -218,9 +235,11 @@
         <option value="$PROJECT_DIR$/game/spell/effects/buff_remove_mp_1080.js" />
         <option value="$PROJECT_DIR$/game/fight/fight_spell_processor.js" />
         <option value="$PROJECT_DIR$/game/fight/fight_glyph.js" />
-        <option value="$PROJECT_DIR$/game/monsters/ai/basic_ai.js" />
         <option value="$PROJECT_DIR$/game/fight/fight.js" />
         <option value="$PROJECT_DIR$/game/fight/fighter.js" />
+        <option value="$PROJECT_DIR$/game/monsters/ai/basic_ai.js" />
+        <option value="$PROJECT_DIR$/managers/spawn_manager.js" />
+        <option value="$PROJECT_DIR$/managers/command_manager.js" />
       </list>
     </option>
   </component>
@@ -237,10 +256,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="543" />
-    <option name="y" value="55" />
-    <option name="width" value="1726" />
-    <option name="height" value="954" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -402,7 +421,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -869,6 +887,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1003,12 +1022,13 @@
       <workItem from="1481880690724" duration="1112000" />
       <workItem from="1481911082062" duration="16679000" />
       <workItem from="1481994249486" duration="19803000" />
-      <workItem from="1482079344187" duration="21822000" />
+      <workItem from="1482079344187" duration="23064000" />
+      <workItem from="1482184063487" duration="3115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323784000" />
+    <option name="totallyTimeSpent" value="328141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1020,10 +1040,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="543" y="55" width="1726" height="954" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20760234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2014768" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1094,23 +1114,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/managers/exchange_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/exchange/exchange_player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,9 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,9 +1188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,7 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,7 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="272" column="151" lean-forward="true" selection-start-line="272" selection-start-column="151" selection-end-line="272" selection-end-column="151" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,7 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="142" column="41" lean-forward="false" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,9 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1278,7 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,7 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,7 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,9 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1312,7 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,7 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,7 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1336,7 +1322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1344,9 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-56">
           <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <marker date="1482080563000" expanded="true" signature="286:415" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1362,7 +1344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1371,7 +1352,7 @@
         <state relative-caret-position="187">
           <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1380,9 +1361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1390,9 +1368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1400,7 +1375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
           <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="128" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1408,7 +1382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="133" column="35" lean-forward="false" selection-start-line="133" selection-start-column="35" selection-end-line="135" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,7 +1389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,7 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="4821" column="46" lean-forward="false" selection-start-line="4821" selection-start-column="13" selection-end-line="4821" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,22 +1404,82 @@
         <state relative-caret-position="221">
           <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="28" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/managers/spawn_manager.js">
+    <entry file="file://$PROJECT_DIR$/game/fight/fighter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="208" column="1" lean-forward="true" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+        <state relative-caret-position="5967">
+          <caret line="365" column="25" lean-forward="false" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fight_team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding>
+            <marker date="1482157337000" expanded="true" signature="238:761" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="786:858" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="886:1037" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1061:1209" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1125:1178" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1252:1600" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1309:1594" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1478:1534" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1630:1753" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1667:1725" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1786:2049" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="1850:1933" ph="{...}" />
+            <marker date="1482157337000" expanded="true" signature="2085:2261" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/pathfinding/map_point.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/monsters/ai/basic_ai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="90" column="44" lean-forward="false" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+          <folding>
+            <marker date="1482158848000" expanded="true" signature="6359:6366" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fight_glyph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/fight/fight_spell_processor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2703">
+          <caret line="159" column="50" lean-forward="true" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/spell/effects/steal_mp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="85">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -1458,7 +1489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/spell/effects/buff_remove_mp_1080.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="170">
           <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -1466,65 +1497,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/pathfinding/map_point.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/fight/fight_team.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/fight/fight_glyph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="168" column="23" lean-forward="true" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/fight/fight_spell_processor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="159" column="50" lean-forward="true" selection-start-line="159" selection-start-column="50" selection-end-line="159" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/monsters/ai/basic_ai.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/fight/fight.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="442" column="49" lean-forward="true" selection-start-line="442" selection-start-column="49" selection-end-line="442" selection-end-column="49" />
+        <state relative-caret-position="7429">
+          <caret line="453" column="50" lean-forward="false" selection-start-line="453" selection-start-column="50" selection-end-line="453" selection-end-column="50" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+            <marker date="1482157391000" expanded="true" signature="838:24282" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/fight/fighter.js">
+    <entry file="file://$PROJECT_DIR$/managers/spawn_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="391" column="45" lean-forward="true" selection-start-line="391" selection-start-column="45" selection-end-line="391" selection-end-column="45" />
+        <state relative-caret-position="445">
+          <caret line="183" column="58" lean-forward="false" selection-start-line="183" selection-start-column="58" selection-end-line="183" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/managers/command_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,6 +18,9 @@ export default class Buff {
         this.applied = false;
         this.expired = false;
         this.delta = 0;
+
+        // Wrapper for monster spell
+        if(!this.spell.spellId) this.spell.spellId = this.spell._id;
     }
 
     tryApply() {

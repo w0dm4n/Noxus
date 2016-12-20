@@ -82,13 +82,14 @@ var MongoClient = require('mongodb').MongoClient
     , assert = require('assert');
   var url = 'mongodb://localhost:27017/Noxus';
   MongoClient.connect(url, function(err, db) {
-    var collection = db.collection('monsters');
+    var collection = db.collection('spells_types');
     collection.find({}).toArray(function(err, items){
 		for(var i of items) {
-			if(!i.nameId) continue;
+			if(!i.longNameId) continue;
 		
 			var updateItem = {
-				nameId: file.m_indexes[i.nameId],
+				longNameId: file.m_indexes[i.longNameId],
+				shortNameId: file.m_indexes[i.shortNameId],
 			};
 			
 			console.log(updateItem);

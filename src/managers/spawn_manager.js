@@ -173,7 +173,7 @@ export default class SpawnManager {
 
     static generateGroupMonsterData(monster)
     {
-        var grade = 1;
+        var grade = Basic.getRandomInt(1, monster.grades.length);
         return {templateId: monster._id, grade: grade};
     }
 

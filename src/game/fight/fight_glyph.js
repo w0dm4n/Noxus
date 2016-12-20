@@ -161,8 +161,12 @@ export default class FightGlyph {
                 if (data) {
                     FightSpellProcessor.process(this.fight, this.caster, data.spell, data.spellLevel, data.spellLevel.effects, this.centerCell, fighter);
                 }
+                else
+                    Logger.debug("Data not found for glyph");
             }
         }
+        else
+            Logger.debug("No fighter found for glyph effect !");
         this.fight.send(new Messages.SequenceEndMessage(source.sequenceCount, source.id, 1));
         this.dispose();
         if (callback)

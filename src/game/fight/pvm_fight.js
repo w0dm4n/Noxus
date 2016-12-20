@@ -14,6 +14,7 @@ export default class PVMFight extends Fight {
         this.monstersGroup = monstersGroup;
         this.fightType = Fight.FIGHT_TYPE.FIGHT_TYPE_PvM;
         this.teams.blue = new FightTeam(this, 1, new MonsterFighter(this).initFromMonster(monstersGroup.monsters[0]));
+        this.teams.blue.isMonsterTeam = true;
         for(var i in monstersGroup.monsters) {
             if(i == 0) continue;
             this.teams.blue.addMember(new MonsterFighter(this).initFromMonster(monstersGroup.monsters[i]));

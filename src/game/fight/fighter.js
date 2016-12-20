@@ -278,6 +278,7 @@ export default class Fighter {
         //TODO: Check shield point because the packet is not the same
         //TODO: Erosion system
         if (this.alive) {
+            damages = Math.floor(damages);
             if (this.isSwapDamage == 1) {
                 this.heal(from, damages, 0);
             } else {
@@ -311,8 +312,8 @@ export default class Fighter {
     }
 
     checkCalcRate(calc) {
-        if (calc < 0 || calc < 20)
-            return 20;
+        if (calc <= 0 || calc < 10)
+            return 10;
         if (calc > 100 && calc <= 150)
             return 60;
         else if (calc > 100 && calc <= 160)
@@ -324,84 +325,89 @@ export default class Fighter {
 
 
     looseAP(data, apPoints) {
-        var totalAPLost = 0;
-        if (this.alive) {
-            var baseLostAp = apPoints;
-            if (apPoints > 0) {
+        try {
+            var totalAPLost = 0;
+            if (this.alive) {
+                var baseLostAp = apPoints;
+                if (apPoints > 0) {
+                    var calc = 0;
+                    var rand = 0;
+                    var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
+                    var target_esquive = this.getStats().getDodgeAndWithdrawal();
+                    Logger.infos("Caster retrait: " + caster_retrait + ", Target esquive: " + target_esquive);
+                    while (apPoints > 0) {
+                        if (this.current.AP > 0) {
+                            calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.AP / this.getStats().getTotalStats(1))));
+                            calc = this.checkCalcRate(calc);
+                            if (calc > 0) {
+                                rand = Basic.getRandomInt(0, 100);
+                                if (calc >= rand) {
+                                    Logger.debug("One PA lose with calc : " + calc + ", rand : " + rand);
+                                    this.current.AP -= 1;
+                                    totalAPLost++;
+                                }
+                                else {
+                                    Logger.debug("One PA lose avoid with calc : " + calc + ", rand : " + rand);
+                                }
+                            }
+                        }
+                        apPoints--;
+                    }
+                    if (totalAPLost != 0)
+                        this.addBuff(new RemoveAPBuff(totalAPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
+                    if (totalAPLost < baseLostAp) {
+                        this.fight.send(new Messages.GameActionFightDodgePointLossMessage(308, data.caster.id, this.id, (baseLostAp - totalAPLost)));
+                    }
+                }
+            }
+            return totalAPLost;
+        }
+        catch (e) {
+            return 0;
+        }
+    }
+
+    looseMP(data, mpPoints) {
+        try {
+            var totalMPLost = 0;
+            if (this.alive) {
+                var baseLostMP = mpPoints;
                 var calc = 0;
                 var rand = 0;
                 var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
                 var target_esquive = this.getStats().getDodgeAndWithdrawal();
                 Logger.infos("Caster retrait: " + caster_retrait + ", Target esquive: " + target_esquive);
-                while (apPoints > 0) {
-                    if (this.current.AP > 0) {
-                        calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.AP / this.getStats().getTotalStats(1))));
+                while (mpPoints > 0) {
+                    if (this.current.MP > 0) {
+                        calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.MP / this.getStats().getTotalStats(2))));
                         calc = this.checkCalcRate(calc);
                         if (calc > 0) {
                             rand = Basic.getRandomInt(0, 100);
                             if (calc >= rand) {
-                                Logger.debug("One PA lose with calc : " + calc + ", rand : " + rand);
-                                this.current.AP -= 1;
-                                totalAPLost++;
+                                Logger.debug("One PM lose with calc : " + calc + ", rand : " + rand);
+                                this.current.MP -= 1;
+                                totalMPLost++;
                             }
                             else {
-                                Logger.debug("One PA lose avoid with calc : " + calc + ", rand : " + rand);
+                                Logger.debug("One PM lose avoid with calc : " + calc + ", rand : " + rand);
                             }
-                        }
-                    }
-                    apPoints--;
-                }
-                if (totalAPLost != 0)
-                    this.addBuff(new RemoveAPBuff(totalAPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
-                if (totalAPLost < baseLostAp) {
-                    this.fight.send(new Messages.GameActionFightDodgePointLossMessage(308, data.caster.id, this.id, (baseLostAp - totalAPLost)));
-                }
-            }
-        }
-        return totalAPLost;
-    }
-
-    looseMP(data, mpPoints) {
-        var totalMPLost = 0;
-        if (this.alive) {
-            var baseLostMP = mpPoints;
-            var calc = 0;
-            var rand = 0;
-            var caster_retrait = data.caster.getStats().getDodgeAndWithdrawal();
-            var target_esquive = this.getStats().getDodgeAndWithdrawal();
-            Logger.infos("Caster retrait: " + caster_retrait + ", Target esquive: " + target_esquive);
-            while (mpPoints > 0) {
-                Logger.debug("fdp1");
-                if (this.current.MP > 0) {
-                    Logger.debug("fdp2");
-                    calc = Math.floor((50 * (caster_retrait / target_esquive) * (this.current.MP / this.getStats().getTotalStats(2))));
-                    calc = this.checkCalcRate(calc);
-                    if (calc > 0) {
-                        Logger.debug("fdp3");
-                        rand = Basic.getRandomInt(0, 100);
-                        if (calc >= rand) {
-                            Logger.debug("One PM lose with calc : " + calc + ", rand : " + rand);
-                            this.current.MP -= 1;
-                            totalMPLost++;
-                        }
-                        else {
-                            Logger.debug("One PM lose avoid with calc : " + calc + ", rand : " + rand);
                         }
                     }
                     else
-                        Logger.debug("fdp4");
+                        Logger.debug("NO PM !");
+                    mpPoints--;
                 }
-                else
-                    Logger.debug("NO PM !");
-                mpPoints--;
+                if (totalMPLost != 0)
+                    this.addBuff(new RemoveMPBuff(totalMPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
+                if (totalMPLost < baseLostMP) {
+                    this.fight.send(new Messages.GameActionFightDodgePointLossMessage(309, data.caster.id, this.id, (baseLostMP - totalMPLost)));
+                }
             }
-            if (totalMPLost != 0)
-                this.addBuff(new RemoveMPBuff(totalMPLost, data.spell, data.spellLevel, data.effect, data.caster, this));
-            if (totalMPLost < baseLostMP) {
-                this.fight.send(new Messages.GameActionFightDodgePointLossMessage(309, data.caster.id, this.id, (baseLostMP - totalMPLost)));
-            }
+            return totalMPLost;
         }
-        return totalMPLost;
+        catch (e) {
+            return 0;
+        }
     }
 
     checkIfIsDead() {
@@ -450,7 +456,10 @@ export default class Fighter {
                 var glyphsOnCell = this.fight.getGlyphsOnCell(dirCell._nCellId);
                 if (glyphsOnCell.length > 0) {
                     for (var glyph of glyphsOnCell) {
-                        glyph.apply(this);
+                        var self = this;
+                        setTimeout(function () {
+                            glyph.apply(self);
+                        }, cells.length * 200);
                     }
                     point = dirCell;
                     toCell = dirCell._nCellId;

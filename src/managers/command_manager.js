@@ -24,7 +24,7 @@ export default class CommandManager {
         { name:"infos", role:AccountRole.MODERATOR , description:"Donne des informations sur le serveur"},
         { name:"start", role:AccountRole.PLAYER , description: "Téléporte a la zone de départ"},
         { name:"go", role:AccountRole.ANIMATOR, description: "Téléporte sur une map (mapId, cellId)"},
-        { name:"help", role:AccountRole.ANIMATOR, description: "Affiche les commandes disponible"},
+        { name:"help", role:AccountRole.PLAYER, description: "Affiche les commandes disponible"},
         { name:"kick", role:AccountRole.ANIMATOR, description: "Permet d'expulser un joueur du serveur"},
         { name:"ban", role:AccountRole.MODERATOR, description: "Permet de bannir un joueur du serveur"},
         { name:"unban", role:AccountRole.MODERATOR, description: "Permet de débannir un joueur du serveur"},

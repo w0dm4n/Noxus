@@ -16,6 +16,7 @@ export default class FightTeam {
         this.placementCells = [];
         this.bladeCellId = leader.fighterType == Fighter.FIGHTER_TYPE.HUMAN ? leader.character.cellid : leader.fight.monstersGroup.cellId;
         this.fixedMembers = [];
+        this.isMonsterTeam = false;
     }
 
     addMember(fighter) {

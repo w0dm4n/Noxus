@@ -147,6 +147,9 @@ export default class Fight {
         } else if (this.teams.blue.isInThisTeam(fighterId)) {
             team = this.teams.blue;
         }
+        if(team.isMonsterTeam) {
+            return;
+        }
         fighter.team = team;
         team.addMember(fighter);
         this.map.removeClient(fighter.character.client);
@@ -417,11 +420,16 @@ export default class Fight {
         return glyphs;
     }
 
-    requestMove(fighter, keyMovements, pathfinding) {
+    requestMove(fighter, keyMovements, pathfinding, isServer = false) {
         Logger.debug("Fighter id: " + fighter.id + ", request move (keys len: " + keyMovements.length + ")");
         var cells = [];
         for (var i in keyMovements) {
-            cells.push({ id: keyMovements[i] & 4095, dir: keyMovements[i] >> 12, point: MapPoint.fromCellId(keyMovements[i] & 4095) });
+            if(!isServer) {
+                cells.push({ id: keyMovements[i] & 4095, dir: keyMovements[i] >> 12, point: MapPoint.fromCellId(keyMovements[i] & 4095) });
+            }
+            else {
+                cells.push({ id: keyMovements[i], point: MapPoint.fromCellId(keyMovements[i]) });
+            }
         }
         pathfinding.fightMode = true;
         var lastPath = cells[0].id;
@@ -441,7 +449,9 @@ export default class Fight {
             var glyphsOnCell = this.getGlyphsOnCell(cell.id);
             if (glyphsOnCell.length > 0) {
                 for (var glyph of glyphsOnCell) {
-                    glyph.apply(fighter);
+                    setTimeout(function () {
+                        glyph.apply(fighter);
+                    }, pathWithGlyph.length * 200);
                 }
                 break;
             }
@@ -529,7 +539,7 @@ export default class Fight {
         return true;
     }
 
-    checkRange(fighter, spellLevel, cellId) {
+    checkRange(fighter, spellLevel, cellId, isServer = false) {
         var result = false;
         var range = spellLevel.range;
         if (spellLevel.rangeCanBeBoosted)
@@ -551,24 +561,28 @@ export default class Fight {
         }
         if (spellLevel.castTestLos) {
             if (!this.checkLos(fighter, cellId, range)) {
-                this.castSpellError(fighter, spellLevel._id, { id: 1, messageId: 174, params: [] });
+                if(!isServer) {
+                    this.castSpellError(fighter, spellLevel._id, {id: 1, messageId: 174, params: []});
+                }
                 return false;
             }
         }
         if (result == false) {
-            if (fighter.cellId == cellId) {
-                this.castSpellError(fighter, spellLevel._id, {
-                    id: 0,
-                    messageId: 0,
-                    params: ["Impossible de lancer ce sort : vous ne pouvez pas le lancer sur vous-même."]
-                });
-            }
-            else {
-                this.castSpellError(fighter, spellLevel._id, {
-                    id: 0,
-                    messageId: 0,
-                    params: ["Impossible de lancer ce sort : vous n'avez pas la portée."]
-                });
+            if(!isServer) {
+                if (fighter.cellId == cellId) {
+                    this.castSpellError(fighter, spellLevel._id, {
+                        id: 0,
+                        messageId: 0,
+                        params: ["Impossible de lancer ce sort : vous ne pouvez pas le lancer sur vous-même."]
+                    });
+                }
+                else {
+                    this.castSpellError(fighter, spellLevel._id, {
+                        id: 0,
+                        messageId: 0,
+                        params: ["Impossible de lancer ce sort : vous n'avez pas la portée."]
+                    });
+                }
             }
         }
         return result;
@@ -641,7 +655,7 @@ export default class Fight {
                         fighter.sequenceCount++;
                         FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
                         this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
-                        fighter.spellHistory.insertSpell(spellLevel,this.getFighterOnCell(cellId));
+                        //fighter.spellHistory.insertSpell(spellLevel,this.getFighterOnCell(cellId));
                     }
                     else {
                         this.castSpellError(fighter, spellLevel._id, { id: 1, messageId: 116, params: [] });

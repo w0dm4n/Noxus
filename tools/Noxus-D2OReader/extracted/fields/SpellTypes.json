@@ -1,0 +1,23 @@
+[
+	{
+		"memberName": "SpellType",
+		"packageName": "com.ankamagames.dofus.datacenter.spells",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "longNameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "shortNameId",
+				"type": "I18N",
+				"vectorTypes": false
+			}
+		]
+	}
+]
