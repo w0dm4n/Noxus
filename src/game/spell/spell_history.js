@@ -11,60 +11,67 @@ export default class SpellHistory {
     insertSpell(spell, target) {
 
         this.spellStack.push(new SpellHistoryInformation(spell, target, this.actor.fight.timeline.round));
-
     }
 
-    
-
     canCastSpell(spell, cell) {
-        var result;
-        var SpellHistory = this.getLastSpell(spell.spellId);
-        var round = this.actor.fight.timeline.round;
-        if (SpellHistory == null && round < spell.initialCooldown) {
-            result = false;
-        } else {
-            if (SpellHistory == null) {
-                result = true;
+        if (this.actor.alive) {
+            var result;
+            var SpellHistory = this.getLastSpell(spell.spellId);
+            var round = this.actor.fight.timeline.round;
+            if (SpellHistory == null && round < spell.initialCooldown) {
+                result = false;
             } else {
-
-                if (SpellHistory.getElapsedRoundSpell(round)) {
-                    result = false;
+                if (SpellHistory == null) {
+                    result = true;
                 } else {
-                    var array = this.getSpellCastTurn(spell.spellId).length;
 
-                    if (array.length == 0) {
-                        result = true;
+                    if (SpellHistory.getElapsedRoundSpell(round)) {
+                        result = false;
                     } else {
-                        if (spell.maxCastPerTurn > 0 && array.length >= spell.maxCastPerTurn) {
-                            result = false;
+                        var array = this.getSpellCastTurn(spell.spellId).length;
+
+                        if (array.length == 0) {
+                            result = true;
                         } else {
-                            var target = this.actor.fight.getFighterOnCell(cell);
-                            if (target == null) {
-                                result = true;
+                            if ((spell.maxCastPerTurn > 0) && (array.length >= spell.maxCastPerTurn)) {
+                                result = false;
                             } else {
-                                var count = this.getSpellPerTarget(target).length;
-                                if ((spell.maxCastPerTarget <= 0) || (count < spell.maxCastPerTarget) || (count.length == 0)) {
+                                var target = this.actor.fight.getFighterOnCell(cell);
+                                if (target == null) {
                                     result = true;
                                 } else {
-                                    result = false;
+                                    var count = this.getSpellPerTarget(target).length;
+                                    if ((spell.maxCastPerTarget <= 0) || (count < spell.maxCastPerTarget)) {
+                                        result = true;
+                                    } else {
+                                        result = false;
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+            return result;
         }
-        return result;
     }
 
     getLastSpell(spellId) {
         if (this.spellStack == null || this.spellStack.length == 0) {
             return null;
         } else {
-            for (var i = (this.spellStack.length - 1); i >= 0; i--) {
-                if (this.spellStack[i].spell.spellId == spellId)
-                    return this.spellStack[i];
+            var lastarray = [];
+            for (var m in this.spellStack) {
+                if (this.spellStack[m].spell.spellId == spellId)
+                    lastarray.push(this.spellStack[m]);
             }
+            if (lastarray.length > 0)
+                return lastarray[lastarray.length - 1];
+            // a revoir aprés;
+            /* for (var i = (this.spellStack.length - 1); i >= 0; i--) {
+              if (this.spellStack[i].spell.spellId == spellId)
+                     return this.spellStack[i];   
+             }*/
         }
         return null;
     }
@@ -83,11 +90,12 @@ export default class SpellHistory {
     getSpellPerTarget(target) {
         var result = [];
         for (var i of this.spellStack) {
-            if ((i.target != null) && (i.target == target) && (i.round == this.actor.fight.timeline.round)) {
-                result.push(i);
+            if ((i.target != null) && (i.target == target)) {
+                if ((i.round == this.actor.fight.timeline.round)) {
+                    result.push(i);
+                }
             }
         }
-
         return result;
     }
 

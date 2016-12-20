@@ -1,10 +1,12 @@
 import Logger from "../../../io/logger"
 import Pathfinding from "../../../game/pathfinding/pathfinding"
+import Pathfinding2 from "../../../game/pathfinding/pathfinding_dijkstra"
 import * as Types from "../../../io/dofus/types"
 import * as Messages from "../../../io/dofus/messages"
 import MapPoint from "../../pathfinding/map_point"
 import SpellsManager from "../../spell/spell_manager"
 import FightSpellProcessor from "../../fight/fight_spell_processor"
+import * as Shapes from "../../fight/fight_shape_processor"
 
 export default class BasicAI {
 
@@ -15,7 +17,6 @@ export default class BasicAI {
     process() {
         try {
             var self = this;
-
             /*
             var target = this.fighter.fight.getOppositeTeam(this.fighter.team).getAliveMembers()[0];
             var pathfinding = new Pathfinding(this.fighter.fight.map.dataMapProvider);
@@ -27,9 +28,11 @@ export default class BasicAI {
                 self.fighter.passTurn();
             });
             */
-            this.walkToNearest(function() {
-                self.castBestSpells(self.getNearestFighter(), function(){
-                    self.fighter.passTurn();
+            self.castBestSpells(self.getNearestFighter(), function(){
+                self.walkToNearest(function() {
+                    self.castBestSpells(self.getNearestFighter(), function(){
+                        self.fighter.passTurn();
+                    });
                 });
             });
         }
@@ -42,9 +45,18 @@ export default class BasicAI {
     walkToNearest(callback) {
         var nearest = this.getNearestFighter();
         if(nearest) {
+            // Experimentation
+            var pathfinding_test = new Pathfinding2(this.fighter.fight.map.dataMapProvider);
+            pathfinding_test.fightMode = true;
+            var path = pathfinding_test.findShortestPath(this.fighter.cellId, nearest.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, nearest.cellId]));
+            //End test
+
+            /*
             var pathfinding = new Pathfinding(this.fighter.fight.map.dataMapProvider);
             pathfinding.fightMode = true;
             var path = pathfinding.findShortestPath(this.fighter.cellId, nearest.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, nearest.cellId]));
+            */
+
             this.move(path, function() {
                 callback();
             });
@@ -52,6 +64,31 @@ export default class BasicAI {
         else {
             callback();
         }
+    }
+
+    findNearestPossibleCell(target) {
+        var lozenge = new Shapes.Lozenge(this.fighter.current.MP, 1);
+        var lozengeCells = lozenge.getCells(this.fighter.cellId);
+        var lastScore = 99999999;
+        var nearestCell = -1;
+        var pathfinding = new Pathfinding(this.fighter.fight.map.dataMapProvider);
+        pathfinding.fightMode = true;
+
+
+        for(var cell of lozengeCells) {
+            if(this.fighter.fight.map.isWalkableCell(cell)) {
+                if(this.fighter.fight.getFighterOnCell(cell)) continue;
+                pathfinding.reset();
+                var path = pathfinding.findShortestPath(cell, target.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, target.cellId]));
+                var distance = path.length;
+
+                if(distance < lastScore && distance > 0) {
+                    nearestCell = cell;
+                    lastScore = distance;
+                }
+            }
+        }
+        return nearestCell;
     }
 
     getNearestFighter() {
@@ -74,9 +111,9 @@ export default class BasicAI {
     }
 
     move(path, callback) {
-        var movementKeys = [this.fighter.cellId];
+        var movementKeys = [];
         for(var c of path) {
-            if(this.fighter.fight.getFightObstacles().indexOf(c.cell.id) != -1) {
+            if(this.fighter.fight.getFightObstacles().indexOf(c) != -1 && c != this.fighter.cellId) {
                 break;
             }
             if(this.fighter.current.MP <= 0) {
@@ -99,8 +136,8 @@ export default class BasicAI {
             }
             */
 
-            movementKeys.push(c.cell.id);
-            this.fighter.cellId = c.cell.id;
+            movementKeys.push(c);
+            this.fighter.cellId = c;
             this.fighter.current.MP--;
         }
         this.fighter.fight.send(new Messages.SequenceStartMessage(5, this.fighter.id));
@@ -118,6 +155,9 @@ export default class BasicAI {
         for(var sId of this.fighter.monster.template.spells) {
             var s = SpellsManager.getSpell(sId);
             var grade = SpellsManager.getSpellLevel(sId, this.fighter.monster.grade.grade);
+            if (!grade) {
+                grade = SpellsManager.getSpellLevel(sId, 1);
+            }
             spells.push({spell: s, grade: grade});
         }
         return spells;
@@ -129,19 +169,23 @@ export default class BasicAI {
         for(var s of spells) {
             var toCastSpell = s;
             if(toCastSpell && target) {
-                if(this.castSpell(toCastSpell.spell, toCastSpell.grade, target.cellId));
+                if(this.castSpell(toCastSpell.spell, toCastSpell.grade, target.cellId))
                     spellCount++;
             }
         }
+        if(spellCount == 0) {
+            callback();
+            return;
+        }
         setTimeout(function(){
             callback();
-        }, 1200 * spellCount);
+        }, 1400 * spellCount);
     }
 
     castSpell(spell, spellLevel, cellId) {
         try {
             if(spellLevel) {
-                if (this.fighter.current.AP >= spellLevel.apCost && this.fighter.isMyTurn()) {
+                if (this.fighter.current.AP >= spellLevel.apCost) {
                     if (this.fighter.fight.checkRange(this.fighter, spellLevel, cellId, true)) {
                         this.fighter.current.AP -= spellLevel.apCost;
                         this.fighter.sequenceCount = 1;

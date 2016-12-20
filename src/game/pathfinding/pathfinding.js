@@ -5,7 +5,7 @@ export default class Pathfinding {
 
     constructor(map) {
         this.map = map;
-        this.CELL_DISTANCE_VALUE = 10;
+        this.CELL_DISTANCE_VALUE = 15;
         this.cells = new Array();
         this.openList = new Array();
         this.closedList = new Array();
@@ -15,6 +15,11 @@ export default class Pathfinding {
             var cell = new CellInfo(this.map.cells[i], MapPoint.fromCellId(this.map.cells[i].id));
             this.cells.push(cell);
         }
+    }
+
+    reset() {
+        this.openList = new Array();
+        this.closedList = new Array();
     }
 
     getCell(id) {

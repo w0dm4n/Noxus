@@ -827,13 +827,21 @@ export class GameMapMovementMessage extends ProtocolMessage {
 }
 
 export class GameMapMovementCancelMessage extends ProtocolMessage {
-    constructor() {
-        super();
-        this.messageId = 953;
+    constructor(cellId) {
+        super(953);
+        this.cellId = cellId;
     }
-
+    serialize() {
+        if (this.cellId < 0 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element cellId.");
+        }
+        this.buffer.writeVarShort(this.cellId);
+    }
     deserialize(buffer) {
-        this.cellId = buffer.readVarShort();
+        this.cellId = buffer.readVarUhShort();
+        if (this.cellId < 0 || this.cellId > 559) {
+            Logger.error("Forbidden value (" + this.cellId + ") on element of GameMapMovementCancelMessage.cellId.");
+        }
     }
 }
 
@@ -4834,3 +4842,20 @@ export class GameActionFightUnmarkCellsMessage extends AbstractGameActionMessage
         this.markId = buffer.readShort();
     }
 }
+
+export class GameMapNoMovementMessage extends ProtocolMessage {
+    constructor(cellX, cellY) {
+        super(954);
+        this.cellX = cellX;
+        this.cellY = cellY;
+    }
+    serialize() {
+        this.buffer.writeShort(this.cellX);
+        this.buffer.writeShort(this.cellY);
+    }
+    deserialize(buffer) {
+        this.cellX = buffer.readShort();
+        this.cellY = buffer.readShort();
+    }
+}
+

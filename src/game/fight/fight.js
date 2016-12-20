@@ -437,14 +437,19 @@ export default class Fight {
         if (cells.length > 0) {
             for (var i = 1; i < cells.length; i++) {
                 var pathfinding = new Pathfinding(this.map.dataMapProvider);
-                var path = pathfinding.findShortestPath(lastPath, cells[i].id, this.getFightObstacles());
+                var path = pathfinding.findShortestPath(lastPath, cells[i].id, []);
                 lastPath = cells[i].id;
                 pathTotal = pathTotal.concat(path);
             }
         }
+        var fightersCells = this.getAllFightersCell();
         var pathWithGlyph = [];
         for (var cell of pathTotal)
         {
+            if (this.getCellByIdFromId(fightersCells, cell.id) != null) {
+                Logger.debug("Can't move here, fighter found on cell !");
+                break;
+            }
             pathWithGlyph.push(cell);
             var glyphsOnCell = this.getGlyphsOnCell(cell.id);
             if (glyphsOnCell.length > 0) {
@@ -469,21 +474,28 @@ export default class Fight {
             return;
         }
 
-        if (fighter.current.MP - distance >= 0) {
-            if (fighter.isInvisible()) {
-                fighter.team.send(new Messages.SequenceStartMessage(5, fighter.id));
-                fighter.team.send(new Messages.GameMapMovementMessage(movementKeys, fighter.id));
-                fighter.team.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
-                fighter.team.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
+        if (pathWithGlyph.length > 0) {
+            if (fighter.current.MP - distance >= 0) {
+                if (fighter.isInvisible()) {
+                    fighter.team.send(new Messages.SequenceStartMessage(5, fighter.id));
+                    fighter.team.send(new Messages.GameMapMovementMessage(movementKeys, fighter.id));
+                    fighter.team.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
+                    fighter.team.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
+                }
+                else {
+                    this.send(new Messages.SequenceStartMessage(5, fighter.id));
+                    this.send(new Messages.GameMapMovementMessage(movementKeys, fighter.id));
+                    this.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
+                    this.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
+                }
+                fighter.cellId = pathWithGlyph[pathWithGlyph.length - 1].id;
+                fighter.current.MP -= distance;
             }
-            else {
-                this.send(new Messages.SequenceStartMessage(5, fighter.id));
-                this.send(new Messages.GameMapMovementMessage(movementKeys, fighter.id));
-                this.send(new Messages.GameActionFightPointsVariationMessage(129, fighter.id, fighter.id, -(distance)));
-                this.send(new Messages.SequenceEndMessage(3, fighter.id, 5));
-            }
-            fighter.cellId = cells[cells.length - 1].id;
-            fighter.current.MP -= distance;
+        }
+        else {
+            fighter.character.replyLangsMessage(1, 276, []);
+            var cell = MapPoint.fromCellId(fighter.cellId);
+            fighter.character.client.send(new Messages.GameMapNoMovementMessage(cell._nX, cell._nY));
         }
     }
 
@@ -492,6 +504,15 @@ export default class Fight {
             if (cell.id == cellId)
                 return cell;
         }
+        return null;
+    }
+
+    getCellByIdFromId(cells, cellId) {
+        for (var cell of cells) {
+            if (cell == cellId)
+                return cell;
+        }
+        return null;
     }
 
     getAllFightersCell() {
@@ -655,7 +676,7 @@ export default class Fight {
                         fighter.sequenceCount++;
                         FightSpellProcessor.process(this, fighter, spell, spellLevel, effects, cellId);
                         this.send(new Messages.SequenceEndMessage(fighter.sequenceCount, fighter.id, 1));
-                        //fighter.spellHistory.insertSpell(spellLevel,this.getFighterOnCell(cellId));
+                        fighter.spellHistory.insertSpell(spellLevel,this.getFighterOnCell(cellId));
                     }
                     else {
                         this.castSpellError(fighter, spellLevel._id, { id: 1, messageId: 116, params: [] });

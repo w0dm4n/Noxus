@@ -72,10 +72,14 @@ export default class ChatHandler {
                 case ChatChannel.CHANNEL_GLOBAL:
                     if (packet.content[0] != '.')
                     {
+
                         var map = client.character.getMap();
                         if (map)
                         {
-                            map.send(new Messages.ChatServerMessage(ChatChannel.CHANNEL_GLOBAL, packet.content, time(), client.character.name, client.character._id, client.character.name, client.account.uid));
+                            if (client.character.isInFight())
+                                client.character.fight.send(new Messages.ChatServerMessage(ChatChannel.CHANNEL_GLOBAL, packet.content, time(), client.character.name, client.character._id, client.character.name, client.account.uid));
+                            else
+                                map.send(new Messages.ChatServerMessage(ChatChannel.CHANNEL_GLOBAL, packet.content, time(), client.character.name, client.character._id, client.character.name, client.account.uid));
                         }
                     }
                     else

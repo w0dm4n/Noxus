@@ -105,6 +105,11 @@ export default class CommandManager {
 
     static handle_start(data, client)
     {
+        if (client.character.isInFight())
+        {
+            client.character.replyError("Impossible d'exécuter cette commande en combat.");
+            return;
+        }
         WorldManager.teleportClient(client, ConfigManager.configData.characters_start.startMap, ConfigManager.configData.characters_start.startCell, function(result) {
             if (result)
                 client.character.replyText("Vous avez été téléporter a la zone de départ !");
