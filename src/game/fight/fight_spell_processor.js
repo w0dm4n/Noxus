@@ -4,6 +4,7 @@ import * as Messages from "../../io/dofus/messages"
 import * as Types from "../../io/dofus/types"
 import MapPoint from "../pathfinding/map_point"
 import InvisibilityStateEnum from "../../enums/invisibility_state_enum"
+import WhiteListInvisibleState from "../../enums/white_list_invisible_state"
 
 export default class FightSpellProcessor {
 
@@ -26,7 +27,17 @@ export default class FightSpellProcessor {
 
     }
 
-    static process(fight, caster, spell, spellLevel, effects, cellId, forcedTarget = null) {
+    static isInWhiteList(spellId)
+    {
+        for (var spell in WhiteListInvisibleState)
+        {
+            if (spellId == WhiteListInvisibleState[spell])
+                return true;
+        }
+        return false;
+    }
+
+    static process(fight, caster, spell, spellLevel, effects, cellId, forcedTarget = null, glyphCell = 0) {
 
         var randomEffects = [];
         var nEffects = [];
@@ -54,34 +65,31 @@ export default class FightSpellProcessor {
             var targetsFactory = this.getTargets(fight, caster, spell, spellLevel, e, cellId, effectsToApply);
             var targets = targetsFactory.targets;
             var shape = targetsFactory.shape;
-            var effectProcessor = this.getEffects(e.effectId);
-            if (effectProcessor) {
-                Logger.debug("Process effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id);
-                effectsToApply.push({ effect: e, processor: effectProcessor, targets: targets, shape: shape });
+            if (e) {
+                var effectProcessor = this.getEffects(e.effectId);
+                if (effectProcessor) {
+                    Logger.debug("Process effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id);
+                    effectsToApply.push({ effect: e, processor: effectProcessor, targets: targets, shape: shape });
+                }
+                else {
+                    //console.log(e);
+                    Logger.error("Effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id + " is not handled yet");
+                }
             }
             else {
-                console.log(e);
-                Logger.error("Effect id: " + e.effectId + " of the spellLevel id " + spellLevel._id + " is not handled yet");
+                Logger.error("Trying to process an undefined effect of spellLevel id " + spellLevel._id);
             }
         }
         if (caster.isInvisible())
         {
-            for (var toApply of effectsToApply) {
-                switch (toApply.effect.effectElement)
-                {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        caster.invisibilityState = InvisibilityStateEnum.VISIBLE;
-                        caster.updateInvisibility(150);
-                        caster.fight.synchronizeFight(caster, true);
-                        break;
-                    default:
-                        caster.fight.send(new Messages.ShowCellMessage(caster.id, caster.cellId));
-                        break;
+            if (glyphCell == 0) {
+                if (FightSpellProcessor.isInWhiteList(spell.spellId)) {
+                    caster.fight.send(new Messages.ShowCellMessage(caster.id, caster.cellId));
+                } else {
+                    caster.invisibilityState = InvisibilityStateEnum.VISIBLE;
+                    caster.updateInvisibility(150);
+                    caster.fight.synchronizeFight(caster, true);
                 }
-
             }
         }
 
@@ -95,25 +103,30 @@ export default class FightSpellProcessor {
                 cellId: cellId,
                 targets: (forcedTarget) ? [forcedTarget] : toApply.targets,
                 shape: toApply.shape,
+                glyphCell: glyphCell,
             });
         }
     }
 
     static getTargets(fight, caster, spell, spellLevel, effect, cellId, effectsToApply) {
-        var targets = [];
-        var point = MapPoint.fromCellId(caster.cellId);
-        var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
-        var shape = FightShapeProcessor.buildShape(effect.rawZone[0], effect.rawZone[1], cellId, directionId);
-        if (shape) {
-            for (var cell of shape) {
-                var fighterOnCell = fight.getFighterOnCell(cell);
-                if (fighterOnCell) targets.push(fighterOnCell);
+        if (effect) {
+            var targets = [];
+            var point = MapPoint.fromCellId(caster.cellId);
+            var directionId = point.orientationTo(MapPoint.fromCellId(cellId));
+            var shape = FightShapeProcessor.buildShape(effect.rawZone[0], effect.rawZone[1], cellId, directionId);
+            if (shape) {
+                for (var cell of shape) {
+                    var fighterOnCell = fight.getFighterOnCell(cell);
+                    if (fighterOnCell) targets.push(fighterOnCell);
+                }
             }
+            var filteredTargets = this.filterTargets(targets, caster, spell, spellLevel, effect, cellId, effectsToApply);
+            //TODO: Check if this spell can be casted on a friendly, ennemie etc ..
+            //TODO: targetMask: 'a,A'
+            return {targets: filteredTargets, shape: shape};
         }
-        var filteredTargets = this.filterTargets(targets, caster, spell, spellLevel, effect, cellId, effectsToApply);
-        //TODO: Check if this spell can be casted on a friendly, ennemie etc ..
-        //TODO: targetMask: 'a,A'
-        return { targets: filteredTargets, shape: shape };
+        else
+            return {};
     }
 
     static filterTargets(targets, caster, spell, spellLevel, effect, cellId, effectsToApply) {

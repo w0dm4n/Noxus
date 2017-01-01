@@ -1,0 +1,43 @@
+[
+	{
+		"memberName": "Dungeon",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "optimalPlayerLevel",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "mapIds",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			},
+			{
+				"name": "entranceMapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "exitMapId",
+				"type": "Int",
+				"vectorTypes": false
+			}
+		]
+	}
+]

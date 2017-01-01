@@ -103,6 +103,7 @@ export default class FightHandler {
 
     static handleGameContextQuitMessage(client, packet) {
         if(client.character.isInFight()) {
+            client.character.fighter.hasLeave = true;
             client.character.fight.leaveFight(client.character.fighter, Fight.FIGHT_LEAVE_TYPE.ABANDONED);
         }
     }

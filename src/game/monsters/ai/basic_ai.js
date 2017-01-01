@@ -7,34 +7,24 @@ import MapPoint from "../../pathfinding/map_point"
 import SpellsManager from "../../spell/spell_manager"
 import FightSpellProcessor from "../../fight/fight_spell_processor"
 import * as Shapes from "../../fight/fight_shape_processor"
+import Basic from "../../../utils/basic"
 
 export default class BasicAI {
 
     constructor(fighter) {
         this.fighter = fighter;
+        this.tasks = [];
+    }
+
+    reset() {
+        this.tasks = [];
     }
 
     process() {
         try {
-            var self = this;
-            /*
-            var target = this.fighter.fight.getOppositeTeam(this.fighter.team).getAliveMembers()[0];
-            var pathfinding = new Pathfinding(this.fighter.fight.map.dataMapProvider);
-            pathfinding.fightMode = true;
-            var path = pathfinding.findShortestPath(this.fighter.cellId, target.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, target.cellId]));
-            var self = this;
-            this.move(path, function() {
-                self.castBestSpells();
-                self.fighter.passTurn();
-            });
-            */
-            self.castBestSpells(self.getNearestFighter(), function(){
-                self.walkToNearest(function() {
-                    self.castBestSpells(self.getNearestFighter(), function(){
-                        self.fighter.passTurn();
-                    });
-                });
-            });
+            this.reset();
+            this.initBaseTasks();
+            this.nextTask();
         }
         catch (e) {
             Logger.error("Can't process the monster AI because : " + e.message);
@@ -42,53 +32,68 @@ export default class BasicAI {
         }
     }
 
-    walkToNearest(callback) {
-        var nearest = this.getNearestFighter();
-        if(nearest) {
-            // Experimentation
-            var pathfinding_test = new Pathfinding2(this.fighter.fight.map.dataMapProvider);
-            pathfinding_test.fightMode = true;
-            var path = pathfinding_test.findShortestPath(this.fighter.cellId, nearest.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, nearest.cellId]));
-            //End test
+    initBaseTasks() {
+        this.addNewTask("castBestSpells", {});
+        this.addNewTask("walkToNearest", {});
+        this.addNewTask("castBestSpells", {});
+    }
 
-            /*
-            var pathfinding = new Pathfinding(this.fighter.fight.map.dataMapProvider);
-            pathfinding.fightMode = true;
-            var path = pathfinding.findShortestPath(this.fighter.cellId, nearest.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, nearest.cellId]));
-            */
+    addNewTask(taskName, parameters) {
+        this.tasks.push({name: taskName + "Task", params: parameters});
+    }
 
-            this.move(path, function() {
-                callback();
-            });
+    insertTaskBeforeAll(taskName, parameters) {
+        this.tasks.unshift({name: taskName + "Task", params: parameters});
+    }
+
+    nextTask() {
+        var self = this;
+        if(this.tasks.length == 0 || !this.fighter.alive) { // End of AI process
+            Logger.debug("No task in pending for the monster, pass turn");
+            this.fighter.passTurn();
         }
         else {
-            callback();
+            var task = this.tasks[0];
+            this.tasks.shift();
+            Logger.debug("Process task name: " + task.name + ", the monster has " + this.tasks.length + " pending task(s)");
+            this[task.name](task.params, function(){
+                self.nextTask();
+            });
         }
     }
 
-    findNearestPossibleCell(target) {
-        var lozenge = new Shapes.Lozenge(this.fighter.current.MP, 1);
-        var lozengeCells = lozenge.getCells(this.fighter.cellId);
-        var lastScore = 99999999;
-        var nearestCell = -1;
-        var pathfinding = new Pathfinding(this.fighter.fight.map.dataMapProvider);
-        pathfinding.fightMode = true;
+    //////// Tasks //////////
 
+    walkToNearestTask(params, callback) {
+        this.walkToNearest(callback);
+    }
 
-        for(var cell of lozengeCells) {
-            if(this.fighter.fight.map.isWalkableCell(cell)) {
-                if(this.fighter.fight.getFighterOnCell(cell)) continue;
-                pathfinding.reset();
-                var path = pathfinding.findShortestPath(cell, target.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, target.cellId]));
-                var distance = path.length;
+    castBestSpellsTask(params, callback) {
+        this.castBestSpells(this.getNearestFighter(), callback);
+    }
 
-                if(distance < lastScore && distance > 0) {
-                    nearestCell = cell;
-                    lastScore = distance;
-                }
+    /////////////////////////
+
+    walkToNearest(callback) {
+        try {
+            var nearest = this.getNearestFighter();
+            if(nearest) {
+                var pathfinding_test = new Pathfinding2(this.fighter.fight.map.dataMapProvider);
+                pathfinding_test.fightMode = true;
+                var path = pathfinding_test.findShortestPath(this.fighter.cellId, nearest.cellId, this.fighter.fight.getFightObstacles([this.fighter.cellId, nearest.cellId]));
+
+                this.move(path, function() {
+                    callback();
+                });
+            }
+            else {
+                callback();
             }
         }
-        return nearestCell;
+        catch (ex) {
+            Logger.error("Can't walk to nearest : " + ex.message);
+            callback();
+        }
     }
 
     getNearestFighter() {
@@ -98,43 +103,49 @@ export default class BasicAI {
         for(var f of encounters.getAliveMembers()) {
             var distance = point.distanceTo(MapPoint.fromCellId(f.cellId));
             if(nearest == null) {
-                nearest = f;
-            }
-            else {
-                if(point.distanceTo(MapPoint.fromCellId(f.cellId)) < point.distanceTo(MapPoint.fromCellId(nearest.cellId))) {
+                if (!f.isInvisible()) {
                     nearest = f;
                 }
             }
+            else {
+                if(point.distanceTo(MapPoint.fromCellId(f.cellId)) < point.distanceTo(MapPoint.fromCellId(nearest.cellId))) {
+                    if (!f.isInvisible()) {
+                        nearest = f;
+                    }
+                }
+            }
+        }
+
+        if (nearest == null) {
+            nearest = {cellId: Basic.getRandomInt(1, 500)};
         }
 
         return nearest;
     }
 
     move(path, callback) {
+        var self = this;
         var movementKeys = [];
+        var glyphsToApply = [];
         for(var c of path) {
             if(this.fighter.fight.getFightObstacles().indexOf(c) != -1 && c != this.fighter.cellId) {
                 break;
             }
-            if(this.fighter.current.MP <= 0) {
+            if(this.fighter.current.MP < 0) {
+                this.fighter.current.MP = 0;
                 break;
             }
 
-            /*
-            var glyphsOnCell = this.fighter.fight.getGlyphsOnCell(c.cell.id);
+            var glyphsOnCell = this.fighter.fight.getGlyphsOnCell(c);
             if (glyphsOnCell.length > 0) {
                 for (var glyph of glyphsOnCell) {
-                    var self = this;
-                    setTimeout(function () {
-                        glyph.apply(self.fighter);
-                    }, movementKeys.length * 200);
+                    glyphsToApply.push(glyph);
                 }
-                movementKeys.push(c.cell.id);
-                this.fighter.cellId = c.cell.id;
+                movementKeys.push(c);
+                this.fighter.cellId = c;
                 this.fighter.current.MP--;
                 break;
             }
-            */
 
             movementKeys.push(c);
             this.fighter.cellId = c;
@@ -146,8 +157,19 @@ export default class BasicAI {
         this.fighter.fight.send(new Messages.SequenceEndMessage(3, this.fighter.id, 5));
 
         setTimeout(function(){
-            callback();
-        }, movementKeys.length * 200);
+            for(var g of glyphsToApply) {
+                g.apply(self.fighter);
+            }
+            if(glyphsToApply.length > 0) {
+                self.insertTaskBeforeAll("walkToNearest", {});
+                setTimeout(function(){
+                    callback();
+                }, 1000);
+            }
+            else {
+                callback();
+            }
+        }, movementKeys.length * 250);
     }
 
     getSpells() {

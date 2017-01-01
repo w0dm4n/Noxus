@@ -12,9 +12,13 @@ import FightSpellProcessor from "./fight_spell_processor"
 import * as Shapes from "./fight_shape_processor"
 import Dofus1Line from "../map_tools/dofus_1_line"
 import InvisibilityStateEnum from "../../enums/invisibility_state_enum"
+import MonsterFighter from "./monster_fighter"
+import DropItem from "./drop_item"
+import ItemManager from "../../game/item/item_manager"
 
 import FightPVMResult from "./results/fight_pvm_result"
 import FightChallengeResult from "./results/fight_challenge_result"
+import ConfigManager from "../../utils/configmanager.js"
 
 export default class Fight {
 
@@ -51,6 +55,7 @@ export default class Fight {
         this.timeline = new FightTimeline(this);
         this.cache = { buffId: 0, monsterId: 0 };
         this.glyphs = [];
+        this.firstEnd = true;
     }
 
     incrementCacheValue(value, negatif = false) {
@@ -105,15 +110,40 @@ export default class Fight {
         }
         this.displayMapBlades();
         this.refreshBaseFighters();
+        this.startStartupTimeline();
     }
 
     refreshBaseFighters() {
         this.baseFighters = this.allFighters();
     }
 
+    startFightIfNotStarted(fight) {
+        if (fight.fightState == Fight.FIGHT_STATES.STARTING)
+            fight.startFight();
+    }
+
+    startStartupTimeline() {
+        if (this.fightType == Fight.FIGHT_TYPE.FIGHT_TYPE_PvM) {
+            var self = this;
+            setTimeout(function() { self.startFightIfNotStarted(self) }, 30000);
+        }
+    }
+
     getFightCommonInformations() {
-        return new Types.FightCommonInformations(this.id, this.fightType, [this.teams.red.getFightTeamInformations(), this.teams.blue.getFightTeamInformations()],
-            [this.teams.red.bladeCellId, this.teams.blue.bladeCellId], [this.teams.red.getFightOptionsInformations(), this.teams.blue.getFightOptionsInformations()])
+        if (this.fightType == Fight.FIGHT_TYPE.FIGHT_TYPE_PvM) {
+            var neigCell = MapPoint.fromCellId(this.teams.red.bladeCellId);
+            var cells = neigCell.getNearestCells(false);
+            if (cells.length > 0) {
+                return new Types.FightCommonInformations(this.id, this.fightType, [this.teams.red.getFightTeamInformations(), this.teams.blue.getFightTeamInformations()],
+                    [this.teams.red.bladeCellId, cells[0]._nCellId], [this.teams.red.getFightOptionsInformations(), this.teams.blue.getFightOptionsInformations()]);
+            } else {
+                return new Types.FightCommonInformations(this.id, this.fightType, [this.teams.red.getFightTeamInformations(), this.teams.blue.getFightTeamInformations()],
+                    [this.teams.red.bladeCellId, this.teams.blue.bladeCellId], [this.teams.red.getFightOptionsInformations(), this.teams.blue.getFightOptionsInformations()]);
+            }
+        } else {
+            return new Types.FightCommonInformations(this.id, this.fightType, [this.teams.red.getFightTeamInformations(), this.teams.blue.getFightTeamInformations()],
+                [this.teams.red.bladeCellId, this.teams.blue.bladeCellId], [this.teams.red.getFightOptionsInformations(), this.teams.blue.getFightOptionsInformations()]);
+        }
     }
 
     displayMapBlades() {
@@ -127,9 +157,16 @@ export default class Fight {
     generateProceduralyCells() {
         var cells = this.map.getAvailableCells();
         var placements = [];
+
         for (var i = 0; i <= 8; i++) {
-            placements.push(cells[Basic.getRandomInt(0, cells.length)].id);
+            try {
+                placements.push(cells[Basic.getRandomInt(0, cells.length)].id);
+            }
+            catch (e) {
+                Logger.error("Can't generate placement cell : " + e.message);
+            }
         }
+
         return placements;
     }
 
@@ -163,7 +200,7 @@ export default class Fight {
     }
 
     getFighterOnCell(cellId) {
-        for (var fighter of this.allFighters()) {
+        for (var fighter of this.allAliveFighters()) {
             if (fighter.cellId == cellId) return fighter;
         }
         return null;
@@ -250,6 +287,9 @@ export default class Fight {
 
         if (!fighter.isAI) {
             fighter.restoreRoleplayContext();
+            if (this.fightState != Fight.FIGHT_STATES.END) {
+                fighter.onLoose();
+            }
         }
     }
 
@@ -350,9 +390,170 @@ export default class Fight {
     }
 
 
+    isWinner(fighter, winners) {
+        for (var f of winners) {
+            if (f.id == fighter.id)
+                return true;
+        }
+        return false;
+    }
+
+    alreadyInDrop(id, drops) {
+        for (var drop of drops) {
+            if (drop.dropId == id)
+                return true;
+        }
+        return false;
+    }
+
+    getPercentDropFromGrade(grade, drop) {
+        switch (grade)
+        {
+            case 1:
+                return drop.percentDropForGrade1;
+                break;
+            case 2:
+                return drop.percentDropForGrade2;
+                break;
+            case 3:
+                return drop.percentDropForGrade3;
+                break;
+            case 4:
+                return drop.percentDropForGrade3;
+                break;
+            case 5:
+                return drop.percentDropForGrade5;
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    countItemDrop(itemId, items) {
+        var i = 0;
+        for (var item of items) {
+            if (item == itemId)
+                i++;
+        }
+        return i;
+    }
+
+    checkDropStack(itemId, itemsDropped) {
+        for (var item of itemsDropped) {
+            if (item == itemId)
+                return false;
+        }
+        return true;
+    }
+
+    getMaxKamasForGrade(grade) {
+        var maxKamas = 0;
+        if (grade.level < 10) {
+            maxKamas = 100;
+        }
+        else if (grade.level < 30) {
+            maxKamas = 250;
+        }
+        else if (grade.level < 50) {
+            maxKamas = 325;
+        }
+        else if (grade.level < 70) {
+            maxKamas = 410;
+        }
+        else if (grade.level < 100) {
+            maxKamas = 650;
+        }
+        else if (grade.level < 130) {
+            maxKamas = 890;
+        }
+        else if (grade.level < 160) {
+            maxKamas = 1020;
+        }
+        else if (grade.level < 180) {
+            maxKamas = 1230;
+        }
+        else if (grade.level > 180) {
+            maxKamas = 1560;
+        }
+        return maxKamas;
+    }
+
+    generateKamasLoot(loosers) {
+        var earned = 0;
+        for (var fighter of loosers) {
+            if (fighter instanceof MonsterFighter) {
+                var maxKamas = this.getMaxKamasForGrade(fighter.monster.grade) * ConfigManager.configData.rates.kamas;
+                if (maxKamas > 0) {
+                    earned += Basic.getRandomInt(0, maxKamas);
+                }
+            }
+        }
+        return earned;
+    }
+
+    generateWinnersLoot(winners, loosers) {
+        for (var f of winners) {
+            if (f.hasLeave == true) continue;
+            var loots = [];
+            var dropMax = f.getQuantityDropMax();
+            var drops = [];
+            for (var fighter of loosers) {
+                if (fighter instanceof MonsterFighter) {
+                    for (var useless of fighter.monster.template.drops) {
+                        var drop = fighter.monster.template.drops[Math.floor(Math.random() * fighter.monster.template.drops.length)];
+                        if (drop) {
+                            if (!this.alreadyInDrop(drop.dropId, drops)) {
+                                drops.push(new DropItem(drop.dropId, this.getPercentDropFromGrade(fighter.monster.grade.grade, drop), drop.objectId));
+                            }
+                        }
+                    }
+                }
+            }
+            var droppedItems = [];
+            for (var drop of drops) {
+                var chancePercent = drop.getPercentChanceOfDrop() * ConfigManager.configData.rates.drop;
+                var rand = Basic.getRandomInt(0, 100);
+                if (rand <= chancePercent) {
+                    Logger.debug("Item " + drop.getItemId() + " dropped with percent of chance " + chancePercent + " on " + rand);
+                    droppedItems.push(drop.getItemId());
+                } else {
+                    Logger.debug("Item " + drop.getItemId() + " not dropped with percent of chance " + chancePercent + " on " + rand);
+                }
+            }
+            var items = [];
+            var dropIndex = 0;
+            for (var dropped of droppedItems) {
+                if (dropIndex > dropMax) break;
+                if (this.checkDropStack(dropped, items)) {
+                    var stack = this.countItemDrop(dropped, droppedItems);
+                    if (stack > 1){
+                        stack = Basic.getRandomInt(0, stack);
+                    }
+                    if (stack > 0) {
+                        var item = ItemManager.generateItemStack(dropped, stack);
+                        if (item) {
+                            f.character.itemBag.add(item, true, null);
+                        }
+                        items.push(dropped);
+                        items.push(stack);
+                        dropIndex++;
+                    }
+                }
+            }
+            f.droppeds = items;
+            f.kamasEarned = this.generateKamasLoot(loosers);
+        }
+    }
+
     showFightEnd(fighter, winners, loosers) {
         var winnerResult = [];
         var looserResult = [];
+
+        if (this.firstEnd && this.fightType == Fight.FIGHT_TYPE.FIGHT_TYPE_PvM) {
+            this.generateWinnersLoot(winners.fixedMembers, loosers.fixedMembers);
+            this.firstEnd = false;
+        }
 
         for (var f of winners.fixedMembers) {
             var entry = null;
@@ -384,7 +585,11 @@ export default class Fight {
         result = result.concat(winnerResult);
         result = result.concat(looserResult);
 
-        fighter.send(new Messages.GameFightEndMessage(0, -1, -1, result, []));
+        fighter.send(new Messages.GameFightEndMessage(this.timeline.getDuration(), -1, -1, result, []));
+        if (!this.isWinner(fighter, winners.fixedMembers)) {
+            fighter.onLoose();
+        }
+
     }
 
     startFight() {

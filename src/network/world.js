@@ -1,6 +1,7 @@
 var net = require('net');
 import Logger from "../io/logger"
 import WorldClient from "./world_client"
+import * as Messages from "../io/dofus/messages"
 
 export default class WorldServer {
 
@@ -40,6 +41,14 @@ export default class WorldServer {
             WorldServer.clients.splice(index, 1);
         }
     }
+
+    static sendTextInformationMessageToAll(typeId, id, params) {
+        var clients = WorldServer.getAllOnlineClients();
+        for (var client of clients) {
+            client.send(new Messages.TextInformationMessage(typeId, id, params));
+        }
+     }
+
 
     static getAllOnlineClients()
     {
@@ -88,10 +97,8 @@ export default class WorldServer {
 
     static sendToAllOnlineClients(message)
     {
-        for (var client in WorldServer.clients)
-        {
-            if (WorldServer.clients[client].character != null)
-            {
+        for (var client in WorldServer.clients) {
+            if (WorldServer.clients[client].character != null) {
                 WorldServer.clients[client].send(message);
             }
         }

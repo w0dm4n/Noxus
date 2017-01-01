@@ -17,6 +17,7 @@ import PartyHandler from "../handlers/party_handler"
 import FightHandler from "../handlers/fight_handler"
 import ExchangeHandler from "../handlers/exchange_handler"
 import NpcHandler from "../handlers/npc_handler"
+import FinishMoveHandler from "../handlers/finish_move_handler"
 
 export default class Processor {
 
@@ -102,7 +103,10 @@ export default class Processor {
         5898 : {message : Messages.NpcGenericActionRequestMessage , handler : NpcHandler.handleNpcGenericActionRequestMessage },
         5616 : {message : Messages.NpcDialogReplyMessage , handler : NpcHandler.handleNpcDialogReplyMessage },
         5774 : {message : Messages.ExchangeBuyMessage , handler : NpcHandler.handleExchangeBuyMessage },
-        5778 : {message : Messages.ExchangeSellMessage , handler : NpcHandler.handleExchangeSellMessage}
+        5778 : {message : Messages.ExchangeSellMessage , handler : NpcHandler.handleExchangeSellMessage},
+
+        // Finish move handler
+        6702 : {message: Messages.FinishMoveListRequestMessage, handler: FinishMoveHandler.handleFinishMoveListRequestMessage },
 } 
 
     static handle(client, messageId, buffer) {

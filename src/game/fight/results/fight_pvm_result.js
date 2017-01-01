@@ -1,6 +1,7 @@
 import * as Messages from "../../../io/dofus/messages"
 import * as Types from "../../../io/dofus/types"
 import MonsterFighter from "../monster_fighter"
+import ConfigManager from "../../../utils/configmanager"
 
 export default class FightPVMResult {
 
@@ -11,6 +12,13 @@ export default class FightPVMResult {
         this.isWinner = isWinner;
         this.winners = winners;
         this.others = others;
+    }
+
+    getLoots() {
+        if (this.fighter.droppeds) {
+            return new Types.FightLoot(this.fighter.droppeds, this.fighter.kamasEarned);
+        } else {
+        return new Types.FightLoot([], 0); }
     }
 
     getEntry() {
@@ -32,9 +40,9 @@ export default class FightPVMResult {
         else { // Player
             var experienceData = this.fighter.character.getExperienceFloorsData();
             data.push(new Types.FightResultExperienceData (this.fighter.character.experience, true, experienceData.floor.xp, true,
-                experienceData.nextFloor.xp, true, xp, true, 0, false, 0, false, false, xp)
+                experienceData.nextFloor.xp, true, xp, true, 0, false, 0, false, false, 1)
             );
-            return new Types.FightResultPlayerListEntry(this.isWinner ? 2 : 0, 0, new Types.FightLoot([], 0),
+            return new Types.FightResultPlayerListEntry(this.isWinner ? 2 : 0, 0, this.getLoots(),
                 f.id, f.alive, f.level, data);
         }
     }
@@ -45,7 +53,7 @@ export default class FightPVMResult {
         var totalExp = 0;
         for(var m of this.others.fixedMembers) {
             if(m instanceof MonsterFighter) {
-                totalExp += Math.floor((1 + (this.fighter.getStats().getTotalStats(12) / 100)) * (1.0, 0.5) * (m.monster.grade.gradeXp / this.winners.fixedMembers.length));
+                totalExp += Math.floor((ConfigManager.configData.rates.exp + (this.fighter.getStats().getTotalStats(12) / 100)) * (1.0, 0.5) * (m.monster.grade.gradeXp / this.winners.fixedMembers.length));
             }
         }
         return totalExp;

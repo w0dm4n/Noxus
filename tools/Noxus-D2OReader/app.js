@@ -8,7 +8,7 @@ d = function(it){
 return console.log(format(it));
 };
 
-file = "./SpellTypes"
+file = "./Effects"
 console.log("Processing " + file);
 BigEndianReader = (function(){
 BigEndianReader.displayName = 'BigEndianReader';

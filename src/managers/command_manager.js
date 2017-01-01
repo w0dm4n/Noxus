@@ -37,6 +37,7 @@ export default class CommandManager {
         { name:"itemset", role:AccountRole.ANIMATOR, description: "Vous ajoute une panoplie complète"},
         { name:"life", role:AccountRole.PLAYER, description: "Permet de régénerer ses points de vie"},
         { name:"save", role:AccountRole.PLAYER, description: "Permet de sauvegarder votre personnage"},
+        { name:"saveworld", role:AccountRole.ANIMATOR, description: "Permet de sauvegarder tout les personnage connecté sur le serveur"},
         { name:"capital", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points de capital"},
         { name:"spell", role:AccountRole.MODERATOR, description: "Permet d'apprendre un sort"},
         { name:"spellpoints", role:AccountRole.MODERATOR, description: "Permet d'ajouter des points de sort"},
@@ -480,5 +481,10 @@ export default class CommandManager {
             }
             fight.checkEnd();
         }
+    }
+
+    static handle_saveworld(data, client)
+    {
+        WorldManager.saveWorld();
     }
 }

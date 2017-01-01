@@ -1,0 +1,1165 @@
+MessageId : 0, TypeId : 0, Value : %1
+MessageId : 1, TypeId : 0, Value : Vous avez récupéré <b>%1</b> points de vie.
+MessageId : 2, TypeId : 0, Value : Vous avez appris le métier <b>$job%1</b>.
+MessageId : 3, TypeId : 0, Value : Vous avez appris le sort <b>$spell%1</b>.
+MessageId : 4, TypeId : 0, Value : Votre humeur guerrière reprend le dessus. Vous pouvez être défié...
+MessageId : 5, TypeId : 0, Value : Vous êtes maintenant tranquille. On ne peut plus vous défier...
+MessageId : 6, TypeId : 0, Value : Position sauvegardée.
+MessageId : 7, TypeId : 0, Value : Vous avez récupéré <b>%1</b> points d'énergie.
+MessageId : 8, TypeId : 0, Value : Vous avez gagné <b>%1</b> points d'expérience.
+MessageId : 9, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de sagesse.
+MessageId : 10, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de force.
+MessageId : 11, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de chance.
+MessageId : 12, TypeId : 0, Value : Vous avez gagné <b>%1</b> points d'agilité.
+MessageId : 13, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de vitalité.
+MessageId : 14, TypeId : 0, Value : Vous avez gagné <b>%1</b> points d' intelligence.
+MessageId : 15, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de caractéristique.
+MessageId : 16, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de sort.
+MessageId : 17, TypeId : 0, Value : Vous avez gagné <b>%1</b> XP dans le métier <b>$job%2</b>.
+MessageId : 18, TypeId : 0, Value : %1 vous a mis à la porte de sa maison...
+MessageId : 19, TypeId : 0, Value : %1 avait d'autres clients et a dû vous laisser.
+MessageId : 20, TypeId : 0, Value : Vous avez payé $quantity%1 kamas pour accéder à ce coffre.
+MessageId : 21, TypeId : 0, Value : Vous avez obtenu %1 '$item%2'.
+MessageId : 22, TypeId : 0, Value : Vous avez perdu %1 '$item%2'.
+MessageId : 23, TypeId : 0, Value : Vous venez de récupérer %1 points de stats.
+MessageId : 24, TypeId : 0, Value : Vous venez de mémoriser un nouveau zaap.
+MessageId : 25, TypeId : 0, Value : Votre familier vous fait la fête !
+MessageId : 26, TypeId : 0, Value : Vous donnez à manger à votre familier alors qu'il n'avait plus faim. Il se force pour vous faire plaisir
+MessageId : 27, TypeId : 0, Value : Vous donnez à manger à répétition à votre familier déjà obèse. Il avale quand même la ressource et fait une indigestion.
+MessageId : 28, TypeId : 0, Value : Vous donnez à manger à votre familier tout famélique. Il dévore tout le plus rapidement possible et son estomac en souffre. Mais il reprend du poids.
+MessageId : 29, TypeId : 0, Value : Vous donnez à manger à votre familier. Il semble qu'il avait très faim.
+MessageId : 30, TypeId : 0, Value : Vous donnez à manger à votre gros familier qui se précipite dessus tellement il semble avoir faim. Il mange trop rapidement et se fait mal. Au moins il a maigri un peu
+MessageId : 31, TypeId : 0, Value : Vous donnez à manger à votre familier famélique qui traînait comme un zombi. Il se force à manger mais la nourriture qu'il avale fait 3 fois son estomac et il se tord de douleur. Au moins il a mangé.
+MessageId : 32, TypeId : 0, Value : Votre familier apprécie le repas.
+MessageId : 33, TypeId : 0, Value : Vous venez de ressusciter, mais votre énergie est encore faible. Prenez garde ou les esprits vous rattraperont.
+MessageId : 34, TypeId : 0, Value : Vous avez perdu <b>%1</b> points d'énergie.
+MessageId : 36, TypeId : 0, Value : %1 vient de rejoindre le combat en spectateur.
+MessageId : 37, TypeId : 0, Value : Mode absent activé. Personne ne peut intéragir avec vous.
+MessageId : 38, TypeId : 0, Value : Vous n'êtes plus considéré comme absent.
+MessageId : 39, TypeId : 0, Value : {player,%1,%2} a activé le mode 'spectateur'.
+MessageId : 40, TypeId : 0, Value : {player,%1,%2} a désactivé le mode 'spectateur'.
+MessageId : 41, TypeId : 0, Value : La %1 menant à votre coeur de ville du %2 est attaquée.
+MessageId : 42, TypeId : 0, Value : La milice a envoyé du renfort pour aider l'équipe de %1 à se défendre.
+MessageId : 43, TypeId : 0, Value : Votre alignement vient d'augmenter de %1 et est désormais de %2.
+MessageId : 44, TypeId : 0, Value : Votre alignement est désormais de %1.
+MessageId : 45, TypeId : 0, Value : Vous avez gagné $quantity%1 kamas.
+MessageId : 46, TypeId : 0, Value : Vous avez perdu $quantity%1 kamas.
+MessageId : 47, TypeId : 0, Value : Votre mariage avec %1 a été annulé.
+MessageId : 48, TypeId : 0, Value : Le mariage entre %1 et %2 a été annulé.
+MessageId : 49, TypeId : 0, Value : En voyant cette porte ainsi illuminée, votre larve dorée s'est précipitée pour la franchir, vous n'avez pas pu la suivre. Nul doute qu'elle rejoindra les autres larves maintenant. Une perle dorée gît là où la larve se trouvait quelques secondes auparavant.
+MessageId : 50, TypeId : 0, Value : Mode discret activé. Seuls vos amis peuvent intéragir avec vous.
+MessageId : 51, TypeId : 0, Value : Vous n'êtes plus en mode invisible.
+MessageId : 52, TypeId : 0, Value : <b>%1</b> suit votre déplacement.
+MessageId : 53, TypeId : 0, Value : <b>%1</b> ne suit plus votre déplacement.
+MessageId : 54, TypeId : 0, Value : Nouvelle quête : <b>$quest%1</b>
+MessageId : 55, TypeId : 0, Value : Quête mise à jour : <b>$quest%1</b>
+MessageId : 56, TypeId : 0, Value : Quête terminée : <b>$quest%1</b>
+MessageId : 57, TypeId : 0, Value : Vous ne disposez pas d'assez de kamas pour acquiter la taxe de mise en vente...
+MessageId : 58, TypeId : 0, Value : Vous ne pouvez pas mettre plus d'objets en vente actuellement...
+MessageId : 59, TypeId : 0, Value : Vous ne pouvez pas mettre plus d'objets en vente actuellement...
+MessageId : 60, TypeId : 0, Value : Cet objet ne peut être accepté ici vu sa rareté...
+MessageId : 61, TypeId : 0, Value : Cet objet ne fait pas partie des catégories prévues dans cet hôtel de vente.
+MessageId : 62, TypeId : 0, Value : Action annulée pour cause de surcharge...
+MessageId : 63, TypeId : 0, Value : Vous ne disposez pas d'assez de kamas pour acheter cet objet.
+MessageId : 64, TypeId : 0, Value : Cet objet n'est plus disponible à ce prix. Quelqu'un a été plus rapide...
+MessageId : 65, TypeId : 0, Value : Banque : + $quantity%1 Kamas (vente : %4 $item%3).
+MessageId : 66, TypeId : 0, Value : Votre objet bon marché a été acheté immédiatement par les miliciens qui en feront, bien entendu, très bon usage. Votre compte en banque a été crédité de $quantity%1 kamas.
+MessageId : 67, TypeId : 0, Value : Un de vos objets n'a pas été vendu dans le temps limite. Vous le retrouverez à votre banque.
+MessageId : 68, TypeId : 0, Value : Lot acheté.
+MessageId : 69, TypeId : 0, Value : Les autres vous voient maintenant hors ligne...
+MessageId : 70, TypeId : 0, Value : Les autres vous revoient en ligne à nouveau.
+MessageId : 71, TypeId : 0, Value : Les autres vous voient maintenant hors ligne, sauf vos amis.
+MessageId : 72, TypeId : 0, Value : Vous êtes actuellement absent, cette personne risque de ne pas pouvoir vous répondre...
+MessageId : 73, TypeId : 0, Value : Banque : + $quantity%1 Kamas (vente : %4 $item%3).
+MessageId : 74, TypeId : 0, Value : Vous avez gagné <b>%1</b> points d' honneur.
+MessageId : 75, TypeId : 0, Value : Vous avez gagné <b>%1</b> points de déshonneur.
+MessageId : 76, TypeId : 0, Value : Vous avez perdu <b>%1</b> points d' honneur.
+MessageId : 77, TypeId : 0, Value : Vous avez perdu <b>%1</b> points de déshonneur.
+MessageId : 78, TypeId : 0, Value : Vous avez dû lâcher votre arme à deux mains pour équiper un bouclier.
+MessageId : 79, TypeId : 0, Value : Vous avez dû lâcher votre bouclier pour équiper une arme à deux mains.
+MessageId : 80, TypeId : 0, Value : Vous gagnez %1 points d'honneur en récompense de votre bravoure.
+MessageId : 81, TypeId : 0, Value : Vous perdez %1 points d'honneur suite à cette défaite.
+MessageId : 82, TypeId : 0, Value : Votre bravoure vous a fait grimper au rang %1.
+MessageId : 83, TypeId : 0, Value : Vous avez été dégradé au rang %1.
+MessageId : 84, TypeId : 0, Value : Vous êtes sanctionné par %1 point(s) de déshonneur pour ce combat déshonorant
+MessageId : 85, TypeId : 0, Value : Vous rachetez votre déshonneur de %1 point(s) avec cet acte de bravoure.
+MessageId : 86, TypeId : 0, Value : Vous devez repousser l'attaque sur la zone %1 avant que nos ennemis ne s'en emparent.
+MessageId : 87, TypeId : 0, Value : Le coeur de la zone <b>$area%1</b> est ouvert aux ennemis, protégez le !
+MessageId : 88, TypeId : 0, Value : Le coeur de la zone <b>$area%1</b> est refermé... Terrassez les ennemis encore présents et la victoire est acquise.
+MessageId : 89, TypeId : 0, Value : Vos alliés attaquent en ce moment la zone $area%1. Ils ont certainement besoin de votre aide.
+MessageId : 90, TypeId : 0, Value : Le coeur de la zone <b>$area%1</b> a été ouvert par vos alliés, vous pouvez tenter de capturer ce lieu !
+MessageId : 91, TypeId : 0, Value : Vous avez été téléporté hors d'une zone inaccessible.
+MessageId : 92, TypeId : 0, Value : Vous avez récupéré <b>%1</b> points d'énergie.
+MessageId : 93, TypeId : 0, Value : L'équipe n'accepte désormais que les membres du groupe du personnage principal.
+MessageId : 94, TypeId : 0, Value : L'équipe accepte les membres de tous les groupes.
+MessageId : 95, TypeId : 0, Value : L'équipe n'accepte plus de personnages supplémentaires.
+MessageId : 96, TypeId : 0, Value : L'équipe accepte de nouveau des personnages supplémentaires.
+MessageId : 97, TypeId : 0, Value : Les spectateurs seront admis initialement dans vos prochains combats.
+MessageId : 98, TypeId : 0, Value : Les spectateurs seront refusés initialement dans vos prochains combats.
+MessageId : 99, TypeId : 0, Value : Vos prochains combats seront joignables uniquement par votre groupe.
+MessageId : 100, TypeId : 0, Value : Vos prochains combats ne seront plus joignables uniquement par votre groupe.
+MessageId : 101, TypeId : 0, Value : Personne ne sera autorisé à rejoindre vos prochains combats.
+MessageId : 102, TypeId : 0, Value : Tout le monde sera autorisé à rejoindre vos prochains combats.
+MessageId : 103, TypeId : 0, Value : Demande d'aide signalée ...
+MessageId : 104, TypeId : 0, Value : Demande d'aide annulée ...
+MessageId : 105, TypeId : 0, Value : Votre monture apprécie le repas.
+MessageId : 106, TypeId : 0, Value : Pour utiliser le canal d'alignement vous devez développer vos ailes à 3 ou plus, ou encore avoir choisi une spécialisation par les quêtes d'alignement (niveau de quêtes à partir de 20)
+MessageId : 107, TypeId : 0, Value : Surveillez votre langage, vous n'êtes point un Bwork.
+MessageId : 108, TypeId : 0, Value : Avertissement avant sanction.
+MessageId : 109, TypeId : 0, Value : Le dieu Sram sème la confusion mentale dans l'esprit du joueur.
+MessageId : 110, TypeId : 0, Value : Votre monture %1 a été reprise de l'enclos %2 par %3
+MessageId : 111, TypeId : 0, Value : Votre monture mâle sauvage%1 s'est enfui aussitôt après avoir fécondé une femelle (enclos en %2).
+MessageId : 112, TypeId : 0, Value : Votre monture sauvage femelle%1, aussitôt après avoir mis bas, s'est enfuie.
+MessageId : 113, TypeId : 0, Value : Par respect pour les autres aventuriers, vous décidez après mûre réflexion de ne pas céder à la tentation de participer à la cacophonie d'ordinaire habituelle de ces lieux.
+MessageId : 114, TypeId : 0, Value : Impossible d'afficher des objets dans ce canal.
+MessageId : 115, TypeId : 0, Value : Ce canal est restreint pour améliorer sa lisibilité. Vous pourrez envoyer un nouveau message dans %1 secondes. Ceci ne vous autorise cependant pas pour autant à surcharger ce canal.
+MessageId : 116, TypeId : 0, Value : <b>Avertissement</b> : %1
+MessageId : 117, TypeId : 0, Value : Malgré vos talents, la magie n'opère pas et vous sentez l'échec de la transformation, ainsi que la diminution de la puissance de l'objet.
+MessageId : 118, TypeId : 0, Value : Vous n'arrivez pas à assembler correctement les ingrédients, et vous n'arrivez pas à concevoir quoi que ce soit d'utilisable cette fois.
+MessageId : 119, TypeId : 0, Value : « Miroir, mon beau miroir ... » Le miroir ne semble pas disposé à répondre à vos préoccupations esthétiques.
+MessageId : 120, TypeId : 0, Value : L'horloge indique %1h%2.
+MessageId : 121, TypeId : 0, Value : Cette horloge ne semble pas fonctionner.
+MessageId : 122, TypeId : 0, Value : Sont-ce les restes d'une beuverie ou des encres d'imprimerie ?
+MessageId : 123, TypeId : 0, Value : Vous créez : °0
+MessageId : 124, TypeId : 0, Value : Une pensée vous vient à l'esprit : « Quel beau portrait de ma grand-tante Danielle ! ... »
+MessageId : 125, TypeId : 0, Value : « coco ? »
+MessageId : 126, TypeId : 0, Value : « Il est exactement %1h%2. Coco »
+MessageId : 127, TypeId : 0, Value : Cette horloge n'est pas à l'heure, elle indique %1h%2.
+MessageId : 128, TypeId : 0, Value : « Vous a-t-on déjà dit que vous ressembliez à %1 ? » s'enquiert le miroir.
+MessageId : 129, TypeId : 0, Value : « Je détiens la force toute puissante ! »
+MessageId : 130, TypeId : 0, Value : « Savez-vous planter les choux ... »
+MessageId : 131, TypeId : 0, Value : « Ci-gît Hector, niveau 197, tué par le cri d'un Tofu affamé. »
+MessageId : 132, TypeId : 0, Value : « Attention ! Peinture fraîche »
+MessageId : 133, TypeId : 0, Value : « PIOU PIOU »
+MessageId : 134, TypeId : 0, Value : Cet oiseau empaillé, rembourré à la fleur de chanvre, sent bon le bwork malade.
+MessageId : 135, TypeId : 0, Value : Vous vous réchauffez au coin du poêle. Il fait bon dans la pièce.
+MessageId : 136, TypeId : 0, Value : Le poêle est éteint.
+MessageId : 137, TypeId : 0, Value : Cet oiseau n'a pas l'air en forme, il vaudrait mieux l'achever d'un bon coup d'épée ...
+MessageId : 138, TypeId : 0, Value : Le piou se jette sur vous et vous arrache les yeux ...
+Ah non, c'est une illusion, quelqu'un vous en veut ...
+MessageId : 139, TypeId : 0, Value : Vous ne pouvez plus parler dans ce canal, seuls les débutants présents dans Incarnam le peuvent. Vous pouvez néanmoins leur répondre en message privé pour les aider.
+MessageId : 140, TypeId : 0, Value : Un tofu peinturluré s'échappe du tableau et vous attaque.
+MessageId : 141, TypeId : 0, Value : Le tofu collé à la toile par la peinture semble vouloir se détacher du tableau.
+MessageId : 142, TypeId : 0, Value : Le tofu est maintenant bien fixé ! Marylork est un vrai artiste réaliste.
+MessageId : 143, TypeId : 0, Value : %1 ({player,%2,%3}) est en ligne.
+MessageId : 144, TypeId : 0, Value : Votre inventaire est plein. Votre récolte est perdue...
+MessageId : 145, TypeId : 0, Value : Vous faites halte devant cette œuvre de magnificence, et l'ayant admiré en votre cœur, vous vous exclamez avec enthousiasme : « Voilà donc le héros d'endurance qui, des épreuves des dieux, a su triompher. Voici donc le visage de ce guerrier légendaire qui sous l'égide de Féca atteignit le pinacle du firmament ». Puis, pour pondérer votre envolée lyrique, vous ajoutez : « Rhô ke c bo, il r0xX ! ».
+MessageId : 146, TypeId : 0, Value : Que je suis beau !
+MessageId : 147, TypeId : 0, Value : Après vérification de ses registres, un gardien d'étable vous annonce qu'il a libéré la monture dénommée « %1 » que vous lui aviez confié. 
+Il était, en effet, sans nouvelles de vous ou de son nouveau propriétaire dans les délais fixés lors de l'échange.
+MessageId : 148, TypeId : 0, Value : Les ailes sanglantes de Sacrieur, la Déesse des Martyrs, s'ouvrent devant vos yeux ébahis.
+Cette statue apparut lors de l'avènement de la Déesse, générée par les pensées réunies de milliers de fidèles.
+MessageId : 149, TypeId : 0, Value : Cette armure ancienne semble cacher les restes d'un passage secret qui a dû s'écrouler il y a bien longtemps.
+Peut-être qu'avec une pelle, une pioche, et beaucoup de courage... Hm, après réflexion, en fait non.
+MessageId : 150, TypeId : 0, Value : De la main de <b>%2</b>, <b>%1</b> dit : %3
+MessageId : 151, TypeId : 0, Value : Votre <b>%1</b> vous murmure : %2
+MessageId : 152, TypeId : 0, Value : Précédente connexion sur ce compte : %3/%2/%1 à %4:%5 via l'adresse IP %6
+MessageId : 153, TypeId : 0, Value : Votre adresse IP actuelle est %1.
+MessageId : 154, TypeId : 0, Value : Vous avez oublié un sort de niveau %1 et avez ainsi regagné %2 points de sort.
+MessageId : 155, TypeId : 0, Value : Votre présence dans ce territoire ne vous a pas procuré d'honneur cette fois, vous aviez déjà vaillamment défendu il y a peu. Le prochain combat sera sans doute plus valorisant !
+MessageId : 156, TypeId : 0, Value : La porte du tribunal est fermée à clef.
+MessageId : 157, TypeId : 0, Value : Ce canal n'est accessible en diffusion aux abonnés qu'à partir du niveau %1.
+MessageId : 158, TypeId : 0, Value : Votre dragodinde %1 a été mise dans votre enclos suite à la vente de la ferme dans laquelle elle se trouvait.
+MessageId : 159, TypeId : 0, Value : Votre arme ne peut contenir autant de runes ! Toutes les runes vous ont été rendues.
+MessageId : 160, TypeId : 0, Value : Sanctuaire Hotomani
+MessageId : 161, TypeId : 0, Value : Une force invisible vous empêche de passer
+MessageId : 162, TypeId : 0, Value : <b>%2</b> tour(s) avant déconnexion de <b>%1</b>
+MessageId : 163, TypeId : 0, Value : <b>%1</b> a visé le décor.
+MessageId : 164, TypeId : 0, Value : Vous vous regardez dans le miroir, vous êtes moche.
+MessageId : 165, TypeId : 0, Value : Nouveau challenge : $challenge%1 !
+MessageId : 166, TypeId : 0, Value : Challenge échoué !
+MessageId : 167, TypeId : 0, Value : Challenge réussi !
+MessageId : 168, TypeId : 0, Value : Message automatique : Le joueur <b>%1</b> a été rendu muet pour ne pas avoir respecté les règles. <b>%1</b> ne pourra pas vous répondre avant <b>%2</b> minutes.
+MessageId : 169, TypeId : 0, Value : (...) Riyou Tchevlakouk, citoyen bénévole de Bonta, est en charge du dressage des crocs glands, au bâtiment annexe à l'hôtel de vente des animaux.
+MessageId : 170, TypeId : 0, Value : En montant sur le bâtiment vous apercevez un milicien bontarien se dirigeant vers Astrub.
+MessageId : 171, TypeId : 0, Value : Vous trouvez des traces de lutte et des restes de Karne.
+MessageId : 172, TypeId : 0, Value : Cette porte est verrouillée. Impossible de la forcer.
+MessageId : 173, TypeId : 0, Value : Vous ne pouvez pas dérober le document tant que le garde vous surveille.
+MessageId : 174, TypeId : 0, Value : Il vous faut un Tonneau en Bombu pour transporter l'hydre au miel.
+MessageId : 175, TypeId : 0, Value : Contrat rempli ! Retournez auprès de votre commanditaire.
+MessageId : 176, TypeId : 0, Value : Vous avez quitté la guilde.
+MessageId : 177, TypeId : 0, Value : Vous avez banni <b>%1</b> de votre guilde.
+MessageId : 178, TypeId : 0, Value : Tous les membres du groupe suivent vos déplacements.
+MessageId : 179, TypeId : 0, Value : Contrat échoué ! Retournez auprès de votre commanditaire.
+MessageId : 180, TypeId : 0, Value : Vous avez survécu au chasseur de tête <b>%1</b> !
+MessageId : 181, TypeId : 0, Value : Votre monture %1 a été retirée de l'enclos %2 par %3 et mise dans votre étable.
+MessageId : 182, TypeId : 0, Value : Le message au joueur <b>%1</b> est en cours d'envoi via son accès mobile...
+MessageId : 183, TypeId : 0, Value : Malgré vos talents, la magie n'opère pas et vous sentez l'échec de la transformation.
+MessageId : 184, TypeId : 0, Value : Vous avez placé la monture %1 dans l'enclos de son propriétaire.
+MessageId : 185, TypeId : 0, Value : Au milieu des armes est rangé le manuscrit de la chanson « Je sais que tu combats » composée et interprétée par le ménestrel Francisque Kabroule lors de la cérémonie d'ouverture de l'arène.
+MessageId : 186, TypeId : 0, Value : Vous avez été expulsé du village suite à sa capture par vos ennemis.
+MessageId : 187, TypeId : 0, Value : Suite à la capture du village par vos ennemis, vous en serez expulsé à la fin du combat.
+MessageId : 188, TypeId : 0, Value : <b>%1</b> a fait échouer le challenge $challenge%2.
+MessageId : 189, TypeId : 0, Value : [wait_mod_Br8190] Des jets de lave jaillissent, bloquant votre avancée.
+MessageId : 190, TypeId : 0, Value : [wait_mod_Bo8190] Un combat a eu lieu ici. Vous devriez interroger le voisinage pour en savoir plus.
+MessageId : 191, TypeId : 0, Value : [wait_mod_Bo9100] La statuette semble n'avoir aucun effet, vous l'avez sans doute cassée. C'est Jiva qui va être fâchée.
+MessageId : 192, TypeId : 0, Value : Un champ de force magique vous empêche de passer.
+MessageId : 193, TypeId : 0, Value : Précédente connexion sur ce compte : %3/%2/%1 à %4:%5
+MessageId : 194, TypeId : 0, Value : La magie n'a pas parfaitement fonctionné, une des caractéristiques de l'objet a baissé en puissance.
+MessageId : 195, TypeId : 0, Value : Ledrob Terceséc vous surveillant, il vaut mieux éviter de fouiller dans ses affaires.
+MessageId : 196, TypeId : 0, Value : Votre session de jeu expire dans %1 minute(s) %2 seconde(s).
+MessageId : 197, TypeId : 0, Value : Vous avez %1 {openSocial,0,0::ami(s)} en ligne.
+MessageId : 198, TypeId : 0, Value : Un Bontarien interrompt vos recherches.
+MessageId : 199, TypeId : 0, Value : Le buisson est vide. Les branches cassées indiquent que quelqu'un a profité de votre combat pour dérober ce qui était caché ici. Oto Mustam va être mécontent.
+MessageId : 200, TypeId : 0, Value : Quelque chose de puissant est passé par ici, mais le portail est maintenant refermé.
+MessageId : 201, TypeId : 0, Value : En application du décret contre les mutants de l'officier Kelly, l'accès à l'arène est interdit aux mutants.
+MessageId : 202, TypeId : 0, Value : Vos caractéristiques ne conviennent pas
+MessageId : 203, TypeId : 0, Value : Vous n'avez pas le niveau nécessaire.
+MessageId : 204, TypeId : 0, Value : Vous n'exercez pas le métier nécessaire.
+MessageId : 205, TypeId : 0, Value : [wait_mod_Bo9100] Nul ne peut retourner dans le sanctuaire tant que l'enchantement de Terrakourial fait effet.
+MessageId : 206, TypeId : 0, Value : Les fontaines de jouvence n'ont plus d'effet régénérateur à votre niveau.
+MessageId : 207, TypeId : 0, Value : Le message inconnu n°%1 n'a pu être affiché
+MessageId : 208, TypeId : 0, Value : Votre guilde passe niveau %1
+MessageId : 209, TypeId : 0, Value : Le signalement de %1 a bien été pris en compte!
+MessageId : 210, TypeId : 0, Value : Vous n'êtes pas encore autorisé à entrer sur cette île. Vous devriez vous renseigner auprès du garde Pandawa.
+MessageId : 211, TypeId : 0, Value : Votre maison se trouve en %1.
+MessageId : 212, TypeId : 0, Value : Vous ne pouvez pas bénéficier de tous les bonus de l'objet $item%1. Il n'est pas possible de cumuler de bonus issus de la forgemagie de plus de %3 $stat%2.
+MessageId : 213, TypeId : 0, Value : Lanma s'enfuit au sud-est, vous devez le poursuivre.
+MessageId : 214, TypeId : 0, Value : « Ci-gît Lichen, mort d'une indigestion après avoir dévoré trop de pizzas au boudin. »
+MessageId : 215, TypeId : 0, Value : « Ici sont enterrés les restes de RatDog, découpé par une moulinette défaillante. »
+MessageId : 216, TypeId : 0, Value : L'accès à ce lieu est réservé aux mercenaires.
+MessageId : 217, TypeId : 0, Value : Vous placardez un avis de recherche.
+MessageId : 218, TypeId : 0, Value : Votre banque a été débitée de $quantity%1 kamas depuis les places de marché Ogrines.
+MessageId : 219, TypeId : 0, Value : Votre banque a été créditée de $quantity%1 kamas depuis les places de marché Ogrines.
+MessageId : 220, TypeId : 0, Value : Votre personnage a été débité de $quantity%1 kamas depuis les places de marché Ogrines.
+MessageId : 221, TypeId : 0, Value : Votre personnage a été débité de $quantity%1 kamas depuis les places de marché Ogrines.
+MessageId : 222, TypeId : 0, Value : %1 ne pourra pas vous répondre à moins que vous ne l'ajoutiez à votre liste d'ami, car il a atteint la limite de messages par jour pour les comptes non-abonnés.
+MessageId : 223, TypeId : 0, Value : Vous êtes maintenant l'heureux propriétaire de la monture %1, pauvre monture elle n'avait plus de maître.
+MessageId : 224, TypeId : 0, Value : Un membre de votre guilde, {player,%1,%2}, est en ligne.
+MessageId : 225, TypeId : 0, Value : Vos points de vie sont déjà au maximum.
+MessageId : 226, TypeId : 0, Value : + $quantity%1 Kamas (vente de %4 '$item%3' en mode marchand).
+MessageId : 227, TypeId : 0, Value : '$item%1' est de nouveau lié à votre équipement rapide n°%2.
+MessageId : 228, TypeId : 0, Value : $item%1' est manquant dans l'équipement rapide n°%2.
+MessageId : 229, TypeId : 0, Value : « Ci-gît Seyroth, mort de fatigue après avoir erré cent jours dans le nouveau labyrinthe du Minotoror. »
+MessageId : 230, TypeId : 0, Value : « Omar m'a tuer. »
+MessageId : 231, TypeId : 0, Value : %1 ne pourra pas répondre à votre message, car vous ne l'avez pas ajouté dans votre liste d'amis.
+MessageId : 232, TypeId : 0, Value : Impossible de l'ouvrir sans la bonne clef.
+MessageId : 233, TypeId : 0, Value : Votre $item%1 se sent plus fort(e) dans cette zone, ses bonus sont augmentés temporairement de %2%%.
+MessageId : 234, TypeId : 0, Value : Les points de vie de {player,%1,%2} sont déjà au maximum.
+MessageId : 235, TypeId : 0, Value : Vous entendez une étrange complainte portée par le vent.
+MessageId : 236, TypeId : 0, Value : Vous êtes actuellement en mode caché : personne ne pourra voir votre personnage ou initier une interaction avec vous nécessitant d'être sur la même carte (échange, défi...).
+MessageId : 237, TypeId : 0, Value : Vous n'êtes plus en mode caché : vous êtes de nouveau visible sur la carte.
+MessageId : 238, TypeId : 0, Value : Vous nourrissez le tout puissant Serlecc.
+MessageId : 239, TypeId : 0, Value : '$item%1' se charge de magie résiduelle.
+MessageId : 240, TypeId : 0, Value : '$item%1' n'a presque plus de magie résiduelle.
+MessageId : 241, TypeId : 0, Value : '$item%1' n'a plus de magie résiduelle.
+MessageId : 242, TypeId : 0, Value : Des monstres attaquent {player,%1} en $map%2.
+MessageId : 243, TypeId : 0, Value : {player,%1} aggresse un ennemi en $map%2.
+MessageId : 244, TypeId : 0, Value : Un ennemi agresse {player,%1} en $map%2.
+MessageId : 245, TypeId : 0, Value : Le combat a duré trop longtemps et les Gloursons ont précipité Maya dans le vide.
+MessageId : 246, TypeId : 0, Value : Combo : +%1%% dommages d'explosion
+MessageId : 247, TypeId : 0, Value : Vous avez bien oublié un niveau du sort <b>$spell%1</b>.
+MessageId : 248, TypeId : 0, Value : Case témoin
+MessageId : 249, TypeId : 0, Value : Apprenez à donner au lieu de toujours recevoir.
+MessageId : 250, TypeId : 0, Value : Vous avez atteint le niveau maximum.
+MessageId : 251, TypeId : 0, Value : Il vous faut 30 pommes de terre pour sortir de cette cellule.
+MessageId : 252, TypeId : 0, Value : %3 x {item,%1,%2} ($quantity%4 kamas)
+MessageId : 253, TypeId : 0, Value : Vos points d'énergie sont déjà au maximum.
+MessageId : 254, TypeId : 0, Value : Les points d'énergie de {player,%1,%2} sont déjà au maximum.
+MessageId : 255, TypeId : 0, Value : Impossible de cumuler des bonus de forgemagie supérieurs à 1 PA, 1 PM et 1 PO, ou de dépasser 12 PA, 6 PM ou 6 PO via l'équipement.
+MessageId : 256, TypeId : 0, Value : Votre familier a le ventre qui touche le sol, il ne gagne pas de points.
+MessageId : 257, TypeId : 0, Value : Votre familier a les côtes visibles, il ne gagne pas de points.
+MessageId : 258, TypeId : 0, Value : Masque du Maître : « Étrangement, peu de temps après l'avoir porté, le célèbre maître Zobal Yen l'Intrépide devint dur de l'oreille gauche... »
+MessageId : 259, TypeId : 0, Value : Masque Muraille : « Il faut espérer que le simple fait de porter ce masque ne vous rende pas aussi lourds qu'il en a l'air ! »
+MessageId : 260, TypeId : 0, Value : Masque de l'homme saoul : « C'est bien connu, sous l'effet de boissons fermentées, on sent moins la douleur... »
+MessageId : 261, TypeId : 0, Value : Masque Gastro : « Le masque idéal pour faire le grand vide ! »
+MessageId : 262, TypeId : 0, Value : Masque de la Joie : « Une certaine zoballégresse s'empare de celui qui le porte... »
+MessageId : 263, TypeId : 0, Value : Masque Nenni : « Vous ne passerez pas ! »
+MessageId : 264, TypeId : 0, Value : Masque de la Pêche : « Un masque pour en mettre plein la poire à vos ennemis ! »
+MessageId : 265, TypeId : 0, Value : Masque du Refuge : « Avec ce masque, vous serez à l'abri des coups, mais pas des moqueries. »
+MessageId : 266, TypeId : 0, Value : Masque du Blanc-bec : « Bien que principalement utilisé par des Zobals peu expérimentés, ce masque a fermé le clapet à plus d'un ! »
+MessageId : 267, TypeId : 0, Value : Masque du Marwal : « Qui enfile ce masque a les doigts qui puent ! »
+MessageId : 268, TypeId : 0, Value : Vous passez au travers du bois pourri du cercueil et vous vous retrouvez dans une pièce n'ayant pas reçu de visiteurs depuis fort longtemps.
+MessageId : 269, TypeId : 0, Value : Vous devez placer tous les appâts avant d'entrer dans la mine !
+MessageId : 270, TypeId : 0, Value : Vos ennemis peuvent vous écrire des messages privés.
+MessageId : 271, TypeId : 0, Value : Vos ennemis ne peuvent pas vous écrire des messages privés.
+MessageId : 272, TypeId : 0, Value : %1 vous a inscrit à un combat en Kolizéum.
+MessageId : 273, TypeId : 0, Value : Combat de Kolizéum annulé/non validé par votre équipe.
+MessageId : 274, TypeId : 0, Value : Combat de Kolizéum annulé/non validé par l'autre équipe.
+MessageId : 275, TypeId : 0, Value : %1 a refusé le combat en Kolizéum.
+MessageId : 276, TypeId : 0, Value : Vous avez gagné $quantity%1 kamas et $quantity%2 jetons suite à vos derniers meilleurs résultats en Kolizéum.
+MessageId : 277, TypeId : 0, Value : Le dieu Osamodas reste sourd à vos prières.
+MessageId : 278, TypeId : 0, Value : Jusqu'au prochain coucher de soleil, vous ne subirez pas de malus en prospection lorsque vous combattrez des krokilles même si votre groupe comporte un ou plusieurs Osamodas.
+MessageId : 279, TypeId : 0, Value : La prochaine fois que vous mangerez de l'omelette vulkaine, les krokilles ayant servi à sa confection ne seront pas pourries.
+MessageId : 280, TypeId : 0, Value : Les chances d'obtenir un Dofus lors de votre prochain combat contre Grozilla et Grasmera sont doublées.
+MessageId : 281, TypeId : 0, Value : Les risques de croiser votre belle-mère diminuent de moitié pour les prochaines 24 heures.
+MessageId : 282, TypeId : 0, Value : S'exprimer de manière compréhensible auprès des autres aventuriers ne vous transformera pas en créature bizarre. Attention, cet effet se dissipe dès que vous parlez bwork.
+MessageId : 283, TypeId : 0, Value : Vos chances de gagner des cadeaux sur l'île de Nowel sont grandement augmentées durant la période estivale.
+MessageId : 284, TypeId : 0, Value : Vos crottes de nez ont meilleur goût quand on vous regarde les manger. Cette bénédiction prend fin si vous quittez l'archipel de Vulkania.
+MessageId : 285, TypeId : 0, Value : Vos chances de jouer intelligemment augmentent tant que dure cette session de jeu.
+MessageId : 286, TypeId : 0, Value : Votre familier ne fera plus ses besoins dans votre inventaire.
+MessageId : 287, TypeId : 0, Value : Votre fertilité augmente pour les 5 prochaines aventures.
+MessageId : 288, TypeId : 0, Value : Votre monture ne cherchera plus à inverser les rôles en vous montant.
+MessageId : 289, TypeId : 0, Value : Vous êtes immunisé aux accidents de bateau tant que vous ne prenez pas le bateau.
+MessageId : 290, TypeId : 0, Value : Vous n'aurez plus de problème de vessie lorsque vous vous retrouverez dans l'intimité avec votre conjoint.
+MessageId : 291, TypeId : 0, Value : Vous n'aurez plus de problème de vessie lorsque vous vous retrouverez dans l'intimité avec votre conjointe.
+MessageId : 292, TypeId : 0, Value : Vous n'oublierez pas votre enfant à la sortie de l'école la prochaine fois que votre mari rentrera plus tôt du travail pour vous voir.
+MessageId : 293, TypeId : 0, Value : Vous n'oublierez pas votre enfant à la sortie de l'école la prochaine fois que vous rentrerez plus tôt du travail pour voir votre femme.
+MessageId : 294, TypeId : 0, Value : Vous n'oublierez pas votre enfant à la sortie de l'école tant que vous n'aurez pas d'enfant.
+MessageId : 295, TypeId : 0, Value : Vous pourrez continuer à vous bercer d'illusions jusqu'à votre éveil.
+MessageId : 296, TypeId : 0, Value : Ci-gît Exited, célèbre guerrier Iop, décédé des suites d'une surexcitation aigüe à l'idée de travailler pendant six mois au château d'Amakna.
+MessageId : 297, TypeId : 0, Value : Ici sont entreposés les restes d'Aasimar, brillant architecte au crâne qui l'était tout autant, victime d'une idée d'Eugénie Sivil.
+MessageId : 298, TypeId : 0, Value : Cette tombe d'infortune abrite la dépouille de Thomas, maçon de renom, retrouvé noyé dans sa soupe aux choux.
+MessageId : 299, TypeId : 0, Value : En ce lieu repose pour l'éternité le cadavre de Fernand et celui de Félicie aussi.
+MessageId : 300, TypeId : 0, Value : Vous placez les échantillons dans l'alambic... quelques secondes après, un ticket sort de l'appareil.
+MessageId : 301, TypeId : 0, Value : Vous n'avez pas les objets nécessaires pour faire fonctionner cet appareil.
+MessageId : 302, TypeId : 0, Value : Vous distinguez des empreintes de Chacha dans le sable... Elles semblent se diriger vers la pirogue.
+MessageId : 303, TypeId : 0, Value : Vous entendez des miaulements venant de derrière les offrandes... mais le Chacha ne semble pas vouloir se montrer.
+MessageId : 304, TypeId : 0, Value : Attiré par la Sousouris, Dekster le Chacha est sorti de sa cachette !
+MessageId : 305, TypeId : 0, Value : Deux lettres sont lisibles sur le panneau : GG !.. Les initiales de Grozilla et Grasmera ?
+MessageId : 306, TypeId : 0, Value : Vous avez déjà ramassé ce type de sel.
+MessageId : 307, TypeId : 0, Value : Le concasseur de sel est bloqué.
+MessageId : 308, TypeId : 0, Value : Vous versez le coquetel sur les dents de l'appareil... une fumée âcre s'élève dans l'air, puis finit par se dissiper. Les mâchoires du Concasseur semblent débloquées !
+MessageId : 309, TypeId : 0, Value : Cet appareil est un Concasseur de sel vulkain. Comme vous n'avez pas de sel à réduire en poudre, il ne vous est d'aucune utilité.
+MessageId : 310, TypeId : 0, Value : Il vaudrait mieux porter des Gants de Mastiqueur pour récolter la gomme sur cet arbre.
+MessageId : 311, TypeId : 0, Value : Lire l'inscription sur la tombe : Joel Tribinia, Javian 609 - Martalo 641
+MessageId : 312, TypeId : 0, Value : Lire l'inscription sur la tombe : Chandelair Bong, Aperirel 607 - Novamaire 639
+MessageId : 313, TypeId : 0, Value : Lire l'inscription sur la tombe : Monika Gaileurre, Aperirel 609 - Maisial 639
+MessageId : 314, TypeId : 0, Value : Lire l'inscription sur la tombe : Rachelle Grill, Maisial 608 - Septange 640
+MessageId : 315, TypeId : 0, Value : Lire l'inscription sur la tombe : Fybie Buffet, Flovor 607- Juinssidor 640
+MessageId : 316, TypeId : 0, Value : Lire l'inscription sur la tombe : Raus Gaileurre, Octolliard 606 - Descendre 639
+MessageId : 317, TypeId : 0, Value : Vous trouvez une Fée d'Artifice cachée sous une pile de rations rassises.
+MessageId : 318, TypeId : 0, Value : Attention à ne pas tomber dans le panneau.
+MessageId : 319, TypeId : 0, Value : Noyade interdite : il est défendu de nourrir les poissons.
+MessageId : 320, TypeId : 0, Value : Attention, Raul Mops méchant !
+MessageId : 321, TypeId : 0, Value : Il est interdit de faire des petits volcans et de mettre du jus dedans.
+MessageId : 322, TypeId : 0, Value : Pour respecter le cadre naturel de Vulkania, merci d'utiliser les poubelles à votre disposition.
+MessageId : 323, TypeId : 0, Value : Merci de ne pas répandre de détritus lorsque vous fouillez les poubelles.
+MessageId : 324, TypeId : 0, Value : Une clé immatérielle apparaît dans votre main. Mais quelle serrure peut-elle bien ouvrir ?
+MessageId : 325, TypeId : 0, Value : Le bar réservé au personnel est fermé durant la saison touristique.
+MessageId : 326, TypeId : 0, Value : Nous informons notre aimable clientèle que les articles ne sont ni repris, ni échangés, ni garantis en aucune façon.
+MessageId : 327, TypeId : 0, Value : En cas d'ingestion accidentelle de l'un de nos articles, veuillez vous diriger vers le massif de fougères le plus proche.
+MessageId : 328, TypeId : 0, Value : Plage interdite au public, allez, ouste !
+MessageId : 329, TypeId : 0, Value : Danger, sables émouvants ! Surtout ne pas pleurer !
+MessageId : 330, TypeId : 0, Value : Eaux dangereuses, on vous aura prévenu !
+MessageId : 331, TypeId : 0, Value : Demi-tour, y'a rien à voir !
+MessageId : 332, TypeId : 0, Value : Huile flottante, ne pas se jeter dedans.
+MessageId : 333, TypeId : 0, Value : Huile flottante, ne pas se re-jeter dedans.
+MessageId : 334, TypeId : 0, Value : Portes de Ponefarr : sortie déconseillée aux touristes débutants.
+MessageId : 335, TypeId : 0, Value : Salle des touristes, niveau 1-50.
+MessageId : 336, TypeId : 0, Value : Salle des amateurs, niveau 51-100.
+MessageId : 337, TypeId : 0, Value : Salle des spécialistes, niveau 101-150.
+MessageId : 338, TypeId : 0, Value : Salle des experts, niveau 151-200.
+MessageId : 339, TypeId : 0, Value : Zone réservée au personnel autorisé.
+MessageId : 340, TypeId : 0, Value : Attention, chutes de pierres et d'aventuriers !
+MessageId : 341, TypeId : 0, Value : L'échange est impossible.
+MessageId : 342, TypeId : 0, Value : Vous ne pouvez pas acheter cette maison, car le compte en banque du vendeur est plein.
+MessageId : 343, TypeId : 0, Value : Votre maison n'a pas pu être vendue, votre compte en banque aurait atteint le seuil.
+MessageId : 344, TypeId : 0, Value : Vous avez atteint le seuil maximum de kamas dans votre inventaire.
+MessageId : 345, TypeId : 0, Value : Vous ne pouvez pas acheter cet enclos, car le compte en banque du vendeur est plein.
+MessageId : 346, TypeId : 0, Value : Votre enclos n'a pas pu être vendu, votre compte en banque aurait atteint le seuil.
+MessageId : 347, TypeId : 0, Value : Les kamas n'ont pas pu être rétiré lors de l'échange.
+MessageId : 348, TypeId : 0, Value : Après réflexion, prendre cet objet vous semble une mauvaise idée.
+MessageId : 349, TypeId : 0, Value : Votre équipe ne peut pas faire de combat en Kolizéum car un des joueurs est en fantôme ou en mutant.
+MessageId : 350, TypeId : 0, Value : Vous regardez dans la caisse : hormis des livres de coloriage et des recueils de poésie pandawa, aucune trace du livre que vous cherchez.
+MessageId : 351, TypeId : 0, Value : Vous trouvez le tome IV des Fragments, mais une page a été arrachée.
+MessageId : 352, TypeId : 0, Value : Cette caisse est remplie de livres.
+MessageId : 353, TypeId : 0, Value : Votre familier a mangé %1 '$item%2'.
+MessageId : 354, TypeId : 0, Value : La magie du coffre vous a transporté dans une maison close. Choisissez un trésor pour sortir.
+MessageId : 355, TypeId : 0, Value : La Clef des 14 ne semble pas convenir pour resserrer les boulons de la manivelle.
+MessageId : 356, TypeId : 0, Value : Vous trouvez un papier froissé sous la caisse : il s'agit d'un message adressé à Kana Suhkr et proposant un rendez-vous sur la jetée.
+MessageId : 357, TypeId : 0, Value : Vous remarquez un lambeau de tissu bleu accroché aux branches du sapin.
+MessageId : 358, TypeId : 0, Value : Un chapeau est incrusté dans la glace, au pied de la clôture. Vu les trous de chaque côté, il devait sans doute appartenir à un individu cornu, probablement un Osamodas.
+MessageId : 359, TypeId : 0, Value : Vous trouvez un journal relié de cuir sous le paquet cadeau.
+MessageId : 360, TypeId : 0, Value : Il y a une clef métallique sur le dessus de la caisse. Vous vous apprêtez à la prendre, quand soudain, vous entendez un crépitement électrique derrière vous !
+MessageId : 361, TypeId : 0, Value : Cette manivelle semble actionner un tapis roulant.
+MessageId : 362, TypeId : 0, Value : Vous trouvez %3 x {item,%1,%2} de la part de {player,%4,%5}.
+MessageId : 363, TypeId : 0, Value : Vous trouvez %3 x {item,%1,%2}.
+MessageId : 364, TypeId : 0, Value : %3 x {item,%1,%2} (%4 {item,%5,%6})
+MessageId : 365, TypeId : 0, Value : Une bien jolie charrette.
+MessageId : 366, TypeId : 0, Value : Vous avez oublié un niveau du sort $spell%1 et avez ainsi regagné %2 point(s) de sort.
+MessageId : 367, TypeId : 0, Value : Sort $spell%1 oublié. Vous regagnez %2 point(s) de sort.
+MessageId : 368, TypeId : 0, Value : Vous suivez les déplacements de <b>%1</b>.
+MessageId : 369, TypeId : 0, Value : Ce sac vide est marqué des initiales Z.B. ; une lance de Rat d'Égoutant l'a traversé de part en part.
+MessageId : 370, TypeId : 0, Value : Vous ne parvenez pas à déchiffrer le texte écrit sur cette page.  Vous soupçonnez qu'il faut avoir une cervelle de Wabbit pour en saisir le sens.
+MessageId : 371, TypeId : 0, Value : Le nom de Gésa est gravé sur la pierre tombale.
+MessageId : 372, TypeId : 0, Value : Vous trouvez un objet étrange à cet endroit... à peine l'avez-vous ramassé que vous êtes attaqué !
+MessageId : 373, TypeId : 0, Value : Aucun combat de kolizéum ne vous sera proposé tant que vous serez en tombe ou en fantôme.
+MessageId : 374, TypeId : 0, Value : Aucun combat de kolizéum ne vous sera proposé tant que %1 sera en tombe ou en fantôme.
+MessageId : 375, TypeId : 0, Value : Vous avez déposé la caisse de Kœurs derrière un buisson. Vous devriez ressortir, puis entrer à nouveau dans la mine pour surprendre le commanditaire.
+MessageId : 376, TypeId : 0, Value : Vous déposez le colis puis vous partez sans tarder.
+MessageId : 377, TypeId : 0, Value : Nevark vous a catapulté dans les airs. Vous êtes indemne, mais votre mâchoire et votre fierté en ont pris un coup.
+MessageId : 378, TypeId : 0, Value : Vous voyez des bulles remonter depuis le fond de l'étang... Vous distinguez quelque chose qui s'agite sous la surface.
+MessageId : 379, TypeId : 0, Value : {player,%1,%2} a refusé l'échange.
+MessageId : 380, TypeId : 0, Value : Vous priez mais rien ne se passe.
+MessageId : 381, TypeId : 0, Value : Ci-gît Neil Fortbras, célèbre musicien qui fit 7 fois le tour du Krosmoz avant d'atterrir sur Moon.
+MessageId : 382, TypeId : 0, Value : Le blason de la guilde a été modifié.
+MessageId : 383, TypeId : 0, Value : Le nom de la guilde a été modifié.
+MessageId : 384, TypeId : 0, Value : Le bâtiment est actuellement fermé au public pour des travaux de rénovation.
+MessageId : 385, TypeId : 0, Value : Ce sablier infernal vous a fait remonter le temps.
+MessageId : 386, TypeId : 0, Value : Vous avez reçu %1 kolizéton(s) en échange de vos %2 point(s) de sort
+MessageId : 387, TypeId : 0, Value : Vous éclatez de rire, sans bien comprendre pourquoi.
+MessageId : 388, TypeId : 0, Value : Vous contemplez une statue du dieu Ecaflip : la chance vous sourit enfin.
+MessageId : 389, TypeId : 0, Value : Le milicien Snori Nairb vous a escorté à la sortie de la ville, afin de vous apprendre les bonnes manières.
+MessageId : 390, TypeId : 0, Value : Vous trouvez une longue plume blanche coincée entre les poils du balai.
+MessageId : 391, TypeId : 0, Value : Cet hôtel des ventes a fait faillite et n'est plus disponible.
+MessageId : 392, TypeId : 0, Value : Félicitations, vous êtes maintenant marié à {player,%1,%2}.
+MessageId : 393, TypeId : 0, Value : Impossible de désactiver le mode spectateur dans ce combat.
+MessageId : 394, TypeId : 0, Value : Il n'y a plus rien d'intéressant ici.
+MessageId : 395, TypeId : 0, Value : Vous trouvez un sac de Frostiz dans la charrette. Les épis ont un aspect étrange.
+MessageId : 396, TypeId : 0, Value : Des mercenaires vous ont escorté manu militari à la sortie de la ville.
+MessageId : 398, TypeId : 0, Value : Cette caisse contient de vieux scaphandres mis au rebut.
+MessageId : 399, TypeId : 0, Value : Vous apercevez des Brikoléreux emmener Idrissa Boteur. Il est encore temps de les intercepter.
+MessageId : 400, TypeId : 0, Value : Vous trouvez une peau étrange dans le second tiroir de la commode.
+MessageId : 401, TypeId : 0, Value : Vous avez tout juste le temps de saisir la statuette et de la mettre à l'abri dans un coffre que de violentes bourrasques vous emportent de l'autre côté des remparts.
+MessageId : 402, TypeId : 0, Value : Vous avez noté la température indiquée sur le cadran.
+MessageId : 403, TypeId : 0, Value : Les miettes et l'odeur de fauve indiquent que cette caisse a abrité un mâle pendant plusieurs jours.
+MessageId : 404, TypeId : 0, Value : Après avoir posé le stabilisateur, vous entendez trois bruits distincts, comme du papier qui se déchire... Des chronanomalies ont dû se manifester !
+MessageId : 405, TypeId : 0, Value : Une couche de givre temporel vous empêche d'approcher davantage.
+MessageId : 406, TypeId : 0, Value : Vous dissipez le givre temporel avec la montre en marche, puis vous utilisez le taroudium enrichi pour faire couler du liquide dans la fiole en verre d'hiver.
+MessageId : 407, TypeId : 0, Value : Un Croleur envoyé par le professeur Xa arrive pour secourir Francis. Il prend la civière sur son dos et quitte les cavernes en direction du Village Enseveli.
+MessageId : 408, TypeId : 0, Value : Le nom de l'alliance a été modifié.
+MessageId : 409, TypeId : 0, Value : Le blason de l'alliance a été modifié.
+MessageId : 410, TypeId : 0, Value : Vous ne faites plus partie de l'alliance <b>%1</b>
+MessageId : 411, TypeId : 0, Value : À en croire les traces de bottes et les restes de nourriture, plusieurs personnes ont emprunté ce passage.
+MessageId : 412, TypeId : 0, Value : Théodoran tient sa promesse et vous catapulte à Astrub d'un coup de pied bien placé.
+MessageId : 413, TypeId : 0, Value : Ajout du module réussi !
+MessageId : 414, TypeId : 0, Value : En touchant le symbole visible sur le dossier de la chaise, vous êtes pris d'un violent mal de crâne.
+MessageId : 415, TypeId : 0, Value : La combinaison ne semble pas bonne. Les autres leviers n'ont pas été baissés dans le bon ordre.
+MessageId : 416, TypeId : 0, Value : La monture a été placée dans votre étable.
+MessageId : 417, TypeId : 0, Value : Vous chevauchez fièrement votre nouvelle monture.
+MessageId : 418, TypeId : 0, Value : À peine avez-vous mis le chapeau sur votre tête que vous ressentez une intense douleur au ventre... Vous vous débarrassez du couvre-chef Pandawa sur le champ, mais les troubles digestifs ne cessent pas.
+MessageId : 419, TypeId : 0, Value : La pikosonde plonge et disparaît sous l'eau. Vous patientez quelques minutes, mais elle ne réapparaît pas.
+MessageId : 420, TypeId : 0, Value : Votre mode JcJ a été désactivé : il n'est pas possible d'activer les modes JcJ et AvA simultanément.
+MessageId : 421, TypeId : 0, Value : Votre mode AvA a été désactivé : il n'est pas possible d'activer les modes JcJ et AvA simultanément.
+MessageId : 422, TypeId : 0, Value : Vous buvez plusieurs gorgées de la mixture fumante... le goût est pire que de la bière bwork. Une chaleur irradie dans tout votre corps.
+MessageId : 423, TypeId : 0, Value : Au fond d'une caisse, vous trouvez des chaînes qui brillent d'une lumière surnaturelle.
+MessageId : 424, TypeId : 0, Value : Cette tombe est au nom de Nabur, mais il semble que son occupant n'est plus là. Peut-être la gardienne du cimetière sait-elle ce qui s'est passé ?
+MessageId : 425, TypeId : 0, Value : Vous voilà au château. L'archiviste du royaume pourra probablement vous renseigner sur les événements du passé.
+MessageId : 426, TypeId : 0, Value : Vous trouvez un vieux registre indiquant qu'il existe un caveau de la famille Nabur dans le cimetière d'Amakna.
+MessageId : 427, TypeId : 0, Value : Vous prenez la boussole dans votre main et tendez les bras en direction de l'arche de pierre : l'aiguille se met à tourner.
+MessageId : 428, TypeId : 0, Value : L'aiguille de la boussole a fondu, comme sous l'effet d'une chaleur intense. Il ne fait aucun doute qu'elle ne pourra plus vous guider.
+MessageId : 429, TypeId : 0, Value : Un rire dément résonne à vos oreilles.
+MessageId : 430, TypeId : 0, Value : Vous croyez apercevoir un jardin, et vous entendez les bruits d'une cité populeuse, puis la vision s'interrompt.
+MessageId : 431, TypeId : 0, Value : Vous avez l'impression d'être dans une pièce encombrée de livres et de bocaux... puis la vision s'interrompt.
+MessageId : 432, TypeId : 0, Value : Vous entendez les marmonnements d'un mage bwork.
+MessageId : 433, TypeId : 0, Value : L'Orbalantyr se referme.
+MessageId : 434, TypeId : 0, Value : Ici repose la grande artiste Catell-Ruz, partie pour un monde meilleur, Avis aux voleurs de reliques et aux fabricants de perruques : les longs cheveux magiques de Catell-Ruzz sont enterrés ailleurs.
+MessageId : 435, TypeId : 0, Value : Ci-gît Snuffles, emporté vers la mort en même temps qu'un percepteur un peu trop gonflé...
+MessageId : 436, TypeId : 0, Value : Seul un nom à moitié effacé peut encore être déchiffré sur cette antique pierre tombale : Algathe.
+MessageId : 437, TypeId : 0, Value : D'après les registres bontariens, cette sépulture est la treizième adresse officielle de la dernière demeure de Francisque Kabroule.
+MessageId : 438, TypeId : 0, Value : Tibière disparaît dans un  nuage de fumée.
+MessageId : 439, TypeId : 0, Value : Tandis que vous inspectez les restes de la diligence, vous entendez des hurlements portés par le vent. Ils semblent venir du sud.
+MessageId : 440, TypeId : 0, Value : La Bontarienne vous remercie avant de franchir les portes de la cité. Vous l'avez ramenée saine et sauve, mission accomplie !
+MessageId : 441, TypeId : 0, Value : La Bontarienne franchit les portes de la cité et détale sans demander son reste. Quelque chose vous dit que vous vous êtes fait avoir... la reconnaissance de dette pourra toujours vous servir en cas de pénurie de papier dans les latrines.
+MessageId : 442, TypeId : 0, Value : Un Kanig qui passait par là n'apprécie pas que vous dérangiez un esclave en plein travail !
+MessageId : 443, TypeId : 0, Value : Constatant qu'un esclave se la coule douce, deux Kanigs décident d'intervenir et vous agressent !
+MessageId : 444, TypeId : 0, Value : Un Kanig vient interrompre votre conversation. Visiblement, il meurt d'envie de vous botter les fesses.
+MessageId : 445, TypeId : 0, Value : Des traces indiquent que le convoi se dirigeait vers l'est.
+MessageId : 446, TypeId : 0, Value : Les traces indiquent que le convoi a bifurqué vers le nord, tandis que son itinéraire spécifiait qu'il aurait du continuer vers l'est. De nombreuses traces au sol indiquent que plusieurs personnes avaient mis pied à terre.
+MessageId : 447, TypeId : 0, Value : D'après les traces, le convoi s'est de nouveau dirigé vers le nord.
+MessageId : 448, TypeId : 0, Value : Les traces prennent la direction de l'est.
+MessageId : 449, TypeId : 0, Value : De nombreuses traces de pas viennent brouiller les pistes, comme si des dizaines de personnes s'étaient récemment déplacées ici.
+MessageId : 450, TypeId : 0, Value : Les traces du Panthègros viennent du nord.
+MessageId : 451, TypeId : 0, Value : La boussole vous téléporte dans la prison de Kanigroula !
+MessageId : 452, TypeId : 0, Value : En buvant l'échantillon, vous ressentez une vive douleur dans vos intestins suivie de l'impression que votre colon explose, puis une sensation de béatitude vous envahit. L'instant d'après, vos déjections passent à l'attaque.
+MessageId : 453, TypeId : 0, Value : Avalant l'échantillon avec prudence, vous avez la désagréable sensation que vos intestins se liquéfient. Il va falloir rapidement trouver une cabane isolée, faute de jardin à proximité.
+MessageId : 454, TypeId : 0, Value : Vous ne devriez avoir aucune difficulté à suivre les traces laissées par le Panthègros.
+MessageId : 455, TypeId : 0, Value : Vous vous glissez derrière le premier garde et l'assommez violemment. Vous profitez de la surprise du deuxième pour l'assommer aussi.
+MessageId : 456, TypeId : 0, Value : La discussion des gardes se transforme en dispute et ils en viennent aux mains. Vous les laissez se battre jusqu'à ce qu'ils s'écroulent tous les deux.
+MessageId : 457, TypeId : 0, Value : Vous imitez le cri du Bitouf des cavernes en rut puis ramassez une pierre que vous jetez à l'extérieur. Les gardes, alertés par le bruit, quittent tous les deux leur poste.
+MessageId : 458, TypeId : 0, Value : Vous entraînez les gardes loin de leur poste jusqu'à les essouffler, puis revenez rapidement.
+MessageId : 459, TypeId : 0, Value : Ripley Scott est absent, de même que l'idole fabriquée par vos soins et qui devait lui être livrée sous la surveillance d'Edgar Naque.
+MessageId : 460, TypeId : 0, Value : Après une longue attente,  vous voyez Félybrêle se diriger à la rencontre du négociant. Ils discutent quelques minutes, puis se mettent à marcher ensemble et disparaissent derrière des rochers, hors de votre vue.
+MessageId : 461, TypeId : 0, Value : Tandis que vous assemblez les matériaux selon les instructions d'Émidaphat Soum, vous voyez ce dernier en train de fouiller un bac à poissons où il n'en reste qu'un seul. Vous comprenez rapidement qu'il vous faut lui en rapporter, et pas n'importe lesquels.
+MessageId : 462, TypeId : 0, Value : Vous n'avez pas accepté de faire la quête de Chompi d'Aperirel.
+MessageId : 463, TypeId : 0, Value : Vos %1 familiers vous font la fête !
+MessageId : 464, TypeId : 0, Value : Grisebigle vous remercie de l'avoir escortée jusqu'à l'avant-poste, elle vous dit au revoir et disparaît à l'intérieur du bâtiment.
+MessageId : 465, TypeId : 0, Value : Ce lieu est desservi par la diligence d'Astrub.
+MessageId : 466, TypeId : 0, Value : Vous êtes jeté hors du palais par des gardes royaux pour ne pas avoir respecté le protocole.
+MessageId : 467, TypeId : 0, Value : Il n'est pas possible de démarrer plusieurs combats de ce type avec plusieurs comptes.
+MessageId : 468, TypeId : 0, Value : Alors que vous vous apprêtez à le maîtriser, l'assassin disparaît dans une flamme bleutée. Ce n'est pas le véritable Gein que vous avez affronté, mais son double ! Vous avez été abusé par un leurre... ce qui n'enlève aucun mérite à votre victoire !
+MessageId : 469, TypeId : 0, Value : Caractéristiques (de base et additionnelles) réinitialisées.
+MessageId : 470, TypeId : 0, Value : Caractéristiques de base réinitialisées.
+MessageId : 471, TypeId : 0, Value : À la fin du tour du joueur actuel, le combat sera mis en pause.
+MessageId : 472, TypeId : 0, Value : Le coffre est vide... Soudain, des gardes font irruption dans la pièce ! Vous êtes emmené sans ménagement à la prison de Srambad.
+MessageId : 473, TypeId : 0, Value : Vous entendez un bruit de voile qui se déchire... un personnage apparaît dans la pièce !
+MessageId : 474, TypeId : 0, Value : Un rire guttural déchire le silence... Alors que vous touchez le Dofus, vous êtes transporté dans un autre endroit. Vous avez l'impression que votre âme a été arrachée de votre corps !
+MessageId : 475, TypeId : 0, Value : Lorsque vous approchez de la toile, une araknesprit bondit et vous attaque !
+MessageId : 476, TypeId : 0, Value : Un kouin-kouin qui gazouille comme un piou... voilà qui est surprenant ! Vous remarquez un œuf près du bord de la cage.
+MessageId : 477, TypeId : 0, Value : Le générateur eidolonique se déclenche !
+MessageId : 478, TypeId : 0, Value : Les enfants disparaissent dans un recoin et vous perdez leurs traces. Sans doute ont-ils emprunté un passage caché.
+MessageId : 479, TypeId : 0, Value : Un Gamino vole à votre secours !
+MessageId : 480, TypeId : 0, Value : {player,%1,%2} est prêt.
+MessageId : 481, TypeId : 0, Value : {player,%1,%2} n'est plus prêt.
+MessageId : 482, TypeId : 0, Value : Vous entendez le bruit d'une explosion.
+MessageId : 483, TypeId : 0, Value : Vous vous retournez mais il est déjà trop tard, votre ombre ne vous suit plus.
+MessageId : 484, TypeId : 0, Value : En passant dans l'autre pièce, vous entendez Baal Hans discuter avec des hommes. Il vient de vendre votre présence contre une grosse bourse de kamas.
+MessageId : 485, TypeId : 0, Value : Le temps de vous mettre à l‘abri, une violente explosion retentit. Flèche Mauve a réussi à limiter les dégâts, mais à quel prix ?
+MessageId : 486, TypeId : 0, Value : Votre monture vient de passer au niveau %1.
+MessageId : 487, TypeId : 0, Value : Votre incarnation vient de passer au niveau %1.
+MessageId : 488, TypeId : 0, Value : Le krobe crache dans votre direction... Vous êtes recouvert d'une membrane visqueuse aux couleurs vives.
+MessageId : 489, TypeId : 0, Value : En essayant de soulever l'énorme tube, vous vous coupez la main sur un morceau de métal tranchant.
+MessageId : 490, TypeId : 0, Value : {player,%1,%2} est mort au niveau %3 dans la zone « <b>$subarea%4</b> ». Il avait %5 points de succès.
+MessageId : 491, TypeId : 0, Value : Recherche de portail terminée, vous avez découvert en $map%1 le passage vers une autre dimension.
+MessageId : 492, TypeId : 0, Value : Téléportation impossible, la destination n'est pas libre.
+MessageId : 493, TypeId : 0, Value : Téléportation impossible, il n'existe pas de destination possible.
+MessageId : 494, TypeId : 0, Value : L'électrofoudre explose dans un crépitement d'étincelles !
+MessageId : 495, TypeId : 0, Value : Vous croyez entendre des grognements venant de très loin... Soudain, dans un bruit de tissu qui se déchire, un Hordémon franchit la distance qui vous sépare de lui !
+MessageId : 496, TypeId : 0, Value : Henual vous expulse hors de la maison !
+MessageId : 497, TypeId : 0, Value : Les gardes vous empoignent sans ménagement et vous forcent à partir.
+MessageId : 498, TypeId : 0, Value : Malgré une résistance héroïque, vous finissez par ployer puis périr sous le nombre.
+MessageId : 499, TypeId : 0, Value : Tandis que vous croupissez dans votre cellule, vous entendez les Hordémons lancer l'assaut contre l'avant-poste. Après que s'est écoulée une éternité, vous mourez dans l'éboulement provoqué par une explosion.
+MessageId : 500, TypeId : 0, Value : Votre acte héroïque a évité un coup fatal à Rita Foulmétal car c'est vous qui l'avez pris à sa place.
+MessageId : 501, TypeId : 0, Value : À peine avez-vous passé la tête dans le portail qu'il se referme sur votre cou, vous scindant en deux entités distinctes ne pouvant survivre l'une sans l'autre.
+MessageId : 502, TypeId : 0, Value : Hélas, vous aviez raison : il n'y a pas eu de plus tard.
+MessageId : 503, TypeId : 0, Value : À trop bavarder, vous n'avez pas vu le temps passer. Une explosion fracassante vous rappelle que le monde ne tourne pas qu'autour de votre petite personne, surtout maintenant que vous êtes mort.
+MessageId : 504, TypeId : 0, Value : Par miracle, vous survivez à la déflagration provoquée par l'explosion. Par contre, l'huile de friture projetée sur votre crâne et les couteaux de cuisine transperçant votre abdomen vous rappellent l'immuable loi de Murphy.
+MessageId : 505, TypeId : 0, Value : Trop lent à vaincre vos adversaires avant l'arrivée du reste de l'avant-garde, vous finissez par succomber sous le nombre et l'érosion.
+MessageId : 506, TypeId : 0, Value : Votre lenteur à réagir laisse à Trantroa le temps de trafiquer le stabilisateur temporel. Une erreur de manipulation de sa part entraîne une explosion dont la conséquence directe est votre mort prématurée.
+MessageId : 507, TypeId : 0, Value : Décidé à ne pas le laisser manipuler le stabilisateur, vous lancez le neutralisateur en direction des bras de Trantroa. Tandis que les mains de l'Hordémon tombent au sol, vous avez tout juste le temps de voir des fontaines de sang s'échapper de ses bras avant que votre vue ne se brouille une fois de plus.
+MessageId : 508, TypeId : 0, Value : En entrant dans les cuisines, vous aperçevez une silhouette massive disparaître furtivement.
+MessageId : 509, TypeId : 0, Value : En regardant vers l'est, vous apercevez la silhouette disparaître à l'horizon.
+MessageId : 510, TypeId : 0, Value : Ce ne sont pas tant les traces de pas que les quelques boudins éparpillés au sol qui indiquent que la silhouette a bifurqué vers le sud.
+MessageId : 511, TypeId : 0, Value : Le prisonnier s'écroule, sans vie. Un Égaré, passé jusque là inaperçu, s'enfuit en se fondant dans le décor à la manière du plus habile des Srams.
+MessageId : 512, TypeId : 0, Value : Avant que vous n'ayez pu lui faire cracher le rapport, le crapaud temporel prend la fuite.
+MessageId : 513, TypeId : 0, Value : Avant que vous n'ayez pu lui faire cracher le rapport, le crapaud temporel se jette dans le vide.
+MessageId : 514, TypeId : 0, Value : Avant que vous n'ayez pu lui faire cracher le rapport, le crapaud temporel gobe le vieux pagne de Trantroa que vous étiez en train de renifler puis il se jette dans le vide.
+MessageId : 515, TypeId : 0, Value : La Dague du temps n'est pas à sa place. Après un bref examen, vous ne la trouvez nulle part.
+MessageId : 516, TypeId : 0, Value : Des traces indiquent qu'Haël est passé par ici, mais il est quasiment certain qu'il ne repassera pas par là.
+MessageId : 517, TypeId : 0, Value : « Je ne veux pas de ce rouleau à pâtisserie, c'est indigne ! » - Mayala, avant de changer d'avis et de gagner le Tournoi des Dix Ans.
+MessageId : 518, TypeId : 0, Value : « Oh, la stratégie, moi vous savez... La tête, ce sont mes alliés, moi je suis le bras de l'équipe ! » - Mandy, brute championne du Tournoi des Dix Ans.
+MessageId : 519, TypeId : 0, Value : « Avant, j'étais un Enutrof chanceux comme tant d'autres, puis j'ai reçu un coup d'Arc Hétype dans le genou » - Jdaystar, Eniripsa manqué et champion du Tournoi des Dix Ans.
+MessageId : 520, TypeId : 0, Value : Les 6 Dofus Primordiaux.
+MessageId : 521, TypeId : 0, Value : L'Horloge de Xélor.
+MessageId : 522, TypeId : 0, Value : La mort de Solar.
+MessageId : 523, TypeId : 0, Value : L'Aurore Pourpre.
+MessageId : 524, TypeId : 0, Value : Rykke-Errel contre Bolgrot.
+MessageId : 525, TypeId : 0, Value : Goultard et Arty.
+MessageId : 526, TypeId : 0, Value : La ruse d'Allister.
+MessageId : 527, TypeId : 0, Value : Le Jour Maudit.
+MessageId : 528, TypeId : 0, Value : Pandala, terre des Pandawas.
+MessageId : 529, TypeId : 0, Value : L'île d'Otomaï.
+MessageId : 530, TypeId : 0, Value : Le croissant de Moon.
+MessageId : 531, TypeId : 0, Value : L'archipel de Vulkania.
+MessageId : 532, TypeId : 0, Value : Les Multiman, Justiciers du Krosmoz.
+MessageId : 533, TypeId : 0, Value : Le sanctuaire de l'Almanax.
+MessageId : 534, TypeId : 0, Value : La renaissance de Bonta et Brâkmar.
+MessageId : 535, TypeId : 0, Value : Flotte du roi de Sufokia - Minibot de recherche.
+MessageId : 536, TypeId : 0, Value : Flotte du roi de Sufokia - Minibot de surveillance.
+MessageId : 537, TypeId : 0, Value : Nox et le Razortemps.
+MessageId : 538, TypeId : 0, Value : Le Chaos d'Ogrest.
+MessageId : 539, TypeId : 0, Value : Xélors de l' Ère du Wakfu.
+MessageId : 540, TypeId : 0, Value : L'Explorancienne Pandora.
+MessageId : 541, TypeId : 0, Value : La confrérie du Tofu.
+MessageId : 542, TypeId : 0, Value : La Mule à travers les âges.
+MessageId : 543, TypeId : 0, Value : Boune l'Astucieux.
+MessageId : 544, TypeId : 0, Value : Les armes de corps à corps dans l'ancienne tradition : cac cac cac cac cac cac cac... cac !
+MessageId : 545, TypeId : 0, Value : Emma et Thomas Sacre : le temps des traqués.
+MessageId : 546, TypeId : 0, Value : Le Percepteur, un voleur de ressources ?
+MessageId : 547, TypeId : 0, Value : Un fort beau Gelano.
+MessageId : 548, TypeId : 0, Value : Un Solomonk de héros.
+MessageId : 549, TypeId : 0, Value : D'après cette carte, le trésor est caché quelque part, à proximité d'un ossement dans un cimetière.
+MessageId : 550, TypeId : 0, Value : L'orbe de F'lach - Une technomagie d'avenir.
+MessageId : 551, TypeId : 0, Value : La cape du Tofu Fou.
+MessageId : 552, TypeId : 0, Value : Le Jakchir Arc.
+MessageId : 553, TypeId : 0, Value : Doro le Blak, spécialiste du Raulebaque.
+MessageId : 554, TypeId : 0, Value : Plan indéchiffrable de la crypte Hique, sanctuaire légendaire d'un Djaulien.
+MessageId : 555, TypeId : 0, Value : La Sagesse.
+MessageId : 556, TypeId : 0, Value : La Prospection.
+MessageId : 557, TypeId : 0, Value : Les alliances de guilde : l'union fait la force.
+MessageId : 558, TypeId : 0, Value : L'Historibus Compendium.
+MessageId : 559, TypeId : 0, Value : Vous utilisez la Baguette Rikiki pour réduire votre taille.
+MessageId : 560, TypeId : 0, Value : Quelqu'un a utilisé une Baguette Rikiki pour réduire votre taille.
+MessageId : 561, TypeId : 0, Value : Vous reprenez votre taille normale.
+MessageId : 562, TypeId : 0, Value : Vous remarquez un petit trou dans le mur derrière le tonneau.
+MessageId : 563, TypeId : 0, Value : Les Enutrofors n'ont pas apprécié votre intrusion dans leur raffinerie et vous en ont dégagé à coups de pelles, pioches, wagonnets et Koffrefors. La prochaine fois, il serait plus malin de porter un déguisement.
+MessageId : 564, TypeId : 0, Value : L'agent Bloude a probablement noté le code quelque part pour ne pas l'oublier. Reste à trouver où.
+MessageId : 565, TypeId : 0, Value : Khelebragon disparaît sous vos yeux, comme par enchantement.
+MessageId : 566, TypeId : 0, Value : Un personnage inquiétant bondit hors du cercueil !
+MessageId : 567, TypeId : 0, Value : Les traces du convoi disparaissent au bord de la falaise.
+MessageId : 568, TypeId : 0, Value : Des gardes du château vous surprennent, ils vous jettent dehors sans ménagement.
+MessageId : 569, TypeId : 0, Value : Arbabra détale à toute vitesse !
+MessageId : 570, TypeId : 0, Value : Vous profitez de l'inattention du guerrier Brank Thoof pour examiner les systèmes d'ouverture et de défense des portes de la cité.
+MessageId : 571, TypeId : 0, Value : Vous ne pouvez pas examiner les systèmes d'ouverture et de défense des portes de la cité tant que le guerrier Brank Thoof vous observe.
+MessageId : 572, TypeId : 0, Value : Votre destination : les terres d'Incarnam, puis le Monde des Douze !
+MessageId : 573, TypeId : 0, Value : Votre objectif : trouver les 6 Dofus Primordiaux.
+MessageId : 574, TypeId : 0, Value : Vous êtes un disciple de la déesse Crâ.
+MessageId : 575, TypeId : 0, Value : Vous êtes un disciple du dieu Ecaflip.
+MessageId : 576, TypeId : 0, Value : Vous êtes un disciple de la déesse Eniripsa.
+MessageId : 577, TypeId : 0, Value : Vous êtes un disciple du dieu Enutrof.
+MessageId : 578, TypeId : 0, Value : Vous êtes un disciple de la déesse Féca.
+MessageId : 579, TypeId : 0, Value : Vous êtes un disciple du dieu Iop.
+MessageId : 580, TypeId : 0, Value : Vous êtes un disciple du dieu Osamodas.
+MessageId : 581, TypeId : 0, Value : Vous êtes un disciple de la déesse Pandawa.
+MessageId : 582, TypeId : 0, Value : Vous êtes un disciple de la déesse Sacrieur.
+MessageId : 583, TypeId : 0, Value : Vous êtes un disciple du dieu Sadida.
+MessageId : 584, TypeId : 0, Value : Vous êtes un disciple du dieu Sram.
+MessageId : 585, TypeId : 0, Value : Vous êtes un disciple du dieu Xélor.
+MessageId : 586, TypeId : 0, Value : Vous êtes un disciple de Dralbour, qui n'est autre que le dieu Sram.
+MessageId : 587, TypeId : 0, Value : Vous êtes un héritier de l'Ancien, le Premier des Zobals, lui-même disciple du dieu Sadida.
+MessageId : 588, TypeId : 0, Value : Vous êtes un disciple d'Oktapodas, également connu sous le nom d'Osamodas.
+MessageId : 589, TypeId : 0, Value : Vous êtes un disciple du Roi-Dieu.
+MessageId : 590, TypeId : 0, Value : La grille ne s'ouvre plus : Hargnok a dû la bloquer depuis votre dernière visite.
+MessageId : 591, TypeId : 0, Value : Vous distinguez des traces de dents sur le robinet.
+MessageId : 592, TypeId : 0, Value : Vous déposez un verre de limonade bien fraîche sur le dessus du tonneau.
+MessageId : 593, TypeId : 0, Value : Un chafer bondit hors du tombeau !
+MessageId : 594, TypeId : 0, Value : Paiement : %1 $quantity%2 kamas.
+MessageId : 595, TypeId : 0, Value : Ces produits semblent avoir contaminé les rats d'Hyoactifs.
+MessageId : 596, TypeId : 0, Value : Ces flammes ne sont pas assez chaudes pour porter la mixture à ébullition.
+MessageId : 598, TypeId : 0, Value : Vous portiez des objets mimibiotés ayant l'apparence d'objets désormais disparus. Vous avez récupéré $quantity%1 {item,%2}.
+MessageId : 1, TypeId : 1, Value : Certaines conditions ne sont pas satisfaites
+MessageId : 2, TypeId : 1, Value : Vous n'exercez pas le métier nécessaire.
+MessageId : 3, TypeId : 1, Value : Vous n'avez pas le niveau nécessaire.
+MessageId : 4, TypeId : 1, Value : Vous ne possédez pas l'objet nécessaire.
+MessageId : 5, TypeId : 1, Value : Vous n'appartenez pas à la bonne classe.
+MessageId : 6, TypeId : 1, Value : Impossible d'apprendre le métier $job%1.
+MessageId : 7, TypeId : 1, Value : Impossible d'apprendre le sort $spell%1.
+MessageId : 8, TypeId : 1, Value : Il faut être au moins niveau %1 dans tous ses métiers pour en apprendre un autre.
+MessageId : 9, TypeId : 1, Value : Vous connaissez déjà suffisamment de métiers.
+MessageId : 10, TypeId : 1, Value : Votre inventaire est plein, impossible d'y ajouter d'autres objets.
+MessageId : 11, TypeId : 1, Value : Vous avez déjà appris ce métier.
+MessageId : 12, TypeId : 1, Value : Inventaire plein. Vous ne pourrez plus courir ou obtenir de nouveaux objets, à moins de faire de la place.
+MessageId : 13, TypeId : 1, Value : Cette action n'est pas autorisée sur cette carte.
+MessageId : 14, TypeId : 1, Value : Le joueur %1 était absent et n'a donc pas reçu votre message.
+MessageId : 15, TypeId : 1, Value : Pour des raisons de maintenances, le serveur va être redémarré dans %1.
+MessageId : 16, TypeId : 1, Value : %1 : %2
+MessageId : 17, TypeId : 1, Value : %1 vous a rendu muet pour %2 minute(s).
+MessageId : 18, TypeId : 1, Value : L'heure actuelle ne convient pas.
+MessageId : 19, TypeId : 1, Value : Vos caractéristiques ne conviennent pas
+MessageId : 20, TypeId : 1, Value : Cet emplacement de stockage est déjà utilisé.
+MessageId : 21, TypeId : 1, Value : Action impossible car votre abonnement a expiré.
+MessageId : 22, TypeId : 1, Value : Le joueur %1 n'est pas abonné. Action impossible...
+MessageId : 23, TypeId : 1, Value : Impossible de devenir marchand : vous n'avez aucun objet à vendre ...
+MessageId : 24, TypeId : 1, Value : Vous ne pouvez devenir vendeur que sur une case vide.
+MessageId : 25, TypeId : 1, Value : Impossible : il ne peut y avoir plus de %1 vendeurs sur cette carte.
+MessageId : 26, TypeId : 1, Value : Impossible de se téléporter dans une maison verrouillée.
+MessageId : 27, TypeId : 1, Value : Action impossible car votre période d'essai est terminée.
+MessageId : 28, TypeId : 1, Value : <b>En attente du joueur %1...</b>
+MessageId : 29, TypeId : 1, Value : <b>En attente des joueurs %1...</b>
+MessageId : 30, TypeId : 1, Value : <b>Perte de la connexion : le joueur %1 a été exclu de la partie</b>
+MessageId : 31, TypeId : 1, Value : Cette action nécessite un abonnement valide.
+MessageId : 32, TypeId : 1, Value : Vous ne pouvez pas avoir plus de %1 maison(s).
+MessageId : 33, TypeId : 1, Value : Impossible d'agresser un joueur de si faible niveau.
+MessageId : 34, TypeId : 1, Value : Certaines conditions ne sont pas satisfaites.
+MessageId : 35, TypeId : 1, Value : Être marié ou ne pas l'être... Vous semblez ne pas avoir fait le bon choix.
+MessageId : 36, TypeId : 1, Value : Votre épouse n'est pas connectée.
+MessageId : 37, TypeId : 1, Value : Votre mari n'est pas connecté.
+MessageId : 38, TypeId : 1, Value : Vous n'êtes pas marié(e).
+MessageId : 39, TypeId : 1, Value : Votre épouse n'est pas disponible pour l'instant...
+MessageId : 40, TypeId : 1, Value : Votre époux n'est pas disponible pour l'instant...
+MessageId : 41, TypeId : 1, Value : Il n'y a pas de place disponible près de votre épouse.
+MessageId : 42, TypeId : 1, Value : Il n'y a pas de place disponible près de votre époux.
+MessageId : 43, TypeId : 1, Value : Pour utiliser cet objet.
+MessageId : 44, TypeId : 1, Value : pour équiper cet objet.
+MessageId : 45, TypeId : 1, Value : pour rentrer ici.
+MessageId : 46, TypeId : 1, Value : Vous n'exercez pas le métier $job%1.
+MessageId : 47, TypeId : 1, Value : Votre niveau est trop faible pour prendre part à une agression.
+MessageId : 48, TypeId : 1, Value : Vous étiez au mauvais endroit, au mauvais moment, et votre corps à été réduit en charpie.
+MessageId : 49, TypeId : 1, Value : Impossible de désapprendre le métier <b>%1</b>.
+MessageId : 50, TypeId : 1, Value : Vous aviez oublié un familier, il a dû trouver à manger tout seul. Mais son état laisse à penser qu'il n'a pas très bien réussi.
+MessageId : 51, TypeId : 1, Value : Vous aviez oublié un familier, il était trop gros pour chasser tout seul et à dû se résigner à manger ce qui traînait. Il a perdu du poids mais aussi de sa puissance.
+MessageId : 52, TypeId : 1, Value : Vous aviez oublié votre familier qui était déjà trop maigre. Il a tenté de manger quelque chose qui traînait mais sans grand succès. Il est maintenant au plus mal.
+MessageId : 53, TypeId : 1, Value : Votre familier prend la ressource, la renifle un peu, ne semble pas convaincu et vous la rend.
+MessageId : 54, TypeId : 1, Value : Vous n'avez pas assez fait attention à un familier. Il s'est transformé en fantôme !
+MessageId : 55, TypeId : 1, Value : Le niveau de votre guilde ne lui permet pas d'avoir plus de %1 membres.
+MessageId : 56, TypeId : 1, Value : Il est trop tard
+MessageId : 57, TypeId : 1, Value : Impossible de rejoindre ce combat en mode 'Spectateur'.
+MessageId : 58, TypeId : 1, Value : Vérifiez les Emote que vous connaissez déjà, et réessayez ...
+MessageId : 59, TypeId : 1, Value : Votre apparence ne vous permet pas d'exécuter cette action.
+MessageId : 60, TypeId : 1, Value : Votre arme vient de se dématérialiser entre vos mains.
+MessageId : 61, TypeId : 1, Value : Il faut posséder une maison pour utiliser cet objet.
+MessageId : 62, TypeId : 1, Value : Action impossible avec un compte non abonné. <u><a href="https://secure.dofus.com/fr/boutique/18-abonnements" target="_blank">Comment devenir membre de la communauté ?</a></u>
+MessageId : 63, TypeId : 1, Value : Action impossible car votre interlocuteur est trop chargé.
+MessageId : 64, TypeId : 1, Value : Cet objet ne fait pas partie des catégories prévues dans cet hôtel de vente.
+MessageId : 65, TypeId : 1, Value : Vous ne disposez pas d'assez de kamas pour acquitter la taxe de mise en vente...
+MessageId : 66, TypeId : 1, Value : Vous ne pouvez pas mettre plus d'objets en vente actuellement...
+MessageId : 67, TypeId : 1, Value : Vous ne pouvez pas mettre plus d'objets en vente actuellement...
+MessageId : 68, TypeId : 1, Value : Cet objet ne peut être accepté ici vu sa rareté...
+MessageId : 70, TypeId : 1, Value : Action annulée pour cause de surcharge...
+MessageId : 71, TypeId : 1, Value : Vous ne disposez pas d'assez de kamas pour acheter cet objet.
+MessageId : 72, TypeId : 1, Value : Cet objet n'est plus disponible à ce prix. Quelqu'un a été plus rapide...
+MessageId : 74, TypeId : 1, Value : Action annulée. Désolé, l'hôtel des ventes est clos temporairement.  Revenez un peu plus tard !!
+MessageId : 75, TypeId : 1, Value : pour débuter cette quête.
+MessageId : 76, TypeId : 1, Value : Vous n'avez pas assez de kamas pour acquitter la taxe de mise en mode marchand...
+MessageId : 77, TypeId : 1, Value : Cette personne est déjà alignée.
+MessageId : 78, TypeId : 1, Value : Votre état et celui de votre mari ne vous permet pas de le rejoindre actuellement.
+MessageId : 79, TypeId : 1, Value : Votre état et celui de votre femme ne vous permet pas de la rejoindre actuellement.
+MessageId : 80, TypeId : 1, Value : Votre mari est trop éloigné pour vous permettre de le rejoindre.
+MessageId : 81, TypeId : 1, Value : Votre femme est trop éloignée pour vous permettre de la rejoindre.
+MessageId : 82, TypeId : 1, Value : Vous n'avez pas assez de kamas pour effectuer cette action.
+MessageId : 83, TypeId : 1, Value : Votre déshonneur ne vous permet pas de faire cette action.
+MessageId : 84, TypeId : 1, Value : Votre message n'a pas abouti car identique au précédent message.
+MessageId : 85, TypeId : 1, Value : Vous devez équiper votre outil pour cette action.
+MessageId : 86, TypeId : 1, Value : Impossible de ressusciter une personne d'une cité ennemie.
+MessageId : 87, TypeId : 1, Value : L'abonnement lié au cadeau a été invalidé. L'objet est donc repris.
+MessageId : 88, TypeId : 1, Value : Votre familier ne peut vous suivre tant que vous êtes sur votre monture...
+MessageId : 89, TypeId : 1, Value : Bienvenue sur DOFUS, dans le Monde des Douze !
+Il est interdit de transmettre votre identifiant ou votre mot de passe.
+MessageId : 90, TypeId : 1, Value : Votre monture semble ne pas vouloir avaler cette nourriture...
+MessageId : 91, TypeId : 1, Value : Action impossible en cours de combat.
+MessageId : 92, TypeId : 1, Value : Impossible de modifier la structure des enclos publics.
+MessageId : 93, TypeId : 1, Value : Impossible de modifier la structure d'un enclos qui ne vous appartient pas.
+MessageId : 94, TypeId : 1, Value : Impossible de vendre un enclos public.
+MessageId : 95, TypeId : 1, Value : Impossible de vendre un enclos qui ne vous appartient pas.
+MessageId : 96, TypeId : 1, Value : Impossible d'acheter un enclos public.
+MessageId : 97, TypeId : 1, Value : Impossible d'acheter un enclos qui n'est pas à vendre.
+MessageId : 98, TypeId : 1, Value : Seul le meneur de la guilde peut acheter des enclos.
+MessageId : 99, TypeId : 1, Value : Prix invalide.
+MessageId : 100, TypeId : 1, Value : Vous n'appartenez pas à la bonne guilde pour profiter de cet enclos.
+MessageId : 101, TypeId : 1, Value : Vous ne disposez pas des droits de guildes suffisants pour cette opération.
+MessageId : 102, TypeId : 1, Value : Cellule cible invalide.
+MessageId : 103, TypeId : 1, Value : Impossible d'acheter un enclos supplémentaire. Une guilde peut acquérir un enclos après son niveau 10, puis un supplémentaire par tranche de 10 niveaux. Il faut en outre que la guilde soit agée de plus de 2 mois.
+MessageId : 104, TypeId : 1, Value : Monture désignée invalide.
+MessageId : 105, TypeId : 1, Value : L'étable est pleine. Vous ne pouvez conserver que 250 montures maximum.
+MessageId : 106, TypeId : 1, Value : Votre inventaire de monture doit être vide pour pouvoir la déséquiper.
+MessageId : 107, TypeId : 1, Value : L'enclos est plein pour le moment.
+MessageId : 108, TypeId : 1, Value : Cette monture n'est plus disponible. Elle a dû s'enfuir. Les certificats ne permettent de conserver une monture qu'un temps limité.
+MessageId : 109, TypeId : 1, Value : Attention ! Bavasser comme un Porkass est mal vu des autres aventuriers.
+MessageId : 110, TypeId : 1, Value : A peine entrée dans l'étable, %1 s'accroupit et commence à mettre bas. Après quelques instants, vous pouvez constater que tout s'est bien passé. Vous voilà responsable d'une nouvelle monture.
+MessageId : 111, TypeId : 1, Value : À peine entrée dans l'étable, %1 s'accroupit et commence à mettre bas. Après quelques instants, vous pouvez constater que tout s'est bien passé. Vous voilà responsable de %2 nouvelles montures.
+MessageId : 112, TypeId : 1, Value : Votre monture semble souffrir, et commence à mettre bas sa progéniture. Hélas, vous avez trop tardé à venir l'accompagner dans son travail, et son petit ne survit pas.
+MessageId : 113, TypeId : 1, Value : Impossible de monter sur votre monture, elle est épuisée... Nourrissez-la, ou laissez-la se reposer dans un enclos.
+MessageId : 114, TypeId : 1, Value : Votre monture, épuisée, refuse de vous porter plus loin.
+MessageId : 115, TypeId : 1, Value : Seuls les comptes abonnés peuvent profiter des montures.
+MessageId : 116, TypeId : 1, Value : Impossible dans votre état actuel.
+MessageId : 117, TypeId : 1, Value : Impossible d'être sur une monture à l'intérieur d'une maison.
+MessageId : 118, TypeId : 1, Value : Impossible d'entrer dans une demeure en restant sur sa monture.
+MessageId : 119, TypeId : 1, Value : Impossible d'acheter un enclos sans avoir de monture.
+MessageId : 120, TypeId : 1, Value : Impossible d'interagir avec votre percepteur sur la carte même où vous vous êtes connecté.
+MessageId : 121, TypeId : 1, Value : Avertissement avant sanction.
+MessageId : 122, TypeId : 1, Value : L'abus de points d'exclamations est dangereux pour la santé !!!
+MessageId : 123, TypeId : 1, Value : Le principe de précaution vous a rendu muet pour %1 seconde(s).
+MessageId : 124, TypeId : 1, Value : A force de trop parler, vous en avez perdu la voix. Vous devriez vous taire pendant les %1 prochaines secondes.
+MessageId : 125, TypeId : 1, Value : Le gardien de l'enclos a perdu trace de votre monture. Il vous propose en échange une même monture, mais qui vient de naître. C'est toujours mieux que rien...
+MessageId : 126, TypeId : 1, Value : Vous n'avez pas les droits nécessaires
+MessageId : 127, TypeId : 1, Value : Incarnam ne vous est plus accessible désormais, votre expérience fait de vous un aventurier apte à parcourir le monde sans continuer dans cette zone...
+MessageId : 128, TypeId : 1, Value : Le montant de la transaction s'élève à $quantity%1 kamas. Vous n'avez actuellement pas cette somme sur vous.
+MessageId : 129, TypeId : 1, Value : Vous ne pouvez pas poser ceci au sol.
+MessageId : 130, TypeId : 1, Value : Vous ne pouvez pas atteindre cet endroit depuis votre position actuelle.
+MessageId : 131, TypeId : 1, Value : Il faut être abonné
+MessageId : 132, TypeId : 1, Value : Il est interdit d'attaquer ceci pendant encore %1 minute(s).
+MessageId : 133, TypeId : 1, Value : Il est trop tôt
+MessageId : 134, TypeId : 1, Value : Ce n'est pas le bon moment
+MessageId : 135, TypeId : 1, Value : Vous devez appartenir à une guilde pour profiter de cette possibilité.
+MessageId : 136, TypeId : 1, Value : La téléportation vers cette maison de guilde n'a pas été autorisée par son propriétaire.
+MessageId : 137, TypeId : 1, Value : Vous êtes à court de potion de foyer de guilde.
+MessageId : 138, TypeId : 1, Value : Votre percepteur est de mauvaise humeur, pour pouvoir récolter son butin revenez plus tard (%1h).
+MessageId : 139, TypeId : 1, Value : Attention, la fenêtre d'échange se fermera automatiquement dans %1 minutes.
+MessageId : 140, TypeId : 1, Value : La destination est en territoire hostile.
+MessageId : 141, TypeId : 1, Value : La téléportation vers cette zone n'est pas autorisée aux joueurs neutres.
+MessageId : 142, TypeId : 1, Value : Les tombes sont interdites en donjon, vous avez été ramené à votre dernier point de sauvegarde.
+MessageId : 143, TypeId : 1, Value : Vous ne pouvez pas accéder à ce prisme.
+MessageId : 144, TypeId : 1, Value : Vous avez besoin de vos ailes pour voler jusqu'à un autre prisme.
+MessageId : 145, TypeId : 1, Value : Il n'y a pas assez de place ici.
+MessageId : 146, TypeId : 1, Value : Vous ne pouvez pas poser de prisme sur cette carte.
+MessageId : 147, TypeId : 1, Value : Vous ne pouvez pas poser de prisme dans cette zone.
+MessageId : 148, TypeId : 1, Value : Pour poser un prisme il vous faut au préalable parader ostensiblement avec vos jolies ailes, tel un paon, pendant une période de 5 minutes.
+MessageId : 149, TypeId : 1, Value : Il y a déjà un prisme dans cette zone.
+MessageId : 150, TypeId : 1, Value : Vous ne pouvez pas dissimuler vos ailes en ce lieu.
+MessageId : 151, TypeId : 1, Value : Impossible d'acheter une maison supplémentaire. Une guilde peut partager une maison après son niveau 10, puis une supplémentaire par tranche de 10 niveaux. Il faut en outre que la guilde soit agée de plus de 2 mois.
+MessageId : 152, TypeId : 1, Value : Vous ne pouvez pas poser de prisme dans cette zone : vous ne possédez pas assez de territoires de base.
+MessageId : 153, TypeId : 1, Value : Vous ne pouvez pas poser de prisme dans cette zone : il reste trop d'ennemis. Pourchassez les ennemis encore présents pour que la balance du territoire vous soit favorable.
+MessageId : 154, TypeId : 1, Value : Vous ne pouvez pas attaquer ce prisme durant sa première heure de vie.
+MessageId : 155, TypeId : 1, Value : Vous devez être au minimum niveau 10 et de grade 3 pour poser un prisme.
+MessageId : 156, TypeId : 1, Value : Vous ne pouvez prendre la place que d'un joueur ayant un grade inférieur au vôtre. Les plus haut gradés sont prioritaires !
+MessageId : 157, TypeId : 1, Value : Vous ne pouvez pas attaquer ce prisme, vos territoires sont trop éloignés pour permettre une percée dans cette zone.
+MessageId : 158, TypeId : 1, Value : Seuls les téméraires triomphant d'une quête précise sont bienvenus.
+MessageId : 159, TypeId : 1, Value : Vous êtes à court de potion d'enclos de guilde.
+MessageId : 160, TypeId : 1, Value : Vous ne pouvez pas attaquer ce prisme dans cette zone : trop d'ennemis sont présents. Pourchassez les ennemis encore présents ou attaquez dans une zone moins peuplée pour que la balance du territoire vous soit favorable.
+MessageId : 161, TypeId : 1, Value : Vous ne pouvez pas équiper un objet vivant directement, essayez plutôt de l'associer sur un objet équipé qu'il affectionne.
+MessageId : 162, TypeId : 1, Value : Vous ne pouvez pas associer un objet vivant à un objet inanimé non échangeable.
+MessageId : 163, TypeId : 1, Value : Votre objet vivant n'a pas l'air de vouloir ingurgiter quoi que ce soit pour le moment.
+MessageId : 164, TypeId : 1, Value : Une sauvegarde du serveur est en cours... Vous pouvez continuer de jouer, mais l'accès au serveur est temporairement bloqué. La connexion sera de nouveau possible d'ici quelques instants. Merci de votre patience.
+MessageId : 165, TypeId : 1, Value : La sauvegarde du serveur est terminée. L'accès au serveur est de nouveau possible. Merci de votre compréhension.
+MessageId : 166, TypeId : 1, Value : Votre personnage ne peut s'incarner tout de suite dans cet avatar, entre deux incarnations vous devez vous reposer au moins une minute.
+MessageId : 167, TypeId : 1, Value : Vous ne pouvez pas poser de percepteur ici avant %1h%2 (%3 minutes)
+MessageId : 168, TypeId : 1, Value : Vous ne pouvez pas poser plus de %1 percepteur(s) par zone.
+MessageId : 169, TypeId : 1, Value : Impossible de lancer ce sort : vous ne le possédez pas !
+MessageId : 170, TypeId : 1, Value : Impossible de lancer ce sort : Vous avez %1 PA disponible(s) et il vous en faut %2 pour ce sort !
+MessageId : 171, TypeId : 1, Value : Impossible de lancer ce sort : Vous avez une portée de %1 à %2 et vous visez à %3 !
+MessageId : 172, TypeId : 1, Value : Impossible de lancer ce sort : la cellule visée n'est pas disponible !
+MessageId : 173, TypeId : 1, Value : Impossible de lancer ce sort autrement qu'en ligne droite !
+MessageId : 174, TypeId : 1, Value : Impossible de lancer ce sort : un obstacle gène votre vue !
+MessageId : 175, TypeId : 1, Value : Impossible de lancer ce sort actuellement.
+MessageId : 176, TypeId : 1, Value : Votre monture est trop jeune pour être chevauchée. Il faut d'abord l'élever correctement en enclos pour qu'elle grandisse un peu...
+MessageId : 177, TypeId : 1, Value : Vous avez trop d'objets dans votre inventaire, vous ne pouvez pas les voir tous.
+MessageId : 178, TypeId : 1, Value : Vous avez trop de montures à l'étable, retirez-en quelque-unes pour les voir toutes.
+MessageId : 179, TypeId : 1, Value : Vous avez trop d'objets dans votre banque, retirez-en quelque-uns pour les voir tous.
+MessageId : 180, TypeId : 1, Value : Ce percepteur est en train d'être récolté, vous ne pouvez pas l'attaquer.
+MessageId : 181, TypeId : 1, Value : Cette rune est trop puissante pour être ajoutée sur cette arme.
+MessageId : 182, TypeId : 1, Value : <b>%1</b> vient d'être déconnecté, il quittera la partie dans <b>%2</b> tour(s) s'il ne se reconnecte pas avant.
+MessageId : 183, TypeId : 1, Value : Zone actuellement instanciée. Vous pouvez rejoindre vos amis présents dans une autre instance depuis votre liste d'amis.
+MessageId : 184, TypeId : 1, Value : <b>%1</b> vient de se reconnecter en combat.
+MessageId : 185, TypeId : 1, Value : Vous ne pouvez pas vous incarner si vous êtes mort.
+MessageId : 186, TypeId : 1, Value : Comme votre équipe a remporté le combat, votre personnage <b>%1</b> a été sauvé de justesse d'une mort affreuse.
+MessageId : 187, TypeId : 1, Value : Une déconnexion massive a été détectée : votre personnage <b>%1</b> est sauvé d'une mort affreuse.
+MessageId : 188, TypeId : 1, Value : Une déconnexion massive a été détectée : le combat est annulé.
+MessageId : 189, TypeId : 1, Value : Il y a déjà trop de personnes présentes
+MessageId : 190, TypeId : 1, Value : Votre personnage <b>%1</b> est mort, rien ni personne n'a pu le sauver.
+MessageId : 191, TypeId : 1, Value : Vous ne pouvez plus faire cette quête aujourd'hui, car vous l'avez déjà finie avec un autre de vos personnages.
+MessageId : 192, TypeId : 1, Value : Votre personnage <b>%1</b> a été sauvé d'une mort affreuse, car le combat n'était pas fini lorsque le serveur s'est éteint.
+MessageId : 193, TypeId : 1, Value : Impossible de lancer ce sort : la cellule visée n'est pas valide !
+MessageId : 194, TypeId : 1, Value : Il y a trop de monstres invoqués sur la carte !
+MessageId : 195, TypeId : 1, Value : Vous ne pouvez pas utiliser cet objet sur un personnage qui n'a pas activé son mode "Joueur contre joueur".
+MessageId : 196, TypeId : 1, Value : Votre alignement ne vous permet pas d'utiliser ce transport !
+MessageId : 197, TypeId : 1, Value : Vous ne pouvez utiliser cet objet que sur des joueurs d'alignement opposé !
+MessageId : 198, TypeId : 1, Value : Malgré toutes vos tentatives, votre cible reste introuvable. Réessayez plus tard.
+MessageId : 199, TypeId : 1, Value : <b>%1</b> a remplacé <b>%2</b>  au poste de meneur de la guilde <b>%3</b>
+MessageId : 200, TypeId : 1, Value : Vous ne pouvez libérer davantage de monstres, attaquez d'abord ceux que vous avez déjà libérés !
+MessageId : 201, TypeId : 1, Value : <b>%1</b> vient de vous bannir. Le bannissement sera effectif dès la fin du combat.
+MessageId : 202, TypeId : 1, Value : La cible est actuellement invisible !
+MessageId : 203, TypeId : 1, Value : Vous ne pouvez pas avoir plus de <b>%1</b> invocation(s) en même temps.
+MessageId : 204, TypeId : 1, Value : Impossible d'utiliser ce zaap.
+MessageId : 205, TypeId : 1, Value : Pour accéder à cette interface, il faut vous faut faire partie d'une guilde.
+MessageId : 206, TypeId : 1, Value : Impossible, ce joueur est déjà dans une guilde
+MessageId : 207, TypeId : 1, Value : Vous n'avez pas le droit requis pour inviter des joueurs dans votre guilde.
+MessageId : 208, TypeId : 1, Value : Impossible d'inviter, ce joueur est inconnu ou non connecté.
+MessageId : 209, TypeId : 1, Value : Ce joueur est occupé. Impossible de l'inviter.
+MessageId : 210, TypeId : 1, Value : Impossible, ce personnage ne fait pas partie de la guilde.
+MessageId : 211, TypeId : 1, Value : Impossible, ce perso ou compte n'existe pas ou n'est pas connecté.
+MessageId : 212, TypeId : 1, Value : Vous ne pouvez rejoindre actuellement cette personne en raison d'une incompatibilité d'état.
+MessageId : 213, TypeId : 1, Value : La puissance de la magie de téléportation est inversement proportionnelle au carré de la distance. La distance actuelle est trop grande, vous ne pourriez rejoindre cette personne en un seul morceau.
+MessageId : 214, TypeId : 1, Value : Il n'y a pas de place disponible près de cette personne, vous risqueriez de vous rematérialiser dans un rocher ou un innocent tofu.
+MessageId : 215, TypeId : 1, Value : Ce challenge n'a actuellement aucune cible.
+MessageId : 216, TypeId : 1, Value : Pas les droits suffisants pour booster les caractéristiques et les rangs de sort dans la guilde.
+MessageId : 217, TypeId : 1, Value : Impossible de rejoindre le percepteur, Vous êtes occupé.
+MessageId : 218, TypeId : 1, Value : Multi-compte interdit lors de combat de guilde
+MessageId : 219, TypeId : 1, Value : On ne peut pas passer en mode marchand si on est dans un enclos!
+MessageId : 220, TypeId : 1, Value : Impossible d'utiliser le zaapi.
+MessageId : 221, TypeId : 1, Value : Impossible d'utiliser le transporteur lié au prisme!
+MessageId : 222, TypeId : 1, Value : Vous ne pouvez plus accélérer la vitesse d'apprentissage de vos montures aujourd'hui, vous devez vous en remettre à vos machines uniquement
+MessageId : 223, TypeId : 1, Value : Votre conjoint n'a pas donné de signes de vie depuis trop longtemps, selon le rite d'Allister votre union est désormais caduque. Vous voilà libre. Est-ce une occasion de se réjouir ou de pleurer ?
+MessageId : 224, TypeId : 1, Value : Votre union avec %1 a été jugée caduque en votre absence. Retour au célibat pour le moment.
+MessageId : 225, TypeId : 1, Value : Attention, vous êtes sur un serveur de test dont l'objectif est la détection de problèmes dans les futures modifications. Tout ce qui est sur ce serveur (les personnages, les objets, les guildes, etc.) n'est pas permanent, et peut être supprimé ou remplacé à tout moment, et ce sans avertissement. Bon test à tous, et dans la bonne humeur !
+MessageId : 226, TypeId : 1, Value : Action impossible sur ce serveur.
+MessageId : 227, TypeId : 1, Value : Vous devez atteindre le <b>niveau %1</b> pour utiliser cette monture.
+MessageId : 228, TypeId : 1, Value : Ce lieu ne peut pas accueillir de percepteur.
+MessageId : 229, TypeId : 1, Value : Il y a un piège sur cette case.
+MessageId : 230, TypeId : 1, Value : Cet objet ne semble pas pouvoir être utilisé ...
+MessageId : 231, TypeId : 1, Value : L'erreur n°%1 est survenue.
+MessageId : 232, TypeId : 1, Value : Le mode restreint est actif pour la session, cette action est impossible.
+MessageId : 233, TypeId : 1, Value : Vous ne respectez pas le niveau de sécurité paramétré pour ce compte, le mode restreint est donc actif pour cette session et empêche certaines actions. Veuillez consulter la <a href='https://support.ankama.com/hc/fr/sections/200274067'>F.A.Q du service sécurité des comptes </a> pour obtenir davantage d'informations.
+MessageId : 234, TypeId : 1, Value : La dernière connexion de votre compte a été effectuée en mode restreint, veuillez modifier vos identifiants si ceci est anormal. (<b><a href='https://support.ankama.com/hc/fr/sections/200274067'>F.A.Q du service sécurité des comptes</a></b>).
+MessageId : 235, TypeId : 1, Value : Une modification du niveau de sécurité de votre compte est en cours, veuillez vous connecter sur <a href='https://account.ankama.com/'>votre gestion de compte</a> si vous souhaitez l'annuler.
+MessageId : 236, TypeId : 1, Value : La guilde doit compter un minimum de %1 membres pour être valide.
+MessageId : 237, TypeId : 1, Value : Vous ne pouvez pas passer en mode marchand.
+MessageId : 238, TypeId : 1, Value : Action impossible, la cible n'est pas valide
+MessageId : 239, TypeId : 1, Value : Votre signalement pour ce joueur a déjà été pris en compte, merci pour votre vigilance.
+MessageId : 240, TypeId : 1, Value : Impossible de se déplacer de %1 case(s) avec %2 point(s) de mouvement !
+MessageId : 241, TypeId : 1, Value : Impossible d'expulser du combat un personnage de plus haut niveau sur ce serveur.
+MessageId : 242, TypeId : 1, Value : La cible ne peut pas être portée.
+MessageId : 243, TypeId : 1, Value : Action impossible, ce contenu n'est pas activé actuellement.
+MessageId : 244, TypeId : 1, Value : Vous avez atteint la limite de %1 messages par jour pour les comptes non-abonnés. Cependant, vous pouvez toujours parler dans les canaux privés (guilde, groupe) ou envoyer des messages privés à des joueurs qui vous ont enregistré dans leur liste d'amis.
+MessageId : 245, TypeId : 1, Value : Vous ne pouvez plus combattre de monstres aujourd'hui : vous avez atteint la limite de %1 combats par jour pour les comptes non-abonnés.
+MessageId : 246, TypeId : 1, Value : Le moment n'est pas opportun.
+MessageId : 247, TypeId : 1, Value : Ce n'est pas le bon jour.
+MessageId : 248, TypeId : 1, Value : Impossible ce mois ci.
+MessageId : 249, TypeId : 1, Value : Vous possédez un objet incompatible.
+MessageId : 250, TypeId : 1, Value : Vous ne possédez pas la bonne quantité d'objets.
+MessageId : 251, TypeId : 1, Value : L'objet nécessaire n'est pas équipé.
+MessageId : 252, TypeId : 1, Value : Vous ne possédez pas l'objet en quantité suffisante.
+MessageId : 253, TypeId : 1, Value : Vous avez atteint la quantité maximum autorisée pour cet objet.
+MessageId : 254, TypeId : 1, Value : Un objet incompatible est équipé.
+MessageId : 255, TypeId : 1, Value : '$item%1' faisait partie de votre équipement rapide n°%2.
+MessageId : 256, TypeId : 1, Value : Mode restreint actif : action impossible avant %1 seconde(s).
+MessageId : 257, TypeId : 1, Value : Il est nécessaire d'atteindre le niveau %1 pour parler hors d'Incarnam.
+MessageId : 258, TypeId : 1, Value : Impossible d'utiliser '$item%1' en phase de préparation de combat.
+MessageId : 259, TypeId : 1, Value : Impossible, vous êtes déjà dans votre foyer.
+MessageId : 260, TypeId : 1, Value : Impossible de rejoindre cette personne, elle n'est pas abonnée et se trouve en zone abonnée.
+MessageId : 261, TypeId : 1, Value : Impossible de lancer ce sort autrement qu'en diagonale !
+MessageId : 262, TypeId : 1, Value : Impossible de lancer ce sort autrement qu'en diagonale ou en ligne droite !
+MessageId : 263, TypeId : 1, Value : %1 kama(s) ont été transféré(s) dans votre banque, en provenance d'anciens coffres de votre maison.
+MessageId : 264, TypeId : 1, Value : %1 pile(s) d'objet(s) ont été transférée(s) dans votre banque, en provenance d'anciens coffres de votre maison.
+MessageId : 265, TypeId : 1, Value : Impossible d'abandonner le combat en phase de préparation en étant le chef de l'équipe !
+MessageId : 266, TypeId : 1, Value : Transfert incomplet : l'inventaire de destination ne peut pas accueillir tous ces objets.
+MessageId : 267, TypeId : 1, Value : Transfert impossible : l'inventaire de destination ne peut pas accueillir ces objets.
+MessageId : 268, TypeId : 1, Value : Impossible, veuillez attendre encore %1 seconde(s)...
+MessageId : 269, TypeId : 1, Value : Cette caractéristique ne peut pas être davantage améliorée sur cet objet actuellement.
+MessageId : 270, TypeId : 1, Value : <a href="http://forum.dofus.com/en/heroic/38-rules">[<u>Voir les Règles du Serveur Héroïque</u>]</a>
+MessageId : 271, TypeId : 1, Value : Vous ne pouvez pas entrer car vous possédez déjà les 5 reliques de cette salle.
+MessageId : 272, TypeId : 1, Value : Impossible avant le niveau %1.
+MessageId : 273, TypeId : 1, Value : Vous descendez de votre monture.
+MessageId : 274, TypeId : 1, Value : Vos ennemis vous empêchent de vous déplacer de plus de %1 case(s).
+MessageId : 275, TypeId : 1, Value : Vos ennemis vous empêchent de vous déplacer.
+MessageId : 276, TypeId : 1, Value : Impossible d'emprunter ce chemin : un obstacle bloque le passage !
+MessageId : 277, TypeId : 1, Value : Une des maisons de votre guilde '%1' n'est plus partagée suite au départ de son propriétaire.
+MessageId : 278, TypeId : 1, Value : Une des maisons de votre guilde '%1' n'est plus partagée car elle a changé de propriétaire.
+MessageId : 279, TypeId : 1, Value : Vous ne pouvez pas avoir plus de <b>%1</b> bombe(s) en même temps.
+MessageId : 280, TypeId : 1, Value : Votre guilde a un nom hors-charte et restera invalide tant que son meneur ne l'aura pas renommée.
+MessageId : 281, TypeId : 1, Value : Votre guilde a un nom hors-charte et restera invalide tant que vous ne l'aurez pas renommée, en utilisant l'objet '$item%1' dans votre inventaire.
+MessageId : 282, TypeId : 1, Value : Combat annulé : la phase de préparation a duré trop longtemps.
+MessageId : 283, TypeId : 1, Value : Vous entrez dans la zone de tacle d'un ennemi invisible.
+MessageId : 284, TypeId : 1, Value : Vous n'avez pas le niveau de métier requis.
+MessageId : 285, TypeId : 1, Value : Vous ne pouvez pas porter autant d'objets.
+MessageId : 286, TypeId : 1, Value : Le second joueur impliqué dans l'échange ne peut pas porter autant d'objets.
+MessageId : 287, TypeId : 1, Value : Votre monture ne peut pas porter autant d'objets.
+MessageId : 288, TypeId : 1, Value : Vous ne pouvez pas abandonner ce combat
+MessageId : 289, TypeId : 1, Value : Ce donjon est réservé aux débutants. N'avez-vous pas honte d'être encore ici à votre âge ?
+MessageId : 290, TypeId : 1, Value : Vous ne pouvez pas attaquer ce percepteur avant %1 minutes.
+MessageId : 291, TypeId : 1, Value : Il n'est plus possible de capturer ce gardien de donjon : trop de personnages ont déserté le combat.
+MessageId : 292, TypeId : 1, Value : Action impossible sur la carte de connexion, et à la reprise d'un point de sauvegarde de donjon.
+MessageId : 293, TypeId : 1, Value : Impossible d'attaquer des monstres pour l'instant.
+MessageId : 294, TypeId : 1, Value : Impossible d'attaquer des monstres de cet alignement.
+MessageId : 295, TypeId : 1, Value : Impossible de capturer cette zone car votre alignement ne possède pas de zone mitoyenne.
+MessageId : 296, TypeId : 1, Value : Impossible de capturer cette zone car votre alignement ne possède pas de zone mitoyenne depuis suffisamment longtemps.
+MessageId : 297, TypeId : 1, Value : Invitation impossible actuellement.
+MessageId : 298, TypeId : 1, Value : Vous ne pouvez pas équiper cet objet dans un combat de Kolizéum.
+MessageId : 299, TypeId : 1, Value : L'invitation de joueurs "ennemis" ou "ignorés pour la session" n'est pas valable.
+MessageId : 300, TypeId : 1, Value : Un des joueurs ne peut pas participer au Kolizéum.
+MessageId : 301, TypeId : 1, Value : Au moins un des joueurs n'est pas compatible avec les autres pour le Kolizéum.
+MessageId : 302, TypeId : 1, Value : Le groupe est déjà plein, impossible d'y inviter %1.
+MessageId : 303, TypeId : 1, Value : %1 est déjà trop sollicité et ne peux reçevoir de nouvelles invitations actuellement.
+MessageId : 304, TypeId : 1, Value : Le joueur %1 est déjà dans votre groupe.
+MessageId : 305, TypeId : 1, Value : {player,%1,%2} a été déconnecté(e) car le multi-compte est interdit dans ce combat.
+MessageId : 306, TypeId : 1, Value : Impossible de s'inscrire pour <b>$dungeon%1</b> : trop de personnages inscrits.
+MessageId : 307, TypeId : 1, Value : Impossible en donjon.
+MessageId : 308, TypeId : 1, Value : Le montant minimum est de %1.
+MessageId : 309, TypeId : 1, Value : Vous n'avez pas assez fait attention à votre montilier. Il s'est transformé en fantôme !
+MessageId : 310, TypeId : 1, Value : %1 est déjà dans un groupe et refuse les invitations actuellement.
+MessageId : 311, TypeId : 1, Value : Cette potion n'est pas assez puissante pour '$item%1'.
+MessageId : 312, TypeId : 1, Value : Impossible, vous n'avez pas de groupe !
+MessageId : 313, TypeId : 1, Value : Personne dans votre groupe ne peut rejoindre ce point de rencontre !
+MessageId : 314, TypeId : 1, Value : Ce groupe ne peut pas être modifié actuellement .
+MessageId : 315, TypeId : 1, Value : Impossible : le niveau de la cible est trop élevé.
+MessageId : 316, TypeId : 1, Value : Cette sous-zone ne peut être capturée par une alliance.
+MessageId : 317, TypeId : 1, Value : Impossible de dissimuler son alignement dans une zone qui permet l'agression.
+MessageId : 318, TypeId : 1, Value : Impossible d'utiliser un point de rencontre pendant %1 minute(s).
+MessageId : 319, TypeId : 1, Value : Vous êtes déjà invité vers un point de rencontre d'un autre donjon.
+MessageId : 321, TypeId : 1, Value : Vous devez être abonné pour pouvoir faire des combats en Kolizéum.
+MessageId : 322, TypeId : 1, Value : Vous avez atteint le nombre maximum de combat en Kolizéum pour aujourd'hui.
+MessageId : 323, TypeId : 1, Value : Vous êtes interdit de Kolizéum pour un certain temps car vous avez abandonné un match de Kolizéum.
+MessageId : 324, TypeId : 1, Value : %1 ne peut pas participer au Kolizéum.
+MessageId : 325, TypeId : 1, Value : %1 doit s'abonner pour pouvoir faire des combats en Kolizéum.
+MessageId : 326, TypeId : 1, Value : Vous devez être au moins niveau 50 pour faire des combats en Kolizéum.
+MessageId : 327, TypeId : 1, Value : %1 doit être au moins niveau 50 pour faire des combats en Kolizéum.
+MessageId : 328, TypeId : 1, Value : %1 est interdit de Kolizéum pour un certain temps car il a abandonné un match de Kolizéum.
+MessageId : 329, TypeId : 1, Value : %1 a atteint le nombre maximum de combat en Kolizéum pour aujourd'hui.
+MessageId : 330, TypeId : 1, Value : Cette action est interdite en combat de Kolizéum.
+MessageId : 331, TypeId : 1, Value : %1 est en combat de Kolizéum, vous ne pouvez pas l'inviter pour l'instant.
+MessageId : 332, TypeId : 1, Value : Vous êtes en donjon, vous ne pouvez pas participer au Kolizéum pour l'instant.
+MessageId : 333, TypeId : 1, Value : %1 est en donjon, il ne peut pas participer au Kolizéum pour l'instant.
+MessageId : 334, TypeId : 1, Value : Vous êtes déjà en combat de Kolizéum.
+MessageId : 335, TypeId : 1, Value : %1 est déjà dans un combat de Kolizéum.
+MessageId : 336, TypeId : 1, Value : Tant que votre maison est en vente, vous ne pouvez la partager avec votre guilde.
+MessageId : 337, TypeId : 1, Value : Le mode restreint est actif pour %1, cette action est impossible.
+MessageId : 338, TypeId : 1, Value : Vous êtes trop faible pour survivre au froid de ces geôles.
+MessageId : 339, TypeId : 1, Value : Vous ne pouvez pas participer au Kolizéum depuis une prison.
+MessageId : 340, TypeId : 1, Value : Vous ne pouvez pas ouvrir ce cadeau, il est adressé à {player,%1,%2}.
+MessageId : 341, TypeId : 1, Value : Un cadeau ne peut pas contenir plus de %1 objets ou peser plus de %2 pods.
+MessageId : 342, TypeId : 1, Value : Vous avez ouvert suffisamment de cadeaux.
+MessageId : 343, TypeId : 1, Value : À cause de votre mauvais comportement en Kolizéum, son accès vous est interdit pendant %1 minute(s).
+MessageId : 344, TypeId : 1, Value : %1 est interdit de Kolizéum pour un certain temps à cause de son comportement pendant les combats.
+MessageId : 345, TypeId : 1, Value : Impossible : {item,%1,%2} n'est pas échangeable.
+MessageId : 346, TypeId : 1, Value : Impossible : {item,%1,%2} n'est pas modifiable.
+MessageId : 347, TypeId : 1, Value : %1 a atteint le nombre maximum de combat en Kolizéum cette dernière heure.
+MessageId : 348, TypeId : 1, Value : Vous avez atteint le nombre maximum de combat en Kolizéum cette dernière heure.
+MessageId : 349, TypeId : 1, Value : Impossible dans cet état.
+MessageId : 350, TypeId : 1, Value : Quoi ma guilde ? Qu'est-ce qu'elle a ma guilde ? Quelque chose qui ne va pas ...
+MessageId : 351, TypeId : 1, Value : Votre guilde n'a pas le niveau requis.
+MessageId : 352, TypeId : 1, Value : Vos droits de guilde ne remplissent pas les conditions requises.
+MessageId : 353, TypeId : 1, Value : Vous ne pouvez pas inviter %1 en groupe de Kolizéum car vous êtes en préparation d'un combat de Kolizéum.
+MessageId : 354, TypeId : 1, Value : Action non autorisée sur les serveurs de cette communauté.
+MessageId : 355, TypeId : 1, Value : Une action est déjà en cours. Impossible de monter ou de descendre de votre monture.
+MessageId : 356, TypeId : 1, Value : Objet non-échangeable.
+MessageId : 357, TypeId : 1, Value : Vous n'avez pas l'expérience de métier requise.
+MessageId : 358, TypeId : 1, Value : Impossible de capturer sur cette carte.
+MessageId : 359, TypeId : 1, Value : Impossible d'inviter %1 : l'écart maximal entre le plus haut et le plus bas niveau d'une équipe Kolizéum ne peut dépasser 50 niveaux.
+MessageId : 360, TypeId : 1, Value : Le Kolizéum n'est pas disponible en donjon, vous avez été désinscrit.
+MessageId : 361, TypeId : 1, Value : Les mutants ne sont pas autorisés en Kolizéum, vous avez été désinscrit.
+MessageId : 362, TypeId : 1, Value : Impossible de consulter la fiche de la monture.
+MessageId : 363, TypeId : 1, Value : Ce qui avait été soigneusement emballé a cessé d'exister depuis.
+MessageId : 364, TypeId : 1, Value : %1 est absent  : « %2 »
+MessageId : 365, TypeId : 1, Value : %1 est inactif depuis plus de %2 minutes.
+MessageId : 366, TypeId : 1, Value : %1 ne peut être dérangé que par ses amis.
+MessageId : 367, TypeId : 1, Value : %1 ne veut pas être dérangé actuellement.
+MessageId : 368, TypeId : 1, Value : Seuls les équipements peuvent être brisés.
+MessageId : 369, TypeId : 1, Value : %1 est absent.
+MessageId : 370, TypeId : 1, Value : %1 vous ignore.
+MessageId : 371, TypeId : 1, Value : Succès nécessaire.
+MessageId : 372, TypeId : 1, Value : Impossible d'utiliser votre arme actuellement.
+MessageId : 373, TypeId : 1, Value : Entrée interdite à toute personne ne portant pas de scaphandre magmatique.
+MessageId : 374, TypeId : 1, Value : Seuls les détenteurs d'une guildalogemme sont autorisés à entrer.
+MessageId : 375, TypeId : 1, Value : Vous ne possédez pas le Morceau de clef de Nileza.
+MessageId : 376, TypeId : 1, Value : Vous ne possédez pas le Morceau de clef de Sylargh.
+MessageId : 377, TypeId : 1, Value : Vous ne possédez pas le Morceau de clef de Klime.
+MessageId : 378, TypeId : 1, Value : Vous ne possédez pas le Morceau de clef de Missiz Frizz.
+MessageId : 379, TypeId : 1, Value : Vous ne possédez pas la Clef de la Tour de la Clepsydre.
+MessageId : 380, TypeId : 1, Value : Vous ne possédez pas '$item%1'.
+MessageId : 381, TypeId : 1, Value : <b>%1</b> vous ignore et ne reçoit donc plus vos messages.
+MessageId : 382, TypeId : 1, Value : Les conditions relatives à l'Alliance ne sont pas remplies.
+MessageId : 383, TypeId : 1, Value : Vos droits d'Alliance ne remplissent pas les conditions requises.
+MessageId : 384, TypeId : 1, Value : Vous devez être membre premium pour utiliser ce service.
+MessageId : 385, TypeId : 1, Value : Vous devez être membre premium pour bénéficier d'un niveau supérieur à 30 dans vos métiers.
+MessageId : 386, TypeId : 1, Value : La sous-zone ne remplit pas les conditions d'alliance requises.
+MessageId : 387, TypeId : 1, Value : L'état du mode « Alliance versus Alliance » est incompatible avec cette action.
+MessageId : 388, TypeId : 1, Value : Les conditions du mode « Alliance versus Alliance » sont incompatibles avec le statut du joueur dans cette sous-zone.
+MessageId : 389, TypeId : 1, Value : Vous n'avez pas le droit requis pour inviter des joueurs dans votre alliance.
+MessageId : 390, TypeId : 1, Value : Impossible, ce joueur n'est pas le leader d'une guilde indépendante.
+MessageId : 391, TypeId : 1, Value : La capacité maximale de l'alliance a été atteinte.
+MessageId : 392, TypeId : 1, Value : L'état de votre mode Alliance versus Alliance n'est pas valide pour cette action.
+MessageId : 393, TypeId : 1, Value : Seuls les détenteurs d'une alliogemme sont autorisés à entrer.
+MessageId : 394, TypeId : 1, Value : Vous ne trouvez rien d'intéressant emprisonné dans la glace.
+MessageId : 395, TypeId : 1, Value : Votre alliance n'est pas propriétaire de cette sous-zone.
+MessageId : 396, TypeId : 1, Value : %1 est occupé(e).
+MessageId : 397, TypeId : 1, Value : Impossible : vous devez donner votre rang de meneur d'alliance à une autre guilde avant de quitter l'alliance.
+MessageId : 398, TypeId : 1, Value : Impossible d'activer le mode AvA : votre mode JcJ est actif, et ne peut pas être désactivé ici.
+MessageId : 399, TypeId : 1, Value : Impossible d'activer ou désactiver le mode AvA dans une zone où se déroule un combat d'alliance.
+MessageId : 400, TypeId : 1, Value : Il faut faire partie d'une alliance pour pouvoir poser un prisme.
+MessageId : 401, TypeId : 1, Value : Impossible de poser un prisme : une autre alliance a remporté la conquête.
+MessageId : 402, TypeId : 1, Value : Impossible de poser un prisme : cette zone appartient déjà à l'alliance %1.
+MessageId : 403, TypeId : 1, Value : Impossible de poser un prisme : cette zone vous appartient déjà !
+MessageId : 404, TypeId : 1, Value : Impossible de supprimer une alliance qui possède encore des prismes.
+MessageId : 405, TypeId : 1, Value : Vous devez appartenir à une alliance pour effectuer cette action.
+MessageId : 406, TypeId : 1, Value : L'état du prisme est incompatible avec cette action.
+MessageId : 407, TypeId : 1, Value : Impossible d'accéder à ce village de conquête : vous n'êtes pas un combattant AvA valide.
+MessageId : 408, TypeId : 1, Value : Impossible d'accéder à un village de conquête qui n'appartient pas à votre alliance.
+MessageId : 409, TypeId : 1, Value : Vous ne pouvez pas attaquer ce prisme avant %1 minutes.
+MessageId : 410, TypeId : 1, Value : Impossible : {item,%1,%2} n'est pas une arme éthérée.
+MessageId : 411, TypeId : 1, Value : Votre mode AvA a été désactivé : il n'est pas possible de participer avec plusieurs comptes aux guerres d'alliances.
+MessageId : 412, TypeId : 1, Value : Impossible, ce module de prisme n'est pas valide.
+MessageId : 413, TypeId : 1, Value : Impossible, ce module est déjà présent sur ce prisme.
+MessageId : 414, TypeId : 1, Value : Impossible, il n'y a pas de prisme ici !
+MessageId : 415, TypeId : 1, Value : Impossible, ce prisme n'appartient pas à votre alliance.
+MessageId : 416, TypeId : 1, Value : Impossible de se téléporter depuis cet endroit.
+MessageId : 417, TypeId : 1, Value : Impossible de remplacer le prisme avant %1 heure(s).
+MessageId : 418, TypeId : 1, Value : Les conditions pour valider cette réponse ne sont plus remplies
+MessageId : 419, TypeId : 1, Value : Une pile est nécessaire pour utiliser ce levier.
+MessageId : 420, TypeId : 1, Value : Vous n'êtes pas autorisé à utiliser cet ascenseur.
+MessageId : 421, TypeId : 1, Value : Impossible, vous n'êtes pas un combattant AvA valide.
+MessageId : 422, TypeId : 1, Value : Vous n'avez pas l'autorisation de descendre. Adressez-vous à un employé du Kanojedo pour en savoir plus.
+MessageId : 423, TypeId : 1, Value : ATTENTION : La sauvegarde débutera dans 5 minutes pour une durée approximative de 10 minutes. En cas de déconnexion durant ce laps de temps, vous devrez attendre la fin de la sauvegarde pour vous reconnecter au serveur.
+MessageId : 424, TypeId : 1, Value : Il n'y a plus assez de places dans ce groupe pour inviter %1 et ses compagnons.
+MessageId : 425, TypeId : 1, Value : Il n'y a plus assez de places dans ce groupe.
+MessageId : 426, TypeId : 1, Value : Impossible dans ce type de groupe
+MessageId : 427, TypeId : 1, Value : Impossible de se téléporter à partir d'une zone de conflit avec votre mode AvA activé.
+MessageId : 428, TypeId : 1, Value : Impossible dans une zone où votre personnage peut se faire agresser.
+MessageId : 429, TypeId : 1, Value : {player,%1,%2} n'est pas en combat.
+MessageId : 430, TypeId : 1, Value : Impossible d'ajouter le compagnon en raison d'une incompatibilité avec une invitation de groupe active.
+MessageId : 431, TypeId : 1, Value : Vous aviez oublié %1 de vos familiers. En l'absence de repas équilibrés, ils ont mangé trop gras, trop sucré et trop salé : ce n'était pas bon pour leur santé.
+MessageId : 432, TypeId : 1, Value : %1 de vos familiers ont péri par manque d'attention.
+MessageId : 433, TypeId : 1, Value : %1 de vos montiliers ont péri par manque d'attention.
+MessageId : 434, TypeId : 1, Value : Mission annulée : le portail s'est refermé.
+MessageId : 435, TypeId : 1, Value : Incompatibilité de titre pour cette action.
+MessageId : 436, TypeId : 1, Value : Impossible : finissez votre mission actuelle, ou attendez encore %1 minutes.
+MessageId : 437, TypeId : 1, Value : Impossible, veuillez attendre encore %1 minute(s)...
+MessageId : 438, TypeId : 1, Value : Impossible, le portail s'est refermé.
+MessageId : 439, TypeId : 1, Value : {player,%1,%2} vous a remplacé pour la défense car il est prioritaire.
+MessageId : 440, TypeId : 1, Value : Bienvenue sur le serveur Épique.
+La mort contre les monstres est définitive.
+MessageId : 441, TypeId : 1, Value : La serrure de cette porte est verrouillée mais elle peut être crochetée à l'aide d'un rossignol.
+MessageId : 442, TypeId : 1, Value : Attention ! Vous bénéficiez d'une période d'essai gratuite sur ce serveur. Lorsque cette période sera finie, il vous faudra vous abonner pour continuer à jouer sur ce serveur.
+MessageId : 443, TypeId : 1, Value : Action impossible en mode invité
+MessageId : 444, TypeId : 1, Value : Vous devez posséder le nombre exact de Minutes du Xélorium pour ouvrir ce coffre !
+MessageId : 445, TypeId : 1, Value : Vous ne pouvez pas équiper un objet d'apparat directement, essayez plutôt de l'associer à un objet équipé compatible.
+MessageId : 446, TypeId : 1, Value : Le montant maximum est de %1.
+MessageId : 447, TypeId : 1, Value : Impossible d'utiliser '$item%1' pendant le combat.
+MessageId : 448, TypeId : 1, Value : Impossible d'utiliser '$item%1' en combat.
+MessageId : 449, TypeId : 1, Value : Vous êtes beaucoup trop grand pour passer par cette ouverture !
+MessageId : 450, TypeId : 1, Value : Impossible de créer une guilde ou une alliance quand le serveur est en sauvegarde
+MessageId : 451, TypeId : 1, Value : Il y a un portail sur cette case.
+MessageId : 452, TypeId : 1, Value : Tandis que vous vous approchez discrètement du portail, un phorreur remarque votre présence et la signale à son maître. L'alerte est donnée.
+MessageId : 453, TypeId : 1, Value : Impossible de briser plus de 50 objets différents à la fois.
+MessageId : 454, TypeId : 1, Value : Vous n'avez pas assez de pods disponibles.
+MessageId : 455, TypeId : 1, Value : Vous avez déjà récupéré cette ressource.
+MessageId : 456, TypeId : 1, Value : Combat impossible sur cette carte.
+MessageId : 457, TypeId : 1, Value : Guilde invalide.
+MessageId : 458, TypeId : 1, Value : Vous ne pouvez pas briser cet objet.
+MessageId : 459, TypeId : 1, Value : Ce personnage ne peut pas encore être attaqué.
+MessageId : 41, TypeId : 2, Value : La %1 menant à votre coeur de ville du %2 est attaquée.
+MessageId : 86, TypeId : 2, Value : Votre zone « <b>$subarea%1</b> » est vulnérable. Vous pouvez la défendre.
+MessageId : 87, TypeId : 2, Value : Le coeur de la zone <b>$area%1</b> est ouvert aux ennemis, protégez le !
+MessageId : 88, TypeId : 2, Value : Le coeur de la zone <b>$area%1</b> est refermé... Terrassez les ennemis encore présents et la victoire est acquise.
+MessageId : 89, TypeId : 2, Value : La zone « <b>$subarea%1</b> » est vulnérable. Vous pouvez tenter de la conquérir.
+MessageId : 90, TypeId : 2, Value : Le coeur de la zone <b>$area%1</b> a été ouvert par vos alliés, vous pouvez tenter de capturer ce lieu !
+MessageId : 91, TypeId : 2, Value : L'alliance {alliance,%2::%3} a capturé la zone « <b>$subarea%1</b> ».
+MessageId : 92, TypeId : 2, Value : L'alliance {alliance,%2::%3} a défendu la zone « <b>$subarea%1</b> ».
+MessageId : 93, TypeId : 2, Value : Suite à votre victoire, %1 pépites ont été réparties entre les groupes de monstres de la zone.
+MessageId : 0, TypeId : 4, Value : Trop de spam !
+MessageId : 1, TypeId : 4, Value : Vous êtes resté inactif trop longtemps.
+MessageId : 2, TypeId : 4, Value : Votre personnage a atteint le niveau maximum autorisé.
+MessageId : 3, TypeId : 4, Value : Pour des raisons de maintenance, le serveur va être coupé d'ici quelques minutes.
+MessageId : 4, TypeId : 4, Value : Votre connexion a été coupée pour des raisons de maintenance.
+MessageId : 5, TypeId : 4, Value : L'une de vos maisons vient d'être achetée $quantity%1 kamas par %2. La somme a été placée sur votre compte en banque.
+MessageId : 6, TypeId : 4, Value : Le nombre maximum d'objets pour cet inventaire est déjà atteint.
+MessageId : 7, TypeId : 4, Value : Cette opération n'est pas autorisée ici.
+MessageId : 8, TypeId : 4, Value : Cet objet n'est plus disponible.
+MessageId : 9, TypeId : 4, Value : Plus rien à acheter : le magasin est vide
+MessageId : 10, TypeId : 4, Value : Il vous faut au moins $quantity%1 kamas pour accéder à votre coffre.
+MessageId : 11, TypeId : 4, Value : Votre énergie est dangereusement basse !
+%1 point(s)
+MessageId : 12, TypeId : 4, Value : Vous venez de succomber à vos blessures.
+Vous pouvez attendre qu'un guérisseur vienne vous sauver ou libérer votre âme (/release) pour rejoindre le cimetière le plus proche.
+MessageId : 13, TypeId : 4, Value : Le serveur est actuellement en maintenance.
+Vous pouvez consulter la rubrique États des serveurs <u><a href="http://forum.dofus.com/fr/" target="_blank">du forum officiel</a></u>, ou <u><a href="https://support.ankama.com/" target="_blank">le site du Support</a></u> pour plus d'informations.
+Merci de votre compréhension.
+
+<u><a href="http://ankama-games.com/game.php" target="_blank"><font color="#0000FF">Profitez-en pour découvrir les différents jeux Ankama-Games !</font></a></u>
+MessageId : 14, TypeId : 4, Value : Cette classe est réservée aux abonnés.
+MessageId : 15, TypeId : 4, Value : Vous avez désormais rejoint le monde des esprits.
+Si vous voulez retourner dans le monde des vivants, il vous faudra trouver une statue de phénix ou un guérisseur.
+N'oubliez pas à l'avenir de reprendre de l'énergie en vous reposant dans les tavernes ou grâce à des potions.
+MessageId : 16, TypeId : 4, Value : Connexion temporairement refusée : le serveur reçoit trop de connexions simultanées. Merci de réessayer dans quelques minutes.
+MessageId : 17, TypeId : 4, Value : L'un de vos enclos vient d'être acheté $quantity%1 kamas par la guilde %2. La somme a été placée sur votre compte en banque.
+MessageId : 18, TypeId : 4, Value : Vous avez été kické par %1%2.
+MessageId : 19, TypeId : 4, Value : Ce serveur est restreint en accès à une certaine communauté de joueurs, vous ne pouvez pas y accéder.
+MessageId : 20, TypeId : 4, Value : Ce serveur est restreint en accès à une certaine communauté de joueurs, ou à tous les abonnés. Vous ne pouvez pas y accéder sans respecter une de ces conditions.
+MessageId : 21, TypeId : 4, Value : Des objets ont été déposés dans votre banque.
+MessageId : 22, TypeId : 4, Value : Votre niveau d'artisan actuel ne vous permettra pas de réussir un tel objet. Il vous faudra progresser encore un peu. Pour réussir cet objet de niveau %1, il faut avoir progressé au minimum au niveau %2 dans ce métier.
+MessageId : 23, TypeId : 4, Value : Suite à la modification des effets du sort $spell%1, %2 points de sort sont rendus.
+MessageId : 24, TypeId : 4, Value : Le serveur a détecté un problème de dates anormales sur %1 de vos familiers non-échangeables.
+La date d'échange a été fixée à demain pour chaque familier concerné.
+MessageId : 25, TypeId : 4, Value : Le serveur a détecté des conditions de repas anormales pour l'un de vos familiers.
+Ce familier maigrichon a bénéficié d'un apport express en nutriments, vitamines et sels-minéraux.
+Il a maintenant le poil heureux et le regard soyeux.
+MessageId : 26, TypeId : 4, Value : Vous venez de succomber à vos blessures.
+MessageId : 27, TypeId : 4, Value : Ce serveur est complet. Seuls les comptes possédant déjà un personnage sur ce serveur peuvent s'y connecter, ou en étant parrainé par une personne de ce serveur.
+MessageId : 28, TypeId : 4, Value : Vous ne pouvez plus supprimer ou recommencer de personnages aujourd'hui !
+MessageId : 29, TypeId : 4, Value : Connexion refusée.
+Un défaut de sécurité de votre connexion Internet a été relevé : votre adresse IP publique n'est pas constante, et ne permet pas d'authentifier votre connexion.
+Contactez votre administrateur réseau ou votre FAI, afin de vous assurer que votre connexion puisse conserver une IP identique entre l'identification et le choix du serveur de jeu.
+Cette 'inconstance' de l'IP se produit principalement dans les réseaux possédant plusieurs connexion Internet en parallèle, lorsque les connexions réseau sont balancées entre les différents points d'accès Internet.
+MessageId : 30, TypeId : 4, Value : Connexion refusée.
+L'authentification au serveur a échoué, en raison d'un trop grand délai de connexion.
+Assurez vous de couper les téléchargements, vidéos ou musiques en diffusion continue (streaming), afin d'améliorer la rapidité de votre connexion.
+MessageId : 31, TypeId : 4, Value : Connexion refusée.
+Le serveur de jeu n'a pas reçu les informations d'authentification suite à votre identification.
+Réessayez, si le problème persiste, contactez votre administrateur réseau ou votre FAI, il s'agit probablement d'une redirection erronée due à un mauvais paramétrage DNS.
+MessageId : 32, TypeId : 4, Value : Afin de ne pas gêner les autres joueurs, veuillez attendre %1 secondes avant de vous reconnecter.
+MessageId : 33, TypeId : 4, Value : Ce serveur est restreint à certaines langues ou communautés en ce qui concerne l'accès gratuit. Votre connexion nous indique que vous devriez jouer sur un serveur d'une autre communauté, correspondant à votre pays.
+Merci de vous diriger sur un serveur de votre communauté, le cas échéant, de créer un compte Dofus dans la communauté adaptée à votre pays.
+MessageId : 34, TypeId : 4, Value : Connexion impossible
+ %1 comptes sont déjà connectés au jeu depuis votre IP %2. Suite à des repérages récurrents de comportements illicites, certaines plages d'IP de votre hébergeur ont été limitées en nombre de connexion simultanées. 
+Les comptes abonnés ont une limitation moindre.
+Vous pouvez contacter le support à ce sujet <a href="https://support.ankama.com/hc/fr/requests/new?ticket_form_id=21977"><u>ici</u></a>
+MessageId : 35, TypeId : 4, Value : Ce serveur est restreint en accès à une certaine communauté de joueurs, vous ne pouvez pas y accéder.
+Certains pays ignorent la communauté associée au compte pour proposer une communauté en fonction de la position géographique de la connexion.
+Vous pouvez interroger le support à ce sujet <a href="https://support.ankama.com/hc/fr/articles/201454216"><u>ici</u></a>
+MessageId : 36, TypeId : 4, Value : Suite à la modification des effets de plusieurs de vos sorts, tous vos points de sort sont rendus.
+MessageId : 37, TypeId : 4, Value : Période de jeu terminée.
+Afin de laisser la possibilité à tous les visiteurs de se connecter, le temps de jeu par compte est restreint depuis ce lieu. Votre compte sera de nouveau utilisable depuis le salon dans quelques heures.
+Pour les tournois, prévenez un membre du staff afin que votre compte ait une dérogation le temps du tournoi.
+MessageId : 38, TypeId : 4, Value : Vous ne respectez pas le niveau de sécurité paramétré pour ce compte. Le mode restreint  sera activé si vous vous connectez en jeu,  certaines actions ne seront alors plus possibles. Veuillez consulter la <a href='https://support.ankama.com/hc/fr/sections/200274067'>F.A.Q du service sécurité des comptes </a> pour obtenir davantage d'informations.
+MessageId : 39, TypeId : 4, Value : La modification du nom de votre personnage sera effective lors de votre prochaine connexion.
+MessageId : 40, TypeId : 4, Value : Ce nom n'est pas disponible !
+MessageId : 41, TypeId : 4, Value : Vous pourrez choisir le nouveau nom de votre personnage lors de votre prochaine connexion.
+MessageId : 42, TypeId : 4, Value : Vous pourrez choisir les nouvelles couleurs de votre personnage lors de votre prochaine connexion.
+MessageId : 43, TypeId : 4, Value : Action impossible. Un changement de nom, de sexe, de couleurs, de visage ou de classe est déjà en attente pour ce personnage.
+MessageId : 44, TypeId : 4, Value : Votre personnage changera de sexe lors de votre prochaine connexion.
+MessageId : 45, TypeId : 4, Value : Action impossible, votre personnage changera déjà de sexe lors de votre prochaine connexion.
+MessageId : 46, TypeId : 4, Value : Le mode restreint est actif pour la session, cette action est impossible.
+MessageId : 47, TypeId : 4, Value : Votre enclos a été remis en vente car vous ne vous en étiez pas servi depuis longtemps. $quantity%1 kamas ont été versés dans votre banque, les montures ont été rendues à leurs propriétaires, et les objets d'enclos ont été mis dans votre banque.
+MessageId : 48, TypeId : 4, Value : Vous ne respectez pas le niveau de sécurité paramétré pour ce compte. Le mode restreint sera activé si vous vous connectez en jeu, certaines actions ne seront alors plus possibles. Veuillez consulter la <b><a href='https://support.ankama.com/hc/fr/sections/200274067'>F.A.Q du service sécurité des comptes</a></b> pour obtenir davantage d'informations.
+MessageId : 49, TypeId : 4, Value : Une modification du niveau de sécurité de votre compte est en cours, veuillez vous connecter sur votre gestion de compte si vous souhaitez l'annuler. (<b><a href='https://support.ankama.com/hc/fr/sections/200274067'>F.A.Q du service sécurité des comptes</a></b>)
+MessageId : 50, TypeId : 4, Value : %1 : %2
+MessageId : 51, TypeId : 4, Value : Votre client DOFUS n'a pas encore téléchargé cette zone. Veuillez attendre la fin du téléchargement de la zone, ou jouer avec un autre personnage.
+MessageId : 52, TypeId : 4, Value : Votre client DOFUS n'a pas encore téléchargé cette zone. Veuillez attendre la fin du téléchargement de la zone.
+MessageId : 53, TypeId : 4, Value : La classe '$breed%1' a été temporairement bloquée.
+MessageId : 54, TypeId : 4, Value : La classe '$breed%1' a été temporairement bloquée, vous serez déconnecté(e) en fin de combat.
+MessageId : 55, TypeId : 4, Value : Un de vos inventaires (banque, inventaire du personnage) va dépasser le seuil de 2 milliards de Kamas, les kamas supplémentaires seront donc perdus. Surveillez vos stocks de kamas et vos ventes (mode marchand, enclos, maisons, hdv).
+MessageId : 56, TypeId : 4, Value : Impossible de jouer sur le serveur Héroïque en mode restreint.
+MessageId : 57, TypeId : 4, Value : Vous ne possédez pas l'objet, ou alors pas dans les quantités nécessaires.
+MessageId : 58, TypeId : 4, Value : Vous pourrez changer l'apparence du visage de votre personnage lors de votre prochaine connexion.
+MessageId : 59, TypeId : 4, Value : Vous regagnez %1 point(s) de sort, suite à l'oubli de %2 sort(s) obsolètes.
+MessageId : 60, TypeId : 4, Value : Il est interdit de participer avec plusieurs comptes aux guerres d'alliances.
+MessageId : 61, TypeId : 4, Value : %1
+MessageId : 62, TypeId : 4, Value : Impossible de jouer sur le serveur Epique en mode restreint.
+MessageId : 63, TypeId : 4, Value : Vous pourrez changer la classe de votre personnage lors de votre prochaine connexion.
+MessageId : 64, TypeId : 4, Value : Paiement : %1 $quantity%2 kamas.
+MessageId : 65, TypeId : 4, Value : Suite à la refonte du système de métier, vos métiers ont été réinitialisés.<br/>Pour retrouver l'expérience accumulée, utilisez les gemmes de métier présentes dans votre inventaire.<br/><br/><u><a href="http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/435067-amelioration-metiers">En savoir plus!</a></u>
+MessageId : 1, TypeId : 6, Value : Je déclare %1 et %2 unis par les liens sacrés du mariage.
+MessageId : 2, TypeId : 6, Value : Je ne déclare pas %1 et %2 unis par les liens sacrés du mariage, tant pis !
+MessageId : 3, TypeId : 6, Value : %1 acceptez-vous d'épouser %2 ?
+MessageId : 4, TypeId : 6, Value : %1
+MessageId : 1, TypeId : 7, Value : Combo : +%1%% dommages d'explosion
+MessageId : 2, TypeId : 7, Value : <b>%1</b> a visé le décor.

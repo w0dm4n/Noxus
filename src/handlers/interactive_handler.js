@@ -12,7 +12,9 @@ export default class InteractiveHandler {
     static ActionInteractive  =
     {
         "Zaap": { handle: InteractiveHandler.openZaap },
-        "Zaapi" : {handle : InteractiveHandler.openZaapi}
+        "Zaapi" : {handle : InteractiveHandler.openZaapi},
+        "Teleport" : {handle: InteractiveHandler.teleportAction},
+        "Use": {handle: InteractiveHandler.useAction},
     }
 
     static parseInteractive(client, packet) {
@@ -51,6 +53,24 @@ export default class InteractiveHandler {
     static openZaapi(client, packet) {
         var zaapiDialog = new ZaapiDialog(client, packet);
         zaapiDialog.openZaapi();
+    }
+
+    static teleportAction(client, packet) {
+        var interactive = InteractiveHandler.getElementId(packet.elemId);
+        if (interactive) {
+            WorldManager.teleportClient(client, interactive.optionalValue1, interactive.optionalValue2, null);
+        }
+    }
+
+    static useAction(client, packet) {
+        var interactive = InteractiveHandler.getElementId(packet.elemId);
+        if (interactive) {
+            switch (interactive.optionalValue1) {
+                case "Message":
+                    client.character.replyText(interactive.optionalValue2);
+                    break;
+            }
+        }
     }
 
     static getCost(characterMap, teleportMap) {
@@ -93,13 +113,12 @@ export default class InteractiveHandler {
 
     static getElementIdByMap(map) {
 
-        var result = new Array();
+        var result = [];
 
            for (var i in Datacenter.interactivesObjects) {
                 var index = map.indexOf(Datacenter.interactivesObjects[i].mapId);
                 if (index != -1)
                     result.push(Datacenter.interactivesObjects[i]);
-
         }
         
         return result;
@@ -110,15 +129,11 @@ export default class InteractiveHandler {
         if (ConfigManager.configData.zaaps.all_zaaps == false  && map.zaap != null)
         {
             var zaapKnows = client.character.zaapKnows.indexOf(map._id);
-
             if(zaapKnows == -1)
             {
-                
                 client.character.zaapKnows.push(map._id);
                 client.character.save();
-
                 setTimeout(function(){client.character.replyLangsMessage(0, 24, [])}, 1000);
-
             }
         }
     }

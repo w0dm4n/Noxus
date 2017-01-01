@@ -159,7 +159,7 @@ export default class FightGlyph {
             {
                 var data = this.getCastInformations();
                 if (data) {
-                    FightSpellProcessor.process(this.fight, this.caster, data.spell, data.spellLevel, data.spellLevel.effects, this.centerCell, fighter);
+                    FightSpellProcessor.process(this.fight, this.caster, data.spell, data.spellLevel, data.spellLevel.effects, this.centerCell, fighter, this.centerCell);
                 }
                 else
                     Logger.debug("Data not found for glyph");

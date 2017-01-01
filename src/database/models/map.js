@@ -33,7 +33,7 @@ export default class Map {
         this.monsters = [];
         this.monstersGroups = [];
         this.mapType = raw.mapType;
-        this.tempId = -1;
+        this.tempId = 100000;
     }
 
     init() {

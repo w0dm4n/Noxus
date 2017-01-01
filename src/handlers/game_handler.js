@@ -14,6 +14,7 @@ import WorldManager from "../managers/world_manager"
 import CharacterManager from "../managers/character_manager.js"
 import Loader from "../managers/loader_manager"
 import FriendHandler from "../handlers/friend_handler"
+import InteractiveHandler from "../handlers/interactive_handler"
 
 // Import pathfinding
 import MapPoint from "../game/pathfinding/map_point"
@@ -94,6 +95,17 @@ export default class GameHandler {
 	static handleGameMapMovementConfirmMessage(client, packet) {
 		client.character.cellid = client.character.nextCellId;
 		client.character.nextCellId = -1;
+		var elements = InteractiveHandler.getElementIdByMap([client.character.mapid]);
+		if (elements.length > 0) {
+			for (var element of elements) {
+                var skill = element.skillId.toString().split(".");
+                if (skill.length > 1) {
+                	if (skill[0] == 339 && client.character.cellid == parseInt(skill[1])) {// trigger
+                        WorldManager.teleportClient(client, element.optionalValue1, element.optionalValue2, null);
+                    }
+				}
+            }
+		}
 		client.send(new Messages.BasicNoOperationMessage());
 	}
 	

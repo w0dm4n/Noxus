@@ -1,0 +1,68 @@
+[
+	{
+		"memberName": "Hint",
+		"packageName": "com.ankamagames.dofus.datacenter.world",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "categoryId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "gfx",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "nameId",
+				"type": "I18N",
+				"vectorTypes": false
+			},
+			{
+				"name": "mapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "realMapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "x",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "y",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "outdoor",
+				"type": "Bool",
+				"vectorTypes": false
+			},
+			{
+				"name": "subareaId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "worldMapId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "level",
+				"type": "UInt",
+				"vectorTypes": false
+			}
+		]
+	}
+]

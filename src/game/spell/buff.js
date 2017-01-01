@@ -20,19 +20,19 @@ export default class Buff {
         this.delta = 0;
 
         // Wrapper for monster spell
-        if(!this.spell.spellId) this.spell.spellId = this.spell._id;
+        if (!this.spell.spellId) this.spell.spellId = this.spell._id;
     }
 
     tryApply() {
         Logger.debug("Trying to apply the buff");
-        if(this.lifetime >= this.delay) {
+        if (this.lifetime >= this.delay) {
             this.applied = true;
             this.apply();
             this.show();
             Logger.debug("Buff id: " + this.effectId + " applied");
         }
         else {
-            if(!this.preshowed) {
+            if (!this.preshowed) {
                 this.preshow();
                 this.preshowed = true;
             }
@@ -69,16 +69,21 @@ export default class Buff {
 
     continueLifetime() {
         this.lifetime++;
-        if(!this.applied) {
+        if (!this.applied) {
             this.tryApply();
         }
         else {
             this.beginTurn();
         }
     }
-
+    remove() {
+        Logger.debug("Buff lifetime expired");
+        this.expired = true;
+        this.unapply();
+        this.hide();
+    }
     checkExpires() {
-        if(this.isExpired()) {
+        if (this.isExpired() && this.duration != -1) {
             Logger.debug("Buff lifetime expired");
             this.expired = true;
             this.unapply();

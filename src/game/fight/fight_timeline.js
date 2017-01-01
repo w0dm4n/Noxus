@@ -13,6 +13,7 @@ export default class FightTimeline {
         this.timer = null;
         this.currentTimelineIndex = -1;
         this.round = 1;
+        this.startTime = Date.now();
     }
 
     orderFightersPerInitiative(fighters) {
@@ -147,5 +148,9 @@ export default class FightTimeline {
         this.timer = setTimeout(function(){
             self.next();
         }, FightTimeline.TURN_BASE_TIME * 1000);
+    }
+
+    getDuration() {
+        return Date.now() - this.startTime;
     }
 }

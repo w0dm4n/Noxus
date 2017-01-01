@@ -1,0 +1,27 @@
+[
+	{
+		"memberName": "LivingObjectSkinJntMood",
+		"packageName": "com.ankamagames.dofus.datacenter.livingObjects",
+		"fields": [
+			{
+				"name": "skinId",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "moods",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<Vector.<int>>",
+						"type": "List"
+					},
+					{
+						"name": "Vector.<int>",
+						"type": "Int"
+					}
+				]
+			}
+		]
+	}
+]

@@ -88,7 +88,7 @@ export default class Pathfinding {
         var newCell = 0;
         var testedCell = [];
         var cells_near = pathFinding.getNeighbours(pathFinding.cells[client.character.cellid]);
-        while (newCell == 0 && index < 900)
+        while (newCell == 0 && index < 1200)
         {
             if (cells_near.length)
             {

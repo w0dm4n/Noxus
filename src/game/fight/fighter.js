@@ -13,6 +13,7 @@ import * as Shapes from "../../game/fight/fight_shape_processor"
 import MonsterStatsManager from "../../game/stats/monster_stats_manager"
 import InvisibilityStateEnum from "../../enums/invisibility_state_enum"
 import SpellHistory from "../../game/spell/spell_history"
+import ConfigManager from "../../utils/configmanager.js"
 
 export default class Fighter {
 
@@ -38,6 +39,7 @@ export default class Fighter {
         this.spellHistory = new SpellHistory(this);
         this.isSwapDamage = 0;
         this.multipleDamage = 0;
+        this.hasLeave = false;
     }
 
     initFromCharacter(character) {
@@ -258,6 +260,24 @@ export default class Fighter {
         return false;
     }
 
+    hasBuffSpell(buffSpell) {
+        for (var buff of this.buffs) {
+            if (buff.spell.spellId == buffSpell) return true;
+        }
+        return false;
+    }
+
+    getBuffSpell(buffSpell) {
+        var tab = [];
+        for (var buff of this.buffs) {
+            if (buff.spell.spellId == buffSpell) tab.push(buff);
+        }
+        return tab;
+    }
+
+    
+
+
     getErodationByDamage(damage) {
         //TODO: Get erosion by buffs
         return Basic.getPercentage(10, damage);
@@ -432,11 +452,14 @@ export default class Fighter {
     }
 
     teleport(cellId) {
+        if(!this.alive) return;
+
         this.cellId = cellId;
         this.fight.send(new Messages.GameActionFightTeleportOnSameMapMessage(5, this.id, this.id, this.cellId));
     }
 
     push(dir, power) {
+        if(!this.alive) return;
         var point = MapPoint.fromCellId(this.cellId);
         var toCell = this.cellId;
         var collidedFighter = null;
@@ -484,10 +507,12 @@ export default class Fighter {
     }
 
     attract(dir, data, radius) {
+        if(!this.alive) return;
         var line = new Shapes.Line(radius);
         line._nDirection = dir;
-        var cells = line.getCells(data.caster.cellId);
+        var cells = line.getCells((data.glyphCell == 0) ? data.caster.cellId : data.glyphCell);
         var toCell = this.cellId;
+        var realLen = [];
         var i = 0;
         var distance = 0;
         for (var cell of cells) {
@@ -501,7 +526,19 @@ export default class Fighter {
                 break;
             if (!this.fight.map.isWalkableCell(cells[i]))
                 break;
+            var glyphsOnCell = this.fight.getGlyphsOnCell(cells[i]);
+            if (glyphsOnCell.length > 0) {
+                for (var glyph of glyphsOnCell) {
+                    var self = this;
+                    setTimeout(function () {
+                        glyph.apply(self);
+                    }, (realLen.length > 0) ? realLen.length : 1 * 200);
+                }
+                toCell = cells[i];
+                break;
+            }
             toCell = cells[i];
+            realLen.push(toCell);
             i--;
             distance++;
         }
@@ -555,5 +592,23 @@ export default class Fighter {
         }
         return result;
 
+    }
+
+    onLoose() {
+        if (!this.isAI) {
+            if (this.fight.fightType == Fight.FIGHT_TYPE.FIGHT_TYPE_PvM) {
+                this.character.teleport(ConfigManager.configData.characters_start.startMap, ConfigManager.configData.characters_start.startCell);
+                this.character.life = 1;
+                this.character.statsManager.sendStats();
+                Logger.debug("One fighter is losing a PvM fight !");
+            } else {
+                Logger.debug("One fighter is losing not a PvM fight !");
+            }
+        }
+    }
+
+    getQuantityDropMax() {
+        // TODO scale by pp
+        return 10;
     }
 }

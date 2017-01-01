@@ -4859,3 +4859,55 @@ export class GameMapNoMovementMessage extends ProtocolMessage {
     }
 }
 
+export class GameActionFightChangeLookMessage extends AbstractGameActionMessage {
+    constructor(param1, param2, param3, param4) {
+        super(param1, param2);
+        this.targetId = param3;
+        this.entityLook = param4;
+        this.messageId = 5532;
+    }
+    serialize() {
+        super.serialize();
+        if (this.targetId < -9007199254740990 || this.targetId > 9007199254740990) {
+            Logger.error("Forbidden value (" + this.targetId + ") on element targetId.");
+        }
+        this.buffer.writeDouble(this.targetId);
+        this.entityLook.serialize(this.buffer);
+    }
+}
+
+export class FinishMoveListRequestMessage extends ProtocolMessage {
+    constructor() {
+        super(6702);
+    }
+    serialize() {
+    }
+    deserialize(buffer) {
+    }
+}
+
+export class FinishMoveListMessage extends ProtocolMessage {
+    constructor(finishMoves) {
+        super(6704);
+        this.finishMoves = finishMoves;
+    }
+    serialize() {
+        this.buffer.writeShort(this.finishMoves.length);
+        var _loc2_ = 0;
+        while (_loc2_ < this.finishMoves.length) {
+            this.finishMoves[_loc2_].serialize(this.buffer);
+            _loc2_++;
+        }
+    }
+    deserialize(buffer) {
+        var _loc4_ = null;
+        var _loc2_ = buffer.readUnsignedShort();
+        var _loc3_ = 0;
+        while (_loc3_ < _loc2_) {
+            _loc4_ = new Types.FinishMoveInformations();
+            _loc4_.deserialize(buffer);
+            this.finishMoves.push(_loc4_);
+            _loc3_++;
+        }
+    }
+}

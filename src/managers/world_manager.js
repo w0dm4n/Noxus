@@ -1,6 +1,8 @@
 import Logger from "../io/logger"
 import DBManager from "../database/dbmanager"
 import Map from "../database/models/map"
+import WorldServer from "../network/world"
+//require("babel-polyfill");
 
 export default class WorldManager {
 
@@ -12,7 +14,7 @@ export default class WorldManager {
 		
         WorldManager.getMap(mapId, function(map) {
 			if(map == null) {
-				callback(false);
+				if (callback) callback(false);
 			}
 			else {
 				if(!client.character.firstContext) client.character.getMap().removeClient(client);
@@ -21,7 +23,7 @@ export default class WorldManager {
 				map.addClient(client);
                 if (client.character.party)
                     client.character.party.sendPositionToFollowers(client.character);
-				callback(true);
+				if (callback) callback(true);
 
 			}
 		});
@@ -59,5 +61,16 @@ export default class WorldManager {
 	
 	static loadSubArea(subAreaId, callback) {
 		
+	}
+
+	//static async saveWorld() {
+    static saveWorld() {
+        WorldServer.sendTextInformationMessageToAll(1, 164, []);
+        var clients = WorldServer.getAllOnlineClients();
+        for (var client of clients) {
+        	//await client.character.save();
+            client.character.save();
+		}
+        WorldServer.sendTextInformationMessageToAll(1, 165, []);
 	}
 }

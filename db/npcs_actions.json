@@ -14,3 +14,11 @@
     "messageId" : null, 
     "itemId" : "0"
 }
+{ 
+    "_id" : NumberInt(3), 
+    "npcId" : NumberInt(2892), 
+    "action" : NumberInt(3), 
+    "condition" : null, 
+    "messageId" : NumberInt(20776), 
+    "itemId" : "null"
+}

@@ -1,0 +1,84 @@
+[
+	{
+		"memberName": "TransformData",
+		"packageName": "com.ankamagames.tiphon.types",
+		"fields": [
+			{
+				"name": "x",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "y",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "scaleX",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "scaleY",
+				"type": "Double",
+				"vectorTypes": false
+			},
+			{
+				"name": "rotation",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "originalClip",
+				"type": "String",
+				"vectorTypes": false
+			},
+			{
+				"name": "overrideClip",
+				"type": "String",
+				"vectorTypes": false
+			}
+		]
+	},
+	{
+		"memberName": "SkinPosition",
+		"packageName": "com.ankamagames.dofus.datacenter.appearance",
+		"fields": [
+			{
+				"name": "id",
+				"type": "Int",
+				"vectorTypes": false
+			},
+			{
+				"name": "transformation",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<com.ankamagames.tiphon.types::TransformData>",
+						"type": 1
+					}
+				]
+			},
+			{
+				"name": "clip",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<String>",
+						"type": "String"
+					}
+				]
+			},
+			{
+				"name": "skin",
+				"type": "List",
+				"vectorTypes": [
+					{
+						"name": "Vector.<uint>",
+						"type": "UInt"
+					}
+				]
+			}
+		]
+	}
+]

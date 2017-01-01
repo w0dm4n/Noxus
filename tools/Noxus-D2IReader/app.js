@@ -78,25 +78,3 @@ for(var i in file.m_textIndexes) {
 }
 fs.writeFileSync("./data/i18n_fr.json", JSON.stringify(langs)); 
 console.log("D2I Readed");
-var MongoClient = require('mongodb').MongoClient
-    , assert = require('assert');
-  var url = 'mongodb://localhost:27017/Noxus';
-  MongoClient.connect(url, function(err, db) {
-    var collection = db.collection('spells_types');
-    collection.find({}).toArray(function(err, items){
-		for(var i of items) {
-			if(!i.longNameId) continue;
-		
-			var updateItem = {
-				longNameId: file.m_indexes[i.longNameId],
-				shortNameId: file.m_indexes[i.shortNameId],
-			};
-			
-			console.log(updateItem);
-			
-			collection.update({ _id: i._id }, { $set: updateItem }, function() {
-				
-			});
-		}
-	});   
-  });

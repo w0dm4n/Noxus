@@ -3444,3 +3444,25 @@ export class GameActionMarkedCell {
         this.cellsType = buffer.readByte();
     }
 }
+
+export class FinishMoveInformations {
+    constructor(finishMoveId, finishMoveState) {
+        this.finishMoveId = finishMoveId;
+        this.finishMoveState = finishMoveState;
+        this.protocolId = 506;
+    }
+    serialize(buffer) {
+        if (this.finishMoveId < 0) {
+            Logger.error("Forbidden value (" + this.finishMoveId + ") on element finishMoveId.");
+        }
+        buffer.writeInt(this.finishMoveId);
+        buffer.writeBoolean(this.finishMoveState);
+    }
+    deserialize(buffer) {
+        this.finishMoveId = buffer.readInt();
+        if (this.finishMoveId < 0) {
+            Logger.error("Forbidden value (" + this.finishMoveId + ") on element of FinishMoveInformations.finishMoveId.");
+        }
+        this.finishMoveState = buffer.readBoolean();
+    }
+}

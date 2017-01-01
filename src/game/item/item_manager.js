@@ -15,6 +15,8 @@ export default class ItemManager {
 
     static generateItem(itemId) {
         var itemTemplate = ItemManager.getItemTemplateById(itemId);
+        if (itemTemplate == null)
+            return null;
         var effectsGenerated = [];
         for(var effect of itemTemplate.possibleEffects) {
             var re = ItemManager.generateRandomEffect(effect);
@@ -25,8 +27,14 @@ export default class ItemManager {
         return item;
     }
 
+    static generateSomeItems(items) {
+
+    }
+
     static generateItemStack(itemId,stack) {
         var itemTemplate = ItemManager.getItemTemplateById(itemId);
+        if (itemTemplate == null)
+            return null;
         var effectsGenerated = [];
         for(var effect of itemTemplate.possibleEffects) {
             var re = ItemManager.generateRandomEffect(effect);

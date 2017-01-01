@@ -50,6 +50,7 @@ export default class Character {
         this.emotes = raw.emotes;
         this.bagId = raw.bagId ? raw.bagId : -1;
         this.skins = [];
+        this.skinsLook = [];
         this.zaapSave = raw.zaapSave;
         this.zaapKnows = raw.zaapKnows;
         this.regenTimestamp = Math.floor(Date.now() / 1000);
@@ -179,8 +180,10 @@ export default class Character {
     }
 
     refreshEntityLook() {
+        
         var appearenceToShow = [];
         appearenceToShow.push(parseInt(this.getBaseSkin()));
+       
         appearenceToShow.push(parseInt(this.getHeadSkinId()));
         if (this.itemBag) {
             if (this.itemBag.getItemAtPosition(6)) appearenceToShow.push(this.itemBag.getItemAtPosition(6).getTemplate().appearanceId); // Head
@@ -188,6 +191,12 @@ export default class Character {
             if (this.itemBag.getItemAtPosition(15)) appearenceToShow.push(this.itemBag.getItemAtPosition(15).getTemplate().appearanceId); // Bouclier
         }
         this.skins = appearenceToShow;
+        
+         if(this.skinsLook.length > 0 ){
+            for(var i of this.skinsLook){
+                this.skins.push(i);
+            }
+        }
     }
 
     refreshLookOnMap() {
@@ -228,6 +237,7 @@ export default class Character {
 
     getEntityLook() {
         this.refreshEntityLook();
+       
         var characterColors = this.getColors();
         if(this.isRiding()) {
             return new Types.EntityLook(this.itemBag.getItemAtPosition(8).getTemplate().appearanceId, [],
@@ -238,6 +248,7 @@ export default class Character {
                 this.getColors(), [this.scale], this.getSubentities());
         }
     }
+  
 
     ///////////////////////////
 
@@ -588,6 +599,16 @@ export default class Character {
     refreshShortcutsBar() {
         this.client.send(new Messages.ShortcutBarContentMessage(0, this.getShortcutBar(0)));
         this.client.send(new Messages.ShortcutBarContentMessage(1, this.getShortcutBar(1)));
+    }
+
+    teleport(mapId, cellId, callback = null) {
+        if (callback == null) {
+            WorldManager.teleportClient(this.client, mapId, cellId, null);
+        } else {
+            WorldManager.teleportClient(this.client, mapId, cellId, function(result) {
+                callback(result);
+            });
+        }
     }
 
     // End shortcuts

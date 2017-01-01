@@ -42,21 +42,32 @@ export default class WorldClient {
         });
 
         this.socket.on('end', function(data){
-            this.socketState = false;
-            if(self.character != null) {
-                if(self.character.getMap() != null) {
-                    self.character.getMap().removeClient(self);
-                }
-
-                if(self.character.isInFight()) {
-                    self.character.fight.disconnectFighter(self.character.fighter);
-                }
-            }
-            World.removeClient(self);
-            Logger.infos("Client disconnected");
-            if (self && self.character)
-                self.character.onDisconnect();
+            self.socketState = false;
+            self.disconnect();
         });
+
+        this.socket.on('error', function(err){
+            self.socketState = false;
+            self.disconnect();
+        })
+    }
+
+    disconnect() {
+        var self = this;
+        this.socketState = false;
+        if(self.character != null) {
+            if(self.character.getMap() != null) {
+                self.character.getMap().removeClient(self);
+            }
+
+            if(self.character.isInFight()) {
+                self.character.fight.disconnectFighter(self.character.fighter);
+            }
+        }
+        World.removeClient(self);
+        Logger.infos("Client disconnected");
+        if (self && self.character)
+            self.character.onDisconnect();
     }
 
     processPart(buffer) {
@@ -75,10 +86,7 @@ export default class WorldClient {
 
     send(packet) {
         try {
-            if(!this.socketState) {
-                Logger.error("Can't send packet to client because the socket state is closed");
-                return;
-            }
+            if(!this.socketState) { return; }
             packet.serialize();
             var messageBuffer = new IO.CustomDataWrapper(new ByteArray());
             var offset = NetworkMessage.writePacket(messageBuffer, packet.messageId, packet.buffer._data);

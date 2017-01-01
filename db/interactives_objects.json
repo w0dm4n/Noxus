@@ -1992,30 +1992,30 @@
     "_id" : NumberInt(335), 
     "mapId" : NumberInt(154010371), 
     "skillId" : NumberInt(114), 
-    "elementId" : NumberInt(489384), 
+    "elementId" : NumberInt(509248), 
     "elementTypeId" : NumberInt(16), 
     "actionType" : "Zaap", 
-    "optionalValue1" : "Incarnam", 
+    "optionalValue1" : "Global", 
     "optionalValue2" : "0"
 }
 { 
     "_id" : NumberInt(336), 
     "mapId" : NumberInt(153879813), 
     "skillId" : NumberInt(114), 
-    "elementId" : NumberInt(489382), 
+    "elementId" : 509249.0, 
     "elementTypeId" : NumberInt(16), 
     "actionType" : "Zaap", 
-    "optionalValue1" : "Incarnam", 
+    "optionalValue1" : "Global", 
     "optionalValue2" : "0"
 }
 { 
     "_id" : NumberInt(337), 
     "mapId" : NumberInt(153880064), 
     "skillId" : NumberInt(114), 
-    "elementId" : NumberInt(489383), 
+    "elementId" : 509250.0, 
     "elementTypeId" : NumberInt(16), 
     "actionType" : "Zaap", 
-    "optionalValue1" : "Incarnam", 
+    "optionalValue1" : "Global", 
     "optionalValue2" : "0"
 }
 { 
@@ -6767,4 +6767,74 @@
     "actionType" : "Teleport", 
     "optionalValue1" : "99090957", 
     "optionalValue2" : "458"
+}
+{ 
+    "_id" : NumberInt(1350), 
+    "mapId" : NumberInt(173278210), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(509530), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(1351), 
+    "mapId" : NumberInt(156762120), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(491010), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(1352), 
+    "mapId" : NumberInt(164364304), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(509170), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(1353), 
+    "mapId" : NumberInt(142087694), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(509003), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(1354), 
+    "mapId" : NumberInt(165152263), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(509169), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(1355), 
+    "mapId" : NumberInt(147590153), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(488022), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
+}
+{ 
+    "_id" : NumberInt(1356), 
+    "mapId" : NumberInt(156240386), 
+    "skillId" : NumberInt(114), 
+    "elementId" : NumberInt(509228), 
+    "elementTypeId" : NumberInt(16), 
+    "actionType" : "Zaap", 
+    "optionalValue1" : "Global", 
+    "optionalValue2" : "0"
 }
